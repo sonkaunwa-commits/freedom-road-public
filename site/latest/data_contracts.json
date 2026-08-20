@@ -1,0 +1,243 @@
+{
+  "generated_at": "2026-08-20T13:41:49.859212+08:00",
+  "schema_version": 1,
+  "status": "OK",
+  "tool": {
+    "name": "pandera",
+    "version": "unknown",
+    "role": "explicit public daily-history schema and invariant validation"
+  },
+  "privacy_boundary": "Public research history only; no private ledger or account data is read.",
+  "contract": {
+    "required_fields": [
+      "trade_date",
+      "open",
+      "high",
+      "low",
+      "close"
+    ],
+    "optional_fields": [
+      "vol"
+    ],
+    "unique_key": [
+      "trade_date"
+    ],
+    "price_rules": [
+      "positive OHLC",
+      "high >= low",
+      "high >= open/close",
+      "low <= open/close"
+    ],
+    "raw_landing_policy": "This contract validates normalized/public research history and does not block raw provider landing.",
+    "yfinance_small_envelope_normalization": {
+      "max_gap_ratio": 0.02,
+      "method": "minimally expand high/low to include open/close; larger gaps remain invalid"
+    }
+  },
+  "summary": {
+    "symbols_expected": 22,
+    "valid": 22,
+    "invalid": 0,
+    "missing": 0
+  },
+  "symbols": [
+    {
+      "code": "600006.SH",
+      "market": "A",
+      "scope": "research_core",
+      "status": "VALID",
+      "rows": 520,
+      "null_trade_dates": 0,
+      "duplicate_trade_date_rows": 0
+    },
+    {
+      "code": "002085.SZ",
+      "market": "A",
+      "scope": "research_core",
+      "status": "VALID",
+      "rows": 520,
+      "null_trade_dates": 0,
+      "duplicate_trade_date_rows": 0
+    },
+    {
+      "code": "002475.SZ",
+      "market": "A",
+      "scope": "research_core",
+      "status": "VALID",
+      "rows": 520,
+      "null_trade_dates": 0,
+      "duplicate_trade_date_rows": 0
+    },
+    {
+      "code": "601138.SH",
+      "market": "A",
+      "scope": "research_core",
+      "status": "VALID",
+      "rows": 520,
+      "null_trade_dates": 0,
+      "duplicate_trade_date_rows": 0
+    },
+    {
+      "code": "002600.SZ",
+      "market": "A",
+      "scope": "research_core",
+      "status": "VALID",
+      "rows": 520,
+      "null_trade_dates": 0,
+      "duplicate_trade_date_rows": 0
+    },
+    {
+      "code": "601899.SH",
+      "market": "A",
+      "scope": "research_core",
+      "status": "VALID",
+      "rows": 520,
+      "null_trade_dates": 0,
+      "duplicate_trade_date_rows": 0
+    },
+    {
+      "code": "300059.SZ",
+      "market": "A",
+      "scope": "research_core",
+      "status": "VALID",
+      "rows": 520,
+      "null_trade_dates": 0,
+      "duplicate_trade_date_rows": 0
+    },
+    {
+      "code": "002371.SZ",
+      "market": "A",
+      "scope": "candidate_seed",
+      "status": "VALID",
+      "rows": 520,
+      "null_trade_dates": 0,
+      "duplicate_trade_date_rows": 0
+    },
+    {
+      "code": "300124.SZ",
+      "market": "A",
+      "scope": "candidate_seed",
+      "status": "VALID",
+      "rows": 520,
+      "null_trade_dates": 0,
+      "duplicate_trade_date_rows": 0
+    },
+    {
+      "code": "002185.SZ",
+      "market": "A",
+      "scope": "candidate_seed",
+      "status": "VALID",
+      "rows": 520,
+      "null_trade_dates": 0,
+      "duplicate_trade_date_rows": 0
+    },
+    {
+      "code": "000977.SZ",
+      "market": "A",
+      "scope": "candidate_seed",
+      "status": "VALID",
+      "rows": 520,
+      "null_trade_dates": 0,
+      "duplicate_trade_date_rows": 0
+    },
+    {
+      "code": "600276.SH",
+      "market": "A",
+      "scope": "candidate_seed",
+      "status": "VALID",
+      "rows": 520,
+      "null_trade_dates": 0,
+      "duplicate_trade_date_rows": 0
+    },
+    {
+      "code": "09992.HK",
+      "market": "HK",
+      "scope": "hk_research",
+      "status": "VALID",
+      "rows": 520,
+      "null_trade_dates": 0,
+      "duplicate_trade_date_rows": 0
+    },
+    {
+      "code": "00700.HK",
+      "market": "HK",
+      "scope": "hk_research",
+      "status": "VALID",
+      "rows": 520,
+      "null_trade_dates": 0,
+      "duplicate_trade_date_rows": 0
+    },
+    {
+      "code": "00909.HK",
+      "market": "HK",
+      "scope": "hk_research",
+      "status": "VALID",
+      "rows": 520,
+      "null_trade_dates": 0,
+      "duplicate_trade_date_rows": 0
+    },
+    {
+      "code": "06969.HK",
+      "market": "HK",
+      "scope": "hk_research",
+      "status": "VALID",
+      "rows": 520,
+      "null_trade_dates": 0,
+      "duplicate_trade_date_rows": 0
+    },
+    {
+      "code": "09926.HK",
+      "market": "HK",
+      "scope": "hk_research",
+      "status": "VALID",
+      "rows": 520,
+      "null_trade_dates": 0,
+      "duplicate_trade_date_rows": 0
+    },
+    {
+      "code": "09988.HK",
+      "market": "HK",
+      "scope": "hk_research",
+      "status": "VALID",
+      "rows": 520,
+      "null_trade_dates": 0,
+      "duplicate_trade_date_rows": 0
+    },
+    {
+      "code": "XPEV",
+      "market": "US",
+      "scope": "us_research",
+      "status": "VALID",
+      "rows": 520,
+      "null_trade_dates": 0,
+      "duplicate_trade_date_rows": 0
+    },
+    {
+      "code": "RLX",
+      "market": "US",
+      "scope": "us_research",
+      "status": "VALID",
+      "rows": 520,
+      "null_trade_dates": 0,
+      "duplicate_trade_date_rows": 0
+    },
+    {
+      "code": "LI",
+      "market": "US",
+      "scope": "us_research",
+      "status": "VALID",
+      "rows": 520,
+      "null_trade_dates": 0,
+      "duplicate_trade_date_rows": 0
+    },
+    {
+      "code": "NIO",
+      "market": "US",
+      "scope": "us_research",
+      "status": "VALID",
+      "rows": 520,
+      "null_trade_dates": 0,
+      "duplicate_trade_date_rows": 0
+    }
+  ]
+}

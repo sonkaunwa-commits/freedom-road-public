@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#b7352d">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<title>基金小帮手</title>
+<link rel="stylesheet" href="v9.css?build=20260819-0805">
+</head>
+<body>
+<div class="wrap">
+  <div class="hero">
+    <div class="brand"><div class="logo">基</div><div><h1>基金小帮手</h1><div class="sub">帮你把复杂的基金分析，变成简单的“选、买、拿、卖”。</div></div></div>
+    <div id="state" class="state">正在检查基金数据更新时间…</div>
+  </div>
+
+  <div id="todayTip" class="today-tip"></div>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="pick">推荐基金</button>
+    <button class="tab" data-tab="mine">我的基金</button>
+    <button class="tab" data-tab="ask">查一只基金</button>
+  </div>
+
+  <section id="pick" class="section active">
+    <div class="card guide-card">
+      <div class="title">推荐基金：先帮你从全市场缩小范围</div>
+      <div class="desc">这个板块不是叫你“看到推荐就马上买”。系统每天先从全市场筛选，再固定跟踪少量候选。你只需要看：<b>为什么选、综合评分、今天能不能买</b>。</div>
+      <div class="steps"><div><b>① 先看推荐</b><span>找到未来6～12个月值得研究的候选。</span></div><div><b>② 再点“更新今天情况”</b><span>重新读取最新走势，判断今天买、等还是不碰。</span></div><div><b>③ 真感兴趣再设为“我的关注”</b><span>只是把它置顶方便你每天先看，<b>不代表已经买了</b>。</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="title">先懂这4个最基础的基金常识</div>
+      <div class="learn-grid">
+        <div class="learn"><div class="ico">①</div><b>净值是什么？</b><span>可以简单理解成“一份基金值多少钱”。场外基金最终买卖不是按你看到的某个实时价格，而是按基金公司/销售平台确认的净值规则。</span></div>
+        <div class="learn"><div class="ico">②</div><b>涨得好，不等于今天就该买</b><span>过去半年、一年涨得好，只说明值得研究。刚大涨完再追进去，最容易买贵。</span></div>
+        <div class="learn"><div class="ico">③</div><b>不要一次把钱全买完</b><span>如果准备投2万元，通常第一笔只用约4000～5000元，后面位置更合适再加。</span></div>
+        <div class="learn"><div class="ico">④</div><b>赚钱以后要学会“留住利润”</b><span>赚到20%、30%、50%以后，重点会逐渐从“继续赚”变成“别把已经赚到的钱全跌回去”。</span></div>
+      </div>
+    </div>
+
+    <div class="card score-explain">
+      <div class="title">综合评分怎么看？</div>
+      <div class="desc"><b>满分100分，只是“值得继续研究的程度”，不是未来收益率。</b> 90分不代表会赚90%。</div>
+      <div class="score-dims">
+        <span>近6月表现 30%</span><span>近3月表现 26%</span><span>近1年表现 24%</span><span>近1月表现 12%</span><span>近3年表现 8%</span>
+      </div>
+      <div class="notice hot"><b>还会扣分：</b>短期涨得太猛、近1月突然大跌、近6月转负，都会被扣分，目的是尽量避免只追“最近最火”的基金。</div>
+    </div>
+
+    <div class="card time-card">
+      <div class="title">“近期、中期、半年一年”到底是多久？</div>
+      <div class="time-scale"><div><b>近期</b><span>约1～4周<br>主要看是不是涨太快、有没有回调买点。</span></div><div><b>中期</b><span>约1～3个月<br>主要看趋势有没有继续、行业是否转弱。</span></div><div><b>目标观察期</b><span>约6～12个月<br>这是我们筛高弹性基金时更看重的周期。</span></div></div>
+      <div class="notice forecast"><b>关于“什么时候可以买”的预测：</b>系统会根据当前位置离买入参考区有多远、最近每天大概波动多少，给出“未来约几到几天重点关注”的估算窗口。它只是提前准备提醒，不代表那几天一定会到价。</div>
+    </div>
+
+    <div class="card mechanism">
+      <div class="title">这个小帮手每天怎么运作？</div>
+      <div class="mechanism-grid">
+        <div><b>1. 全市场初筛</b><span>从股票型、混合型、指数型、QDII等基金里筛选，剔除明显不适合高弹性目标的货币、短债等。</span></div>
+        <div><b>2. 选出6只核心候选</b><span>看中期和长期竞争力，同时限制同一大类不要全占满，避免每天跟着排行榜乱换。</span></div>
+        <div><b>3. 每天持续跟踪</b><span>07:10做当天计划；14:20重点检查今天是不是接近买点；22:40按正式净值复盘。</span></div>
+        <div><b>4. 不轻易换掉</b><span>只有评分明显变差、中期趋势转弱、暂停申购，或者出现持续更好的替代品，才会换。</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="title">这段时间重点看这6只</div>
+      <div class="desc">每只前面都有编号。先看综合评分和“为什么选”，然后点<b>更新今天情况</b>，再决定今天要不要操作。</div>
+      <div id="pool" class="pool"><div class="loader">正在读取推荐基金…</div></div>
+    </div>
+
+    <div class="card watch-card">
+      <div class="title">我的关注（可选）</div>
+      <div class="watch-explain"><b>系统推荐的6只本来就会每天自动跟踪。</b>“我的关注”只是让你把自己最感兴趣的1～3只单独放这里，方便每天优先查看。<br><b>没买也能加；加了不等于买了。</b> 真正买入以后，再到“我的基金”填写成本和金额。</div>
+      <div id="watchlist" class="watchlist"><div class="empty">还没有我的关注。看到特别感兴趣的基金，再点“⭐ 设为我的关注”。</div></div>
+    </div>
+  </section>
+
+  <section id="mine" class="section">
+    <div class="card guide-card">
+      <div class="title">我的基金：专门管理“已经买了”的基金</div>
+      <div class="desc">这个板块不负责推荐新基金，主要解决：<b>还拿不拿、能不能补、什么时候卖、怎么保护已经赚到的钱，以及你的基金是不是都挤在同一个行业。</b></div>
+    </div>
+
+    <div class="card">
+      <div class="title">先做一次“我的基金搭配体检”</div>
+      <div class="desc">如果你买了很多科技、半导体、AI类基金，看起来是很多只，实际可能都在涨跌同一件事。体检会按你保存的基金，检查行业集中度和搭配是否太偏。</div>
+      <button id="auditPortfolio" class="btn full">检查我的基金搭配</button>
+      <div id="portfolioAudit"></div>
+    </div>
+
+    <div class="card">
+      <div class="title">把已经买的基金放进来</div>
+      <div class="desc">最少只填基金代码就能保存。为了判断什么时候卖更准确，建议再填<b>成本净值、投入金额、买入时间</b>。总资产不用填。</div>
+      <div class="field"><div class="label">1. 基金代码（必填）</div><input id="hCode" class="input" maxlength="6" inputmode="numeric" placeholder="例如 002910"></div>
+      <div class="grid2"><div class="field"><div class="label">2. 大概投入多少钱</div><input id="hAmount" class="input" inputmode="decimal" placeholder="例如 20000"></div><div class="field"><div class="label">3. 买入成本净值（最好填）</div><input id="hCost" class="input" inputmode="decimal" placeholder="例如 1.2560"></div></div>
+      <div class="field"><div class="label">4. 大概什么时候买的（可选）</div><input id="hDate" class="input" type="date"></div>
+      <div class="field"><div class="label">5. 如果不知道成本，只知道现在赚还是亏</div><div class="seg" id="pnlType"><button data-v="gain" class="gain">赚钱</button><button data-v="loss" class="loss">亏钱</button><button data-v="unknown" class="unknown active">不知道</button></div></div>
+      <div id="pnlField" class="field hidden"><div class="label">大约多少%？只填数字，不用负号</div><input id="hPnlAbs" class="input" inputmode="decimal" placeholder="例如亏12%，只填 12"></div>
+      <button id="save" class="btn full">保存并开始跟踪</button>
+      <div id="holdings" class="holdings"></div>
+    </div>
+  </section>
+
+  <section id="ask" class="section">
+    <div class="card guide-card">
+      <div class="title">查一只基金：临时问任何一只</div>
+      <div class="desc">不需要先保存。输入基金代码，再点下面常见问题，或者直接用语音说。适合临时判断一只基金是不是买贵了、该不该补、什么时候卖。</div>
+    </div>
+    <div class="card">
+      <div class="field"><div class="label">基金代码</div><input id="dCode" class="input" maxlength="6" inputmode="numeric" placeholder="例如 002910"></div>
+      <div class="field"><div class="label">如果还没买：最多准备投入多少钱？（可选）</div><input id="dBudget" class="input" inputmode="decimal" placeholder="例如 20000；会帮你拆分第一笔、第二笔"></div>
+      <div class="field"><div class="label">你还想补充什么？（可不填）</div><div class="searchrow"><textarea id="q" class="input" style="min-height:88px;resize:vertical" placeholder="例如：我成本1.25，现在亏15%，今天要不要补？"></textarea><button id="voice" class="voice" aria-label="语音输入">🎙️<span>语音输入</span></button></div></div>
+      <div class="quick-title">常见问题，直接点：</div>
+      <div class="quick"><button class="chip">今天能买吗？</button><button class="chip">现在买会不会太高？</button><button class="chip">我准备投2万，怎么分批？</button><button class="chip">亏10%要不要补？</button><button class="chip">亏20%怎么办？</button><button class="chip">什么时候卖？</button><button class="chip">赚20%怎么保护？</button><button class="chip">赚50%怎么办？</button><button class="chip">适合拿半年吗？</button><button class="chip">这只风险大不大？</button></div>
+      <button id="go" class="btn full">告诉我今天怎么做</button>
+      <div id="result"></div>
+    </div>
+  </section>
+
+  <div class="footer">研究辅助，不保证收益，也不能保证本金不亏。目标是尽量少追高、少死扛，并在盈利后更有纪律地保护已有利润。最终买卖由你自己决定。</div>
+</div>
+<script src="v9-core.js?build=20260819-0805"></script>
+<script src="v8-ui.js?build=20260819-0720"></script>
+<script src="v9-patch.js?build=20260819-0805"></script>
+</body>
+</html>

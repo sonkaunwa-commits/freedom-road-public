@@ -1,0 +1,224 @@
+{
+  "generated_at": "2026-08-20T13:42:15.873987+08:00",
+  "schema_version": 6,
+  "source_health_updated_at": "2026-08-20T13:38:28.938379+08:00",
+  "delivery_mode_17": "FULL_REPORT_WITH_EXPLICIT_DEGRADATIONS",
+  "a_share_exact_action_gate": {
+    "ready": true,
+    "coverage": "7/7",
+    "same_trade_date": null,
+    "trade_dates": {},
+    "private_join_required": true,
+    "semantics": "Public repository can only certify the public A-share market-data gate. Exact private-holding action readiness must be resolved by joining the Private Ledger at report time."
+  },
+  "public_asset_health": {
+    "a_share": {
+      "ok": 7,
+      "expected": 7,
+      "ready": true
+    },
+    "hk": {
+      "ok": 6,
+      "expected": 6,
+      "ready": true
+    },
+    "us": {
+      "ok": 4,
+      "expected": 4,
+      "ready": true
+    },
+    "funds": {
+      "ok": 12,
+      "expected": 12,
+      "ready": true
+    },
+    "sge": {
+      "ok": 1,
+      "expected": 1,
+      "ready": true
+    },
+    "domestic_gold_reference": {
+      "ok": 1,
+      "expected": 1,
+      "ready": true,
+      "role": "reference_only_not_bank_executable_quote"
+    },
+    "gold_public_analysis_ready": true,
+    "minute": {
+      "status": "missing_or_no_permission"
+    },
+    "candidate_scan": {
+      "status": "unavailable_nonfatal",
+      "fresh_full_or_degraded_scan": false,
+      "updated_at": "2026-08-19T23:54:12.316930+08:00",
+      "last_full_scan_trade_date": null
+    }
+  },
+  "analysis_engine": {
+    "stage": "STAGE_1_RUNNING",
+    "generated_at": "2026-08-20T13:40:52.598511+08:00",
+    "stage1_fund_ready": true,
+    "stage1_a_share_history_ready": true,
+    "stage2_vectorbt_daily_pilot_ready": true,
+    "stage2_daily_pilot": {
+      "status": "STAGE_2_DAILY_PILOT_RUNNING",
+      "generated_at": "2026-08-20T13:42:06.774126+08:00",
+      "research_core_ready": true,
+      "coverage": {
+        "a_research_core_ok": 7,
+        "a_research_core_expected": 7,
+        "candidate_seed_ok": 5,
+        "candidate_seed_expected": 5
+      },
+      "tool": {
+        "name": "vectorbt",
+        "version": "1.1.0",
+        "role": "point-in-time daily-bar signal research and moving-average computation"
+      },
+      "production_use": "RESEARCH_ONLY",
+      "statistical_evidence": {
+        "status": "RESEARCH_ONLY",
+        "sufficient_signal_horizons": 110,
+        "insufficient_signal_horizons": 70,
+        "fdr_reject_5pct_count": 16
+      }
+    },
+    "support_layer": {
+      "data_contracts_status": "OK",
+      "calendar_stale_symbols": 0,
+      "calendar_missing_history": 0,
+      "duckdb_pandas_match": true,
+      "duckdb_missing_or_invalid_histories": 0,
+      "evidence_status": "READY_RESEARCH_ONLY"
+    },
+    "stage3_qlib_ready": false,
+    "tools": {
+      "quantstats": {
+        "available": true,
+        "version": "0.0.81",
+        "mode": null
+      },
+      "xalpha": {
+        "available": true,
+        "version": "0.12.4",
+        "mode": null
+      },
+      "vectorbt": {
+        "available": false,
+        "version": null,
+        "mode": "DAILY_PILOT_READY",
+        "pilot_status": "STAGE_2_DAILY_PILOT_RUNNING",
+        "pilot_version": "1.1.0"
+      },
+      "statsmodels": {
+        "available": true,
+        "version": "0.14.6",
+        "mode": "HAC_PLUS_FDR_RESEARCH_ONLY"
+      },
+      "duckdb": {
+        "available": true,
+        "version": "1.5.5",
+        "mode": "DESCRIPTIVE_CROSS_SECTIONAL_EVIDENCE"
+      },
+      "pandera": {
+        "available": true,
+        "version": "unknown",
+        "mode": "OK"
+      },
+      "pandas_market_calendars": {
+        "available": true,
+        "version": "5.4.0",
+        "mode": "HISTORICAL_SESSION_ALIGNMENT_ONLY"
+      }
+    }
+  },
+  "evidence_packet": {
+    "status": "READY_RESEARCH_ONLY",
+    "generated_at": "2026-08-20T13:42:15.325510+08:00",
+    "production_use": "RESEARCH_ONLY"
+  },
+  "content_contract": {
+    "version": "2026-08-17-v1",
+    "principle": "Market-data readiness is only the input gate. It never replaces the fixed analysis/report content.",
+    "required_17_modules": [
+      "01_ledger_sync",
+      "02_data_validation",
+      "03_actual_trades",
+      "04_daily_performance_card",
+      "05_all_accounts_summary",
+      "06_global_domestic_environment",
+      "07_portfolio_level",
+      "08_yesterday_plan_validation",
+      "09_all_7_a_share_reviews",
+      "10_hk_management",
+      "11_us_management",
+      "12_all_12_funds",
+      "13_gold_review",
+      "14_medium_term_candidate_pool",
+      "14B_ultrashort_pool",
+      "15_ipo_industry_radar",
+      "16_account_slimming",
+      "17_risk_warnings",
+      "18_goal_progress",
+      "19_operation_score_log",
+      "20_overall_strategy",
+      "21_hypothetical_1m_opportunities",
+      "22_next_day_action_card",
+      "23_sources",
+      "24_ledger_and_data_health"
+    ],
+    "mandatory_summary_tables": {
+      "a_share": "All private-ledger A-share positions in one table before detailed reviews.",
+      "hk": "All named HK positions/accounts in one table; no omission because a position is small or old.",
+      "us": "All named US positions/accounts in one table; same ticker across accounts remains separate.",
+      "funds": "Exactly 12 funds in one table with latest formally published NAV, NAV date, latest daily change when available, stage/status and action.",
+      "gold": "Gold layers table: XAUUSD / COMEX / SGE RMB gold / bank-private execution layer, clearly separated.",
+      "candidate_pool": "Show scan freshness/status, current ranking and whether list changed; never present an old seed list as a fresh full-market scan."
+    },
+    "mandatory_per_a_share_fields": [
+      "account_and_position",
+      "formal_ohlc_and_volume",
+      "technical_structure",
+      "support_and_resistance",
+      "fundamental_news_catalyst",
+      "short_term_1_5d",
+      "medium_term_1_2m",
+      "long_term_3_12m",
+      "next_day_reference_prices",
+      "action_quantity_or_amount",
+      "trigger_conditions",
+      "cancel_or_invalidation_conditions",
+      "position_role_and_opportunity_cost"
+    ],
+    "fund_timing_rule": {
+      "17_00": "Use the latest formally published NAV available at report time. If same-day NAV is not published, use the latest prior formal NAV and explicitly show its NAV date; never use intraday estimate as formal NAV.",
+      "09_00_next_day": "Backfill the prior trading day final NAVs that became available overnight, summarize changes, and recalibrate the new trading-day guidance."
+    },
+    "gold_rule": {
+      "public_reference": "Build a stock-like RMB gold reference series from SGE Au99.99/Au(T+D) plus international gold; an independent public bank account-gold quote may be used only as a reference cross-check.",
+      "private_execution": "Bank executable accumulation-gold quotes remain bank-specific/private and may not be inferred from public gold or another bank quote.",
+      "daily_review_fields": [
+        "position",
+        "domestic_gold",
+        "international_drivers",
+        "technical_support_resistance",
+        "operation_plan",
+        "goal_progress",
+        "next_observations"
+      ]
+    },
+    "candidate_rule": "A failed full-market scan must be labeled failed/degraded. Retained seed names may still be monitored, but cannot be described as today's fresh scan result.",
+    "publication_rule": "A 17:00 report missing any fixed module, required asset summary table, or required per-A-share short/medium/long/next-day fields cannot call itself complete. If length is large, keep all modules and compress wording rather than deleting fields."
+  },
+  "governance": {
+    "charter_version": "1.0.0",
+    "report_contract_version": "1.0.0",
+    "analysis_roadmap_version": "1.0.0"
+  },
+  "blockers": [
+    "MINUTE_DATA_DEGRADED",
+    "CANDIDATE_SCAN_NOT_FRESH"
+  ],
+  "instruction": "At a fixed report anchor, inspect readiness first. Data readiness is only the input gate. Then satisfy content_contract without deleting required analysis. Join the Private Ledger only in the private report layer. Statistical evidence remains research-only and must keep its uncertainty/FDR caveats.",
+  "privacy": "public market and research readiness only; no private positions, quantities, costs, cash, account ids, bank executable quotes or trade states"
+}

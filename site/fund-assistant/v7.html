@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f4f5f1">
+<title>基金小帮手</title>
+<link rel="stylesheet" href="v7.css?build=20260819-0650">
+</head>
+<body>
+<div class="wrap">
+  <div class="hero">
+    <div class="brand"><div class="logo">基</div><div><h1>基金小帮手</h1><div class="sub">重点只回答三件事：选什么、今天买不买、手里的什么时候卖。</div></div></div>
+    <div id="state" class="state">正在检查推荐基金更新时间…</div>
+  </div>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="pick">推荐基金</button>
+    <button class="tab" data-tab="mine">我的基金</button>
+    <button class="tab" data-tab="ask">查一只基金</button>
+  </div>
+
+  <section id="pick" class="section active">
+    <div class="card">
+      <div class="title">先学会4件最重要的事</div>
+      <div class="desc">不用先学很多专业知识，先明白下面4件事，就能少犯很多“追高、死扛、不舍得卖”的错误。</div>
+      <div class="learn-grid">
+        <div class="learn"><div class="ico">①</div><b>净值是什么？</b><span>可以简单理解成“一份基金值多少钱”。场外基金不是像股票一样盯着一个实时成交价，最终买卖按基金公司/销售平台确认的净值规则计算。</span></div>
+        <div class="learn"><div class="ico">②</div><b>涨得好 ≠ 今天就该买</b><span>过去半年涨很多，只说明它值得研究。刚大涨完再追进去，反而最容易买在高处。</span></div>
+        <div class="learn"><div class="ico">③</div><b>不要一次把钱全买完</b><span>假如最多准备投2万元，通常先用4000～5000元试第一笔，后面位置更好再加，手里始终留钱。</span></div>
+        <div class="learn"><div class="ico">④</div><b>赚了以后要保护利润</b><span>基金涨得好也不会一直直线上涨。赚到一定程度后，重点会从“继续赚”变成“别把已经赚到的钱全跌回去”。</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title">这段时间重点看这几只</div>
+      <div class="desc">不是今天推荐、明天就换。先连续跟踪，只有基金本身、趋势或同类竞争力明显变差才换掉。</div>
+      <div class="notice"><b>系统怎么分析：</b>先看过去半年和一年有没有持续竞争力，再看近期是不是涨太高或转弱，再用20、60、120个交易日净值走势、近期回撤和波动判断“今天买不买”。<br><b>点下面的“更新今天情况”：</b>会重新读取这只基金最新公开净值走势，再给你今天的买、等、补、卖建议。</div>
+      <div id="pool" class="pool"><div class="loader">正在读取推荐基金并更新今天的判断…</div></div>
+    </div>
+    <div class="card watch-card">
+      <div class="title">我的重点跟踪</div>
+      <div class="watch-explain"><b>这里不是“已经买了”。</b>看中一只基金、但还没决定买，也可以先加入这里每天观察；如果后来真的买了，再去“我的基金”填写成本和金额，系统才会按你的实际情况帮你保护利润。</div>
+      <div id="watchlist" class="watchlist"><div class="empty">还没有重点跟踪的基金。看到想继续观察的，就点“加入重点跟踪”。</div></div>
+    </div>
+  </section>
+
+  <section id="mine" class="section">
+    <div class="card">
+      <div class="title">我的基金</div>
+      <div class="desc">最少只要填基金代码。为了判断“什么时候卖”更准确，建议再填成本净值、大概投入金额和大致买入时间。总资产不用填。</div>
+      <div class="field"><div class="label">1. 基金代码（必填）</div><input id="hCode" class="input" maxlength="6" inputmode="numeric" placeholder="例如 002910"></div>
+      <div class="grid2">
+        <div class="field"><div class="label">2. 大概投入多少钱</div><input id="hAmount" class="input" inputmode="decimal" placeholder="例如 20000"></div>
+        <div class="field"><div class="label">3. 买入成本净值（最好填）</div><input id="hCost" class="input" inputmode="decimal" placeholder="例如 1.2560"></div>
+      </div>
+      <div class="field"><div class="label">4. 大概什么时候买的（可选）</div><input id="hDate" class="input" type="date"></div>
+      <div class="field"><div class="label">5. 如果不知道成本，只知道现在赚还是亏</div>
+        <div class="seg" id="pnlType"><button data-v="gain" class="gain">赚钱</button><button data-v="loss" class="loss">亏钱</button><button data-v="unknown" class="unknown active">不知道</button></div>
+      </div>
+      <div id="pnlField" class="field hidden"><div class="label">大约多少%？只填数字，不用负号</div><input id="hPnlAbs" class="input" inputmode="decimal" placeholder="例如 12"></div>
+      <button id="save" class="btn" style="width:100%;margin-top:13px;padding:15px">保存并开始跟踪</button>
+      <div id="holdings" class="holdings"></div>
+    </div>
+  </section>
+
+  <section id="ask" class="section">
+    <div class="card">
+      <div class="title">查一只：今天到底怎么办？</div>
+      <div class="desc">输入基金代码。也可以直接说“我已经亏15%，还能不能补”或者“我已经赚30%，什么时候卖”。</div>
+      <div class="field"><div class="label">基金代码</div><input id="dCode" class="input" maxlength="6" inputmode="numeric" placeholder="例如 002910"></div>
+      <div class="field"><div class="label">如果还没买：最多准备投入多少钱？（可选）</div><input id="dBudget" class="input" inputmode="decimal" placeholder="例如 20000；系统会告诉你第一笔大约买多少"></div>
+      <div class="field"><div class="label">补充你的情况（可不填）</div><div class="searchrow"><textarea id="q" class="input" style="min-height:82px;resize:vertical" placeholder="例如：我成本1.25，现在亏15%，今天要不要补？"></textarea><button id="voice" class="voice" aria-label="语音输入">🎙️</button></div></div>
+      <div class="quick"><button class="chip">今天能买吗？</button><button class="chip">亏了要不要补？</button><button class="chip">什么时候卖？</button><button class="chip">赚了30%怎么办？</button></div>
+      <button id="go" class="btn" style="width:100%;margin-top:12px;padding:15px">告诉我今天怎么做</button>
+      <div id="result"></div>
+    </div>
+  </section>
+
+  <div class="footer">研究辅助，不保证收益，也无法保证本金不亏。目标是尽量少追高、少死扛，并在盈利后更有纪律地保护已有利润。最终买卖由你自己决定。</div>
+</div>
+<script src="v7-core.js?build=20260819-0650"></script>
+<script src="v7-ui.js?build=20260819-0650"></script>
+</body>
+</html>

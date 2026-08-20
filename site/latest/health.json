@@ -1,0 +1,289 @@
+{
+  "updated_at": "2026-08-20T13:38:28.938379+08:00",
+  "mode": "all",
+  "counts": {
+    "a_share_ok": 7,
+    "a_share_expected": 7,
+    "a_candidate_ok": 5,
+    "a_candidate_expected": 5,
+    "hk_ok": 6,
+    "hk_expected": 6,
+    "us_ok": 4,
+    "us_expected": 4,
+    "tracked_assets_ok": 22,
+    "tracked_assets_expected": 22,
+    "funds_ok": 12,
+    "funds_expected": 12,
+    "sge_ok": 1,
+    "sge_expected": 1,
+    "domestic_gold_reference_ok": 1,
+    "domestic_gold_reference_expected": 1
+  },
+  "minute": {
+    "status": "missing_or_no_permission"
+  },
+  "bank_accumulation_gold": {
+    "status": "private_source_required",
+    "included_in_public_coverage": false
+  },
+  "errors": [
+    {
+      "dataset": "tushare:a:600006.SH",
+      "error": "Exception",
+      "message": "抱歉，您没有接口(daily)访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。"
+    },
+    {
+      "dataset": "akshare:a:600006.SH",
+      "error": "ConnectionError",
+      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "dataset": "eastmoney:a:600006.SH",
+      "error": "ConnectionError",
+      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "dataset": "tushare:a:002085.SZ",
+      "error": "Exception",
+      "message": "抱歉，您没有接口(daily)访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。"
+    },
+    {
+      "dataset": "akshare:a:002085.SZ",
+      "error": "ConnectionError",
+      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "dataset": "eastmoney:a:002085.SZ",
+      "error": "ConnectionError",
+      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "dataset": "yfinance:a:002085.SZ:quality",
+      "error": "DataQualityError",
+      "message": "impossible high: O=10.609999656677246,H=10.319999694824219,L=10.140000343322754,C=10.260000228881836"
+    },
+    {
+      "dataset": "tushare:a:002475.SZ",
+      "error": "Exception",
+      "message": "抱歉，您没有接口(daily)访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。"
+    },
+    {
+      "dataset": "akshare:a:002475.SZ",
+      "error": "ConnectionError",
+      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "dataset": "eastmoney:a:002475.SZ",
+      "error": "ConnectionError",
+      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "dataset": "yfinance:a:002475.SZ:quality",
+      "error": "DataQualityError",
+      "message": "impossible high: O=56.599998474121094,H=54.13999938964844,L=53.099998474121094,C=53.29999923706055"
+    },
+    {
+      "dataset": "tushare:a:601138.SH",
+      "error": "Exception",
+      "message": "抱歉，您没有接口(daily)访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。"
+    },
+    {
+      "dataset": "akshare:a:601138.SH",
+      "error": "ConnectionError",
+      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "dataset": "eastmoney:a:601138.SH",
+      "error": "ConnectionError",
+      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "dataset": "tushare:a:002600.SZ",
+      "error": "Exception",
+      "message": "抱歉，您没有接口(daily)访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。"
+    },
+    {
+      "dataset": "akshare:a:002600.SZ",
+      "error": "ConnectionError",
+      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "dataset": "eastmoney:a:002600.SZ",
+      "error": "ConnectionError",
+      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "dataset": "tushare:a:601899.SH",
+      "error": "Exception",
+      "message": "抱歉，您没有接口(daily)访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。"
+    },
+    {
+      "dataset": "akshare:a:601899.SH",
+      "error": "ConnectionError",
+      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "dataset": "eastmoney:a:601899.SH",
+      "error": "ConnectionError",
+      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "dataset": "tushare:a:300059.SZ",
+      "error": "Exception",
+      "message": "抱歉，您没有接口(daily)访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。"
+    },
+    {
+      "dataset": "akshare:a:300059.SZ",
+      "error": "ConnectionError",
+      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "dataset": "eastmoney:a:300059.SZ",
+      "error": "ConnectionError",
+      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "dataset": "yfinance:a:300059.SZ:quality",
+      "error": "DataQualityError",
+      "message": "impossible high: O=19.729999542236328,H=18.920000076293945,L=18.649999618530273,C=18.809999465942383"
+    },
+    {
+      "dataset": "tushare:a:002371.SZ",
+      "error": "Exception",
+      "message": "抱歉，您没有接口(daily)访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。"
+    },
+    {
+      "dataset": "akshare:a:002371.SZ",
+      "error": "ConnectionError",
+      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "dataset": "eastmoney:a:002371.SZ",
+      "error": "ConnectionError",
+      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "dataset": "tushare:a:300124.SZ",
+      "error": "Exception",
+      "message": "抱歉，您没有接口(daily)访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。"
+    },
+    {
+      "dataset": "akshare:a:300124.SZ",
+      "error": "ConnectionError",
+      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "dataset": "eastmoney:a:300124.SZ",
+      "error": "ConnectionError",
+      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "dataset": "tushare:a:002185.SZ",
+      "error": "Exception",
+      "message": "抱歉，您没有接口(daily)访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。"
+    },
+    {
+      "dataset": "akshare:a:002185.SZ",
+      "error": "ConnectionError",
+      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "dataset": "eastmoney:a:002185.SZ",
+      "error": "ConnectionError",
+      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "dataset": "tushare:a:000977.SZ",
+      "error": "Exception",
+      "message": "抱歉，您没有接口(daily)访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。"
+    },
+    {
+      "dataset": "akshare:a:000977.SZ",
+      "error": "ConnectionError",
+      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "dataset": "eastmoney:a:000977.SZ",
+      "error": "ConnectionError",
+      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "dataset": "yfinance:a:000977.SZ:quality",
+      "error": "DataQualityError",
+      "message": "impossible high: O=79.5999984741211,H=75.62999725341797,L=72.5,C=75.26000213623047"
+    },
+    {
+      "dataset": "tushare:a:600276.SH",
+      "error": "Exception",
+      "message": "抱歉，您没有接口(daily)访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。"
+    },
+    {
+      "dataset": "akshare:a:600276.SH",
+      "error": "ConnectionError",
+      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "dataset": "tushare:hk:09992.HK",
+      "error": "Exception",
+      "message": "抱歉，您没有接口(hk_daily_adj)访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。"
+    },
+    {
+      "dataset": "tushare:hk:00700.HK",
+      "error": "Exception",
+      "message": "抱歉，您没有接口(hk_daily_adj)访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。"
+    },
+    {
+      "dataset": "tushare:hk:00909.HK",
+      "error": "Exception",
+      "message": "抱歉，您没有接口(hk_daily_adj)访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。"
+    },
+    {
+      "dataset": "tushare:hk:06969.HK",
+      "error": "Exception",
+      "message": "抱歉，您没有接口(hk_daily_adj)访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。"
+    },
+    {
+      "dataset": "tushare:hk:09926.HK",
+      "error": "Exception",
+      "message": "抱歉，您没有接口(hk_daily_adj)访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。"
+    },
+    {
+      "dataset": "tushare:hk:09988.HK",
+      "error": "Exception",
+      "message": "抱歉，您没有接口(hk_daily_adj)访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。"
+    },
+    {
+      "dataset": "tushare:us:XPEV",
+      "error": "Exception",
+      "message": "抱歉，您没有接口(us_daily_adj)访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。"
+    },
+    {
+      "dataset": "tushare:us:RLX",
+      "error": "Exception",
+      "message": "抱歉，您没有接口(us_daily_adj)访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。"
+    },
+    {
+      "dataset": "tushare:us:LI",
+      "error": "Exception",
+      "message": "抱歉，您没有接口(us_daily_adj)访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。"
+    },
+    {
+      "dataset": "tushare:us:NIO",
+      "error": "Exception",
+      "message": "抱歉，您没有接口(us_daily_adj)访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。"
+    },
+    {
+      "dataset": "tushare:sge:AU99.99",
+      "error": "Exception",
+      "message": "抱歉，您没有接口(sge_daily)访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。"
+    },
+    {
+      "dataset": "tushare:a_minutes",
+      "error": "Exception",
+      "message": "抱歉，您没有接口(rt_min)访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。"
+    }
+  ],
+  "coverage_ok": true,
+  "intraday_a_share_ok": false,
+  "run_id": "92afd8b5b083b31a"
+}

@@ -1,0 +1,273 @@
+{
+  "generated_at": "2026-08-20T13:41:50.468890+08:00",
+  "schema_version": 1,
+  "status": "RESEARCH_ONLY",
+  "tool": {
+    "name": "pandas_market_calendars",
+    "version": "5.4.0",
+    "role": "historical session alignment, freshness-in-sessions, and planning calendars"
+  },
+  "calendar_policy": {
+    "A": "SSE",
+    "SZ_mapping": "SSE_PROXY_HISTORICAL_ONLY",
+    "HK": "HKEX",
+    "US": "NYSE",
+    "realtime_open_truth": "NOT_PROVIDED_BY_THIS_LAYER; live market-state APIs remain authoritative for realtime gating."
+  },
+  "privacy_boundary": "Public research history only; no private ledger or account data is read.",
+  "markets": [
+    {
+      "market": "A",
+      "calendar": "SSE",
+      "last_completed_session": "2026-08-19",
+      "next_or_current_unfinished_session": "2026-08-20",
+      "symbols": 12,
+      "missing_history": 0,
+      "stale_symbols": 0,
+      "max_session_lag": 0
+    },
+    {
+      "market": "HK",
+      "calendar": "HKEX",
+      "last_completed_session": "2026-08-19",
+      "next_or_current_unfinished_session": "2026-08-20",
+      "symbols": 6,
+      "missing_history": 0,
+      "stale_symbols": 0,
+      "max_session_lag": 0
+    },
+    {
+      "market": "US",
+      "calendar": "NYSE",
+      "last_completed_session": "2026-08-19",
+      "next_or_current_unfinished_session": "2026-08-20",
+      "symbols": 4,
+      "missing_history": 0,
+      "stale_symbols": 0,
+      "max_session_lag": 0
+    }
+  ],
+  "symbols": [
+    {
+      "code": "600006.SH",
+      "market": "A",
+      "scope": "research_core",
+      "calendar": "SSE",
+      "latest_history_date": "2026-08-20",
+      "last_completed_session": "2026-08-19",
+      "session_lag": 0,
+      "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
+    },
+    {
+      "code": "002085.SZ",
+      "market": "A",
+      "scope": "research_core",
+      "calendar": "SSE",
+      "latest_history_date": "2026-08-20",
+      "last_completed_session": "2026-08-19",
+      "session_lag": 0,
+      "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
+    },
+    {
+      "code": "002475.SZ",
+      "market": "A",
+      "scope": "research_core",
+      "calendar": "SSE",
+      "latest_history_date": "2026-08-20",
+      "last_completed_session": "2026-08-19",
+      "session_lag": 0,
+      "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
+    },
+    {
+      "code": "601138.SH",
+      "market": "A",
+      "scope": "research_core",
+      "calendar": "SSE",
+      "latest_history_date": "2026-08-20",
+      "last_completed_session": "2026-08-19",
+      "session_lag": 0,
+      "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
+    },
+    {
+      "code": "002600.SZ",
+      "market": "A",
+      "scope": "research_core",
+      "calendar": "SSE",
+      "latest_history_date": "2026-08-20",
+      "last_completed_session": "2026-08-19",
+      "session_lag": 0,
+      "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
+    },
+    {
+      "code": "601899.SH",
+      "market": "A",
+      "scope": "research_core",
+      "calendar": "SSE",
+      "latest_history_date": "2026-08-20",
+      "last_completed_session": "2026-08-19",
+      "session_lag": 0,
+      "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
+    },
+    {
+      "code": "300059.SZ",
+      "market": "A",
+      "scope": "research_core",
+      "calendar": "SSE",
+      "latest_history_date": "2026-08-20",
+      "last_completed_session": "2026-08-19",
+      "session_lag": 0,
+      "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
+    },
+    {
+      "code": "002371.SZ",
+      "market": "A",
+      "scope": "candidate_seed",
+      "calendar": "SSE",
+      "latest_history_date": "2026-08-20",
+      "last_completed_session": "2026-08-19",
+      "session_lag": 0,
+      "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
+    },
+    {
+      "code": "300124.SZ",
+      "market": "A",
+      "scope": "candidate_seed",
+      "calendar": "SSE",
+      "latest_history_date": "2026-08-20",
+      "last_completed_session": "2026-08-19",
+      "session_lag": 0,
+      "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
+    },
+    {
+      "code": "002185.SZ",
+      "market": "A",
+      "scope": "candidate_seed",
+      "calendar": "SSE",
+      "latest_history_date": "2026-08-20",
+      "last_completed_session": "2026-08-19",
+      "session_lag": 0,
+      "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
+    },
+    {
+      "code": "000977.SZ",
+      "market": "A",
+      "scope": "candidate_seed",
+      "calendar": "SSE",
+      "latest_history_date": "2026-08-20",
+      "last_completed_session": "2026-08-19",
+      "session_lag": 0,
+      "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
+    },
+    {
+      "code": "600276.SH",
+      "market": "A",
+      "scope": "candidate_seed",
+      "calendar": "SSE",
+      "latest_history_date": "2026-08-20",
+      "last_completed_session": "2026-08-19",
+      "session_lag": 0,
+      "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
+    },
+    {
+      "code": "09992.HK",
+      "market": "HK",
+      "scope": "hk_research",
+      "calendar": "HKEX",
+      "latest_history_date": "2026-08-20",
+      "last_completed_session": "2026-08-19",
+      "session_lag": 0,
+      "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
+    },
+    {
+      "code": "00700.HK",
+      "market": "HK",
+      "scope": "hk_research",
+      "calendar": "HKEX",
+      "latest_history_date": "2026-08-20",
+      "last_completed_session": "2026-08-19",
+      "session_lag": 0,
+      "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
+    },
+    {
+      "code": "00909.HK",
+      "market": "HK",
+      "scope": "hk_research",
+      "calendar": "HKEX",
+      "latest_history_date": "2026-08-20",
+      "last_completed_session": "2026-08-19",
+      "session_lag": 0,
+      "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
+    },
+    {
+      "code": "06969.HK",
+      "market": "HK",
+      "scope": "hk_research",
+      "calendar": "HKEX",
+      "latest_history_date": "2026-08-20",
+      "last_completed_session": "2026-08-19",
+      "session_lag": 0,
+      "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
+    },
+    {
+      "code": "09926.HK",
+      "market": "HK",
+      "scope": "hk_research",
+      "calendar": "HKEX",
+      "latest_history_date": "2026-08-20",
+      "last_completed_session": "2026-08-19",
+      "session_lag": 0,
+      "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
+    },
+    {
+      "code": "09988.HK",
+      "market": "HK",
+      "scope": "hk_research",
+      "calendar": "HKEX",
+      "latest_history_date": "2026-08-20",
+      "last_completed_session": "2026-08-19",
+      "session_lag": 0,
+      "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
+    },
+    {
+      "code": "XPEV",
+      "market": "US",
+      "scope": "us_research",
+      "calendar": "NYSE",
+      "latest_history_date": "2026-08-19",
+      "last_completed_session": "2026-08-19",
+      "session_lag": 0,
+      "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
+    },
+    {
+      "code": "RLX",
+      "market": "US",
+      "scope": "us_research",
+      "calendar": "NYSE",
+      "latest_history_date": "2026-08-19",
+      "last_completed_session": "2026-08-19",
+      "session_lag": 0,
+      "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
+    },
+    {
+      "code": "LI",
+      "market": "US",
+      "scope": "us_research",
+      "calendar": "NYSE",
+      "latest_history_date": "2026-08-19",
+      "last_completed_session": "2026-08-19",
+      "session_lag": 0,
+      "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
+    },
+    {
+      "code": "NIO",
+      "market": "US",
+      "scope": "us_research",
+      "calendar": "NYSE",
+      "latest_history_date": "2026-08-19",
+      "last_completed_session": "2026-08-19",
+      "session_lag": 0,
+      "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
+    }
+  ],
+  "interpretation": "Session lag is a data-readiness signal. It is not a market forecast or trading instruction."
+}

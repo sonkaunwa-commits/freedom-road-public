@@ -1,0 +1,27 @@
+{
+  "app_version": "2.0",
+  "updated": "2026-08-18",
+  "strict_core": {
+    "total": 328,
+    "finance": 140,
+    "law": 188,
+    "composition": "24人工种子题 + 304道基于38个已整理知识点生成的原创模拟练习题",
+    "usage": "可进入高置信练习和单科120题模拟；不宣称为官方真题"
+  },
+  "open_sources": {
+    "FIRE-Bench": {
+      "repository": "DXM-AGI/FIRE-Bench",
+      "license": "Apache-2.0",
+      "benchmark": "finance_证券从业资格证",
+      "prefiltered_count": 915,
+      "usage": "开放候选题；因包含历史规则，默认不进入高置信模拟"
+    },
+    "CFLUE": {
+      "repository": "aliyun/cflue",
+      "dataset_license": "CC BY-NC-SA 4.0",
+      "usage": "部署时自动读取公开证券从业相关题并保留来源；法规和时效敏感题默认降为开放候选"
+    }
+  },
+  "policy": "法规、比例、期限、金额、交易规则和历史年份相关公开题未经逐题复核前不进入高置信模拟。公开题源仅用于个人非商业学习。",
+  "rebuild": "GitHub Pages部署时重建，并按周自动重建公开题源"
+}

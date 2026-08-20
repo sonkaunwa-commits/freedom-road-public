@@ -1,0 +1,10 @@
+{
+  "updated_at": "2026-08-19T23:54:12.316930+08:00",
+  "status": "unavailable_nonfatal",
+  "provider": "none",
+  "last_attempt_errors": {
+    "tushare": "抱歉，您没有接口(trade_cal)访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。",
+    "fallback": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+  },
+  "note": "候选池本轮扫描失败，但行情主数据任务继续运行并提交。不得因为候选扫描失败阻断A/H/US、基金、黄金和health.json更新。"
+}

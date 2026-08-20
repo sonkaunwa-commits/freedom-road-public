@@ -1,0 +1,319 @@
+{
+  "generated_at": "2026-08-20T13:42:15.325510+08:00",
+  "schema_version": 1,
+  "evidence_status": "READY_RESEARCH_ONLY",
+  "production_use": "RESEARCH_ONLY",
+  "privacy_boundary": "Public research evidence only; private holdings, quantities, costs, cash, accounts and trade states are absent.",
+  "component_gates": {
+    "pandera_contracts": {
+      "status": "OK",
+      "invalid": 0,
+      "missing": 0
+    },
+    "calendar_alignment": {
+      "status": "OK",
+      "stale_symbols": 0,
+      "missing_history": 0
+    },
+    "duckdb_evidence": {
+      "status": "OK",
+      "pandas_match": true,
+      "missing_or_invalid_histories": 0
+    },
+    "statistical_evidence": {
+      "status": "RESEARCH_ONLY",
+      "sufficient_signal_horizons": 110,
+      "insufficient_signal_horizons": 70,
+      "fdr_reject_5pct_count": 16
+    }
+  },
+  "statistical_conclusions": {
+    "positive_fdr_5pct_count": 12,
+    "negative_fdr_5pct_count": 4,
+    "positive_fdr_5pct": [
+      {
+        "code": "002185.SZ",
+        "scope": "candidate_seed",
+        "signal": "ma20_reclaim",
+        "horizon_sessions": 20,
+        "sample_size": 25,
+        "mean_return_pct": 8.773155,
+        "confidence_interval_95_pct": [
+          5.639859,
+          11.906452
+        ],
+        "p_value_two_sided": 4e-08,
+        "fdr_bh_q_value": 1.47e-06,
+        "evidence_class": "POSITIVE_FDR_5PCT"
+      },
+      {
+        "code": "000977.SZ",
+        "scope": "candidate_seed",
+        "signal": "ma20_reclaim",
+        "horizon_sessions": 20,
+        "sample_size": 24,
+        "mean_return_pct": 7.647361,
+        "confidence_interval_95_pct": [
+          4.252027,
+          11.042695
+        ],
+        "p_value_two_sided": 1.013e-05,
+        "fdr_bh_q_value": 0.00018572,
+        "evidence_class": "POSITIVE_FDR_5PCT"
+      },
+      {
+        "code": "002371.SZ",
+        "scope": "candidate_seed",
+        "signal": "ma20_reclaim",
+        "horizon_sessions": 20,
+        "sample_size": 30,
+        "mean_return_pct": 9.526441,
+        "confidence_interval_95_pct": [
+          4.156601,
+          14.896282
+        ],
+        "p_value_two_sided": 0.00050687,
+        "fdr_bh_q_value": 0.00696946,
+        "evidence_class": "POSITIVE_FDR_5PCT"
+      },
+      {
+        "code": "002371.SZ",
+        "scope": "candidate_seed",
+        "signal": "ma20_above_ma60_entry",
+        "horizon_sessions": 20,
+        "sample_size": 22,
+        "mean_return_pct": 6.621574,
+        "confidence_interval_95_pct": [
+          2.911499,
+          10.331648
+        ],
+        "p_value_two_sided": 0.00046866,
+        "fdr_bh_q_value": 0.00696946,
+        "evidence_class": "POSITIVE_FDR_5PCT"
+      },
+      {
+        "code": "002185.SZ",
+        "scope": "candidate_seed",
+        "signal": "ma20_reclaim",
+        "horizon_sessions": 5,
+        "sample_size": 26,
+        "mean_return_pct": 3.652534,
+        "confidence_interval_95_pct": [
+          1.562185,
+          5.742882
+        ],
+        "p_value_two_sided": 0.00061546,
+        "fdr_bh_q_value": 0.00752229,
+        "evidence_class": "POSITIVE_FDR_5PCT"
+      },
+      {
+        "code": "601138.SH",
+        "scope": "research_core",
+        "signal": "volume_confirmed_20d_breakout",
+        "horizon_sessions": 20,
+        "sample_size": 26,
+        "mean_return_pct": 17.334772,
+        "confidence_interval_95_pct": [
+          6.956696,
+          27.712848
+        ],
+        "p_value_two_sided": 0.0010612,
+        "fdr_bh_q_value": 0.0116732,
+        "evidence_class": "POSITIVE_FDR_5PCT"
+      },
+      {
+        "code": "002371.SZ",
+        "scope": "candidate_seed",
+        "signal": "ma20_reclaim",
+        "horizon_sessions": 10,
+        "sample_size": 31,
+        "mean_return_pct": 4.998469,
+        "confidence_interval_95_pct": [
+          1.917246,
+          8.079692
+        ],
+        "p_value_two_sided": 0.00147518,
+        "fdr_bh_q_value": 0.01352248,
+        "evidence_class": "POSITIVE_FDR_5PCT"
+      },
+      {
+        "code": "300124.SZ",
+        "scope": "candidate_seed",
+        "signal": "ma20_reclaim",
+        "horizon_sessions": 20,
+        "sample_size": 23,
+        "mean_return_pct": 8.287856,
+        "confidence_interval_95_pct": [
+          3.180946,
+          13.394765
+        ],
+        "p_value_two_sided": 0.00146885,
+        "fdr_bh_q_value": 0.01352248,
+        "evidence_class": "POSITIVE_FDR_5PCT"
+      },
+      {
+        "code": "600006.SH",
+        "scope": "research_core",
+        "signal": "ma20_reclaim",
+        "horizon_sessions": 10,
+        "sample_size": 28,
+        "mean_return_pct": 2.819956,
+        "confidence_interval_95_pct": [
+          0.956485,
+          4.683427
+        ],
+        "p_value_two_sided": 0.00301723,
+        "fdr_bh_q_value": 0.02485154,
+        "evidence_class": "POSITIVE_FDR_5PCT"
+      },
+      {
+        "code": "002185.SZ",
+        "scope": "candidate_seed",
+        "signal": "ma20_reclaim",
+        "horizon_sessions": 10,
+        "sample_size": 25,
+        "mean_return_pct": 4.81299,
+        "confidence_interval_95_pct": [
+          1.572703,
+          8.053277
+        ],
+        "p_value_two_sided": 0.00359985,
+        "fdr_bh_q_value": 0.02485154,
+        "evidence_class": "POSITIVE_FDR_5PCT"
+      },
+      {
+        "code": "002371.SZ",
+        "scope": "candidate_seed",
+        "signal": "ma20_above_ma60_entry",
+        "horizon_sessions": 5,
+        "sample_size": 23,
+        "mean_return_pct": 2.403279,
+        "confidence_interval_95_pct": [
+          0.784582,
+          4.021976
+        ],
+        "p_value_two_sided": 0.00361477,
+        "fdr_bh_q_value": 0.02485154,
+        "evidence_class": "POSITIVE_FDR_5PCT"
+      },
+      {
+        "code": "601899.SH",
+        "scope": "research_core",
+        "signal": "ma20_above_ma60_entry",
+        "horizon_sessions": 5,
+        "sample_size": 20,
+        "mean_return_pct": 2.057345,
+        "confidence_interval_95_pct": [
+          0.680419,
+          3.434272
+        ],
+        "p_value_two_sided": 0.00340608,
+        "fdr_bh_q_value": 0.02485154,
+        "evidence_class": "POSITIVE_FDR_5PCT"
+      }
+    ],
+    "negative_fdr_5pct": [
+      {
+        "code": "600006.SH",
+        "scope": "research_core",
+        "signal": "breakout_20d_close",
+        "horizon_sessions": 20,
+        "sample_size": 25,
+        "mean_return_pct": -6.463675,
+        "confidence_interval_95_pct": [
+          -7.841344,
+          -5.086007
+        ],
+        "p_value_two_sided": 0.0,
+        "fdr_bh_q_value": 0.0,
+        "evidence_class": "NEGATIVE_FDR_5PCT"
+      },
+      {
+        "code": "600006.SH",
+        "scope": "research_core",
+        "signal": "volume_confirmed_20d_breakout",
+        "horizon_sessions": 20,
+        "sample_size": 23,
+        "mean_return_pct": -6.143635,
+        "confidence_interval_95_pct": [
+          -7.527407,
+          -4.759863
+        ],
+        "p_value_two_sided": 0.0,
+        "fdr_bh_q_value": 0.0,
+        "evidence_class": "NEGATIVE_FDR_5PCT"
+      },
+      {
+        "code": "600006.SH",
+        "scope": "research_core",
+        "signal": "volume_confirmed_20d_breakout",
+        "horizon_sessions": 10,
+        "sample_size": 23,
+        "mean_return_pct": -2.69434,
+        "confidence_interval_95_pct": [
+          -3.696233,
+          -1.692446
+        ],
+        "p_value_two_sided": 1.4e-07,
+        "fdr_bh_q_value": 3.85e-06,
+        "evidence_class": "NEGATIVE_FDR_5PCT"
+      },
+      {
+        "code": "600006.SH",
+        "scope": "research_core",
+        "signal": "breakout_20d_close",
+        "horizon_sessions": 10,
+        "sample_size": 26,
+        "mean_return_pct": -3.259038,
+        "confidence_interval_95_pct": [
+          -4.640191,
+          -1.877885
+        ],
+        "p_value_two_sided": 3.75e-06,
+        "fdr_bh_q_value": 8.25e-05,
+        "evidence_class": "NEGATIVE_FDR_5PCT"
+      }
+    ],
+    "policy": "Only signal-horizon estimates surviving the payload-level Benjamini-Hochberg 5% FDR gate are called positive/negative statistical evidence. Everything else remains inconclusive or insufficient."
+  },
+  "market_breadth": [
+    {
+      "market": "A",
+      "symbols": 12,
+      "above_ma20_pct": 16.67,
+      "above_ma60_pct": 16.67,
+      "positive_20d_pct": 16.67,
+      "median_return_20d_pct": -2.0342,
+      "median_return_60d_pct": -12.1156,
+      "median_drawdown_60d_pct": -22.8161
+    },
+    {
+      "market": "HK",
+      "symbols": 6,
+      "above_ma20_pct": 66.67,
+      "above_ma60_pct": 66.67,
+      "positive_20d_pct": 50.0,
+      "median_return_20d_pct": -1.2646,
+      "median_return_60d_pct": 0.1574,
+      "median_drawdown_60d_pct": -11.8538
+    },
+    {
+      "market": "US",
+      "symbols": 4,
+      "above_ma20_pct": 0.0,
+      "above_ma60_pct": 0.0,
+      "positive_20d_pct": 25.0,
+      "median_return_20d_pct": -4.3099,
+      "median_return_60d_pct": -16.4349,
+      "median_drawdown_60d_pct": -21.8779
+    }
+  ],
+  "conclusion_policy": {
+    "data_contract_failure": "Block statistical/market conclusions until normalized public data contracts pass.",
+    "calendar_staleness": "Treat stale session alignment as a readiness degradation; never convert stale data into current-market claims.",
+    "descriptive_vs_inferential": "DuckDB breadth is descriptive. Statsmodels evidence is inferential only after sample-size, HAC uncertainty and FDR controls.",
+    "causality": "No historical association in this layer is a causal claim.",
+    "actionability": "This layer must not create automatic trades, exact action prices, position sizes or account instructions."
+  },
+  "interpretation": "Use this payload as an evidence packet for human analysis and report calibration, not as a standalone investment decision engine."
+}

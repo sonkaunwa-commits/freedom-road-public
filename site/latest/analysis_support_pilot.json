@@ -1,0 +1,92 @@
+{
+  "generated_at_utc": "2026-08-19T06:53:01.226846+00:00",
+  "schema_version": 1,
+  "mode": "RESEARCH_ONLY_PILOT",
+  "scope": "synthetic_and_historical_calendar_smoke_only",
+  "package_versions": {
+    "duckdb": "1.5.5",
+    "pandas_market_calendars": "5.4.0",
+    "pandera": "0.32.1",
+    "statsmodels": "0.14.6",
+    "pandas": "2.3.3",
+    "numpy": "2.5.2"
+  },
+  "tests": {
+    "duckdb": {
+      "status": "OK",
+      "mode": "local_in_process_read_only_query_after_fixture_write",
+      "rows": 6,
+      "groups": 3,
+      "pandas_reference_match": true
+    },
+    "market_calendars": {
+      "status": "OK",
+      "calendar_aliases": {
+        "SH": "SSE",
+        "HK": "HKEX",
+        "US": "NYSE"
+      },
+      "SZ_mapping": {
+        "calendar": "SSE",
+        "policy": "SH_PROXY_FOR_HISTORICAL_PLANNING_ONLY",
+        "caveat": "Realtime market-open truth remains the live market-state source; SZ proxy must not override it."
+      },
+      "checks": {
+        "sh_normal_open": true,
+        "sh_spring_festival_closed": true,
+        "sh_lunch_break_present": true,
+        "hk_normal_open": true,
+        "hk_establishment_day_closed": true,
+        "hk_lunch_break_present": true,
+        "us_independence_day_closed": true,
+        "us_early_close_day_open": true,
+        "us_normal_day_open": true
+      },
+      "us_2024_07_03_session_hours": 3.5,
+      "us_2024_07_05_session_hours": 6.5,
+      "us_half_day_detected": true
+    },
+    "pandera": {
+      "status": "OK",
+      "snapshot_contract": "VALID",
+      "canonical_kline_1m_contract": "VALID",
+      "canonical_composite_key": [
+        "code",
+        "time_key"
+      ],
+      "duplicate_fixture_rejected": true,
+      "raw_landing_policy": "NOT_BLOCKED_BY_THIS_CONTRACT"
+    },
+    "statsmodels": {
+      "status": "OK",
+      "research_only": true,
+      "fixture": "deterministic_synthetic_linear_relation",
+      "sample_size": 200,
+      "slope": 0.805337,
+      "slope_p_value": 0.0,
+      "slope_ci_95": [
+        0.756962,
+        0.853713
+      ],
+      "r_squared": 0.8448,
+      "durbin_watson": 2.002049,
+      "checks": {
+        "sample_size_200": true,
+        "slope_near_fixture_truth": true,
+        "slope_significant_in_fixture": true,
+        "confidence_interval_contains_fixture_truth": true
+      },
+      "caveat": "This is a framework smoke test, not an investment inference. Production evidence must report sample size, uncertainty, significance and model diagnostics."
+    }
+  },
+  "overall_status": "OK",
+  "failed_tests": [],
+  "governance": {
+    "private_ledger_mutation": false,
+    "trade_api": false,
+    "trade_unlock": false,
+    "paid_api_or_solver": false,
+    "scheduled_investment_job_added": false,
+    "formal_report_evidence_enabled": false
+  }
+}

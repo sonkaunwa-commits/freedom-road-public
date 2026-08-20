@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-20T18:04:24.783526+08:00",
+  "generated_at": "2026-08-21T00:02:06.694058+08:00",
   "schema_version": 1,
   "status": "RESEARCH_ONLY",
   "tool": {
@@ -233,7 +233,7 @@
       "market": "US",
       "scope": "us_research",
       "calendar": "NYSE",
-      "latest_history_date": "2026-08-19",
+      "latest_history_date": "2026-08-20",
       "last_completed_session": "2026-08-19",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
@@ -243,7 +243,7 @@
       "market": "US",
       "scope": "us_research",
       "calendar": "NYSE",
-      "latest_history_date": "2026-08-19",
+      "latest_history_date": "2026-08-20",
       "last_completed_session": "2026-08-19",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
@@ -253,7 +253,7 @@
       "market": "US",
       "scope": "us_research",
       "calendar": "NYSE",
-      "latest_history_date": "2026-08-19",
+      "latest_history_date": "2026-08-20",
       "last_completed_session": "2026-08-19",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
@@ -263,7 +263,7 @@
       "market": "US",
       "scope": "us_research",
       "calendar": "NYSE",
-      "latest_history_date": "2026-08-19",
+      "latest_history_date": "2026-08-20",
       "last_completed_session": "2026-08-19",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"

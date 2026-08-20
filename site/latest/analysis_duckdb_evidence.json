@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-20T18:04:45.087471+08:00",
+  "generated_at": "2026-08-21T00:02:29.032688+08:00",
   "schema_version": 1,
   "status": "RESEARCH_ONLY",
   "tool": {
@@ -61,16 +61,16 @@
     {
       "market": "US",
       "symbols": 4,
-      "above_ma20_count": 0,
-      "above_ma20_pct": 0.0,
+      "above_ma20_count": 1,
+      "above_ma20_pct": 25.0,
       "above_ma60_count": 0,
       "above_ma60_pct": 0.0,
       "positive_20d_count": 1,
       "positive_20d_pct": 25.0,
-      "median_return_20d_pct": -4.3099,
-      "median_return_60d_pct": -17.4482,
-      "median_realized_vol_20d_annualized_pct": 36.2334,
-      "median_drawdown_60d_pct": -21.8779
+      "median_return_20d_pct": -4.0851,
+      "median_return_60d_pct": -16.3759,
+      "median_realized_vol_20d_annualized_pct": 36.2565,
+      "median_drawdown_60d_pct": -21.506
     }
   ],
   "symbols": [
@@ -312,53 +312,53 @@
       "code": "LI",
       "market": "US",
       "scope": "us_research",
-      "trade_date": "2026-08-19",
-      "close": 12.71,
-      "return_20d_pct": 4.868,
-      "return_60d_pct": -20.0126,
-      "distance_ma20_pct": -0.4815,
-      "distance_ma60_pct": -2.9907,
-      "drawdown_60d_pct": -19.9622,
-      "realized_vol_20d_annualized_pct": 42.0354
+      "trade_date": "2026-08-20",
+      "close": 12.85,
+      "return_20d_pct": 3.8804,
+      "return_60d_pct": -19.0806,
+      "distance_ma20_pct": 0.4259,
+      "distance_ma60_pct": -1.5426,
+      "drawdown_60d_pct": -18.5678,
+      "realized_vol_20d_annualized_pct": 41.6285
     },
     {
       "code": "NIO",
       "market": "US",
       "scope": "us_research",
-      "trade_date": "2026-08-19",
-      "close": 4.58,
-      "return_20d_pct": -1.9272,
-      "return_60d_pct": -11.9231,
-      "distance_ma20_pct": -1.6956,
-      "distance_ma60_pct": -7.9798,
-      "drawdown_60d_pct": -23.7937,
-      "realized_vol_20d_annualized_pct": 31.9247
+      "trade_date": "2026-08-20",
+      "close": 4.5409,
+      "return_20d_pct": -2.1358,
+      "return_60d_pct": -13.6711,
+      "distance_ma20_pct": -2.4311,
+      "distance_ma60_pct": -8.5451,
+      "drawdown_60d_pct": -24.4443,
+      "realized_vol_20d_annualized_pct": 31.983
     },
     {
       "code": "RLX",
       "market": "US",
       "scope": "us_research",
-      "trade_date": "2026-08-19",
-      "close": 1.83,
-      "return_20d_pct": -9.4059,
-      "return_60d_pct": -14.8837,
-      "distance_ma20_pct": -7.2478,
-      "distance_ma60_pct": -7.1459,
-      "drawdown_60d_pct": -11.5942,
-      "realized_vol_20d_annualized_pct": 29.6525
+      "trade_date": "2026-08-20",
+      "close": 1.815,
+      "return_20d_pct": -11.8932,
+      "return_60d_pct": -12.3188,
+      "distance_ma20_pct": -7.4334,
+      "distance_ma60_pct": -7.708,
+      "drawdown_60d_pct": -12.3188,
+      "realized_vol_20d_annualized_pct": 28.2068
     },
     {
       "code": "XPEV",
       "market": "US",
       "scope": "us_research",
-      "trade_date": "2026-08-19",
+      "trade_date": "2026-08-20",
       "close": 11.99,
-      "return_20d_pct": -6.6926,
-      "return_60d_pct": -23.0917,
-      "distance_ma20_pct": -1.9784,
-      "distance_ma60_pct": -11.6835,
+      "return_20d_pct": -6.0345,
+      "return_60d_pct": -27.5529,
+      "distance_ma20_pct": -1.6689,
+      "distance_ma60_pct": -11.1863,
       "drawdown_60d_pct": -32.9793,
-      "realized_vol_20d_annualized_pct": 40.5422
+      "realized_vol_20d_annualized_pct": 40.53
     }
   ],
   "interpretation": "These are descriptive historical breadth and regime metrics, not forecasts or trading instructions."

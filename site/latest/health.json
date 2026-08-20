@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-20T17:19:23.894278+08:00",
+  "updated_at": "2026-08-20T18:01:27.614810+08:00",
   "mode": "all",
   "counts": {
     "a_share_ok": 7,
@@ -290,5 +290,5 @@
   ],
   "coverage_ok": true,
   "intraday_a_share_ok": false,
-  "run_id": "fa9470f4b52202bb"
+  "run_id": "b3295c6992142c73"
 }

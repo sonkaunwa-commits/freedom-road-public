@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-20T13:41:50.468890+08:00",
+  "generated_at": "2026-08-20T17:22:19.634410+08:00",
   "schema_version": 1,
   "status": "RESEARCH_ONLY",
   "tool": {
@@ -19,8 +19,8 @@
     {
       "market": "A",
       "calendar": "SSE",
-      "last_completed_session": "2026-08-19",
-      "next_or_current_unfinished_session": "2026-08-20",
+      "last_completed_session": "2026-08-20",
+      "next_or_current_unfinished_session": "2026-08-21",
       "symbols": 12,
       "missing_history": 0,
       "stale_symbols": 0,
@@ -29,8 +29,8 @@
     {
       "market": "HK",
       "calendar": "HKEX",
-      "last_completed_session": "2026-08-19",
-      "next_or_current_unfinished_session": "2026-08-20",
+      "last_completed_session": "2026-08-20",
+      "next_or_current_unfinished_session": "2026-08-21",
       "symbols": 6,
       "missing_history": 0,
       "stale_symbols": 0,
@@ -54,7 +54,7 @@
       "scope": "research_core",
       "calendar": "SSE",
       "latest_history_date": "2026-08-20",
-      "last_completed_session": "2026-08-19",
+      "last_completed_session": "2026-08-20",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
     },
@@ -64,7 +64,7 @@
       "scope": "research_core",
       "calendar": "SSE",
       "latest_history_date": "2026-08-20",
-      "last_completed_session": "2026-08-19",
+      "last_completed_session": "2026-08-20",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
     },
@@ -74,7 +74,7 @@
       "scope": "research_core",
       "calendar": "SSE",
       "latest_history_date": "2026-08-20",
-      "last_completed_session": "2026-08-19",
+      "last_completed_session": "2026-08-20",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
     },
@@ -84,7 +84,7 @@
       "scope": "research_core",
       "calendar": "SSE",
       "latest_history_date": "2026-08-20",
-      "last_completed_session": "2026-08-19",
+      "last_completed_session": "2026-08-20",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
     },
@@ -94,7 +94,7 @@
       "scope": "research_core",
       "calendar": "SSE",
       "latest_history_date": "2026-08-20",
-      "last_completed_session": "2026-08-19",
+      "last_completed_session": "2026-08-20",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
     },
@@ -104,7 +104,7 @@
       "scope": "research_core",
       "calendar": "SSE",
       "latest_history_date": "2026-08-20",
-      "last_completed_session": "2026-08-19",
+      "last_completed_session": "2026-08-20",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
     },
@@ -114,7 +114,7 @@
       "scope": "research_core",
       "calendar": "SSE",
       "latest_history_date": "2026-08-20",
-      "last_completed_session": "2026-08-19",
+      "last_completed_session": "2026-08-20",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
     },
@@ -124,7 +124,7 @@
       "scope": "candidate_seed",
       "calendar": "SSE",
       "latest_history_date": "2026-08-20",
-      "last_completed_session": "2026-08-19",
+      "last_completed_session": "2026-08-20",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
     },
@@ -134,7 +134,7 @@
       "scope": "candidate_seed",
       "calendar": "SSE",
       "latest_history_date": "2026-08-20",
-      "last_completed_session": "2026-08-19",
+      "last_completed_session": "2026-08-20",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
     },
@@ -144,7 +144,7 @@
       "scope": "candidate_seed",
       "calendar": "SSE",
       "latest_history_date": "2026-08-20",
-      "last_completed_session": "2026-08-19",
+      "last_completed_session": "2026-08-20",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
     },
@@ -154,7 +154,7 @@
       "scope": "candidate_seed",
       "calendar": "SSE",
       "latest_history_date": "2026-08-20",
-      "last_completed_session": "2026-08-19",
+      "last_completed_session": "2026-08-20",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
     },
@@ -164,7 +164,7 @@
       "scope": "candidate_seed",
       "calendar": "SSE",
       "latest_history_date": "2026-08-20",
-      "last_completed_session": "2026-08-19",
+      "last_completed_session": "2026-08-20",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
     },
@@ -174,7 +174,7 @@
       "scope": "hk_research",
       "calendar": "HKEX",
       "latest_history_date": "2026-08-20",
-      "last_completed_session": "2026-08-19",
+      "last_completed_session": "2026-08-20",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
     },
@@ -184,7 +184,7 @@
       "scope": "hk_research",
       "calendar": "HKEX",
       "latest_history_date": "2026-08-20",
-      "last_completed_session": "2026-08-19",
+      "last_completed_session": "2026-08-20",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
     },
@@ -194,7 +194,7 @@
       "scope": "hk_research",
       "calendar": "HKEX",
       "latest_history_date": "2026-08-20",
-      "last_completed_session": "2026-08-19",
+      "last_completed_session": "2026-08-20",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
     },
@@ -204,7 +204,7 @@
       "scope": "hk_research",
       "calendar": "HKEX",
       "latest_history_date": "2026-08-20",
-      "last_completed_session": "2026-08-19",
+      "last_completed_session": "2026-08-20",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
     },
@@ -214,7 +214,7 @@
       "scope": "hk_research",
       "calendar": "HKEX",
       "latest_history_date": "2026-08-20",
-      "last_completed_session": "2026-08-19",
+      "last_completed_session": "2026-08-20",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
     },
@@ -224,7 +224,7 @@
       "scope": "hk_research",
       "calendar": "HKEX",
       "latest_history_date": "2026-08-20",
-      "last_completed_session": "2026-08-19",
+      "last_completed_session": "2026-08-20",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
     },

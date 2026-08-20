@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-20T07:54:55+08:00",
+  "generated_at": "2026-08-20T16:08:42+08:00",
   "method_version": "fund-screen-v2.0",
   "goal": "持续跟踪6-12个月高弹性候选；不承诺收益，不预测必然涨幅",
   "selection_policy": "核心池固定跟踪6只；仅在评分明显恶化、中期趋势转负、暂停申购或更优候选持续胜出时替换",
@@ -80,7 +80,7 @@
       "tracking": {
         "first_seen": "2026-08-18T21:59:00+08:00",
         "days_tracked": 3,
-        "refresh_count": 6,
+        "refresh_count": 7,
         "score_history": [
           {
             "at": "2026-08-18T21:59:00+08:00",
@@ -109,6 +109,11 @@
           },
           {
             "at": "2026-08-20T07:55:41+08:00",
+            "score": 95.1,
+            "action": "第一买入区"
+          },
+          {
+            "at": "2026-08-20T16:09:21+08:00",
             "score": 95.1,
             "action": "第一买入区"
           }
@@ -145,8 +150,8 @@
         },
         "risk": {
           "period": "近1年",
-          "annual_volatility": 37.13,
-          "sharpe": 5.24,
+          "annual_volatility": 37.4,
+          "sharpe": 4.96,
           "max_drawdown": 16.25,
           "peer_risk_return": 100.0,
           "peer_resilience": 40.0
@@ -162,60 +167,7 @@
           }
         },
         "holdings": {
-          "quarter": "2026年2季度股票投资明细",
-          "top10_concentration": 59.4,
-          "top_holdings": [
-            {
-              "name": "华峰测控",
-              "code": "688200",
-              "weight": 9.15
-            },
-            {
-              "name": "北方华创",
-              "code": "002371",
-              "weight": 8.82
-            },
-            {
-              "name": "神工股份",
-              "code": "688233",
-              "weight": 7.21
-            },
-            {
-              "name": "芯原股份",
-              "code": "688521",
-              "weight": 6.56
-            },
-            {
-              "name": "寒武纪",
-              "code": "688256",
-              "weight": 6.42
-            },
-            {
-              "name": "中科飞测",
-              "code": "688361",
-              "weight": 6.37
-            },
-            {
-              "name": "伟测科技",
-              "code": "688372",
-              "weight": 5.31
-            },
-            {
-              "name": "京仪装备",
-              "code": "688652",
-              "weight": 3.69
-            },
-            {
-              "name": "富创精密",
-              "code": "688409",
-              "weight": 3.17
-            },
-            {
-              "name": "申菱环境",
-              "code": "301018",
-              "weight": 2.7
-            }
-          ]
+          "error": "holdings: APIError: API Error: FundArchivesDatas request failed: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')) (Status code: None)"
         },
         "industries": {
           "period": "2026-06-30",
@@ -268,7 +220,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-08-20T07:56:26+08:00"
+        "updated_at": "2026-08-20T16:14:20+08:00"
       },
       "profile": {
         "fund_type": "混合型-灵活",
@@ -281,60 +233,9 @@
         "tracking_index": "该基金无跟踪标的",
         "management_fee": "1.20%（每年）",
         "custody_fee": "0.20%（每年）",
-        "holdings": [
-          {
-            "name": "华峰测控",
-            "code": "688200",
-            "weight": 9.15
-          },
-          {
-            "name": "北方华创",
-            "code": "002371",
-            "weight": 8.82
-          },
-          {
-            "name": "神工股份",
-            "code": "688233",
-            "weight": 7.21
-          },
-          {
-            "name": "芯原股份",
-            "code": "688521",
-            "weight": 6.56
-          },
-          {
-            "name": "寒武纪",
-            "code": "688256",
-            "weight": 6.42
-          },
-          {
-            "name": "中科飞测",
-            "code": "688361",
-            "weight": 6.37
-          },
-          {
-            "name": "伟测科技",
-            "code": "688372",
-            "weight": 5.31
-          },
-          {
-            "name": "京仪装备",
-            "code": "688652",
-            "weight": 3.69
-          },
-          {
-            "name": "富创精密",
-            "code": "688409",
-            "weight": 3.17
-          },
-          {
-            "name": "申菱环境",
-            "code": "301018",
-            "weight": 2.7
-          }
-        ],
-        "holdings_period": "2026年2季度股票投资明细",
-        "top10_concentration": 59.4,
+        "holdings": [],
+        "holdings_period": null,
+        "top10_concentration": null,
         "industries": [
           {
             "name": "制造业",
@@ -372,7 +273,7 @@
           }
         ]
       },
-      "risk": "近1年历史最大回撤约16.2%；波动很大，短期涨跌可能比较猛；前十大股票占比约59%，集中度中等。历史数据不代表未来。",
+      "risk": "近1年历史最大回撤约16.2%；波动很大，短期涨跌可能比较猛。历史数据不代表未来。",
       "deep_plain": [
         "基金经理：杨宗昌",
         "历史任意时点持有满1年的盈利概率约66%（仅作历史统计，不是未来预测）"
@@ -445,7 +346,7 @@
       "tracking": {
         "first_seen": "2026-08-18T21:59:00+08:00",
         "days_tracked": 3,
-        "refresh_count": 6,
+        "refresh_count": 7,
         "score_history": [
           {
             "at": "2026-08-18T21:59:00+08:00",
@@ -474,6 +375,11 @@
           },
           {
             "at": "2026-08-20T07:55:41+08:00",
+            "score": 97.6,
+            "action": "第二买入区"
+          },
+          {
+            "at": "2026-08-20T16:09:21+08:00",
             "score": 97.6,
             "action": "第二买入区"
           }
@@ -510,8 +416,8 @@
         },
         "risk": {
           "period": "近1年",
-          "annual_volatility": 48.980000000000004,
-          "sharpe": 3.42,
+          "annual_volatility": 49.54,
+          "sharpe": 2.95,
           "max_drawdown": 32.33,
           "peer_risk_return": 100.0,
           "peer_resilience": 16.0
@@ -625,7 +531,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-08-20T07:56:31+08:00"
+        "updated_at": "2026-08-20T16:14:26+08:00"
       },
       "profile": {
         "fund_type": "股票型",
@@ -798,7 +704,7 @@
       "tracking": {
         "first_seen": "2026-08-18T21:59:00+08:00",
         "days_tracked": 3,
-        "refresh_count": 6,
+        "refresh_count": 7,
         "score_history": [
           {
             "at": "2026-08-18T21:59:00+08:00",
@@ -829,6 +735,11 @@
             "at": "2026-08-20T07:55:41+08:00",
             "score": 93.4,
             "action": "继续等买点"
+          },
+          {
+            "at": "2026-08-20T16:09:21+08:00",
+            "score": 93.4,
+            "action": "继续等买点"
           }
         ]
       },
@@ -850,16 +761,7 @@
       ],
       "deep_analysis": {
         "overview": {
-          "fund_type": "股票型",
-          "asset_scale": null,
-          "share_scale": "2.3081亿份（截止至：2026年06月30日）",
-          "manager": "金梓才",
-          "company": "财通基金",
-          "成立日期": "2018年11月29日",
-          "benchmark": "中证500指数收益率*80%+上证国债指数收益率*20%",
-          "tracking_target": "该基金无跟踪标的",
-          "management_fee": "1.20%（每年）",
-          "custody_fee": "0.20%（每年）"
+          "error": "overview: SSLError: HTTPSConnectionPool(host='fundf10.eastmoney.com', port=443): Max retries exceeded with url: /jbgk_006502.html (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECT"
         },
         "risk": {
           "period": "近1年",
@@ -978,19 +880,19 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-08-20T07:56:37+08:00"
+        "updated_at": "2026-08-20T16:15:03+08:00"
       },
       "profile": {
-        "fund_type": "股票型",
+        "fund_type": null,
         "asset_scale": null,
-        "share_scale": "2.3081亿份（截止至：2026年06月30日）",
-        "manager": "金梓才",
-        "company": "财通基金",
-        "成立日期": "2018年11月29日",
-        "benchmark": "中证500指数收益率*80%+上证国债指数收益率*20%",
-        "tracking_index": "该基金无跟踪标的",
-        "management_fee": "1.20%（每年）",
-        "custody_fee": "0.20%（每年）",
+        "share_scale": null,
+        "manager": null,
+        "company": null,
+        "成立日期": null,
+        "benchmark": null,
+        "tracking_index": null,
+        "management_fee": null,
+        "custody_fee": null,
         "holdings": [
           {
             "name": "新易盛",
@@ -1068,19 +970,10 @@
           }
         ],
         "industry_period": "2026-06-30",
-        "manager_details": [
-          {
-            "name": "金梓才",
-            "company": "财通基金",
-            "career_days": 4292.0,
-            "current_aum_yi": 565.48,
-            "best_return": 1342.45
-          }
-        ]
+        "manager_details": []
       },
       "risk": "近1年历史最大回撤约41.5%；波动很大，短期涨跌可能比较猛；前十大股票占比约69%，持仓比较集中。历史数据不代表未来。",
       "deep_plain": [
-        "基金经理：金梓才",
         "历史任意时点持有满1年的盈利概率约62%（仅作历史统计，不是未来预测）"
       ]
     },
@@ -1151,7 +1044,7 @@
       "tracking": {
         "first_seen": "2026-08-18T21:59:00+08:00",
         "days_tracked": 3,
-        "refresh_count": 6,
+        "refresh_count": 7,
         "score_history": [
           {
             "at": "2026-08-18T21:59:00+08:00",
@@ -1180,6 +1073,11 @@
           },
           {
             "at": "2026-08-20T07:55:41+08:00",
+            "score": 92.4,
+            "action": "继续等买点"
+          },
+          {
+            "at": "2026-08-20T16:09:21+08:00",
             "score": 92.4,
             "action": "继续等买点"
           }
@@ -1327,7 +1225,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-08-20T07:56:43+08:00"
+        "updated_at": "2026-08-20T16:15:09+08:00"
       },
       "profile": {
         "fund_type": "QDII-普通股票",
@@ -1496,7 +1394,7 @@
       "tracking": {
         "first_seen": "2026-08-19T00:00:59+08:00",
         "days_tracked": 2,
-        "refresh_count": 5,
+        "refresh_count": 6,
         "score_history": [
           {
             "at": "2026-08-19T00:00:59+08:00",
@@ -1520,6 +1418,11 @@
           },
           {
             "at": "2026-08-20T07:55:41+08:00",
+            "score": 95.3,
+            "action": "继续等买点"
+          },
+          {
+            "at": "2026-08-20T16:09:21+08:00",
             "score": 95.3,
             "action": "继续等买点"
           }
@@ -1655,23 +1558,10 @@
         },
         "redemption_fee": [
           {
-            "适用期限": "小于7天",
-            "赎回费率": "1.50%"
-          },
-          {
-            "适用期限": "大于等于7天，小于30天",
-            "赎回费率": "0.75%"
-          },
-          {
-            "适用期限": "大于等于30天，小于180天",
-            "赎回费率": "0.50%"
-          },
-          {
-            "适用期限": "大于等于180天",
-            "赎回费率": "0.00%"
+            "error": "fee: ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
           }
         ],
-        "updated_at": "2026-08-20T07:56:49+08:00"
+        "updated_at": "2026-08-20T16:19:44+08:00"
       },
       "profile": {
         "fund_type": "混合型-偏股",
@@ -1791,8 +1681,8 @@
         "ytd": 69.43
       },
       "latest_nav": 3.3614,
-      "estimate_nav": 3.341,
-      "estimate_return": -7.81,
+      "estimate_nav": 3.3288,
+      "estimate_return": -0.97,
       "day_return": -7.25,
       "buy_status": "开放申购",
       "position": "趋势向上，可等分批点",
@@ -1844,7 +1734,7 @@
       "tracking": {
         "first_seen": "2026-08-19T00:00:59+08:00",
         "days_tracked": 2,
-        "refresh_count": 5,
+        "refresh_count": 6,
         "score_history": [
           {
             "at": "2026-08-19T00:00:59+08:00",
@@ -1868,6 +1758,11 @@
           },
           {
             "at": "2026-08-20T07:55:41+08:00",
+            "score": 90.3,
+            "action": "继续等买点"
+          },
+          {
+            "at": "2026-08-20T16:09:21+08:00",
             "score": 90.3,
             "action": "继续等买点"
           }
@@ -2014,7 +1909,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-08-20T07:56:55+08:00"
+        "updated_at": "2026-08-20T16:20:15+08:00"
       },
       "profile": {
         "fund_type": "指数型-股票",
@@ -2187,10 +2082,15 @@
       "tracking": {
         "first_seen": "2026-08-20T07:55:41+08:00",
         "days_tracked": 1,
-        "refresh_count": 1,
+        "refresh_count": 2,
         "score_history": [
           {
             "at": "2026-08-20T07:55:41+08:00",
+            "score": 90.2,
+            "action": "继续等买点"
+          },
+          {
+            "at": "2026-08-20T16:09:21+08:00",
             "score": 90.2,
             "action": "继续等买点"
           }
@@ -2330,7 +2230,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-08-20T07:57:01+08:00"
+        "updated_at": "2026-08-20T16:20:22+08:00"
       },
       "profile": {
         "fund_type": "QDII-混合偏股",
@@ -2439,7 +2339,7 @@
       ]
     }
   ],
-  "deep_enriched_at": "2026-08-20T07:57:01+08:00",
+  "deep_enriched_at": "2026-08-20T16:20:22+08:00",
   "deep_method": "overview+risk_drawdown+historical_profit_probability+latest_disclosed_holdings+industry+fees+manager",
   "profile_note": "基金持仓和行业配置来自最新可获得的定期报告披露，不是实时持仓。"
 }

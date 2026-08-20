@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-20T13:38:28.938379+08:00",
+  "updated_at": "2026-08-20T17:19:23.894278+08:00",
   "mode": "all",
   "counts": {
     "a_share_ok": 7,
@@ -60,7 +60,7 @@
     {
       "dataset": "yfinance:a:002085.SZ:quality",
       "error": "DataQualityError",
-      "message": "impossible high: O=10.609999656677246,H=10.319999694824219,L=10.140000343322754,C=10.260000228881836"
+      "message": "impossible high: O=10.609999656677246,H=10.319999694824219,L=10.140000343322754,C=10.229999542236328"
     },
     {
       "dataset": "tushare:a:002475.SZ",
@@ -80,7 +80,7 @@
     {
       "dataset": "yfinance:a:002475.SZ:quality",
       "error": "DataQualityError",
-      "message": "impossible high: O=56.599998474121094,H=54.13999938964844,L=53.099998474121094,C=53.29999923706055"
+      "message": "impossible high: O=56.599998474121094,H=54.13999938964844,L=52.79999923706055,C=53.34000015258789"
     },
     {
       "dataset": "tushare:a:601138.SH",
@@ -145,7 +145,7 @@
     {
       "dataset": "yfinance:a:300059.SZ:quality",
       "error": "DataQualityError",
-      "message": "impossible high: O=19.729999542236328,H=18.920000076293945,L=18.649999618530273,C=18.809999465942383"
+      "message": "impossible high: O=19.729999542236328,H=18.920000076293945,L=18.649999618530273,C=18.799999237060547"
     },
     {
       "dataset": "tushare:a:002371.SZ",
@@ -210,7 +210,7 @@
     {
       "dataset": "yfinance:a:000977.SZ:quality",
       "error": "DataQualityError",
-      "message": "impossible high: O=79.5999984741211,H=75.62999725341797,L=72.5,C=75.26000213623047"
+      "message": "impossible high: O=79.5999984741211,H=75.62999725341797,L=72.5,C=75.08000183105469"
     },
     {
       "dataset": "tushare:a:600276.SH",
@@ -219,6 +219,11 @@
     },
     {
       "dataset": "akshare:a:600276.SH",
+      "error": "ConnectionError",
+      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "dataset": "eastmoney:a:600276.SH",
       "error": "ConnectionError",
       "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
     },
@@ -285,5 +290,5 @@
   ],
   "coverage_ok": true,
   "intraday_a_share_ok": false,
-  "run_id": "92afd8b5b083b31a"
+  "run_id": "fa9470f4b52202bb"
 }

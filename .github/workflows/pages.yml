@@ -1,0 +1,89 @@
+name: deploy-pages
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - site/**
+      - .github/workflows/pages.yml
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify static publication boundary
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f site/index.html
+          test -f site/latest/manifest.json
+          test -f site/publication.json
+          if find site -type l -print -quit | grep -q .; then
+            echo 'Symlinks are not allowed in the public site.' >&2
+            exit 1
+          fi
+          python3 -m json.tool site/latest/manifest.json >/dev/null
+          python3 -m json.tool site/publication.json >/dev/null
+
+  deploy:
+    needs: verify
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deployment
+        uses: actions/deploy-pages@v4
+
+  smoke:
+    needs: deploy
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Verify public endpoints
+        shell: bash
+        run: |
+          set -euo pipefail
+          base='https://sonkaunwa-commits.github.io/freedom-road-public'
+          paths=(
+            ''
+            'latest/manifest.json'
+            'publication.json'
+            'fund-assistant/'
+            'securities-exam/'
+            'investment-advisor-exam/'
+            'ks/'
+            'tg/'
+          )
+          for path in "${paths[@]}"; do
+            ok=false
+            for attempt in {1..12}; do
+              if curl -fsSL --max-time 20 --retry 2 "$base/$path?smoke=${GITHUB_SHA}-${attempt}" >/dev/null; then
+                ok=true
+                break
+              fi
+              sleep 5
+            done
+            if [[ "$ok" != true ]]; then
+              echo "Endpoint failed: $path" >&2
+              exit 1
+            fi
+          done

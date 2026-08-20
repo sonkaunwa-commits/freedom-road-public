@@ -1,0 +1,68 @@
+name: bootstrap-public-site
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/bootstrap-public-site.yml
+
+permissions:
+  contents: write
+
+jobs:
+  bootstrap:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out public repository
+        uses: actions/checkout@v4
+        with:
+          path: public-repo
+
+      - name: Check out core publication source
+        uses: actions/checkout@v4
+        with:
+          repository: sonkaunwa-commits/investment-market-hub
+          ref: docs/freedom-road-phase1-inventory
+          path: core
+          fetch-depth: 1
+
+      - name: Verify and stage sanitized snapshot
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 core/scripts/check-publication-boundary.py --root core/public
+          mkdir -p public-repo/site
+          rsync -a --delete core/public/ public-repo/site/
+          CORE_SHA=$(git -C core rev-parse HEAD)
+          export CORE_SHA
+          python3 - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          manifest = json.loads(
+              Path('core/public/latest/manifest.json').read_text(encoding='utf-8')
+          )
+          publication = {
+              'schema_version': 1,
+              'source_repository': 'sonkaunwa-commits/investment-market-hub',
+              'source_commit': os.environ['CORE_SHA'],
+              'source_generated_at': manifest.get('generated_at'),
+          }
+          Path('public-repo/site/publication.json').write_text(
+              json.dumps(publication, ensure_ascii=False, indent=2) + '\n',
+              encoding='utf-8',
+          )
+          PY
+
+      - name: Commit public snapshot
+        working-directory: public-repo
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'freedom-road-publisher'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add site
+          git commit -m 'publish: bootstrap sanitized public snapshot'
+          git push origin HEAD:main

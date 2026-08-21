@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-20T23:59:02.597746+08:00",
+  "updated_at": "2026-08-21T11:34:25.087544+08:00",
   "mode": "all",
   "counts": {
     "a_share_ok": 7,
@@ -33,34 +33,9 @@
       "message": "抱歉，您没有接口(daily)访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。"
     },
     {
-      "dataset": "akshare:a:600006.SH",
-      "error": "ConnectionError",
-      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-    },
-    {
-      "dataset": "eastmoney:a:600006.SH",
-      "error": "ConnectionError",
-      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-    },
-    {
       "dataset": "tushare:a:002085.SZ",
       "error": "Exception",
       "message": "抱歉，您没有接口(daily)访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。"
-    },
-    {
-      "dataset": "akshare:a:002085.SZ",
-      "error": "ConnectionError",
-      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-    },
-    {
-      "dataset": "eastmoney:a:002085.SZ",
-      "error": "ConnectionError",
-      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-    },
-    {
-      "dataset": "yfinance:a:002085.SZ:quality",
-      "error": "DataQualityError",
-      "message": "impossible high: O=10.609999656677246,H=10.319999694824219,L=10.140000343322754,C=10.229999542236328"
     },
     {
       "dataset": "tushare:a:002475.SZ",
@@ -80,7 +55,7 @@
     {
       "dataset": "yfinance:a:002475.SZ:quality",
       "error": "DataQualityError",
-      "message": "impossible high: O=56.599998474121094,H=54.13999938964844,L=52.79999923706055,C=53.34000015258789"
+      "message": "impossible high: O=56.599998474121094,H=55.220001220703125,L=52.810001373291016,C=54.849998474121094"
     },
     {
       "dataset": "tushare:a:601138.SH",
@@ -89,11 +64,6 @@
     },
     {
       "dataset": "akshare:a:601138.SH",
-      "error": "ConnectionError",
-      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-    },
-    {
-      "dataset": "eastmoney:a:601138.SH",
       "error": "ConnectionError",
       "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
     },
@@ -111,6 +81,11 @@
       "dataset": "eastmoney:a:002600.SZ",
       "error": "ConnectionError",
       "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "dataset": "yfinance:a:002600.SZ:quality",
+      "error": "DataQualityError",
+      "message": "impossible high: O=12.550000190734863,H=12.279999732971191,L=11.880000114440918,C=12.220000267028809"
     },
     {
       "dataset": "tushare:a:601899.SH",
@@ -145,7 +120,7 @@
     {
       "dataset": "yfinance:a:300059.SZ:quality",
       "error": "DataQualityError",
-      "message": "impossible high: O=19.729999542236328,H=18.920000076293945,L=18.649999618530273,C=18.799999237060547"
+      "message": "impossible high: O=19.729999542236328,H=18.989999771118164,L=18.6299991607666,C=18.8799991607666"
     },
     {
       "dataset": "tushare:a:002371.SZ",
@@ -163,6 +138,11 @@
       "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
     },
     {
+      "dataset": "yfinance:a:002371.SZ:quality",
+      "error": "DataQualityError",
+      "message": "impossible high: O=743.8400268554688,H=725.6799926757812,L=710.010009765625,C=720.0800170898438"
+    },
+    {
       "dataset": "tushare:a:300124.SZ",
       "error": "Exception",
       "message": "抱歉，您没有接口(daily)访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。"
@@ -173,24 +153,9 @@
       "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
     },
     {
-      "dataset": "eastmoney:a:300124.SZ",
-      "error": "ConnectionError",
-      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-    },
-    {
       "dataset": "tushare:a:002185.SZ",
       "error": "Exception",
       "message": "抱歉，您没有接口(daily)访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。"
-    },
-    {
-      "dataset": "akshare:a:002185.SZ",
-      "error": "ConnectionError",
-      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-    },
-    {
-      "dataset": "eastmoney:a:002185.SZ",
-      "error": "ConnectionError",
-      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
     },
     {
       "dataset": "tushare:a:000977.SZ",
@@ -198,34 +163,9 @@
       "message": "抱歉，您没有接口(daily)访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。"
     },
     {
-      "dataset": "akshare:a:000977.SZ",
-      "error": "ConnectionError",
-      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-    },
-    {
-      "dataset": "eastmoney:a:000977.SZ",
-      "error": "ConnectionError",
-      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-    },
-    {
-      "dataset": "yfinance:a:000977.SZ:quality",
-      "error": "DataQualityError",
-      "message": "impossible high: O=79.5999984741211,H=75.62999725341797,L=72.5,C=75.08000183105469"
-    },
-    {
       "dataset": "tushare:a:600276.SH",
       "error": "Exception",
       "message": "抱歉，您没有接口(daily)访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。"
-    },
-    {
-      "dataset": "akshare:a:600276.SH",
-      "error": "ConnectionError",
-      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-    },
-    {
-      "dataset": "eastmoney:a:600276.SH",
-      "error": "ConnectionError",
-      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
     },
     {
       "dataset": "tushare:hk:09992.HK",
@@ -290,5 +230,5 @@
   ],
   "coverage_ok": true,
   "intraday_a_share_ok": false,
-  "run_id": "c8a49df9e11cfa19"
+  "run_id": "082c825d35e54023"
 }

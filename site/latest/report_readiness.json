@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-21T00:02:32.840419+08:00",
+  "generated_at": "2026-08-21T11:36:22.788699+08:00",
   "schema_version": 6,
-  "source_health_updated_at": "2026-08-20T23:59:02.597746+08:00",
+  "source_health_updated_at": "2026-08-21T11:34:25.087544+08:00",
   "delivery_mode_17": "FULL_REPORT_WITH_EXPLICIT_DEGRADATIONS",
   "a_share_exact_action_gate": {
     "ready": true,
@@ -56,7 +56,7 @@
   },
   "analysis_engine": {
     "stage": "STAGE_1_RUNNING",
-    "generated_at": "2026-08-21T00:01:08.402998+08:00",
+    "generated_at": "2026-08-21T11:36:22.682389+08:00",
     "stage1_fund_ready": true,
     "stage1_a_share_history_ready": true,
     "stage2_vectorbt_daily_pilot_ready": true,

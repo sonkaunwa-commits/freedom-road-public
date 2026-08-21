@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-21T16:09:38+08:00",
+  "generated_at": "2026-08-22T00:02:41+08:00",
   "method_version": "fund-screen-v2.0",
   "goal": "持续跟踪6-12个月高弹性候选；不承诺收益，不预测必然涨幅",
   "selection_policy": "核心池固定跟踪6只；仅在评分明显恶化、中期趋势转负、暂停申购或更优候选持续胜出时替换",
@@ -17,35 +17,35 @@
       "code": "002910",
       "name": "易方达供给改革混合",
       "category": "混合型",
-      "score": 95.9,
+      "score": 92.9,
       "returns": {
-        "1m": 6.23,
-        "3m": 36.18,
-        "6m": 90.82,
-        "1y": 186.85,
-        "3y": 217.27,
-        "ytd": 127.37
+        "1m": 3.89,
+        "3m": 45.07,
+        "6m": 90.78,
+        "1y": 188.53,
+        "3y": 220.17,
+        "ytd": 127.33
       },
-      "latest_nav": 8.3785,
+      "latest_nav": 8.3768,
       "estimate_nav": null,
       "estimate_return": null,
-      "day_return": 0.31,
+      "day_return": -0.02,
       "buy_status": "限大额",
       "position": "偏热，等待回调",
       "broad_action": "wait",
       "history": {
-        "nav_date": "2026-08-20",
-        "last_nav": 8.3785,
+        "nav_date": "2026-08-21",
+        "last_nav": 8.3768,
         "returns": {
-          "20d": 2.69,
-          "60d": 42.41,
-          "120d": 82.36,
-          "250d": 207.22
+          "20d": 5.99,
+          "60d": 38.45,
+          "120d": 81.67,
+          "250d": 202.39
         },
         "ma": {
-          "20": 8.3029,
-          "60": 7.5986,
-          "120": 6.1455
+          "20": 8.3266,
+          "60": 7.6374,
+          "120": 6.1769
         },
         "high": {
           "60": 8.7744,
@@ -53,23 +53,23 @@
         },
         "low60": 5.5016,
         "drawdown": {
-          "60": -4.51,
-          "120": -4.51,
+          "60": -4.53,
+          "120": -4.53,
           "max250": -16.25
         },
-        "vol20_ann": 33.33,
+        "vol20_ann": 31.03,
         "trend": "强势上行",
-        "deviation60": 10.26,
+        "deviation60": 9.68,
         "overheat": false,
         "buy_zone_1": [
-          8.1784,
-          8.3859
+          8.2017,
+          8.4099
         ],
         "buy_zone_2": [
-          7.4086,
-          7.6594
+          7.4464,
+          7.6985
         ],
-        "stop_add_below": 6.0226
+        "stop_add_below": 6.0534
       },
       "history_error": null,
       "today_plan": {
@@ -79,8 +79,8 @@
       },
       "tracking": {
         "first_seen": "2026-08-18T21:59:00+08:00",
-        "days_tracked": 4,
-        "refresh_count": 9,
+        "days_tracked": 5,
+        "refresh_count": 10,
         "score_history": [
           {
             "at": "2026-08-18T21:59:00+08:00",
@@ -125,6 +125,11 @@
           {
             "at": "2026-08-21T16:10:15+08:00",
             "score": 95.9,
+            "action": "第一买入区"
+          },
+          {
+            "at": "2026-08-22T00:03:32+08:00",
+            "score": 92.9,
             "action": "第一买入区"
           }
         ]
@@ -173,7 +178,7 @@
           },
           "1y": {
             "probability": 66.0,
-            "average_return": 25.56
+            "average_return": 25.64
           }
         },
         "holdings": {
@@ -283,7 +288,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-08-21T16:10:57+08:00"
+        "updated_at": "2026-08-22T00:04:15+08:00"
       },
       "profile": {
         "fund_type": "混合型-灵活",
@@ -397,35 +402,35 @@
       "code": "005825",
       "name": "申万菱信智能驱动股票A",
       "category": "股票型",
-      "score": 95.0,
+      "score": 97.2,
       "returns": {
-        "1m": 18.68,
-        "3m": 12.89,
-        "6m": 72.39,
-        "1y": 154.39,
-        "3y": 280.49,
-        "ytd": 97.53
+        "1m": 4.43,
+        "3m": 18.75,
+        "6m": 72.59,
+        "1y": 157.9,
+        "3y": 284.54,
+        "ytd": 97.75
       },
-      "latest_nav": 9.6908,
+      "latest_nav": 9.702,
       "estimate_nav": null,
       "estimate_return": null,
-      "day_return": 3.75,
+      "day_return": 0.12,
       "buy_status": "开放申购",
-      "position": "偏热，等待回调",
-      "broad_action": "wait",
+      "position": "趋势向上，可等分批点",
+      "broad_action": "batch",
       "history": {
-        "nav_date": "2026-08-20",
-        "last_nav": 9.6908,
+        "nav_date": "2026-08-21",
+        "last_nav": 9.702,
         "returns": {
-          "20d": 9.98,
-          "60d": 15.14,
-          "120d": 64.9,
-          "250d": 193.07
+          "20d": 10.26,
+          "60d": 12.64,
+          "120d": 67.4,
+          "250d": 184.87
         },
         "ma": {
-          "20": 8.9578,
-          "60": 9.3151,
-          "120": 7.7595
+          "20": 9.0029,
+          "60": 9.3332,
+          "120": 7.7921
         },
         "high": {
           "60": 11.5548,
@@ -433,23 +438,23 @@
         },
         "low60": 7.7174,
         "drawdown": {
-          "60": -16.13,
-          "120": -16.13,
+          "60": -16.03,
+          "120": -16.03,
           "max250": -32.33
         },
-        "vol20_ann": 67.62,
+        "vol20_ann": 67.59,
         "trend": "上升趋势",
-        "deviation60": 4.03,
+        "deviation60": 3.95,
         "overheat": false,
         "buy_zone_1": [
-          8.8234,
-          9.0473
+          8.8679,
+          9.0929
         ],
         "buy_zone_2": [
-          9.0822,
-          9.3896
+          9.0999,
+          9.4079
         ],
-        "stop_add_below": 7.6043
+        "stop_add_below": 7.6362
       },
       "history_error": null,
       "today_plan": {
@@ -459,8 +464,8 @@
       },
       "tracking": {
         "first_seen": "2026-08-18T21:59:00+08:00",
-        "days_tracked": 4,
-        "refresh_count": 9,
+        "days_tracked": 5,
+        "refresh_count": 10,
         "score_history": [
           {
             "at": "2026-08-18T21:59:00+08:00",
@@ -505,6 +510,11 @@
           {
             "at": "2026-08-21T16:10:15+08:00",
             "score": 95.0,
+            "action": "等待回调"
+          },
+          {
+            "at": "2026-08-22T00:03:32+08:00",
+            "score": 97.2,
             "action": "等待回调"
           }
         ]
@@ -553,7 +563,7 @@
           },
           "1y": {
             "probability": 72.0,
-            "average_return": 39.51
+            "average_return": 39.58
           }
         },
         "holdings": {
@@ -655,7 +665,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-08-21T16:11:05+08:00"
+        "updated_at": "2026-08-22T00:04:21+08:00"
       },
       "profile": {
         "fund_type": "股票型",
@@ -765,35 +775,35 @@
       "code": "006502",
       "name": "财通集成电路产业股票A",
       "category": "股票型",
-      "score": 98.0,
+      "score": 98.1,
       "returns": {
-        "1m": 14.36,
-        "3m": 15.32,
-        "6m": 87.31,
-        "1y": 165.61,
-        "3y": 412.26,
-        "ytd": 86.14
+        "1m": 6.16,
+        "3m": 18.32,
+        "6m": 90.3,
+        "1y": 174.53,
+        "3y": 423.72,
+        "ytd": 89.11
       },
-      "latest_nav": 7.3632,
+      "latest_nav": 7.4808,
       "estimate_nav": null,
       "estimate_return": null,
-      "day_return": 0.55,
+      "day_return": 1.6,
       "buy_status": "开放申购",
-      "position": "中性观察",
-      "broad_action": "watch",
+      "position": "趋势向上，可等分批点",
+      "broad_action": "batch",
       "history": {
-        "nav_date": "2026-08-20",
-        "last_nav": 7.3632,
+        "nav_date": "2026-08-21",
+        "last_nav": 7.4808,
         "returns": {
-          "20d": 9.55,
-          "60d": -1.34,
-          "120d": 69.39,
-          "250d": 207.81
+          "20d": 14.95,
+          "60d": -3.9,
+          "120d": 81.02,
+          "250d": 204.54
         },
         "ma": {
-          "20": 7.0994,
-          "60": 8.057,
-          "120": 6.5926
+          "20": 7.148,
+          "60": 8.052,
+          "120": 6.6205
         },
         "high": {
           "60": 10.3751,
@@ -801,23 +811,23 @@
         },
         "low60": 6.0682,
         "drawdown": {
-          "60": -29.03,
-          "120": -29.03,
+          "60": -27.9,
+          "120": -27.9,
           "max250": -41.51
         },
-        "vol20_ann": 75.66,
+        "vol20_ann": 74.43,
         "trend": "震荡",
-        "deviation60": -8.61,
+        "deviation60": -7.09,
         "overheat": false,
         "buy_zone_1": [
-          6.9929,
-          7.1704
+          7.0408,
+          7.2195
         ],
         "buy_zone_2": [
-          7.8556,
-          8.1215
+          7.8507,
+          8.1164
         ],
-        "stop_add_below": 6.4607
+        "stop_add_below": 6.4881
       },
       "history_error": null,
       "today_plan": {
@@ -827,8 +837,8 @@
       },
       "tracking": {
         "first_seen": "2026-08-18T21:59:00+08:00",
-        "days_tracked": 4,
-        "refresh_count": 9,
+        "days_tracked": 5,
+        "refresh_count": 10,
         "score_history": [
           {
             "at": "2026-08-18T21:59:00+08:00",
@@ -873,6 +883,11 @@
           {
             "at": "2026-08-21T16:10:15+08:00",
             "score": 98.0,
+            "action": "继续等买点"
+          },
+          {
+            "at": "2026-08-22T00:03:32+08:00",
+            "score": 98.1,
             "action": "继续等买点"
           }
         ]
@@ -921,7 +936,7 @@
           },
           "1y": {
             "probability": 62.0,
-            "average_return": 37.9
+            "average_return": 37.98
           }
         },
         "holdings": {
@@ -1023,7 +1038,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-08-21T16:11:10+08:00"
+        "updated_at": "2026-08-22T00:04:26+08:00"
       },
       "profile": {
         "fund_type": "股票型",
@@ -1133,35 +1148,35 @@
       "code": "017730",
       "name": "嘉实全球产业升级股票发起式(QDII)A",
       "category": "QDII",
-      "score": 81.4,
+      "score": 77.8,
       "returns": {
-        "1m": -0.52,
-        "3m": 2.28,
-        "6m": 42.09,
-        "1y": 97.9,
-        "3y": 260.0,
-        "ytd": 55.02
+        "1m": 1.74,
+        "3m": -1.66,
+        "6m": 43.24,
+        "1y": 98.99,
+        "3y": 262.92,
+        "ytd": 56.27
       },
-      "latest_nav": 4.0115,
+      "latest_nav": 4.044,
       "estimate_nav": null,
       "estimate_return": null,
-      "day_return": -4.77,
+      "day_return": 0.81,
       "buy_status": "限大额",
       "position": "中性观察",
       "broad_action": "watch",
       "history": {
-        "nav_date": "2026-08-19",
-        "last_nav": 4.0115,
+        "nav_date": "2026-08-20",
+        "last_nav": 4.044,
         "returns": {
-          "20d": -5.74,
-          "60d": -5.93,
-          "120d": 36.78,
-          "250d": 103.36
+          "20d": -3.2,
+          "60d": -4.63,
+          "120d": 40.03,
+          "250d": 105.29
         },
         "ma": {
-          "20": 4.0312,
-          "60": 4.3279,
-          "120": 3.7759
+          "20": 4.0246,
+          "60": 4.3246,
+          "120": 3.7856
         },
         "high": {
           "60": 5.1424,
@@ -1169,23 +1184,23 @@
         },
         "low60": 3.6967,
         "drawdown": {
-          "60": -21.99,
-          "120": -21.99,
+          "60": -21.36,
+          "120": -21.36,
           "max250": -28.11
         },
-        "vol20_ann": 46.4,
+        "vol20_ann": 46.15,
         "trend": "震荡",
-        "deviation60": -7.31,
+        "deviation60": -6.49,
         "overheat": false,
         "buy_zone_1": [
-          3.9708,
-          4.0716
+          3.9642,
+          4.0648
         ],
         "buy_zone_2": [
-          4.2197,
-          4.3625
+          4.2165,
+          4.3592
         ],
-        "stop_add_below": 3.7004
+        "stop_add_below": 3.7098
       },
       "history_error": null,
       "today_plan": {
@@ -1195,8 +1210,8 @@
       },
       "tracking": {
         "first_seen": "2026-08-18T21:59:00+08:00",
-        "days_tracked": 4,
-        "refresh_count": 9,
+        "days_tracked": 5,
+        "refresh_count": 10,
         "score_history": [
           {
             "at": "2026-08-18T21:59:00+08:00",
@@ -1241,6 +1256,11 @@
           {
             "at": "2026-08-21T16:10:15+08:00",
             "score": 81.4,
+            "action": "继续等买点"
+          },
+          {
+            "at": "2026-08-22T00:03:32+08:00",
+            "score": 77.8,
             "action": "继续等买点"
           }
         ]
@@ -1289,7 +1309,7 @@
           },
           "1y": {
             "probability": 100.0,
-            "average_return": 52.46
+            "average_return": 52.54
           }
         },
         "holdings": {
@@ -1387,7 +1407,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-08-21T16:11:16+08:00"
+        "updated_at": "2026-08-22T00:04:31+08:00"
       },
       "profile": {
         "fund_type": "QDII-普通股票",
@@ -1493,35 +1513,35 @@
       "code": "016500",
       "name": "华夏半导体龙头混合发起A",
       "category": "混合型",
-      "score": 93.8,
+      "score": 88.4,
       "returns": {
-        "1m": 7.05,
-        "3m": 9.63,
-        "6m": 53.83,
-        "1y": 135.87,
-        "3y": 227.16,
-        "ytd": 74.34
+        "1m": -3.76,
+        "3m": 14.02,
+        "6m": 53.62,
+        "1y": 133.9,
+        "3y": 229.77,
+        "ytd": 74.11
       },
-      "latest_nav": 3.5121,
+      "latest_nav": 3.5074,
       "estimate_nav": null,
       "estimate_return": null,
-      "day_return": 0.87,
+      "day_return": -0.13,
       "buy_status": "开放申购",
-      "position": "趋势向上，可等分批点",
-      "broad_action": "batch",
+      "position": "中性观察",
+      "broad_action": "watch",
       "history": {
-        "nav_date": "2026-08-20",
-        "last_nav": 3.5121,
+        "nav_date": "2026-08-21",
+        "last_nav": 3.5074,
         "returns": {
-          "20d": 2.75,
-          "60d": 10.69,
-          "120d": 48.73,
-          "250d": 157.81
+          "20d": 1.16,
+          "60d": 10.1,
+          "120d": 49.94,
+          "250d": 157.08
         },
         "ma": {
-          "20": 3.4455,
-          "60": 3.4925,
-          "120": 2.9614
+          "20": 3.4475,
+          "60": 3.4979,
+          "120": 2.9712
         },
         "high": {
           "60": 4.4341,
@@ -1529,23 +1549,23 @@
         },
         "low60": 2.7942,
         "drawdown": {
-          "60": -20.79,
-          "120": -20.79,
+          "60": -20.9,
+          "120": -20.9,
           "max250": -30.72
         },
-        "vol20_ann": 59.2,
+        "vol20_ann": 59.03,
         "trend": "上升趋势",
-        "deviation60": 0.56,
+        "deviation60": 0.27,
         "overheat": false,
         "buy_zone_1": [
-          3.3938,
-          3.48
+          3.3958,
+          3.482
         ],
         "buy_zone_2": [
-          3.4052,
-          3.5205
+          3.4104,
+          3.5259
         ],
-        "stop_add_below": 2.9022
+        "stop_add_below": 2.9117
       },
       "history_error": null,
       "today_plan": {
@@ -1555,8 +1575,8 @@
       },
       "tracking": {
         "first_seen": "2026-08-19T00:00:59+08:00",
-        "days_tracked": 3,
-        "refresh_count": 8,
+        "days_tracked": 4,
+        "refresh_count": 9,
         "score_history": [
           {
             "at": "2026-08-19T00:00:59+08:00",
@@ -1596,6 +1616,11 @@
           {
             "at": "2026-08-21T16:10:15+08:00",
             "score": 93.8,
+            "action": "第二买入区"
+          },
+          {
+            "at": "2026-08-22T00:03:32+08:00",
+            "score": 88.4,
             "action": "第二买入区"
           }
         ]
@@ -1644,7 +1669,7 @@
           },
           "1y": {
             "probability": 71.0,
-            "average_return": 37.99
+            "average_return": 38.14
           }
         },
         "holdings": {
@@ -1746,7 +1771,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-08-21T16:11:21+08:00"
+        "updated_at": "2026-08-22T00:04:37+08:00"
       },
       "profile": {
         "fund_type": "混合型-偏股",
@@ -1856,35 +1881,35 @@
       "code": "014854",
       "name": "嘉实中证半导体指数增强发起式A",
       "category": "指数型",
-      "score": 90.0,
+      "score": 84.4,
       "returns": {
-        "1m": 4.75,
-        "3m": 4.36,
-        "6m": 48.41,
-        "1y": 131.84,
-        "3y": 219.78,
-        "ytd": 68.52
+        "1m": -8.32,
+        "3m": 8.86,
+        "6m": 48.24,
+        "1y": 130.6,
+        "3y": 223.76,
+        "ytd": 68.34
       },
-      "latest_nav": 3.3433,
+      "latest_nav": 3.3396,
       "estimate_nav": 3.3363,
       "estimate_return": -0.21,
-      "day_return": -0.54,
+      "day_return": -0.11,
       "buy_status": "开放申购",
-      "position": "趋势向上，可等分批点",
-      "broad_action": "batch",
+      "position": "强势回撤，重点等买点",
+      "broad_action": "watch",
       "history": {
-        "nav_date": "2026-08-20",
-        "last_nav": 3.3433,
+        "nav_date": "2026-08-21",
+        "last_nav": 3.3396,
         "returns": {
-          "20d": -2.2,
-          "60d": 7.78,
-          "120d": 41.25,
-          "250d": 156.37
+          "20d": -4.49,
+          "60d": 6.47,
+          "120d": 43.9,
+          "250d": 155.03
         },
         "ma": {
-          "20": 3.3522,
-          "60": 3.468,
-          "120": 2.9205
+          "20": 3.3444,
+          "60": 3.4714,
+          "120": 2.929
         },
         "high": {
           "60": 4.3799,
@@ -1892,23 +1917,23 @@
         },
         "low60": 2.8012,
         "drawdown": {
-          "60": -23.67,
-          "120": -23.67,
+          "60": -23.75,
+          "120": -23.75,
           "max250": -33.66
         },
-        "vol20_ann": 68.88,
+        "vol20_ann": 68.35,
         "trend": "震荡",
-        "deviation60": -3.6,
+        "deviation60": -3.8,
         "overheat": false,
         "buy_zone_1": [
-          3.3019,
-          3.3857
+          3.2942,
+          3.3778
         ],
         "buy_zone_2": [
-          3.3813,
-          3.4958
+          3.3846,
+          3.4992
         ],
-        "stop_add_below": 2.8621
+        "stop_add_below": 2.8705
       },
       "history_error": null,
       "today_plan": {
@@ -1918,8 +1943,8 @@
       },
       "tracking": {
         "first_seen": "2026-08-19T00:00:59+08:00",
-        "days_tracked": 3,
-        "refresh_count": 8,
+        "days_tracked": 4,
+        "refresh_count": 9,
         "score_history": [
           {
             "at": "2026-08-19T00:00:59+08:00",
@@ -1959,6 +1984,11 @@
           {
             "at": "2026-08-21T16:10:15+08:00",
             "score": 90.0,
+            "action": "继续等买点"
+          },
+          {
+            "at": "2026-08-22T00:03:32+08:00",
+            "score": 84.4,
             "action": "继续等买点"
           }
         ]
@@ -2002,7 +2032,7 @@
           },
           "1y": {
             "probability": 62.0,
-            "average_return": 32.35
+            "average_return": 32.49
           }
         },
         "holdings": {
@@ -2104,7 +2134,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-08-21T16:11:27+08:00"
+        "updated_at": "2026-08-22T00:04:42+08:00"
       },
       "profile": {
         "fund_type": "指数型-股票",
@@ -2211,62 +2241,62 @@
       ]
     },
     {
-      "code": "024974",
-      "name": "华泰柏瑞上证科创板半导体材料设备主题ETF发起式联接A",
-      "category": "指数型",
-      "score": 88.9,
+      "code": "539002",
+      "name": "建信新兴市场混合(QDII)A",
+      "category": "QDII",
+      "score": 85.4,
       "returns": {
-        "1m": 13.36,
-        "3m": 11.23,
-        "6m": 63.53,
-        "1y": 139.17,
-        "3y": null,
-        "ytd": 88.99
+        "1m": 5.39,
+        "3m": 1.15,
+        "6m": 42.33,
+        "1y": 102.38,
+        "3y": 222.6,
+        "ytd": 66.95
       },
-      "latest_nav": 2.5419,
-      "estimate_nav": 2.5277,
-      "estimate_return": -0.56,
-      "day_return": -0.37,
+      "latest_nav": 2.384,
+      "estimate_nav": null,
+      "estimate_return": null,
+      "day_return": 2.36,
       "buy_status": "限大额",
       "position": "中性观察",
       "broad_action": "watch",
       "history": {
         "nav_date": "2026-08-20",
-        "last_nav": 2.5419,
+        "last_nav": 2.384,
         "returns": {
-          "20d": 4.82,
-          "60d": 16.11,
-          "120d": 53.59,
-          "250d": 156.11
+          "20d": -2.61,
+          "60d": -2.09,
+          "120d": 41.65,
+          "250d": 102.38
         },
         "ma": {
-          "20": 2.4726,
-          "60": 2.5525,
-          "120": 2.0957
+          "20": 2.2915,
+          "60": 2.4888,
+          "120": 2.2094
         },
         "high": {
-          "60": 3.2992,
-          "120": 3.2992
+          "60": 2.944,
+          "120": 2.944
         },
-        "low60": 1.9791,
+        "low60": 1.967,
         "drawdown": {
-          "60": -22.95,
-          "120": -22.95,
-          "max250": -36.41
+          "60": -19.02,
+          "120": -19.02,
+          "max250": -33.19
         },
-        "vol20_ann": 73.75,
+        "vol20_ann": 63.18,
         "trend": "震荡",
-        "deviation60": -0.42,
+        "deviation60": -4.21,
         "overheat": false,
         "buy_zone_1": [
-          2.4355,
-          2.4973
+          2.2571,
+          2.3144
         ],
         "buy_zone_2": [
-          2.4887,
-          2.573
+          2.4266,
+          2.5087
         ],
-        "stop_add_below": 2.0538
+        "stop_add_below": 2.1652
       },
       "history_error": null,
       "today_plan": {
@@ -2275,18 +2305,13 @@
         "headline": "今天先不动，等进入明确买入区"
       },
       "tracking": {
-        "first_seen": "2026-08-21T07:57:49+08:00",
+        "first_seen": "2026-08-22T00:03:32+08:00",
         "days_tracked": 1,
-        "refresh_count": 2,
+        "refresh_count": 1,
         "score_history": [
           {
-            "at": "2026-08-21T07:57:49+08:00",
-            "score": 88.9,
-            "action": "继续等买点"
-          },
-          {
-            "at": "2026-08-21T16:10:15+08:00",
-            "score": 88.9,
+            "at": "2026-08-22T00:03:32+08:00",
+            "score": 85.4,
             "action": "继续等买点"
           }
         ]
@@ -2309,26 +2334,103 @@
       ],
       "deep_analysis": {
         "overview": {
-          "fund_type": "指数型-股票",
+          "fund_type": "QDII-混合偏股",
           "asset_scale": null,
-          "share_scale": "0.5887亿份（截止至：2026年06月30日）",
-          "manager": "李沐阳",
-          "company": "华泰柏瑞基金",
-          "成立日期": "2025年08月01日",
-          "benchmark": "上证科创板半导体材料设备主题指数收益率*95%+银行活期存款利率(税后)*5%",
-          "tracking_target": "上证科创板半导体材料设备主题指数",
-          "management_fee": "0.50%（每年）",
-          "custody_fee": "0.10%（每年）"
+          "share_scale": "7.2252亿份（截止至：2026年06月30日）",
+          "manager": "李博涵、程星烨、房乐",
+          "company": "建信基金",
+          "成立日期": "2011年06月21日",
+          "benchmark": "摩根士丹利资本国际新兴市场指数(MSCI Emerging Markets Index(Net Total Return))",
+          "tracking_target": "该基金无跟踪标的",
+          "management_fee": "1.20%（每年）",
+          "custody_fee": "0.20%（每年）"
         },
         "risk": {
-          "error": "risk: KeyError: 'index_data_list'"
+          "period": "近1年",
+          "annual_volatility": 44.43,
+          "sharpe": 2.1,
+          "max_drawdown": 33.19,
+          "peer_risk_return": 97.0,
+          "peer_resilience": 8.0
         },
         "profit_probability": {
-          "error": "probability: KeyError: 'data_list'"
+          "6m": {
+            "probability": 55.0,
+            "average_return": 4.11
+          },
+          "1y": {
+            "probability": 56.0,
+            "average_return": 7.11
+          }
         },
-        "holdings": {},
+        "holdings": {
+          "quarter": "2026年2季度股票投资明细",
+          "top10_concentration": 62.22,
+          "top_holdings": [
+            {
+              "name": "台积电",
+              "code": "TSM",
+              "weight": 9.68
+            },
+            {
+              "name": "英伟达",
+              "code": "NVDA",
+              "weight": 9.38
+            },
+            {
+              "name": "SK海力士",
+              "code": "000660",
+              "weight": 8.94
+            },
+            {
+              "name": "三星电子",
+              "code": "005930",
+              "weight": 7.8
+            },
+            {
+              "name": "闪迪",
+              "code": "SNDK",
+              "weight": 7.16
+            },
+            {
+              "name": "博通",
+              "code": "AVGO",
+              "weight": 4.18
+            },
+            {
+              "name": "西部数据",
+              "code": "WDC",
+              "weight": 4.18
+            },
+            {
+              "name": "美光科技",
+              "code": "MU",
+              "weight": 3.99
+            },
+            {
+              "name": "Lumentum Holdings Inc",
+              "code": "LITE",
+              "weight": 3.56
+            },
+            {
+              "name": "康宁",
+              "code": "GLW",
+              "weight": 3.35
+            }
+          ]
+        },
         "industries": {
-          "error": "industry: ValueError: Length mismatch: Expected axis has 1 elements, new values have 17 elements"
+          "period": "2026-06-30",
+          "items": [
+            {
+              "name": "信息技术",
+              "weight": 81.18
+            },
+            {
+              "name": "电信服务",
+              "weight": 0.42
+            }
+          ]
         },
         "redemption_fee": [
           {
@@ -2336,48 +2438,128 @@
             "赎回费率": "1.50%"
           },
           {
-            "适用期限": "大于等于7天，小于30天",
-            "赎回费率": "0.10%"
+            "适用期限": "大于等于7天，小于365天",
+            "赎回费率": "0.50%"
           },
           {
-            "适用期限": "大于等于30天",
+            "适用期限": "大于等于365天，小于730天",
+            "赎回费率": "0.30%"
+          },
+          {
+            "适用期限": "大于等于730天",
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-08-21T16:11:33+08:00"
+        "updated_at": "2026-08-22T00:04:47+08:00"
       },
       "profile": {
-        "fund_type": "指数型-股票",
+        "fund_type": "QDII-混合偏股",
         "asset_scale": null,
-        "share_scale": "0.5887亿份（截止至：2026年06月30日）",
-        "manager": "李沐阳",
-        "company": "华泰柏瑞基金",
-        "成立日期": "2025年08月01日",
-        "benchmark": "上证科创板半导体材料设备主题指数收益率*95%+银行活期存款利率(税后)*5%",
-        "tracking_index": "上证科创板半导体材料设备主题指数",
-        "management_fee": "0.50%（每年）",
-        "custody_fee": "0.10%（每年）",
-        "holdings": [],
-        "holdings_period": null,
-        "top10_concentration": null,
-        "industries": [],
-        "industry_period": null,
+        "share_scale": "7.2252亿份（截止至：2026年06月30日）",
+        "manager": "李博涵、程星烨、房乐",
+        "company": "建信基金",
+        "成立日期": "2011年06月21日",
+        "benchmark": "摩根士丹利资本国际新兴市场指数(MSCI Emerging Markets Index(Net Total Return))",
+        "tracking_index": "该基金无跟踪标的",
+        "management_fee": "1.20%（每年）",
+        "custody_fee": "0.20%（每年）",
+        "holdings": [
+          {
+            "name": "台积电",
+            "code": "TSM",
+            "weight": 9.68
+          },
+          {
+            "name": "英伟达",
+            "code": "NVDA",
+            "weight": 9.38
+          },
+          {
+            "name": "SK海力士",
+            "code": "000660",
+            "weight": 8.94
+          },
+          {
+            "name": "三星电子",
+            "code": "005930",
+            "weight": 7.8
+          },
+          {
+            "name": "闪迪",
+            "code": "SNDK",
+            "weight": 7.16
+          },
+          {
+            "name": "博通",
+            "code": "AVGO",
+            "weight": 4.18
+          },
+          {
+            "name": "西部数据",
+            "code": "WDC",
+            "weight": 4.18
+          },
+          {
+            "name": "美光科技",
+            "code": "MU",
+            "weight": 3.99
+          },
+          {
+            "name": "Lumentum Holdings Inc",
+            "code": "LITE",
+            "weight": 3.56
+          },
+          {
+            "name": "康宁",
+            "code": "GLW",
+            "weight": 3.35
+          }
+        ],
+        "holdings_period": "2026年2季度股票投资明细",
+        "top10_concentration": 62.22,
+        "industries": [
+          {
+            "name": "信息技术",
+            "weight": 81.18
+          },
+          {
+            "name": "电信服务",
+            "weight": 0.42
+          }
+        ],
+        "industry_period": "2026-06-30",
         "manager_details": [
           {
-            "name": "李沐阳",
-            "company": "华泰柏瑞基金",
-            "career_days": 2053.0,
-            "current_aum_yi": 418.19,
-            "best_return": 336.05
+            "name": "李博涵",
+            "company": "建信基金",
+            "career_days": 4764.0,
+            "current_aum_yi": 75.9,
+            "best_return": 185.31
+          },
+          {
+            "name": "程星烨",
+            "company": "建信基金",
+            "career_days": 2445.0,
+            "current_aum_yi": 75.9,
+            "best_return": 185.31
+          },
+          {
+            "name": "房乐",
+            "company": "建信基金",
+            "career_days": 794.0,
+            "current_aum_yi": 75.9,
+            "best_return": 104.48
           }
         ]
       },
+      "risk": "近1年历史最大回撤约33.2%；波动很大，短期涨跌可能比较猛；前十大股票占比约62%，持仓比较集中。历史数据不代表未来。",
       "deep_plain": [
-        "基金经理：李沐阳"
+        "基金经理：李博涵、程星烨、房乐",
+        "历史任意时点持有满1年的盈利概率约56%（仅作历史统计，不是未来预测）"
       ]
     }
   ],
-  "deep_enriched_at": "2026-08-21T16:11:33+08:00",
+  "deep_enriched_at": "2026-08-22T00:04:47+08:00",
   "deep_method": "overview+risk_drawdown+historical_profit_probability+latest_disclosed_holdings+industry+fees+manager",
   "profile_note": "基金持仓和行业配置来自最新可获得的定期报告披露，不是实时持仓。"
 }

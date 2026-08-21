@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-21T07:57:06+08:00",
+  "generated_at": "2026-08-21T16:09:38+08:00",
   "method_version": "fund-screen-v2.0",
   "goal": "持续跟踪6-12个月高弹性候选；不承诺收益，不预测必然涨幅",
   "selection_policy": "核心池固定跟踪6只；仅在评分明显恶化、中期趋势转负、暂停申购或更优候选持续胜出时替换",
@@ -80,7 +80,7 @@
       "tracking": {
         "first_seen": "2026-08-18T21:59:00+08:00",
         "days_tracked": 4,
-        "refresh_count": 8,
+        "refresh_count": 9,
         "score_history": [
           {
             "at": "2026-08-18T21:59:00+08:00",
@@ -119,6 +119,11 @@
           },
           {
             "at": "2026-08-21T07:57:49+08:00",
+            "score": 95.9,
+            "action": "第一买入区"
+          },
+          {
+            "at": "2026-08-21T16:10:15+08:00",
             "score": 95.9,
             "action": "第一买入区"
           }
@@ -278,7 +283,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-08-21T07:58:23+08:00"
+        "updated_at": "2026-08-21T16:10:57+08:00"
       },
       "profile": {
         "fund_type": "混合型-灵活",
@@ -455,7 +460,7 @@
       "tracking": {
         "first_seen": "2026-08-18T21:59:00+08:00",
         "days_tracked": 4,
-        "refresh_count": 8,
+        "refresh_count": 9,
         "score_history": [
           {
             "at": "2026-08-18T21:59:00+08:00",
@@ -494,6 +499,11 @@
           },
           {
             "at": "2026-08-21T07:57:49+08:00",
+            "score": 95.0,
+            "action": "等待回调"
+          },
+          {
+            "at": "2026-08-21T16:10:15+08:00",
             "score": 95.0,
             "action": "等待回调"
           }
@@ -645,7 +655,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-08-21T07:58:29+08:00"
+        "updated_at": "2026-08-21T16:11:05+08:00"
       },
       "profile": {
         "fund_type": "股票型",
@@ -818,7 +828,7 @@
       "tracking": {
         "first_seen": "2026-08-18T21:59:00+08:00",
         "days_tracked": 4,
-        "refresh_count": 8,
+        "refresh_count": 9,
         "score_history": [
           {
             "at": "2026-08-18T21:59:00+08:00",
@@ -857,6 +867,11 @@
           },
           {
             "at": "2026-08-21T07:57:49+08:00",
+            "score": 98.0,
+            "action": "继续等买点"
+          },
+          {
+            "at": "2026-08-21T16:10:15+08:00",
             "score": 98.0,
             "action": "继续等买点"
           }
@@ -1008,7 +1023,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-08-21T07:58:35+08:00"
+        "updated_at": "2026-08-21T16:11:10+08:00"
       },
       "profile": {
         "fund_type": "股票型",
@@ -1181,7 +1196,7 @@
       "tracking": {
         "first_seen": "2026-08-18T21:59:00+08:00",
         "days_tracked": 4,
-        "refresh_count": 8,
+        "refresh_count": 9,
         "score_history": [
           {
             "at": "2026-08-18T21:59:00+08:00",
@@ -1220,6 +1235,11 @@
           },
           {
             "at": "2026-08-21T07:57:49+08:00",
+            "score": 81.4,
+            "action": "继续等买点"
+          },
+          {
+            "at": "2026-08-21T16:10:15+08:00",
             "score": 81.4,
             "action": "继续等买点"
           }
@@ -1367,7 +1387,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-08-21T07:58:41+08:00"
+        "updated_at": "2026-08-21T16:11:16+08:00"
       },
       "profile": {
         "fund_type": "QDII-普通股票",
@@ -1536,7 +1556,7 @@
       "tracking": {
         "first_seen": "2026-08-19T00:00:59+08:00",
         "days_tracked": 3,
-        "refresh_count": 7,
+        "refresh_count": 8,
         "score_history": [
           {
             "at": "2026-08-19T00:00:59+08:00",
@@ -1570,6 +1590,11 @@
           },
           {
             "at": "2026-08-21T07:57:49+08:00",
+            "score": 93.8,
+            "action": "第二买入区"
+          },
+          {
+            "at": "2026-08-21T16:10:15+08:00",
             "score": 93.8,
             "action": "第二买入区"
           }
@@ -1721,7 +1746,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-08-21T07:58:46+08:00"
+        "updated_at": "2026-08-21T16:11:21+08:00"
       },
       "profile": {
         "fund_type": "混合型-偏股",
@@ -1831,7 +1856,7 @@
       "code": "014854",
       "name": "嘉实中证半导体指数增强发起式A",
       "category": "指数型",
-      "score": 89.9,
+      "score": 90.0,
       "returns": {
         "1m": 4.75,
         "3m": 4.36,
@@ -1841,8 +1866,8 @@
         "ytd": 68.52
       },
       "latest_nav": 3.3433,
-      "estimate_nav": 3.3288,
-      "estimate_return": -0.97,
+      "estimate_nav": 3.3363,
+      "estimate_return": -0.21,
       "day_return": -0.54,
       "buy_status": "开放申购",
       "position": "趋势向上，可等分批点",
@@ -1894,7 +1919,7 @@
       "tracking": {
         "first_seen": "2026-08-19T00:00:59+08:00",
         "days_tracked": 3,
-        "refresh_count": 7,
+        "refresh_count": 8,
         "score_history": [
           {
             "at": "2026-08-19T00:00:59+08:00",
@@ -1929,6 +1954,11 @@
           {
             "at": "2026-08-21T07:57:49+08:00",
             "score": 89.9,
+            "action": "继续等买点"
+          },
+          {
+            "at": "2026-08-21T16:10:15+08:00",
+            "score": 90.0,
             "action": "继续等买点"
           }
         ]
@@ -2074,7 +2104,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-08-21T07:58:52+08:00"
+        "updated_at": "2026-08-21T16:11:27+08:00"
       },
       "profile": {
         "fund_type": "指数型-股票",
@@ -2194,8 +2224,8 @@
         "ytd": 88.99
       },
       "latest_nav": 2.5419,
-      "estimate_nav": 2.5415,
-      "estimate_return": -0.39,
+      "estimate_nav": 2.5277,
+      "estimate_return": -0.56,
       "day_return": -0.37,
       "buy_status": "限大额",
       "position": "中性观察",
@@ -2247,10 +2277,15 @@
       "tracking": {
         "first_seen": "2026-08-21T07:57:49+08:00",
         "days_tracked": 1,
-        "refresh_count": 1,
+        "refresh_count": 2,
         "score_history": [
           {
             "at": "2026-08-21T07:57:49+08:00",
+            "score": 88.9,
+            "action": "继续等买点"
+          },
+          {
+            "at": "2026-08-21T16:10:15+08:00",
             "score": 88.9,
             "action": "继续等买点"
           }
@@ -2309,7 +2344,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-08-21T07:58:58+08:00"
+        "updated_at": "2026-08-21T16:11:33+08:00"
       },
       "profile": {
         "fund_type": "指数型-股票",
@@ -2342,7 +2377,7 @@
       ]
     }
   ],
-  "deep_enriched_at": "2026-08-21T07:58:58+08:00",
+  "deep_enriched_at": "2026-08-21T16:11:33+08:00",
   "deep_method": "overview+risk_drawdown+historical_profit_probability+latest_disclosed_holdings+industry+fees+manager",
   "profile_note": "基金持仓和行业配置来自最新可获得的定期报告披露，不是实时持仓。"
 }

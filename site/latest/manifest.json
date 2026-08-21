@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-08-21T13:12:11.399212+08:00",
+  "generated_at": "2026-08-21T17:14:26.152970+08:00",
   "schema_version": 8,
   "datasets": {
     "tracked_market.json": {
       "exists": true,
-      "updated_at": "2026-08-21T13:08:51.537055+08:00",
-      "bytes": 25009
+      "updated_at": "2026-08-21T17:10:39.593924+08:00",
+      "bytes": 25268
     },
     "funds.json": {
       "exists": true,
-      "updated_at": "2026-08-21T13:08:51.537055+08:00",
+      "updated_at": "2026-08-21T17:10:39.593924+08:00",
       "bytes": 595403
     },
     "gold.json": {
       "exists": true,
-      "updated_at": "2026-08-21T13:08:51.537055+08:00",
-      "bytes": 953830
+      "updated_at": "2026-08-21T17:10:39.593924+08:00",
+      "bytes": 953885
     },
     "candidate_pool.json": {
       "exists": true,
@@ -24,42 +24,42 @@
     },
     "health.json": {
       "exists": true,
-      "updated_at": "2026-08-21T13:08:51.537055+08:00",
-      "bytes": 8964
+      "updated_at": "2026-08-21T17:10:39.593924+08:00",
+      "bytes": 12218
     },
     "analysis_stage1.json": {
       "exists": true,
-      "updated_at": "2026-08-21T13:10:48.048231+08:00",
-      "bytes": 18295
+      "updated_at": "2026-08-21T17:12:53.079964+08:00",
+      "bytes": 18340
     },
     "analysis_stage2_daily.json": {
       "exists": true,
-      "updated_at": "2026-08-21T13:12:02.185606+08:00",
-      "bytes": 658380
+      "updated_at": "2026-08-21T17:14:15.655360+08:00",
+      "bytes": 661049
     },
     "analysis_duckdb_evidence.json": {
       "exists": true,
-      "updated_at": "2026-08-21T13:12:07.614763+08:00",
-      "bytes": 10514
+      "updated_at": "2026-08-21T17:14:21.892335+08:00",
+      "bytes": 10519
     },
     "data_contracts.json": {
       "exists": true,
-      "updated_at": "2026-08-21T13:11:44.713048+08:00",
+      "updated_at": "2026-08-21T17:13:58.442450+08:00",
       "bytes": 5537
     },
     "calendar_alignment.json": {
       "exists": true,
-      "updated_at": "2026-08-21T13:11:45.366181+08:00",
+      "updated_at": "2026-08-21T17:13:59.047369+08:00",
       "bytes": 7777
     },
     "analysis_evidence_summary.json": {
       "exists": true,
-      "updated_at": "2026-08-21T13:12:10.869027+08:00",
-      "bytes": 8007
+      "updated_at": "2026-08-21T17:14:25.360575+08:00",
+      "bytes": 9728
     },
     "report_readiness.json": {
       "exists": true,
-      "updated_at": "2026-08-21T13:12:11.399212+08:00",
+      "updated_at": "2026-08-21T17:14:26.152970+08:00",
       "bytes": 8278
     }
   },
@@ -78,13 +78,13 @@
   },
   "analysis_engine": {
     "stage": "STAGE_1_RUNNING",
-    "generated_at": "2026-08-21T13:10:48.048231+08:00",
+    "generated_at": "2026-08-21T17:12:53.079964+08:00",
     "stage1_fund_ready": true,
     "stage1_a_share_history_ready": true,
     "stage2_vectorbt_daily_pilot_ready": true,
     "stage2_daily_pilot": {
       "status": "STAGE_2_DAILY_PILOT_RUNNING",
-      "generated_at": "2026-08-21T13:12:02.185606+08:00",
+      "generated_at": "2026-08-21T17:14:15.655360+08:00",
       "research_core_ready": true,
       "coverage": {
         "a_research_core_ok": 7,
@@ -100,9 +100,9 @@
       "production_use": "RESEARCH_ONLY",
       "statistical_evidence": {
         "status": "RESEARCH_ONLY",
-        "sufficient_signal_horizons": 107,
-        "insufficient_signal_horizons": 73,
-        "fdr_reject_5pct_count": 12
+        "sufficient_signal_horizons": 110,
+        "insufficient_signal_horizons": 70,
+        "fdr_reject_5pct_count": 16
       }
     },
     "support_layer": {

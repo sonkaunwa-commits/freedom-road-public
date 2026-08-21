@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-21T13:12:11.399212+08:00",
+  "generated_at": "2026-08-21T17:14:26.152970+08:00",
   "schema_version": 6,
-  "source_health_updated_at": "2026-08-21T13:08:51.537055+08:00",
+  "source_health_updated_at": "2026-08-21T17:10:39.593924+08:00",
   "delivery_mode_17": "FULL_REPORT_WITH_EXPLICIT_DEGRADATIONS",
   "a_share_exact_action_gate": {
     "ready": true,
@@ -56,13 +56,13 @@
   },
   "analysis_engine": {
     "stage": "STAGE_1_RUNNING",
-    "generated_at": "2026-08-21T13:10:48.048231+08:00",
+    "generated_at": "2026-08-21T17:12:53.079964+08:00",
     "stage1_fund_ready": true,
     "stage1_a_share_history_ready": true,
     "stage2_vectorbt_daily_pilot_ready": true,
     "stage2_daily_pilot": {
       "status": "STAGE_2_DAILY_PILOT_RUNNING",
-      "generated_at": "2026-08-21T13:12:02.185606+08:00",
+      "generated_at": "2026-08-21T17:14:15.655360+08:00",
       "research_core_ready": true,
       "coverage": {
         "a_research_core_ok": 7,
@@ -78,9 +78,9 @@
       "production_use": "RESEARCH_ONLY",
       "statistical_evidence": {
         "status": "RESEARCH_ONLY",
-        "sufficient_signal_horizons": 107,
-        "insufficient_signal_horizons": 73,
-        "fdr_reject_5pct_count": 12
+        "sufficient_signal_horizons": 110,
+        "insufficient_signal_horizons": 70,
+        "fdr_reject_5pct_count": 16
       }
     },
     "support_layer": {
@@ -134,7 +134,7 @@
   },
   "evidence_packet": {
     "status": "READY_RESEARCH_ONLY",
-    "generated_at": "2026-08-21T13:12:10.869027+08:00",
+    "generated_at": "2026-08-21T17:14:25.360575+08:00",
     "production_use": "RESEARCH_ONLY"
   },
   "content_contract": {

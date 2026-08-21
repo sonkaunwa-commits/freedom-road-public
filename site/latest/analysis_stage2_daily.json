@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-21T00:02:23.512173+08:00",
+  "generated_at": "2026-08-21T13:12:02.185606+08:00",
   "schema_version": 2,
   "analysis_engine_stage": "STAGE_2_DAILY_PILOT_RUNNING",
   "tool": {
@@ -39,8 +39,8 @@
       "provider": "yfinance:a:600006.SH",
       "status": "ok",
       "observations": 520,
-      "first_date": "2024-07-02",
-      "last_date": "2026-08-20",
+      "first_date": "2024-07-03",
+      "last_date": "2026-08-21",
       "signals": {
         "ma20_reclaim": {
           "raw_signal_count": 29,
@@ -67,7 +67,7 @@
                 ],
                 "hac_maxlags": 4,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.36128777,
+                "fdr_bh_q_value": 0.42953101,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -94,7 +94,7 @@
                 ],
                 "hac_maxlags": 9,
                 "raw_evidence_class": "POSITIVE_MEAN_95CI_EXCLUDES_ZERO",
-                "fdr_bh_q_value": 0.02485154,
+                "fdr_bh_q_value": 0.03209866,
                 "fdr_bh_reject_5pct": true,
                 "evidence_class_after_fdr": "POSITIVE_FDR_5PCT",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -121,7 +121,7 @@
                 ],
                 "hac_maxlags": 19,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.83228411,
+                "fdr_bh_q_value": 0.8187073,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -659,7 +659,7 @@
                 ],
                 "hac_maxlags": 4,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.79868642,
+                "fdr_bh_q_value": 0.78641268,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -686,7 +686,7 @@
                 ],
                 "hac_maxlags": 9,
                 "raw_evidence_class": "NEGATIVE_MEAN_95CI_EXCLUDES_ZERO",
-                "fdr_bh_q_value": 8.25e-05,
+                "fdr_bh_q_value": 8.025e-05,
                 "fdr_bh_reject_5pct": true,
                 "evidence_class_after_fdr": "NEGATIVE_FDR_5PCT",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -1256,7 +1256,7 @@
                 ],
                 "hac_maxlags": 4,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.91985201,
+                "fdr_bh_q_value": 0.92134232,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -1283,7 +1283,7 @@
                 ],
                 "hac_maxlags": 9,
                 "raw_evidence_class": "NEGATIVE_MEAN_95CI_EXCLUDES_ZERO",
-                "fdr_bh_q_value": 3.85e-06,
+                "fdr_bh_q_value": 3.75e-06,
                 "fdr_bh_reject_5pct": true,
                 "evidence_class_after_fdr": "NEGATIVE_FDR_5PCT",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -1555,11 +1555,11 @@
     {
       "code": "002085.SZ",
       "scope": "research_core",
-      "provider": "yfinance+tencent:a:002085.SZ",
+      "provider": "akshare:a:002085.SZ",
       "status": "ok",
       "observations": 520,
-      "first_date": "2024-07-02",
-      "last_date": "2026-08-20",
+      "first_date": "2024-07-03",
+      "last_date": "2026-08-21",
       "signals": {
         "ma20_reclaim": {
           "raw_signal_count": 24,
@@ -1579,14 +1579,14 @@
                 "sample_size": 24,
                 "mean_return_pct": 0.591716,
                 "hac_standard_error_pct": 1.40385,
-                "p_value_two_sided": 0.67339351,
+                "p_value_two_sided": 0.67339383,
                 "confidence_interval_95_pct": [
                   -2.15978,
-                  3.343212
+                  3.343211
                 ],
                 "hac_maxlags": 4,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.83228411,
+                "fdr_bh_q_value": 0.81878568,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -1606,14 +1606,14 @@
                 "sample_size": 24,
                 "mean_return_pct": -1.497177,
                 "hac_standard_error_pct": 1.296355,
-                "p_value_two_sided": 0.24812628,
+                "p_value_two_sided": 0.24812587,
                 "confidence_interval_95_pct": [
                   -4.037986,
-                  1.043633
+                  1.043631
                 ],
                 "hac_maxlags": 9,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.58072108,
+                "fdr_bh_q_value": 0.63648316,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -1631,16 +1631,16 @@
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 23,
-                "mean_return_pct": -2.439821,
+                "mean_return_pct": -2.439822,
                 "hac_standard_error_pct": 3.769046,
-                "p_value_two_sided": 0.51741768,
+                "p_value_two_sided": 0.51741747,
                 "confidence_interval_95_pct": [
-                  -9.827015,
-                  4.947374
+                  -9.827016,
+                  4.947372
                 ],
                 "hac_maxlags": 19,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.7847828,
+                "fdr_bh_q_value": 0.76826161,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -1930,7 +1930,7 @@
               "signal_date": "2025-08-04",
               "entry_date": "2025-08-05",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 16.549999,
+              "entry_price": 16.55,
               "forward": {
                 "5": {
                   "exit_date": "2025-08-11",
@@ -1953,7 +1953,7 @@
               "signal_date": "2025-08-15",
               "entry_date": "2025-08-18",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 16.799999,
+              "entry_price": 16.8,
               "forward": {
                 "5": {
                   "exit_date": "2025-08-22",
@@ -1999,7 +1999,7 @@
               "signal_date": "2025-09-11",
               "entry_date": "2025-09-12",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 18.059999,
+              "entry_price": 18.06,
               "forward": {
                 "5": {
                   "exit_date": "2025-09-18",
@@ -2045,7 +2045,7 @@
               "signal_date": "2025-10-09",
               "entry_date": "2025-10-10",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 18.299999,
+              "entry_price": 18.3,
               "forward": {
                 "5": {
                   "exit_date": "2025-10-16",
@@ -2068,7 +2068,7 @@
               "signal_date": "2026-01-19",
               "entry_date": "2026-01-20",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 16.780001,
+              "entry_price": 16.78,
               "forward": {
                 "5": {
                   "exit_date": "2026-01-26",
@@ -2164,26 +2164,26 @@
           "horizon_stats": {
             "5": {
               "sample_size": 24,
-              "win_rate_pct": 33.33,
-              "mean_return_pct": -0.6446,
-              "median_return_pct": -2.7046,
+              "win_rate_pct": 29.17,
+              "mean_return_pct": -0.9728,
+              "median_return_pct": -2.7925,
               "p25_return_pct": -5.4159,
-              "p75_return_pct": 4.2978,
-              "avg_max_adverse_excursion_pct": -6.2353,
+              "p75_return_pct": 2.2998,
+              "avg_max_adverse_excursion_pct": -6.285,
               "worst_max_adverse_excursion_pct": -17.4519,
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 24,
-                "mean_return_pct": -0.644601,
-                "hac_standard_error_pct": 1.521328,
-                "p_value_two_sided": 0.67177782,
+                "mean_return_pct": -0.972817,
+                "hac_standard_error_pct": 1.554044,
+                "p_value_two_sided": 0.53132111,
                 "confidence_interval_95_pct": [
-                  -3.626349,
-                  2.337148
+                  -4.018687,
+                  2.073053
                 ],
                 "hac_maxlags": 4,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.83228411,
+                "fdr_bh_q_value": 0.76826161,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -2192,25 +2192,25 @@
             "10": {
               "sample_size": 23,
               "win_rate_pct": 43.48,
-              "mean_return_pct": -0.9153,
+              "mean_return_pct": -1.1412,
               "median_return_pct": -3.7703,
-              "p25_return_pct": -7.1831,
+              "p25_return_pct": -8.5811,
               "p75_return_pct": 4.5598,
-              "avg_max_adverse_excursion_pct": -8.5314,
+              "avg_max_adverse_excursion_pct": -8.6923,
               "worst_max_adverse_excursion_pct": -24.7596,
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 23,
-                "mean_return_pct": -0.915255,
-                "hac_standard_error_pct": 2.46878,
-                "p_value_two_sided": 0.71083732,
+                "mean_return_pct": -1.141196,
+                "hac_standard_error_pct": 2.359992,
+                "p_value_two_sided": 0.62869851,
                 "confidence_interval_95_pct": [
-                  -5.753976,
-                  3.923465
+                  -5.766695,
+                  3.484302
                 ],
                 "hac_maxlags": 9,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.84359336,
+                "fdr_bh_q_value": 0.8187073,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -2219,25 +2219,25 @@
             "20": {
               "sample_size": 23,
               "win_rate_pct": 34.78,
-              "mean_return_pct": -2.0949,
+              "mean_return_pct": -2.4048,
               "median_return_pct": -5.0,
-              "p25_return_pct": -10.6151,
+              "p25_return_pct": -14.1791,
               "p75_return_pct": 5.9953,
-              "avg_max_adverse_excursion_pct": -11.5012,
+              "avg_max_adverse_excursion_pct": -11.6408,
               "worst_max_adverse_excursion_pct": -26.9546,
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 23,
-                "mean_return_pct": -2.094925,
-                "hac_standard_error_pct": 3.653207,
-                "p_value_two_sided": 0.56634128,
+                "mean_return_pct": -2.404838,
+                "hac_standard_error_pct": 3.452333,
+                "p_value_two_sided": 0.48606348,
                 "confidence_interval_95_pct": [
-                  -9.255078,
-                  5.065229
+                  -9.171287,
+                  4.36161
                 ],
                 "hac_maxlags": 19,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.79868642,
+                "fdr_bh_q_value": 0.75375061,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -2249,7 +2249,7 @@
               "signal_date": "2025-08-20",
               "entry_date": "2025-08-21",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 17.190001,
+              "entry_price": 17.19,
               "forward": {
                 "5": {
                   "exit_date": "2025-08-27",
@@ -2281,7 +2281,7 @@
                 },
                 "10": {
                   "exit_date": "2025-09-08",
-                  "return_pct": 3.1872,
+                  "return_pct": 3.1873,
                   "max_adverse_excursion_pct": -3.2442
                 },
                 "20": {
@@ -2295,7 +2295,7 @@
               "signal_date": "2025-08-29",
               "entry_date": "2025-09-01",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 19.219999,
+              "entry_price": 19.22,
               "forward": {
                 "5": {
                   "exit_date": "2025-09-05",
@@ -2318,7 +2318,7 @@
               "signal_date": "2025-09-24",
               "entry_date": "2025-09-25",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 19.110001,
+              "entry_price": 19.11,
               "forward": {
                 "5": {
                   "exit_date": "2025-10-09",
@@ -2341,7 +2341,7 @@
               "signal_date": "2025-12-31",
               "entry_date": "2026-01-05",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 16.200001,
+              "entry_price": 16.2,
               "forward": {
                 "5": {
                   "exit_date": "2026-01-09",
@@ -2387,7 +2387,7 @@
               "signal_date": "2026-01-14",
               "entry_date": "2026-01-15",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 17.200001,
+              "entry_price": 17.2,
               "forward": {
                 "5": {
                   "exit_date": "2026-01-21",
@@ -2401,7 +2401,7 @@
                 },
                 "20": {
                   "exit_date": "2026-02-11",
-                  "return_pct": -6.3954,
+                  "return_pct": -6.3953,
                   "max_adverse_excursion_pct": -12.2674
                 }
               }
@@ -2474,11 +2474,11 @@
             "5": {
               "sample_size": 14,
               "win_rate_pct": 42.86,
-              "mean_return_pct": 0.7636,
+              "mean_return_pct": 0.691,
               "median_return_pct": -0.5613,
-              "p25_return_pct": -3.4016,
+              "p25_return_pct": -4.0096,
               "p75_return_pct": 2.6129,
-              "avg_max_adverse_excursion_pct": -3.2199,
+              "avg_max_adverse_excursion_pct": -3.2924,
               "worst_max_adverse_excursion_pct": -9.1395,
               "statistical_evidence": {
                 "status": "INSUFFICIENT_EVIDENCE",
@@ -2489,11 +2489,11 @@
             "10": {
               "sample_size": 14,
               "win_rate_pct": 35.71,
-              "mean_return_pct": 0.2299,
+              "mean_return_pct": 0.1634,
               "median_return_pct": -2.1385,
               "p25_return_pct": -7.4773,
               "p75_return_pct": 3.4924,
-              "avg_max_adverse_excursion_pct": -6.0684,
+              "avg_max_adverse_excursion_pct": -6.1348,
               "worst_max_adverse_excursion_pct": -14.2787,
               "statistical_evidence": {
                 "status": "INSUFFICIENT_EVIDENCE",
@@ -2504,11 +2504,11 @@
             "20": {
               "sample_size": 14,
               "win_rate_pct": 42.86,
-              "mean_return_pct": 5.1508,
+              "mean_return_pct": 5.0843,
               "median_return_pct": -1.7748,
               "p25_return_pct": -7.7265,
               "p75_return_pct": 8.7679,
-              "avg_max_adverse_excursion_pct": -8.4582,
+              "avg_max_adverse_excursion_pct": -8.5215,
               "worst_max_adverse_excursion_pct": -31.5116,
               "statistical_evidence": {
                 "status": "INSUFFICIENT_EVIDENCE",
@@ -2522,7 +2522,7 @@
               "signal_date": "2025-03-10",
               "entry_date": "2025-03-11",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 20.309999,
+              "entry_price": 20.31,
               "forward": {
                 "5": {
                   "exit_date": "2025-03-17",
@@ -2568,7 +2568,7 @@
               "signal_date": "2025-08-04",
               "entry_date": "2025-08-05",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 16.549999,
+              "entry_price": 16.55,
               "forward": {
                 "5": {
                   "exit_date": "2025-08-11",
@@ -2614,7 +2614,7 @@
               "signal_date": "2025-09-11",
               "entry_date": "2025-09-12",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 18.059999,
+              "entry_price": 18.06,
               "forward": {
                 "5": {
                   "exit_date": "2025-09-18",
@@ -2660,7 +2660,7 @@
               "signal_date": "2025-10-09",
               "entry_date": "2025-10-10",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 18.299999,
+              "entry_price": 18.3,
               "forward": {
                 "5": {
                   "exit_date": "2025-10-16",
@@ -2729,22 +2729,22 @@
               "signal_date": "2026-03-12",
               "entry_date": "2026-03-13",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 15.91,
+              "entry_price": 16.08,
               "forward": {
                 "5": {
                   "exit_date": "2026-03-19",
-                  "return_pct": -3.8341,
-                  "max_adverse_excursion_pct": -4.0226
+                  "return_pct": -4.8507,
+                  "max_adverse_excursion_pct": -5.0373
                 },
                 "10": {
                   "exit_date": "2026-03-26",
-                  "return_pct": -11.9422,
-                  "max_adverse_excursion_pct": -12.005
+                  "return_pct": -12.8731,
+                  "max_adverse_excursion_pct": -12.9353
                 },
                 "20": {
                   "exit_date": "2026-04-10",
-                  "return_pct": -11.8793,
-                  "max_adverse_excursion_pct": -16.1534
+                  "return_pct": -12.8109,
+                  "max_adverse_excursion_pct": -17.0398
                 }
               }
             }
@@ -2756,26 +2756,26 @@
           "horizon_stats": {
             "5": {
               "sample_size": 22,
-              "win_rate_pct": 27.27,
-              "mean_return_pct": -1.5243,
+              "win_rate_pct": 22.73,
+              "mean_return_pct": -1.8824,
               "median_return_pct": -2.9764,
               "p25_return_pct": -5.9624,
-              "p75_return_pct": 2.6723,
-              "avg_max_adverse_excursion_pct": -6.6548,
+              "p75_return_pct": -1.4314,
+              "avg_max_adverse_excursion_pct": -6.709,
               "worst_max_adverse_excursion_pct": -17.4519,
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 22,
-                "mean_return_pct": -1.524327,
-                "hac_standard_error_pct": 1.283883,
-                "p_value_two_sided": 0.23511746,
+                "mean_return_pct": -1.882381,
+                "hac_standard_error_pct": 1.293905,
+                "p_value_two_sided": 0.14572291,
                 "confidence_interval_95_pct": [
-                  -4.040691,
-                  0.992036
+                  -4.418389,
+                  0.653626
                 ],
                 "hac_maxlags": 4,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.5622374,
+                "fdr_bh_q_value": 0.51974505,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -2784,25 +2784,25 @@
             "10": {
               "sample_size": 21,
               "win_rate_pct": 38.1,
-              "mean_return_pct": -1.5263,
+              "mean_return_pct": -1.7738,
               "median_return_pct": -4.7867,
-              "p25_return_pct": -8.4756,
-              "p75_return_pct": 3.1872,
-              "avg_max_adverse_excursion_pct": -9.1895,
+              "p25_return_pct": -8.6866,
+              "p75_return_pct": 3.1873,
+              "avg_max_adverse_excursion_pct": -9.3658,
               "worst_max_adverse_excursion_pct": -24.7596,
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 21,
-                "mean_return_pct": -1.526297,
-                "hac_standard_error_pct": 2.527859,
-                "p_value_two_sided": 0.54598302,
+                "mean_return_pct": -1.773757,
+                "hac_standard_error_pct": 2.418378,
+                "p_value_two_sided": 0.46328452,
                 "confidence_interval_95_pct": [
-                  -6.48081,
-                  3.428216
+                  -6.51369,
+                  2.966176
                 ],
                 "hac_maxlags": 9,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.79317296,
+                "fdr_bh_q_value": 0.74650731,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -2811,25 +2811,25 @@
             "20": {
               "sample_size": 21,
               "win_rate_pct": 38.1,
-              "mean_return_pct": -1.7111,
+              "mean_return_pct": -2.0505,
               "median_return_pct": -3.7461,
-              "p25_return_pct": -12.3496,
+              "p25_return_pct": -16.0086,
               "p75_return_pct": 7.039,
-              "avg_max_adverse_excursion_pct": -11.7089,
+              "avg_max_adverse_excursion_pct": -11.8618,
               "worst_max_adverse_excursion_pct": -26.9546,
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 21,
-                "mean_return_pct": -1.711114,
-                "hac_standard_error_pct": 3.73441,
-                "p_value_two_sided": 0.64680744,
+                "mean_return_pct": -2.050543,
+                "hac_standard_error_pct": 3.517733,
+                "p_value_two_sided": 0.55994987,
                 "confidence_interval_95_pct": [
-                  -9.030423,
-                  5.608196
+                  -8.945174,
+                  4.844088
                 ],
                 "hac_maxlags": 19,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.83228411,
+                "fdr_bh_q_value": 0.78641268,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -2864,7 +2864,7 @@
               "signal_date": "2025-08-20",
               "entry_date": "2025-08-21",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 17.190001,
+              "entry_price": 17.19,
               "forward": {
                 "5": {
                   "exit_date": "2025-08-27",
@@ -2896,7 +2896,7 @@
                 },
                 "10": {
                   "exit_date": "2025-09-08",
-                  "return_pct": 3.1872,
+                  "return_pct": 3.1873,
                   "max_adverse_excursion_pct": -3.2442
                 },
                 "20": {
@@ -2910,7 +2910,7 @@
               "signal_date": "2025-08-29",
               "entry_date": "2025-09-01",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 19.219999,
+              "entry_price": 19.22,
               "forward": {
                 "5": {
                   "exit_date": "2025-09-05",
@@ -2933,7 +2933,7 @@
               "signal_date": "2025-09-24",
               "entry_date": "2025-09-25",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 19.110001,
+              "entry_price": 19.11,
               "forward": {
                 "5": {
                   "exit_date": "2025-10-09",
@@ -2979,7 +2979,7 @@
               "signal_date": "2026-01-14",
               "entry_date": "2026-01-15",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 17.200001,
+              "entry_price": 17.2,
               "forward": {
                 "5": {
                   "exit_date": "2026-01-21",
@@ -2993,7 +2993,7 @@
                 },
                 "20": {
                   "exit_date": "2026-02-11",
-                  "return_pct": -6.3954,
+                  "return_pct": -6.3953,
                   "max_adverse_excursion_pct": -12.2674
                 }
               }
@@ -3064,11 +3064,11 @@
     {
       "code": "002475.SZ",
       "scope": "research_core",
-      "provider": "yfinance+tencent:a:002475.SZ",
+      "provider": "akshare:a:002475.SZ",
       "status": "ok",
       "observations": 520,
-      "first_date": "2024-07-02",
-      "last_date": "2026-08-20",
+      "first_date": "2024-07-03",
+      "last_date": "2026-08-21",
       "signals": {
         "ma20_reclaim": {
           "raw_signal_count": 32,
@@ -3086,16 +3086,16 @@
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 31,
-                "mean_return_pct": -1.695584,
-                "hac_standard_error_pct": 1.531696,
-                "p_value_two_sided": 0.26829477,
+                "mean_return_pct": -1.695583,
+                "hac_standard_error_pct": 1.531695,
+                "p_value_two_sided": 0.26829489,
                 "confidence_interval_95_pct": [
-                  -4.697652,
+                  -4.697651,
                   1.306484
                 ],
                 "hac_maxlags": 4,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.59388993,
+                "fdr_bh_q_value": 0.64188104,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -3113,16 +3113,16 @@
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 31,
-                "mean_return_pct": -1.416745,
+                "mean_return_pct": -1.416744,
                 "hac_standard_error_pct": 1.678745,
-                "p_value_two_sided": 0.39870797,
+                "p_value_two_sided": 0.3987082,
                 "confidence_interval_95_pct": [
                   -4.707024,
-                  1.873534
+                  1.873535
                 ],
                 "hac_maxlags": 9,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.69158525,
+                "fdr_bh_q_value": 0.72878394,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -3135,21 +3135,21 @@
               "median_return_pct": -0.8275,
               "p25_return_pct": -11.3111,
               "p75_return_pct": 10.4008,
-              "avg_max_adverse_excursion_pct": -10.111,
+              "avg_max_adverse_excursion_pct": -10.1109,
               "worst_max_adverse_excursion_pct": -33.878,
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 29,
                 "mean_return_pct": 1.725166,
                 "hac_standard_error_pct": 1.447544,
-                "p_value_two_sided": 0.23334448,
+                "p_value_two_sided": 0.23334434,
                 "confidence_interval_95_pct": [
                   -1.111969,
                   4.5623
                 ],
                 "hac_maxlags": 19,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.5622374,
+                "fdr_bh_q_value": 0.62743257,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -3184,7 +3184,7 @@
               "signal_date": "2026-03-25",
               "entry_date": "2026-03-26",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 51.709999,
+              "entry_price": 51.71,
               "forward": {
                 "5": {
                   "exit_date": "2026-04-01",
@@ -3212,17 +3212,17 @@
                 "5": {
                   "exit_date": "2026-04-15",
                   "return_pct": 14.1359,
-                  "max_adverse_excursion_pct": -0.3884
+                  "max_adverse_excursion_pct": -0.3883
                 },
                 "10": {
                   "exit_date": "2026-04-22",
                   "return_pct": 32.0971,
-                  "max_adverse_excursion_pct": -0.3884
+                  "max_adverse_excursion_pct": -0.3883
                 },
                 "20": {
                   "exit_date": "2026-05-11",
                   "return_pct": 47.6893,
-                  "max_adverse_excursion_pct": -0.3884
+                  "max_adverse_excursion_pct": -0.3883
                 }
               }
             },
@@ -3230,7 +3230,7 @@
               "signal_date": "2026-05-22",
               "entry_date": "2026-05-25",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 73.300003,
+              "entry_price": 73.3,
               "forward": {
                 "5": {
                   "exit_date": "2026-05-29",
@@ -3299,7 +3299,7 @@
               "signal_date": "2026-06-24",
               "entry_date": "2026-06-25",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 75.099998,
+              "entry_price": 75.1,
               "forward": {
                 "5": {
                   "exit_date": "2026-07-01",
@@ -3322,7 +3322,7 @@
               "signal_date": "2026-06-30",
               "entry_date": "2026-07-01",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 70.400002,
+              "entry_price": 70.4,
               "forward": {
                 "5": {
                   "exit_date": "2026-07-07",
@@ -3345,7 +3345,7 @@
               "signal_date": "2026-07-27",
               "entry_date": "2026-07-28",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 61.799999,
+              "entry_price": 61.8,
               "forward": {
                 "5": {
                   "exit_date": "2026-08-03",
@@ -3363,7 +3363,7 @@
               "signal_date": "2026-07-29",
               "entry_date": "2026-07-30",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 61.360001,
+              "entry_price": 61.36,
               "forward": {
                 "5": {
                   "exit_date": "2026-08-05",
@@ -3434,7 +3434,7 @@
               "signal_date": "2025-10-21",
               "entry_date": "2025-10-22",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 60.099998,
+              "entry_price": 60.1,
               "forward": {
                 "5": {
                   "exit_date": "2025-10-28",
@@ -3457,7 +3457,7 @@
               "signal_date": "2025-10-24",
               "entry_date": "2025-10-27",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 65.879997,
+              "entry_price": 65.88,
               "forward": {
                 "5": {
                   "exit_date": "2025-10-31",
@@ -3480,7 +3480,7 @@
               "signal_date": "2025-11-06",
               "entry_date": "2025-11-07",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 60.720001,
+              "entry_price": 60.72,
               "forward": {
                 "5": {
                   "exit_date": "2025-11-13",
@@ -3503,7 +3503,7 @@
               "signal_date": "2025-11-28",
               "entry_date": "2025-12-01",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 57.849998,
+              "entry_price": 57.85,
               "forward": {
                 "5": {
                   "exit_date": "2025-12-05",
@@ -3526,7 +3526,7 @@
               "signal_date": "2026-04-16",
               "entry_date": "2026-04-17",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 59.849998,
+              "entry_price": 59.85,
               "forward": {
                 "5": {
                   "exit_date": "2026-04-23",
@@ -3549,7 +3549,7 @@
               "signal_date": "2026-05-22",
               "entry_date": "2026-05-25",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 73.300003,
+              "entry_price": 73.3,
               "forward": {
                 "5": {
                   "exit_date": "2026-05-29",
@@ -3618,7 +3618,7 @@
               "signal_date": "2026-06-24",
               "entry_date": "2026-06-25",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 75.099998,
+              "entry_price": 75.1,
               "forward": {
                 "5": {
                   "exit_date": "2026-07-01",
@@ -3641,7 +3641,7 @@
               "signal_date": "2026-06-30",
               "entry_date": "2026-07-01",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 70.400002,
+              "entry_price": 70.4,
               "forward": {
                 "5": {
                   "exit_date": "2026-07-07",
@@ -3678,16 +3678,16 @@
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 30,
-                "mean_return_pct": 1.483359,
+                "mean_return_pct": 1.48336,
                 "hac_standard_error_pct": 1.900879,
-                "p_value_two_sided": 0.43518242,
+                "p_value_two_sided": 0.4351822,
                 "confidence_interval_95_pct": [
                   -2.242295,
-                  5.209013
+                  5.209014
                 ],
                 "hac_maxlags": 4,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.72530403,
+                "fdr_bh_q_value": 0.74650731,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -3705,16 +3705,16 @@
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 30,
-                "mean_return_pct": 4.007405,
+                "mean_return_pct": 4.007404,
                 "hac_standard_error_pct": 3.348132,
-                "p_value_two_sided": 0.23134264,
+                "p_value_two_sided": 0.23134265,
                 "confidence_interval_95_pct": [
                   -2.554814,
-                  10.569624
+                  10.569623
                 ],
                 "hac_maxlags": 9,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.5622374,
+                "fdr_bh_q_value": 0.62743257,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -3733,15 +3733,15 @@
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 30,
                 "mean_return_pct": 6.815485,
-                "hac_standard_error_pct": 3.919915,
-                "p_value_two_sided": 0.08209072,
+                "hac_standard_error_pct": 3.919914,
+                "p_value_two_sided": 0.08209071,
                 "confidence_interval_95_pct": [
-                  -0.867407,
-                  14.498377
+                  -0.867406,
+                  14.498376
                 ],
                 "hac_maxlags": 19,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.31137859,
+                "fdr_bh_q_value": 0.38190026,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -3776,7 +3776,7 @@
               "signal_date": "2025-09-11",
               "entry_date": "2025-09-12",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 54.200001,
+              "entry_price": 54.2,
               "forward": {
                 "5": {
                   "exit_date": "2025-09-18",
@@ -3799,7 +3799,7 @@
               "signal_date": "2025-09-18",
               "entry_date": "2025-09-19",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 54.310001,
+              "entry_price": 54.31,
               "forward": {
                 "5": {
                   "exit_date": "2025-09-25",
@@ -3850,17 +3850,17 @@
                 "5": {
                   "exit_date": "2026-04-15",
                   "return_pct": 14.1359,
-                  "max_adverse_excursion_pct": -0.3884
+                  "max_adverse_excursion_pct": -0.3883
                 },
                 "10": {
                   "exit_date": "2026-04-22",
                   "return_pct": 32.0971,
-                  "max_adverse_excursion_pct": -0.3884
+                  "max_adverse_excursion_pct": -0.3883
                 },
                 "20": {
                   "exit_date": "2026-05-11",
                   "return_pct": 47.6893,
-                  "max_adverse_excursion_pct": -0.3884
+                  "max_adverse_excursion_pct": -0.3883
                 }
               }
             },
@@ -3868,7 +3868,7 @@
               "signal_date": "2026-04-16",
               "entry_date": "2026-04-17",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 59.849998,
+              "entry_price": 59.85,
               "forward": {
                 "5": {
                   "exit_date": "2026-04-23",
@@ -3891,7 +3891,7 @@
               "signal_date": "2026-04-20",
               "entry_date": "2026-04-21",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 64.860001,
+              "entry_price": 64.86,
               "forward": {
                 "5": {
                   "exit_date": "2026-04-27",
@@ -3914,7 +3914,7 @@
               "signal_date": "2026-04-27",
               "entry_date": "2026-04-28",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 71.019997,
+              "entry_price": 71.02,
               "forward": {
                 "5": {
                   "exit_date": "2026-05-07",
@@ -3937,7 +3937,7 @@
               "signal_date": "2026-05-11",
               "entry_date": "2026-05-12",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 77.389999,
+              "entry_price": 77.39,
               "forward": {
                 "5": {
                   "exit_date": "2026-05-18",
@@ -3960,7 +3960,7 @@
               "signal_date": "2026-06-24",
               "entry_date": "2026-06-25",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 75.099998,
+              "entry_price": 75.1,
               "forward": {
                 "5": {
                   "exit_date": "2026-07-01",
@@ -4003,10 +4003,10 @@
             "10": {
               "sample_size": 10,
               "win_rate_pct": 20.0,
-              "mean_return_pct": -4.3687,
+              "mean_return_pct": -4.3688,
               "median_return_pct": -5.7016,
               "p25_return_pct": -6.6269,
-              "p75_return_pct": -0.7223,
+              "p75_return_pct": -0.7224,
               "avg_max_adverse_excursion_pct": -8.1162,
               "worst_max_adverse_excursion_pct": -18.4517,
               "statistical_evidence": {
@@ -4036,7 +4036,7 @@
               "signal_date": "2024-12-19",
               "entry_date": "2024-12-20",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 41.720001,
+              "entry_price": 41.72,
               "forward": {
                 "5": {
                   "exit_date": "2024-12-26",
@@ -4059,7 +4059,7 @@
               "signal_date": "2024-12-24",
               "entry_date": "2024-12-25",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 41.400002,
+              "entry_price": 41.4,
               "forward": {
                 "5": {
                   "exit_date": "2024-12-31",
@@ -4069,7 +4069,7 @@
                 "10": {
                   "exit_date": "2025-01-08",
                   "return_pct": -5.4348,
-                  "max_adverse_excursion_pct": -6.5701
+                  "max_adverse_excursion_pct": -6.57
                 },
                 "20": {
                   "exit_date": "2025-01-22",
@@ -4082,7 +4082,7 @@
               "signal_date": "2024-12-26",
               "entry_date": "2024-12-27",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 42.279999,
+              "entry_price": 42.28,
               "forward": {
                 "5": {
                   "exit_date": "2025-01-03",
@@ -4128,7 +4128,7 @@
               "signal_date": "2025-07-29",
               "entry_date": "2025-07-30",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 37.299999,
+              "entry_price": 37.3,
               "forward": {
                 "5": {
                   "exit_date": "2025-08-05",
@@ -4174,7 +4174,7 @@
               "signal_date": "2025-12-12",
               "entry_date": "2025-12-15",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 59.549999,
+              "entry_price": 59.55,
               "forward": {
                 "5": {
                   "exit_date": "2025-12-19",
@@ -4183,7 +4183,7 @@
                 },
                 "10": {
                   "exit_date": "2025-12-26",
-                  "return_pct": -1.9311,
+                  "return_pct": -1.9312,
                   "max_adverse_excursion_pct": -5.424
                 },
                 "20": {
@@ -4197,7 +4197,7 @@
               "signal_date": "2026-05-19",
               "entry_date": "2026-05-20",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 72.029999,
+              "entry_price": 72.03,
               "forward": {
                 "5": {
                   "exit_date": "2026-05-26",
@@ -4220,7 +4220,7 @@
               "signal_date": "2026-05-22",
               "entry_date": "2026-05-25",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 73.300003,
+              "entry_price": 73.3,
               "forward": {
                 "5": {
                   "exit_date": "2026-05-29",
@@ -4243,7 +4243,7 @@
               "signal_date": "2026-06-30",
               "entry_date": "2026-07-01",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 70.400002,
+              "entry_price": 70.4,
               "forward": {
                 "5": {
                   "exit_date": "2026-07-07",
@@ -4282,14 +4282,14 @@
                 "sample_size": 22,
                 "mean_return_pct": 1.889048,
                 "hac_standard_error_pct": 2.286299,
-                "p_value_two_sided": 0.40866401,
+                "p_value_two_sided": 0.40866389,
                 "confidence_interval_95_pct": [
                   -2.592016,
                   6.370112
                 ],
                 "hac_maxlags": 4,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.69158525,
+                "fdr_bh_q_value": 0.72878394,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -4309,14 +4309,14 @@
                 "sample_size": 22,
                 "mean_return_pct": 5.17957,
                 "hac_standard_error_pct": 3.876722,
-                "p_value_two_sided": 0.18152653,
+                "p_value_two_sided": 0.1815265,
                 "confidence_interval_95_pct": [
                   -2.418665,
                   12.777805
                 ],
                 "hac_maxlags": 9,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.51199791,
+                "fdr_bh_q_value": 0.58858592,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -4338,12 +4338,12 @@
                 "hac_standard_error_pct": 3.644145,
                 "p_value_two_sided": 0.01644687,
                 "confidence_interval_95_pct": [
-                  1.599346,
-                  15.884132
+                  1.599347,
+                  15.884131
                 ],
                 "hac_maxlags": 19,
                 "raw_evidence_class": "POSITIVE_MEAN_95CI_EXCLUDES_ZERO",
-                "fdr_bh_q_value": 0.08615027,
+                "fdr_bh_q_value": 0.11732101,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -4355,7 +4355,7 @@
               "signal_date": "2025-08-18",
               "entry_date": "2025-08-19",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 39.599998,
+              "entry_price": 39.6,
               "forward": {
                 "5": {
                   "exit_date": "2025-08-25",
@@ -4378,7 +4378,7 @@
               "signal_date": "2025-08-20",
               "entry_date": "2025-08-21",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 40.099998,
+              "entry_price": 40.1,
               "forward": {
                 "5": {
                   "exit_date": "2025-08-27",
@@ -4387,7 +4387,7 @@
                 },
                 "10": {
                   "exit_date": "2025-09-03",
-                  "return_pct": 7.7806,
+                  "return_pct": 7.7805,
                   "max_adverse_excursion_pct": -0.7232
                 },
                 "20": {
@@ -4447,7 +4447,7 @@
               "signal_date": "2025-09-11",
               "entry_date": "2025-09-12",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 54.200001,
+              "entry_price": 54.2,
               "forward": {
                 "5": {
                   "exit_date": "2025-09-18",
@@ -4470,7 +4470,7 @@
               "signal_date": "2025-09-18",
               "entry_date": "2025-09-19",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 54.310001,
+              "entry_price": 54.31,
               "forward": {
                 "5": {
                   "exit_date": "2025-09-25",
@@ -4498,17 +4498,17 @@
                 "5": {
                   "exit_date": "2026-04-15",
                   "return_pct": 14.1359,
-                  "max_adverse_excursion_pct": -0.3884
+                  "max_adverse_excursion_pct": -0.3883
                 },
                 "10": {
                   "exit_date": "2026-04-22",
                   "return_pct": 32.0971,
-                  "max_adverse_excursion_pct": -0.3884
+                  "max_adverse_excursion_pct": -0.3883
                 },
                 "20": {
                   "exit_date": "2026-05-11",
                   "return_pct": 47.6893,
-                  "max_adverse_excursion_pct": -0.3884
+                  "max_adverse_excursion_pct": -0.3883
                 }
               }
             },
@@ -4516,7 +4516,7 @@
               "signal_date": "2026-04-20",
               "entry_date": "2026-04-21",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 64.860001,
+              "entry_price": 64.86,
               "forward": {
                 "5": {
                   "exit_date": "2026-04-27",
@@ -4539,7 +4539,7 @@
               "signal_date": "2026-04-27",
               "entry_date": "2026-04-28",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 71.019997,
+              "entry_price": 71.02,
               "forward": {
                 "5": {
                   "exit_date": "2026-05-07",
@@ -4562,7 +4562,7 @@
               "signal_date": "2026-06-24",
               "entry_date": "2026-06-25",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 75.099998,
+              "entry_price": 75.1,
               "forward": {
                 "5": {
                   "exit_date": "2026-07-01",
@@ -4588,11 +4588,11 @@
     {
       "code": "601138.SH",
       "scope": "research_core",
-      "provider": "yfinance:a:601138.SH",
+      "provider": "akshare:a:601138.SH",
       "status": "ok",
       "observations": 520,
-      "first_date": "2024-07-02",
-      "last_date": "2026-08-20",
+      "first_date": "2024-07-03",
+      "last_date": "2026-08-21",
       "signals": {
         "ma20_reclaim": {
           "raw_signal_count": 26,
@@ -4601,7 +4601,7 @@
             "5": {
               "sample_size": 26,
               "win_rate_pct": 65.38,
-              "mean_return_pct": 1.9384,
+              "mean_return_pct": 1.9385,
               "median_return_pct": 1.782,
               "p25_return_pct": -4.0326,
               "p75_return_pct": 5.2285,
@@ -4610,16 +4610,16 @@
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 26,
-                "mean_return_pct": 1.938442,
+                "mean_return_pct": 1.938443,
                 "hac_standard_error_pct": 1.545835,
-                "p_value_two_sided": 0.20985031,
+                "p_value_two_sided": 0.20985014,
                 "confidence_interval_95_pct": [
-                  -1.091339,
-                  4.968223
+                  -1.091338,
+                  4.968224
                 ],
                 "hac_maxlags": 4,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.54026769,
+                "fdr_bh_q_value": 0.6107551,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -4637,16 +4637,16 @@
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 26,
-                "mean_return_pct": 1.506354,
+                "mean_return_pct": 1.506355,
                 "hac_standard_error_pct": 2.081153,
-                "p_value_two_sided": 0.46918403,
+                "p_value_two_sided": 0.46918377,
                 "confidence_interval_95_pct": [
-                  -2.572631,
-                  5.585338
+                  -2.57263,
+                  5.58534
                 ],
                 "hac_maxlags": 9,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.73501049,
+                "fdr_bh_q_value": 0.74650731,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -4666,14 +4666,14 @@
                 "sample_size": 25,
                 "mean_return_pct": -1.323055,
                 "hac_standard_error_pct": 1.837592,
-                "p_value_two_sided": 0.47152875,
+                "p_value_two_sided": 0.47152864,
                 "confidence_interval_95_pct": [
                   -4.924669,
-                  2.278559
+                  2.278558
                 ],
                 "hac_maxlags": 19,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.73501049,
+                "fdr_bh_q_value": 0.74650731,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -4685,7 +4685,7 @@
               "signal_date": "2026-01-05",
               "entry_date": "2026-01-06",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 63.669998,
+              "entry_price": 63.67,
               "forward": {
                 "5": {
                   "exit_date": "2026-01-12",
@@ -4708,7 +4708,7 @@
               "signal_date": "2026-01-16",
               "entry_date": "2026-01-19",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 62.110001,
+              "entry_price": 62.11,
               "forward": {
                 "5": {
                   "exit_date": "2026-01-23",
@@ -4754,7 +4754,7 @@
               "signal_date": "2026-02-25",
               "entry_date": "2026-02-26",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 57.400002,
+              "entry_price": 57.4,
               "forward": {
                 "5": {
                   "exit_date": "2026-03-04",
@@ -4823,7 +4823,7 @@
               "signal_date": "2026-06-09",
               "entry_date": "2026-06-10",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 72.900002,
+              "entry_price": 72.9,
               "forward": {
                 "5": {
                   "exit_date": "2026-06-16",
@@ -4846,7 +4846,7 @@
               "signal_date": "2026-06-15",
               "entry_date": "2026-06-16",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 73.400002,
+              "entry_price": 73.4,
               "forward": {
                 "5": {
                   "exit_date": "2026-06-23",
@@ -4869,7 +4869,7 @@
               "signal_date": "2026-06-18",
               "entry_date": "2026-06-22",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 78.080002,
+              "entry_price": 78.08,
               "forward": {
                 "5": {
                   "exit_date": "2026-06-26",
@@ -4892,7 +4892,7 @@
               "signal_date": "2026-08-05",
               "entry_date": "2026-08-06",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 65.550003,
+              "entry_price": 65.55,
               "forward": {
                 "5": {
                   "exit_date": "2026-08-12",
@@ -4916,9 +4916,9 @@
               "sample_size": 12,
               "win_rate_pct": 58.33,
               "mean_return_pct": 1.821,
-              "median_return_pct": 1.4027,
+              "median_return_pct": 1.4028,
               "p25_return_pct": -1.8009,
-              "p75_return_pct": 7.791,
+              "p75_return_pct": 7.7909,
               "avg_max_adverse_excursion_pct": -4.0497,
               "worst_max_adverse_excursion_pct": -10.3484,
               "statistical_evidence": {
@@ -4963,7 +4963,7 @@
               "signal_date": "2025-02-20",
               "entry_date": "2025-02-21",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 22.870001,
+              "entry_price": 22.87,
               "forward": {
                 "5": {
                   "exit_date": "2025-02-27",
@@ -4990,18 +4990,18 @@
               "forward": {
                 "5": {
                   "exit_date": "2025-06-13",
-                  "return_pct": 1.8518,
-                  "max_adverse_excursion_pct": -2.7291
+                  "return_pct": 1.8519,
+                  "max_adverse_excursion_pct": -2.729
                 },
                 "10": {
                   "exit_date": "2025-06-20",
                   "return_pct": 0.3411,
-                  "max_adverse_excursion_pct": -2.7291
+                  "max_adverse_excursion_pct": -2.729
                 },
                 "20": {
                   "exit_date": "2025-07-04",
                   "return_pct": 16.0331,
-                  "max_adverse_excursion_pct": -2.7291
+                  "max_adverse_excursion_pct": -2.729
                 }
               }
             },
@@ -5009,11 +5009,11 @@
               "signal_date": "2025-09-10",
               "entry_date": "2025-09-11",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 55.799999,
+              "entry_price": 55.8,
               "forward": {
                 "5": {
                   "exit_date": "2025-09-17",
-                  "return_pct": 9.534,
+                  "return_pct": 9.5341,
                   "max_adverse_excursion_pct": -2.0609
                 },
                 "10": {
@@ -5032,7 +5032,7 @@
               "signal_date": "2025-10-21",
               "entry_date": "2025-10-22",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 66.989998,
+              "entry_price": 66.99,
               "forward": {
                 "5": {
                   "exit_date": "2025-10-28",
@@ -5055,7 +5055,7 @@
               "signal_date": "2025-10-24",
               "entry_date": "2025-10-27",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 69.260002,
+              "entry_price": 69.26,
               "forward": {
                 "5": {
                   "exit_date": "2025-10-31",
@@ -5078,7 +5078,7 @@
               "signal_date": "2026-04-22",
               "entry_date": "2026-04-23",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 66.980003,
+              "entry_price": 66.98,
               "forward": {
                 "5": {
                   "exit_date": "2026-04-29",
@@ -5124,7 +5124,7 @@
               "signal_date": "2026-06-09",
               "entry_date": "2026-06-10",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 72.900002,
+              "entry_price": 72.9,
               "forward": {
                 "5": {
                   "exit_date": "2026-06-16",
@@ -5147,7 +5147,7 @@
               "signal_date": "2026-06-15",
               "entry_date": "2026-06-16",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 73.400002,
+              "entry_price": 73.4,
               "forward": {
                 "5": {
                   "exit_date": "2026-06-23",
@@ -5170,7 +5170,7 @@
               "signal_date": "2026-06-18",
               "entry_date": "2026-06-22",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 78.080002,
+              "entry_price": 78.08,
               "forward": {
                 "5": {
                   "exit_date": "2026-06-26",
@@ -5216,7 +5216,7 @@
                 ],
                 "hac_maxlags": 4,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.29425749,
+                "fdr_bh_q_value": 0.37210197,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -5234,16 +5234,16 @@
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 34,
-                "mean_return_pct": 8.170636,
-                "hac_standard_error_pct": 5.003962,
-                "p_value_two_sided": 0.10250402,
+                "mean_return_pct": 8.170635,
+                "hac_standard_error_pct": 5.003961,
+                "p_value_two_sided": 0.10250404,
                 "confidence_interval_95_pct": [
-                  -1.636948,
-                  17.978221
+                  -1.636949,
+                  17.978219
                 ],
                 "hac_maxlags": 9,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.36128777,
+                "fdr_bh_q_value": 0.42953101,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -5261,16 +5261,16 @@
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 34,
-                "mean_return_pct": 17.008412,
-                "hac_standard_error_pct": 6.399574,
+                "mean_return_pct": 17.008411,
+                "hac_standard_error_pct": 6.399573,
                 "p_value_two_sided": 0.00786662,
                 "confidence_interval_95_pct": [
                   4.465478,
-                  29.551346
+                  29.551345
                 ],
                 "hac_maxlags": 19,
                 "raw_evidence_class": "POSITIVE_MEAN_95CI_EXCLUDES_ZERO",
-                "fdr_bh_q_value": 0.05090166,
+                "fdr_bh_q_value": 0.06474833,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -5328,7 +5328,7 @@
               "signal_date": "2026-04-14",
               "entry_date": "2026-04-15",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 59.360001,
+              "entry_price": 59.36,
               "forward": {
                 "5": {
                   "exit_date": "2026-04-21",
@@ -5351,7 +5351,7 @@
               "signal_date": "2026-04-16",
               "entry_date": "2026-04-17",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 59.599998,
+              "entry_price": 59.6,
               "forward": {
                 "5": {
                   "exit_date": "2026-04-23",
@@ -5374,7 +5374,7 @@
               "signal_date": "2026-04-22",
               "entry_date": "2026-04-23",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 66.980003,
+              "entry_price": 66.98,
               "forward": {
                 "5": {
                   "exit_date": "2026-04-29",
@@ -5397,11 +5397,11 @@
               "signal_date": "2026-04-28",
               "entry_date": "2026-04-29",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 67.769997,
+              "entry_price": 67.77,
               "forward": {
                 "5": {
                   "exit_date": "2026-05-08",
-                  "return_pct": -6.6253,
+                  "return_pct": -6.6254,
                   "max_adverse_excursion_pct": -8.8977
                 },
                 "10": {
@@ -5466,7 +5466,7 @@
               "signal_date": "2026-06-02",
               "entry_date": "2026-06-03",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 79.949997,
+              "entry_price": 79.95,
               "forward": {
                 "5": {
                   "exit_date": "2026-06-09",
@@ -5578,7 +5578,7 @@
               "signal_date": "2025-06-04",
               "entry_date": "2025-06-05",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 19.379999,
+              "entry_price": 19.38,
               "forward": {
                 "5": {
                   "exit_date": "2025-06-11",
@@ -5647,7 +5647,7 @@
               "signal_date": "2026-05-11",
               "entry_date": "2026-05-12",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 65.870003,
+              "entry_price": 65.87,
               "forward": {
                 "5": {
                   "exit_date": "2026-05-18",
@@ -5670,7 +5670,7 @@
               "signal_date": "2026-05-18",
               "entry_date": "2026-05-19",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 68.300003,
+              "entry_price": 68.3,
               "forward": {
                 "5": {
                   "exit_date": "2026-05-25",
@@ -5693,7 +5693,7 @@
               "signal_date": "2026-05-20",
               "entry_date": "2026-05-21",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 69.199997,
+              "entry_price": 69.2,
               "forward": {
                 "5": {
                   "exit_date": "2026-05-27",
@@ -5739,7 +5739,7 @@
               "signal_date": "2026-06-09",
               "entry_date": "2026-06-10",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 72.900002,
+              "entry_price": 72.9,
               "forward": {
                 "5": {
                   "exit_date": "2026-06-16",
@@ -5762,7 +5762,7 @@
               "signal_date": "2026-06-15",
               "entry_date": "2026-06-16",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 73.400002,
+              "entry_price": 73.4,
               "forward": {
                 "5": {
                   "exit_date": "2026-06-23",
@@ -5801,14 +5801,14 @@
                 "sample_size": 26,
                 "mean_return_pct": 4.385671,
                 "hac_standard_error_pct": 2.861942,
-                "p_value_two_sided": 0.12542111,
+                "p_value_two_sided": 0.12542106,
                 "confidence_interval_95_pct": [
-                  -1.223633,
-                  9.994975
+                  -1.223632,
+                  9.994974
                 ],
                 "hac_maxlags": 4,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.38323117,
+                "fdr_bh_q_value": 0.46276046,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -5828,14 +5828,14 @@
                 "sample_size": 26,
                 "mean_return_pct": 8.17866,
                 "hac_standard_error_pct": 5.257288,
-                "p_value_two_sided": 0.11978411,
+                "p_value_two_sided": 0.1197841,
                 "confidence_interval_95_pct": [
                   -2.125435,
-                  18.482756
+                  18.482755
                 ],
                 "hac_maxlags": 9,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.38323117,
+                "fdr_bh_q_value": 0.45774638,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -5853,16 +5853,16 @@
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 26,
-                "mean_return_pct": 17.334772,
+                "mean_return_pct": 17.334771,
                 "hac_standard_error_pct": 5.295034,
                 "p_value_two_sided": 0.0010612,
                 "confidence_interval_95_pct": [
                   6.956696,
-                  27.712848
+                  27.712847
                 ],
                 "hac_maxlags": 19,
                 "raw_evidence_class": "POSITIVE_MEAN_95CI_EXCLUDES_ZERO",
-                "fdr_bh_q_value": 0.0116732,
+                "fdr_bh_q_value": 0.01419355,
                 "fdr_bh_reject_5pct": true,
                 "evidence_class_after_fdr": "POSITIVE_FDR_5PCT",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -5989,7 +5989,7 @@
               "signal_date": "2026-04-14",
               "entry_date": "2026-04-15",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 59.360001,
+              "entry_price": 59.36,
               "forward": {
                 "5": {
                   "exit_date": "2026-04-21",
@@ -6012,7 +6012,7 @@
               "signal_date": "2026-04-22",
               "entry_date": "2026-04-23",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 66.980003,
+              "entry_price": 66.98,
               "forward": {
                 "5": {
                   "exit_date": "2026-04-29",
@@ -6081,7 +6081,7 @@
               "signal_date": "2026-06-02",
               "entry_date": "2026-06-03",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 79.949997,
+              "entry_price": 79.95,
               "forward": {
                 "5": {
                   "exit_date": "2026-06-09",
@@ -6107,11 +6107,11 @@
     {
       "code": "002600.SZ",
       "scope": "research_core",
-      "provider": "yfinance:a:002600.SZ",
+      "provider": "eastmoney:a:002600.SZ",
       "status": "ok",
       "observations": 520,
-      "first_date": "2024-07-02",
-      "last_date": "2026-08-20",
+      "first_date": "2024-07-03",
+      "last_date": "2026-08-21",
       "signals": {
         "ma20_reclaim": {
           "raw_signal_count": 22,
@@ -6129,16 +6129,16 @@
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 22,
-                "mean_return_pct": 0.309423,
+                "mean_return_pct": 0.309424,
                 "hac_standard_error_pct": 1.207506,
-                "p_value_two_sided": 0.79775786,
+                "p_value_two_sided": 0.79775725,
                 "confidence_interval_95_pct": [
                   -2.057245,
-                  2.676092
+                  2.676093
                 ],
                 "hac_maxlags": 4,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.88639762,
+                "fdr_bh_q_value": 0.88000027,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -6156,16 +6156,16 @@
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 22,
-                "mean_return_pct": 1.443845,
-                "hac_standard_error_pct": 0.684541,
-                "p_value_two_sided": 0.034926,
+                "mean_return_pct": 1.443847,
+                "hac_standard_error_pct": 0.684542,
+                "p_value_two_sided": 0.03492579,
                 "confidence_interval_95_pct": [
-                  0.102169,
-                  2.785521
+                  0.10217,
+                  2.785524
                 ],
                 "hac_maxlags": 9,
                 "raw_evidence_class": "POSITIVE_MEAN_95CI_EXCLUDES_ZERO",
-                "fdr_bh_q_value": 0.1600775,
+                "fdr_bh_q_value": 0.19668734,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -6183,16 +6183,16 @@
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 21,
-                "mean_return_pct": 1.527682,
-                "hac_standard_error_pct": 2.01671,
-                "p_value_two_sided": 0.44874329,
+                "mean_return_pct": 1.527683,
+                "hac_standard_error_pct": 2.016711,
+                "p_value_two_sided": 0.44874312,
                 "confidence_interval_95_pct": [
-                  -2.424998,
-                  5.480362
+                  -2.424997,
+                  5.480363
                 ],
                 "hac_maxlags": 19,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.72698691,
+                "fdr_bh_q_value": 0.74650731,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -6236,7 +6236,7 @@
                 },
                 "10": {
                   "exit_date": "2025-08-15",
-                  "return_pct": 10.2396,
+                  "return_pct": 10.2397,
                   "max_adverse_excursion_pct": -1.7429
                 },
                 "20": {
@@ -6560,7 +6560,7 @@
                 },
                 "10": {
                   "exit_date": "2025-08-15",
-                  "return_pct": 10.2396,
+                  "return_pct": 10.2397,
                   "max_adverse_excursion_pct": -1.7429
                 },
                 "20": {
@@ -6726,16 +6726,16 @@
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 35,
-                "mean_return_pct": 0.011342,
+                "mean_return_pct": 0.011343,
                 "hac_standard_error_pct": 1.049612,
-                "p_value_two_sided": 0.99137805,
+                "p_value_two_sided": 0.99137763,
                 "confidence_interval_95_pct": [
                   -2.045859,
-                  2.068544
+                  2.068545
                 ],
                 "hac_maxlags": 4,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.99471457,
+                "fdr_bh_q_value": 0.99471467,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -6755,14 +6755,14 @@
                 "sample_size": 35,
                 "mean_return_pct": 1.429475,
                 "hac_standard_error_pct": 3.081467,
-                "p_value_two_sided": 0.64272354,
+                "p_value_two_sided": 0.64272349,
                 "confidence_interval_95_pct": [
                   -4.610089,
                   7.469038
                 ],
                 "hac_maxlags": 9,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.83228411,
+                "fdr_bh_q_value": 0.8187073,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -6780,16 +6780,16 @@
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 35,
-                "mean_return_pct": 1.324236,
+                "mean_return_pct": 1.324237,
                 "hac_standard_error_pct": 4.164754,
-                "p_value_two_sided": 0.75051326,
+                "p_value_two_sided": 0.75051314,
                 "confidence_interval_95_pct": [
-                  -6.838532,
-                  9.487004
+                  -6.838531,
+                  9.487005
                 ],
                 "hac_maxlags": 19,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.87254137,
+                "fdr_bh_q_value": 0.86699737,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -6944,7 +6944,7 @@
                 "5": {
                   "exit_date": "2026-05-20",
                   "return_pct": 1.8193,
-                  "max_adverse_excursion_pct": -2.7603
+                  "max_adverse_excursion_pct": -2.7604
                 },
                 "10": {
                   "exit_date": "2026-05-27",
@@ -6962,7 +6962,7 @@
               "signal_date": "2026-06-18",
               "entry_date": "2026-06-22",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 16.879999,
+              "entry_price": 16.88,
               "forward": {
                 "5": {
                   "exit_date": "2026-06-26",
@@ -7045,16 +7045,16 @@
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 20,
-                "mean_return_pct": -0.086269,
-                "hac_standard_error_pct": 1.115562,
-                "p_value_two_sided": 0.93835935,
+                "mean_return_pct": -0.086267,
+                "hac_standard_error_pct": 1.115563,
+                "p_value_two_sided": 0.93836049,
                 "confidence_interval_95_pct": [
-                  -2.272731,
-                  2.100193
+                  -2.27273,
+                  2.100196
                 ],
                 "hac_maxlags": 4,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.95573638,
+                "fdr_bh_q_value": 0.95623402,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -7072,16 +7072,16 @@
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 20,
-                "mean_return_pct": -0.220499,
+                "mean_return_pct": -0.220498,
                 "hac_standard_error_pct": 1.932913,
-                "p_value_two_sided": 0.90917747,
+                "p_value_two_sided": 0.90917789,
                 "confidence_interval_95_pct": [
-                  -4.00894,
+                  -4.008938,
                   3.567942
                 ],
                 "hac_maxlags": 9,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.95247164,
+                "fdr_bh_q_value": 0.95374543,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -7099,16 +7099,16 @@
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 20,
-                "mean_return_pct": 0.600392,
+                "mean_return_pct": 0.600393,
                 "hac_standard_error_pct": 1.543705,
-                "p_value_two_sided": 0.69732878,
+                "p_value_two_sided": 0.69732807,
                 "confidence_interval_95_pct": [
-                  -2.425216,
-                  3.625999
+                  -2.425214,
+                  3.626
                 ],
                 "hac_maxlags": 19,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.8429249,
+                "fdr_bh_q_value": 0.82904559,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -7235,7 +7235,7 @@
               "signal_date": "2026-01-15",
               "entry_date": "2026-01-16",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 16.290001,
+              "entry_price": 16.29,
               "forward": {
                 "5": {
                   "exit_date": "2026-01-22",
@@ -7364,16 +7364,16 @@
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 29,
-                "mean_return_pct": -0.414811,
+                "mean_return_pct": -0.41481,
                 "hac_standard_error_pct": 0.916058,
-                "p_value_two_sided": 0.65067744,
+                "p_value_two_sided": 0.65067777,
                 "confidence_interval_95_pct": [
-                  -2.210252,
-                  1.38063
+                  -2.210251,
+                  1.380631
                 ],
                 "hac_maxlags": 4,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.83228411,
+                "fdr_bh_q_value": 0.81878568,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -7391,16 +7391,16 @@
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 29,
-                "mean_return_pct": -0.017421,
+                "mean_return_pct": -0.01742,
                 "hac_standard_error_pct": 2.629791,
-                "p_value_two_sided": 0.99471457,
+                "p_value_two_sided": 0.99471467,
                 "confidence_interval_95_pct": [
-                  -5.171717,
-                  5.136875
+                  -5.171716,
+                  5.136876
                 ],
                 "hac_maxlags": 9,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.99471457,
+                "fdr_bh_q_value": 0.99471467,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -7418,16 +7418,16 @@
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 29,
-                "mean_return_pct": 0.382897,
+                "mean_return_pct": 0.382898,
                 "hac_standard_error_pct": 4.168817,
-                "p_value_two_sided": 0.92681883,
+                "p_value_two_sided": 0.9268187,
                 "confidence_interval_95_pct": [
                   -7.787834,
-                  8.553628
+                  8.55363
                 ],
                 "hac_maxlags": 19,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.95573638,
+                "fdr_bh_q_value": 0.95623402,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -7582,7 +7582,7 @@
                 "5": {
                   "exit_date": "2026-05-20",
                   "return_pct": 1.8193,
-                  "max_adverse_excursion_pct": -2.7603
+                  "max_adverse_excursion_pct": -2.7604
                 },
                 "10": {
                   "exit_date": "2026-05-27",
@@ -7600,7 +7600,7 @@
               "signal_date": "2026-06-18",
               "entry_date": "2026-06-22",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 16.879999,
+              "entry_price": 16.88,
               "forward": {
                 "5": {
                   "exit_date": "2026-06-26",
@@ -7672,11 +7672,11 @@
     {
       "code": "601899.SH",
       "scope": "research_core",
-      "provider": "yfinance:a:601899.SH",
+      "provider": "akshare:a:601899.SH",
       "status": "ok",
       "observations": 520,
-      "first_date": "2024-07-02",
-      "last_date": "2026-08-20",
+      "first_date": "2024-07-03",
+      "last_date": "2026-08-21",
       "signals": {
         "ma20_reclaim": {
           "raw_signal_count": 31,
@@ -7694,16 +7694,16 @@
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 29,
-                "mean_return_pct": 0.116853,
+                "mean_return_pct": 0.116851,
                 "hac_standard_error_pct": 1.352914,
-                "p_value_two_sided": 0.93117145,
+                "p_value_two_sided": 0.9311721,
                 "confidence_interval_95_pct": [
-                  -2.53481,
-                  2.768515
+                  -2.534811,
+                  2.768514
                 ],
                 "hac_maxlags": 4,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.95573638,
+                "fdr_bh_q_value": 0.95623402,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -7712,25 +7712,25 @@
             "10": {
               "sample_size": 29,
               "win_rate_pct": 55.17,
-              "mean_return_pct": -0.3231,
+              "mean_return_pct": -0.3232,
               "median_return_pct": 0.3291,
-              "p25_return_pct": -5.3113,
+              "p25_return_pct": -5.3114,
               "p75_return_pct": 4.5307,
               "avg_max_adverse_excursion_pct": -6.0979,
               "worst_max_adverse_excursion_pct": -20.3226,
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 29,
-                "mean_return_pct": -0.323149,
+                "mean_return_pct": -0.32315,
                 "hac_standard_error_pct": 1.370733,
-                "p_value_two_sided": 0.81362748,
+                "p_value_two_sided": 0.81362706,
                 "confidence_interval_95_pct": [
                   -3.009736,
-                  2.363438
+                  2.363437
                 ],
                 "hac_maxlags": 9,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.88782771,
+                "fdr_bh_q_value": 0.88106098,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -7748,16 +7748,16 @@
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 29,
-                "mean_return_pct": 1.922253,
+                "mean_return_pct": 1.922252,
                 "hac_standard_error_pct": 1.537452,
-                "p_value_two_sided": 0.21119555,
+                "p_value_two_sided": 0.21119569,
                 "confidence_interval_95_pct": [
                   -1.091098,
-                  4.935604
+                  4.935603
                 ],
                 "hac_maxlags": 19,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.54026769,
+                "fdr_bh_q_value": 0.6107551,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -7792,7 +7792,7 @@
               "signal_date": "2026-02-10",
               "entry_date": "2026-02-11",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 38.599998,
+              "entry_price": 38.6,
               "forward": {
                 "5": {
                   "exit_date": "2026-02-25",
@@ -7815,7 +7815,7 @@
               "signal_date": "2026-02-24",
               "entry_date": "2026-02-25",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 39.400002,
+              "entry_price": 39.4,
               "forward": {
                 "5": {
                   "exit_date": "2026-03-03",
@@ -7838,7 +7838,7 @@
               "signal_date": "2026-04-08",
               "entry_date": "2026-04-09",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 33.990002,
+              "entry_price": 33.99,
               "forward": {
                 "5": {
                   "exit_date": "2026-04-15",
@@ -7884,7 +7884,7 @@
               "signal_date": "2026-05-12",
               "entry_date": "2026-05-13",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 35.099998,
+              "entry_price": 35.1,
               "forward": {
                 "5": {
                   "exit_date": "2026-05-19",
@@ -7930,7 +7930,7 @@
               "signal_date": "2026-06-22",
               "entry_date": "2026-06-23",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 29.950001,
+              "entry_price": 29.95,
               "forward": {
                 "5": {
                   "exit_date": "2026-06-29",
@@ -7953,7 +7953,7 @@
               "signal_date": "2026-07-06",
               "entry_date": "2026-07-07",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 27.799999,
+              "entry_price": 27.8,
               "forward": {
                 "5": {
                   "exit_date": "2026-07-13",
@@ -7976,7 +7976,7 @@
               "signal_date": "2026-07-14",
               "entry_date": "2026-07-15",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 29.059999,
+              "entry_price": 29.06,
               "forward": {
                 "5": {
                   "exit_date": "2026-07-21",
@@ -8013,16 +8013,16 @@
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 20,
-                "mean_return_pct": 2.057345,
-                "hac_standard_error_pct": 0.702527,
-                "p_value_two_sided": 0.00340608,
+                "mean_return_pct": 2.057344,
+                "hac_standard_error_pct": 0.702526,
+                "p_value_two_sided": 0.00340609,
                 "confidence_interval_95_pct": [
-                  0.680419,
-                  3.434272
+                  0.680417,
+                  3.43427
                 ],
                 "hac_maxlags": 4,
                 "raw_evidence_class": "POSITIVE_MEAN_95CI_EXCLUDES_ZERO",
-                "fdr_bh_q_value": 0.02485154,
+                "fdr_bh_q_value": 0.03209866,
                 "fdr_bh_reject_5pct": true,
                 "evidence_class_after_fdr": "POSITIVE_FDR_5PCT",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -8034,7 +8034,7 @@
               "mean_return_pct": 0.3331,
               "median_return_pct": 0.2213,
               "p25_return_pct": -1.9236,
-              "p75_return_pct": 4.1603,
+              "p75_return_pct": 4.1602,
               "avg_max_adverse_excursion_pct": -4.219,
               "worst_max_adverse_excursion_pct": -12.068,
               "statistical_evidence": {
@@ -8042,14 +8042,14 @@
                 "sample_size": 20,
                 "mean_return_pct": 0.333112,
                 "hac_standard_error_pct": 0.906341,
-                "p_value_two_sided": 0.71321984,
+                "p_value_two_sided": 0.71321962,
                 "confidence_interval_95_pct": [
-                  -1.443284,
-                  2.109508
+                  -1.443283,
+                  2.109507
                 ],
                 "hac_maxlags": 9,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.84359336,
+                "fdr_bh_q_value": 0.83862087,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -8076,7 +8076,7 @@
               "signal_date": "2025-07-18",
               "entry_date": "2025-07-21",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 19.559999,
+              "entry_price": 19.56,
               "forward": {
                 "5": {
                   "exit_date": "2025-07-25",
@@ -8127,17 +8127,17 @@
                 "5": {
                   "exit_date": "2025-08-11",
                   "return_pct": 1.3007,
-                  "max_adverse_excursion_pct": -1.1005
+                  "max_adverse_excursion_pct": -1.1006
                 },
                 "10": {
                   "exit_date": "2025-08-18",
                   "return_pct": 4.052,
-                  "max_adverse_excursion_pct": -1.1005
+                  "max_adverse_excursion_pct": -1.1006
                 },
                 "20": {
                   "exit_date": "2025-09-01",
                   "return_pct": 21.961,
-                  "max_adverse_excursion_pct": -1.1005
+                  "max_adverse_excursion_pct": -1.1006
                 }
               }
             },
@@ -8145,7 +8145,7 @@
               "signal_date": "2025-11-07",
               "entry_date": "2025-11-10",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 30.799999,
+              "entry_price": 30.8,
               "forward": {
                 "5": {
                   "exit_date": "2025-11-14",
@@ -8237,7 +8237,7 @@
               "signal_date": "2026-02-10",
               "entry_date": "2026-02-11",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 38.599998,
+              "entry_price": 38.6,
               "forward": {
                 "5": {
                   "exit_date": "2026-02-25",
@@ -8260,7 +8260,7 @@
               "signal_date": "2026-02-24",
               "entry_date": "2026-02-25",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 39.400002,
+              "entry_price": 39.4,
               "forward": {
                 "5": {
                   "exit_date": "2026-03-03",
@@ -8283,7 +8283,7 @@
               "signal_date": "2026-07-31",
               "entry_date": "2026-08-03",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 32.700001,
+              "entry_price": 32.7,
               "forward": {
                 "5": {
                   "exit_date": "2026-08-07",
@@ -8316,15 +8316,15 @@
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 32,
                 "mean_return_pct": 0.266619,
-                "hac_standard_error_pct": 0.925597,
-                "p_value_two_sided": 0.77330764,
+                "hac_standard_error_pct": 0.925598,
+                "p_value_two_sided": 0.77330803,
                 "confidence_interval_95_pct": [
-                  -1.547518,
-                  2.080756
+                  -1.547519,
+                  2.080757
                 ],
                 "hac_maxlags": 4,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.88608167,
+                "fdr_bh_q_value": 0.88000027,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -8344,14 +8344,14 @@
                 "sample_size": 32,
                 "mean_return_pct": 1.226667,
                 "hac_standard_error_pct": 1.943553,
-                "p_value_two_sided": 0.52794479,
+                "p_value_two_sided": 0.52794476,
                 "confidence_interval_95_pct": [
                   -2.582627,
-                  5.035961
+                  5.03596
                 ],
                 "hac_maxlags": 9,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.7847828,
+                "fdr_bh_q_value": 0.76826161,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -8370,15 +8370,15 @@
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 31,
                 "mean_return_pct": 5.637928,
-                "hac_standard_error_pct": 3.190391,
-                "p_value_two_sided": 0.07720157,
+                "hac_standard_error_pct": 3.19039,
+                "p_value_two_sided": 0.07720156,
                 "confidence_interval_95_pct": [
                   -0.615122,
-                  11.890979
+                  11.890978
                 ],
                 "hac_maxlags": 19,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.31022271,
+                "fdr_bh_q_value": 0.38190026,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -8413,7 +8413,7 @@
               "signal_date": "2025-12-22",
               "entry_date": "2025-12-23",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 33.060001,
+              "entry_price": 33.06,
               "forward": {
                 "5": {
                   "exit_date": "2025-12-29",
@@ -8423,12 +8423,12 @@
                 "10": {
                   "exit_date": "2026-01-07",
                   "return_pct": 11.0708,
-                  "max_adverse_excursion_pct": -4.628
+                  "max_adverse_excursion_pct": -4.6279
                 },
                 "20": {
                   "exit_date": "2026-01-21",
                   "return_pct": 15.3358,
-                  "max_adverse_excursion_pct": -4.628
+                  "max_adverse_excursion_pct": -4.6279
                 }
               }
             },
@@ -8459,7 +8459,7 @@
               "signal_date": "2025-12-31",
               "entry_date": "2026-01-05",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 35.299999,
+              "entry_price": 35.3,
               "forward": {
                 "5": {
                   "exit_date": "2026-01-09",
@@ -8482,7 +8482,7 @@
               "signal_date": "2026-01-13",
               "entry_date": "2026-01-14",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 38.610001,
+              "entry_price": 38.61,
               "forward": {
                 "5": {
                   "exit_date": "2026-01-20",
@@ -8551,11 +8551,11 @@
               "signal_date": "2026-04-21",
               "entry_date": "2026-04-22",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 35.669998,
+              "entry_price": 35.67,
               "forward": {
                 "5": {
                   "exit_date": "2026-04-28",
-                  "return_pct": -7.6254,
+                  "return_pct": -7.6255,
                   "max_adverse_excursion_pct": -7.8217
                 },
                 "10": {
@@ -8574,7 +8574,7 @@
               "signal_date": "2026-07-21",
               "entry_date": "2026-07-22",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 30.809999,
+              "entry_price": 30.81,
               "forward": {
                 "5": {
                   "exit_date": "2026-07-28",
@@ -8597,7 +8597,7 @@
               "signal_date": "2026-08-05",
               "entry_date": "2026-08-06",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 35.380001,
+              "entry_price": 35.38,
               "forward": {
                 "5": {
                   "exit_date": "2026-08-12",
@@ -8636,7 +8636,7 @@
               "sample_size": 17,
               "win_rate_pct": 88.24,
               "mean_return_pct": 7.7453,
-              "median_return_pct": 4.4851,
+              "median_return_pct": 4.485,
               "p25_return_pct": 2.2857,
               "p75_return_pct": 14.2473,
               "avg_max_adverse_excursion_pct": -2.6471,
@@ -8668,7 +8668,7 @@
               "signal_date": "2025-06-03",
               "entry_date": "2025-06-04",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 18.059999,
+              "entry_price": 18.06,
               "forward": {
                 "5": {
                   "exit_date": "2025-06-10",
@@ -8677,7 +8677,7 @@
                 },
                 "10": {
                   "exit_date": "2025-06-17",
-                  "return_pct": 4.4851,
+                  "return_pct": 4.485,
                   "max_adverse_excursion_pct": -2.381
                 },
                 "20": {
@@ -8691,7 +8691,7 @@
               "signal_date": "2025-06-06",
               "entry_date": "2025-06-09",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 17.969999,
+              "entry_price": 17.97,
               "forward": {
                 "5": {
                   "exit_date": "2025-06-13",
@@ -8714,7 +8714,7 @@
               "signal_date": "2025-06-20",
               "entry_date": "2025-06-23",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 18.450001,
+              "entry_price": 18.45,
               "forward": {
                 "5": {
                   "exit_date": "2025-06-27",
@@ -8728,7 +8728,7 @@
                 },
                 "20": {
                   "exit_date": "2025-07-18",
-                  "return_pct": 5.5284,
+                  "return_pct": 5.5285,
                   "max_adverse_excursion_pct": -0.9214
                 }
               }
@@ -8760,7 +8760,7 @@
               "signal_date": "2025-08-22",
               "entry_date": "2025-08-25",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 21.049999,
+              "entry_price": 21.05,
               "forward": {
                 "5": {
                   "exit_date": "2025-08-29",
@@ -8806,7 +8806,7 @@
               "signal_date": "2025-12-16",
               "entry_date": "2025-12-17",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 30.549999,
+              "entry_price": 30.55,
               "forward": {
                 "5": {
                   "exit_date": "2025-12-23",
@@ -8829,7 +8829,7 @@
               "signal_date": "2025-12-19",
               "entry_date": "2025-12-22",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 31.690001,
+              "entry_price": 31.69,
               "forward": {
                 "5": {
                   "exit_date": "2025-12-26",
@@ -8951,7 +8951,7 @@
               "signal_date": "2025-08-13",
               "entry_date": "2025-08-14",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 21.030001,
+              "entry_price": 21.03,
               "forward": {
                 "5": {
                   "exit_date": "2025-08-20",
@@ -8974,7 +8974,7 @@
               "signal_date": "2025-08-25",
               "entry_date": "2025-08-26",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 22.190001,
+              "entry_price": 22.19,
               "forward": {
                 "5": {
                   "exit_date": "2025-09-01",
@@ -9020,7 +9020,7 @@
               "signal_date": "2025-09-05",
               "entry_date": "2025-09-08",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 25.700001,
+              "entry_price": 25.7,
               "forward": {
                 "5": {
                   "exit_date": "2025-09-12",
@@ -9043,7 +9043,7 @@
               "signal_date": "2025-12-22",
               "entry_date": "2025-12-23",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 33.060001,
+              "entry_price": 33.06,
               "forward": {
                 "5": {
                   "exit_date": "2025-12-29",
@@ -9053,12 +9053,12 @@
                 "10": {
                   "exit_date": "2026-01-07",
                   "return_pct": 11.0708,
-                  "max_adverse_excursion_pct": -4.628
+                  "max_adverse_excursion_pct": -4.6279
                 },
                 "20": {
                   "exit_date": "2026-01-21",
                   "return_pct": 15.3358,
-                  "max_adverse_excursion_pct": -4.628
+                  "max_adverse_excursion_pct": -4.6279
                 }
               }
             },
@@ -9089,7 +9089,7 @@
               "signal_date": "2025-12-31",
               "entry_date": "2026-01-05",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 35.299999,
+              "entry_price": 35.3,
               "forward": {
                 "5": {
                   "exit_date": "2026-01-09",
@@ -9112,7 +9112,7 @@
               "signal_date": "2026-01-13",
               "entry_date": "2026-01-14",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 38.610001,
+              "entry_price": 38.61,
               "forward": {
                 "5": {
                   "exit_date": "2026-01-20",
@@ -9158,7 +9158,7 @@
               "signal_date": "2026-08-05",
               "entry_date": "2026-08-06",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 35.380001,
+              "entry_price": 35.38,
               "forward": {
                 "5": {
                   "exit_date": "2026-08-12",
@@ -9179,11 +9179,11 @@
     {
       "code": "300059.SZ",
       "scope": "research_core",
-      "provider": "yfinance+tencent:a:300059.SZ",
+      "provider": "akshare:a:300059.SZ",
       "status": "ok",
       "observations": 520,
-      "first_date": "2024-07-02",
-      "last_date": "2026-08-20",
+      "first_date": "2024-07-03",
+      "last_date": "2026-08-21",
       "signals": {
         "ma20_reclaim": {
           "raw_signal_count": 29,
@@ -9192,9 +9192,9 @@
             "5": {
               "sample_size": 29,
               "win_rate_pct": 44.83,
-              "mean_return_pct": 0.6829,
+              "mean_return_pct": 0.6828,
               "median_return_pct": -0.1981,
-              "p25_return_pct": -2.7105,
+              "p25_return_pct": -2.7106,
               "p75_return_pct": 1.8613,
               "avg_max_adverse_excursion_pct": -3.3213,
               "worst_max_adverse_excursion_pct": -17.0678,
@@ -9203,14 +9203,14 @@
                 "sample_size": 29,
                 "mean_return_pct": 0.682845,
                 "hac_standard_error_pct": 1.136665,
-                "p_value_two_sided": 0.54801041,
+                "p_value_two_sided": 0.54801058,
                 "confidence_interval_95_pct": [
                   -1.544978,
-                  2.910668
+                  2.910667
                 ],
                 "hac_maxlags": 4,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.79317296,
+                "fdr_bh_q_value": 0.78182843,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -9237,7 +9237,7 @@
                 ],
                 "hac_maxlags": 9,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.31022271,
+                "fdr_bh_q_value": 0.38190026,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -9248,23 +9248,23 @@
               "win_rate_pct": 42.86,
               "mean_return_pct": 10.3004,
               "median_return_pct": -1.0767,
-              "p25_return_pct": -5.1106,
+              "p25_return_pct": -5.1105,
               "p75_return_pct": 6.653,
               "avg_max_adverse_excursion_pct": -6.4002,
               "worst_max_adverse_excursion_pct": -24.845,
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 28,
-                "mean_return_pct": 10.300377,
+                "mean_return_pct": 10.300375,
                 "hac_standard_error_pct": 8.078218,
-                "p_value_two_sided": 0.20228083,
+                "p_value_two_sided": 0.20228086,
                 "confidence_interval_95_pct": [
-                  -5.53264,
-                  26.133394
+                  -5.532641,
+                  26.133391
                 ],
                 "hac_maxlags": 19,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.54026769,
+                "fdr_bh_q_value": 0.6107551,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -9299,7 +9299,7 @@
               "signal_date": "2025-08-11",
               "entry_date": "2025-08-12",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 23.780001,
+              "entry_price": 23.78,
               "forward": {
                 "5": {
                   "exit_date": "2025-08-18",
@@ -9322,7 +9322,7 @@
               "signal_date": "2025-09-16",
               "entry_date": "2025-09-17",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 27.610001,
+              "entry_price": 27.61,
               "forward": {
                 "5": {
                   "exit_date": "2025-09-23",
@@ -9345,7 +9345,7 @@
               "signal_date": "2025-09-29",
               "entry_date": "2025-09-30",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 27.309999,
+              "entry_price": 27.31,
               "forward": {
                 "5": {
                   "exit_date": "2025-10-14",
@@ -9391,7 +9391,7 @@
               "signal_date": "2025-12-22",
               "entry_date": "2025-12-23",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 23.059999,
+              "entry_price": 23.06,
               "forward": {
                 "5": {
                   "exit_date": "2025-12-29",
@@ -9414,12 +9414,12 @@
               "signal_date": "2026-04-13",
               "entry_date": "2026-04-14",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 20.190001,
+              "entry_price": 20.19,
               "forward": {
                 "5": {
                   "exit_date": "2026-04-20",
                   "return_pct": -0.1981,
-                  "max_adverse_excursion_pct": -1.9317
+                  "max_adverse_excursion_pct": -1.9316
                 },
                 "10": {
                   "exit_date": "2026-04-27",
@@ -9437,7 +9437,7 @@
               "signal_date": "2026-06-16",
               "entry_date": "2026-06-17",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 19.040001,
+              "entry_price": 19.04,
               "forward": {
                 "5": {
                   "exit_date": "2026-06-24",
@@ -9464,7 +9464,7 @@
               "forward": {
                 "5": {
                   "exit_date": "2026-06-29",
-                  "return_pct": -2.7105,
+                  "return_pct": -2.7106,
                   "max_adverse_excursion_pct": -3.5334
                 },
                 "10": {
@@ -9506,11 +9506,11 @@
             "5": {
               "sample_size": 11,
               "win_rate_pct": 54.55,
-              "mean_return_pct": 8.7656,
+              "mean_return_pct": 2.9591,
               "median_return_pct": 0.3488,
               "p25_return_pct": -4.4203,
               "p75_return_pct": 2.8709,
-              "avg_max_adverse_excursion_pct": -4.1108,
+              "avg_max_adverse_excursion_pct": -4.245,
               "worst_max_adverse_excursion_pct": -17.0678,
               "statistical_evidence": {
                 "status": "INSUFFICIENT_EVIDENCE",
@@ -9521,11 +9521,11 @@
             "10": {
               "sample_size": 11,
               "win_rate_pct": 36.36,
-              "mean_return_pct": 6.0206,
+              "mean_return_pct": 3.1653,
               "median_return_pct": -1.7747,
               "p25_return_pct": -4.1535,
               "p75_return_pct": 7.0648,
-              "avg_max_adverse_excursion_pct": -5.4068,
+              "avg_max_adverse_excursion_pct": -5.5411,
               "worst_max_adverse_excursion_pct": -20.5479,
               "statistical_evidence": {
                 "status": "INSUFFICIENT_EVIDENCE",
@@ -9536,11 +9536,11 @@
             "20": {
               "sample_size": 10,
               "win_rate_pct": 50.0,
-              "mean_return_pct": 5.8491,
+              "mean_return_pct": 3.9666,
               "median_return_pct": -0.0625,
               "p25_return_pct": -8.6405,
               "p75_return_pct": 8.6876,
-              "avg_max_adverse_excursion_pct": -7.2738,
+              "avg_max_adverse_excursion_pct": -7.4214,
               "worst_max_adverse_excursion_pct": -20.5479,
               "statistical_evidence": {
                 "status": "INSUFFICIENT_EVIDENCE",
@@ -9554,7 +9554,7 @@
               "signal_date": "2024-11-29",
               "entry_date": "2024-12-02",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 26.799999,
+              "entry_price": 26.8,
               "forward": {
                 "5": {
                   "exit_date": "2024-12-06",
@@ -9669,7 +9669,7 @@
               "signal_date": "2025-08-11",
               "entry_date": "2025-08-12",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 23.780001,
+              "entry_price": 23.78,
               "forward": {
                 "5": {
                   "exit_date": "2025-08-18",
@@ -9692,7 +9692,7 @@
               "signal_date": "2025-09-16",
               "entry_date": "2025-09-17",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 27.610001,
+              "entry_price": 27.61,
               "forward": {
                 "5": {
                   "exit_date": "2025-09-23",
@@ -9715,7 +9715,7 @@
               "signal_date": "2025-09-29",
               "entry_date": "2025-09-30",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 27.309999,
+              "entry_price": 27.31,
               "forward": {
                 "5": {
                   "exit_date": "2025-10-14",
@@ -9743,17 +9743,17 @@
                 "5": {
                   "exit_date": "2026-07-15",
                   "return_pct": 0.3488,
-                  "max_adverse_excursion_pct": -4.3846
+                  "max_adverse_excursion_pct": -4.3847
                 },
                 "10": {
                   "exit_date": "2026-07-22",
                   "return_pct": 0.0498,
-                  "max_adverse_excursion_pct": -4.3846
+                  "max_adverse_excursion_pct": -4.3847
                 },
                 "20": {
                   "exit_date": "2026-08-05",
                   "return_pct": 1.4449,
-                  "max_adverse_excursion_pct": -4.3846
+                  "max_adverse_excursion_pct": -4.3847
                 }
               }
             },
@@ -9795,14 +9795,14 @@
                 "sample_size": 24,
                 "mean_return_pct": 3.027128,
                 "hac_standard_error_pct": 3.606754,
-                "p_value_two_sided": 0.40130416,
+                "p_value_two_sided": 0.4013042,
                 "confidence_interval_95_pct": [
                   -4.04198,
-                  10.096237
+                  10.096235
                 ],
                 "hac_maxlags": 4,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.69158525,
+                "fdr_bh_q_value": 0.72878394,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -9820,16 +9820,16 @@
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 24,
-                "mean_return_pct": 1.354606,
+                "mean_return_pct": 1.354605,
                 "hac_standard_error_pct": 1.790862,
-                "p_value_two_sided": 0.44941009,
+                "p_value_two_sided": 0.44941021,
                 "confidence_interval_95_pct": [
                   -2.155419,
                   4.86463
                 ],
                 "hac_maxlags": 9,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.72698691,
+                "fdr_bh_q_value": 0.74650731,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -9847,16 +9847,16 @@
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 24,
-                "mean_return_pct": 5.733153,
+                "mean_return_pct": 5.733152,
                 "hac_standard_error_pct": 6.759771,
-                "p_value_two_sided": 0.39636656,
+                "p_value_two_sided": 0.39636663,
                 "confidence_interval_95_pct": [
                   -7.515755,
-                  18.982061
+                  18.982058
                 ],
                 "hac_maxlags": 19,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.69158525,
+                "fdr_bh_q_value": 0.72878394,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -9891,7 +9891,7 @@
               "signal_date": "2025-08-25",
               "entry_date": "2025-08-26",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 27.969999,
+              "entry_price": 27.97,
               "forward": {
                 "5": {
                   "exit_date": "2025-09-01",
@@ -9900,7 +9900,7 @@
                 },
                 "10": {
                   "exit_date": "2025-09-08",
-                  "return_pct": -5.5416,
+                  "return_pct": -5.5417,
                   "max_adverse_excursion_pct": -7.4008
                 },
                 "20": {
@@ -9914,7 +9914,7 @@
               "signal_date": "2025-08-29",
               "entry_date": "2025-09-01",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 28.790001,
+              "entry_price": 28.79,
               "forward": {
                 "5": {
                   "exit_date": "2025-09-05",
@@ -10006,7 +10006,7 @@
               "signal_date": "2026-05-11",
               "entry_date": "2026-05-12",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 21.139999,
+              "entry_price": 21.14,
               "forward": {
                 "5": {
                   "exit_date": "2026-05-18",
@@ -10033,7 +10033,7 @@
               "forward": {
                 "5": {
                   "exit_date": "2026-06-29",
-                  "return_pct": -2.7105,
+                  "return_pct": -2.7106,
                   "max_adverse_excursion_pct": -3.5334
                 },
                 "10": {
@@ -10075,7 +10075,7 @@
               "signal_date": "2026-07-01",
               "entry_date": "2026-07-02",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 21.280001,
+              "entry_price": 21.28,
               "forward": {
                 "5": {
                   "exit_date": "2026-07-08",
@@ -10174,7 +10174,7 @@
               "signal_date": "2025-06-18",
               "entry_date": "2025-06-19",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 21.450001,
+              "entry_price": 21.45,
               "forward": {
                 "5": {
                   "exit_date": "2025-06-25",
@@ -10197,7 +10197,7 @@
               "signal_date": "2025-06-24",
               "entry_date": "2025-06-25",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 21.889999,
+              "entry_price": 21.89,
               "forward": {
                 "5": {
                   "exit_date": "2025-07-01",
@@ -10220,7 +10220,7 @@
               "signal_date": "2025-07-29",
               "entry_date": "2025-07-30",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 24.110001,
+              "entry_price": 24.11,
               "forward": {
                 "5": {
                   "exit_date": "2025-08-05",
@@ -10266,7 +10266,7 @@
               "signal_date": "2025-09-03",
               "entry_date": "2025-09-04",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 26.549999,
+              "entry_price": 26.55,
               "forward": {
                 "5": {
                   "exit_date": "2025-09-10",
@@ -10294,17 +10294,17 @@
                 "5": {
                   "exit_date": "2026-07-15",
                   "return_pct": 0.3488,
-                  "max_adverse_excursion_pct": -4.3846
+                  "max_adverse_excursion_pct": -4.3847
                 },
                 "10": {
                   "exit_date": "2026-07-22",
                   "return_pct": 0.0498,
-                  "max_adverse_excursion_pct": -4.3846
+                  "max_adverse_excursion_pct": -4.3847
                 },
                 "20": {
                   "exit_date": "2026-08-05",
                   "return_pct": 1.4449,
-                  "max_adverse_excursion_pct": -4.3846
+                  "max_adverse_excursion_pct": -4.3847
                 }
               }
             }
@@ -10326,16 +10326,16 @@
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 20,
-                "mean_return_pct": 3.625703,
-                "hac_standard_error_pct": 4.238072,
-                "p_value_two_sided": 0.3922702,
+                "mean_return_pct": 3.625702,
+                "hac_standard_error_pct": 4.238071,
+                "p_value_two_sided": 0.39227019,
                 "confidence_interval_95_pct": [
-                  -4.680766,
-                  11.932172
+                  -4.680765,
+                  11.93217
                 ],
                 "hac_maxlags": 4,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.69158525,
+                "fdr_bh_q_value": 0.72878394,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -10353,16 +10353,16 @@
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 20,
-                "mean_return_pct": 1.112696,
+                "mean_return_pct": 1.112695,
                 "hac_standard_error_pct": 2.148245,
-                "p_value_two_sided": 0.60448926,
+                "p_value_two_sided": 0.60448937,
                 "confidence_interval_95_pct": [
-                  -3.097787,
-                  5.323179
+                  -3.097788,
+                  5.323178
                 ],
                 "hac_maxlags": 9,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.83117273,
+                "fdr_bh_q_value": 0.80850453,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -10380,16 +10380,16 @@
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 20,
-                "mean_return_pct": 6.965137,
-                "hac_standard_error_pct": 7.229011,
-                "p_value_two_sided": 0.33529771,
+                "mean_return_pct": 6.965135,
+                "hac_standard_error_pct": 7.22901,
+                "p_value_two_sided": 0.33529776,
                 "confidence_interval_95_pct": [
                   -7.203464,
-                  21.133737
+                  21.133735
                 ],
                 "hac_maxlags": 19,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.67059542,
+                "fdr_bh_q_value": 0.71753721,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -10401,7 +10401,7 @@
               "signal_date": "2025-07-24",
               "entry_date": "2025-07-25",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 24.549999,
+              "entry_price": 24.55,
               "forward": {
                 "5": {
                   "exit_date": "2025-07-31",
@@ -10410,7 +10410,7 @@
                 },
                 "10": {
                   "exit_date": "2025-08-07",
-                  "return_pct": -4.114,
+                  "return_pct": -4.1141,
                   "max_adverse_excursion_pct": -6.3136
                 },
                 "20": {
@@ -10470,7 +10470,7 @@
               "signal_date": "2025-08-25",
               "entry_date": "2025-08-26",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 27.969999,
+              "entry_price": 27.97,
               "forward": {
                 "5": {
                   "exit_date": "2025-09-01",
@@ -10479,7 +10479,7 @@
                 },
                 "10": {
                   "exit_date": "2025-09-08",
-                  "return_pct": -5.5416,
+                  "return_pct": -5.5417,
                   "max_adverse_excursion_pct": -7.4008
                 },
                 "20": {
@@ -10493,7 +10493,7 @@
               "signal_date": "2025-08-29",
               "entry_date": "2025-09-01",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 28.790001,
+              "entry_price": 28.79,
               "forward": {
                 "5": {
                   "exit_date": "2025-09-05",
@@ -10539,7 +10539,7 @@
               "signal_date": "2026-05-11",
               "entry_date": "2026-05-12",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 21.139999,
+              "entry_price": 21.14,
               "forward": {
                 "5": {
                   "exit_date": "2026-05-18",
@@ -10566,7 +10566,7 @@
               "forward": {
                 "5": {
                   "exit_date": "2026-06-29",
-                  "return_pct": -2.7105,
+                  "return_pct": -2.7106,
                   "max_adverse_excursion_pct": -3.5334
                 },
                 "10": {
@@ -10608,7 +10608,7 @@
               "signal_date": "2026-07-01",
               "entry_date": "2026-07-02",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 21.280001,
+              "entry_price": 21.28,
               "forward": {
                 "5": {
                   "exit_date": "2026-07-08",
@@ -10634,11 +10634,11 @@
     {
       "code": "002371.SZ",
       "scope": "candidate_seed",
-      "provider": "yfinance:a:002371.SZ",
+      "provider": "akshare:a:002371.SZ",
       "status": "ok",
       "observations": 520,
-      "first_date": "2024-07-02",
-      "last_date": "2026-08-20",
+      "first_date": "2024-07-03",
+      "last_date": "2026-08-21",
       "signals": {
         "ma20_reclaim": {
           "raw_signal_count": 31,
@@ -10646,26 +10646,26 @@
           "horizon_stats": {
             "5": {
               "sample_size": 31,
-              "win_rate_pct": 54.84,
-              "mean_return_pct": 1.4673,
-              "median_return_pct": 1.737,
-              "p25_return_pct": -2.9396,
-              "p75_return_pct": 5.5773,
-              "avg_max_adverse_excursion_pct": -3.9082,
+              "win_rate_pct": 51.61,
+              "mean_return_pct": 1.1652,
+              "median_return_pct": 0.561,
+              "p25_return_pct": -3.9603,
+              "p75_return_pct": 5.4855,
+              "avg_max_adverse_excursion_pct": -4.0514,
               "worst_max_adverse_excursion_pct": -9.174,
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 31,
-                "mean_return_pct": 1.46733,
-                "hac_standard_error_pct": 0.956212,
-                "p_value_two_sided": 0.12490092,
+                "mean_return_pct": 1.165241,
+                "hac_standard_error_pct": 0.980257,
+                "p_value_two_sided": 0.23455423,
                 "confidence_interval_95_pct": [
-                  -0.406811,
-                  3.341471
+                  -0.756028,
+                  3.086509
                 ],
                 "hac_maxlags": 4,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.38323117,
+                "fdr_bh_q_value": 0.62743257,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -10673,55 +10673,55 @@
             },
             "10": {
               "sample_size": 31,
-              "win_rate_pct": 64.52,
-              "mean_return_pct": 4.9985,
-              "median_return_pct": 3.6768,
-              "p25_return_pct": -1.7819,
+              "win_rate_pct": 58.06,
+              "mean_return_pct": 3.9722,
+              "median_return_pct": 3.5922,
+              "p25_return_pct": -5.2836,
               "p75_return_pct": 11.5886,
-              "avg_max_adverse_excursion_pct": -4.7606,
-              "worst_max_adverse_excursion_pct": -10.8441,
+              "avg_max_adverse_excursion_pct": -5.6272,
+              "worst_max_adverse_excursion_pct": -23.8641,
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 31,
-                "mean_return_pct": 4.998469,
-                "hac_standard_error_pct": 1.572081,
-                "p_value_two_sided": 0.00147518,
+                "mean_return_pct": 3.972215,
+                "hac_standard_error_pct": 1.835796,
+                "p_value_two_sided": 0.03048303,
                 "confidence_interval_95_pct": [
-                  1.917246,
-                  8.079692
+                  0.374122,
+                  7.570309
                 ],
                 "hac_maxlags": 9,
                 "raw_evidence_class": "POSITIVE_MEAN_95CI_EXCLUDES_ZERO",
-                "fdr_bh_q_value": 0.01352248,
-                "fdr_bh_reject_5pct": true,
-                "evidence_class_after_fdr": "POSITIVE_FDR_5PCT",
+                "fdr_bh_q_value": 0.19186378,
+                "fdr_bh_reject_5pct": false,
+                "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
               }
             },
             "20": {
               "sample_size": 30,
-              "win_rate_pct": 80.0,
-              "mean_return_pct": 9.5264,
-              "median_return_pct": 8.9422,
-              "p25_return_pct": 2.1471,
-              "p75_return_pct": 12.668,
-              "avg_max_adverse_excursion_pct": -5.3405,
-              "worst_max_adverse_excursion_pct": -13.0844,
+              "win_rate_pct": 73.33,
+              "mean_return_pct": 7.9115,
+              "median_return_pct": 9.0797,
+              "p25_return_pct": -1.6123,
+              "p75_return_pct": 12.6679,
+              "avg_max_adverse_excursion_pct": -6.9108,
+              "worst_max_adverse_excursion_pct": -25.3827,
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 30,
-                "mean_return_pct": 9.526441,
-                "hac_standard_error_pct": 2.739765,
-                "p_value_two_sided": 0.00050687,
+                "mean_return_pct": 7.911556,
+                "hac_standard_error_pct": 3.484793,
+                "p_value_two_sided": 0.02318885,
                 "confidence_interval_95_pct": [
-                  4.156601,
-                  14.896282
+                  1.081488,
+                  14.741624
                 ],
                 "hac_maxlags": 19,
                 "raw_evidence_class": "POSITIVE_MEAN_95CI_EXCLUDES_ZERO",
-                "fdr_bh_q_value": 0.00696946,
-                "fdr_bh_reject_5pct": true,
-                "evidence_class_after_fdr": "POSITIVE_FDR_5PCT",
+                "fdr_bh_q_value": 0.15507543,
+                "fdr_bh_reject_5pct": false,
+                "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
               }
             }
@@ -10731,7 +10731,7 @@
               "signal_date": "2025-12-30",
               "entry_date": "2025-12-31",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 470.149994,
+              "entry_price": 470.15,
               "forward": {
                 "5": {
                   "exit_date": "2026-01-08",
@@ -10754,7 +10754,7 @@
               "signal_date": "2026-02-24",
               "entry_date": "2026-02-25",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 488.470001,
+              "entry_price": 488.47,
               "forward": {
                 "5": {
                   "exit_date": "2026-03-03",
@@ -10800,7 +10800,7 @@
               "signal_date": "2026-03-25",
               "entry_date": "2026-03-26",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 459.559998,
+              "entry_price": 459.56,
               "forward": {
                 "5": {
                   "exit_date": "2026-04-01",
@@ -10823,7 +10823,7 @@
               "signal_date": "2026-03-30",
               "entry_date": "2026-03-31",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 464.899994,
+              "entry_price": 464.9,
               "forward": {
                 "5": {
                   "exit_date": "2026-04-07",
@@ -10915,7 +10915,7 @@
               "signal_date": "2026-06-11",
               "entry_date": "2026-06-12",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 666.190002,
+              "entry_price": 666.19,
               "forward": {
                 "5": {
                   "exit_date": "2026-06-18",
@@ -10955,88 +10955,52 @@
           ]
         },
         "ma20_above_ma60_entry": {
-          "raw_signal_count": 23,
-          "evaluated_event_count": 23,
+          "raw_signal_count": 19,
+          "evaluated_event_count": 19,
           "horizon_stats": {
             "5": {
-              "sample_size": 23,
-              "win_rate_pct": 69.57,
-              "mean_return_pct": 2.4033,
+              "sample_size": 19,
+              "win_rate_pct": 68.42,
+              "mean_return_pct": 2.2384,
               "median_return_pct": 3.0369,
-              "p25_return_pct": -0.7277,
-              "p75_return_pct": 5.8913,
-              "avg_max_adverse_excursion_pct": -3.489,
+              "p25_return_pct": -1.2292,
+              "p75_return_pct": 6.1425,
+              "avg_max_adverse_excursion_pct": -3.94,
               "worst_max_adverse_excursion_pct": -8.6781,
               "statistical_evidence": {
-                "status": "RESEARCH_ONLY_ESTIMATE",
-                "sample_size": 23,
-                "mean_return_pct": 2.403279,
-                "hac_standard_error_pct": 0.825881,
-                "p_value_two_sided": 0.00361477,
-                "confidence_interval_95_pct": [
-                  0.784582,
-                  4.021976
-                ],
-                "hac_maxlags": 4,
-                "raw_evidence_class": "POSITIVE_MEAN_95CI_EXCLUDES_ZERO",
-                "fdr_bh_q_value": 0.02485154,
-                "fdr_bh_reject_5pct": true,
-                "evidence_class_after_fdr": "POSITIVE_FDR_5PCT",
-                "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
+                "status": "INSUFFICIENT_EVIDENCE",
+                "sample_size": 19,
+                "minimum_sample_size": 20
               }
             },
             "10": {
-              "sample_size": 23,
-              "win_rate_pct": 60.87,
-              "mean_return_pct": 5.1609,
-              "median_return_pct": 4.2599,
-              "p25_return_pct": -3.81,
-              "p75_return_pct": 13.4282,
-              "avg_max_adverse_excursion_pct": -4.4651,
+              "sample_size": 19,
+              "win_rate_pct": 52.63,
+              "mean_return_pct": 4.3185,
+              "median_return_pct": 2.673,
+              "p25_return_pct": -5.5381,
+              "p75_return_pct": 10.8095,
+              "avg_max_adverse_excursion_pct": -5.0422,
               "worst_max_adverse_excursion_pct": -10.8441,
               "statistical_evidence": {
-                "status": "RESEARCH_ONLY_ESTIMATE",
-                "sample_size": 23,
-                "mean_return_pct": 5.160847,
-                "hac_standard_error_pct": 2.228982,
-                "p_value_two_sided": 0.02059444,
-                "confidence_interval_95_pct": [
-                  0.792122,
-                  9.529572
-                ],
-                "hac_maxlags": 9,
-                "raw_evidence_class": "POSITIVE_MEAN_95CI_EXCLUDES_ZERO",
-                "fdr_bh_q_value": 0.1029722,
-                "fdr_bh_reject_5pct": false,
-                "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
-                "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
+                "status": "INSUFFICIENT_EVIDENCE",
+                "sample_size": 19,
+                "minimum_sample_size": 20
               }
             },
             "20": {
-              "sample_size": 22,
-              "win_rate_pct": 68.18,
-              "mean_return_pct": 6.6216,
-              "median_return_pct": 7.3149,
-              "p25_return_pct": -3.3995,
-              "p75_return_pct": 11.7774,
-              "avg_max_adverse_excursion_pct": -5.0135,
+              "sample_size": 18,
+              "win_rate_pct": 61.11,
+              "mean_return_pct": 5.9968,
+              "median_return_pct": 4.0038,
+              "p25_return_pct": -4.2248,
+              "p75_return_pct": 11.7,
+              "avg_max_adverse_excursion_pct": -5.7445,
               "worst_max_adverse_excursion_pct": -10.8441,
               "statistical_evidence": {
-                "status": "RESEARCH_ONLY_ESTIMATE",
-                "sample_size": 22,
-                "mean_return_pct": 6.621574,
-                "hac_standard_error_pct": 1.89293,
-                "p_value_two_sided": 0.00046866,
-                "confidence_interval_95_pct": [
-                  2.911499,
-                  10.331648
-                ],
-                "hac_maxlags": 19,
-                "raw_evidence_class": "POSITIVE_MEAN_95CI_EXCLUDES_ZERO",
-                "fdr_bh_q_value": 0.00696946,
-                "fdr_bh_reject_5pct": true,
-                "evidence_class_after_fdr": "POSITIVE_FDR_5PCT",
-                "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
+                "status": "INSUFFICIENT_EVIDENCE",
+                "sample_size": 18,
+                "minimum_sample_size": 20
               }
             }
           },
@@ -11137,7 +11101,7 @@
               "signal_date": "2025-12-30",
               "entry_date": "2025-12-31",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 470.149994,
+              "entry_price": 470.15,
               "forward": {
                 "5": {
                   "exit_date": "2026-01-08",
@@ -11160,7 +11124,7 @@
               "signal_date": "2026-02-24",
               "entry_date": "2026-02-25",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 488.470001,
+              "entry_price": 488.47,
               "forward": {
                 "5": {
                   "exit_date": "2026-03-03",
@@ -11183,7 +11147,7 @@
               "signal_date": "2026-04-29",
               "entry_date": "2026-04-30",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 519.179993,
+              "entry_price": 519.18,
               "forward": {
                 "5": {
                   "exit_date": "2026-05-11",
@@ -11229,7 +11193,7 @@
               "signal_date": "2026-06-11",
               "entry_date": "2026-06-12",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 666.190002,
+              "entry_price": 666.19,
               "forward": {
                 "5": {
                   "exit_date": "2026-06-18",
@@ -11269,85 +11233,85 @@
           ]
         },
         "breakout_20d_close": {
-          "raw_signal_count": 32,
-          "evaluated_event_count": 31,
+          "raw_signal_count": 30,
+          "evaluated_event_count": 29,
           "horizon_stats": {
             "5": {
-              "sample_size": 31,
-              "win_rate_pct": 58.06,
-              "mean_return_pct": 2.6421,
-              "median_return_pct": 1.5942,
-              "p25_return_pct": -1.5111,
-              "p75_return_pct": 7.2509,
-              "avg_max_adverse_excursion_pct": -3.0753,
-              "worst_max_adverse_excursion_pct": -9.2105,
+              "sample_size": 29,
+              "win_rate_pct": 58.62,
+              "mean_return_pct": 2.0118,
+              "median_return_pct": 1.737,
+              "p25_return_pct": -1.9385,
+              "p75_return_pct": 7.9368,
+              "avg_max_adverse_excursion_pct": -3.9797,
+              "worst_max_adverse_excursion_pct": -27.6502,
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
-                "sample_size": 31,
-                "mean_return_pct": 2.642083,
-                "hac_standard_error_pct": 1.382401,
-                "p_value_two_sided": 0.05597526,
+                "sample_size": 29,
+                "mean_return_pct": 2.011842,
+                "hac_standard_error_pct": 1.748285,
+                "p_value_two_sided": 0.24983451,
                 "confidence_interval_95_pct": [
-                  -0.067372,
-                  5.351539
+                  -1.414735,
+                  5.438418
                 ],
                 "hac_maxlags": 4,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.24629114,
+                "fdr_bh_q_value": 0.63648316,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
               }
             },
             "10": {
-              "sample_size": 31,
-              "win_rate_pct": 61.29,
-              "mean_return_pct": 4.5568,
-              "median_return_pct": 4.3002,
-              "p25_return_pct": -0.7944,
-              "p75_return_pct": 8.8047,
-              "avg_max_adverse_excursion_pct": -3.9232,
-              "worst_max_adverse_excursion_pct": -12.0532,
+              "sample_size": 29,
+              "win_rate_pct": 58.62,
+              "mean_return_pct": 2.3401,
+              "median_return_pct": 4.8037,
+              "p25_return_pct": -0.9152,
+              "p75_return_pct": 10.3335,
+              "avg_max_adverse_excursion_pct": -6.4482,
+              "worst_max_adverse_excursion_pct": -27.6502,
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
-                "sample_size": 31,
-                "mean_return_pct": 4.556765,
-                "hac_standard_error_pct": 1.75934,
-                "p_value_two_sided": 0.00959643,
+                "sample_size": 29,
+                "mean_return_pct": 2.340126,
+                "hac_standard_error_pct": 3.256309,
+                "p_value_two_sided": 0.47236059,
                 "confidence_interval_95_pct": [
-                  1.108522,
-                  8.005009
+                  -4.042123,
+                  8.722374
                 ],
                 "hac_maxlags": 9,
-                "raw_evidence_class": "POSITIVE_MEAN_95CI_EXCLUDES_ZERO",
-                "fdr_bh_q_value": 0.05780083,
+                "raw_evidence_class": "INCONCLUSIVE",
+                "fdr_bh_q_value": 0.74650731,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
               }
             },
             "20": {
-              "sample_size": 31,
-              "win_rate_pct": 67.74,
-              "mean_return_pct": 5.2878,
-              "median_return_pct": 4.8187,
-              "p25_return_pct": -1.1845,
-              "p75_return_pct": 10.7249,
-              "avg_max_adverse_excursion_pct": -4.9463,
-              "worst_max_adverse_excursion_pct": -14.0423,
+              "sample_size": 29,
+              "win_rate_pct": 62.07,
+              "mean_return_pct": 2.7686,
+              "median_return_pct": 4.55,
+              "p25_return_pct": -5.0696,
+              "p75_return_pct": 11.0133,
+              "avg_max_adverse_excursion_pct": -7.5086,
+              "worst_max_adverse_excursion_pct": -28.981,
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
-                "sample_size": 31,
-                "mean_return_pct": 5.287834,
-                "hac_standard_error_pct": 2.201525,
-                "p_value_two_sided": 0.01631036,
+                "sample_size": 29,
+                "mean_return_pct": 2.768568,
+                "hac_standard_error_pct": 3.244177,
+                "p_value_two_sided": 0.39343963,
                 "confidence_interval_95_pct": [
-                  0.972924,
-                  9.602744
+                  -3.589901,
+                  9.127037
                 ],
                 "hac_maxlags": 19,
-                "raw_evidence_class": "POSITIVE_MEAN_95CI_EXCLUDES_ZERO",
-                "fdr_bh_q_value": 0.08615027,
+                "raw_evidence_class": "INCONCLUSIVE",
+                "fdr_bh_q_value": 0.72878394,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -11363,7 +11327,7 @@
               "forward": {
                 "5": {
                   "exit_date": "2026-01-13",
-                  "return_pct": -0.5679,
+                  "return_pct": -0.568,
                   "max_adverse_excursion_pct": -0.7911
                 },
                 "10": {
@@ -11382,12 +11346,12 @@
               "signal_date": "2026-01-16",
               "entry_date": "2026-01-19",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 529.900024,
+              "entry_price": 529.9,
               "forward": {
                 "5": {
                   "exit_date": "2026-01-23",
                   "return_pct": -3.6856,
-                  "max_adverse_excursion_pct": -6.5862
+                  "max_adverse_excursion_pct": -6.5861
                 },
                 "10": {
                   "exit_date": "2026-01-30",
@@ -11405,7 +11369,7 @@
               "signal_date": "2026-03-30",
               "entry_date": "2026-03-31",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 464.899994,
+              "entry_price": 464.9,
               "forward": {
                 "5": {
                   "exit_date": "2026-04-07",
@@ -11451,7 +11415,7 @@
               "signal_date": "2026-04-14",
               "entry_date": "2026-04-15",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 483.059998,
+              "entry_price": 483.06,
               "forward": {
                 "5": {
                   "exit_date": "2026-04-21",
@@ -11474,7 +11438,7 @@
               "signal_date": "2026-04-27",
               "entry_date": "2026-04-28",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 511.540009,
+              "entry_price": 511.54,
               "forward": {
                 "5": {
                   "exit_date": "2026-05-07",
@@ -11520,7 +11484,7 @@
               "signal_date": "2026-05-11",
               "entry_date": "2026-05-12",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 573.190002,
+              "entry_price": 573.19,
               "forward": {
                 "5": {
                   "exit_date": "2026-05-18",
@@ -11566,7 +11530,7 @@
               "signal_date": "2026-06-17",
               "entry_date": "2026-06-18",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 704.97998,
+              "entry_price": 704.98,
               "forward": {
                 "5": {
                   "exit_date": "2026-06-25",
@@ -11588,76 +11552,76 @@
           ]
         },
         "pullback_ma20_after_breakout": {
-          "raw_signal_count": 15,
-          "evaluated_event_count": 15,
+          "raw_signal_count": 12,
+          "evaluated_event_count": 12,
           "horizon_stats": {
             "5": {
-              "sample_size": 15,
-              "win_rate_pct": 60.0,
-              "mean_return_pct": 3.5577,
-              "median_return_pct": 5.5463,
-              "p25_return_pct": -0.9141,
-              "p75_return_pct": 7.3054,
-              "avg_max_adverse_excursion_pct": -2.9349,
+              "sample_size": 12,
+              "win_rate_pct": 75.0,
+              "mean_return_pct": 4.8055,
+              "median_return_pct": 5.9601,
+              "p25_return_pct": 1.9475,
+              "p75_return_pct": 8.0733,
+              "avg_max_adverse_excursion_pct": -2.8854,
               "worst_max_adverse_excursion_pct": -8.2799,
               "statistical_evidence": {
                 "status": "INSUFFICIENT_EVIDENCE",
-                "sample_size": 15,
+                "sample_size": 12,
                 "minimum_sample_size": 20
               }
             },
             "10": {
-              "sample_size": 15,
-              "win_rate_pct": 80.0,
-              "mean_return_pct": 7.5529,
-              "median_return_pct": 5.2522,
-              "p25_return_pct": 1.5981,
-              "p75_return_pct": 14.4461,
-              "avg_max_adverse_excursion_pct": -3.4485,
+              "sample_size": 12,
+              "win_rate_pct": 75.0,
+              "mean_return_pct": 8.5939,
+              "median_return_pct": 7.1289,
+              "p25_return_pct": 0.5651,
+              "p75_return_pct": 17.7201,
+              "avg_max_adverse_excursion_pct": -3.5274,
               "worst_max_adverse_excursion_pct": -10.3543,
               "statistical_evidence": {
                 "status": "INSUFFICIENT_EVIDENCE",
-                "sample_size": 15,
+                "sample_size": 12,
                 "minimum_sample_size": 20
               }
             },
             "20": {
-              "sample_size": 15,
-              "win_rate_pct": 73.33,
-              "mean_return_pct": 11.2462,
-              "median_return_pct": 9.0022,
-              "p25_return_pct": -1.417,
-              "p75_return_pct": 16.7807,
-              "avg_max_adverse_excursion_pct": -4.2555,
+              "sample_size": 12,
+              "win_rate_pct": 66.67,
+              "mean_return_pct": 11.4034,
+              "median_return_pct": 8.5521,
+              "p25_return_pct": -4.8117,
+              "p75_return_pct": 20.0576,
+              "avg_max_adverse_excursion_pct": -4.5362,
               "worst_max_adverse_excursion_pct": -11.4582,
               "statistical_evidence": {
                 "status": "INSUFFICIENT_EVIDENCE",
-                "sample_size": 15,
+                "sample_size": 12,
                 "minimum_sample_size": 20
               }
             }
           },
           "recent_events": [
             {
-              "signal_date": "2025-08-06",
-              "entry_date": "2025-08-07",
+              "signal_date": "2025-04-25",
+              "entry_date": "2025-04-28",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 333.0,
+              "entry_price": 454.3,
               "forward": {
                 "5": {
-                  "exit_date": "2025-08-13",
-                  "return_pct": -0.5075,
-                  "max_adverse_excursion_pct": -2.1051
+                  "exit_date": "2025-05-07",
+                  "return_pct": -1.3207,
+                  "max_adverse_excursion_pct": -2.0669
                 },
                 "10": {
-                  "exit_date": "2025-08-20",
-                  "return_pct": 5.2522,
-                  "max_adverse_excursion_pct": -2.1051
+                  "exit_date": "2025-05-14",
+                  "return_pct": -3.8213,
+                  "max_adverse_excursion_pct": -4.6489
                 },
                 "20": {
-                  "exit_date": "2025-09-03",
-                  "return_pct": 12.1411,
-                  "max_adverse_excursion_pct": -2.1051
+                  "exit_date": "2025-05-28",
+                  "return_pct": -8.1356,
+                  "max_adverse_excursion_pct": -8.1862
                 }
               }
             },
@@ -11665,7 +11629,7 @@
               "signal_date": "2025-09-08",
               "entry_date": "2025-09-09",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 368.799988,
+              "entry_price": 368.8,
               "forward": {
                 "5": {
                   "exit_date": "2025-09-15",
@@ -11688,11 +11652,11 @@
               "signal_date": "2025-09-10",
               "entry_date": "2025-09-11",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 366.100006,
+              "entry_price": 366.1,
               "forward": {
                 "5": {
                   "exit_date": "2025-09-17",
-                  "return_pct": 6.3617,
+                  "return_pct": 6.3616,
                   "max_adverse_excursion_pct": -0.3551
                 },
                 "10": {
@@ -11711,7 +11675,7 @@
               "signal_date": "2025-12-16",
               "entry_date": "2025-12-17",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 441.709991,
+              "entry_price": 441.71,
               "forward": {
                 "5": {
                   "exit_date": "2025-12-23",
@@ -11734,7 +11698,7 @@
               "signal_date": "2025-12-26",
               "entry_date": "2025-12-29",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 460.380005,
+              "entry_price": 460.38,
               "forward": {
                 "5": {
                   "exit_date": "2026-01-06",
@@ -11757,7 +11721,7 @@
               "signal_date": "2025-12-30",
               "entry_date": "2025-12-31",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 470.149994,
+              "entry_price": 470.15,
               "forward": {
                 "5": {
                   "exit_date": "2026-01-08",
@@ -11780,7 +11744,7 @@
               "signal_date": "2026-01-23",
               "entry_date": "2026-01-26",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 508.100006,
+              "entry_price": 508.1,
               "forward": {
                 "5": {
                   "exit_date": "2026-01-30",
@@ -11803,7 +11767,7 @@
               "signal_date": "2026-04-20",
               "entry_date": "2026-04-21",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 471.959991,
+              "entry_price": 471.96,
               "forward": {
                 "5": {
                   "exit_date": "2026-04-27",
@@ -11849,11 +11813,11 @@
               "signal_date": "2026-04-24",
               "entry_date": "2026-04-27",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 481.200012,
+              "entry_price": 481.2,
               "forward": {
                 "5": {
                   "exit_date": "2026-05-06",
-                  "return_pct": 13.3312,
+                  "return_pct": 13.3313,
                   "max_adverse_excursion_pct": -1.0889
                 },
                 "10": {
@@ -11871,51 +11835,51 @@
           ]
         },
         "volume_confirmed_20d_breakout": {
-          "raw_signal_count": 19,
-          "evaluated_event_count": 19,
+          "raw_signal_count": 17,
+          "evaluated_event_count": 17,
           "horizon_stats": {
             "5": {
-              "sample_size": 19,
-              "win_rate_pct": 63.16,
-              "mean_return_pct": 2.7633,
-              "median_return_pct": 1.737,
-              "p25_return_pct": -0.4355,
-              "p75_return_pct": 5.6654,
-              "avg_max_adverse_excursion_pct": -2.9908,
-              "worst_max_adverse_excursion_pct": -9.2105,
+              "sample_size": 17,
+              "win_rate_pct": 64.71,
+              "mean_return_pct": 1.7024,
+              "median_return_pct": 2.3509,
+              "p25_return_pct": -0.3032,
+              "p75_return_pct": 6.5651,
+              "avg_max_adverse_excursion_pct": -4.5237,
+              "worst_max_adverse_excursion_pct": -27.6502,
               "statistical_evidence": {
                 "status": "INSUFFICIENT_EVIDENCE",
-                "sample_size": 19,
+                "sample_size": 17,
                 "minimum_sample_size": 20
               }
             },
             "10": {
-              "sample_size": 19,
-              "win_rate_pct": 57.89,
-              "mean_return_pct": 4.6313,
-              "median_return_pct": 4.3002,
-              "p25_return_pct": -1.016,
-              "p75_return_pct": 10.8037,
-              "avg_max_adverse_excursion_pct": -3.958,
-              "worst_max_adverse_excursion_pct": -12.0532,
+              "sample_size": 17,
+              "win_rate_pct": 58.82,
+              "mean_return_pct": 2.4012,
+              "median_return_pct": 4.8037,
+              "p25_return_pct": -0.9152,
+              "p75_return_pct": 11.2738,
+              "avg_max_adverse_excursion_pct": -6.7778,
+              "worst_max_adverse_excursion_pct": -27.6502,
               "statistical_evidence": {
                 "status": "INSUFFICIENT_EVIDENCE",
-                "sample_size": 19,
+                "sample_size": 17,
                 "minimum_sample_size": 20
               }
             },
             "20": {
-              "sample_size": 19,
-              "win_rate_pct": 68.42,
-              "mean_return_pct": 6.1681,
-              "median_return_pct": 6.7988,
-              "p25_return_pct": -1.675,
-              "p75_return_pct": 11.056,
-              "avg_max_adverse_excursion_pct": -5.0532,
-              "worst_max_adverse_excursion_pct": -14.0423,
+              "sample_size": 17,
+              "win_rate_pct": 64.71,
+              "mean_return_pct": 3.5182,
+              "median_return_pct": 7.0082,
+              "p25_return_pct": -5.0696,
+              "p75_return_pct": 11.0987,
+              "avg_max_adverse_excursion_pct": -7.9727,
+              "worst_max_adverse_excursion_pct": -28.981,
               "statistical_evidence": {
                 "status": "INSUFFICIENT_EVIDENCE",
-                "sample_size": 19,
+                "sample_size": 17,
                 "minimum_sample_size": 20
               }
             }
@@ -11925,7 +11889,7 @@
               "signal_date": "2025-08-20",
               "entry_date": "2025-08-21",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 350.48999,
+              "entry_price": 350.49,
               "forward": {
                 "5": {
                   "exit_date": "2025-08-27",
@@ -11939,7 +11903,7 @@
                 },
                 "20": {
                   "exit_date": "2025-09-17",
-                  "return_pct": 11.0988,
+                  "return_pct": 11.0987,
                   "max_adverse_excursion_pct": -1.5664
                 }
               }
@@ -11971,7 +11935,7 @@
               "signal_date": "2025-09-18",
               "entry_date": "2025-09-19",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 408.200012,
+              "entry_price": 408.2,
               "forward": {
                 "5": {
                   "exit_date": "2025-09-25",
@@ -11985,7 +11949,7 @@
                 },
                 "20": {
                   "exit_date": "2025-10-24",
-                  "return_pct": 1.6168,
+                  "return_pct": 1.6169,
                   "max_adverse_excursion_pct": -3.1014
                 }
               }
@@ -11998,7 +11962,7 @@
               "forward": {
                 "5": {
                   "exit_date": "2026-01-13",
-                  "return_pct": -0.5679,
+                  "return_pct": -0.568,
                   "max_adverse_excursion_pct": -0.7911
                 },
                 "10": {
@@ -12017,12 +11981,12 @@
               "signal_date": "2026-01-16",
               "entry_date": "2026-01-19",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 529.900024,
+              "entry_price": 529.9,
               "forward": {
                 "5": {
                   "exit_date": "2026-01-23",
                   "return_pct": -3.6856,
-                  "max_adverse_excursion_pct": -6.5862
+                  "max_adverse_excursion_pct": -6.5861
                 },
                 "10": {
                   "exit_date": "2026-01-30",
@@ -12063,7 +12027,7 @@
               "signal_date": "2026-04-27",
               "entry_date": "2026-04-28",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 511.540009,
+              "entry_price": 511.54,
               "forward": {
                 "5": {
                   "exit_date": "2026-05-07",
@@ -12109,7 +12073,7 @@
               "signal_date": "2026-05-11",
               "entry_date": "2026-05-12",
               "entry_assumption": "next_trading_day_open",
-              "entry_price": 573.190002,
+              "entry_price": 573.19,
               "forward": {
                 "5": {
                   "exit_date": "2026-05-18",
@@ -12158,11 +12122,11 @@
     {
       "code": "300124.SZ",
       "scope": "candidate_seed",
-      "provider": "yfinance:a:300124.SZ",
+      "provider": "yfinance+tencent:a:300124.SZ",
       "status": "ok",
       "observations": 520,
-      "first_date": "2024-07-02",
-      "last_date": "2026-08-20",
+      "first_date": "2024-07-03",
+      "last_date": "2026-08-21",
       "signals": {
         "ma20_reclaim": {
           "raw_signal_count": 24,
@@ -12189,7 +12153,7 @@
                 ],
                 "hac_maxlags": 4,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.59661494,
+                "fdr_bh_q_value": 0.64342445,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -12216,7 +12180,7 @@
                 ],
                 "hac_maxlags": 9,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.88639762,
+                "fdr_bh_q_value": 0.88000027,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -12243,7 +12207,7 @@
                 ],
                 "hac_maxlags": 19,
                 "raw_evidence_class": "POSITIVE_MEAN_95CI_EXCLUDES_ZERO",
-                "fdr_bh_q_value": 0.01352248,
+                "fdr_bh_q_value": 0.01746299,
                 "fdr_bh_reject_5pct": true,
                 "evidence_class_after_fdr": "POSITIVE_FDR_5PCT",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -12786,34 +12750,34 @@
                 ],
                 "hac_maxlags": 4,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.73501049,
+                "fdr_bh_q_value": 0.74650731,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
               }
             },
             "10": {
-              "sample_size": 30,
-              "win_rate_pct": 53.33,
-              "mean_return_pct": 1.7784,
-              "median_return_pct": 0.9866,
-              "p25_return_pct": -5.2004,
-              "p75_return_pct": 5.5261,
-              "avg_max_adverse_excursion_pct": -4.9901,
+              "sample_size": 31,
+              "win_rate_pct": 51.61,
+              "mean_return_pct": 1.4524,
+              "median_return_pct": 0.3832,
+              "p25_return_pct": -5.4867,
+              "p75_return_pct": 5.3652,
+              "avg_max_adverse_excursion_pct": -5.1438,
               "worst_max_adverse_excursion_pct": -13.6161,
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
-                "sample_size": 30,
-                "mean_return_pct": 1.778389,
-                "hac_standard_error_pct": 2.138326,
-                "p_value_two_sided": 0.40559335,
+                "sample_size": 31,
+                "mean_return_pct": 1.452371,
+                "hac_standard_error_pct": 2.168035,
+                "p_value_two_sided": 0.50292037,
                 "confidence_interval_95_pct": [
-                  -2.412653,
-                  5.969431
+                  -2.7969,
+                  5.701641
                 ],
                 "hac_maxlags": 9,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.69158525,
+                "fdr_bh_q_value": 0.76826161,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -12840,7 +12804,7 @@
                 ],
                 "hac_maxlags": 19,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.83228411,
+                "fdr_bh_q_value": 0.8187073,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -13060,6 +13024,11 @@
                   "exit_date": "2026-08-14",
                   "return_pct": -5.2632,
                   "max_adverse_excursion_pct": -5.8978
+                },
+                "10": {
+                  "exit_date": "2026-08-21",
+                  "return_pct": -8.3282,
+                  "max_adverse_excursion_pct": -9.7523
                 }
               }
             }
@@ -13281,7 +13250,7 @@
                 ],
                 "hac_maxlags": 4,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.69158525,
+                "fdr_bh_q_value": 0.72878394,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -13308,7 +13277,7 @@
                 ],
                 "hac_maxlags": 9,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.36128777,
+                "fdr_bh_q_value": 0.42953101,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -13335,7 +13304,7 @@
                 ],
                 "hac_maxlags": 19,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.59388993,
+                "fdr_bh_q_value": 0.64188104,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -13580,11 +13549,11 @@
     {
       "code": "002185.SZ",
       "scope": "candidate_seed",
-      "provider": "yfinance:a:002185.SZ",
+      "provider": "yfinance+tencent:a:002185.SZ",
       "status": "ok",
       "observations": 520,
-      "first_date": "2024-07-02",
-      "last_date": "2026-08-20",
+      "first_date": "2024-07-03",
+      "last_date": "2026-08-21",
       "signals": {
         "ma20_reclaim": {
           "raw_signal_count": 26,
@@ -13611,7 +13580,7 @@
                 ],
                 "hac_maxlags": 4,
                 "raw_evidence_class": "POSITIVE_MEAN_95CI_EXCLUDES_ZERO",
-                "fdr_bh_q_value": 0.00752229,
+                "fdr_bh_q_value": 0.00940775,
                 "fdr_bh_reject_5pct": true,
                 "evidence_class_after_fdr": "POSITIVE_FDR_5PCT",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -13638,7 +13607,7 @@
                 ],
                 "hac_maxlags": 9,
                 "raw_evidence_class": "POSITIVE_MEAN_95CI_EXCLUDES_ZERO",
-                "fdr_bh_q_value": 0.02485154,
+                "fdr_bh_q_value": 0.03209866,
                 "fdr_bh_reject_5pct": true,
                 "evidence_class_after_fdr": "POSITIVE_FDR_5PCT",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -13665,7 +13634,7 @@
                 ],
                 "hac_maxlags": 19,
                 "raw_evidence_class": "POSITIVE_MEAN_95CI_EXCLUDES_ZERO",
-                "fdr_bh_q_value": 1.47e-06,
+                "fdr_bh_q_value": 1.43e-06,
                 "fdr_bh_reject_5pct": true,
                 "evidence_class_after_fdr": "POSITIVE_FDR_5PCT",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -14203,7 +14172,7 @@
                 ],
                 "hac_maxlags": 4,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.89440241,
+                "fdr_bh_q_value": 0.8874689,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -14230,7 +14199,7 @@
                 ],
                 "hac_maxlags": 9,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.83228411,
+                "fdr_bh_q_value": 0.81878568,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -14257,7 +14226,7 @@
                 ],
                 "hac_maxlags": 19,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.36128777,
+                "fdr_bh_q_value": 0.42953101,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -14805,7 +14774,7 @@
                 ],
                 "hac_maxlags": 4,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.69158525,
+                "fdr_bh_q_value": 0.72878394,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -14832,7 +14801,7 @@
                 ],
                 "hac_maxlags": 9,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.69098995,
+                "fdr_bh_q_value": 0.72878394,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -14859,7 +14828,7 @@
                 ],
                 "hac_maxlags": 19,
                 "raw_evidence_class": "POSITIVE_MEAN_95CI_EXCLUDES_ZERO",
-                "fdr_bh_q_value": 0.15783111,
+                "fdr_bh_q_value": 0.19617291,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -15107,8 +15076,8 @@
       "provider": "yfinance+tencent:a:000977.SZ",
       "status": "ok",
       "observations": 520,
-      "first_date": "2024-07-02",
-      "last_date": "2026-08-20",
+      "first_date": "2024-07-03",
+      "last_date": "2026-08-21",
       "signals": {
         "ma20_reclaim": {
           "raw_signal_count": 26,
@@ -15127,15 +15096,15 @@
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 25,
                 "mean_return_pct": 1.031914,
-                "hac_standard_error_pct": 0.742315,
-                "p_value_two_sided": 0.16448974,
+                "hac_standard_error_pct": 0.742316,
+                "p_value_two_sided": 0.16448972,
                 "confidence_interval_95_pct": [
                   -0.422997,
                   2.486826
                 ],
                 "hac_maxlags": 4,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.47615451,
+                "fdr_bh_q_value": 0.5500125,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -15162,7 +15131,7 @@
                 ],
                 "hac_maxlags": 9,
                 "raw_evidence_class": "POSITIVE_MEAN_95CI_EXCLUDES_ZERO",
-                "fdr_bh_q_value": 0.05780083,
+                "fdr_bh_q_value": 0.0763046,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -15189,7 +15158,7 @@
                 ],
                 "hac_maxlags": 19,
                 "raw_evidence_class": "POSITIVE_MEAN_95CI_EXCLUDES_ZERO",
-                "fdr_bh_q_value": 0.00018572,
+                "fdr_bh_q_value": 0.00018065,
                 "fdr_bh_reject_5pct": true,
                 "evidence_class_after_fdr": "POSITIVE_FDR_5PCT",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -15717,7 +15686,7 @@
                 ],
                 "hac_maxlags": 4,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.6674428,
+                "fdr_bh_q_value": 0.71548878,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -15744,7 +15713,7 @@
                 ],
                 "hac_maxlags": 9,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.62350509,
+                "fdr_bh_q_value": 0.67102172,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -15771,7 +15740,7 @@
                 ],
                 "hac_maxlags": 19,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.88782771,
+                "fdr_bh_q_value": 0.88106098,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -16319,7 +16288,7 @@
                 ],
                 "hac_maxlags": 4,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.59388993,
+                "fdr_bh_q_value": 0.64188104,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -16346,7 +16315,7 @@
                 ],
                 "hac_maxlags": 9,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.54026769,
+                "fdr_bh_q_value": 0.6107551,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -16373,7 +16342,7 @@
                 ],
                 "hac_maxlags": 19,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.88639762,
+                "fdr_bh_q_value": 0.88000027,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -16621,8 +16590,8 @@
       "provider": "yfinance:a:600276.SH",
       "status": "ok",
       "observations": 520,
-      "first_date": "2024-07-02",
-      "last_date": "2026-08-20",
+      "first_date": "2024-07-03",
+      "last_date": "2026-08-21",
       "signals": {
         "ma20_reclaim": {
           "raw_signal_count": 30,
@@ -16649,34 +16618,34 @@
                 ],
                 "hac_maxlags": 4,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.69158525,
+                "fdr_bh_q_value": 0.72878394,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
               }
             },
             "10": {
-              "sample_size": 28,
-              "win_rate_pct": 50.0,
-              "mean_return_pct": -0.1962,
-              "median_return_pct": -0.2554,
-              "p25_return_pct": -3.7641,
-              "p75_return_pct": 3.3181,
-              "avg_max_adverse_excursion_pct": -4.5828,
-              "worst_max_adverse_excursion_pct": -13.028,
+              "sample_size": 29,
+              "win_rate_pct": 48.28,
+              "mean_return_pct": -0.6308,
+              "median_return_pct": -0.6903,
+              "p25_return_pct": -4.4502,
+              "p75_return_pct": 3.1296,
+              "avg_max_adverse_excursion_pct": -4.8918,
+              "worst_max_adverse_excursion_pct": -13.5455,
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
-                "sample_size": 28,
-                "mean_return_pct": -0.196153,
-                "hac_standard_error_pct": 0.956327,
-                "p_value_two_sided": 0.83748589,
+                "sample_size": 29,
+                "mean_return_pct": -0.630768,
+                "hac_standard_error_pct": 1.121451,
+                "p_value_two_sided": 0.57380481,
                 "confidence_interval_95_pct": [
-                  -2.070519,
-                  1.678214
+                  -2.828773,
+                  1.567236
                 ],
                 "hac_maxlags": 9,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.89440241,
+                "fdr_bh_q_value": 0.7871425,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -16703,7 +16672,7 @@
                 ],
                 "hac_maxlags": 19,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.8429249,
+                "fdr_bh_q_value": 0.82904559,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -16905,6 +16874,11 @@
                   "exit_date": "2026-08-14",
                   "return_pct": -4.3273,
                   "max_adverse_excursion_pct": -5.0909
+                },
+                "10": {
+                  "exit_date": "2026-08-21",
+                  "return_pct": -12.8,
+                  "max_adverse_excursion_pct": -13.5455
                 }
               }
             },
@@ -16943,17 +16917,17 @@
               }
             },
             "10": {
-              "sample_size": 15,
-              "win_rate_pct": 53.33,
-              "mean_return_pct": 0.4163,
-              "median_return_pct": 0.1796,
-              "p25_return_pct": -3.1295,
-              "p75_return_pct": 4.5111,
-              "avg_max_adverse_excursion_pct": -4.1852,
-              "worst_max_adverse_excursion_pct": -11.0117,
+              "sample_size": 16,
+              "win_rate_pct": 50.0,
+              "mean_return_pct": -0.4097,
+              "median_return_pct": -0.4141,
+              "p25_return_pct": -4.6727,
+              "p75_return_pct": 4.1973,
+              "avg_max_adverse_excursion_pct": -4.7702,
+              "worst_max_adverse_excursion_pct": -13.5455,
               "statistical_evidence": {
                 "status": "INSUFFICIENT_EVIDENCE",
-                "sample_size": 15,
+                "sample_size": 16,
                 "minimum_sample_size": 20
               }
             },
@@ -17168,6 +17142,11 @@
                   "exit_date": "2026-08-14",
                   "return_pct": -4.3273,
                   "max_adverse_excursion_pct": -5.0909
+                },
+                "10": {
+                  "exit_date": "2026-08-21",
+                  "return_pct": -12.8,
+                  "max_adverse_excursion_pct": -13.5455
                 }
               }
             },
@@ -17211,7 +17190,7 @@
                 ],
                 "hac_maxlags": 4,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.7847828,
+                "fdr_bh_q_value": 0.76826161,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -17238,7 +17217,7 @@
                 ],
                 "hac_maxlags": 9,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.83117273,
+                "fdr_bh_q_value": 0.80850453,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -17265,7 +17244,7 @@
                 ],
                 "hac_maxlags": 19,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.66221862,
+                "fdr_bh_q_value": 0.71125791,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -17813,7 +17792,7 @@
                 ],
                 "hac_maxlags": 4,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.45040894,
+                "fdr_bh_q_value": 0.52292346,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -17840,7 +17819,7 @@
                 ],
                 "hac_maxlags": 9,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.87254137,
+                "fdr_bh_q_value": 0.86699737,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -17867,7 +17846,7 @@
                 ],
                 "hac_maxlags": 19,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.83228411,
+                "fdr_bh_q_value": 0.81878568,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -18122,11 +18101,11 @@
     "method": "constant-only OLS on signal forward returns with HAC/Newey-West covariance",
     "minimum_sample_size": 20,
     "enriched_signal_horizons": 180,
-    "sufficient_signal_horizons": 110,
-    "insufficient_signal_horizons": 70,
+    "sufficient_signal_horizons": 107,
+    "insufficient_signal_horizons": 73,
     "fdr_method": "Benjamini-Hochberg",
     "fdr_alpha": 0.05,
-    "fdr_reject_5pct_count": 16,
+    "fdr_reject_5pct_count": 12,
     "interpretation": "A historical mean estimate must survive both uncertainty reporting and the payload-level FDR gate before it is classed as positive or negative statistical evidence. This is still not a forecast, causal claim, or automatic action trigger.",
     "multiple_testing": "Benjamini-Hochberg FDR correction is applied across all sufficient signal-horizon tests in this payload."
   }

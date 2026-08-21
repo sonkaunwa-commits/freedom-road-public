@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-21T17:10:39.593924+08:00",
+  "updated_at": "2026-08-21T17:21:50.286911+08:00",
   "mode": "all",
   "counts": {
     "a_share_ok": 7,
@@ -86,6 +86,16 @@
       "dataset": "tushare:a:601138.SH",
       "error": "Exception",
       "message": "抱歉，您没有接口(daily)访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。"
+    },
+    {
+      "dataset": "akshare:a:601138.SH",
+      "error": "ConnectionError",
+      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "dataset": "eastmoney:a:601138.SH",
+      "error": "ConnectionError",
+      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
     },
     {
       "dataset": "tushare:a:002600.SZ",
@@ -300,5 +310,5 @@
   ],
   "coverage_ok": true,
   "intraday_a_share_ok": false,
-  "run_id": "16279d1621874af0"
+  "run_id": "450b91d44af66910"
 }

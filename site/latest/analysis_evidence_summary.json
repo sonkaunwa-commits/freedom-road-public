@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-21T17:14:25.360575+08:00",
+  "generated_at": "2026-08-21T17:25:29.594855+08:00",
   "schema_version": 1,
   "evidence_status": "READY_RESEARCH_ONLY",
   "production_use": "RESEARCH_ONLY",
@@ -112,10 +112,10 @@
         "signal": "volume_confirmed_20d_breakout",
         "horizon_sessions": 20,
         "sample_size": 26,
-        "mean_return_pct": 17.334771,
+        "mean_return_pct": 17.334772,
         "confidence_interval_95_pct": [
           6.956696,
-          27.712847
+          27.712848
         ],
         "p_value_two_sided": 0.0010612,
         "fdr_bh_q_value": 0.0116732,

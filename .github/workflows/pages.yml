@@ -36,6 +36,15 @@ jobs:
           fi
           python3 -m json.tool site/latest/manifest.json >/dev/null
           python3 -m json.tool site/publication.json >/dev/null
+          test -f site/fund-assistant/index.html
+          test -f site/fund-assistant/v9.html
+          test -f site/fund-assistant/v9-buttons.css
+          test -f site/fund-assistant/v9-buttons.js
+          test -f site/securities-exam/index.html
+          test -f site/investment-advisor-exam/index.html
+          grep -Fq 'FUND_ASSISTANT_ENTRY_' site/fund-assistant/index.html
+          grep -Fq 'securities-exam' site/ks/index.html
+          grep -Fq 'investment-advisor-exam' site/tg/index.html
 
   deploy:
     needs: verify
@@ -87,3 +96,19 @@ jobs:
               exit 1
             fi
           done
+
+          verify_content() {
+            local path="$1" pattern="$2" name="$3"
+            local body
+            body="$(curl -fsSL --max-time 30 --retry 3 "$base/$path?content=${GITHUB_SHA}")"
+            if ! grep -Fq "$pattern" <<<"$body"; then
+              echo "Content verification failed: $name" >&2
+              exit 1
+            fi
+          }
+          verify_content 'fund-assistant/' 'FUND_ASSISTANT_ENTRY_' 'fund assistant entry'
+          verify_content 'fund-assistant/v9.html' 'v9-core.js' 'fund assistant app'
+          verify_content 'ks/' 'securities-exam' 'securities short entry'
+          verify_content 'tg/' 'investment-advisor-exam' 'advisor short entry'
+          verify_content 'securities-exam/' '证券从业 2026' 'securities app'
+          verify_content 'investment-advisor-exam/' '证券投资顾问 2026' 'advisor app'

@@ -40,12 +40,15 @@ jobs:
           test -f site/fund-assistant/v9.html
           test -f site/fund-assistant/v9-accessible.html
           test -f site/fund-assistant/v9-buttons.css
-          test -f site/fund-assistant/v9-market-r20260822-1706.js
           test -f site/fund-assistant/v9-buttons-r20260822-1706.js
+          test -f site/fund-assistant/v10-release-r20260822-1800.js
+          test -f site/fund-assistant/v10-release-r20260822-1800.css
           test -f site/securities-exam/index.html
           test -f site/investment-advisor-exam/index.html
-          grep -Fq 'FUND_ASSISTANT_ENTRY_20260822_1706' site/fund-assistant/index.html
-          grep -Fq 'FUND_ASSISTANT_UI_20260822_1706' site/fund-assistant/v9-accessible.html
+          grep -Fq 'FUND_ASSISTANT_ENTRY_20260822_1800' site/fund-assistant/index.html
+          grep -Fq 'FUND_ASSISTANT_UI_20260822_1800' site/fund-assistant/v9-accessible.html
+          grep -Fq 'v10-release-r20260822-1800.js' site/fund-assistant/v9-accessible.html
+          grep -Fq 'v10-release-r20260822-1800.css' site/fund-assistant/v9-accessible.html
           grep -Fq 'securities-exam' site/ks/index.html
           grep -Fq 'investment-advisor-exam' site/tg/index.html
 
@@ -82,8 +85,9 @@ jobs:
             'publication.json'
             'fund-assistant/'
             'fund-assistant/v9-accessible.html'
-            'fund-assistant/v9-market-r20260822-1706.js'
             'fund-assistant/v9-buttons-r20260822-1706.js'
+            'fund-assistant/v10-release-r20260822-1800.js'
+            'fund-assistant/v10-release-r20260822-1800.css'
             'fund-assistant/v9-buttons.css'
             'securities-exam/'
             'investment-advisor-exam/'
@@ -114,10 +118,10 @@ jobs:
               exit 1
             fi
           }
-          verify_content 'fund-assistant/' 'FUND_ASSISTANT_ENTRY_20260822_1706' 'fund assistant entry'
-          verify_content 'fund-assistant/v9-accessible.html' 'FUND_ASSISTANT_UI_20260822_1706' 'fund assistant accessible shell'
-          verify_content 'fund-assistant/v9-market-r20260822-1706.js' 'immutable release 2026-08-22 17:06 CST' 'fund assistant trading-day guard'
-          verify_content 'fund-assistant/v9-buttons-r20260822-1706.js' "UI_VERSION='08/22 17:06'" 'fund assistant button/date layer'
+          verify_content 'fund-assistant/' 'FUND_ASSISTANT_ENTRY_20260822_1800' 'fund assistant entry'
+          verify_content 'fund-assistant/v9-accessible.html' 'FUND_ASSISTANT_UI_20260822_1800' 'fund assistant accessible shell'
+          verify_content 'fund-assistant/v10-release-r20260822-1800.js' 'Fund assistant V10 release layer' 'fund assistant V10 behavior layer'
+          verify_content 'fund-assistant/v10-release-r20260822-1800.css' 'V10 visual hierarchy' 'fund assistant V10 visual layer'
           verify_content 'fund-assistant/v9.html' 'v9-core.js' 'fund assistant app'
           verify_content 'ks/' 'securities-exam' 'securities short entry'
           verify_content 'tg/' 'investment-advisor-exam' 'advisor short entry'
@@ -132,7 +136,7 @@ jobs:
           cat > release-status/fund-assistant.txt <<EOF
           status=ok
           deployed_sha=${GITHUB_SHA}
-          release=FUND_ASSISTANT_UI_20260822_1706
+          release=FUND_ASSISTANT_UI_20260822_1800
           url=https://sonkaunwa-commits.github.io/freedom-road-public/fund-assistant/
           verified_at=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
           EOF
@@ -140,6 +144,6 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add release-status/fund-assistant.txt
           if ! git diff --cached --quiet; then
-            git commit -m 'status: fund assistant live verification passed'
+            git commit -m 'status: fund assistant V10 live verification passed'
             git push
           fi

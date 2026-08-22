@@ -1,13 +1,16 @@
 (()=>{
-  const UI_VERSION='08/19 08:24';
+  const UI_VERSION='08/22 16:31';
+  const now=new Date();
+  const dateFull=new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',year:'numeric',month:'long',day:'numeric'}).format(now);
+  const dateShort=new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',month:'long',day:'numeric'}).format(now);
   function setText(el,text){if(el&&el.textContent!==text)el.textContent=text}
   function enhance(){
     setText(document.querySelector('#auditPortfolio'),'🩺 点击检查我的基金搭配');
     setText(document.querySelector('#save'),'💾 点击保存并开始跟踪');
-    setText(document.querySelector('#go'),'🧭 点击查看今天怎么做');
-    document.querySelectorAll('.btn.look').forEach(b=>setText(b,'点击更新今天情况'));
-    document.querySelectorAll('.btn.check').forEach(b=>setText(b,'点击更新今天持有 / 卖出建议'));
-    document.querySelectorAll('.btn.refresh').forEach(b=>setText(b,'点击更新今天情况'));
+    setText(document.querySelector('#go'),`🧭 点击查看 ${dateShort} 怎么做`);
+    document.querySelectorAll('.btn.look').forEach(b=>setText(b,`点击更新 ${dateShort} 情况`));
+    document.querySelectorAll('.btn.check').forEach(b=>setText(b,`点击更新 ${dateShort} 持有 / 卖出建议`));
+    document.querySelectorAll('.btn.refresh').forEach(b=>setText(b,`点击更新 ${dateShort} 情况`));
     document.querySelectorAll('.btn.bought').forEach(b=>setText(b,'✍️ 已买入？点这里填写持仓'));
     document.querySelectorAll('.btn.saveb').forEach(b=>setText(b,'保存预算'));
     document.querySelectorAll('.btn.add').forEach(b=>{
@@ -16,6 +19,15 @@
     });
     document.querySelectorAll('.btn.del').forEach(b=>setText(b,'删除这只'));
     document.querySelectorAll('.btn.delw').forEach(b=>setText(b,'移出关注'));
+    document.querySelectorAll('.answer .a1').forEach(el=>{
+      if(/今天最简单的结论|今日建议/.test(el.textContent)) setText(el,`今日建议 · ${dateFull}`);
+    });
+    document.querySelectorAll('.answer .a3 b').forEach(el=>{
+      if(/今天怎么做/.test(el.textContent)) setText(el,`${dateShort}怎么做：`);
+    });
+    document.querySelectorAll('.today-tip b').forEach(el=>{
+      if(/今天/.test(el.textContent)) setText(el,`${dateShort}提醒：`);
+    });
   }
   function addGuide(){
     const tabs=document.querySelector('.tabs');

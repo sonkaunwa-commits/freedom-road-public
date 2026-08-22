@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="fund-assistant-release" content="FUND_ASSISTANT_UI_20260822_1825">
+<title>基金小帮手</title>
+<style>html,body{margin:0;background:#fff7f4;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}.loading{max-width:680px;margin:auto;padding:44px 20px;font-size:18px;line-height:1.8;color:#5f4c48}</style>
+</head>
+<body data-release="FUND_ASSISTANT_UI_20260822_1825"><div class="loading">正在打开基金小帮手…</div>
+<script>
+(async()=>{try{
+  const r=await fetch('v9.html?base=20260822-1825&t='+Date.now(),{cache:'no-store'});
+  if(!r.ok)throw new Error('页面读取失败');
+  let html=await r.text();
+  // Remove the legacy 16:38 behavior layer from the base document. V11 is the only behavior owner.
+  html=html.replace('<script src="v9-buttons.js?build=20260822-direct"></script>','');
+  html=html.replace('</head>','<link rel="stylesheet" href="v9-buttons.css?build=20260822-1825"><link rel="stylesheet" href="v10-release-r20260822-1800.css?asset=20260822-1825"></head>');
+  html=html.replace('</body>','<script src="v11-release-r20260822-1825.js"><\\/script></body>');
+  document.open();document.write(html);document.close();
+}catch(e){document.body.innerHTML='<div class="loading">页面暂时没有加载成功，请重新打开。<br>'+String(e.message||e)+'</div>'}})();
+</script>
+</body>
+</html>

@@ -23,34 +23,42 @@ jobs:
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
-      - name: Verify static publication boundary
+      - name: Verify static publication boundary and current release
         shell: bash
         run: |
           set -euo pipefail
           test -f site/index.html
           test -f site/latest/manifest.json
           test -f site/publication.json
+          test -f site/fund-assistant/index.html
+          test -f site/fund-assistant/release.json
+          test -f site/fund-assistant/v9.html
+          test -f site/securities-exam/index.html
+          test -f site/investment-advisor-exam/index.html
           if find site -type l -print -quit | grep -q .; then
             echo 'Symlinks are not allowed in the public site.' >&2
             exit 1
           fi
           python3 -m json.tool site/latest/manifest.json >/dev/null
           python3 -m json.tool site/publication.json >/dev/null
-          python3 -m json.tool site/fund-assistant/release.json >/dev/null
-          test -f site/fund-assistant/index.html
-          test -f site/fund-assistant/release.json
-          test -f site/fund-assistant/app-r20260822-1812.html
-          test -f site/fund-assistant/release-ui-r20260822-1812.js
-          test -f site/fund-assistant/v9.html
-          test -f site/fund-assistant/v9-buttons.css
-          test -f site/fund-assistant/v9-buttons-r20260822-1706.js
-          test -f site/fund-assistant/v10-release-r20260822-1800.js
-          test -f site/fund-assistant/v10-release-r20260822-1800.css
-          test -f site/securities-exam/index.html
-          test -f site/investment-advisor-exam/index.html
-          grep -Fq 'FUND_ASSISTANT_BOOTSTRAP_20260822_1812' site/fund-assistant/index.html
-          grep -Fq 'FUND_ASSISTANT_UI_20260822_1812' site/fund-assistant/app-r20260822-1812.html
-          grep -Fq 'app-r20260822-1812.html' site/fund-assistant/release.json
+          python3 - <<'PY'
+          import json,re
+          from pathlib import Path
+          base=Path('site/fund-assistant')
+          x=json.loads((base/'release.json').read_text(encoding='utf-8'))
+          entry=x['entry']; release=x['release']; version=x['version']
+          ep=base/entry
+          assert ep.is_file(), f'missing current entry: {entry}'
+          body=ep.read_text(encoding='utf-8')
+          assert release in body, f'entry missing release marker: {release}'
+          assets=sorted(set(re.findall(r'[A-Za-z0-9._-]+\.(?:html|js|css)', body)))
+          for asset in assets:
+              p=base/asset
+              assert p.is_file(), f'missing release asset: {asset}'
+          print(f'Current fund release: {version} -> {entry}')
+          print('Assets:', ', '.join(assets))
+          PY
+          grep -Fq 'FUND_ASSISTANT_BOOTSTRAP_' site/fund-assistant/index.html
           grep -Fq 'securities-exam' site/ks/index.html
           grep -Fq 'investment-advisor-exam' site/tg/index.html
 
@@ -73,46 +81,28 @@ jobs:
   smoke:
     needs: deploy
     runs-on: ubuntu-latest
-    timeout-minutes: 7
+    timeout-minutes: 8
     steps:
       - uses: actions/checkout@v4
-      - name: Verify public endpoints
+      - name: Verify live current release and public endpoints
         shell: bash
         run: |
           set -euo pipefail
           base='https://sonkaunwa-commits.github.io/freedom-road-public'
-          paths=(
-            ''
-            'latest/manifest.json'
-            'publication.json'
-            'fund-assistant/'
-            'fund-assistant/release.json'
-            'fund-assistant/app-r20260822-1812.html'
-            'fund-assistant/release-ui-r20260822-1812.js'
-            'fund-assistant/v9-buttons-r20260822-1706.js'
-            'fund-assistant/v10-release-r20260822-1800.js'
-            'fund-assistant/v10-release-r20260822-1800.css'
-            'fund-assistant/v9-buttons.css'
-            'securities-exam/'
-            'investment-advisor-exam/'
-            'ks/'
-            'tg/'
-          )
-          for path in "${paths[@]}"; do
-            ok=false
-            for attempt in {1..18}; do
-              if curl -fsSL --max-time 20 --retry 2 "$base/$path?smoke=${GITHUB_SHA}-${attempt}" >/dev/null; then
-                ok=true
-                break
-              fi
+          local_release='site/fund-assistant/release.json'
+          version="$(python3 -c "import json;print(json.load(open('$local_release'))['version'])")"
+          release="$(python3 -c "import json;print(json.load(open('$local_release'))['release'])")"
+          entry="$(python3 -c "import json;print(json.load(open('$local_release'))['entry'])")"
+
+          verify_url() {
+            local path="$1"
+            for attempt in {1..24}; do
+              if curl -fsSL --max-time 20 --retry 2 "$base/$path?smoke=${GITHUB_SHA}-${attempt}" >/dev/null; then return 0; fi
               sleep 5
             done
-            if [[ "$ok" != true ]]; then
-              echo "Endpoint failed: $path" >&2
-              exit 1
-            fi
-          done
-
+            echo "Endpoint failed: $path" >&2
+            return 1
+          }
           verify_content() {
             local path="$1" pattern="$2" name="$3"
             local body
@@ -122,35 +112,47 @@ jobs:
               exit 1
             fi
           }
-          verify_content 'fund-assistant/' 'FUND_ASSISTANT_BOOTSTRAP_20260822_1812' 'fund assistant bootstrap'
-          verify_content 'fund-assistant/release.json' 'app-r20260822-1812.html' 'fund assistant release manifest'
-          verify_content 'fund-assistant/app-r20260822-1812.html' 'FUND_ASSISTANT_UI_20260822_1812' 'fund assistant immutable app'
-          verify_content 'fund-assistant/release-ui-r20260822-1812.js' "VERSION='08/22 18:12'" 'fund assistant visible release marker'
-          verify_content 'fund-assistant/v10-release-r20260822-1800.js' 'Fund assistant V10 release layer' 'fund assistant V10 behavior layer'
-          verify_content 'fund-assistant/v10-release-r20260822-1800.css' 'V10 visual hierarchy' 'fund assistant V10 visual layer'
-          verify_content 'fund-assistant/v9.html' 'v9-core.js' 'fund assistant app base'
+
+          for path in '' 'latest/manifest.json' 'publication.json' 'fund-assistant/' 'fund-assistant/release.json' "fund-assistant/$entry" 'securities-exam/' 'investment-advisor-exam/' 'ks/' 'tg/'; do verify_url "$path"; done
+
+          python3 - <<'PY' > /tmp/fund-assets.txt
+          import json,re
+          from pathlib import Path
+          base=Path('site/fund-assistant')
+          x=json.loads((base/'release.json').read_text(encoding='utf-8'))
+          body=(base/x['entry']).read_text(encoding='utf-8')
+          for asset in sorted(set(re.findall(r'[A-Za-z0-9._-]+\.(?:html|js|css)', body))): print(asset)
+          PY
+          while IFS= read -r asset; do verify_url "fund-assistant/$asset"; done < /tmp/fund-assets.txt
+
+          verify_content 'fund-assistant/' 'FUND_ASSISTANT_BOOTSTRAP_' 'fund assistant bootstrap'
+          verify_content 'fund-assistant/release.json' "$release" 'fund assistant release manifest'
+          verify_content "fund-assistant/$entry" "$release" 'fund assistant current immutable app'
           verify_content 'ks/' 'securities-exam' 'securities short entry'
           verify_content 'tg/' 'investment-advisor-exam' 'advisor short entry'
           verify_content 'securities-exam/' '证券从业 2026' 'securities app'
           verify_content 'investment-advisor-exam/' '证券投资顾问 2026' 'advisor app'
+
+          cat > /tmp/fund-release-status.txt <<EOF
+          status=ok
+          deployed_sha=${GITHUB_SHA}
+          release=${release}
+          version=${version}
+          url=https://sonkaunwa-commits.github.io/freedom-road-public/fund-assistant/
+          entry=${entry}
+          verified_at=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
+          EOF
 
       - name: Record successful live verification
         shell: bash
         run: |
           set -euo pipefail
           mkdir -p release-status
-          cat > release-status/fund-assistant.txt <<EOF
-          status=ok
-          deployed_sha=${GITHUB_SHA}
-          release=FUND_ASSISTANT_UI_20260822_1812
-          url=https://sonkaunwa-commits.github.io/freedom-road-public/fund-assistant/
-          entry=app-r20260822-1812.html
-          verified_at=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
-          EOF
+          cp /tmp/fund-release-status.txt release-status/fund-assistant.txt
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add release-status/fund-assistant.txt
           if ! git diff --cached --quiet; then
-            git commit -m 'status: fund assistant 1812 live verification passed'
+            git commit -m 'status: current fund assistant live verification passed'
             git push
           fi

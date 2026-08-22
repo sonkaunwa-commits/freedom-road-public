@@ -17,7 +17,7 @@
   if(!r.ok)throw new Error('页面读取失败');
   let html=await r.text();
   html=html.replace('</head>','<link rel="stylesheet" href="v9-buttons.css?build=20260822-1800"><link rel="stylesheet" href="v10-release-r20260822-1800.css"></head>');
-  html=html.replace('</body>','<script src="v9-market-r20260822-1706.js"><\\/script><script src="v9-buttons-r20260822-1706.js"><\\/script><script src="v10-release-r20260822-1800.js"><\\/script></body>');
+  html=html.replace('</body>','<script src="v10-release-r20260822-1800.js"><\\/script><script src="v9-buttons-r20260822-1706.js"><\\/script></body>');
   document.open();document.write(html);document.close();
 }catch(e){document.body.innerHTML='<div class="loading">页面暂时没有加载成功，请重新打开。<br>'+String(e.message||e)+'</div>'}})();
 </script></body>

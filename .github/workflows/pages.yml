@@ -9,7 +9,7 @@ on:
       - .github/workflows/pages.yml
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -70,6 +70,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 7
     steps:
+      - uses: actions/checkout@v4
       - name: Verify public endpoints
         shell: bash
         run: |
@@ -122,3 +123,23 @@ jobs:
           verify_content 'tg/' 'investment-advisor-exam' 'advisor short entry'
           verify_content 'securities-exam/' '证券从业 2026' 'securities app'
           verify_content 'investment-advisor-exam/' '证券投资顾问 2026' 'advisor app'
+
+      - name: Record successful live verification
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p release-status
+          cat > release-status/fund-assistant.txt <<EOF
+          status=ok
+          deployed_sha=${GITHUB_SHA}
+          release=FUND_ASSISTANT_UI_20260822_1706
+          url=https://sonkaunwa-commits.github.io/freedom-road-public/fund-assistant/
+          verified_at=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
+          EOF
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add release-status/fund-assistant.txt
+          if ! git diff --cached --quiet; then
+            git commit -m 'status: fund assistant live verification passed'
+            git push
+          fi

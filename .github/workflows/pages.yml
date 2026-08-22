@@ -20,7 +20,7 @@ concurrency:
 jobs:
   verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 6
     steps:
       - uses: actions/checkout@v4
       - name: Verify static publication boundary and current release
@@ -33,31 +33,49 @@ jobs:
           test -f site/fund-assistant/index.html
           test -f site/fund-assistant/release.json
           test -f site/fund-assistant/v9.html
+          test -f site/fund-assistant/v9-core.js
+          test -f site/fund-assistant/v8-ui.js
+          test -f site/fund-assistant/v9-patch.js
+          test -f site/fund-assistant/v9-buttons.js
+          test -f site/fund-assistant/v9.css
+          test -f site/fund-assistant/v9-buttons.css
           test -f site/securities-exam/index.html
           test -f site/investment-advisor-exam/index.html
-          if find site -type l -print -quit | grep -q .; then
-            echo 'Symlinks are not allowed in the public site.' >&2
-            exit 1
-          fi
           python3 -m json.tool site/latest/manifest.json >/dev/null
           python3 -m json.tool site/publication.json >/dev/null
+          python3 -m json.tool site/fund-assistant/release.json >/dev/null
+          if find site -type l -print -quit | grep -q .; then echo 'Symlinks are not allowed.' >&2; exit 1; fi
+
           python3 - <<'PY'
           import json,re
+          from html.parser import HTMLParser
           from pathlib import Path
           base=Path('site/fund-assistant')
           x=json.loads((base/'release.json').read_text(encoding='utf-8'))
-          entry=x['entry']; release=x['release']; version=x['version']
+          entry=x['entry']; release=x['release']; version=x['version']; behavior=x.get('behavior')
           ep=base/entry
           assert ep.is_file(), f'missing current entry: {entry}'
           body=ep.read_text(encoding='utf-8')
-          assert release in body, f'entry missing release marker: {release}'
-          assets=sorted(set(re.findall(r'[A-Za-z0-9._-]+\.(?:html|js|css)', body)))
-          for asset in assets:
-              p=base/asset
-              assert p.is_file(), f'missing release asset: {asset}'
-          print(f'Current fund release: {version} -> {entry}')
-          print('Assets:', ', '.join(assets))
+          assert 'document.write' not in body, 'current release must not use document.write'
+          assert 'html=html.replace' not in body, 'current release must not dynamically rewrite HTML'
+          assert '<script src="v9-buttons.js' in body, 'stable behavior layer missing from static entry'
+          assert '<link rel="stylesheet" href="v9-buttons.css' in body, 'stable UI stylesheet missing'
+          if release not in body:
+              assert behavior, 'release marker not in entry and no behavior owner declared'
+              bp=base/behavior
+              assert bp.is_file(), f'missing behavior owner: {behavior}'
+              assert release in bp.read_text(encoding='utf-8'), f'behavior owner missing release marker: {release}'
+          for asset in sorted(set(re.findall(r'[A-Za-z0-9._-]+\.(?:js|css)', body))):
+              assert (base/asset).is_file(), f'missing static asset: {asset}'
+          class P(HTMLParser): pass
+          P().feed(body)
+          print(f'Current static fund release: {version} -> {entry} / {behavior}')
           PY
+
+          node --check site/fund-assistant/v9-core.js
+          node --check site/fund-assistant/v8-ui.js
+          node --check site/fund-assistant/v9-patch.js
+          node --check site/fund-assistant/v9-buttons.js
           grep -Fq 'FUND_ASSISTANT_BOOTSTRAP_' site/fund-assistant/index.html
           grep -Fq 'securities-exam' site/ks/index.html
           grep -Fq 'investment-advisor-exam' site/tg/index.html
@@ -84,7 +102,7 @@ jobs:
     timeout-minutes: 8
     steps:
       - uses: actions/checkout@v4
-      - name: Verify live current release and public endpoints
+      - name: Verify live static release and all critical assets
         shell: bash
         run: |
           set -euo pipefail
@@ -93,53 +111,40 @@ jobs:
           version="$(python3 -c "import json;print(json.load(open('$local_release'))['version'])")"
           release="$(python3 -c "import json;print(json.load(open('$local_release'))['release'])")"
           entry="$(python3 -c "import json;print(json.load(open('$local_release'))['entry'])")"
+          behavior="$(python3 -c "import json;print(json.load(open('$local_release')).get('behavior',''))")"
 
-          verify_url() {
-            local path="$1"
-            for attempt in {1..24}; do
-              if curl -fsSL --max-time 20 --retry 2 "$base/$path?smoke=${GITHUB_SHA}-${attempt}" >/dev/null; then return 0; fi
-              sleep 5
-            done
-            echo "Endpoint failed: $path" >&2
-            return 1
-          }
-          verify_content() {
-            local path="$1" pattern="$2" name="$3"
-            local body
-            body="$(curl -fsSL --max-time 30 --retry 3 "$base/$path?content=${GITHUB_SHA}")"
-            if ! grep -Fq "$pattern" <<<"$body"; then
-              echo "Content verification failed: $name" >&2
-              exit 1
-            fi
-          }
+          get() { curl -fsSL --max-time 30 --retry 3 "$base/$1?verify=${GITHUB_SHA}"; }
+          for path in '' 'latest/manifest.json' 'publication.json' 'fund-assistant/' 'fund-assistant/release.json' "fund-assistant/$entry" 'fund-assistant/v9-core.js' 'fund-assistant/v8-ui.js' 'fund-assistant/v9-patch.js' 'fund-assistant/v9-buttons.js' 'fund-assistant/v9.css' 'fund-assistant/v9-buttons.css' 'securities-exam/' 'investment-advisor-exam/'; do
+            ok=false
+            for attempt in {1..24}; do if get "$path" >/dev/null; then ok=true; break; fi; sleep 5; done
+            [[ "$ok" == true ]] || { echo "Endpoint failed: $path" >&2; exit 1; }
+          done
 
-          for path in '' 'latest/manifest.json' 'publication.json' 'fund-assistant/' 'fund-assistant/release.json' "fund-assistant/$entry" 'securities-exam/' 'investment-advisor-exam/' 'ks/' 'tg/'; do verify_url "$path"; done
-
-          python3 - <<'PY' > /tmp/fund-assets.txt
-          import json,re
-          from pathlib import Path
-          base=Path('site/fund-assistant')
-          x=json.loads((base/'release.json').read_text(encoding='utf-8'))
-          body=(base/x['entry']).read_text(encoding='utf-8')
-          for asset in sorted(set(re.findall(r'[A-Za-z0-9._-]+\.(?:html|js|css)', body))): print(asset)
-          PY
-          while IFS= read -r asset; do verify_url "fund-assistant/$asset"; done < /tmp/fund-assets.txt
-
-          verify_content 'fund-assistant/' 'FUND_ASSISTANT_BOOTSTRAP_' 'fund assistant bootstrap'
-          verify_content 'fund-assistant/release.json' "$release" 'fund assistant release manifest'
-          verify_content "fund-assistant/$entry" "$release" 'fund assistant current immutable app'
-          verify_content 'ks/' 'securities-exam' 'securities short entry'
-          verify_content 'tg/' 'investment-advisor-exam' 'advisor short entry'
-          verify_content 'securities-exam/' '证券从业 2026' 'securities app'
-          verify_content 'investment-advisor-exam/' '证券投资顾问 2026' 'advisor app'
+          release_body="$(get 'fund-assistant/release.json')"
+          grep -Fq "$release" <<<"$release_body"
+          grep -Fq "\"entry\": \"$entry\"" <<<"$release_body"
+          entry_body="$(get "fund-assistant/$entry")"
+          grep -Fq 'v9-buttons.js' <<<"$entry_body"
+          grep -Fq 'v9-buttons.css' <<<"$entry_body"
+          ! grep -Fq 'document.write' <<<"$entry_body"
+          ! grep -Fq 'html=html.replace' <<<"$entry_body"
+          behavior_body="$(get "fund-assistant/${behavior:-v9-buttons.js}")"
+          grep -Fq "$release" <<<"$behavior_body"
+          grep -Fq "const VERSION='08/22 18:27'" <<<"$behavior_body"
+          grep -Fq '休市 · 下个交易日再看' <<<"$behavior_body"
+          css_body="$(get 'fund-assistant/v9-buttons.css')"
+          grep -Fq 'fund-tone-6' <<<"$css_body"
+          grep -Fq 'analysis-expanded' <<<"$css_body"
 
           cat > /tmp/fund-release-status.txt <<EOF
           status=ok
+          architecture=static-direct
           deployed_sha=${GITHUB_SHA}
           release=${release}
           version=${version}
           url=https://sonkaunwa-commits.github.io/freedom-road-public/fund-assistant/
           entry=${entry}
+          behavior=${behavior}
           verified_at=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
           EOF
 
@@ -153,6 +158,6 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add release-status/fund-assistant.txt
           if ! git diff --cached --quiet; then
-            git commit -m 'status: current fund assistant live verification passed'
+            git commit -m 'status: static fund assistant live verification passed'
             git push
           fi

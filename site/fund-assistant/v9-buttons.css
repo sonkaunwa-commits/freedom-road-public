@@ -1,4 +1,4 @@
-/* Button clarity layer for older users: actions must look clickable, tips must not. */
+/* Fund assistant V12 stable UI: buttons + candidate differentiation + expanded analysis hierarchy. */
 :root{--action:#a92f28;--action-dark:#72201c;--action-border:#7f241f;--soft-border:#d8aaa5}
 button{font-family:inherit;-webkit-tap-highlight-color:transparent}
 .ui-version{display:inline-block;margin-top:5px;padding:3px 7px;border-radius:999px;background:#fff;border:1px solid #dfc2bd;color:#7c5d58;font-size:12px;font-weight:800;letter-spacing:.1px}
@@ -9,12 +9,33 @@ button{font-family:inherit;-webkit-tap-highlight-color:transparent}
 .buttons{align-items:stretch}.buttons .btn.look,.buttons .btn.check,.buttons .btn.refresh{flex:1 1 100%;font-size:18px;min-height:56px}.buttons .btn.secondary{flex:1 1 46%}
 #auditPortfolio,#save,#go{font-size:18px;min-height:58px;margin-top:16px}
 #auditPortfolio::after,#save::after,#go::after,.btn.look::after,.btn.check::after,.btn.refresh::after{content:"  ›";font-size:23px;line-height:0;vertical-align:-1px}
-.btn.look::before,.btn.refresh::before{content:"↻  "}.btn.check::before{content:"📊  "}.btn.saveb::before{content:"💰  "}
 .chip{border:2px solid #d7aaa5;background:#fff;color:#6f3934;box-shadow:0 2px 0 #ecd7d3;cursor:pointer;font-weight:800;min-height:42px}.chip:active{transform:translateY(1px);box-shadow:none;background:#fff5f3}
 .voice{border:2px solid #b95b53;background:#fff;color:#8e2a24;box-shadow:0 3px 0 #e2beb9,0 6px 12px rgba(80,38,32,.08);cursor:pointer}.voice:active{transform:translateY(2px);box-shadow:0 1px 0 #d7aaa5}.voice.on{box-shadow:0 3px 0 #711f1b}
-/* Information cards are deliberately flat so they do not look tappable. */
 .today-tip,.notice,.risk,.eta,.protect,.watch-explain,.forecast-card,.audit,.profile,.profile-missing,.forecast-strip{box-shadow:none!important;cursor:default}.today-tip{border-left:5px solid #d28b83}.notice,.eta,.protect,.forecast-card,.watch-explain{border-left:4px solid rgba(120,78,70,.18)}
 .tap-guide{margin:7px 0 2px;padding:10px 12px;border-radius:13px;background:#fff;border:1px dashed #d7aaa5;color:#62504c;font-size:14px;line-height:1.65}.tap-guide b{color:#8d2c26}.tap-guide .primary-demo{display:inline-block;background:#a92f28;color:#fff;border-radius:7px;padding:2px 7px;font-weight:900;margin:0 2px}.tap-guide .secondary-demo{display:inline-block;background:#fff;color:#8d2c26;border:2px solid #c78179;border-radius:7px;padding:0 6px;font-weight:900;margin:0 2px}
 .click-note{font-size:13px;color:#8a6a65;margin-top:6px;font-weight:700}
-@media(max-width:520px){.tab{min-height:61px;font-size:15px}.tab::before{font-size:18px}.btn{width:100%;min-height:54px;font-size:17px}.buttons{display:grid;grid-template-columns:1fr;gap:10px}.buttons .btn,.buttons .btn.secondary{width:100%;flex:auto}.chip{font-size:14px;padding:10px 13px}.tap-guide{font-size:13px}.voice{min-height:56px}}
+
+/* Six core candidates are visually distinct, while keeping a restrained palette. */
+#pool .fund{position:relative;border-width:2px!important;border-style:solid!important;border-left-width:7px!important;border-radius:20px!important;box-shadow:0 8px 20px rgba(86,45,39,.07)!important;overflow:hidden}
+#pool .fund.fund-tone-1{background:#fff9f7!important;border-color:#b83b32!important}
+#pool .fund.fund-tone-2{background:#fffaf1!important;border-color:#c98532!important}
+#pool .fund.fund-tone-3{background:#fff7fb!important;border-color:#a55579!important}
+#pool .fund.fund-tone-4{background:#f9f7ff!important;border-color:#7165aa!important}
+#pool .fund.fund-tone-5{background:#f6f9ff!important;border-color:#5d7fa6!important}
+#pool .fund.fund-tone-6{background:#fff8f2!important;border-color:#9a6548!important}
+#pool .fund .v10-num{width:34px;height:34px;min-width:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:900;color:#fff;box-shadow:0 2px 5px rgba(0,0,0,.12)}
+#pool .fund.fund-tone-1 .v10-num{background:#b83b32}#pool .fund.fund-tone-2 .v10-num{background:#c98532}#pool .fund.fund-tone-3 .v10-num{background:#a55579}#pool .fund.fund-tone-4 .v10-num{background:#7165aa}#pool .fund.fund-tone-5 .v10-num{background:#5d7fa6}#pool .fund.fund-tone-6 .v10-num{background:#9a6548}
+
+/* Expanded live analysis is broken into clearly readable blocks. */
+.analysis-fresh{margin:0 0 14px;padding:12px 14px;border-radius:14px;background:#5c2d29;color:#fff;display:flex;flex-direction:column;gap:3px;box-shadow:0 3px 0 #3e201d}.analysis-fresh b{font-size:17px}.analysis-fresh span{font-size:14px;opacity:.92}
+.analysis-expanded{background:#fff!important;border:2px solid #e0c3be!important;border-radius:20px!important;padding:16px!important;box-shadow:0 8px 24px rgba(76,40,34,.09)!important;margin-top:14px!important}
+.analysis-expanded .answer{margin-top:12px!important;padding:16px!important;border:2px solid #e7b8b2!important;border-left:6px solid #b7352d!important;border-radius:16px!important;background:#fff5f3!important}.analysis-expanded .answer .a1{font-size:14px!important;font-weight:900!important;color:#8f504a!important}.analysis-expanded .answer .a2{font-size:25px!important;line-height:1.25!important;color:#6e211c!important;margin:6px 0 10px!important}.analysis-expanded .answer .a3{line-height:1.75!important;margin-top:8px!important}
+.analysis-expanded .forecast-card{margin-top:14px!important;padding:15px!important;border:1px solid #ecd89b!important;border-left:6px solid #c99a2e!important;border-radius:16px!important;background:#fffaf0!important}
+.analysis-expanded .profile{margin-top:14px!important;padding:15px!important;border:1px solid #d8d1f0!important;border-left:6px solid #7165aa!important;border-radius:16px!important;background:#faf9ff!important}
+.analysis-expanded .metrics{margin-top:14px!important;padding:12px!important;border:1px solid #e4d6d2!important;border-radius:16px!important;background:#fcfbfa!important}
+.analysis-expanded .plan{margin-top:14px!important;padding:15px!important;border:1px solid #ead1cc!important;border-left:6px solid #b95c52!important;border-radius:16px!important;background:#fffdfc!important}.analysis-expanded .plan h3{margin-top:0!important;color:#7e2c26!important;font-size:18px!important}.analysis-expanded .plan + .plan{border-left-color:#9a6548!important;background:#fffaf6!important}
+.analysis-expanded .protect{margin-top:14px!important;padding:15px!important;border:1px solid #ead8a9!important;border-left:6px solid #c28a30!important;border-radius:16px!important;background:#fffbef!important}.analysis-expanded .why{margin-top:14px!important;border:1px solid #ded6d3!important;border-radius:14px!important;background:#fafafa!important;padding:4px 12px 12px!important}.analysis-expanded .why summary{font-weight:900!important;color:#5b4743!important;padding:10px 0!important}.analysis-expanded .chart{margin-top:14px!important;padding:12px!important;border:1px solid #d9c7c3!important;border-radius:16px!important;background:#fff!important}.analysis-expanded .source{margin-top:14px!important;padding:12px!important;border-radius:12px!important;background:#f5f2f1!important;color:#75615d!important}
+.market-closed-card .answer{border-color:#e5d5a9!important;border-left-color:#b98b35!important;background:#fffaf0!important}.market-closed-card .answer .a2{color:#8a6423!important}.closed-tip{background:#fff7df!important;border:1px solid #e6c87b!important;border-left:6px solid #c4952d!important;color:#5f4a1f!important;line-height:1.75!important}
+
+@media(max-width:520px){.tab{min-height:61px;font-size:15px}.tab::before{font-size:18px}.btn{width:100%;min-height:54px;font-size:17px}.buttons{display:grid;grid-template-columns:1fr;gap:10px}.buttons .btn,.buttons .btn.secondary{width:100%;flex:auto}.chip{font-size:14px;padding:10px 13px}.tap-guide{font-size:13px}.voice{min-height:56px}#pool .fund{border-radius:17px!important;border-left-width:6px!important}.analysis-expanded{padding:12px!important;border-radius:17px!important}.analysis-expanded .answer,.analysis-expanded .forecast-card,.analysis-expanded .profile,.analysis-expanded .plan,.analysis-expanded .protect{padding:13px!important}.analysis-expanded .answer .a2{font-size:23px!important}.analysis-fresh{padding:11px 12px!important}}
 @media(prefers-reduced-motion:reduce){.btn,.tab,.chip,.voice{transition:none!important}}

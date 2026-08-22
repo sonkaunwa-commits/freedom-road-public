@@ -1,5 +1,5 @@
 status=ok
-deployed_sha=9377058b00f04b12b08c6de82af8a03b1b85d34b
-release=FUND_ASSISTANT_UI_20260822_1706
+deployed_sha=0ab606d9de26b0a40fe522e0697d1af17c763e34
+release=FUND_ASSISTANT_UI_20260822_1800
 url=https://sonkaunwa-commits.github.io/freedom-road-public/fund-assistant/
-verified_at=2026-08-22T09:35:23Z
+verified_at=2026-08-22T10:04:38Z

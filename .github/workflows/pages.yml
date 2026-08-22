@@ -15,7 +15,7 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   verify:
@@ -38,11 +38,14 @@ jobs:
           python3 -m json.tool site/publication.json >/dev/null
           test -f site/fund-assistant/index.html
           test -f site/fund-assistant/v9.html
+          test -f site/fund-assistant/v9-accessible.html
           test -f site/fund-assistant/v9-buttons.css
-          test -f site/fund-assistant/v9-buttons.js
+          test -f site/fund-assistant/v9-market-r20260822-1706.js
+          test -f site/fund-assistant/v9-buttons-r20260822-1706.js
           test -f site/securities-exam/index.html
           test -f site/investment-advisor-exam/index.html
-          grep -Fq 'FUND_ASSISTANT_ENTRY_' site/fund-assistant/index.html
+          grep -Fq 'FUND_ASSISTANT_ENTRY_20260822_1706' site/fund-assistant/index.html
+          grep -Fq 'FUND_ASSISTANT_UI_20260822_1706' site/fund-assistant/v9-accessible.html
           grep -Fq 'securities-exam' site/ks/index.html
           grep -Fq 'investment-advisor-exam' site/tg/index.html
 
@@ -65,7 +68,7 @@ jobs:
   smoke:
     needs: deploy
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 7
     steps:
       - name: Verify public endpoints
         shell: bash
@@ -77,6 +80,10 @@ jobs:
             'latest/manifest.json'
             'publication.json'
             'fund-assistant/'
+            'fund-assistant/v9-accessible.html'
+            'fund-assistant/v9-market-r20260822-1706.js'
+            'fund-assistant/v9-buttons-r20260822-1706.js'
+            'fund-assistant/v9-buttons.css'
             'securities-exam/'
             'investment-advisor-exam/'
             'ks/'
@@ -84,7 +91,7 @@ jobs:
           )
           for path in "${paths[@]}"; do
             ok=false
-            for attempt in {1..12}; do
+            for attempt in {1..18}; do
               if curl -fsSL --max-time 20 --retry 2 "$base/$path?smoke=${GITHUB_SHA}-${attempt}" >/dev/null; then
                 ok=true
                 break
@@ -106,7 +113,10 @@ jobs:
               exit 1
             fi
           }
-          verify_content 'fund-assistant/' 'FUND_ASSISTANT_ENTRY_' 'fund assistant entry'
+          verify_content 'fund-assistant/' 'FUND_ASSISTANT_ENTRY_20260822_1706' 'fund assistant entry'
+          verify_content 'fund-assistant/v9-accessible.html' 'FUND_ASSISTANT_UI_20260822_1706' 'fund assistant accessible shell'
+          verify_content 'fund-assistant/v9-market-r20260822-1706.js' 'immutable release 2026-08-22 17:06 CST' 'fund assistant trading-day guard'
+          verify_content 'fund-assistant/v9-buttons-r20260822-1706.js' "UI_VERSION='08/22 17:06'" 'fund assistant button/date layer'
           verify_content 'fund-assistant/v9.html' 'v9-core.js' 'fund assistant app'
           verify_content 'ks/' 'securities-exam' 'securities short entry'
           verify_content 'tg/' 'investment-advisor-exam' 'advisor short entry'

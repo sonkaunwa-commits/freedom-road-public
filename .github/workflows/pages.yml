@@ -36,19 +36,21 @@ jobs:
           fi
           python3 -m json.tool site/latest/manifest.json >/dev/null
           python3 -m json.tool site/publication.json >/dev/null
+          python3 -m json.tool site/fund-assistant/release.json >/dev/null
           test -f site/fund-assistant/index.html
+          test -f site/fund-assistant/release.json
+          test -f site/fund-assistant/app-r20260822-1812.html
+          test -f site/fund-assistant/release-ui-r20260822-1812.js
           test -f site/fund-assistant/v9.html
-          test -f site/fund-assistant/v9-accessible.html
           test -f site/fund-assistant/v9-buttons.css
           test -f site/fund-assistant/v9-buttons-r20260822-1706.js
           test -f site/fund-assistant/v10-release-r20260822-1800.js
           test -f site/fund-assistant/v10-release-r20260822-1800.css
           test -f site/securities-exam/index.html
           test -f site/investment-advisor-exam/index.html
-          grep -Fq 'FUND_ASSISTANT_ENTRY_20260822_1800' site/fund-assistant/index.html
-          grep -Fq 'FUND_ASSISTANT_UI_20260822_1800' site/fund-assistant/v9-accessible.html
-          grep -Fq 'v10-release-r20260822-1800.js' site/fund-assistant/v9-accessible.html
-          grep -Fq 'v10-release-r20260822-1800.css' site/fund-assistant/v9-accessible.html
+          grep -Fq 'FUND_ASSISTANT_BOOTSTRAP_20260822_1812' site/fund-assistant/index.html
+          grep -Fq 'FUND_ASSISTANT_UI_20260822_1812' site/fund-assistant/app-r20260822-1812.html
+          grep -Fq 'app-r20260822-1812.html' site/fund-assistant/release.json
           grep -Fq 'securities-exam' site/ks/index.html
           grep -Fq 'investment-advisor-exam' site/tg/index.html
 
@@ -84,7 +86,9 @@ jobs:
             'latest/manifest.json'
             'publication.json'
             'fund-assistant/'
-            'fund-assistant/v9-accessible.html'
+            'fund-assistant/release.json'
+            'fund-assistant/app-r20260822-1812.html'
+            'fund-assistant/release-ui-r20260822-1812.js'
             'fund-assistant/v9-buttons-r20260822-1706.js'
             'fund-assistant/v10-release-r20260822-1800.js'
             'fund-assistant/v10-release-r20260822-1800.css'
@@ -118,11 +122,13 @@ jobs:
               exit 1
             fi
           }
-          verify_content 'fund-assistant/' 'FUND_ASSISTANT_ENTRY_20260822_1800' 'fund assistant entry'
-          verify_content 'fund-assistant/v9-accessible.html' 'FUND_ASSISTANT_UI_20260822_1800' 'fund assistant accessible shell'
+          verify_content 'fund-assistant/' 'FUND_ASSISTANT_BOOTSTRAP_20260822_1812' 'fund assistant bootstrap'
+          verify_content 'fund-assistant/release.json' 'app-r20260822-1812.html' 'fund assistant release manifest'
+          verify_content 'fund-assistant/app-r20260822-1812.html' 'FUND_ASSISTANT_UI_20260822_1812' 'fund assistant immutable app'
+          verify_content 'fund-assistant/release-ui-r20260822-1812.js' "VERSION='08/22 18:12'" 'fund assistant visible release marker'
           verify_content 'fund-assistant/v10-release-r20260822-1800.js' 'Fund assistant V10 release layer' 'fund assistant V10 behavior layer'
           verify_content 'fund-assistant/v10-release-r20260822-1800.css' 'V10 visual hierarchy' 'fund assistant V10 visual layer'
-          verify_content 'fund-assistant/v9.html' 'v9-core.js' 'fund assistant app'
+          verify_content 'fund-assistant/v9.html' 'v9-core.js' 'fund assistant app base'
           verify_content 'ks/' 'securities-exam' 'securities short entry'
           verify_content 'tg/' 'investment-advisor-exam' 'advisor short entry'
           verify_content 'securities-exam/' '证券从业 2026' 'securities app'
@@ -136,14 +142,15 @@ jobs:
           cat > release-status/fund-assistant.txt <<EOF
           status=ok
           deployed_sha=${GITHUB_SHA}
-          release=FUND_ASSISTANT_UI_20260822_1800
+          release=FUND_ASSISTANT_UI_20260822_1812
           url=https://sonkaunwa-commits.github.io/freedom-road-public/fund-assistant/
+          entry=app-r20260822-1812.html
           verified_at=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
           EOF
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add release-status/fund-assistant.txt
           if ! git diff --cached --quiet; then
-            git commit -m 'status: fund assistant V10 live verification passed'
+            git commit -m 'status: fund assistant 1812 live verification passed'
             git push
           fi

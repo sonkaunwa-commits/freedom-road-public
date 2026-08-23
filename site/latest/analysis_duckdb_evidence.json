@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-22T00:01:57.736369+08:00",
+  "generated_at": "2026-08-24T06:45:53.771352+08:00",
   "schema_version": 1,
   "status": "RESEARCH_ONLY",
   "tool": {
@@ -41,7 +41,7 @@
       "positive_20d_pct": 33.33,
       "median_return_20d_pct": -1.7319,
       "median_return_60d_pct": -14.6856,
-      "median_realized_vol_20d_annualized_pct": 39.4118,
+      "median_realized_vol_20d_annualized_pct": 39.4119,
       "median_drawdown_60d_pct": -22.637
     },
     {
@@ -67,10 +67,10 @@
       "above_ma60_pct": 25.0,
       "positive_20d_count": 2,
       "positive_20d_pct": 50.0,
-      "median_return_20d_pct": 1.1078,
-      "median_return_60d_pct": -18.1716,
-      "median_realized_vol_20d_annualized_pct": 35.1498,
-      "median_drawdown_60d_pct": -19.2739
+      "median_return_20d_pct": 0.9913,
+      "median_return_60d_pct": -18.3893,
+      "median_realized_vol_20d_annualized_pct": 35.0651,
+      "median_drawdown_60d_pct": -19.4924
     }
   ],
   "symbols": [
@@ -79,7 +79,7 @@
       "market": "A",
       "scope": "candidate_seed",
       "trade_date": "2026-08-21",
-      "close": 76.35,
+      "close": 76.349998,
       "return_20d_pct": -10.5029,
       "return_60d_pct": 14.9676,
       "distance_ma20_pct": -0.1635,
@@ -105,7 +105,7 @@
       "market": "A",
       "scope": "candidate_seed",
       "trade_date": "2026-08-21",
-      "close": 714.43,
+      "close": 714.429993,
       "return_20d_pct": -5.6235,
       "return_60d_pct": 8.4112,
       "distance_ma20_pct": -1.6594,
@@ -118,7 +118,7 @@
       "market": "A",
       "scope": "candidate_seed",
       "trade_date": "2026-08-21",
-      "close": 59.03,
+      "close": 59.029999,
       "return_20d_pct": -0.5392,
       "return_60d_pct": -23.2878,
       "distance_ma20_pct": -5.0736,
@@ -157,7 +157,7 @@
       "market": "A",
       "scope": "research_core",
       "trade_date": "2026-08-21",
-      "close": 54.65,
+      "close": 54.650002,
       "return_20d_pct": -9.8036,
       "return_60d_pct": -24.9313,
       "distance_ma20_pct": -4.0049,
@@ -222,13 +222,13 @@
       "market": "A",
       "scope": "research_core",
       "trade_date": "2026-08-21",
-      "close": 34.74,
+      "close": 34.740002,
       "return_20d_pct": 10.2507,
       "return_60d_pct": 13.1228,
       "distance_ma20_pct": 4.4341,
       "distance_ma60_pct": 14.7848,
       "drawdown_60d_pct": -2.0028,
-      "realized_vol_20d_annualized_pct": 43.5646
+      "realized_vol_20d_annualized_pct": 43.5647
     },
     {
       "code": "00700.HK",
@@ -313,52 +313,52 @@
       "market": "US",
       "scope": "us_research",
       "trade_date": "2026-08-21",
-      "close": 13.105,
-      "return_20d_pct": 8.1271,
-      "return_60d_pct": -16.9518,
-      "distance_ma20_pct": 1.9983,
-      "distance_ma60_pct": 0.7463,
-      "drawdown_60d_pct": -15.6692,
-      "realized_vol_20d_annualized_pct": 41.1312
+      "close": 13.05,
+      "return_20d_pct": 7.6733,
+      "return_60d_pct": -17.3004,
+      "distance_ma20_pct": 1.592,
+      "distance_ma60_pct": 0.3306,
+      "drawdown_60d_pct": -16.0232,
+      "realized_vol_20d_annualized_pct": 41.0203
     },
     {
       "code": "NIO",
       "market": "US",
       "scope": "us_research",
       "trade_date": "2026-08-21",
-      "close": 4.635,
-      "return_20d_pct": 3.2294,
-      "return_60d_pct": -19.3913,
-      "distance_ma20_pct": -0.5525,
-      "distance_ma60_pct": -6.2958,
-      "drawdown_60d_pct": -22.8785,
-      "realized_vol_20d_annualized_pct": 30.9105
+      "close": 4.63,
+      "return_20d_pct": 3.118,
+      "return_60d_pct": -19.4783,
+      "distance_ma20_pct": -0.6544,
+      "distance_ma60_pct": -6.3953,
+      "drawdown_60d_pct": -22.9617,
+      "realized_vol_20d_annualized_pct": 30.8114
     },
     {
       "code": "RLX",
       "market": "US",
       "scope": "us_research",
       "trade_date": "2026-08-21",
-      "close": 1.805,
-      "return_20d_pct": -11.0837,
-      "return_60d_pct": -8.8384,
-      "distance_ma20_pct": -7.3052,
-      "distance_ma60_pct": -8.0372,
-      "drawdown_60d_pct": -12.8019,
-      "realized_vol_20d_annualized_pct": 28.6159
+      "close": 1.81,
+      "return_20d_pct": -10.8374,
+      "return_60d_pct": -8.5859,
+      "distance_ma20_pct": -7.0603,
+      "distance_ma60_pct": -7.7864,
+      "drawdown_60d_pct": -12.5604,
+      "realized_vol_20d_annualized_pct": 28.6703
     },
     {
       "code": "XPEV",
       "market": "US",
       "scope": "us_research",
       "trade_date": "2026-08-21",
-      "close": 12.205,
-      "return_20d_pct": -1.0138,
-      "return_60d_pct": -25.8055,
-      "distance_ma20_pct": 0.1415,
-      "distance_ma60_pct": -9.1186,
-      "drawdown_60d_pct": -31.7775,
-      "realized_vol_20d_annualized_pct": 39.3891
+      "close": 12.19,
+      "return_20d_pct": -1.1354,
+      "return_60d_pct": -25.8967,
+      "distance_ma20_pct": 0.0246,
+      "distance_ma60_pct": -9.2286,
+      "drawdown_60d_pct": -31.8614,
+      "realized_vol_20d_annualized_pct": 39.3187
     }
   ],
   "interpretation": "These are descriptive historical breadth and regime metrics, not forecasts or trading instructions."

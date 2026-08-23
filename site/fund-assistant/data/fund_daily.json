@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-22T00:02:41+08:00",
+  "generated_at": "2026-08-24T07:52:17+08:00",
   "source": "东方财富/天天基金公开数据（AKShare封装）",
-  "count": 23894,
+  "count": 23899,
   "funds": [
     {
       "code": "012703",
@@ -35595,7 +35595,7 @@
     },
     {
       "code": "001830",
-      "name": "融通跨界成长灵活配置混合",
+      "name": "融通跨界成长灵活配置混合A",
       "nav": 1.529,
       "prev_nav": null,
       "day_return": 1.06,
@@ -97109,7 +97109,7 @@
       "nav": 1.0477,
       "prev_nav": null,
       "day_return": 0.11,
-      "buy_status": "开放申购",
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.08%"
     },
@@ -98549,7 +98549,7 @@
       "nav": 1.0215,
       "prev_nav": null,
       "day_return": 0.1,
-      "buy_status": "开放申购",
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },
@@ -133729,7 +133729,7 @@
       "nav": 1.0447,
       "prev_nav": null,
       "day_return": 0.0,
-      "buy_status": "限大额",
+      "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.10%"
     },
@@ -140796,6 +140796,16 @@
     {
       "code": "026451",
       "name": "天弘稳益优选混合C",
+      "nav": 1.0,
+      "prev_nav": null,
+      "day_return": 0.0,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
+      "code": "027017",
+      "name": "中航祥瑞债券发起C",
       "nav": 1.0,
       "prev_nav": null,
       "day_return": 0.0,
@@ -155729,7 +155739,7 @@
       "nav": 1.0295,
       "prev_nav": null,
       "day_return": -0.01,
-      "buy_status": "开放申购",
+      "buy_status": "暂停申购",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },
@@ -168919,8 +168929,8 @@
       "nav": 1.0312,
       "prev_nav": null,
       "day_return": -0.02,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
       "fee": "0.30%"
     },
     {
@@ -169099,7 +169109,7 @@
       "nav": 1.0293,
       "prev_nav": null,
       "day_return": -0.02,
-      "buy_status": "开放申购",
+      "buy_status": "暂停申购",
       "sell_status": "开放赎回",
       "fee": "0.04%"
     },
@@ -171379,7 +171389,7 @@
       "nav": 1.236,
       "prev_nav": null,
       "day_return": -0.03,
-      "buy_status": "限大额",
+      "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.08%"
     },
@@ -171399,7 +171409,7 @@
       "nav": 1.2288,
       "prev_nav": null,
       "day_return": -0.03,
-      "buy_status": "限大额",
+      "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },
@@ -171409,7 +171419,7 @@
       "nav": 1.2261,
       "prev_nav": null,
       "day_return": -0.03,
-      "buy_status": "限大额",
+      "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },
@@ -179625,7 +179635,7 @@
     },
     {
       "code": "001470",
-      "name": "融通通鑫灵活配置混合",
+      "name": "融通通鑫灵活配置混合A",
       "nav": 3.137,
       "prev_nav": null,
       "day_return": -0.06,
@@ -186959,8 +186969,8 @@
       "nav": 1.1463,
       "prev_nav": null,
       "day_return": -0.14,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
       "fee": "0.80%"
     },
     {
@@ -200759,7 +200769,7 @@
       "nav": 1.3009,
       "prev_nav": null,
       "day_return": -0.54,
-      "buy_status": "限大额",
+      "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },
@@ -217859,8 +217869,8 @@
       "nav": 2.5341,
       "prev_nav": null,
       "day_return": null,
-      "buy_status": "",
-      "sell_status": "",
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
       "fee": "0.50%"
     },
     {
@@ -220160,7 +220170,7 @@
       "prev_nav": null,
       "day_return": null,
       "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
+      "sell_status": "开放赎回",
       "fee": "0.08%"
     },
     {
@@ -223344,6 +223354,16 @@
       "fee": "0.00%"
     },
     {
+      "code": "028248",
+      "name": "华夏国证航天航空行业ETF联接C",
+      "nav": 1.0,
+      "prev_nav": null,
+      "day_return": null,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.00%"
+    },
+    {
       "code": "027559",
       "name": "创金合信稳进鑫禧混合A",
       "nav": 1.0,
@@ -223352,6 +223372,26 @@
       "buy_status": "封闭期",
       "sell_status": "封闭期",
       "fee": "0.05%"
+    },
+    {
+      "code": "028613",
+      "name": "广发中证细分化工产业主题指数发起式A",
+      "nav": 1.0,
+      "prev_nav": null,
+      "day_return": null,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.03%"
+    },
+    {
+      "code": "028614",
+      "name": "广发中证细分化工产业主题指数发起式C",
+      "nav": 1.0,
+      "prev_nav": null,
+      "day_return": null,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.00%"
     },
     {
       "code": "027972",
@@ -223452,6 +223492,26 @@
       "buy_status": "封闭期",
       "sell_status": "封闭期",
       "fee": "0.00%"
+    },
+    {
+      "code": "028247",
+      "name": "华夏国证航天航空行业ETF联接A",
+      "nav": 1.0,
+      "prev_nav": null,
+      "day_return": null,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.03%"
+    },
+    {
+      "code": "028378",
+      "name": "浙商汇金沪港深医疗创新混合型发起式",
+      "nav": 1.0,
+      "prev_nav": null,
+      "day_return": null,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.08%"
     },
     {
       "code": "026549",
@@ -230156,16 +230216,6 @@
     {
       "code": "026930",
       "name": "明亚稳健配置三个月持有期混合(FOF)C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
-    },
-    {
-      "code": "027017",
-      "name": "中航祥瑞债券发起C",
       "nav": null,
       "prev_nav": null,
       "day_return": null,

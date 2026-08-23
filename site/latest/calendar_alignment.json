@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-22T00:01:36.025525+08:00",
+  "generated_at": "2026-08-24T06:45:31.147576+08:00",
   "schema_version": 1,
   "status": "RESEARCH_ONLY",
   "tool": {
@@ -39,8 +39,8 @@
     {
       "market": "US",
       "calendar": "NYSE",
-      "last_completed_session": "2026-08-20",
-      "next_or_current_unfinished_session": "2026-08-21",
+      "last_completed_session": "2026-08-21",
+      "next_or_current_unfinished_session": "2026-08-24",
       "symbols": 4,
       "missing_history": 0,
       "stale_symbols": 0,
@@ -234,7 +234,7 @@
       "scope": "us_research",
       "calendar": "NYSE",
       "latest_history_date": "2026-08-21",
-      "last_completed_session": "2026-08-20",
+      "last_completed_session": "2026-08-21",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
     },
@@ -244,7 +244,7 @@
       "scope": "us_research",
       "calendar": "NYSE",
       "latest_history_date": "2026-08-21",
-      "last_completed_session": "2026-08-20",
+      "last_completed_session": "2026-08-21",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
     },
@@ -254,7 +254,7 @@
       "scope": "us_research",
       "calendar": "NYSE",
       "latest_history_date": "2026-08-21",
-      "last_completed_session": "2026-08-20",
+      "last_completed_session": "2026-08-21",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
     },
@@ -264,7 +264,7 @@
       "scope": "us_research",
       "calendar": "NYSE",
       "latest_history_date": "2026-08-21",
-      "last_completed_session": "2026-08-20",
+      "last_completed_session": "2026-08-21",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
     }

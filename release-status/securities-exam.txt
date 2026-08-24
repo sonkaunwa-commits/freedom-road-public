@@ -1,6 +1,6 @@
 status=ok
 architecture=exam-prep-system-v1
-deployed_sha=a7a93a1f8eed6da9f282edc18c023a1762ada1af
+deployed_sha=732ea7e8d4b2e1cea12bca3428639ece14160d1f
 version=3.5.0
 ui=PM-V1
 plan=adaptive-nonempty
@@ -9,4 +9,4 @@ review=explanation-error-attribution-spaced
 accounts=two-local-profiles
 source_count=17
 url=https://sonkaunwa-commits.github.io/freedom-road-public/ks/
-verified_at=2026-08-24T11:25:15Z
+verified_at=2026-08-24T17:08:49Z

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-24T07:52:17+08:00",
+  "generated_at": "2026-08-24T16:32:00+08:00",
   "method_version": "fund-screen-v2.0",
   "goal": "持续跟踪6-12个月高弹性候选；不承诺收益，不预测必然涨幅",
   "selection_policy": "核心池固定跟踪6只；仅在评分明显恶化、中期趋势转负、暂停申购或更优候选持续胜出时替换",
@@ -80,7 +80,7 @@
       "tracking": {
         "first_seen": "2026-08-18T21:59:00+08:00",
         "days_tracked": 7,
-        "refresh_count": 11,
+        "refresh_count": 12,
         "score_history": [
           {
             "at": "2026-08-18T21:59:00+08:00",
@@ -136,6 +136,11 @@
             "at": "2026-08-24T07:52:56+08:00",
             "score": 92.9,
             "action": "第一买入区"
+          },
+          {
+            "at": "2026-08-24T16:32:23+08:00",
+            "score": 92.9,
+            "action": "第一买入区"
           }
         ]
       },
@@ -157,16 +162,7 @@
       ],
       "deep_analysis": {
         "overview": {
-          "fund_type": "混合型-灵活",
-          "asset_scale": null,
-          "share_scale": "16.0424亿份（截止至：2026年06月30日）",
-          "manager": "杨宗昌",
-          "company": "易方达基金",
-          "成立日期": "2017年01月25日",
-          "benchmark": "中证800指数收益率*85%+中债-新综合财富(总值)指数收益率*15%",
-          "tracking_target": "该基金无跟踪标的",
-          "management_fee": "1.20%（每年）",
-          "custody_fee": "0.20%（每年）"
+          "error": "overview: ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
         },
         "risk": {
           "period": "近1年",
@@ -293,19 +289,19 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-08-24T07:53:30+08:00"
+        "updated_at": "2026-08-24T16:39:39+08:00"
       },
       "profile": {
-        "fund_type": "混合型-灵活",
+        "fund_type": null,
         "asset_scale": null,
-        "share_scale": "16.0424亿份（截止至：2026年06月30日）",
-        "manager": "杨宗昌",
-        "company": "易方达基金",
-        "成立日期": "2017年01月25日",
-        "benchmark": "中证800指数收益率*85%+中债-新综合财富(总值)指数收益率*15%",
-        "tracking_index": "该基金无跟踪标的",
-        "management_fee": "1.20%（每年）",
-        "custody_fee": "0.20%（每年）",
+        "share_scale": null,
+        "manager": null,
+        "company": null,
+        "成立日期": null,
+        "benchmark": null,
+        "tracking_index": null,
+        "management_fee": null,
+        "custody_fee": null,
         "holdings": [
           {
             "name": "华峰测控",
@@ -387,19 +383,10 @@
           }
         ],
         "industry_period": "2026-06-30",
-        "manager_details": [
-          {
-            "name": "杨宗昌",
-            "company": "易方达基金",
-            "career_days": 2680.0,
-            "current_aum_yi": 146.82,
-            "best_return": 816.8
-          }
-        ]
+        "manager_details": []
       },
       "risk": "近1年历史最大回撤约16.2%；波动很大，短期涨跌可能比较猛；前十大股票占比约59%，集中度中等。历史数据不代表未来。",
       "deep_plain": [
-        "基金经理：杨宗昌",
         "历史任意时点持有满1年的盈利概率约66%（仅作历史统计，不是未来预测）"
       ]
     },
@@ -470,7 +457,7 @@
       "tracking": {
         "first_seen": "2026-08-18T21:59:00+08:00",
         "days_tracked": 7,
-        "refresh_count": 11,
+        "refresh_count": 12,
         "score_history": [
           {
             "at": "2026-08-18T21:59:00+08:00",
@@ -524,6 +511,11 @@
           },
           {
             "at": "2026-08-24T07:52:56+08:00",
+            "score": 97.2,
+            "action": "等待回调"
+          },
+          {
+            "at": "2026-08-24T16:32:23+08:00",
             "score": 97.2,
             "action": "等待回调"
           }
@@ -675,7 +667,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-08-24T07:53:35+08:00"
+        "updated_at": "2026-08-24T16:39:45+08:00"
       },
       "profile": {
         "fund_type": "股票型",
@@ -848,7 +840,7 @@
       "tracking": {
         "first_seen": "2026-08-18T21:59:00+08:00",
         "days_tracked": 7,
-        "refresh_count": 11,
+        "refresh_count": 12,
         "score_history": [
           {
             "at": "2026-08-18T21:59:00+08:00",
@@ -902,6 +894,11 @@
           },
           {
             "at": "2026-08-24T07:52:56+08:00",
+            "score": 98.1,
+            "action": "继续等买点"
+          },
+          {
+            "at": "2026-08-24T16:32:23+08:00",
             "score": 98.1,
             "action": "继续等买点"
           }
@@ -1053,7 +1050,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-08-24T07:53:39+08:00"
+        "updated_at": "2026-08-24T16:39:51+08:00"
       },
       "profile": {
         "fund_type": "股票型",
@@ -1226,7 +1223,7 @@
       "tracking": {
         "first_seen": "2026-08-18T21:59:00+08:00",
         "days_tracked": 7,
-        "refresh_count": 11,
+        "refresh_count": 12,
         "score_history": [
           {
             "at": "2026-08-18T21:59:00+08:00",
@@ -1280,6 +1277,11 @@
           },
           {
             "at": "2026-08-24T07:52:56+08:00",
+            "score": 77.8,
+            "action": "继续等买点"
+          },
+          {
+            "at": "2026-08-24T16:32:23+08:00",
             "score": 77.8,
             "action": "继续等买点"
           }
@@ -1427,7 +1429,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-08-24T07:53:44+08:00"
+        "updated_at": "2026-08-24T16:39:57+08:00"
       },
       "profile": {
         "fund_type": "QDII-普通股票",
@@ -1596,7 +1598,7 @@
       "tracking": {
         "first_seen": "2026-08-19T00:00:59+08:00",
         "days_tracked": 6,
-        "refresh_count": 10,
+        "refresh_count": 11,
         "score_history": [
           {
             "at": "2026-08-19T00:00:59+08:00",
@@ -1645,6 +1647,11 @@
           },
           {
             "at": "2026-08-24T07:52:56+08:00",
+            "score": 88.4,
+            "action": "第二买入区"
+          },
+          {
+            "at": "2026-08-24T16:32:23+08:00",
             "score": 88.4,
             "action": "第二买入区"
           }
@@ -1796,7 +1803,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-08-24T07:53:49+08:00"
+        "updated_at": "2026-08-24T16:40:03+08:00"
       },
       "profile": {
         "fund_type": "混合型-偏股",
@@ -1916,8 +1923,8 @@
         "ytd": 68.34
       },
       "latest_nav": 3.3396,
-      "estimate_nav": 3.3363,
-      "estimate_return": -0.21,
+      "estimate_nav": 3.2815,
+      "estimate_return": -1.74,
       "day_return": -0.11,
       "buy_status": "开放申购",
       "position": "强势回撤，重点等买点",
@@ -1969,7 +1976,7 @@
       "tracking": {
         "first_seen": "2026-08-19T00:00:59+08:00",
         "days_tracked": 6,
-        "refresh_count": 10,
+        "refresh_count": 11,
         "score_history": [
           {
             "at": "2026-08-19T00:00:59+08:00",
@@ -2018,6 +2025,11 @@
           },
           {
             "at": "2026-08-24T07:52:56+08:00",
+            "score": 84.4,
+            "action": "继续等买点"
+          },
+          {
+            "at": "2026-08-24T16:32:23+08:00",
             "score": 84.4,
             "action": "继续等买点"
           }
@@ -2164,7 +2176,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-08-24T07:53:54+08:00"
+        "updated_at": "2026-08-24T16:40:09+08:00"
       },
       "profile": {
         "fund_type": "指数型-股票",
@@ -2337,7 +2349,7 @@
       "tracking": {
         "first_seen": "2026-08-22T00:03:32+08:00",
         "days_tracked": 3,
-        "refresh_count": 2,
+        "refresh_count": 3,
         "score_history": [
           {
             "at": "2026-08-22T00:03:32+08:00",
@@ -2346,6 +2358,11 @@
           },
           {
             "at": "2026-08-24T07:52:56+08:00",
+            "score": 85.4,
+            "action": "继续等买点"
+          },
+          {
+            "at": "2026-08-24T16:32:23+08:00",
             "score": 85.4,
             "action": "继续等买点"
           }
@@ -2485,7 +2502,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-08-24T07:53:59+08:00"
+        "updated_at": "2026-08-24T16:40:16+08:00"
       },
       "profile": {
         "fund_type": "QDII-混合偏股",
@@ -2594,7 +2611,7 @@
       ]
     }
   ],
-  "deep_enriched_at": "2026-08-24T07:53:59+08:00",
+  "deep_enriched_at": "2026-08-24T16:40:16+08:00",
   "deep_method": "overview+risk_drawdown+historical_profit_probability+latest_disclosed_holdings+industry+fees+manager",
   "profile_note": "基金持仓和行业配置来自最新可获得的定期报告披露，不是实时持仓。"
 }

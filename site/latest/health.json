@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-24T14:13:03.908468+08:00",
+  "updated_at": "2026-08-24T16:32:23.207721+08:00",
   "mode": "all",
   "counts": {
     "a_share_ok": 7,
@@ -20,16 +20,14 @@
     "domestic_gold_reference_expected": 1
   },
   "minute": {
-    "status": "unavailable",
-    "provider": "tushare:a_minutes",
+    "status": "fresh",
+    "provider": "yfinance:a_minutes",
     "expected_codes": 7,
-    "covered_codes": 0,
-    "coverage_ratio": 0.0,
-    "expected_latest_bar_at": "2026-08-24T14:13:00+08:00",
-    "latest_bar_at": null,
-    "fresh_codes": [],
-    "stale_codes": [],
-    "missing_codes": [
+    "covered_codes": 7,
+    "coverage_ratio": 1.0,
+    "expected_latest_bar_at": "2026-08-24T15:00:00+08:00",
+    "latest_bar_at": "2026-08-24T14:59:00+08:00",
+    "fresh_codes": [
       "600006.SH",
       "002085.SZ",
       "002475.SZ",
@@ -38,7 +36,60 @@
       "601899.SH",
       "300059.SZ"
     ],
+    "stale_codes": [],
+    "missing_codes": [],
     "max_lag_minutes": 6,
+    "rows": 2033,
+    "probe": false,
+    "elapsed_ms": 1018.8,
+    "per_symbol": {
+      "600006.SH": {
+        "symbol": "600006.SS",
+        "status": "ok",
+        "rows": 239,
+        "latest_bar_at": "2026-08-24T14:57:00+08:00"
+      },
+      "002085.SZ": {
+        "symbol": "002085.SZ",
+        "status": "ok",
+        "rows": 330,
+        "latest_bar_at": "2026-08-24T14:59:00+08:00"
+      },
+      "002475.SZ": {
+        "symbol": "002475.SZ",
+        "status": "ok",
+        "rows": 330,
+        "latest_bar_at": "2026-08-24T14:59:00+08:00"
+      },
+      "601138.SH": {
+        "symbol": "601138.SS",
+        "status": "ok",
+        "rows": 237,
+        "latest_bar_at": "2026-08-24T14:57:00+08:00"
+      },
+      "002600.SZ": {
+        "symbol": "002600.SZ",
+        "status": "ok",
+        "rows": 330,
+        "latest_bar_at": "2026-08-24T14:59:00+08:00"
+      },
+      "601899.SH": {
+        "symbol": "601899.SS",
+        "status": "ok",
+        "rows": 238,
+        "latest_bar_at": "2026-08-24T14:57:00+08:00"
+      },
+      "300059.SZ": {
+        "symbol": "300059.SZ",
+        "status": "ok",
+        "rows": 329,
+        "latest_bar_at": "2026-08-24T14:59:00+08:00"
+      }
+    },
+    "provider_errors": [],
+    "result_policy": "metadata_only_no_minute_rows_persisted",
+    "promotion_status": "PUBLIC_FALLBACK_PILOT",
+    "source_note": "Yahoo Finance 1-minute public fallback promoted after live 7/7 freshness evidence; primary Tushare/AKShare/TDX chain remains preferred.",
     "attempts": [
       {
         "status": "unavailable",
@@ -46,7 +97,7 @@
         "expected_codes": 7,
         "covered_codes": 0,
         "coverage_ratio": 0.0,
-        "expected_latest_bar_at": "2026-08-24T14:13:00+08:00",
+        "expected_latest_bar_at": "2026-08-24T15:00:00+08:00",
         "latest_bar_at": null,
         "max_lag_minutes": 6,
         "fresh_codes": [],
@@ -67,7 +118,7 @@
         "expected_codes": 7,
         "covered_codes": 0,
         "coverage_ratio": 0.0,
-        "expected_latest_bar_at": "2026-08-24T14:13:00+08:00",
+        "expected_latest_bar_at": "2026-08-24T15:00:00+08:00",
         "latest_bar_at": null,
         "max_lag_minutes": 6,
         "fresh_codes": [],
@@ -88,7 +139,7 @@
         "expected_codes": 7,
         "covered_codes": 0,
         "coverage_ratio": 0.0,
-        "expected_latest_bar_at": "2026-08-24T14:13:00+08:00",
+        "expected_latest_bar_at": "2026-08-24T15:00:00+08:00",
         "latest_bar_at": null,
         "max_lag_minutes": 6,
         "fresh_codes": [],
@@ -102,8 +153,30 @@
           "601899.SH",
           "300059.SZ"
         ]
+      },
+      {
+        "status": "fresh",
+        "provider": "yfinance:a_minutes",
+        "expected_codes": 7,
+        "covered_codes": 7,
+        "coverage_ratio": 1.0,
+        "expected_latest_bar_at": "2026-08-24T15:00:00+08:00",
+        "latest_bar_at": "2026-08-24T14:59:00+08:00",
+        "max_lag_minutes": 6,
+        "fresh_codes": [
+          "600006.SH",
+          "002085.SZ",
+          "002475.SZ",
+          "601138.SH",
+          "002600.SZ",
+          "601899.SH",
+          "300059.SZ"
+        ],
+        "stale_codes": [],
+        "missing_codes": []
       }
-    ]
+    ],
+    "trade_date": "20260824"
   },
   "bank_accumulation_gold": {
     "status": "private_source_required",
@@ -352,6 +425,6 @@
     }
   ],
   "coverage_ok": true,
-  "intraday_a_share_ok": false,
-  "run_id": "c84ce2e6bdef0cf6"
+  "intraday_a_share_ok": true,
+  "run_id": "c680c6544f2d61e6"
 }

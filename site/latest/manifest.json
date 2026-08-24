@@ -1,66 +1,66 @@
 {
-  "generated_at": "2026-08-24T14:19:02.381072+08:00",
+  "generated_at": "2026-08-24T16:37:07.129683+08:00",
   "schema_version": 8,
   "datasets": {
     "tracked_market.json": {
       "exists": true,
-      "updated_at": "2026-08-24T14:13:03.908468+08:00",
-      "bytes": 25687
+      "updated_at": "2026-08-24T16:32:23.207721+08:00",
+      "bytes": 25666
     },
     "funds.json": {
       "exists": true,
-      "updated_at": "2026-08-24T14:13:03.908468+08:00",
+      "updated_at": "2026-08-24T16:32:23.207721+08:00",
       "bytes": 595401
     },
     "gold.json": {
       "exists": true,
-      "updated_at": "2026-08-24T14:13:03.908468+08:00",
+      "updated_at": "2026-08-24T16:32:23.207721+08:00",
       "bytes": 953902
     },
     "candidate_pool.json": {
       "exists": true,
-      "updated_at": "2026-08-20T17:13:21.103649+08:00",
-      "bytes": 15308
+      "updated_at": "2026-08-24T16:24:12.531140+08:00",
+      "bytes": 16299
     },
     "health.json": {
       "exists": true,
-      "updated_at": "2026-08-24T14:13:03.908468+08:00",
-      "bytes": 13048
+      "updated_at": "2026-08-24T16:32:23.207721+08:00",
+      "bytes": 15167
     },
     "analysis_stage1.json": {
       "exists": true,
-      "updated_at": "2026-08-24T14:17:30.676629+08:00",
-      "bytes": 18335
+      "updated_at": "2026-08-24T16:35:39.369320+08:00",
+      "bytes": 18348
     },
     "analysis_stage2_daily.json": {
       "exists": true,
-      "updated_at": "2026-08-24T14:18:52.280656+08:00",
-      "bytes": 657028
+      "updated_at": "2026-08-24T16:36:57.027070+08:00",
+      "bytes": 657026
     },
     "analysis_duckdb_evidence.json": {
       "exists": true,
-      "updated_at": "2026-08-24T14:18:58.234549+08:00",
-      "bytes": 10563
+      "updated_at": "2026-08-24T16:37:03.075672+08:00",
+      "bytes": 10552
     },
     "data_contracts.json": {
       "exists": true,
-      "updated_at": "2026-08-24T14:18:34.132504+08:00",
+      "updated_at": "2026-08-24T16:36:40.249974+08:00",
       "bytes": 5537
     },
     "calendar_alignment.json": {
       "exists": true,
-      "updated_at": "2026-08-24T14:18:34.726533+08:00",
+      "updated_at": "2026-08-24T16:36:40.906291+08:00",
       "bytes": 7777
     },
     "analysis_evidence_summary.json": {
       "exists": true,
-      "updated_at": "2026-08-24T14:19:01.707514+08:00",
-      "bytes": 10170
+      "updated_at": "2026-08-24T16:37:06.413725+08:00",
+      "bytes": 10173
     },
     "report_readiness.json": {
       "exists": true,
-      "updated_at": "2026-08-24T14:19:02.381072+08:00",
-      "bytes": 8265
+      "updated_at": "2026-08-24T16:37:07.129683+08:00",
+      "bytes": 8259
     }
   },
   "report_readiness": {
@@ -78,13 +78,13 @@
   },
   "analysis_engine": {
     "stage": "STAGE_1_RUNNING",
-    "generated_at": "2026-08-24T14:17:30.676629+08:00",
+    "generated_at": "2026-08-24T16:35:39.369320+08:00",
     "stage1_fund_ready": true,
     "stage1_a_share_history_ready": true,
     "stage2_vectorbt_daily_pilot_ready": true,
     "stage2_daily_pilot": {
       "status": "STAGE_2_DAILY_PILOT_RUNNING",
-      "generated_at": "2026-08-24T14:18:52.280656+08:00",
+      "generated_at": "2026-08-24T16:36:57.027070+08:00",
       "research_core_ready": true,
       "coverage": {
         "a_research_core_ok": 7,

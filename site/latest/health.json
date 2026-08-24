@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-24T18:14:53.744182+08:00",
+  "updated_at": "2026-08-24T18:24:36.107880+08:00",
   "mode": "all",
   "counts": {
     "a_share_ok": 7,
@@ -41,7 +41,7 @@
     "max_lag_minutes": 6,
     "rows": 1687,
     "probe": false,
-    "elapsed_ms": 5054.2,
+    "elapsed_ms": 5688.9,
     "per_symbol": {
       "600006.SH": {
         "symbol": "sh600006",
@@ -426,7 +426,7 @@
   ],
   "coverage_ok": true,
   "intraday_a_share_ok": true,
-  "run_id": "957b749a82e69c86",
+  "run_id": "aebb40c31f29d6f6",
   "hk_us_daily_fallback": {
     "status": "ready",
     "provider": "tencent_fqkline",

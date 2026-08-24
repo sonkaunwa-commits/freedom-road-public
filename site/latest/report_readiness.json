@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-24T18:19:38.998985+08:00",
+  "generated_at": "2026-08-24T18:27:21.150254+08:00",
   "schema_version": 6,
-  "source_health_updated_at": "2026-08-24T18:14:53.744182+08:00",
+  "source_health_updated_at": "2026-08-24T18:24:36.107880+08:00",
   "delivery_mode_17": "FULL_REPORT",
   "a_share_exact_action_gate": {
     "ready": true,
@@ -66,7 +66,7 @@
       "max_lag_minutes": 6,
       "rows": 1687,
       "probe": false,
-      "elapsed_ms": 5054.2,
+      "elapsed_ms": 5688.9,
       "per_symbol": {
         "600006.SH": {
           "symbol": "sh600006",
@@ -228,13 +228,13 @@
   },
   "analysis_engine": {
     "stage": "STAGE_1_RUNNING",
-    "generated_at": "2026-08-24T18:17:36.449723+08:00",
+    "generated_at": "2026-08-24T18:25:53.574152+08:00",
     "stage1_fund_ready": true,
     "stage1_a_share_history_ready": true,
     "stage2_vectorbt_daily_pilot_ready": true,
     "stage2_daily_pilot": {
       "status": "STAGE_2_DAILY_PILOT_RUNNING",
-      "generated_at": "2026-08-24T18:19:28.498286+08:00",
+      "generated_at": "2026-08-24T18:27:12.123928+08:00",
       "research_core_ready": true,
       "coverage": {
         "a_research_core_ok": 7,
@@ -306,7 +306,7 @@
   },
   "evidence_packet": {
     "status": "READY_RESEARCH_ONLY",
-    "generated_at": "2026-08-24T18:19:38.125582+08:00",
+    "generated_at": "2026-08-24T18:27:20.566243+08:00",
     "production_use": "RESEARCH_ONLY"
   },
   "content_contract": {
@@ -399,5 +399,5 @@
     "expected_latest_bar_at": "2026-08-24T15:00:00+08:00",
     "semantics": "This is a public market-data gate only. It never authorizes or executes a trade."
   },
-  "freshness_hardening_updated_at": "2026-08-24T18:19:39.087123+08:00"
+  "freshness_hardening_updated_at": "2026-08-24T18:27:21.214626+08:00"
 }

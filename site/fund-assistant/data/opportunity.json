@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-24T16:32:00+08:00",
+  "generated_at": "2026-08-24T18:24:28+08:00",
   "method_version": "fund-screen-v2.0",
   "goal": "持续跟踪6-12个月高弹性候选；不承诺收益，不预测必然涨幅",
   "selection_policy": "核心池固定跟踪6只；仅在评分明显恶化、中期趋势转负、暂停申购或更优候选持续胜出时替换",
@@ -11,7 +11,18 @@
     "status": "unavailable_or_insufficient_permission",
     "detail": "抱歉，您没有接口(fund_company)访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。"
   },
-  "warnings": [],
+  "warnings": [
+    {
+      "type": "pool_size_normalized",
+      "message": "核心候选池由7只强制校正为6只",
+      "removed": [
+        {
+          "code": "539002",
+          "name": "建信新兴市场混合(QDII)A"
+        }
+      ]
+    }
+  ],
   "funds": [
     {
       "code": "002910",
@@ -80,18 +91,8 @@
       "tracking": {
         "first_seen": "2026-08-18T21:59:00+08:00",
         "days_tracked": 7,
-        "refresh_count": 12,
+        "refresh_count": 14,
         "score_history": [
-          {
-            "at": "2026-08-18T21:59:00+08:00",
-            "score": 91,
-            "action": "先别追，等回调"
-          },
-          {
-            "at": "2026-08-19T00:00:59+08:00",
-            "score": 89.9,
-            "action": "继续等买点"
-          },
           {
             "at": "2026-08-19T07:55:30+08:00",
             "score": 89.9,
@@ -141,6 +142,16 @@
             "at": "2026-08-24T16:32:23+08:00",
             "score": 92.9,
             "action": "第一买入区"
+          },
+          {
+            "at": "2026-08-24T18:21:26+08:00",
+            "score": 92.9,
+            "action": "第一买入区"
+          },
+          {
+            "at": "2026-08-24T18:25:04+08:00",
+            "score": 92.9,
+            "action": "第一买入区"
           }
         ]
       },
@@ -162,7 +173,16 @@
       ],
       "deep_analysis": {
         "overview": {
-          "error": "overview: ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+          "fund_type": "混合型-灵活",
+          "asset_scale": null,
+          "share_scale": "16.0424亿份（截止至：2026年06月30日）",
+          "manager": "杨宗昌",
+          "company": "易方达基金",
+          "成立日期": "2017年01月25日",
+          "benchmark": "中证800指数收益率*85%+中债-新综合财富(总值)指数收益率*15%",
+          "tracking_target": "该基金无跟踪标的",
+          "management_fee": "1.20%（每年）",
+          "custody_fee": "0.20%（每年）"
         },
         "risk": {
           "period": "近1年",
@@ -289,19 +309,19 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-08-24T16:39:39+08:00"
+        "updated_at": "2026-08-24T18:25:38+08:00"
       },
       "profile": {
-        "fund_type": null,
+        "fund_type": "混合型-灵活",
         "asset_scale": null,
-        "share_scale": null,
-        "manager": null,
-        "company": null,
-        "成立日期": null,
-        "benchmark": null,
-        "tracking_index": null,
-        "management_fee": null,
-        "custody_fee": null,
+        "share_scale": "16.0424亿份（截止至：2026年06月30日）",
+        "manager": "杨宗昌",
+        "company": "易方达基金",
+        "成立日期": "2017年01月25日",
+        "benchmark": "中证800指数收益率*85%+中债-新综合财富(总值)指数收益率*15%",
+        "tracking_index": "该基金无跟踪标的",
+        "management_fee": "1.20%（每年）",
+        "custody_fee": "0.20%（每年）",
         "holdings": [
           {
             "name": "华峰测控",
@@ -383,10 +403,19 @@
           }
         ],
         "industry_period": "2026-06-30",
-        "manager_details": []
+        "manager_details": [
+          {
+            "name": "杨宗昌",
+            "company": "易方达基金",
+            "career_days": 2680.0,
+            "current_aum_yi": 146.82,
+            "best_return": 816.8
+          }
+        ]
       },
       "risk": "近1年历史最大回撤约16.2%；波动很大，短期涨跌可能比较猛；前十大股票占比约59%，集中度中等。历史数据不代表未来。",
       "deep_plain": [
+        "基金经理：杨宗昌",
         "历史任意时点持有满1年的盈利概率约66%（仅作历史统计，不是未来预测）"
       ]
     },
@@ -457,18 +486,8 @@
       "tracking": {
         "first_seen": "2026-08-18T21:59:00+08:00",
         "days_tracked": 7,
-        "refresh_count": 12,
+        "refresh_count": 14,
         "score_history": [
-          {
-            "at": "2026-08-18T21:59:00+08:00",
-            "score": 86,
-            "action": "重点观察，等止跌"
-          },
-          {
-            "at": "2026-08-19T00:00:59+08:00",
-            "score": 97.9,
-            "action": "等待回调"
-          },
           {
             "at": "2026-08-19T07:55:30+08:00",
             "score": 97.9,
@@ -516,6 +535,16 @@
           },
           {
             "at": "2026-08-24T16:32:23+08:00",
+            "score": 97.2,
+            "action": "等待回调"
+          },
+          {
+            "at": "2026-08-24T18:21:26+08:00",
+            "score": 97.2,
+            "action": "等待回调"
+          },
+          {
+            "at": "2026-08-24T18:25:04+08:00",
             "score": 97.2,
             "action": "等待回调"
           }
@@ -667,7 +696,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-08-24T16:39:45+08:00"
+        "updated_at": "2026-08-24T18:25:43+08:00"
       },
       "profile": {
         "fund_type": "股票型",
@@ -840,18 +869,8 @@
       "tracking": {
         "first_seen": "2026-08-18T21:59:00+08:00",
         "days_tracked": 7,
-        "refresh_count": 12,
+        "refresh_count": 14,
         "score_history": [
-          {
-            "at": "2026-08-18T21:59:00+08:00",
-            "score": 84,
-            "action": "高弹性观察，不急买"
-          },
-          {
-            "at": "2026-08-19T00:00:59+08:00",
-            "score": 98.2,
-            "action": "等待回调"
-          },
           {
             "at": "2026-08-19T07:55:30+08:00",
             "score": 98.2,
@@ -899,6 +918,16 @@
           },
           {
             "at": "2026-08-24T16:32:23+08:00",
+            "score": 98.1,
+            "action": "继续等买点"
+          },
+          {
+            "at": "2026-08-24T18:21:26+08:00",
+            "score": 98.1,
+            "action": "继续等买点"
+          },
+          {
+            "at": "2026-08-24T18:25:04+08:00",
             "score": 98.1,
             "action": "继续等买点"
           }
@@ -1050,7 +1079,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-08-24T16:39:51+08:00"
+        "updated_at": "2026-08-24T18:25:47+08:00"
       },
       "profile": {
         "fund_type": "股票型",
@@ -1160,21 +1189,21 @@
       "code": "017730",
       "name": "嘉实全球产业升级股票发起式(QDII)A",
       "category": "QDII",
-      "score": 77.8,
+      "score": 76.5,
       "returns": {
-        "1m": 1.74,
-        "3m": -1.66,
-        "6m": 43.24,
-        "1y": 98.99,
-        "3y": 262.92,
-        "ytd": 56.27
+        "1m": -5.48,
+        "3m": 0.91,
+        "6m": 44.18,
+        "1y": 101.23,
+        "3y": 255.0,
+        "ytd": 57.29
       },
-      "latest_nav": 4.044,
+      "latest_nav": 4.0704,
       "estimate_nav": null,
       "estimate_return": null,
-      "day_return": 0.81,
+      "day_return": 0.65,
       "buy_status": "限大额",
-      "position": "中性观察",
+      "position": "强势回撤，重点等买点",
       "broad_action": "watch",
       "history": {
         "nav_date": "2026-08-20",
@@ -1223,18 +1252,8 @@
       "tracking": {
         "first_seen": "2026-08-18T21:59:00+08:00",
         "days_tracked": 7,
-        "refresh_count": 12,
+        "refresh_count": 14,
         "score_history": [
-          {
-            "at": "2026-08-18T21:59:00+08:00",
-            "score": 82,
-            "action": "可跟踪，但注意限购"
-          },
-          {
-            "at": "2026-08-19T00:00:59+08:00",
-            "score": 89.2,
-            "action": "等待回调"
-          },
           {
             "at": "2026-08-19T07:55:30+08:00",
             "score": 89.2,
@@ -1283,6 +1302,16 @@
           {
             "at": "2026-08-24T16:32:23+08:00",
             "score": 77.8,
+            "action": "继续等买点"
+          },
+          {
+            "at": "2026-08-24T18:21:26+08:00",
+            "score": 76.5,
+            "action": "继续等买点"
+          },
+          {
+            "at": "2026-08-24T18:25:04+08:00",
+            "score": 76.5,
             "action": "继续等买点"
           }
         ]
@@ -1429,7 +1458,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-08-24T16:39:57+08:00"
+        "updated_at": "2026-08-24T18:25:52+08:00"
       },
       "profile": {
         "fund_type": "QDII-普通股票",
@@ -1598,13 +1627,8 @@
       "tracking": {
         "first_seen": "2026-08-19T00:00:59+08:00",
         "days_tracked": 6,
-        "refresh_count": 11,
+        "refresh_count": 13,
         "score_history": [
-          {
-            "at": "2026-08-19T00:00:59+08:00",
-            "score": 98.1,
-            "action": "等待回调"
-          },
           {
             "at": "2026-08-19T07:55:30+08:00",
             "score": 98.1,
@@ -1652,6 +1676,16 @@
           },
           {
             "at": "2026-08-24T16:32:23+08:00",
+            "score": 88.4,
+            "action": "第二买入区"
+          },
+          {
+            "at": "2026-08-24T18:21:26+08:00",
+            "score": 88.4,
+            "action": "第二买入区"
+          },
+          {
+            "at": "2026-08-24T18:25:04+08:00",
             "score": 88.4,
             "action": "第二买入区"
           }
@@ -1803,7 +1837,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-08-24T16:40:03+08:00"
+        "updated_at": "2026-08-24T18:25:56+08:00"
       },
       "profile": {
         "fund_type": "混合型-偏股",
@@ -1976,13 +2010,8 @@
       "tracking": {
         "first_seen": "2026-08-19T00:00:59+08:00",
         "days_tracked": 6,
-        "refresh_count": 11,
+        "refresh_count": 13,
         "score_history": [
-          {
-            "at": "2026-08-19T00:00:59+08:00",
-            "score": 95.2,
-            "action": "等待回调"
-          },
           {
             "at": "2026-08-19T07:55:30+08:00",
             "score": 95.2,
@@ -2030,6 +2059,16 @@
           },
           {
             "at": "2026-08-24T16:32:23+08:00",
+            "score": 84.4,
+            "action": "继续等买点"
+          },
+          {
+            "at": "2026-08-24T18:21:26+08:00",
+            "score": 84.4,
+            "action": "继续等买点"
+          },
+          {
+            "at": "2026-08-24T18:25:04+08:00",
             "score": 84.4,
             "action": "继续等买点"
           }
@@ -2176,7 +2215,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-08-24T16:40:09+08:00"
+        "updated_at": "2026-08-24T18:26:00+08:00"
       },
       "profile": {
         "fund_type": "指数型-股票",
@@ -2281,337 +2320,9 @@
         "基金经理：刘斌",
         "历史任意时点持有满1年的盈利概率约62%（仅作历史统计，不是未来预测）"
       ]
-    },
-    {
-      "code": "539002",
-      "name": "建信新兴市场混合(QDII)A",
-      "category": "QDII",
-      "score": 85.4,
-      "returns": {
-        "1m": 5.39,
-        "3m": 1.15,
-        "6m": 42.33,
-        "1y": 102.38,
-        "3y": 222.6,
-        "ytd": 66.95
-      },
-      "latest_nav": 2.384,
-      "estimate_nav": null,
-      "estimate_return": null,
-      "day_return": 2.36,
-      "buy_status": "限大额",
-      "position": "中性观察",
-      "broad_action": "watch",
-      "history": {
-        "nav_date": "2026-08-20",
-        "last_nav": 2.384,
-        "returns": {
-          "20d": -2.61,
-          "60d": -2.09,
-          "120d": 41.65,
-          "250d": 102.38
-        },
-        "ma": {
-          "20": 2.2915,
-          "60": 2.4888,
-          "120": 2.2094
-        },
-        "high": {
-          "60": 2.944,
-          "120": 2.944
-        },
-        "low60": 1.967,
-        "drawdown": {
-          "60": -19.02,
-          "120": -19.02,
-          "max250": -33.19
-        },
-        "vol20_ann": 63.18,
-        "trend": "震荡",
-        "deviation60": -4.21,
-        "overheat": false,
-        "buy_zone_1": [
-          2.2571,
-          2.3144
-        ],
-        "buy_zone_2": [
-          2.4266,
-          2.5087
-        ],
-        "stop_add_below": 2.1652
-      },
-      "history_error": null,
-      "today_plan": {
-        "action": "继续等买点",
-        "tone": "watch",
-        "headline": "今天先不动，等进入明确买入区"
-      },
-      "tracking": {
-        "first_seen": "2026-08-22T00:03:32+08:00",
-        "days_tracked": 3,
-        "refresh_count": 3,
-        "score_history": [
-          {
-            "at": "2026-08-22T00:03:32+08:00",
-            "score": 85.4,
-            "action": "继续等买点"
-          },
-          {
-            "at": "2026-08-24T07:52:56+08:00",
-            "score": 85.4,
-            "action": "继续等买点"
-          },
-          {
-            "at": "2026-08-24T16:32:23+08:00",
-            "score": 85.4,
-            "action": "继续等买点"
-          }
-        ]
-      },
-      "buy_plan": {
-        "window": "交易日14:20左右复核；场外基金15:00前下单通常按当日净值规则处理，具体以基金合同/平台为准",
-        "first_batch": "进入第一买入区且趋势仍向上：计划仓位20%–25%",
-        "second_batch": "进入第二买入区且未跌破停止补仓线：再20%–25%",
-        "reserve": "至少保留50%计划资金，不一次买满"
-      },
-      "sell_plan": {
-        "profit_protect": "已有盈利时：若近20日涨幅>10%且偏离60日均线>8%，停止加仓；盈利较大可分批保护利润",
-        "reduce": "若上涨明显过热或趋势转弱，先减20%–30%，而不是一次清仓",
-        "exit": "跌破停止补仓线且60日趋势转负，重新评估退出；基金经理/投资逻辑发生重大变化时优先重新评估"
-      },
-      "why": [
-        "机会分综合近1月、3月、6月、1年与3年同类表现，并主动惩罚短期暴涨追高",
-        "机会池采用持续跟踪机制，原候选未明显恶化时不会每天随意换掉",
-        "买入点以20/60/120日净值结构与回撤位置计算，下午再结合估算净值复核"
-      ],
-      "deep_analysis": {
-        "overview": {
-          "fund_type": "QDII-混合偏股",
-          "asset_scale": null,
-          "share_scale": "7.2252亿份（截止至：2026年06月30日）",
-          "manager": "李博涵、程星烨、房乐",
-          "company": "建信基金",
-          "成立日期": "2011年06月21日",
-          "benchmark": "摩根士丹利资本国际新兴市场指数(MSCI Emerging Markets Index(Net Total Return))",
-          "tracking_target": "该基金无跟踪标的",
-          "management_fee": "1.20%（每年）",
-          "custody_fee": "0.20%（每年）"
-        },
-        "risk": {
-          "period": "近1年",
-          "annual_volatility": 44.43,
-          "sharpe": 2.27,
-          "max_drawdown": 33.19,
-          "peer_risk_return": 98.0,
-          "peer_resilience": 8.0
-        },
-        "profit_probability": {
-          "6m": {
-            "probability": 55.0,
-            "average_return": 4.11
-          },
-          "1y": {
-            "probability": 56.0,
-            "average_return": 7.14
-          }
-        },
-        "holdings": {
-          "quarter": "2026年2季度股票投资明细",
-          "top10_concentration": 62.22,
-          "top_holdings": [
-            {
-              "name": "台积电",
-              "code": "TSM",
-              "weight": 9.68
-            },
-            {
-              "name": "英伟达",
-              "code": "NVDA",
-              "weight": 9.38
-            },
-            {
-              "name": "SK海力士",
-              "code": "000660",
-              "weight": 8.94
-            },
-            {
-              "name": "三星电子",
-              "code": "005930",
-              "weight": 7.8
-            },
-            {
-              "name": "闪迪",
-              "code": "SNDK",
-              "weight": 7.16
-            },
-            {
-              "name": "博通",
-              "code": "AVGO",
-              "weight": 4.18
-            },
-            {
-              "name": "西部数据",
-              "code": "WDC",
-              "weight": 4.18
-            },
-            {
-              "name": "美光科技",
-              "code": "MU",
-              "weight": 3.99
-            },
-            {
-              "name": "Lumentum Holdings Inc",
-              "code": "LITE",
-              "weight": 3.56
-            },
-            {
-              "name": "康宁",
-              "code": "GLW",
-              "weight": 3.35
-            }
-          ]
-        },
-        "industries": {
-          "period": "2026-06-30",
-          "items": [
-            {
-              "name": "信息技术",
-              "weight": 81.18
-            },
-            {
-              "name": "电信服务",
-              "weight": 0.42
-            }
-          ]
-        },
-        "redemption_fee": [
-          {
-            "适用期限": "小于7天",
-            "赎回费率": "1.50%"
-          },
-          {
-            "适用期限": "大于等于7天，小于365天",
-            "赎回费率": "0.50%"
-          },
-          {
-            "适用期限": "大于等于365天，小于730天",
-            "赎回费率": "0.30%"
-          },
-          {
-            "适用期限": "大于等于730天",
-            "赎回费率": "0.00%"
-          }
-        ],
-        "updated_at": "2026-08-24T16:40:16+08:00"
-      },
-      "profile": {
-        "fund_type": "QDII-混合偏股",
-        "asset_scale": null,
-        "share_scale": "7.2252亿份（截止至：2026年06月30日）",
-        "manager": "李博涵、程星烨、房乐",
-        "company": "建信基金",
-        "成立日期": "2011年06月21日",
-        "benchmark": "摩根士丹利资本国际新兴市场指数(MSCI Emerging Markets Index(Net Total Return))",
-        "tracking_index": "该基金无跟踪标的",
-        "management_fee": "1.20%（每年）",
-        "custody_fee": "0.20%（每年）",
-        "holdings": [
-          {
-            "name": "台积电",
-            "code": "TSM",
-            "weight": 9.68
-          },
-          {
-            "name": "英伟达",
-            "code": "NVDA",
-            "weight": 9.38
-          },
-          {
-            "name": "SK海力士",
-            "code": "000660",
-            "weight": 8.94
-          },
-          {
-            "name": "三星电子",
-            "code": "005930",
-            "weight": 7.8
-          },
-          {
-            "name": "闪迪",
-            "code": "SNDK",
-            "weight": 7.16
-          },
-          {
-            "name": "博通",
-            "code": "AVGO",
-            "weight": 4.18
-          },
-          {
-            "name": "西部数据",
-            "code": "WDC",
-            "weight": 4.18
-          },
-          {
-            "name": "美光科技",
-            "code": "MU",
-            "weight": 3.99
-          },
-          {
-            "name": "Lumentum Holdings Inc",
-            "code": "LITE",
-            "weight": 3.56
-          },
-          {
-            "name": "康宁",
-            "code": "GLW",
-            "weight": 3.35
-          }
-        ],
-        "holdings_period": "2026年2季度股票投资明细",
-        "top10_concentration": 62.22,
-        "industries": [
-          {
-            "name": "信息技术",
-            "weight": 81.18
-          },
-          {
-            "name": "电信服务",
-            "weight": 0.42
-          }
-        ],
-        "industry_period": "2026-06-30",
-        "manager_details": [
-          {
-            "name": "李博涵",
-            "company": "建信基金",
-            "career_days": 4767.0,
-            "current_aum_yi": 75.9,
-            "best_return": 192.15
-          },
-          {
-            "name": "程星烨",
-            "company": "建信基金",
-            "career_days": 2448.0,
-            "current_aum_yi": 75.9,
-            "best_return": 192.15
-          },
-          {
-            "name": "房乐",
-            "company": "建信基金",
-            "career_days": 797.0,
-            "current_aum_yi": 75.9,
-            "best_return": 109.31
-          }
-        ]
-      },
-      "risk": "近1年历史最大回撤约33.2%；波动很大，短期涨跌可能比较猛；前十大股票占比约62%，持仓比较集中。历史数据不代表未来。",
-      "deep_plain": [
-        "基金经理：李博涵、程星烨、房乐",
-        "历史任意时点持有满1年的盈利概率约56%（仅作历史统计，不是未来预测）"
-      ]
     }
   ],
-  "deep_enriched_at": "2026-08-24T16:40:16+08:00",
+  "deep_enriched_at": "2026-08-24T18:26:00+08:00",
   "deep_method": "overview+risk_drawdown+historical_profit_probability+latest_disclosed_holdings+industry+fees+manager",
   "profile_note": "基金持仓和行业配置来自最新可获得的定期报告披露，不是实时持仓。"
 }

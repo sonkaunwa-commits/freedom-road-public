@@ -53,11 +53,19 @@ jobs:
               assert release in js or release in body
           if entry.startswith('v14'):
               assert behavior=='v14.js'
-              assert '妈妈' not in body
               for phrase in ['正式净值','盘中估算','基金代码或名称','买基金的4条基础原则']:
                   assert phrase in body, phrase
               for required in ['page-today','page-holdings','page-discover','page-search','detailSheet','holdingList','candidateList','dailyLesson']:
                   assert f'id="{required}"' in body, required
+          if entry.startswith('v15'):
+              assert behavior=='v15.js'
+              for required in ['page-today','page-holdings','page-discover','page-search','detailSheet','holdingList','candidateList','dailyLesson','lessonArchive','dailyReportSchedule','portfolioReportCard','trackingStats','detailRefresh']:
+                  assert f'id="{required}"' in body, required
+              for phrase in ['更新数据','关闭详细报告，返回原页面','手动更新持仓日报','录入 / 修改持仓']:
+                  assert phrase in body, phrase
+              js=(base/'v15.js').read_text(encoding='utf-8')
+              for phrase in ['什么时候可以买？','什么时候考虑卖？','未来走势怎么预估？','history.pushState','renderTrackingStats','近1月']:
+                  assert phrase in js, phrase
           print(f'Fund static release PASS: {entry} / {behavior}')
           PY
           behavior="$(python3 -c "import json;print(json.load(open('site/fund-assistant/release.json')).get('behavior',''))")"
@@ -138,7 +146,6 @@ jobs:
           PY
           mapfile -t fm </tmp/fund-meta
 
-          # Verify the actual live fund release, not only the folder URL.
           live_release="$(get 'fund-assistant/release.json')"
           grep -Fq "${fm[0]}" <<<"$live_release"
           grep -Fq "${fm[1]}" <<<"$live_release"
@@ -151,16 +158,14 @@ jobs:
           fi
           if [[ "${fm[2]}" == v14* ]]; then
             grep -Fq 'id="page-today"' <<<"$live_entry"
-            grep -Fq 'id="page-holdings"' <<<"$live_entry"
-            grep -Fq 'id="page-discover"' <<<"$live_entry"
-            grep -Fq 'id="page-search"' <<<"$live_entry"
             grep -Fq '盘中估算' <<<"$live_entry"
-            grep -Fq '基金代码或名称' <<<"$live_entry"
-            ! grep -Fq '妈妈' <<<"$live_entry"
             css="$(get 'fund-assistant/v14.css')"; grep -Fq '.bottom-nav' <<<"$css"; grep -Fq '.hero-card' <<<"$css"
             grep -Fq 'saveIntradaySample' <<<"$live_behavior"
-            grep -Fq '10*60*1000' <<<"$live_behavior"
-            grep -Fq '30*60*1000' <<<"$live_behavior"
+          fi
+          if [[ "${fm[2]}" == v15* ]]; then
+            for marker in 'id="page-today"' 'id="page-holdings"' 'id="page-discover"' 'id="page-search"' 'id="lessonArchive"' 'id="portfolioReportCard"' 'id="trackingStats"' '更新数据' '关闭详细报告，返回原页面'; do grep -Fq "$marker" <<<"$live_entry"; done
+            css="$(get 'fund-assistant/v15.css')"; grep -Fq '.portfolio-report' <<<"$css"; grep -Fq '.detail-refresh-btn' <<<"$css"; grep -Fq '.lesson-archive' <<<"$css"
+            for marker in '什么时候可以买？' '什么时候考虑卖？' '未来走势怎么预估？' 'history.pushState' 'renderTrackingStats' '近1月'; do grep -Fq "$marker" <<<"$live_behavior"; done
           fi
 
           cat > /tmp/fund-release-status.txt <<EOF

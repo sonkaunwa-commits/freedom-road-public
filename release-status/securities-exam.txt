@@ -1,9 +1,9 @@
 status=ok
 architecture=learning-workspace-r2
-deployed_sha=5be0c0aa4e958b0ff2ff76e974797457d635386c
+deployed_sha=a4b14871bee54090aab2e29bdd27c408abe59d3e
 version=3.4.0
 ui=R2
 source_count=17
 source_mode=indexed-links
 url=https://sonkaunwa-commits.github.io/freedom-road-public/ks/
-verified_at=2026-08-24T08:04:27Z
+verified_at=2026-08-24T09:23:31Z

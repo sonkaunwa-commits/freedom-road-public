@@ -17,6 +17,9 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
       - name: Verify publication
         shell: bash
         run: |
@@ -28,6 +31,38 @@ jobs:
           if find site -type l -print -quit | grep -q .; then echo 'Symlinks are not allowed.' >&2; exit 1; fi
           grep -Fq 'FUND_ASSISTANT_BOOTSTRAP_' site/fund-assistant/index.html
           grep -Fq 'investment-advisor-exam' site/tg/index.html
+
+          python3 - <<'PY'
+          import json,re
+          from pathlib import Path
+          base=Path('site/fund-assistant')
+          x=json.loads((base/'release.json').read_text(encoding='utf-8'))
+          entry=x['entry']; behavior=x.get('behavior',''); release=x['release']
+          ep=base/entry
+          assert ep.is_file(), entry
+          body=ep.read_text(encoding='utf-8')
+          assert '<html' in body.lower() and '</html>' in body.lower()
+          assert 'document.write' not in body
+          assets=sorted(set(re.findall(r'(?:src|href)="([^"?]+\.(?:js|css))',body)))
+          for asset in assets:
+              assert (base/asset).is_file(), asset
+          if behavior:
+              bp=base/behavior
+              assert bp.is_file(), behavior
+              js=bp.read_text(encoding='utf-8')
+              assert release in js or release in body
+          if entry.startswith('v14'):
+              assert behavior=='v14.js'
+              assert '妈妈' not in body
+              for phrase in ['正式净值','盘中估算','基金代码或名称','买基金的4条基础原则']:
+                  assert phrase in body, phrase
+              for required in ['page-today','page-holdings','page-discover','page-search','detailSheet','holdingList','candidateList','dailyLesson']:
+                  assert f'id="{required}"' in body, required
+          print(f'Fund static release PASS: {entry} / {behavior}')
+          PY
+          behavior="$(python3 -c "import json;print(json.load(open('site/fund-assistant/release.json')).get('behavior',''))")"
+          if [[ -n "$behavior" ]]; then node --check "site/fund-assistant/$behavior"; fi
+
           if grep -Fq 'v3.5.0' site/ks/index.html; then
             for f in product-v350.css product-core-v350.js product-v350.js sources-data-v350.js sw.js manifest.webmanifest; do test -f "site/securities-exam/$f"; done
             grep -Fq 'data-product-version="3.5.0"' site/securities-exam/index.html
@@ -102,6 +137,32 @@ jobs:
           x=json.load(open('site/fund-assistant/release.json'));print(x['version']);print(x['release']);print(x['entry']);print(x.get('behavior',''))
           PY
           mapfile -t fm </tmp/fund-meta
+
+          # Verify the actual live fund release, not only the folder URL.
+          live_release="$(get 'fund-assistant/release.json')"
+          grep -Fq "${fm[0]}" <<<"$live_release"
+          grep -Fq "${fm[1]}" <<<"$live_release"
+          grep -Fq "${fm[2]}" <<<"$live_release"
+          live_entry="$(get "fund-assistant/${fm[2]}")"
+          grep -Fq "${fm[1]}" <<<"$live_entry"
+          if [[ -n "${fm[3]}" ]]; then
+            live_behavior="$(get "fund-assistant/${fm[3]}")"
+            grep -Fq "${fm[1]}" <<<"$live_behavior"
+          fi
+          if [[ "${fm[2]}" == v14* ]]; then
+            grep -Fq 'id="page-today"' <<<"$live_entry"
+            grep -Fq 'id="page-holdings"' <<<"$live_entry"
+            grep -Fq 'id="page-discover"' <<<"$live_entry"
+            grep -Fq 'id="page-search"' <<<"$live_entry"
+            grep -Fq '盘中估算' <<<"$live_entry"
+            grep -Fq '基金代码或名称' <<<"$live_entry"
+            ! grep -Fq '妈妈' <<<"$live_entry"
+            css="$(get 'fund-assistant/v14.css')"; grep -Fq '.bottom-nav' <<<"$css"; grep -Fq '.hero-card' <<<"$css"
+            grep -Fq 'saveIntradaySample' <<<"$live_behavior"
+            grep -Fq '10*60*1000' <<<"$live_behavior"
+            grep -Fq '30*60*1000' <<<"$live_behavior"
+          fi
+
           cat > /tmp/fund-release-status.txt <<EOF
           status=ok
           architecture=static-direct
@@ -111,6 +172,7 @@ jobs:
           url=${base}/fund-assistant/
           entry=${fm[2]}
           behavior=${fm[3]}
+          live_entry_verified=true
           verified_at=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
           EOF
           if grep -Fq 'v3.5.0' site/ks/index.html; then

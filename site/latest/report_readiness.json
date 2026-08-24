@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-24T19:05:40.032519+08:00",
+  "generated_at": "2026-08-25T00:11:56.278090+08:00",
   "schema_version": 6,
-  "source_health_updated_at": "2026-08-24T19:02:52.528232+08:00",
+  "source_health_updated_at": "2026-08-25T00:09:13.772754+08:00",
   "delivery_mode_17": "FULL_REPORT",
   "a_share_exact_action_gate": {
     "ready": true,
@@ -45,14 +45,16 @@
     },
     "gold_public_analysis_ready": true,
     "minute": {
-      "status": "fresh",
-      "provider": "tencent_mkline:a_minutes",
+      "status": "not_expected",
+      "provider": "tushare:a_minutes",
       "expected_codes": 7,
-      "covered_codes": 7,
-      "coverage_ratio": 1.0,
-      "expected_latest_bar_at": "2026-08-24T15:00:00+08:00",
-      "latest_bar_at": "2026-08-24T15:00:00+08:00",
-      "fresh_codes": [
+      "covered_codes": 0,
+      "coverage_ratio": 0.0,
+      "expected_latest_bar_at": null,
+      "latest_bar_at": null,
+      "fresh_codes": [],
+      "stale_codes": [],
+      "missing_codes": [
         "600006.SH",
         "002085.SZ",
         "002475.SZ",
@@ -61,68 +63,15 @@
         "601899.SH",
         "300059.SZ"
       ],
-      "stale_codes": [],
-      "missing_codes": [],
       "max_lag_minutes": 6,
-      "rows": 1687,
-      "probe": false,
-      "elapsed_ms": 5492.5,
-      "per_symbol": {
-        "600006.SH": {
-          "symbol": "sh600006",
-          "status": "ok",
-          "rows": 241,
-          "latest_bar_at": "2026-08-24T15:00:00+08:00"
-        },
-        "002085.SZ": {
-          "symbol": "sz002085",
-          "status": "ok",
-          "rows": 241,
-          "latest_bar_at": "2026-08-24T15:00:00+08:00"
-        },
-        "002475.SZ": {
-          "symbol": "sz002475",
-          "status": "ok",
-          "rows": 241,
-          "latest_bar_at": "2026-08-24T15:00:00+08:00"
-        },
-        "601138.SH": {
-          "symbol": "sh601138",
-          "status": "ok",
-          "rows": 241,
-          "latest_bar_at": "2026-08-24T15:00:00+08:00"
-        },
-        "002600.SZ": {
-          "symbol": "sz002600",
-          "status": "ok",
-          "rows": 241,
-          "latest_bar_at": "2026-08-24T15:00:00+08:00"
-        },
-        "601899.SH": {
-          "symbol": "sh601899",
-          "status": "ok",
-          "rows": 241,
-          "latest_bar_at": "2026-08-24T15:00:00+08:00"
-        },
-        "300059.SZ": {
-          "symbol": "sz300059",
-          "status": "ok",
-          "rows": 241,
-          "latest_bar_at": "2026-08-24T15:00:00+08:00"
-        }
-      },
-      "provider_errors": [],
-      "result_policy": "metadata_only_no_minute_rows_persisted",
-      "promotion_status": "PUBLIC_FALLBACK_PILOT",
-      "source_note": "Tencent Finance 1-minute public fallback promoted after live 7/7 freshness evidence; primary Tushare/AKShare/TDX chain remains preferred and Yahoo remains the later fallback.",
       "attempts": [
         {
-          "status": "unavailable",
+          "status": "not_expected",
           "provider": "tushare:a_minutes",
           "expected_codes": 7,
           "covered_codes": 0,
           "coverage_ratio": 0.0,
-          "expected_latest_bar_at": "2026-08-24T15:00:00+08:00",
+          "expected_latest_bar_at": null,
           "latest_bar_at": null,
           "max_lag_minutes": 6,
           "fresh_codes": [],
@@ -138,12 +87,12 @@
           ]
         },
         {
-          "status": "unavailable",
+          "status": "not_expected",
           "provider": "akshare:a_minutes",
           "expected_codes": 7,
           "covered_codes": 0,
           "coverage_ratio": 0.0,
-          "expected_latest_bar_at": "2026-08-24T15:00:00+08:00",
+          "expected_latest_bar_at": null,
           "latest_bar_at": null,
           "max_lag_minutes": 6,
           "fresh_codes": [],
@@ -159,12 +108,12 @@
           ]
         },
         {
-          "status": "unavailable",
+          "status": "not_expected",
           "provider": "mootdx_tdx:a_minutes",
           "expected_codes": 7,
           "covered_codes": 0,
           "coverage_ratio": 0.0,
-          "expected_latest_bar_at": "2026-08-24T15:00:00+08:00",
+          "expected_latest_bar_at": null,
           "latest_bar_at": null,
           "max_lag_minutes": 6,
           "fresh_codes": [],
@@ -178,35 +127,13 @@
             "601899.SH",
             "300059.SZ"
           ]
-        },
-        {
-          "status": "fresh",
-          "provider": "tencent_mkline:a_minutes",
-          "expected_codes": 7,
-          "covered_codes": 7,
-          "coverage_ratio": 1.0,
-          "expected_latest_bar_at": "2026-08-24T15:00:00+08:00",
-          "latest_bar_at": "2026-08-24T15:00:00+08:00",
-          "max_lag_minutes": 6,
-          "fresh_codes": [
-            "600006.SH",
-            "002085.SZ",
-            "002475.SZ",
-            "601138.SH",
-            "002600.SZ",
-            "601899.SH",
-            "300059.SZ"
-          ],
-          "stale_codes": [],
-          "missing_codes": []
         }
       ],
-      "trade_date": "20260824",
-      "raw_status": "fresh",
-      "intraday_action_ready": true,
+      "raw_status": "not_expected",
+      "intraday_action_ready": false,
       "report_input_ready": true,
       "degraded": false,
-      "semantics": "Current-session minute coverage is fresh enough for public intraday analysis."
+      "semantics": "Minute data is not expected at this time/session; this alone is not a report-readiness failure."
     },
     "candidate_scan": {
       "status": "degraded_no_fundamentals",
@@ -216,10 +143,12 @@
       "same_reference_session": true,
       "last_full_scan_trade_date": "20260824",
       "reference_trade_date": "20260824",
-      "reference_basis": "calendar_last_completed_session",
+      "reference_basis": "last_completed_session_before_close_gate",
       "sessions_since_full_scan": 0,
       "session_age_basis": "same_or_earlier_reference",
-      "scan_cadence_trading_days": 2,
+      "scan_cadence_trading_days": 1,
+      "scan_cadence_source": "config/universe.yml",
+      "persisted_scan_cadence_trading_days": 2,
       "retained_pool_usable_for_watch_only": false,
       "updated_at": "2026-08-24T16:24:12.531140+08:00",
       "provider": "akshare_sina_free_fallback",
@@ -228,13 +157,13 @@
   },
   "analysis_engine": {
     "stage": "STAGE_1_RUNNING",
-    "generated_at": "2026-08-24T19:04:07.858871+08:00",
+    "generated_at": "2026-08-25T00:10:19.974119+08:00",
     "stage1_fund_ready": true,
     "stage1_a_share_history_ready": true,
     "stage2_vectorbt_daily_pilot_ready": true,
     "stage2_daily_pilot": {
       "status": "STAGE_2_DAILY_PILOT_RUNNING",
-      "generated_at": "2026-08-24T19:05:30.562777+08:00",
+      "generated_at": "2026-08-25T00:11:47.134968+08:00",
       "research_core_ready": true,
       "coverage": {
         "a_research_core_ok": 7,
@@ -250,9 +179,9 @@
       "production_use": "RESEARCH_ONLY",
       "statistical_evidence": {
         "status": "RESEARCH_ONLY",
-        "sufficient_signal_horizons": 107,
-        "insufficient_signal_horizons": 73,
-        "fdr_reject_5pct_count": 17
+        "sufficient_signal_horizons": 104,
+        "insufficient_signal_horizons": 76,
+        "fdr_reject_5pct_count": 11
       }
     },
     "support_layer": {
@@ -306,7 +235,7 @@
   },
   "evidence_packet": {
     "status": "READY_RESEARCH_ONLY",
-    "generated_at": "2026-08-24T19:05:39.465900+08:00",
+    "generated_at": "2026-08-25T00:11:55.758067+08:00",
     "production_use": "RESEARCH_ONLY"
   },
   "content_contract": {
@@ -391,13 +320,13 @@
   "instruction": "At a fixed report anchor, inspect readiness first. Data readiness is only the input gate. Then satisfy content_contract without deleting required analysis. Join the Private Ledger only in the private report layer. Statistical evidence remains research-only and must keep its uncertainty/FDR caveats.",
   "privacy": "public market and research readiness only; no private positions, quantities, costs, cash, account ids, bank executable quotes or trade states",
   "intraday_public_market_gate": {
-    "ready": true,
-    "status": "fresh",
-    "provider": "tencent_mkline:a_minutes",
-    "coverage_ratio": 1.0,
-    "latest_bar_at": "2026-08-24T15:00:00+08:00",
-    "expected_latest_bar_at": "2026-08-24T15:00:00+08:00",
+    "ready": false,
+    "status": "not_expected",
+    "provider": "tushare:a_minutes",
+    "coverage_ratio": 0.0,
+    "latest_bar_at": null,
+    "expected_latest_bar_at": null,
     "semantics": "This is a public market-data gate only. It never authorizes or executes a trade."
   },
-  "freshness_hardening_updated_at": "2026-08-24T19:05:40.092453+08:00"
+  "freshness_hardening_updated_at": "2026-08-25T00:11:56.338511+08:00"
 }

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-24T19:01:35.366320+08:00",
+  "updated_at": "2026-08-25T00:06:44.033625+08:00",
   "funds": [
     {
       "code": "003578",
@@ -7,18 +7,11 @@
       "status": "ok",
       "provider": "akshare:fund:003578",
       "ts_code": "003578",
-      "nav_date": "20260821",
-      "ann_date": "20260821",
-      "unit_nav": 2.426,
+      "nav_date": "20260824",
+      "ann_date": "20260824",
+      "unit_nav": 2.3817,
       "accum_nav": null,
       "history": [
-        {
-          "nav_date": "20250701",
-          "unit_nav": 1.7712,
-          "pct_chg": 0.53,
-          "ts_code": "003578",
-          "ann_date": "20250701"
-        },
         {
           "nav_date": "20250702",
           "unit_nav": 1.7638,
@@ -1971,6 +1964,13 @@
           "pct_chg": 0.16,
           "ts_code": "003578",
           "ann_date": "20260821"
+        },
+        {
+          "nav_date": "20260824",
+          "unit_nav": 2.3817,
+          "pct_chg": -1.83,
+          "ts_code": "003578",
+          "ann_date": "20260824"
         }
       ]
     },
@@ -1980,18 +1980,11 @@
       "status": "ok",
       "provider": "akshare:fund:501208",
       "ts_code": "501208",
-      "nav_date": "20260821",
-      "ann_date": "20260821",
-      "unit_nav": 1.3399,
+      "nav_date": "20260824",
+      "ann_date": "20260824",
+      "unit_nav": 1.3063,
       "accum_nav": null,
       "history": [
-        {
-          "nav_date": "20250701",
-          "unit_nav": 1.007,
-          "pct_chg": -0.43,
-          "ts_code": "501208",
-          "ann_date": "20250701"
-        },
         {
           "nav_date": "20250702",
           "unit_nav": 0.9867,
@@ -3944,6 +3937,13 @@
           "pct_chg": 0.84,
           "ts_code": "501208",
           "ann_date": "20260821"
+        },
+        {
+          "nav_date": "20260824",
+          "unit_nav": 1.3063,
+          "pct_chg": -2.51,
+          "ts_code": "501208",
+          "ann_date": "20260824"
         }
       ]
     },
@@ -3953,18 +3953,11 @@
       "status": "ok",
       "provider": "akshare:fund:003095",
       "ts_code": "003095",
-      "nav_date": "20260821",
-      "ann_date": "20260821",
-      "unit_nav": 2.0509,
+      "nav_date": "20260824",
+      "ann_date": "20260824",
+      "unit_nav": 1.9443,
       "accum_nav": null,
       "history": [
-        {
-          "nav_date": "20250701",
-          "unit_nav": 1.7426,
-          "pct_chg": 2.57,
-          "ts_code": "003095",
-          "ann_date": "20250701"
-        },
         {
           "nav_date": "20250702",
           "unit_nav": 1.7119,
@@ -5917,6 +5910,13 @@
           "pct_chg": -4.29,
           "ts_code": "003095",
           "ann_date": "20260821"
+        },
+        {
+          "nav_date": "20260824",
+          "unit_nav": 1.9443,
+          "pct_chg": -5.2,
+          "ts_code": "003095",
+          "ann_date": "20260824"
         }
       ]
     },
@@ -5926,18 +5926,11 @@
       "status": "ok",
       "provider": "akshare:fund:501058",
       "ts_code": "501058",
-      "nav_date": "20260821",
-      "ann_date": "20260821",
-      "unit_nav": 2.1464,
+      "nav_date": "20260824",
+      "ann_date": "20260824",
+      "unit_nav": 2.1307,
       "accum_nav": null,
       "history": [
-        {
-          "nav_date": "20250701",
-          "unit_nav": 1.6783,
-          "pct_chg": -0.48,
-          "ts_code": "501058",
-          "ann_date": "20250701"
-        },
         {
           "nav_date": "20250702",
           "unit_nav": 1.6738,
@@ -7890,6 +7883,13 @@
           "pct_chg": 1.52,
           "ts_code": "501058",
           "ann_date": "20260821"
+        },
+        {
+          "nav_date": "20260824",
+          "unit_nav": 2.1307,
+          "pct_chg": -0.73,
+          "ts_code": "501058",
+          "ann_date": "20260824"
         }
       ]
     },
@@ -7899,18 +7899,11 @@
       "status": "ok",
       "provider": "akshare:fund:100038",
       "ts_code": "100038",
-      "nav_date": "20260821",
-      "ann_date": "20260821",
-      "unit_nav": 1.931,
+      "nav_date": "20260824",
+      "ann_date": "20260824",
+      "unit_nav": 1.905,
       "accum_nav": null,
       "history": [
-        {
-          "nav_date": "20250701",
-          "unit_nav": 1.617,
-          "pct_chg": 0.43,
-          "ts_code": "100038",
-          "ann_date": "20250701"
-        },
         {
           "nav_date": "20250702",
           "unit_nav": 1.617,
@@ -9863,6 +9856,13 @@
           "pct_chg": 0.78,
           "ts_code": "100038",
           "ann_date": "20260821"
+        },
+        {
+          "nav_date": "20260824",
+          "unit_nav": 1.905,
+          "pct_chg": -1.35,
+          "ts_code": "100038",
+          "ann_date": "20260824"
         }
       ]
     },
@@ -9872,18 +9872,11 @@
       "status": "ok",
       "provider": "akshare:fund:519702",
       "ts_code": "519702",
-      "nav_date": "20260821",
-      "ann_date": "20260821",
-      "unit_nav": 5.1792,
+      "nav_date": "20260824",
+      "ann_date": "20260824",
+      "unit_nav": 5.1998,
       "accum_nav": null,
       "history": [
-        {
-          "nav_date": "20250701",
-          "unit_nav": 4.4166,
-          "pct_chg": 0.51,
-          "ts_code": "519702",
-          "ann_date": "20250701"
-        },
         {
           "nav_date": "20250702",
           "unit_nav": 4.4269,
@@ -11836,6 +11829,13 @@
           "pct_chg": -0.26,
           "ts_code": "519702",
           "ann_date": "20260821"
+        },
+        {
+          "nav_date": "20260824",
+          "unit_nav": 5.1998,
+          "pct_chg": 0.4,
+          "ts_code": "519702",
+          "ann_date": "20260824"
         }
       ]
     },
@@ -11845,18 +11845,11 @@
       "status": "ok",
       "provider": "akshare:fund:005918",
       "ts_code": "005918",
-      "nav_date": "20260821",
-      "ann_date": "20260821",
-      "unit_nav": 1.4542,
+      "nav_date": "20260824",
+      "ann_date": "20260824",
+      "unit_nav": 1.4373,
       "accum_nav": null,
       "history": [
-        {
-          "nav_date": "20250701",
-          "unit_nav": 1.2153,
-          "pct_chg": 0.16,
-          "ts_code": "005918",
-          "ann_date": "20250701"
-        },
         {
           "nav_date": "20250702",
           "unit_nav": 1.2155,
@@ -13809,6 +13802,13 @@
           "pct_chg": 0.58,
           "ts_code": "005918",
           "ann_date": "20260821"
+        },
+        {
+          "nav_date": "20260824",
+          "unit_nav": 1.4373,
+          "pct_chg": -1.16,
+          "ts_code": "005918",
+          "ann_date": "20260824"
         }
       ]
     },
@@ -13818,18 +13818,11 @@
       "status": "ok",
       "provider": "akshare:fund:007824",
       "ts_code": "007824",
-      "nav_date": "20260821",
-      "ann_date": "20260821",
-      "unit_nav": 1.1678,
+      "nav_date": "20260824",
+      "ann_date": "20260824",
+      "unit_nav": 1.1679,
       "accum_nav": null,
       "history": [
-        {
-          "nav_date": "20250701",
-          "unit_nav": 1.1533,
-          "pct_chg": 0.01,
-          "ts_code": "007824",
-          "ann_date": "20250701"
-        },
         {
           "nav_date": "20250702",
           "unit_nav": 1.1534,
@@ -15782,6 +15775,13 @@
           "pct_chg": 0.0,
           "ts_code": "007824",
           "ann_date": "20260821"
+        },
+        {
+          "nav_date": "20260824",
+          "unit_nav": 1.1679,
+          "pct_chg": 0.01,
+          "ts_code": "007824",
+          "ann_date": "20260824"
         }
       ]
     },
@@ -15791,18 +15791,11 @@
       "status": "ok",
       "provider": "akshare:fund:016708",
       "ts_code": "016708",
-      "nav_date": "20260821",
-      "ann_date": "20260821",
-      "unit_nav": 1.814,
+      "nav_date": "20260824",
+      "ann_date": "20260824",
+      "unit_nav": 1.8184,
       "accum_nav": null,
       "history": [
-        {
-          "nav_date": "20250701",
-          "unit_nav": 1.1055,
-          "pct_chg": 1.51,
-          "ts_code": "016708",
-          "ann_date": "20250701"
-        },
         {
           "nav_date": "20250702",
           "unit_nav": 1.1146,
@@ -17755,6 +17748,13 @@
           "pct_chg": 2.76,
           "ts_code": "016708",
           "ann_date": "20260821"
+        },
+        {
+          "nav_date": "20260824",
+          "unit_nav": 1.8184,
+          "pct_chg": 0.24,
+          "ts_code": "016708",
+          "ann_date": "20260824"
         }
       ]
     },
@@ -17764,18 +17764,11 @@
       "status": "ok",
       "provider": "akshare:fund:000218",
       "ts_code": "000218",
-      "nav_date": "20260821",
-      "ann_date": "20260821",
-      "unit_nav": 3.5486,
+      "nav_date": "20260824",
+      "ann_date": "20260824",
+      "unit_nav": 3.6231,
       "accum_nav": null,
       "history": [
-        {
-          "nav_date": "20250701",
-          "unit_nav": 2.8056,
-          "pct_chg": 1.1,
-          "ts_code": "000218",
-          "ann_date": "20250701"
-        },
         {
           "nav_date": "20250702",
           "unit_nav": 2.7993,
@@ -19728,6 +19721,13 @@
           "pct_chg": 1.56,
           "ts_code": "000218",
           "ann_date": "20260821"
+        },
+        {
+          "nav_date": "20260824",
+          "unit_nav": 3.6231,
+          "pct_chg": 2.1,
+          "ts_code": "000218",
+          "ann_date": "20260824"
         }
       ]
     },
@@ -19737,18 +19737,11 @@
       "status": "ok",
       "provider": "akshare:fund:000217",
       "ts_code": "000217",
-      "nav_date": "20260821",
-      "ann_date": "20260821",
-      "unit_nav": 3.3078,
+      "nav_date": "20260824",
+      "ann_date": "20260824",
+      "unit_nav": 3.3774,
       "accum_nav": null,
       "history": [
-        {
-          "nav_date": "20250701",
-          "unit_nav": 2.6306,
-          "pct_chg": 1.08,
-          "ts_code": "000217",
-          "ann_date": "20250701"
-        },
         {
           "nav_date": "20250702",
           "unit_nav": 2.6249,
@@ -21701,6 +21694,13 @@
           "pct_chg": 1.55,
           "ts_code": "000217",
           "ann_date": "20260821"
+        },
+        {
+          "nav_date": "20260824",
+          "unit_nav": 3.3774,
+          "pct_chg": 2.1,
+          "ts_code": "000217",
+          "ann_date": "20260824"
         }
       ]
     },
@@ -21710,18 +21710,11 @@
       "status": "ok",
       "provider": "akshare:fund:020411",
       "ts_code": "020411",
-      "nav_date": "20260821",
-      "ann_date": "20260821",
-      "unit_nav": 2.1205,
+      "nav_date": "20260824",
+      "ann_date": "20260824",
+      "unit_nav": 2.1339,
       "accum_nav": null,
       "history": [
-        {
-          "nav_date": "20250701",
-          "unit_nav": 1.4906,
-          "pct_chg": 1.57,
-          "ts_code": "020411",
-          "ann_date": "20250701"
-        },
         {
           "nav_date": "20250702",
           "unit_nav": 1.4981,
@@ -23674,6 +23667,13 @@
           "pct_chg": 4.19,
           "ts_code": "020411",
           "ann_date": "20260821"
+        },
+        {
+          "nav_date": "20260824",
+          "unit_nav": 2.1339,
+          "pct_chg": 0.63,
+          "ts_code": "020411",
+          "ann_date": "20260824"
         }
       ]
     }

@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-08-24T19:05:40.032519+08:00",
+  "generated_at": "2026-08-25T00:11:56.278090+08:00",
   "schema_version": 8,
   "datasets": {
     "tracked_market.json": {
       "exists": true,
-      "updated_at": "2026-08-24T19:02:52.528232+08:00",
-      "bytes": 24583
+      "updated_at": "2026-08-25T00:09:13.772754+08:00",
+      "bytes": 23240
     },
     "funds.json": {
       "exists": true,
-      "updated_at": "2026-08-24T19:01:35.366320+08:00",
-      "bytes": 595401
+      "updated_at": "2026-08-25T00:06:44.033625+08:00",
+      "bytes": 595405
     },
     "gold.json": {
       "exists": true,
-      "updated_at": "2026-08-24T19:01:35.366320+08:00",
+      "updated_at": "2026-08-25T00:06:44.033625+08:00",
       "bytes": 953902
     },
     "candidate_pool.json": {
@@ -24,48 +24,48 @@
     },
     "health.json": {
       "exists": true,
-      "updated_at": "2026-08-24T19:02:52.528232+08:00",
-      "bytes": 14304
+      "updated_at": "2026-08-25T00:09:13.772754+08:00",
+      "bytes": 18110
     },
     "analysis_stage1.json": {
       "exists": true,
-      "updated_at": "2026-08-24T19:04:07.858871+08:00",
-      "bytes": 18348
+      "updated_at": "2026-08-25T00:10:19.974119+08:00",
+      "bytes": 18332
     },
     "analysis_stage2_daily.json": {
       "exists": true,
-      "updated_at": "2026-08-24T19:05:30.562777+08:00",
-      "bytes": 657026
+      "updated_at": "2026-08-25T00:11:47.134968+08:00",
+      "bytes": 653067
     },
     "analysis_duckdb_evidence.json": {
       "exists": true,
-      "updated_at": "2026-08-24T19:05:36.159753+08:00",
-      "bytes": 10548
+      "updated_at": "2026-08-25T00:11:52.518004+08:00",
+      "bytes": 10521
     },
     "data_contracts.json": {
       "exists": true,
-      "updated_at": "2026-08-24T19:05:13.297030+08:00",
+      "updated_at": "2026-08-25T00:11:29.954634+08:00",
       "bytes": 5537
     },
     "calendar_alignment.json": {
       "exists": true,
-      "updated_at": "2026-08-24T19:05:13.980154+08:00",
+      "updated_at": "2026-08-25T00:11:30.576321+08:00",
       "bytes": 7777
     },
     "analysis_evidence_summary.json": {
       "exists": true,
-      "updated_at": "2026-08-24T19:05:39.465900+08:00",
-      "bytes": 10173
+      "updated_at": "2026-08-25T00:11:55.758067+08:00",
+      "bytes": 7573
     },
     "report_readiness.json": {
       "exists": true,
-      "updated_at": "2026-08-24T19:05:40.032519+08:00",
-      "bytes": 8259
+      "updated_at": "2026-08-25T00:11:56.278090+08:00",
+      "bytes": 8266
     },
     "candidate_scan_health.json": {
       "exists": true,
-      "updated_at": "2026-08-24T19:05:40.092453+08:00",
-      "bytes": 627
+      "updated_at": "2026-08-25T00:11:56.338511+08:00",
+      "bytes": 728
     }
   },
   "report_readiness": {
@@ -78,21 +78,21 @@
     "stage2_daily_pilot_status": "STAGE_2_DAILY_PILOT_RUNNING",
     "evidence_status": "READY_RESEARCH_ONLY",
     "blockers": [],
-    "minute_status": "fresh",
-    "intraday_public_market_ready": true,
+    "minute_status": "not_expected",
+    "intraday_public_market_ready": false,
     "candidate_scan_freshness_state": "fresh_same_session",
     "candidate_scan_same_session": true,
     "candidate_scan_fresh_for_cadence": true
   },
   "analysis_engine": {
     "stage": "STAGE_1_RUNNING",
-    "generated_at": "2026-08-24T19:04:07.858871+08:00",
+    "generated_at": "2026-08-25T00:10:19.974119+08:00",
     "stage1_fund_ready": true,
     "stage1_a_share_history_ready": true,
     "stage2_vectorbt_daily_pilot_ready": true,
     "stage2_daily_pilot": {
       "status": "STAGE_2_DAILY_PILOT_RUNNING",
-      "generated_at": "2026-08-24T19:05:30.562777+08:00",
+      "generated_at": "2026-08-25T00:11:47.134968+08:00",
       "research_core_ready": true,
       "coverage": {
         "a_research_core_ok": 7,
@@ -108,9 +108,9 @@
       "production_use": "RESEARCH_ONLY",
       "statistical_evidence": {
         "status": "RESEARCH_ONLY",
-        "sufficient_signal_horizons": 107,
-        "insufficient_signal_horizons": 73,
-        "fdr_reject_5pct_count": 17
+        "sufficient_signal_horizons": 104,
+        "insufficient_signal_horizons": 76,
+        "fdr_reject_5pct_count": 11
       }
     },
     "support_layer": {
@@ -241,5 +241,5 @@
     "analysis_roadmap_version": "1.0.0"
   },
   "privacy": "public market data and research evidence only; no private account ids, position sizes, costs, cash balances, private bank quotes or trade states",
-  "freshness_hardening_updated_at": "2026-08-24T19:05:40.092453+08:00"
+  "freshness_hardening_updated_at": "2026-08-25T00:11:56.338511+08:00"
 }

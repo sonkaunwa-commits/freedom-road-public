@@ -1,8 +1,12 @@
 status=ok
-architecture=learning-workspace-r2
-deployed_sha=cf4aa99bc272490998f97a6ed1e8cf6aba10294d
-version=3.4.0
-ui=R2
+architecture=exam-prep-system-v1
+deployed_sha=b0e149dfdb45ce1b3e3bee6617cf3b9a705c37d7
+version=3.5.0
+ui=PM-V1
+plan=adaptive-nonempty
+knowledge=active-recall-rich-cards
+review=explanation-error-attribution-spaced
+accounts=two-local-profiles
 source_count=17
 url=https://sonkaunwa-commits.github.io/freedom-road-public/ks/
-verified_at=2026-08-24T09:26:26Z
+verified_at=2026-08-24T09:27:50Z

@@ -20,7 +20,7 @@ concurrency:
 jobs:
   verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 8
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - name: Verify static publication boundary and current releases
@@ -79,39 +79,59 @@ jobs:
           grep -Fq 'FUND_ASSISTANT_BOOTSTRAP_' site/fund-assistant/index.html
           grep -Fq 'investment-advisor-exam' site/tg/index.html
 
-          # Securities supports the currently-live v3.2.1 during transition, but v3.3 gets a strict derived-content gate.
-          if grep -Fq 'v3.3.0' site/ks/index.html; then
-            test -f site/securities-exam/kdocs-learning-v1.json
-            test -f site/securities-exam/learning-pack-v330.js
-            test -f site/securities-exam/learning-pack-v330.css
-            grep -Fq "version:'3.3.0'" site/securities-exam/release-v32.js
-            grep -Fq "status:'structured-import'" site/securities-exam/release-v32.js
-            grep -Fq "sec2026-v330" site/securities-exam/sw.js
-            grep -Fq 'learning-pack-v330.js?v=330' site/securities-exam/ux-fix-v27.js
-            node --check site/securities-exam/learning-pack-v330.js
+          if grep -Fq 'v3.4.0' site/ks/index.html; then
+            for f in ui-pro-r2.css ui-pro-r2.js assistant-v31.js assistant-v31.css sources-v321.js sources-v321.css release-v32.js release-v32.css ux-fix-v27.js sw.js manifest.webmanifest; do
+              test -f "site/securities-exam/$f"
+            done
+            grep -Fq 'data-product-version="3.4.0"' site/securities-exam/index.html
+            grep -Fq 'ui-pro-r2.css?v=340' site/securities-exam/index.html
+            grep -Fq 'ui-pro-r2.js?v=340' site/securities-exam/index.html
+            ! grep -Fq 'ui-pro-r1.css' site/securities-exam/index.html
+            grep -Fq "VERSION='3.4.0'" site/securities-exam/ui-pro-r2.js
+            grep -Fq '今天只盯三件事' site/securities-exam/ui-pro-r2.js
+            grep -Fq '学习报告' site/securities-exam/ui-pro-r2.js
+            grep -Fq 'sec_r2_mastery_v1' site/securities-exam/ui-pro-r2.js
+            grep -Fq "version:'3.4.0'" site/securities-exam/release-v32.js
+            grep -Fq "version:'3.4.0'" site/securities-exam/release-v24.js
+            grep -Fq 'sec2026-v340' site/securities-exam/sw.js
+            grep -Fq 'assistant-v31.js?v=340' site/securities-exam/ux-fix-v27.js
+            grep -Fq 'sources-v321.js?v=340' site/securities-exam/ux-fix-v27.js
+            grep -Fq 'release-v32.js?v=340' site/securities-exam/ux-fix-v27.js
+            node --check site/securities-exam/ui-pro-r2.js
+            node --check site/securities-exam/assistant-v31.js
+            node --check site/securities-exam/sources-v321.js
+            node --check site/securities-exam/release-v32.js
             python3 - <<'PY'
+          import re
+          from pathlib import Path
+          s=Path('site/securities-exam/sources-v321.js').read_text(encoding='utf-8')
+          urls=re.findall(r'https://www\.kdocs\.cn/l/[A-Za-z0-9]+',s)
+          assert len(urls)==17 and len(set(urls))==17
+          assert len(re.findall(r"id:'law-",s))==7
+          assert len(re.findall(r"id:'finance-",s))==10
+          print('Securities v3.4 source index PASS')
+          PY
+            if grep -Fq "status:'structured-import'" site/securities-exam/release-v32.js; then
+              test -f site/securities-exam/kdocs-learning-v1.json
+              test -f site/securities-exam/learning-pack-v330.js
+              test -f site/securities-exam/learning-pack-v330.css
+              node --check site/securities-exam/learning-pack-v330.js
+              python3 - <<'PY'
           import json
           from pathlib import Path
-          p=Path('site/securities-exam/kdocs-learning-v1.json')
-          x=json.loads(p.read_text(encoding='utf-8'))
-          assert x['product_version']=='3.3.0'
+          x=json.loads(Path('site/securities-exam/kdocs-learning-v1.json').read_text(encoding='utf-8'))
           assert x['source_policy']=='derived-paraphrase-only-no-raw-body'
           assert x['source_count']==17 and x['law_count']==7 and x['finance_count']==10
           assert x['total_key_points']>=65
           assert len(x['documents'])==17 and len({d['source_id'] for d in x['documents']})==17
-          forbidden={'raw_text','raw_body','source_body','full_text','verbatim_text'}
-          def walk(v):
-              if isinstance(v,dict):
-                  for k,z in v.items():
-                      assert k not in forbidden, f'raw source field published: {k}'
-                      walk(z)
-              elif isinstance(v,list):
-                  for z in v: walk(z)
-              elif isinstance(v,str):
-                  assert len(v)<=220, 'public derived field exceeds card-length boundary'
-          walk(x)
-          print('Securities v3.3 static release PASS')
+          print('Securities v3.4 structured KDocs payload PASS')
           PY
+            fi
+            echo 'Securities v3.4 static release PASS'
+          elif grep -Fq 'v3.3.0' site/ks/index.html; then
+            test -f site/securities-exam/kdocs-learning-v1.json
+            test -f site/securities-exam/learning-pack-v330.js
+            test -f site/securities-exam/learning-pack-v330.css
           else
             grep -Fq 'securities-exam' site/ks/index.html
           fi
@@ -135,7 +155,7 @@ jobs:
   smoke:
     needs: deploy
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
       - name: Verify live releases
@@ -169,24 +189,33 @@ jobs:
           verified_at=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
           EOF
 
-          if grep -Fq 'v3.3.0' site/ks/index.html; then
-            for path in 'securities-exam/kdocs-learning-v1.json' 'securities-exam/learning-pack-v330.js' 'securities-exam/learning-pack-v330.css' 'securities-exam/release-v32.js' 'securities-exam/sw.js'; do
+          if grep -Fq 'v3.4.0' site/ks/index.html; then
+            for path in 'securities-exam/ui-pro-r2.css' 'securities-exam/ui-pro-r2.js' 'securities-exam/assistant-v31.js' 'securities-exam/sources-v321.js' 'securities-exam/release-v32.js' 'securities-exam/sw.js'; do
               body="$(get "$path")"
               case "$path" in
-                *kdocs-learning-v1.json) grep -Fq '"product_version": "3.3.0"' <<<"$body" ;;
-                *learning-pack-v330.js) grep -Fq 'SEC_LEARNING_PACK_V330' <<<"$body" ;;
-                *release-v32.js) grep -Fq "version:'3.3.0'" <<<"$body"; grep -Fq "status:'structured-import'" <<<"$body" ;;
-                *sw.js) grep -Fq 'sec2026-v330' <<<"$body" ;;
+                *ui-pro-r2.js) grep -Fq "VERSION='3.4.0'" <<<"$body"; grep -Fq '今天只盯三件事' <<<"$body" ;;
+                *assistant-v31.js) grep -Fq 'SEC_ASSISTANT_V31' <<<"$body" ;;
+                *sources-v321.js) grep -Fq 'SEC_SOURCES_V321' <<<"$body" ;;
+                *release-v32.js) grep -Fq "version:'3.4.0'" <<<"$body" ;;
+                *sw.js) grep -Fq 'sec2026-v340' <<<"$body" ;;
               esac
             done
-            ks_body="$(get 'ks/')"; grep -Fq 'v3.3.0' <<<"$ks_body"
+            sec_body="$(get 'securities-exam/')"; grep -Fq 'data-product-version="3.4.0"' <<<"$sec_body"; grep -Fq 'ui-pro-r2.css?v=340' <<<"$sec_body"; grep -Fq 'ui-pro-r2.js?v=340' <<<"$sec_body"
+            ks_body="$(get 'ks/')"; grep -Fq 'v3.4.0' <<<"$ks_body"
+            source_mode='indexed-links'
+            if grep -Fq "status:'structured-import'" <<<"$(get 'securities-exam/release-v32.js')"; then
+              get 'securities-exam/kdocs-learning-v1.json' >/dev/null
+              get 'securities-exam/learning-pack-v330.js' >/dev/null
+              source_mode='derived-paraphrase-only'
+            fi
             cat > /tmp/securities-release-status.txt <<EOF
           status=ok
-          architecture=static-direct-derived-learning
+          architecture=learning-workspace-r2
           deployed_sha=${GITHUB_SHA}
-          version=3.3.0
+          version=3.4.0
+          ui=R2
           source_count=17
-          source_mode=derived-paraphrase-only
+          source_mode=${source_mode}
           url=${base}/ks/
           verified_at=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
           EOF

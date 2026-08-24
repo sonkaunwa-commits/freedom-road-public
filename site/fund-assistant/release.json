@@ -1,7 +1,8 @@
 {
-  "version": "20260822-1827",
-  "release": "FUND_ASSISTANT_UI_20260822_1827",
-  "entry": "v9.html",
-  "behavior": "v9-buttons.js",
-  "updated_at": "2026-08-22T18:27:00+08:00"
+  "version": "20260824-1820",
+  "release": "FUND_ASSISTANT_UI_20260824_1820",
+  "entry": "v13.html",
+  "behavior": "v13.js",
+  "architecture": "static-product-v13",
+  "updated_at": "2026-08-24T18:20:00+08:00"
 }

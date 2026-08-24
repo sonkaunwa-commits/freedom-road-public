@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-24T18:08:15.305575+08:00",
+  "generated_at": "2026-08-24T18:19:34.411654+08:00",
   "schema_version": 1,
   "status": "RESEARCH_ONLY",
   "tool": {
@@ -250,7 +250,7 @@
       "trade_date": "2026-08-24",
       "close": 1.3,
       "return_20d_pct": -3.7037,
-      "return_60d_pct": -28.9618,
+      "return_60d_pct": -28.9617,
       "distance_ma20_pct": -1.7013,
       "distance_ma60_pct": -9.7327,
       "drawdown_60d_pct": -34.0102,
@@ -274,7 +274,7 @@
       "market": "HK",
       "scope": "hk_research",
       "trade_date": "2026-08-24",
-      "close": 88.349998,
+      "close": 88.35,
       "return_20d_pct": -10.3955,
       "return_60d_pct": -19.9728,
       "distance_ma20_pct": -7.2173,

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-24T18:08:18.535266+08:00",
+  "generated_at": "2026-08-24T18:19:38.125582+08:00",
   "schema_version": 1,
   "evidence_status": "READY_RESEARCH_ONLY",
   "production_use": "RESEARCH_ONLY",
@@ -207,8 +207,8 @@
           0.741885,
           4.50145
         ],
-        "p_value_two_sided": 0.00626662,
-        "fdr_bh_q_value": 0.04190802,
+        "p_value_two_sided": 0.00626663,
+        "fdr_bh_q_value": 0.04190809,
         "evidence_class": "POSITIVE_FDR_5PCT"
       },
       {
@@ -234,10 +234,10 @@
         "signal": "breakout_20d_close",
         "horizon_sessions": 20,
         "sample_size": 26,
-        "mean_return_pct": -6.27235,
+        "mean_return_pct": -6.272351,
         "confidence_interval_95_pct": [
-          -7.575052,
-          -4.969648
+          -7.575053,
+          -4.969649
         ],
         "p_value_two_sided": 0.0,
         "fdr_bh_q_value": 0.0,
@@ -251,8 +251,8 @@
         "sample_size": 23,
         "mean_return_pct": -6.143733,
         "confidence_interval_95_pct": [
-          -7.527524,
-          -4.759941
+          -7.527525,
+          -4.759942
         ],
         "p_value_two_sided": 0.0,
         "fdr_bh_q_value": 0.0,
@@ -264,10 +264,10 @@
         "signal": "volume_confirmed_20d_breakout",
         "horizon_sessions": 10,
         "sample_size": 23,
-        "mean_return_pct": -2.72814,
+        "mean_return_pct": -2.728141,
         "confidence_interval_95_pct": [
           -3.744836,
-          -1.711445
+          -1.711446
         ],
         "p_value_two_sided": 1.4e-07,
         "fdr_bh_q_value": 4.99e-06,
@@ -279,10 +279,10 @@
         "signal": "breakout_20d_close",
         "horizon_sessions": 10,
         "sample_size": 26,
-        "mean_return_pct": -3.288938,
+        "mean_return_pct": -3.288939,
         "confidence_interval_95_pct": [
           -4.695794,
-          -1.882082
+          -1.882083
         ],
         "p_value_two_sided": 4.61e-06,
         "fdr_bh_q_value": 0.00012332,

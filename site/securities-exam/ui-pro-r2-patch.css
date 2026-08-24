@@ -1,0 +1,9 @@
+/* v3.4.0 R2 final interaction polish */
+@media(max-width:1099px){
+ body.uiProR2 .r2LegacyAccount{display:flex!important;margin:4px 0 1px!important;padding:0 1px!important;align-items:center!important;justify-content:space-between!important;gap:8px!important}
+ body.uiProR2 .r2LegacyAccount .assistantUserChipV31{min-height:36px!important;padding:5px 8px!important;border:0!important;background:transparent!important;box-shadow:none!important}
+ body.uiProR2 .r2LegacyAccount .assistantUserChipV31 .avatar{width:28px!important;height:28px!important;border-radius:9px!important}
+ body.uiProR2 .r2LegacyAccount .assistantUserChipV31 b{font-size:11px!important}
+ body.uiProR2 .r2LegacyAccount .assistantUserChipV31 small{font-size:8.5px!important}
+ body.uiProR2 .r2LegacyAccount .syncText{font-size:9px!important;color:#8b94a2!important;padding-right:2px}
+}

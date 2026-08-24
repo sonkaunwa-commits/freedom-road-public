@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-24T11:42:50.778755+08:00",
+  "generated_at": "2026-08-24T14:19:01.707514+08:00",
   "schema_version": 1,
   "evidence_status": "READY_RESEARCH_ONLY",
   "production_use": "RESEARCH_ONLY",
@@ -172,13 +172,13 @@
         "signal": "ma20_above_ma60_entry",
         "horizon_sessions": 5,
         "sample_size": 21,
-        "mean_return_pct": 2.143515,
+        "mean_return_pct": 2.097837,
         "confidence_interval_95_pct": [
-          0.801006,
-          3.486024
+          0.774255,
+          3.42142
         ],
-        "p_value_two_sided": 0.0017518,
-        "fdr_bh_q_value": 0.01338876,
+        "p_value_two_sided": 0.00189328,
+        "fdr_bh_q_value": 0.01447007,
         "evidence_class": "POSITIVE_FDR_5PCT"
       },
       {
@@ -202,13 +202,13 @@
         "signal": "ma20_reclaim",
         "horizon_sessions": 10,
         "sample_size": 29,
-        "mean_return_pct": 2.615352,
+        "mean_return_pct": 2.621668,
         "confidence_interval_95_pct": [
-          0.731839,
-          4.498865
+          0.741885,
+          4.50145
         ],
-        "p_value_two_sided": 0.00649848,
-        "fdr_bh_q_value": 0.04345859,
+        "p_value_two_sided": 0.00626663,
+        "fdr_bh_q_value": 0.04190809,
         "evidence_class": "POSITIVE_FDR_5PCT"
       },
       {
@@ -234,10 +234,10 @@
         "signal": "breakout_20d_close",
         "horizon_sessions": 20,
         "sample_size": 26,
-        "mean_return_pct": -6.2795,
+        "mean_return_pct": -6.272351,
         "confidence_interval_95_pct": [
-          -7.581546,
-          -4.977454
+          -7.575053,
+          -4.969649
         ],
         "p_value_two_sided": 0.0,
         "fdr_bh_q_value": 0.0,
@@ -297,20 +297,20 @@
       "symbols": 12,
       "above_ma20_pct": 8.33,
       "above_ma60_pct": 8.33,
-      "positive_20d_pct": 16.67,
-      "median_return_20d_pct": -3.0198,
-      "median_return_60d_pct": -13.5804,
-      "median_drawdown_60d_pct": -23.9204
+      "positive_20d_pct": 8.33,
+      "median_return_20d_pct": -3.5564,
+      "median_return_60d_pct": -13.8607,
+      "median_drawdown_60d_pct": -24.6408
     },
     {
       "market": "HK",
       "symbols": 6,
       "above_ma20_pct": 16.67,
       "above_ma60_pct": 16.67,
-      "positive_20d_pct": 16.67,
-      "median_return_20d_pct": -2.213,
-      "median_return_60d_pct": -6.4149,
-      "median_drawdown_60d_pct": -15.2242
+      "positive_20d_pct": 33.33,
+      "median_return_20d_pct": -1.8652,
+      "median_return_60d_pct": -5.9943,
+      "median_drawdown_60d_pct": -14.8313
     },
     {
       "market": "US",

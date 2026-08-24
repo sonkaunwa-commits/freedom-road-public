@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-24T11:42:51.478768+08:00",
+  "generated_at": "2026-08-24T14:19:02.381072+08:00",
   "schema_version": 6,
-  "source_health_updated_at": "2026-08-24T11:39:09.978229+08:00",
+  "source_health_updated_at": "2026-08-24T14:13:03.908468+08:00",
   "delivery_mode_17": "FULL_REPORT_WITH_EXPLICIT_DEGRADATIONS",
   "a_share_exact_action_gate": {
     "ready": true,
@@ -45,7 +45,7 @@
     },
     "gold_public_analysis_ready": true,
     "minute": {
-      "status": "missing_or_no_permission"
+      "status": "unavailable"
     },
     "candidate_scan": {
       "status": "degraded_no_fundamentals",
@@ -56,13 +56,13 @@
   },
   "analysis_engine": {
     "stage": "STAGE_1_RUNNING",
-    "generated_at": "2026-08-24T11:41:18.343133+08:00",
+    "generated_at": "2026-08-24T14:17:30.676629+08:00",
     "stage1_fund_ready": true,
     "stage1_a_share_history_ready": true,
     "stage2_vectorbt_daily_pilot_ready": true,
     "stage2_daily_pilot": {
       "status": "STAGE_2_DAILY_PILOT_RUNNING",
-      "generated_at": "2026-08-24T11:42:41.093572+08:00",
+      "generated_at": "2026-08-24T14:18:52.280656+08:00",
       "research_core_ready": true,
       "coverage": {
         "a_research_core_ok": 7,
@@ -134,7 +134,7 @@
   },
   "evidence_packet": {
     "status": "READY_RESEARCH_ONLY",
-    "generated_at": "2026-08-24T11:42:50.778755+08:00",
+    "generated_at": "2026-08-24T14:19:01.707514+08:00",
     "production_use": "RESEARCH_ONLY"
   },
   "content_contract": {

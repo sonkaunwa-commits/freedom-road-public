@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-24T11:39:09.978229+08:00",
+  "updated_at": "2026-08-24T14:13:03.908468+08:00",
   "mode": "all",
   "counts": {
     "a_share_ok": 7,
@@ -20,7 +20,90 @@
     "domestic_gold_reference_expected": 1
   },
   "minute": {
-    "status": "missing_or_no_permission"
+    "status": "unavailable",
+    "provider": "tushare:a_minutes",
+    "expected_codes": 7,
+    "covered_codes": 0,
+    "coverage_ratio": 0.0,
+    "expected_latest_bar_at": "2026-08-24T14:13:00+08:00",
+    "latest_bar_at": null,
+    "fresh_codes": [],
+    "stale_codes": [],
+    "missing_codes": [
+      "600006.SH",
+      "002085.SZ",
+      "002475.SZ",
+      "601138.SH",
+      "002600.SZ",
+      "601899.SH",
+      "300059.SZ"
+    ],
+    "max_lag_minutes": 6,
+    "attempts": [
+      {
+        "status": "unavailable",
+        "provider": "tushare:a_minutes",
+        "expected_codes": 7,
+        "covered_codes": 0,
+        "coverage_ratio": 0.0,
+        "expected_latest_bar_at": "2026-08-24T14:13:00+08:00",
+        "latest_bar_at": null,
+        "max_lag_minutes": 6,
+        "fresh_codes": [],
+        "stale_codes": [],
+        "missing_codes": [
+          "600006.SH",
+          "002085.SZ",
+          "002475.SZ",
+          "601138.SH",
+          "002600.SZ",
+          "601899.SH",
+          "300059.SZ"
+        ]
+      },
+      {
+        "status": "unavailable",
+        "provider": "akshare:a_minutes",
+        "expected_codes": 7,
+        "covered_codes": 0,
+        "coverage_ratio": 0.0,
+        "expected_latest_bar_at": "2026-08-24T14:13:00+08:00",
+        "latest_bar_at": null,
+        "max_lag_minutes": 6,
+        "fresh_codes": [],
+        "stale_codes": [],
+        "missing_codes": [
+          "600006.SH",
+          "002085.SZ",
+          "002475.SZ",
+          "601138.SH",
+          "002600.SZ",
+          "601899.SH",
+          "300059.SZ"
+        ]
+      },
+      {
+        "status": "unavailable",
+        "provider": "mootdx_tdx:a_minutes",
+        "expected_codes": 7,
+        "covered_codes": 0,
+        "coverage_ratio": 0.0,
+        "expected_latest_bar_at": "2026-08-24T14:13:00+08:00",
+        "latest_bar_at": null,
+        "max_lag_minutes": 6,
+        "fresh_codes": [],
+        "stale_codes": [],
+        "missing_codes": [
+          "600006.SH",
+          "002085.SZ",
+          "002475.SZ",
+          "601138.SH",
+          "002600.SZ",
+          "601899.SH",
+          "300059.SZ"
+        ]
+      }
+    ]
   },
   "bank_accumulation_gold": {
     "status": "private_source_required",
@@ -270,5 +353,5 @@
   ],
   "coverage_ok": true,
   "intraday_a_share_ok": false,
-  "run_id": "ff503e763d6baece"
+  "run_id": "c84ce2e6bdef0cf6"
 }

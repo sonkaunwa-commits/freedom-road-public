@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-24T11:42:41.093572+08:00",
+  "generated_at": "2026-08-24T14:18:52.280656+08:00",
   "schema_version": 2,
   "analysis_engine_stage": "STAGE_2_DAILY_PILOT_RUNNING",
   "tool": {
@@ -76,7 +76,7 @@
             "10": {
               "sample_size": 29,
               "win_rate_pct": 72.41,
-              "mean_return_pct": 2.6154,
+              "mean_return_pct": 2.6217,
               "median_return_pct": 4.2953,
               "p25_return_pct": -0.6878,
               "p75_return_pct": 8.7137,
@@ -85,16 +85,16 @@
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 29,
-                "mean_return_pct": 2.615352,
-                "hac_standard_error_pct": 0.960994,
-                "p_value_two_sided": 0.00649848,
+                "mean_return_pct": 2.621668,
+                "hac_standard_error_pct": 0.95909,
+                "p_value_two_sided": 0.00626663,
                 "confidence_interval_95_pct": [
-                  0.731839,
-                  4.498865
+                  0.741885,
+                  4.50145
                 ],
                 "hac_maxlags": 9,
                 "raw_evidence_class": "POSITIVE_MEAN_95CI_EXCLUDES_ZERO",
-                "fdr_bh_q_value": 0.04345859,
+                "fdr_bh_q_value": 0.04190809,
                 "fdr_bh_reject_5pct": true,
                 "evidence_class_after_fdr": "POSITIVE_FDR_5PCT",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -349,7 +349,7 @@
                 },
                 "10": {
                   "exit_date": "2026-08-24",
-                  "return_pct": -3.1136,
+                  "return_pct": -2.9304,
                   "max_adverse_excursion_pct": -4.9451
                 }
               }
@@ -664,7 +664,7 @@
                 ],
                 "hac_maxlags": 4,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.70503468,
+                "fdr_bh_q_value": 0.71496475,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -700,21 +700,21 @@
             "20": {
               "sample_size": 26,
               "win_rate_pct": 19.23,
-              "mean_return_pct": -6.2795,
+              "mean_return_pct": -6.2723,
               "median_return_pct": -7.2445,
               "p25_return_pct": -10.3225,
-              "p75_return_pct": -1.5489,
+              "p75_return_pct": -1.4921,
               "avg_max_adverse_excursion_pct": -9.7925,
               "worst_max_adverse_excursion_pct": -23.8281,
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 26,
-                "mean_return_pct": -6.2795,
-                "hac_standard_error_pct": 0.664321,
+                "mean_return_pct": -6.272351,
+                "hac_standard_error_pct": 0.664656,
                 "p_value_two_sided": 0.0,
                 "confidence_interval_95_pct": [
-                  -7.581546,
-                  -4.977454
+                  -7.575053,
+                  -4.969649
                 ],
                 "hac_maxlags": 19,
                 "raw_evidence_class": "NEGATIVE_MEAN_95CI_EXCLUDES_ZERO",
@@ -951,7 +951,7 @@
                 },
                 "20": {
                   "exit_date": "2026-08-24",
-                  "return_pct": -1.6729,
+                  "return_pct": -1.487,
                   "max_adverse_excursion_pct": -3.5316
                 }
               }
@@ -2193,7 +2193,7 @@
                 ],
                 "hac_maxlags": 4,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.70144093,
+                "fdr_bh_q_value": 0.71206882,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -3087,25 +3087,25 @@
             "5": {
               "sample_size": 32,
               "win_rate_pct": 37.5,
-              "mean_return_pct": -1.9255,
+              "mean_return_pct": -1.9569,
               "median_return_pct": -2.1587,
               "p25_return_pct": -6.0659,
               "p75_return_pct": 2.4462,
-              "avg_max_adverse_excursion_pct": -6.6183,
+              "avg_max_adverse_excursion_pct": -6.6247,
               "worst_max_adverse_excursion_pct": -22.2439,
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 32,
-                "mean_return_pct": -1.92553,
-                "hac_standard_error_pct": 1.585873,
-                "p_value_two_sided": 0.22468022,
+                "mean_return_pct": -1.956849,
+                "hac_standard_error_pct": 1.601724,
+                "p_value_two_sided": 0.22181568,
                 "confidence_interval_95_pct": [
-                  -5.033783,
-                  1.182723
+                  -5.096169,
+                  1.182472
                 ],
                 "hac_maxlags": 4,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.54638144,
+                "fdr_bh_q_value": 0.5394154,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -3141,7 +3141,7 @@
             "20": {
               "sample_size": 30,
               "win_rate_pct": 46.67,
-              "mean_return_pct": 1.2221,
+              "mean_return_pct": 1.1903,
               "median_return_pct": -1.3113,
               "p25_return_pct": -11.5878,
               "p75_return_pct": 10.4004,
@@ -3150,16 +3150,16 @@
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 30,
-                "mean_return_pct": 1.222137,
-                "hac_standard_error_pct": 1.700241,
-                "p_value_two_sided": 0.47226286,
+                "mean_return_pct": 1.190314,
+                "hac_standard_error_pct": 1.72156,
+                "p_value_two_sided": 0.48930432,
                 "confidence_interval_95_pct": [
-                  -2.110274,
-                  4.554548
+                  -2.183882,
+                  4.56451
                 ],
                 "hac_maxlags": 19,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.70503468,
+                "fdr_bh_q_value": 0.72716059,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -3346,7 +3346,7 @@
                 },
                 "20": {
                   "exit_date": "2026-08-24",
-                  "return_pct": -13.3657,
+                  "return_pct": -14.3204,
                   "max_adverse_excursion_pct": -14.8058
                 }
               }
@@ -3377,8 +3377,8 @@
               "forward": {
                 "5": {
                   "exit_date": "2026-08-24",
-                  "return_pct": -9.0538,
-                  "max_adverse_excursion_pct": -10.3109
+                  "return_pct": -10.0561,
+                  "max_adverse_excursion_pct": -10.5147
                 }
               }
             }
@@ -3692,7 +3692,7 @@
                 ],
                 "hac_maxlags": 4,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.70144093,
+                "fdr_bh_q_value": 0.71206882,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -4651,7 +4651,7 @@
                 ],
                 "hac_maxlags": 9,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.70503468,
+                "fdr_bh_q_value": 0.71496475,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -4678,7 +4678,7 @@
                 ],
                 "hac_maxlags": 19,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.70503468,
+                "fdr_bh_q_value": 0.71496475,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -5230,25 +5230,25 @@
             "10": {
               "sample_size": 35,
               "win_rate_pct": 68.57,
-              "mean_return_pct": 7.5995,
+              "mean_return_pct": 7.5822,
               "median_return_pct": 5.5034,
               "p25_return_pct": -3.3487,
               "p75_return_pct": 19.0657,
-              "avg_max_adverse_excursion_pct": -5.942,
+              "avg_max_adverse_excursion_pct": -5.9618,
               "worst_max_adverse_excursion_pct": -19.6594,
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 35,
-                "mean_return_pct": 7.599447,
-                "hac_standard_error_pct": 5.082189,
-                "p_value_two_sided": 0.1348336,
+                "mean_return_pct": 7.582202,
+                "hac_standard_error_pct": 5.089659,
+                "p_value_two_sided": 0.13629604,
                 "confidence_interval_95_pct": [
-                  -2.36146,
-                  17.560354
+                  -2.393346,
+                  17.557751
                 ],
                 "hac_maxlags": 9,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.38992419,
+                "fdr_bh_q_value": 0.39415341,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -5503,8 +5503,8 @@
                 },
                 "10": {
                   "exit_date": "2026-08-24",
-                  "return_pct": -11.821,
-                  "max_adverse_excursion_pct": -12.1301
+                  "return_pct": -12.4246,
+                  "max_adverse_excursion_pct": -12.822
                 }
               }
             }
@@ -6727,7 +6727,7 @@
             "5": {
               "sample_size": 36,
               "win_rate_pct": 41.67,
-              "mean_return_pct": -0.1645,
+              "mean_return_pct": -0.1901,
               "median_return_pct": -1.5192,
               "p25_return_pct": -4.5979,
               "p75_return_pct": 2.4836,
@@ -6736,16 +6736,16 @@
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 36,
-                "mean_return_pct": -0.164456,
-                "hac_standard_error_pct": 1.099663,
-                "p_value_two_sided": 0.88111838,
+                "mean_return_pct": -0.190137,
+                "hac_standard_error_pct": 1.113008,
+                "p_value_two_sided": 0.86435626,
                 "confidence_interval_95_pct": [
-                  -2.319755,
-                  1.990843
+                  -2.371592,
+                  1.991319
                 ],
                 "hac_maxlags": 4,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.92431046,
+                "fdr_bh_q_value": 0.91427161,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -7022,7 +7022,7 @@
               "forward": {
                 "5": {
                   "exit_date": "2026-08-24",
-                  "return_pct": -6.3174,
+                  "return_pct": -7.2419,
                   "max_adverse_excursion_pct": -8.4746
                 }
               }
@@ -7685,25 +7685,25 @@
             "5": {
               "sample_size": 30,
               "win_rate_pct": 56.67,
-              "mean_return_pct": 0.2419,
+              "mean_return_pct": 0.2099,
               "median_return_pct": 1.3916,
               "p25_return_pct": -2.0689,
-              "p75_return_pct": 3.9347,
+              "p75_return_pct": 3.8009,
               "avg_max_adverse_excursion_pct": -4.3013,
               "worst_max_adverse_excursion_pct": -16.995,
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 30,
-                "mean_return_pct": 0.241855,
-                "hac_standard_error_pct": 1.296122,
-                "p_value_two_sided": 0.8519754,
+                "mean_return_pct": 0.20988,
+                "hac_standard_error_pct": 1.298027,
+                "p_value_two_sided": 0.87154864,
                 "confidence_interval_95_pct": [
-                  -2.298498,
-                  2.782207
+                  -2.334205,
+                  2.753965
                 ],
                 "hac_maxlags": 4,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.9025878,
+                "fdr_bh_q_value": 0.91427161,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -7980,7 +7980,7 @@
               "forward": {
                 "5": {
                   "exit_date": "2026-08-24",
-                  "return_pct": 3.8669,
+                  "return_pct": 2.9077,
                   "max_adverse_excursion_pct": -3.0276
                 }
               }
@@ -7994,8 +7994,8 @@
             "5": {
               "sample_size": 21,
               "win_rate_pct": 71.43,
-              "mean_return_pct": 2.1435,
-              "median_return_pct": 3.3316,
+              "mean_return_pct": 2.0978,
+              "median_return_pct": 2.9077,
               "p25_return_pct": -1.3706,
               "p75_return_pct": 5.4422,
               "avg_max_adverse_excursion_pct": -3.1957,
@@ -8003,16 +8003,16 @@
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 21,
-                "mean_return_pct": 2.143515,
-                "hac_standard_error_pct": 0.684966,
-                "p_value_two_sided": 0.0017518,
+                "mean_return_pct": 2.097837,
+                "hac_standard_error_pct": 0.67531,
+                "p_value_two_sided": 0.00189328,
                 "confidence_interval_95_pct": [
-                  0.801006,
-                  3.486024
+                  0.774255,
+                  3.42142
                 ],
                 "hac_maxlags": 4,
                 "raw_evidence_class": "POSITIVE_MEAN_95CI_EXCLUDES_ZERO",
-                "fdr_bh_q_value": 0.01338876,
+                "fdr_bh_q_value": 0.01447007,
                 "fdr_bh_reject_5pct": true,
                 "evidence_class_after_fdr": "POSITIVE_FDR_5PCT",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -8272,7 +8272,7 @@
               "forward": {
                 "5": {
                   "exit_date": "2026-08-24",
-                  "return_pct": 3.8669,
+                  "return_pct": 2.9077,
                   "max_adverse_excursion_pct": -3.0276
                 }
               }
@@ -8600,7 +8600,7 @@
             "5": {
               "sample_size": 18,
               "win_rate_pct": 77.78,
-              "mean_return_pct": 4.0616,
+              "mean_return_pct": 4.0083,
               "median_return_pct": 4.5388,
               "p25_return_pct": 1.2794,
               "p75_return_pct": 7.0481,
@@ -8859,7 +8859,7 @@
               "forward": {
                 "5": {
                   "exit_date": "2026-08-24",
-                  "return_pct": 3.8669,
+                  "return_pct": 2.9077,
                   "max_adverse_excursion_pct": -3.0276
                 }
               }
@@ -9799,7 +9799,7 @@
                 ],
                 "hac_maxlags": 9,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.70144093,
+                "fdr_bh_q_value": 0.71206882,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -12720,7 +12720,7 @@
                 ],
                 "hac_maxlags": 4,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.70503468,
+                "fdr_bh_q_value": 0.71496475,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -14124,25 +14124,25 @@
             "5": {
               "sample_size": 31,
               "win_rate_pct": 45.16,
-              "mean_return_pct": 0.1172,
+              "mean_return_pct": 0.0935,
               "median_return_pct": -0.7899,
               "p25_return_pct": -5.5245,
               "p75_return_pct": 6.3895,
-              "avg_max_adverse_excursion_pct": -7.4412,
+              "avg_max_adverse_excursion_pct": -7.4632,
               "worst_max_adverse_excursion_pct": -39.4169,
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 31,
-                "mean_return_pct": 0.117235,
-                "hac_standard_error_pct": 2.580666,
-                "p_value_two_sided": 0.96376607,
+                "mean_return_pct": 0.093466,
+                "hac_standard_error_pct": 2.595506,
+                "p_value_two_sided": 0.97127388,
                 "confidence_interval_95_pct": [
-                  -4.940778,
-                  5.175247
+                  -4.993632,
+                  5.180564
                 ],
                 "hac_maxlags": 4,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.9728582,
+                "fdr_bh_q_value": 0.98043684,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -14419,8 +14419,8 @@
               "forward": {
                 "5": {
                   "exit_date": "2026-08-24",
-                  "return_pct": -12.0526,
-                  "max_adverse_excursion_pct": -12.6316
+                  "return_pct": -12.7895,
+                  "max_adverse_excursion_pct": -13.3158
                 }
               }
             }
@@ -15046,25 +15046,25 @@
             "5": {
               "sample_size": 26,
               "win_rate_pct": 53.85,
-              "mean_return_pct": 0.6096,
+              "mean_return_pct": 0.5961,
               "median_return_pct": 1.1115,
               "p25_return_pct": -3.4239,
               "p75_return_pct": 4.654,
-              "avg_max_adverse_excursion_pct": -3.7077,
+              "avg_max_adverse_excursion_pct": -3.7145,
               "worst_max_adverse_excursion_pct": -13.9929,
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 26,
-                "mean_return_pct": 0.609581,
-                "hac_standard_error_pct": 0.776788,
-                "p_value_two_sided": 0.43260261,
+                "mean_return_pct": 0.596121,
+                "hac_standard_error_pct": 0.782281,
+                "p_value_two_sided": 0.44604287,
                 "confidence_interval_95_pct": [
-                  -0.912895,
-                  2.132057
+                  -0.937122,
+                  2.129364
                 ],
                 "hac_maxlags": 4,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.70144093,
+                "fdr_bh_q_value": 0.71233712,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -15331,8 +15331,8 @@
               "forward": {
                 "5": {
                   "exit_date": "2026-08-24",
-                  "return_pct": -9.9488,
-                  "max_adverse_excursion_pct": -10.5612
+                  "return_pct": -10.2987,
+                  "max_adverse_excursion_pct": -10.7362
                 }
               }
             }
@@ -15345,11 +15345,11 @@
             "5": {
               "sample_size": 16,
               "win_rate_pct": 56.25,
-              "mean_return_pct": -0.1429,
+              "mean_return_pct": -0.1647,
               "median_return_pct": 1.7517,
               "p25_return_pct": -5.8604,
               "p75_return_pct": 3.7285,
-              "avg_max_adverse_excursion_pct": -4.6741,
+              "avg_max_adverse_excursion_pct": -4.6851,
               "worst_max_adverse_excursion_pct": -13.9929,
               "statistical_evidence": {
                 "status": "INSUFFICIENT_EVIDENCE",
@@ -15594,8 +15594,8 @@
               "forward": {
                 "5": {
                   "exit_date": "2026-08-24",
-                  "return_pct": -9.9488,
-                  "max_adverse_excursion_pct": -10.5612
+                  "return_pct": -10.2987,
+                  "max_adverse_excursion_pct": -10.7362
                 }
               }
             }

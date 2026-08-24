@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-24T06:45:57.831573+08:00",
+  "generated_at": "2026-08-24T10:23:19.220556+08:00",
   "schema_version": 6,
-  "source_health_updated_at": "2026-08-24T06:42:38.226834+08:00",
-  "delivery_mode_17": "FULL_REPORT_WITH_EXPLICIT_DEGRADATIONS",
+  "source_health_updated_at": "2026-08-24T10:19:42.525277+08:00",
+  "delivery_mode_17": "FULL_REPORT",
   "a_share_exact_action_gate": {
     "ready": true,
     "coverage": "7/7",
@@ -45,7 +45,7 @@
     },
     "gold_public_analysis_ready": true,
     "minute": {
-      "status": "missing_or_no_permission"
+      "status": "ok"
     },
     "candidate_scan": {
       "status": "degraded_no_fundamentals",
@@ -56,13 +56,13 @@
   },
   "analysis_engine": {
     "stage": "STAGE_1_RUNNING",
-    "generated_at": "2026-08-24T06:44:23.732549+08:00",
+    "generated_at": "2026-08-24T10:21:56.134840+08:00",
     "stage1_fund_ready": true,
     "stage1_a_share_history_ready": true,
     "stage2_vectorbt_daily_pilot_ready": true,
     "stage2_daily_pilot": {
       "status": "STAGE_2_DAILY_PILOT_RUNNING",
-      "generated_at": "2026-08-24T06:45:48.040812+08:00",
+      "generated_at": "2026-08-24T10:23:10.195284+08:00",
       "research_core_ready": true,
       "coverage": {
         "a_research_core_ok": 7,
@@ -78,9 +78,9 @@
       "production_use": "RESEARCH_ONLY",
       "statistical_evidence": {
         "status": "RESEARCH_ONLY",
-        "sufficient_signal_horizons": 110,
-        "insufficient_signal_horizons": 70,
-        "fdr_reject_5pct_count": 16
+        "sufficient_signal_horizons": 104,
+        "insufficient_signal_horizons": 76,
+        "fdr_reject_5pct_count": 11
       }
     },
     "support_layer": {
@@ -134,7 +134,7 @@
   },
   "evidence_packet": {
     "status": "READY_RESEARCH_ONLY",
-    "generated_at": "2026-08-24T06:45:57.193088+08:00",
+    "generated_at": "2026-08-24T10:23:18.708486+08:00",
     "production_use": "RESEARCH_ONLY"
   },
   "content_contract": {
@@ -215,9 +215,7 @@
     "report_contract_version": "1.0.0",
     "analysis_roadmap_version": "1.0.0"
   },
-  "blockers": [
-    "MINUTE_DATA_DEGRADED"
-  ],
+  "blockers": [],
   "instruction": "At a fixed report anchor, inspect readiness first. Data readiness is only the input gate. Then satisfy content_contract without deleting required analysis. Join the Private Ledger only in the private report layer. Statistical evidence remains research-only and must keep its uncertainty/FDR caveats.",
   "privacy": "public market and research readiness only; no private positions, quantities, costs, cash, account ids, bank executable quotes or trade states"
 }

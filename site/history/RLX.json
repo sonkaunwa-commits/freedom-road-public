@@ -2,7 +2,7 @@
   "code": "RLX",
   "market": "US",
   "provider": "yfinance:us:RLX",
-  "updated_at": "2026-08-24T06:42:38.226834+08:00",
+  "updated_at": "2026-08-24T10:19:42.525277+08:00",
   "rows": [
     {
       "trade_date": "20240726",

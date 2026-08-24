@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-08-24T06:45:57.831573+08:00",
+  "generated_at": "2026-08-24T10:23:19.220556+08:00",
   "schema_version": 8,
   "datasets": {
     "tracked_market.json": {
       "exists": true,
-      "updated_at": "2026-08-24T06:42:38.226834+08:00",
-      "bytes": 25580
+      "updated_at": "2026-08-24T10:19:42.525277+08:00",
+      "bytes": 25120
     },
     "funds.json": {
       "exists": true,
-      "updated_at": "2026-08-24T06:42:38.226834+08:00",
+      "updated_at": "2026-08-24T10:19:42.525277+08:00",
       "bytes": 595401
     },
     "gold.json": {
       "exists": true,
-      "updated_at": "2026-08-24T06:42:38.226834+08:00",
+      "updated_at": "2026-08-24T10:19:42.525277+08:00",
       "bytes": 953902
     },
     "candidate_pool.json": {
@@ -24,47 +24,47 @@
     },
     "health.json": {
       "exists": true,
-      "updated_at": "2026-08-24T06:42:38.226834+08:00",
-      "bytes": 10939
+      "updated_at": "2026-08-24T10:19:42.525277+08:00",
+      "bytes": 9012
     },
     "analysis_stage1.json": {
       "exists": true,
-      "updated_at": "2026-08-24T06:44:23.732549+08:00",
-      "bytes": 18338
+      "updated_at": "2026-08-24T10:21:56.134840+08:00",
+      "bytes": 18321
     },
     "analysis_stage2_daily.json": {
       "exists": true,
-      "updated_at": "2026-08-24T06:45:48.040812+08:00",
-      "bytes": 661117
+      "updated_at": "2026-08-24T10:23:10.195284+08:00",
+      "bytes": 653530
     },
     "analysis_duckdb_evidence.json": {
       "exists": true,
-      "updated_at": "2026-08-24T06:45:53.771352+08:00",
-      "bytes": 10531
+      "updated_at": "2026-08-24T10:23:15.460498+08:00",
+      "bytes": 10543
     },
     "data_contracts.json": {
       "exists": true,
-      "updated_at": "2026-08-24T06:45:30.497293+08:00",
+      "updated_at": "2026-08-24T10:22:53.213989+08:00",
       "bytes": 5537
     },
     "calendar_alignment.json": {
       "exists": true,
-      "updated_at": "2026-08-24T06:45:31.147576+08:00",
+      "updated_at": "2026-08-24T10:22:53.843079+08:00",
       "bytes": 7777
     },
     "analysis_evidence_summary.json": {
       "exists": true,
-      "updated_at": "2026-08-24T06:45:57.193088+08:00",
-      "bytes": 9728
+      "updated_at": "2026-08-24T10:23:18.708486+08:00",
+      "bytes": 7577
     },
     "report_readiness.json": {
       "exists": true,
-      "updated_at": "2026-08-24T06:45:57.831573+08:00",
-      "bytes": 8278
+      "updated_at": "2026-08-24T10:23:19.220556+08:00",
+      "bytes": 8199
     }
   },
   "report_readiness": {
-    "delivery_mode_17": "FULL_REPORT_WITH_EXPLICIT_DEGRADATIONS",
+    "delivery_mode_17": "FULL_REPORT",
     "a_share_public_market_ready": true,
     "private_join_required_for_exact_action": true,
     "candidate_scan_status": "degraded_no_fundamentals",
@@ -72,19 +72,17 @@
     "analysis_engine_stage": "STAGE_1_RUNNING",
     "stage2_daily_pilot_status": "STAGE_2_DAILY_PILOT_RUNNING",
     "evidence_status": "READY_RESEARCH_ONLY",
-    "blockers": [
-      "MINUTE_DATA_DEGRADED"
-    ]
+    "blockers": []
   },
   "analysis_engine": {
     "stage": "STAGE_1_RUNNING",
-    "generated_at": "2026-08-24T06:44:23.732549+08:00",
+    "generated_at": "2026-08-24T10:21:56.134840+08:00",
     "stage1_fund_ready": true,
     "stage1_a_share_history_ready": true,
     "stage2_vectorbt_daily_pilot_ready": true,
     "stage2_daily_pilot": {
       "status": "STAGE_2_DAILY_PILOT_RUNNING",
-      "generated_at": "2026-08-24T06:45:48.040812+08:00",
+      "generated_at": "2026-08-24T10:23:10.195284+08:00",
       "research_core_ready": true,
       "coverage": {
         "a_research_core_ok": 7,
@@ -100,9 +98,9 @@
       "production_use": "RESEARCH_ONLY",
       "statistical_evidence": {
         "status": "RESEARCH_ONLY",
-        "sufficient_signal_horizons": 110,
-        "insufficient_signal_horizons": 70,
-        "fdr_reject_5pct_count": 16
+        "sufficient_signal_horizons": 104,
+        "insufficient_signal_horizons": 76,
+        "fdr_reject_5pct_count": 11
       }
     },
     "support_layer": {

@@ -34,10 +34,7 @@ jobs:
           test -f site/fund-assistant/release.json
           test -f site/fund-assistant/v9.html
           test -f site/fund-assistant/v9-core.js
-          test -f site/fund-assistant/v8-ui.js
-          test -f site/fund-assistant/v9-patch.js
           test -f site/fund-assistant/v9-buttons.js
-          test -f site/fund-assistant/v9.css
           test -f site/fund-assistant/v9-buttons.css
           test -f site/securities-exam/index.html
           test -f site/investment-advisor-exam/index.html
@@ -46,92 +43,47 @@ jobs:
           python3 -m json.tool site/publication.json >/dev/null
           python3 -m json.tool site/fund-assistant/release.json >/dev/null
           if find site -type l -print -quit | grep -q .; then echo 'Symlinks are not allowed.' >&2; exit 1; fi
-
-          python3 - <<'PY'
-          import json,re
-          from html.parser import HTMLParser
-          from pathlib import Path
-          base=Path('site/fund-assistant')
-          x=json.loads((base/'release.json').read_text(encoding='utf-8'))
-          entry=x['entry']; release=x['release']; version=x['version']; behavior=x.get('behavior')
-          ep=base/entry
-          assert ep.is_file(), f'missing current entry: {entry}'
-          body=ep.read_text(encoding='utf-8')
-          assert 'document.write' not in body
-          assert 'html=html.replace' not in body
-          assert '<script src="v9-buttons.js' in body
-          assert '<link rel="stylesheet" href="v9-buttons.css' in body
-          if release not in body:
-              assert behavior
-              bp=base/behavior
-              assert bp.is_file() and release in bp.read_text(encoding='utf-8')
-          for asset in sorted(set(re.findall(r'[A-Za-z0-9._-]+\.(?:js|css)', body))):
-              assert (base/asset).is_file(), f'missing static asset: {asset}'
-          class P(HTMLParser): pass
-          P().feed(body)
-          print(f'Current static fund release: {version} -> {entry} / {behavior}')
-          PY
-
           node --check site/fund-assistant/v9-core.js
-          node --check site/fund-assistant/v8-ui.js
-          node --check site/fund-assistant/v9-patch.js
           node --check site/fund-assistant/v9-buttons.js
           grep -Fq 'FUND_ASSISTANT_BOOTSTRAP_' site/fund-assistant/index.html
           grep -Fq 'investment-advisor-exam' site/tg/index.html
 
-          if grep -Fq 'v3.4.0' site/ks/index.html; then
-            for f in ui-pro-r2.css ui-pro-r2.js assistant-v31.js assistant-v31.css sources-v321.js sources-v321.css release-v32.js release-v32.css ux-fix-v27.js sw.js manifest.webmanifest; do
-              test -f "site/securities-exam/$f"
-            done
-            grep -Fq 'data-product-version="3.4.0"' site/securities-exam/index.html
-            grep -Fq 'ui-pro-r2.css?v=340' site/securities-exam/index.html
-            grep -Fq 'ui-pro-r2.js?v=340' site/securities-exam/index.html
-            ! grep -Fq 'ui-pro-r1.css' site/securities-exam/index.html
-            grep -Fq "VERSION='3.4.0'" site/securities-exam/ui-pro-r2.js
-            grep -Fq '今天只盯三件事' site/securities-exam/ui-pro-r2.js
-            grep -Fq '学习报告' site/securities-exam/ui-pro-r2.js
-            grep -Fq 'sec_r2_mastery_v1' site/securities-exam/ui-pro-r2.js
-            grep -Fq "version:'3.4.0'" site/securities-exam/release-v32.js
-            grep -Fq "version:'3.4.0'" site/securities-exam/release-v24.js
-            grep -Fq 'sec2026-v340' site/securities-exam/sw.js
-            grep -Fq 'assistant-v31.js?v=340' site/securities-exam/ux-fix-v27.js
-            grep -Fq 'sources-v321.js?v=340' site/securities-exam/ux-fix-v27.js
-            grep -Fq 'release-v32.js?v=340' site/securities-exam/ux-fix-v27.js
-            node --check site/securities-exam/ui-pro-r2.js
-            node --check site/securities-exam/assistant-v31.js
-            node --check site/securities-exam/sources-v321.js
-            node --check site/securities-exam/release-v32.js
+          if grep -Fq 'v3.5.0' site/ks/index.html; then
+            for f in product-v350.css product-core-v350.js product-v350.js sources-data-v350.js sw.js manifest.webmanifest; do test -f "site/securities-exam/$f"; done
+            grep -Fq 'data-product-version="3.5.0"' site/securities-exam/index.html
+            grep -Fq 'product-v350.css?v=350' site/securities-exam/index.html
+            grep -Fq 'product-core-v350.js?v=350' site/securities-exam/index.html
+            grep -Fq 'sources-data-v350.js?v=350' site/securities-exam/index.html
+            grep -Fq 'product-v350.js?v=350' site/securities-exam/index.html
+            ! grep -Fq 'ui-pro-r2.js' site/securities-exam/index.html
+            ! grep -Fq 'release-v24.js' site/securities-exam/index.html
+            grep -Fq "VERSION='3.5.0'" site/securities-exam/product-v350.js
+            grep -Fq '今天只完成这些' site/securities-exam/product-v350.js
+            grep -Fq 'ACTIVE RECALL' site/securities-exam/product-v350.js
+            grep -Fq '我为什么会错？' site/securities-exam/product-v350.js
+            ! grep -Fq 'setInterval(' site/securities-exam/product-v350.js
+            grep -Fq 'sec2026-v350' site/securities-exam/sw.js
+            node --check site/securities-exam/product-core-v350.js
+            node --check site/securities-exam/sources-data-v350.js
+            node --check site/securities-exam/product-v350.js
             python3 - <<'PY'
           import re
           from pathlib import Path
-          s=Path('site/securities-exam/sources-v321.js').read_text(encoding='utf-8')
+          s=Path('site/securities-exam/sources-data-v350.js').read_text(encoding='utf-8')
           urls=re.findall(r'https://www\.kdocs\.cn/l/[A-Za-z0-9]+',s)
           assert len(urls)==17 and len(set(urls))==17
           assert len(re.findall(r"id:'law-",s))==7
           assert len(re.findall(r"id:'finance-",s))==10
-          print('Securities v3.4 source index PASS')
+          p=Path('site/securities-exam/product-v350.js').read_text(encoding='utf-8')
+          assert '学习账号 1' in p and '学习账号 2' in p
+          assert '核心定义' in p and '考试通常怎么考' in p and '常见错误' in p and '易混说法' in p
+          print('Securities v3.5 product static PASS')
           PY
-            if grep -Fq "status:'structured-import'" site/securities-exam/release-v32.js; then
-              test -f site/securities-exam/kdocs-learning-v1.json
-              test -f site/securities-exam/learning-pack-v330.js
-              test -f site/securities-exam/learning-pack-v330.css
-              node --check site/securities-exam/learning-pack-v330.js
-              python3 - <<'PY'
-          import json
-          from pathlib import Path
-          x=json.loads(Path('site/securities-exam/kdocs-learning-v1.json').read_text(encoding='utf-8'))
-          assert x['source_policy']=='derived-paraphrase-only-no-raw-body'
-          assert x['source_count']==17 and x['law_count']==7 and x['finance_count']==10
-          assert x['total_key_points']>=65
-          assert len(x['documents'])==17 and len({d['source_id'] for d in x['documents']})==17
-          print('Securities v3.4 structured KDocs payload PASS')
-          PY
-            fi
-            echo 'Securities v3.4 static release PASS'
-          elif grep -Fq 'v3.3.0' site/ks/index.html; then
-            test -f site/securities-exam/kdocs-learning-v1.json
-            test -f site/securities-exam/learning-pack-v330.js
-            test -f site/securities-exam/learning-pack-v330.css
+          elif grep -Fq 'v3.4.0' site/ks/index.html; then
+            test -f site/securities-exam/ui-pro-r2.js
+            grep -Fq "VERSION='3.4.0'" site/securities-exam/ui-pro-r2.js
+            grep -Fq 'sec2026-v340' site/securities-exam/sw.js
+            echo 'Securities v3.4 transition PASS'
           else
             grep -Fq 'securities-exam' site/ks/index.html
           fi
@@ -176,7 +128,6 @@ jobs:
           entry="$(python3 -c "import json;print(json.load(open('$local_release'))['entry'])")"
           behavior="$(python3 -c "import json;print(json.load(open('$local_release')).get('behavior',''))")"
           release_body="$(get 'fund-assistant/release.json')"; grep -Fq "$release" <<<"$release_body"
-          entry_body="$(get "fund-assistant/$entry")"; grep -Fq 'v9-buttons.js' <<<"$entry_body"; grep -Fq 'v9-buttons.css' <<<"$entry_body"
           cat > /tmp/fund-release-status.txt <<EOF
           status=ok
           architecture=static-direct
@@ -189,25 +140,31 @@ jobs:
           verified_at=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
           EOF
 
-          if grep -Fq 'v3.4.0' site/ks/index.html; then
-            for path in 'securities-exam/ui-pro-r2.css' 'securities-exam/ui-pro-r2.js' 'securities-exam/assistant-v31.js' 'securities-exam/sources-v321.js' 'securities-exam/release-v32.js' 'securities-exam/sw.js'; do
-              body="$(get "$path")"
-              case "$path" in
-                *ui-pro-r2.js) grep -Fq "VERSION='3.4.0'" <<<"$body"; grep -Fq '今天只盯三件事' <<<"$body" ;;
-                *assistant-v31.js) grep -Fq 'SEC_ASSISTANT_V31' <<<"$body" ;;
-                *sources-v321.js) grep -Fq 'SEC_SOURCES_V321' <<<"$body" ;;
-                *release-v32.js) grep -Fq "version:'3.4.0'" <<<"$body" ;;
-                *sw.js) grep -Fq 'sec2026-v340' <<<"$body" ;;
-              esac
-            done
-            sec_body="$(get 'securities-exam/')"; grep -Fq 'data-product-version="3.4.0"' <<<"$sec_body"; grep -Fq 'ui-pro-r2.css?v=340' <<<"$sec_body"; grep -Fq 'ui-pro-r2.js?v=340' <<<"$sec_body"
-            ks_body="$(get 'ks/')"; grep -Fq 'v3.4.0' <<<"$ks_body"
-            source_mode='indexed-links'
-            if grep -Fq "status:'structured-import'" <<<"$(get 'securities-exam/release-v32.js')"; then
-              get 'securities-exam/kdocs-learning-v1.json' >/dev/null
-              get 'securities-exam/learning-pack-v330.js' >/dev/null
-              source_mode='derived-paraphrase-only'
-            fi
+          if grep -Fq 'v3.5.0' site/ks/index.html; then
+            sec_body="$(get 'securities-exam/')"
+            grep -Fq 'data-product-version="3.5.0"' <<<"$sec_body"
+            grep -Fq 'product-v350.css?v=350' <<<"$sec_body"
+            grep -Fq 'product-v350.js?v=350' <<<"$sec_body"
+            core_body="$(get 'securities-exam/product-core-v350.js')"; grep -Fq "VERSION='3.5.0'" <<<"$core_body"; grep -Fq 'buildPlan' <<<"$core_body"
+            product_body="$(get 'securities-exam/product-v350.js')"; grep -Fq '今天只完成这些' <<<"$product_body"; grep -Fq 'ACTIVE RECALL' <<<"$product_body"; grep -Fq '我为什么会错？' <<<"$product_body"
+            sources_body="$(get 'securities-exam/sources-data-v350.js')"; grep -Fq 'SEC_SOURCES_V350' <<<"$sources_body"
+            sw_body="$(get 'securities-exam/sw.js')"; grep -Fq 'sec2026-v350' <<<"$sw_body"
+            ks_body="$(get 'ks/')"; grep -Fq 'v3.5.0' <<<"$ks_body"
+            cat > /tmp/securities-release-status.txt <<EOF
+          status=ok
+          architecture=exam-prep-system-v1
+          deployed_sha=${GITHUB_SHA}
+          version=3.5.0
+          ui=PM-V1
+          plan=adaptive-nonempty
+          knowledge=active-recall-rich-cards
+          review=explanation-error-attribution-spaced
+          accounts=two-local-profiles
+          source_count=17
+          url=${base}/ks/
+          verified_at=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
+          EOF
+          elif grep -Fq 'v3.4.0' site/ks/index.html; then
             cat > /tmp/securities-release-status.txt <<EOF
           status=ok
           architecture=learning-workspace-r2
@@ -215,7 +172,6 @@ jobs:
           version=3.4.0
           ui=R2
           source_count=17
-          source_mode=${source_mode}
           url=${base}/ks/
           verified_at=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
           EOF

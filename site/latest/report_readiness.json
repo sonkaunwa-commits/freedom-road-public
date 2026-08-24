@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-24T18:06:45.173193+08:00",
+  "generated_at": "2026-08-24T18:08:19.147136+08:00",
   "schema_version": 6,
   "source_health_updated_at": "2026-08-24T18:01:59.587335+08:00",
   "delivery_mode_17": "FULL_REPORT",
@@ -234,7 +234,7 @@
     "stage2_vectorbt_daily_pilot_ready": true,
     "stage2_daily_pilot": {
       "status": "STAGE_2_DAILY_PILOT_RUNNING",
-      "generated_at": "2026-08-24T17:50:19.433962+08:00",
+      "generated_at": "2026-08-24T18:08:09.802000+08:00",
       "research_core_ready": true,
       "coverage": {
         "a_research_core_ok": 7,
@@ -306,7 +306,7 @@
   },
   "evidence_packet": {
     "status": "READY_RESEARCH_ONLY",
-    "generated_at": "2026-08-24T17:50:26.836866+08:00",
+    "generated_at": "2026-08-24T18:08:18.535266+08:00",
     "production_use": "RESEARCH_ONLY"
   },
   "content_contract": {
@@ -399,5 +399,5 @@
     "expected_latest_bar_at": "2026-08-24T15:00:00+08:00",
     "semantics": "This is a public market-data gate only. It never authorizes or executes a trade."
   },
-  "freshness_hardening_updated_at": "2026-08-24T18:06:45.211247+08:00"
+  "freshness_hardening_updated_at": "2026-08-24T18:08:19.209042+08:00"
 }

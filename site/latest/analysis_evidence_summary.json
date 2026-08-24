@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-24T10:23:18.708486+08:00",
+  "generated_at": "2026-08-24T11:42:50.778755+08:00",
   "schema_version": 1,
   "evidence_status": "READY_RESEARCH_ONLY",
   "production_use": "RESEARCH_ONLY",
@@ -22,13 +22,13 @@
     },
     "statistical_evidence": {
       "status": "RESEARCH_ONLY",
-      "sufficient_signal_horizons": 104,
-      "insufficient_signal_horizons": 76,
-      "fdr_reject_5pct_count": 11
+      "sufficient_signal_horizons": 107,
+      "insufficient_signal_horizons": 73,
+      "fdr_reject_5pct_count": 17
     }
   },
   "statistical_conclusions": {
-    "positive_fdr_5pct_count": 7,
+    "positive_fdr_5pct_count": 13,
     "negative_fdr_5pct_count": 4,
     "positive_fdr_5pct": [
       {
@@ -37,13 +37,13 @@
         "signal": "ma20_reclaim",
         "horizon_sessions": 20,
         "sample_size": 24,
-        "mean_return_pct": 9.62643,
+        "mean_return_pct": 9.663751,
         "confidence_interval_95_pct": [
-          6.970667,
-          12.282193
+          5.424038,
+          13.903465
         ],
-        "p_value_two_sided": 0.0,
-        "fdr_bh_q_value": 0.0,
+        "p_value_two_sided": 7.92e-06,
+        "fdr_bh_q_value": 0.00016949,
         "evidence_class": "POSITIVE_FDR_5PCT"
       },
       {
@@ -55,10 +55,10 @@
         "mean_return_pct": 7.647361,
         "confidence_interval_95_pct": [
           4.252027,
-          11.042694
+          11.042695
         ],
         "p_value_two_sided": 1.013e-05,
-        "fdr_bh_q_value": 0.00017559,
+        "fdr_bh_q_value": 0.00018065,
         "evidence_class": "POSITIVE_FDR_5PCT"
       },
       {
@@ -67,13 +67,58 @@
         "signal": "ma20_reclaim",
         "horizon_sessions": 5,
         "sample_size": 25,
-        "mean_return_pct": 3.974191,
+        "mean_return_pct": 4.11771,
         "confidence_interval_95_pct": [
-          1.981043,
-          5.967339
+          1.842547,
+          6.392873
         ],
-        "p_value_two_sided": 9.305e-05,
-        "fdr_bh_q_value": 0.00138246,
+        "p_value_two_sided": 0.00038928,
+        "fdr_bh_q_value": 0.00520662,
+        "evidence_class": "POSITIVE_FDR_5PCT"
+      },
+      {
+        "code": "002185.SZ",
+        "scope": "candidate_seed",
+        "signal": "ma20_reclaim",
+        "horizon_sessions": 10,
+        "sample_size": 24,
+        "mean_return_pct": 5.389254,
+        "confidence_interval_95_pct": [
+          2.434456,
+          8.344052
+        ],
+        "p_value_two_sided": 0.00035053,
+        "fdr_bh_q_value": 0.00520662,
+        "evidence_class": "POSITIVE_FDR_5PCT"
+      },
+      {
+        "code": "002371.SZ",
+        "scope": "candidate_seed",
+        "signal": "ma20_reclaim",
+        "horizon_sessions": 20,
+        "sample_size": 30,
+        "mean_return_pct": 9.526441,
+        "confidence_interval_95_pct": [
+          4.156601,
+          14.896282
+        ],
+        "p_value_two_sided": 0.00050687,
+        "fdr_bh_q_value": 0.00542351,
+        "evidence_class": "POSITIVE_FDR_5PCT"
+      },
+      {
+        "code": "002371.SZ",
+        "scope": "candidate_seed",
+        "signal": "ma20_above_ma60_entry",
+        "horizon_sessions": 20,
+        "sample_size": 22,
+        "mean_return_pct": 6.621574,
+        "confidence_interval_95_pct": [
+          2.911499,
+          10.331648
+        ],
+        "p_value_two_sided": 0.00046866,
+        "fdr_bh_q_value": 0.00542351,
         "evidence_class": "POSITIVE_FDR_5PCT"
       },
       {
@@ -88,7 +133,22 @@
           27.712848
         ],
         "p_value_two_sided": 0.0010612,
-        "fdr_bh_q_value": 0.0137956,
+        "fdr_bh_q_value": 0.01032258,
+        "evidence_class": "POSITIVE_FDR_5PCT"
+      },
+      {
+        "code": "002371.SZ",
+        "scope": "candidate_seed",
+        "signal": "ma20_reclaim",
+        "horizon_sessions": 10,
+        "sample_size": 31,
+        "mean_return_pct": 4.998469,
+        "confidence_interval_95_pct": [
+          1.917246,
+          8.079692
+        ],
+        "p_value_two_sided": 0.00147518,
+        "fdr_bh_q_value": 0.01214187,
         "evidence_class": "POSITIVE_FDR_5PCT"
       },
       {
@@ -97,13 +157,13 @@
         "signal": "ma20_reclaim",
         "horizon_sessions": 20,
         "sample_size": 23,
-        "mean_return_pct": 8.287855,
+        "mean_return_pct": 8.287856,
         "confidence_interval_95_pct": [
           3.180946,
-          13.394763
+          13.394765
         ],
         "p_value_two_sided": 0.00146885,
-        "fdr_bh_q_value": 0.01697338,
+        "fdr_bh_q_value": 0.01214187,
         "evidence_class": "POSITIVE_FDR_5PCT"
       },
       {
@@ -112,28 +172,58 @@
         "signal": "ma20_above_ma60_entry",
         "horizon_sessions": 5,
         "sample_size": 21,
-        "mean_return_pct": 2.217741,
+        "mean_return_pct": 2.143515,
         "confidence_interval_95_pct": [
-          0.833447,
-          3.602035
+          0.801006,
+          3.486024
         ],
-        "p_value_two_sided": 0.00168944,
-        "fdr_bh_q_value": 0.01757018,
+        "p_value_two_sided": 0.0017518,
+        "fdr_bh_q_value": 0.01338876,
         "evidence_class": "POSITIVE_FDR_5PCT"
       },
       {
-        "code": "002185.SZ",
+        "code": "002371.SZ",
         "scope": "candidate_seed",
+        "signal": "ma20_above_ma60_entry",
+        "horizon_sessions": 5,
+        "sample_size": 23,
+        "mean_return_pct": 2.403279,
+        "confidence_interval_95_pct": [
+          0.784582,
+          4.021976
+        ],
+        "p_value_two_sided": 0.00361477,
+        "fdr_bh_q_value": 0.02578536,
+        "evidence_class": "POSITIVE_FDR_5PCT"
+      },
+      {
+        "code": "600006.SH",
+        "scope": "research_core",
         "signal": "ma20_reclaim",
         "horizon_sessions": 10,
-        "sample_size": 24,
-        "mean_return_pct": 5.240215,
+        "sample_size": 29,
+        "mean_return_pct": 2.615352,
         "confidence_interval_95_pct": [
-          1.910095,
-          8.570334
+          0.731839,
+          4.498865
         ],
-        "p_value_two_sided": 0.00204126,
-        "fdr_bh_q_value": 0.01929919,
+        "p_value_two_sided": 0.00649848,
+        "fdr_bh_q_value": 0.04345859,
+        "evidence_class": "POSITIVE_FDR_5PCT"
+      },
+      {
+        "code": "601138.SH",
+        "scope": "research_core",
+        "signal": "breakout_20d_close",
+        "horizon_sessions": 20,
+        "sample_size": 34,
+        "mean_return_pct": 17.008412,
+        "confidence_interval_95_pct": [
+          4.465478,
+          29.551346
+        ],
+        "p_value_two_sided": 0.00786662,
+        "fdr_bh_q_value": 0.04951343,
         "evidence_class": "POSITIVE_FDR_5PCT"
       }
     ],
@@ -144,10 +234,10 @@
         "signal": "breakout_20d_close",
         "horizon_sessions": 20,
         "sample_size": 26,
-        "mean_return_pct": -6.308096,
+        "mean_return_pct": -6.2795,
         "confidence_interval_95_pct": [
-          -7.608668,
-          -5.007524
+          -7.581546,
+          -4.977454
         ],
         "p_value_two_sided": 0.0,
         "fdr_bh_q_value": 0.0,
@@ -180,7 +270,7 @@
           -1.711446
         ],
         "p_value_two_sided": 1.4e-07,
-        "fdr_bh_q_value": 3.64e-06,
+        "fdr_bh_q_value": 4.99e-06,
         "evidence_class": "NEGATIVE_FDR_5PCT"
       },
       {
@@ -195,7 +285,7 @@
           -1.882083
         ],
         "p_value_two_sided": 4.61e-06,
-        "fdr_bh_q_value": 9.589e-05,
+        "fdr_bh_q_value": 0.00012332,
         "evidence_class": "NEGATIVE_FDR_5PCT"
       }
     ],
@@ -206,11 +296,11 @@
       "market": "A",
       "symbols": 12,
       "above_ma20_pct": 8.33,
-      "above_ma60_pct": 16.67,
+      "above_ma60_pct": 8.33,
       "positive_20d_pct": 16.67,
-      "median_return_20d_pct": -3.1701,
-      "median_return_60d_pct": -13.1833,
-      "median_drawdown_60d_pct": -23.0576
+      "median_return_20d_pct": -3.0198,
+      "median_return_60d_pct": -13.5804,
+      "median_drawdown_60d_pct": -23.9204
     },
     {
       "market": "HK",
@@ -218,9 +308,9 @@
       "above_ma20_pct": 16.67,
       "above_ma60_pct": 16.67,
       "positive_20d_pct": 16.67,
-      "median_return_20d_pct": -2.5608,
-      "median_return_60d_pct": -7.1465,
-      "median_drawdown_60d_pct": -15.8796
+      "median_return_20d_pct": -2.213,
+      "median_return_60d_pct": -6.4149,
+      "median_drawdown_60d_pct": -15.2242
     },
     {
       "market": "US",

@@ -1,8 +1,8 @@
 {
-  "version": "20260824-1820",
-  "release": "FUND_ASSISTANT_UI_20260824_1820",
-  "entry": "v13.html",
-  "behavior": "v13.js",
-  "architecture": "static-product-v13",
-  "updated_at": "2026-08-24T18:20:00+08:00"
+  "version": "20260824-1905",
+  "release": "FUND_ASSISTANT_UI_20260824_1905",
+  "entry": "v14.html",
+  "behavior": "v14.js",
+  "architecture": "static-product-v14",
+  "updated_at": "2026-08-24T19:05:00+08:00"
 }

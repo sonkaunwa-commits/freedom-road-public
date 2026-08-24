@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-08-24T16:37:07.129683+08:00",
+  "generated_at": "2026-08-24T18:06:45.173193+08:00",
   "schema_version": 8,
   "datasets": {
     "tracked_market.json": {
       "exists": true,
-      "updated_at": "2026-08-24T16:32:23.207721+08:00",
-      "bytes": 25666
+      "updated_at": "2026-08-24T18:01:59.587335+08:00",
+      "bytes": 25338
     },
     "funds.json": {
       "exists": true,
-      "updated_at": "2026-08-24T16:32:23.207721+08:00",
+      "updated_at": "2026-08-24T18:01:59.587335+08:00",
       "bytes": 595401
     },
     "gold.json": {
       "exists": true,
-      "updated_at": "2026-08-24T16:32:23.207721+08:00",
+      "updated_at": "2026-08-24T18:01:59.587335+08:00",
       "bytes": 953902
     },
     "candidate_pool.json": {
@@ -24,47 +24,52 @@
     },
     "health.json": {
       "exists": true,
-      "updated_at": "2026-08-24T16:32:23.207721+08:00",
-      "bytes": 15167
+      "updated_at": "2026-08-24T18:01:59.587335+08:00",
+      "bytes": 14210
     },
     "analysis_stage1.json": {
       "exists": true,
-      "updated_at": "2026-08-24T16:35:39.369320+08:00",
-      "bytes": 18348
+      "updated_at": "2026-08-24T18:06:45.089361+08:00",
+      "bytes": 18314
     },
     "analysis_stage2_daily.json": {
       "exists": true,
-      "updated_at": "2026-08-24T16:36:57.027070+08:00",
-      "bytes": 657026
+      "updated_at": "2026-08-24T17:50:19.433962+08:00",
+      "bytes": 656813
     },
     "analysis_duckdb_evidence.json": {
       "exists": true,
-      "updated_at": "2026-08-24T16:37:03.075672+08:00",
-      "bytes": 10552
+      "updated_at": "2026-08-24T17:50:24.068690+08:00",
+      "bytes": 10547
     },
     "data_contracts.json": {
       "exists": true,
-      "updated_at": "2026-08-24T16:36:40.249974+08:00",
+      "updated_at": "2026-08-24T17:50:03.436366+08:00",
       "bytes": 5537
     },
     "calendar_alignment.json": {
       "exists": true,
-      "updated_at": "2026-08-24T16:36:40.906291+08:00",
+      "updated_at": "2026-08-24T17:50:04.044558+08:00",
       "bytes": 7777
     },
     "analysis_evidence_summary.json": {
       "exists": true,
-      "updated_at": "2026-08-24T16:37:06.413725+08:00",
-      "bytes": 10173
+      "updated_at": "2026-08-24T17:50:26.836866+08:00",
+      "bytes": 10171
     },
     "report_readiness.json": {
       "exists": true,
-      "updated_at": "2026-08-24T16:37:07.129683+08:00",
+      "updated_at": "2026-08-24T18:06:45.173193+08:00",
       "bytes": 8259
+    },
+    "candidate_scan_health.json": {
+      "exists": true,
+      "updated_at": "2026-08-24T18:06:45.211247+08:00",
+      "bytes": 627
     }
   },
   "report_readiness": {
-    "delivery_mode_17": "FULL_REPORT_WITH_EXPLICIT_DEGRADATIONS",
+    "delivery_mode_17": "FULL_REPORT",
     "a_share_public_market_ready": true,
     "private_join_required_for_exact_action": true,
     "candidate_scan_status": "degraded_no_fundamentals",
@@ -72,19 +77,22 @@
     "analysis_engine_stage": "STAGE_1_RUNNING",
     "stage2_daily_pilot_status": "STAGE_2_DAILY_PILOT_RUNNING",
     "evidence_status": "READY_RESEARCH_ONLY",
-    "blockers": [
-      "MINUTE_DATA_DEGRADED"
-    ]
+    "blockers": [],
+    "minute_status": "fresh",
+    "intraday_public_market_ready": true,
+    "candidate_scan_freshness_state": "fresh_same_session",
+    "candidate_scan_same_session": true,
+    "candidate_scan_fresh_for_cadence": true
   },
   "analysis_engine": {
     "stage": "STAGE_1_RUNNING",
-    "generated_at": "2026-08-24T16:35:39.369320+08:00",
+    "generated_at": "2026-08-24T18:06:45.089361+08:00",
     "stage1_fund_ready": true,
     "stage1_a_share_history_ready": true,
     "stage2_vectorbt_daily_pilot_ready": true,
     "stage2_daily_pilot": {
       "status": "STAGE_2_DAILY_PILOT_RUNNING",
-      "generated_at": "2026-08-24T16:36:57.027070+08:00",
+      "generated_at": "2026-08-24T17:50:19.433962+08:00",
       "research_core_ready": true,
       "coverage": {
         "a_research_core_ok": 7,
@@ -232,5 +240,6 @@
     "report_contract_version": "1.0.0",
     "analysis_roadmap_version": "1.0.0"
   },
-  "privacy": "public market data and research evidence only; no private account ids, position sizes, costs, cash balances, private bank quotes or trade states"
+  "privacy": "public market data and research evidence only; no private account ids, position sizes, costs, cash balances, private bank quotes or trade states",
+  "freshness_hardening_updated_at": "2026-08-24T18:06:45.211247+08:00"
 }

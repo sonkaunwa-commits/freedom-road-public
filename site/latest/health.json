@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-24T16:32:23.207721+08:00",
+  "updated_at": "2026-08-24T18:01:59.587335+08:00",
   "mode": "all",
   "counts": {
     "a_share_ok": 7,
@@ -21,12 +21,12 @@
   },
   "minute": {
     "status": "fresh",
-    "provider": "yfinance:a_minutes",
+    "provider": "tencent_mkline:a_minutes",
     "expected_codes": 7,
     "covered_codes": 7,
     "coverage_ratio": 1.0,
     "expected_latest_bar_at": "2026-08-24T15:00:00+08:00",
-    "latest_bar_at": "2026-08-24T14:59:00+08:00",
+    "latest_bar_at": "2026-08-24T15:00:00+08:00",
     "fresh_codes": [
       "600006.SH",
       "002085.SZ",
@@ -39,57 +39,57 @@
     "stale_codes": [],
     "missing_codes": [],
     "max_lag_minutes": 6,
-    "rows": 2033,
+    "rows": 1687,
     "probe": false,
-    "elapsed_ms": 1018.8,
+    "elapsed_ms": 6414.2,
     "per_symbol": {
       "600006.SH": {
-        "symbol": "600006.SS",
+        "symbol": "sh600006",
         "status": "ok",
-        "rows": 239,
-        "latest_bar_at": "2026-08-24T14:57:00+08:00"
+        "rows": 241,
+        "latest_bar_at": "2026-08-24T15:00:00+08:00"
       },
       "002085.SZ": {
-        "symbol": "002085.SZ",
+        "symbol": "sz002085",
         "status": "ok",
-        "rows": 330,
-        "latest_bar_at": "2026-08-24T14:59:00+08:00"
+        "rows": 241,
+        "latest_bar_at": "2026-08-24T15:00:00+08:00"
       },
       "002475.SZ": {
-        "symbol": "002475.SZ",
+        "symbol": "sz002475",
         "status": "ok",
-        "rows": 330,
-        "latest_bar_at": "2026-08-24T14:59:00+08:00"
+        "rows": 241,
+        "latest_bar_at": "2026-08-24T15:00:00+08:00"
       },
       "601138.SH": {
-        "symbol": "601138.SS",
+        "symbol": "sh601138",
         "status": "ok",
-        "rows": 237,
-        "latest_bar_at": "2026-08-24T14:57:00+08:00"
+        "rows": 241,
+        "latest_bar_at": "2026-08-24T15:00:00+08:00"
       },
       "002600.SZ": {
-        "symbol": "002600.SZ",
+        "symbol": "sz002600",
         "status": "ok",
-        "rows": 330,
-        "latest_bar_at": "2026-08-24T14:59:00+08:00"
+        "rows": 241,
+        "latest_bar_at": "2026-08-24T15:00:00+08:00"
       },
       "601899.SH": {
-        "symbol": "601899.SS",
+        "symbol": "sh601899",
         "status": "ok",
-        "rows": 238,
-        "latest_bar_at": "2026-08-24T14:57:00+08:00"
+        "rows": 241,
+        "latest_bar_at": "2026-08-24T15:00:00+08:00"
       },
       "300059.SZ": {
-        "symbol": "300059.SZ",
+        "symbol": "sz300059",
         "status": "ok",
-        "rows": 329,
-        "latest_bar_at": "2026-08-24T14:59:00+08:00"
+        "rows": 241,
+        "latest_bar_at": "2026-08-24T15:00:00+08:00"
       }
     },
     "provider_errors": [],
     "result_policy": "metadata_only_no_minute_rows_persisted",
     "promotion_status": "PUBLIC_FALLBACK_PILOT",
-    "source_note": "Yahoo Finance 1-minute public fallback promoted after live 7/7 freshness evidence; primary Tushare/AKShare/TDX chain remains preferred.",
+    "source_note": "Tencent Finance 1-minute public fallback promoted after live 7/7 freshness evidence; primary Tushare/AKShare/TDX chain remains preferred and Yahoo remains the later fallback.",
     "attempts": [
       {
         "status": "unavailable",
@@ -156,12 +156,12 @@
       },
       {
         "status": "fresh",
-        "provider": "yfinance:a_minutes",
+        "provider": "tencent_mkline:a_minutes",
         "expected_codes": 7,
         "covered_codes": 7,
         "coverage_ratio": 1.0,
         "expected_latest_bar_at": "2026-08-24T15:00:00+08:00",
-        "latest_bar_at": "2026-08-24T14:59:00+08:00",
+        "latest_bar_at": "2026-08-24T15:00:00+08:00",
         "max_lag_minutes": 6,
         "fresh_codes": [
           "600006.SH",
@@ -189,29 +189,9 @@
       "message": "抱歉，您没有接口(daily)访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。"
     },
     {
-      "dataset": "akshare:a:600006.SH",
-      "error": "ConnectionError",
-      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-    },
-    {
-      "dataset": "eastmoney:a:600006.SH",
-      "error": "ConnectionError",
-      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-    },
-    {
       "dataset": "tushare:a:002085.SZ",
       "error": "Exception",
       "message": "抱歉，您没有接口(daily)访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。"
-    },
-    {
-      "dataset": "akshare:a:002085.SZ",
-      "error": "ConnectionError",
-      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-    },
-    {
-      "dataset": "eastmoney:a:002085.SZ",
-      "error": "ConnectionError",
-      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
     },
     {
       "dataset": "tushare:a:002475.SZ",
@@ -250,11 +230,6 @@
     },
     {
       "dataset": "akshare:a:002600.SZ",
-      "error": "ConnectionError",
-      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-    },
-    {
-      "dataset": "eastmoney:a:002600.SZ",
       "error": "ConnectionError",
       "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
     },
@@ -426,5 +401,5 @@
   ],
   "coverage_ok": true,
   "intraday_a_share_ok": true,
-  "run_id": "c680c6544f2d61e6"
+  "run_id": "49d387d71d3cc402"
 }

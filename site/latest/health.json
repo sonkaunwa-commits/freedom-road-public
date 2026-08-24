@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-24T18:01:59.587335+08:00",
+  "updated_at": "2026-08-24T18:14:53.744182+08:00",
   "mode": "all",
   "counts": {
     "a_share_ok": 7,
@@ -41,7 +41,7 @@
     "max_lag_minutes": 6,
     "rows": 1687,
     "probe": false,
-    "elapsed_ms": 6414.2,
+    "elapsed_ms": 5054.2,
     "per_symbol": {
       "600006.SH": {
         "symbol": "sh600006",
@@ -189,9 +189,29 @@
       "message": "抱歉，您没有接口(daily)访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。"
     },
     {
+      "dataset": "akshare:a:600006.SH",
+      "error": "ConnectionError",
+      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "dataset": "eastmoney:a:600006.SH",
+      "error": "ConnectionError",
+      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
       "dataset": "tushare:a:002085.SZ",
       "error": "Exception",
       "message": "抱歉，您没有接口(daily)访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。"
+    },
+    {
+      "dataset": "akshare:a:002085.SZ",
+      "error": "ConnectionError",
+      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "dataset": "eastmoney:a:002085.SZ",
+      "error": "ConnectionError",
+      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
     },
     {
       "dataset": "tushare:a:002475.SZ",
@@ -230,6 +250,11 @@
     },
     {
       "dataset": "akshare:a:002600.SZ",
+      "error": "ConnectionError",
+      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "dataset": "eastmoney:a:002600.SZ",
       "error": "ConnectionError",
       "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
     },
@@ -401,5 +426,106 @@
   ],
   "coverage_ok": true,
   "intraday_a_share_ok": true,
-  "run_id": "49d387d71d3cc402"
+  "run_id": "957b749a82e69c86",
+  "hk_us_daily_fallback": {
+    "status": "ready",
+    "provider": "tencent_fqkline",
+    "promotion_status": "PUBLIC_FALLBACK_PILOT",
+    "attempted_symbols": 10,
+    "promoted_symbols": 10,
+    "provider_errors": [],
+    "results": [
+      {
+        "code": "09992.HK",
+        "market": "HK",
+        "status": "promoted",
+        "previous_provider": "yfinance:hk:09992.HK",
+        "provider": "tencent_fqkline:hk:09992.HK",
+        "latest_trade_date": "20260824",
+        "required_trade_date": "20260824"
+      },
+      {
+        "code": "00700.HK",
+        "market": "HK",
+        "status": "promoted",
+        "previous_provider": "yfinance:hk:00700.HK",
+        "provider": "tencent_fqkline:hk:00700.HK",
+        "latest_trade_date": "20260824",
+        "required_trade_date": "20260824"
+      },
+      {
+        "code": "00909.HK",
+        "market": "HK",
+        "status": "promoted",
+        "previous_provider": "yfinance:hk:00909.HK",
+        "provider": "tencent_fqkline:hk:00909.HK",
+        "latest_trade_date": "20260824",
+        "required_trade_date": "20260824"
+      },
+      {
+        "code": "06969.HK",
+        "market": "HK",
+        "status": "promoted",
+        "previous_provider": "yfinance:hk:06969.HK",
+        "provider": "tencent_fqkline:hk:06969.HK",
+        "latest_trade_date": "20260824",
+        "required_trade_date": "20260824"
+      },
+      {
+        "code": "09926.HK",
+        "market": "HK",
+        "status": "promoted",
+        "previous_provider": "yfinance:hk:09926.HK",
+        "provider": "tencent_fqkline:hk:09926.HK",
+        "latest_trade_date": "20260824",
+        "required_trade_date": "20260824"
+      },
+      {
+        "code": "09988.HK",
+        "market": "HK",
+        "status": "promoted",
+        "previous_provider": "yfinance:hk:09988.HK",
+        "provider": "tencent_fqkline:hk:09988.HK",
+        "latest_trade_date": "20260824",
+        "required_trade_date": "20260824"
+      },
+      {
+        "code": "XPEV",
+        "market": "US",
+        "status": "promoted",
+        "previous_provider": "yfinance:us:XPEV",
+        "provider": "tencent_fqkline:us:XPEV",
+        "latest_trade_date": "20260821",
+        "required_trade_date": "20260821"
+      },
+      {
+        "code": "RLX",
+        "market": "US",
+        "status": "promoted",
+        "previous_provider": "yfinance:us:RLX",
+        "provider": "tencent_fqkline:us:RLX",
+        "latest_trade_date": "20260821",
+        "required_trade_date": "20260821"
+      },
+      {
+        "code": "LI",
+        "market": "US",
+        "status": "promoted",
+        "previous_provider": "yfinance:us:LI",
+        "provider": "tencent_fqkline:us:LI",
+        "latest_trade_date": "20260821",
+        "required_trade_date": "20260821"
+      },
+      {
+        "code": "NIO",
+        "market": "US",
+        "status": "promoted",
+        "previous_provider": "yfinance:us:NIO",
+        "provider": "tencent_fqkline:us:NIO",
+        "latest_trade_date": "20260821",
+        "required_trade_date": "20260821"
+      }
+    ],
+    "source_note": "Tencent public daily K-line fallback is attempted after the base fetch; Tushare primary rows are preserved and Yahoo remains the later free fallback."
+  }
 }

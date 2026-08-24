@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#a92f28">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta name="fund-assistant-release" content="FUND_ASSISTANT_UI_20260824_1820">
+<title>基金小帮手</title>
+<link rel="stylesheet" href="v13.css?build=20260824-1820">
+</head>
+<body data-release="FUND_ASSISTANT_UI_20260824_1820">
+<div class="app-shell">
+  <header class="topbar">
+    <div class="brand-row">
+      <div class="brand-mark">基</div>
+      <div class="brand-copy"><h1>基金小帮手</h1><p>给妈妈看的基金助手：先告诉你现在要不要动，再讲为什么。</p></div>
+      <button id="helpBtn" class="icon-btn" aria-label="使用说明">?</button>
+    </div>
+    <div class="status-row">
+      <span id="marketBadge" class="status-pill">正在判断今天是否交易…</span>
+      <span id="releaseBadge" class="release-pill">版本 08/24 18:20</span>
+    </div>
+  </header>
+
+  <main>
+    <section id="page-home" class="screen active">
+      <div id="marketCard" class="market-card">
+        <div class="eyebrow">今天先看这里</div>
+        <h2 id="marketTitle">正在检查今天的市场状态…</h2>
+        <p id="marketDesc">页面会区分正式净值和盘中估算，不会把上一个交易日净值当成今天实时价格。</p>
+        <div class="freshness-grid">
+          <div><span>系统数据</span><b id="systemTime">检查中…</b></div>
+          <div><span>盘中参考</span><b id="estimateState">检查中…</b></div>
+        </div>
+        <button id="refreshHome" class="primary-btn full">更新现在的情况</button>
+        <div class="microcopy">交易日盘中：页面打开时会约每30分钟自动更新一次盘中估算；正式净值仍以收市后披露为准。</div>
+      </div>
+
+      <div class="section-head"><div><span class="section-kicker">最重要</span><h2>我的基金今天怎么样？</h2></div><button class="text-btn" data-go="holdings">管理持仓</button></div>
+      <div id="homePortfolio" class="stack"></div>
+
+      <div class="section-head"><div><span class="section-kicker">机会</span><h2>今天有没有值得重点看的基金？</h2></div><button class="text-btn" data-go="discover">看全部推荐</button></div>
+      <div id="homeOpportunities" class="stack"></div>
+
+      <div class="home-guide card soft-card">
+        <h3>妈妈每天只需要做3件事</h3>
+        <div class="three-steps">
+          <div><b>① 先看“我的基金”</b><span>有没有需要卖一点、停止补仓或保护利润。</span></div>
+          <div><b>② 再看“推荐机会”</b><span>只有到了舒服的位置才考虑买，不因为排行榜大涨就追。</span></div>
+          <div><b>③ 真要操作再看详细报告</b><span>图上会标买入区、你的成本、保护利润区和停止补仓线。</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="page-holdings" class="screen">
+      <div class="page-title"><span class="section-kicker">我的基金</span><h2>已经买了的，都放这里</h2><p>每天先看一句话结论，再决定要不要打开详细报告。</p></div>
+
+      <div class="privacy-card">
+        <div class="privacy-icon">🔒</div>
+        <div><b>持仓只保存在这台设备的当前浏览器里</b><p>这个页面不会把你填写的持仓上传到我们的服务器。换手机不会自动带过去；清理浏览器数据可能会丢失。能使用这台设备/浏览器的人仍可能看到，所以不要填写银行卡、身份证、密码等信息。</p></div>
+      </div>
+
+      <div class="toolbar-card card">
+        <button id="refreshHoldings" class="primary-btn full">一键生成 / 更新今天持仓报告</button>
+        <button id="openAddHolding" class="secondary-btn full">＋ 录入一只我已经买的基金</button>
+      </div>
+
+      <div id="portfolioSummary" class="summary-strip hidden"></div>
+      <div id="holdingList" class="stack"></div>
+
+      <div id="addHoldingPanel" class="form-card card hidden">
+        <div class="form-head"><div><span class="section-kicker">快速录入</span><h3>录一只基金，最少只要基金代码</h3></div><button id="closeAddHolding" class="icon-btn">×</button></div>
+        <div class="form-step"><div class="step-no">1</div><div class="grow"><label>基金代码</label><div class="input-row"><input id="hCode" inputmode="numeric" maxlength="6" placeholder="例如 002910"><button id="identifyHolding" class="small-btn">识别基金</button></div><div id="identifiedFund" class="identified"></div></div></div>
+        <div class="form-step"><div class="step-no">2</div><div class="grow"><label>大概投入多少钱 <small>可不填</small></label><input id="hAmount" inputmode="decimal" placeholder="例如 20000"></div></div>
+        <div class="form-step"><div class="step-no">3</div><div class="grow"><label>买入成本净值 <small>最好填；不知道可以跳过</small></label><input id="hCost" inputmode="decimal" placeholder="例如 1.2560"></div></div>
+        <div class="form-step"><div class="step-no">4</div><div class="grow"><label>什么时候买的 <small>可不填</small></label><input id="hDate" type="date"></div></div>
+        <div class="form-step"><div class="step-no">5</div><div class="grow"><label>如果不知道成本，只知道现在赚还是亏</label><div id="pnlSeg" class="seg"><button data-pnl="gain">赚钱</button><button data-pnl="loss">亏钱</button><button data-pnl="unknown" class="active">不知道</button></div><input id="hPnl" class="hidden" inputmode="decimal" placeholder="例如亏15%，这里只填 15"></div></div>
+        <button id="saveHolding" class="primary-btn full">保存到“我的基金”</button>
+      </div>
+    </section>
+
+    <section id="page-discover" class="screen">
+      <div class="page-title"><span class="section-kicker">推荐基金</span><h2>先缩小范围，再等真正买点</h2><p>推荐不是“马上买”。系统先筛出值得研究的6只，再持续跟踪、替换和记录。</p></div>
+
+      <div class="card explain-card">
+        <details open><summary>这6只基金是怎么来的？</summary><div class="explain-grid"><div><b>① 全市场筛</b><span>股票、混合、指数、QDII等一起比较；货币、纯债、短债等不放进高弹性池。</span></div><div><b>② 看5个周期</b><span>近6月30%、近3月26%、近1年24%、近1月12%、近3年8%，短期暴涨会被扣分。</span></div><div><b>③ 不每天乱换</b><span>老候选只要评分、中期趋势和申购状态没有明显恶化，就继续跟踪。</span></div><div><b>④ 真变差才替换</b><span>评分明显恶化、趋势转负、暂停申购，或更优候选持续胜出时才换。</span></div></div></details>
+      </div>
+
+      <div id="candidateList" class="stack"></div>
+
+      <div class="card history-card">
+        <div class="section-head compact"><div><span class="section-kicker">有记录可追溯</span><h3>推荐跟踪记录</h3></div></div>
+        <p class="muted">可以看到每只当前候选从什么时候开始跟踪、评分怎么变。以后换出/换入也会留下记录，不让推荐“悄悄换掉”。</p>
+        <div id="recommendHistory"></div>
+      </div>
+    </section>
+
+    <section id="page-search" class="screen">
+      <div class="page-title"><span class="section-kicker">查一只基金</span><h2>妈妈自己喜欢的基金，也可以直接查</h2><p>不需要先保存。查完如果已经买了，再一键加入“我的基金”。</p></div>
+      <div class="card search-card">
+        <label>基金代码</label>
+        <div class="input-row"><input id="searchCode" inputmode="numeric" maxlength="6" placeholder="输入6位基金代码"><button id="voiceSearch" class="voice-btn">🎙️ 语音</button></div>
+        <label>想问什么？</label>
+        <textarea id="searchQuestion" placeholder="例如：我现在买会不会太高？"></textarea>
+        <div class="quick-grid"><button>现在适合买么？</button><button>等什么位置买？</button><button>亏10%要不要补？</button><button>亏20%怎么办？</button><button>赚20%怎么保护？</button><button>什么时候卖？</button><button>适合拿半年吗？</button><button>风险大不大？</button></div>
+        <button id="searchFundBtn" class="primary-btn full">查看这只基金的详细报告</button>
+      </div>
+      <div id="searchResult"></div>
+    </section>
+  </main>
+
+  <nav class="bottom-nav" aria-label="主导航">
+    <button class="nav-btn active" data-page="home"><span>🏠</span><b>首页</b><small>今天做什么</small></button>
+    <button class="nav-btn" data-page="holdings"><span>📌</span><b>我的基金</b><small>已买持仓</small></button>
+    <button class="nav-btn" data-page="discover"><span>⭐</span><b>推荐基金</b><small>找机会</small></button>
+    <button class="nav-btn" data-page="search"><span>🔎</span><b>查基金</b><small>临时分析</small></button>
+  </nav>
+</div>
+
+<div id="detailSheet" class="sheet hidden" role="dialog" aria-modal="true">
+  <div class="sheet-backdrop" data-close-sheet></div>
+  <div class="sheet-panel">
+    <div class="sheet-handle"></div>
+    <div class="sheet-top"><button class="back-btn" data-close-sheet>‹ 返回</button><div><b id="detailTitle">基金详细报告</b><small id="detailSubtitle"></small></div><button id="detailRefresh" class="icon-btn">↻</button></div>
+    <div id="detailBody" class="detail-body"></div>
+  </div>
+</div>
+
+<div id="helpSheet" class="sheet hidden" role="dialog" aria-modal="true">
+  <div class="sheet-backdrop" data-close-help></div>
+  <div class="sheet-panel short-sheet">
+    <div class="sheet-handle"></div>
+    <div class="sheet-top"><button class="back-btn" data-close-help>‹ 返回</button><b>怎么用最简单？</b><span></span></div>
+    <div class="detail-body help-body">
+      <div class="help-step"><b>每天第一步：看首页</b><span>如果写“今天不操作”，就不用继续折腾；如果写“重点关注”，再打开详细报告。</span></div>
+      <div class="help-step"><b>已经买的：放进“我的基金”</b><span>最少只填代码。填成本、金额和买入日期以后，卖出和利润保护建议会更准确。</span></div>
+      <div class="help-step"><b>推荐基金：不是叫你马上买</b><span>推荐代表未来6～12个月值得研究，真正买不买还要看当天位置。</span></div>
+      <div class="help-step"><b>红色大按钮才是主要操作</b><span>浅色框只是信息，不需要到处点。</span></div>
+    </div>
+  </div>
+</div>
+
+<script src="v9-core.js?build=20260824-1820"></script>
+<script src="v13.js?build=20260824-1820"></script>
+</body>
+</html>

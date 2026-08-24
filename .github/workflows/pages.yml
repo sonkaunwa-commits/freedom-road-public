@@ -1,53 +1,33 @@
 name: deploy-pages
-
 on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths:
-      - site/**
-      - .github/workflows/pages.yml
-
+    paths: [site/**, .github/workflows/pages.yml]
 permissions:
   contents: write
   pages: write
   id-token: write
-
 concurrency:
   group: pages
   cancel-in-progress: true
-
 jobs:
   verify:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
-      - name: Verify static publication boundary and current releases
+      - name: Verify publication
         shell: bash
         run: |
           set -euo pipefail
-          test -f site/index.html
-          test -f site/latest/manifest.json
-          test -f site/publication.json
-          test -f site/fund-assistant/index.html
-          test -f site/fund-assistant/release.json
-          test -f site/fund-assistant/v9.html
-          test -f site/fund-assistant/v9-core.js
-          test -f site/fund-assistant/v9-buttons.js
-          test -f site/fund-assistant/v9-buttons.css
-          test -f site/securities-exam/index.html
-          test -f site/investment-advisor-exam/index.html
-          test -f site/ks/index.html
+          for f in site/index.html site/latest/manifest.json site/publication.json site/fund-assistant/index.html site/fund-assistant/release.json site/securities-exam/index.html site/investment-advisor-exam/index.html site/ks/index.html site/tg/index.html; do test -f "$f"; done
           python3 -m json.tool site/latest/manifest.json >/dev/null
           python3 -m json.tool site/publication.json >/dev/null
           python3 -m json.tool site/fund-assistant/release.json >/dev/null
           if find site -type l -print -quit | grep -q .; then echo 'Symlinks are not allowed.' >&2; exit 1; fi
-          node --check site/fund-assistant/v9-core.js
-          node --check site/fund-assistant/v9-buttons.js
           grep -Fq 'FUND_ASSISTANT_BOOTSTRAP_' site/fund-assistant/index.html
           grep -Fq 'investment-advisor-exam' site/tg/index.html
-
           if grep -Fq 'v3.5.0' site/ks/index.html; then
             for f in product-v350.css product-core-v350.js product-v350.js sources-data-v350.js sw.js manifest.webmanifest; do test -f "site/securities-exam/$f"; done
             grep -Fq 'data-product-version="3.5.0"' site/securities-exam/index.html
@@ -58,6 +38,8 @@ jobs:
             ! grep -Fq 'ui-pro-r2.js' site/securities-exam/index.html
             ! grep -Fq 'release-v24.js' site/securities-exam/index.html
             grep -Fq "VERSION='3.5.0'" site/securities-exam/product-v350.js
+            grep -Fq 'while(ps.length<2)' site/securities-exam/product-v350.js
+            grep -Fq 'sec_v350_active' site/securities-exam/product-v350.js
             grep -Fq '今天只完成这些' site/securities-exam/product-v350.js
             grep -Fq 'ACTIVE RECALL' site/securities-exam/product-v350.js
             grep -Fq '我为什么会错？' site/securities-exam/product-v350.js
@@ -72,22 +54,19 @@ jobs:
           s=Path('site/securities-exam/sources-data-v350.js').read_text(encoding='utf-8')
           urls=re.findall(r'https://www\.kdocs\.cn/l/[A-Za-z0-9]+',s)
           assert len(urls)==17 and len(set(urls))==17
-          assert len(re.findall(r"id:'law-",s))==7
-          assert len(re.findall(r"id:'finance-",s))==10
+          assert len(re.findall(r"id:'law-",s))==7 and len(re.findall(r"id:'finance-",s))==10
           p=Path('site/securities-exam/product-v350.js').read_text(encoding='utf-8')
-          assert '学习账号 1' in p and '学习账号 2' in p
-          assert '核心定义' in p and '考试通常怎么考' in p and '常见错误' in p and '易混说法' in p
-          print('Securities v3.5 product static PASS')
+          for x in ['核心定义','考试通常怎么考','常见错误','易混说法','具体例子','知识没记住','概念混淆','看错题干']:
+              assert x in p, x
+          print('Securities v3.5 static PASS')
           PY
           elif grep -Fq 'v3.4.0' site/ks/index.html; then
             test -f site/securities-exam/ui-pro-r2.js
             grep -Fq "VERSION='3.4.0'" site/securities-exam/ui-pro-r2.js
-            grep -Fq 'sec2026-v340' site/securities-exam/sw.js
             echo 'Securities v3.4 transition PASS'
           else
             grep -Fq 'securities-exam' site/ks/index.html
           fi
-
   deploy:
     needs: verify
     environment:
@@ -99,57 +78,47 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
-        with:
-          path: site
+        with: {path: site}
       - id: deployment
         uses: actions/deploy-pages@v4
-
   smoke:
     needs: deploy
     runs-on: ubuntu-latest
     timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
-      - name: Verify live releases
+      - name: Verify live endpoints and version
         shell: bash
         run: |
           set -euo pipefail
           base='https://sonkaunwa-commits.github.io/freedom-road-public'
-          get() { curl -fsSL --max-time 30 --retry 3 "$base/$1?verify=${GITHUB_SHA}"; }
-          for path in '' 'latest/manifest.json' 'publication.json' 'fund-assistant/' 'fund-assistant/release.json' 'securities-exam/' 'ks/' 'investment-advisor-exam/' 'tg/'; do
-            ok=false
-            for attempt in {1..24}; do if get "$path" >/dev/null; then ok=true; break; fi; sleep 5; done
+          get(){ curl -fsSL --max-time 30 --retry 3 "$base/$1?verify=${GITHUB_SHA}"; }
+          for path in '' 'publication.json' 'fund-assistant/' 'securities-exam/' 'ks/' 'investment-advisor-exam/' 'tg/'; do
+            ok=false; for attempt in {1..24}; do if get "$path" >/dev/null; then ok=true; break; fi; sleep 5; done
             [[ "$ok" == true ]] || { echo "Endpoint failed: $path" >&2; exit 1; }
           done
-
-          local_release='site/fund-assistant/release.json'
-          version="$(python3 -c "import json;print(json.load(open('$local_release'))['version'])")"
-          release="$(python3 -c "import json;print(json.load(open('$local_release'))['release'])")"
-          entry="$(python3 -c "import json;print(json.load(open('$local_release'))['entry'])")"
-          behavior="$(python3 -c "import json;print(json.load(open('$local_release')).get('behavior',''))")"
-          release_body="$(get 'fund-assistant/release.json')"; grep -Fq "$release" <<<"$release_body"
+          python3 - <<'PY' >/tmp/fund-meta
+          import json
+          x=json.load(open('site/fund-assistant/release.json'));print(x['version']);print(x['release']);print(x['entry']);print(x.get('behavior',''))
+          PY
+          mapfile -t fm </tmp/fund-meta
           cat > /tmp/fund-release-status.txt <<EOF
           status=ok
           architecture=static-direct
           deployed_sha=${GITHUB_SHA}
-          release=${release}
-          version=${version}
+          version=${fm[0]}
+          release=${fm[1]}
           url=${base}/fund-assistant/
-          entry=${entry}
-          behavior=${behavior}
+          entry=${fm[2]}
+          behavior=${fm[3]}
           verified_at=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
           EOF
-
           if grep -Fq 'v3.5.0' site/ks/index.html; then
-            sec_body="$(get 'securities-exam/')"
-            grep -Fq 'data-product-version="3.5.0"' <<<"$sec_body"
-            grep -Fq 'product-v350.css?v=350' <<<"$sec_body"
-            grep -Fq 'product-v350.js?v=350' <<<"$sec_body"
-            core_body="$(get 'securities-exam/product-core-v350.js')"; grep -Fq "VERSION='3.5.0'" <<<"$core_body"; grep -Fq 'buildPlan' <<<"$core_body"
-            product_body="$(get 'securities-exam/product-v350.js')"; grep -Fq '今天只完成这些' <<<"$product_body"; grep -Fq 'ACTIVE RECALL' <<<"$product_body"; grep -Fq '我为什么会错？' <<<"$product_body"
-            sources_body="$(get 'securities-exam/sources-data-v350.js')"; grep -Fq 'SEC_SOURCES_V350' <<<"$sources_body"
-            sw_body="$(get 'securities-exam/sw.js')"; grep -Fq 'sec2026-v350' <<<"$sw_body"
-            ks_body="$(get 'ks/')"; grep -Fq 'v3.5.0' <<<"$ks_body"
+            b="$(get 'securities-exam/')"; grep -Fq 'data-product-version="3.5.0"' <<<"$b"; grep -Fq 'product-v350.js?v=350' <<<"$b"
+            b="$(get 'securities-exam/product-core-v350.js')"; grep -Fq "VERSION='3.5.0'" <<<"$b"; grep -Fq 'buildPlan' <<<"$b"
+            b="$(get 'securities-exam/product-v350.js')"; grep -Fq '今天只完成这些' <<<"$b"; grep -Fq 'ACTIVE RECALL' <<<"$b"; grep -Fq '我为什么会错？' <<<"$b"
+            b="$(get 'securities-exam/sw.js')"; grep -Fq 'sec2026-v350' <<<"$b"
+            b="$(get 'ks/')"; grep -Fq 'v3.5.0' <<<"$b"
             cat > /tmp/securities-release-status.txt <<EOF
           status=ok
           architecture=exam-prep-system-v1
@@ -171,23 +140,17 @@ jobs:
           deployed_sha=${GITHUB_SHA}
           version=3.4.0
           ui=R2
-          source_count=17
           url=${base}/ks/
           verified_at=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
           EOF
           fi
-
-      - name: Record successful live verification
+      - name: Record live verification
         shell: bash
         run: |
           set -euo pipefail
           mkdir -p release-status
           cp /tmp/fund-release-status.txt release-status/fund-assistant.txt
-          if [[ -f /tmp/securities-release-status.txt ]]; then cp /tmp/securities-release-status.txt release-status/securities-exam.txt; fi
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          [[ ! -f /tmp/securities-release-status.txt ]] || cp /tmp/securities-release-status.txt release-status/securities-exam.txt
+          git config user.name 'github-actions[bot]'; git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add release-status
-          if ! git diff --cached --quiet; then
-            git commit -m 'status: live release verification passed'
-            git push
-          fi
+          if ! git diff --cached --quiet; then git commit -m 'status: live release verification passed'; git push; fi

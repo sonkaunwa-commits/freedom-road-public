@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-08-25T15:33:15.855767+08:00",
+  "generated_at": "2026-08-25T15:41:33.879619+08:00",
   "schema_version": 8,
   "datasets": {
     "tracked_market.json": {
       "exists": true,
-      "updated_at": "2026-08-25T15:26:44.121034+08:00",
-      "bytes": 23104
+      "updated_at": "2026-08-25T15:38:55.516711+08:00",
+      "bytes": 23067
     },
     "funds.json": {
       "exists": true,
-      "updated_at": "2026-08-25T15:25:28.517270+08:00",
+      "updated_at": "2026-08-25T15:36:43.526895+08:00",
       "bytes": 595405
     },
     "gold.json": {
       "exists": true,
-      "updated_at": "2026-08-25T15:30:37.255256+08:00",
-      "bytes": 1546569
+      "updated_at": "2026-08-25T15:39:17.972908+08:00",
+      "bytes": 1546602
     },
     "candidate_pool.json": {
       "exists": true,
@@ -24,53 +24,53 @@
     },
     "health.json": {
       "exists": true,
-      "updated_at": "2026-08-25T15:30:33.753144+08:00",
+      "updated_at": "2026-08-25T15:39:14.404873+08:00",
       "bytes": 17741
     },
     "analysis_stage1.json": {
       "exists": true,
-      "updated_at": "2026-08-25T15:31:46.315292+08:00",
+      "updated_at": "2026-08-25T15:40:08.763400+08:00",
       "bytes": 18328
     },
     "analysis_stage2_daily.json": {
       "exists": true,
-      "updated_at": "2026-08-25T15:33:07.175481+08:00",
+      "updated_at": "2026-08-25T15:41:27.879568+08:00",
       "bytes": 653254
     },
     "analysis_duckdb_evidence.json": {
       "exists": true,
-      "updated_at": "2026-08-25T15:33:12.350923+08:00",
-      "bytes": 10520
+      "updated_at": "2026-08-25T15:41:31.413733+08:00",
+      "bytes": 10518
     },
     "data_contracts.json": {
       "exists": true,
-      "updated_at": "2026-08-25T15:32:53.327787+08:00",
+      "updated_at": "2026-08-25T15:41:15.920593+08:00",
       "bytes": 5537
     },
     "calendar_alignment.json": {
       "exists": true,
-      "updated_at": "2026-08-25T15:32:54.022472+08:00",
+      "updated_at": "2026-08-25T15:41:16.718650+08:00",
       "bytes": 7777
     },
     "analysis_evidence_summary.json": {
       "exists": true,
-      "updated_at": "2026-08-25T15:33:15.117832+08:00",
+      "updated_at": "2026-08-25T15:41:33.516470+08:00",
       "bytes": 7576
     },
     "report_readiness.json": {
       "exists": true,
-      "updated_at": "2026-08-25T15:33:15.855767+08:00",
+      "updated_at": "2026-08-25T15:41:33.879619+08:00",
       "bytes": 8291
     },
     "candidate_scan_health.json": {
       "exists": true,
-      "updated_at": "2026-08-25T15:33:15.910369+08:00",
+      "updated_at": "2026-08-25T15:41:33.919097+08:00",
       "bytes": 718
     },
     "data_health_alerts.json": {
       "exists": true,
-      "updated_at": "2026-08-25T15:33:16.015946+08:00",
-      "bytes": 5753
+      "updated_at": "2026-08-25T15:41:34.000580+08:00",
+      "bytes": 5762
     }
   },
   "report_readiness": {
@@ -98,13 +98,13 @@
   },
   "analysis_engine": {
     "stage": "STAGE_1_RUNNING",
-    "generated_at": "2026-08-25T15:31:46.315292+08:00",
+    "generated_at": "2026-08-25T15:40:08.763400+08:00",
     "stage1_fund_ready": true,
     "stage1_a_share_history_ready": true,
     "stage2_vectorbt_daily_pilot_ready": true,
     "stage2_daily_pilot": {
       "status": "STAGE_2_DAILY_PILOT_RUNNING",
-      "generated_at": "2026-08-25T15:33:07.175481+08:00",
+      "generated_at": "2026-08-25T15:41:27.879568+08:00",
       "research_core_ready": true,
       "coverage": {
         "a_research_core_ok": 7,
@@ -253,8 +253,8 @@
     "analysis_roadmap_version": "1.0.0"
   },
   "privacy": "public market data and research evidence only; no private account ids, position sizes, costs, cash balances, private bank quotes or trade states",
-  "freshness_hardening_updated_at": "2026-08-25T15:33:15.910369+08:00",
-  "data_health_gate_updated_at": "2026-08-25T15:33:15.979319+08:00",
+  "freshness_hardening_updated_at": "2026-08-25T15:41:33.919097+08:00",
+  "data_health_gate_updated_at": "2026-08-25T15:41:33.973348+08:00",
   "data_health_alerts": {
     "status": "warning",
     "critical": 0,
@@ -262,5 +262,5 @@
     "total": 10,
     "external_notification_enabled": false
   },
-  "data_health_alerts_updated_at": "2026-08-25T15:33:16.015946+08:00"
+  "data_health_alerts_updated_at": "2026-08-25T15:41:34.000580+08:00"
 }

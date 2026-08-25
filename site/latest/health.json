@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-25T15:30:33.753144+08:00",
+  "updated_at": "2026-08-25T15:39:14.404873+08:00",
   "mode": "all",
   "counts": {
     "a_share_ok": 7,
@@ -43,7 +43,7 @@
     "max_lag_minutes": 6,
     "rows": 1687,
     "probe": false,
-    "elapsed_ms": 4066.8,
+    "elapsed_ms": 4186.0,
     "per_symbol": {
       "600006.SH": {
         "symbol": "sh600006",
@@ -292,7 +292,7 @@
   ],
   "coverage_ok": true,
   "intraday_a_share_ok": true,
-  "run_id": "40b925bcf77284aa",
+  "run_id": "48aeaf732912a0b1",
   "provider_circuits": {
     "eastmoney_a_daily": {
       "provider": "eastmoney",

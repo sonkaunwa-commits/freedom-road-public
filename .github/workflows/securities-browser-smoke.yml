@@ -35,7 +35,7 @@ jobs:
           test -f package.json || npm init -y >/dev/null
           npm install --no-save --package-lock=false playwright@1.55.0
           npx playwright install --with-deps chromium webkit
-      - name: Wait for clean release on real Pages
+      - name: Wait for exact fixed release on real Pages
         id: live
         shell: bash
         run: |
@@ -45,10 +45,11 @@ jobs:
           for attempt in {1..72}; do
             ks="$(curl -fsSL --max-time 20 "$base/ks/?browserwait=${GITHUB_SHA}-$attempt" 2>/dev/null || true)"
             live="$(curl -fsSL --max-time 20 "$base/exam-live/?browserwait=${GITHUB_SHA}-$attempt" 2>/dev/null || true)"
-            if grep -Fq 'exam-live/?v=20260825-r4' <<<"$ks" && grep -Fq 'data-product-version="3.6.0"' <<<"$live" && ! grep -Fq 'serviceWorker.register' <<<"$live"; then ok=true; break; fi
+            marker="$(curl -fsSL --max-time 20 "$base/exam-live/profile-fix-r4.txt?browserwait=${GITHUB_SHA}-$attempt" 2>/dev/null || true)"
+            if grep -Fq 'exam-live/?v=20260825-r4' <<<"$ks" && grep -Fq 'data-product-version="3.6.0"' <<<"$live" && ! grep -Fq 'serviceWorker.register' <<<"$live" && grep -Fq 'profile-observer-loop-fix=20260825-r4b' <<<"$marker"; then ok=true; break; fi
             sleep 5
           done
-          [[ "$ok" == true ]] || { echo 'Clean exam-live release not live before browser smoke' >&2; exit 1; }
+          [[ "$ok" == true ]] || { echo 'Exact fixed exam-live release not live before browser smoke' >&2; exit 1; }
       - name: Run real Chromium and WebKit smoke
         id: smoke
         continue-on-error: true
@@ -79,6 +80,7 @@ jobs:
           desktop=chromium-exam-live-home+knowledge+practice+profiles+pin
           mobile=chromium-ks-to-exam-live+webkit-iphone-ks-to-exam-live+home+knowledge
           entry=clean-no-service-worker-r4
+          profile_loop_fix=20260825-r4b
           cloud_sync=false
           verified_at=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
           EOF
@@ -86,7 +88,11 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add release-status/securities-browser-smoke.txt release-status/securities-browser-smoke.log
-          if ! git diff --cached --quiet; then git commit -m 'status: record securities real-browser smoke'; git push; fi
+          if ! git diff --cached --quiet; then
+            git commit -m 'status: record securities real-browser smoke'
+            git pull --rebase origin main
+            git push
+          fi
       - name: Enforce browser smoke result
         if: always()
         env:

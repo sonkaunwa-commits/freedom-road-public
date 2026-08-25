@@ -27,7 +27,7 @@ jobs:
         run: |
           set -euo pipefail
           grep -Fq 'v3.6.0' site/ks/index.html
-          grep -Fq 'securities-exam/boot.html?v=20260825-r2' site/ks/index.html
+          grep -Fq 'securities-exam/boot.html?v=20260825-r3' site/ks/index.html
           grep -Fq 'data-product-version="3.6.0"' site/securities-exam/index.html
           for f in boot.html product-core-v350.js product-v350.js product-v350.css learning-content-v360.js content-bridge-v360.js release-v360.js release-v360.css profile-sync-v360.js ui-tune-v360.css sources-data-v350.js sw.js; do test -f "site/securities-exam/$f"; done
           grep -Fq "VERSION='3.6.0'" site/securities-exam/product-core-v350.js
@@ -38,6 +38,8 @@ jobs:
           grep -Fq "const CACHE='sec2026-v361-recovery'" site/securities-exam/sw.js
           grep -Fq "'./boot.html'" site/securities-exam/sw.js
           grep -Fq 'RECOVERY ENTRY' site/securities-exam/boot.html
+          grep -Fq 'setTimeout(enter,5000)' site/securities-exam/boot.html
+          ! grep -Fq "const ASSETS=" site/securities-exam/boot.html
           ! grep -Fq 'setInterval(' site/securities-exam/release-v360.js
           node --check site/securities-exam/product-core-v350.js
           node --check site/securities-exam/learning-content-v360.js
@@ -60,7 +62,7 @@ jobs:
           s=(base/'learning-content-v360.js').read_text(encoding='utf-8')
           assert s.count("sourceKind:'user-material-derived'") >= 20
           assert 'count:cards.length' in s
-          print('v3.6 static securities snapshot + recovery entry PASS')
+          print('v3.6 static securities snapshot + non-blocking recovery entry PASS')
           PY
           node --check /tmp/securities-boot.js
       - name: Wait for GitHub Pages and smoke real v3.6 endpoints
@@ -78,7 +80,7 @@ jobs:
             rel="$(get 'securities-exam/release-v360.js' "$attempt")"
             learn="$(get 'securities-exam/learning-content-v360.js' "$attempt")"
             profile="$(get 'securities-exam/profile-sync-v360.js' "$attempt")"
-            if grep -Fq 'data-product-version="3.6.0"' <<<"$html" && grep -Fq 'release-v360.js?v=360' <<<"$html" && grep -Fq 'boot.html?v=20260825-r2' <<<"$ks" && grep -Fq 'RECOVERY ENTRY' <<<"$boot" && grep -Fq 'sec2026-v361-recovery' <<<"$sw" && grep -Fq "const VERSION='3.6.0'" <<<"$rel" && grep -Fq 'SEC_SOURCE_CONTENT_V360' <<<"$learn" && grep -Fq 'cloudSync:false' <<<"$profile"; then ok=true; break; fi
+            if grep -Fq 'data-product-version="3.6.0"' <<<"$html" && grep -Fq 'release-v360.js?v=360' <<<"$html" && grep -Fq 'boot.html?v=20260825-r3' <<<"$ks" && grep -Fq 'setTimeout(enter,5000)' <<<"$boot" && grep -Fq 'sec2026-v361-recovery' <<<"$sw" && grep -Fq "const VERSION='3.6.0'" <<<"$rel" && grep -Fq 'SEC_SOURCE_CONTENT_V360' <<<"$learn" && grep -Fq 'cloudSync:false' <<<"$profile"; then ok=true; break; fi
             sleep 5
           done
           [[ "$ok" == true ]] || { echo 'Public v3.6 recovery release did not become live in time' >&2; exit 1; }
@@ -112,6 +114,7 @@ jobs:
           courses=finance+law
           cache=sec2026-v361-recovery
           recovery_entry=securities-exam/boot.html
+          recovery_mode=non-blocking-r3
           url=https://sonkaunwa-commits.github.io/freedom-road-public/ks/
           verified_at=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
           EOF

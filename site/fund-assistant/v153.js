@@ -13,6 +13,8 @@ function phase(){const p=bj(),m=p.h*60+p.min;if(!tradeDay(p))return'closed';if(m
 function code(){return(q('#detailSubtitle')?.textContent||'').trim()}
 function dateCN(key=bj().key){const m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(String(key||''));return m?`${m[1]}年${m[2]}月${m[3]}日`:String(key||'')}
 function fmtNav(v){const n=Number(v);return Number.isFinite(n)?n.toFixed(4):'—'}
+function freshCN(v){return v==='fresh'?'数据正常':v==='partial'?'部分基金数据':v==='unavailable'?'数据不可用':'状态待确认'}
+function sourceCN(v){return v==='eastmoney_fundgz_public'?'公开基金盘中估算源':(v?'公开数据源':'来源待确认')}
 function currentLocalSamples(c){const p=bj();try{return JSON.parse(localStorage.getItem(`fund_intraday_v14_${p.key}_${c}`)||'[]')}catch{return[]}}
 
 async function loadServer(force=false){
@@ -28,6 +30,20 @@ async function loadServer(force=false){
 function rowFor(c){return serverDoc?.funds?.find(x=>String(x.code)===String(c))||null}
 function todayServerRow(c){const p=bj();if(serverDoc?.trade_date!==p.key)return null;const row=rowFor(c);if(!row)return null;const pts=(row.points||[]).filter(x=>x?.sample_time&&Number.isFinite(Number(x.estimate_nav)));return pts.length?{...row,points:pts}:null}
 function oldServerDate(){const d=serverDoc?.trade_date,p=bj();return d&&d!==p.key?d:null}
+
+function enhanceLunchState(){
+ if(phase()!=='lunch')return;
+ const badge=q('#marketBadge');if(badge){badge.textContent='午间休市';badge.className='badge after'}
+ if(q('#todayHeadline'))q('#todayHeadline').textContent='午间休市，13:00开盘后再看';
+ if(q('#todaySummary'))q('#todaySummary').textContent='上午交易已经结束。盘中估算通常停在上午最后一个有效值，13:00以后再继续更新；午休期间不要把静止的旧值理解成行情仍在变化。';
+ if(q('#liveFreshness'))q('#liveFreshness').textContent='午间暂停 · 13:00后继续';
+ if(q('#nextRefresh'))q('#nextRefresh').textContent='13:00开盘后';
+ const body=q('#detailBody');if(!body)return;
+ const first=body.querySelector('.detail-card.action');
+ if(first&&!first.querySelector('.lunch-note-v153')){
+   const n=document.createElement('div');n.className='lunch-note-v153';n.textContent='午间休市：上午盘已结束，13:00开盘后再复核盘中位置。';first.appendChild(n)
+ }
+}
 
 function findCard(){
  let card=qa('#detailBody .detail-card').find(x=>x.querySelector('.intraday-v152-head'));
@@ -69,7 +85,7 @@ function renderServer(card,row){
  hideBrowserChart(card,true);
  let box=card.querySelector('.server-intraday-v153');if(!box){box=document.createElement('div');box.className='server-intraday-v153';card.appendChild(box)}
  const pts=row.points||[],first=pts[0],last=pts[pts.length-1],fresh=serverDoc?.freshness||'unknown';
- box.innerHTML=`<div class="server-head"><div><b>今日实时参考走势（${dateCN()}）</b><span>服务器盘中采样 · ${esc(coverageText(row))}</span></div><span class="intraday-status ${statusClass()}">${esc(statusText(row))}</span></div>${chart(pts)}<div class="server-meta"><span>区间 ${esc(first?.sample_time||'—')}–${esc(last?.sample_time||'—')}</span><span>来源 ${esc(row.source||serverDoc?.source||'public')}</span><span>状态 ${esc(fresh)}</span></div><div class="server-note"><b>盘中估算，不是最终净值。</b>服务器按计划持续采样，但免费数据源和 GitHub 定时任务可能延迟或缺点，所以页面会明确标成“部分”或“较完整”，不会把缺点曲线说成完整全天行情。</div>`;
+ box.innerHTML=`<div class="server-head"><div><b>今日实时参考走势（${dateCN()}）</b><span>服务器盘中采样 · ${esc(coverageText(row))}</span></div><span class="intraday-status ${statusClass()}">${esc(statusText(row))}</span></div>${chart(pts)}<div class="server-meta"><span>区间 ${esc(first?.sample_time||'—')}–${esc(last?.sample_time||'—')}</span><span>来源 ${esc(sourceCN(row.source||serverDoc?.source))}</span><span>状态 ${esc(freshCN(fresh))}</span></div><div class="server-note"><b>盘中估算，不是最终净值。</b>服务器按计划持续采样，但公开数据源和定时任务可能延迟或缺点，所以页面会明确标成“部分”或“较完整”，不会把缺点曲线说成完整全天行情。</div>`;
  const old=card.querySelector('.intraday-v152-head');if(old)old.style.display='none';
 }
 function renderFallback(card,c){
@@ -92,9 +108,9 @@ async function enhanceServerCurve(force=false){
  const row=todayServerRow(c);if(row)renderServer(card,row);else renderFallback(card,c);
 }
 function releaseMarker(){document.body.dataset.release=RELEASE;let s=q('#v153Candidate');if(!s){s=document.createElement('span');s.id='v153Candidate';s.className='candidate-marker';s.textContent='15.3 候选 · 服务器盘中曲线待实盘验收';q('.app-head>div')?.appendChild(s)}}
-function apply(){releaseMarker();enhanceServerCurve(false)}
+function apply(){releaseMarker();enhanceLunchState();enhanceServerCurve(false)}
 let scheduled=false;function schedule(){if(scheduled)return;scheduled=true;requestAnimationFrame(()=>{scheduled=false;apply()})}
 const obs=new MutationObserver(schedule);
 document.addEventListener('DOMContentLoaded',()=>{apply();const b=q('#detailBody');if(b)obs.observe(b,{childList:true,subtree:false});q('#detailRefresh')?.addEventListener('click',()=>setTimeout(()=>enhanceServerCurve(true),900))});
-setTimeout(apply,900);setInterval(()=>enhanceServerCurve(true),10*60*1000);
+setTimeout(apply,900);setInterval(()=>{enhanceLunchState();enhanceServerCurve(true)},10*60*1000);
 })();

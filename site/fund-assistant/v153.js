@@ -65,6 +65,7 @@ function hideBrowserChart(card,hide){
  const note=card.querySelector('.intraday-explain');if(note)note.style.display=hide?'none':'';
 }
 function renderServer(card,row){
+ card.querySelector('.server-fallback-v153')?.remove();
  hideBrowserChart(card,true);
  let box=card.querySelector('.server-intraday-v153');if(!box){box=document.createElement('div');box.className='server-intraday-v153';card.appendChild(box)}
  const pts=row.points||[],first=pts[0],last=pts[pts.length-1],fresh=serverDoc?.freshness||'unknown';
@@ -77,10 +78,12 @@ function renderFallback(card,c){
  card.querySelector('.server-intraday-v153')?.remove();
  let n=card.querySelector('.server-fallback-v153');if(!n){n=document.createElement('div');n.className='server-fallback-v153';card.appendChild(n)}
  const prior=oldServerDate(),local=currentLocalSamples(c),ph=phase();
- if(prior)n.innerHTML=`服务器最近一次盘中记录是 <b>${esc(prior)}</b>，不是今天，所以不会拿它冒充今日实时数据。${local.length?` 当前图仍使用本机今天已记录的 ${local.length} 个采样点。`:''}`;
- else if(serverState==='unavailable')n.textContent='服务器盘中历史暂时不可用；当前继续使用本页面打开后产生的本机采样，不影响正式净值和历史趋势查看。';
- else if(ph==='morning'||ph==='afternoon'||ph==='lunch')n.textContent='今天服务器暂未形成这只基金的有效盘中记录；当前继续使用本页面采样，等服务器真实数据到达后再切换。';
- else n.textContent='当前没有需要展示的服务器当日盘中历史。';
+ let html='';
+ if(prior)html=`服务器最近一次盘中记录是 <b>${esc(prior)}</b>，不是今天，所以不会拿它冒充今日实时数据。${local.length?` 当前图仍使用本机今天已记录的 ${local.length} 个采样点。`:''}`;
+ else if(serverState==='unavailable')html='服务器盘中历史暂时不可用；当前继续使用本页面打开后产生的本机采样，不影响正式净值和历史趋势查看。';
+ else if(ph==='morning'||ph==='afternoon'||ph==='lunch')html='今天服务器暂未形成这只基金的有效盘中记录；当前继续使用本页面采样，等服务器真实数据到达后再切换。';
+ else html='当前没有需要展示的服务器当日盘中历史。';
+ if(n.innerHTML!==html)n.innerHTML=html;
 }
 
 async function enhanceServerCurve(force=false){
@@ -92,6 +95,6 @@ function releaseMarker(){document.body.dataset.release=RELEASE;let s=q('#v153Can
 function apply(){releaseMarker();enhanceServerCurve(false)}
 let scheduled=false;function schedule(){if(scheduled)return;scheduled=true;requestAnimationFrame(()=>{scheduled=false;apply()})}
 const obs=new MutationObserver(schedule);
-document.addEventListener('DOMContentLoaded',()=>{apply();const b=q('#detailBody');if(b)obs.observe(b,{childList:true,subtree:true});q('#detailRefresh')?.addEventListener('click',()=>setTimeout(()=>enhanceServerCurve(true),900))});
+document.addEventListener('DOMContentLoaded',()=>{apply();const b=q('#detailBody');if(b)obs.observe(b,{childList:true,subtree:false});q('#detailRefresh')?.addEventListener('click',()=>setTimeout(()=>enhanceServerCurve(true),900))});
 setTimeout(apply,900);setInterval(()=>enhanceServerCurve(true),10*60*1000);
 })();

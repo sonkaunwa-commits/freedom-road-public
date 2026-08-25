@@ -1,0 +1,22 @@
+/* v3.6 readability + account/sync clarity patch. Intentionally small typography lift, not a large-text mode. */
+.secV350{font-size:16px}
+.secV350 .eyebrow{font-size:11px}
+.v350Brand span{font-size:10px}.v350Brand b{font-size:19px}.v350Brand small{font-size:11px}
+.v350Side nav button{font-size:14px}.v350SideFoot span{font-size:12px}.v350SideFoot small{font-size:10px}
+.v350DeskTop>div:first-child b{font-size:18px}.v350DeskTop>div:first-child small{font-size:11px}.v350TopActions button{font-size:12px}
+.v350Welcome h1{font-size:34px}.v350Welcome p{font-size:15px}.v350Welcome button,.v350PageHead button{font-size:13px}.v350Welcome aside span{font-size:11px}.v350Welcome aside b{font-size:12px}
+.v350Metrics span{font-size:11px}.v350Metrics small{font-size:10px}.v350Card>header h2{font-size:19px}.v350Card>header>span{font-size:11px}.v350Card button.text{font-size:12px}
+.v350Task .line b{font-size:14px}.v350Task .line span{font-size:10px}.v350Task p{font-size:12px}.v350Task small{font-size:10px}.v350Task>button{font-size:11px}
+.v350PlanWhy b{font-size:12px}.v350PlanWhy p{font-size:11px}.v350SubjectRow b{font-size:14px}.v350SubjectRow span{font-size:10px}.v350Week b{font-size:10px}.v350Week small{font-size:9px}.v350Focus p{font-size:12px}.v350Focus button,.v350Quick button{font-size:11px}
+.v350PageHead h1{font-size:32px}.v350PageHead p{font-size:13px}.v350HeadStat span,.v350HeadStat small{font-size:10px}
+.v350KnowledgeFilters button,.v350MaterialTabs button{font-size:10px}#v350ConceptList button span{font-size:9px}#v350ConceptList button b{font-size:13px}#v350ConceptList button small{font-size:9px}
+.v350EmptyDetail p,.v350Empty p{font-size:12px}.v350Recall .meta{font-size:10px}.v350Recall p{font-size:15px}.v350Recall button{font-size:12px}.v350Recall.revealed p{font-size:12px}
+.v350LessonBlock span{font-size:10px}.v350LessonBlock p{font-size:15px}.v350Related header b{font-size:14px}.v350Related header span{font-size:10px}
+.v360SourceSummary span{font-size:9px}.v360SourceSummary b{font-size:13px}.v360SourceSummary small{font-size:9px}.v360SourceLegend i{font-size:9px}.v360ContextHead span{font-size:9px}.v360ContextHead b{font-size:10px}.v360Context strong{font-size:11px}.v360Context p{font-size:13px}.v360Context>small{font-size:9px}.v360ReleaseStatus span{font-size:9px}.v360ReleaseStatus b{font-size:12px}.v360ReleaseStatus small{font-size:9px}
+.v360DeviceBadge{display:inline-flex;align-items:center;gap:5px;height:30px;padding:0 9px;border:1px solid #dfe3eb;border-radius:999px;background:#fff;color:#687180;font-size:11px;white-space:nowrap}.v360DeviceBadge:before{content:'•';font-size:16px;line-height:1;color:#9b671c}
+.v360SyncPanel{margin-top:14px;padding:15px;border:1px solid #dfe3eb;border-radius:14px;background:#fafbfc}.v360SyncPanel h4{margin:0;font-size:14px}.v360SyncPanel p{margin:6px 0 0!important;font-size:12px!important;line-height:1.65!important;color:#687180!important}.v360SyncRows{display:grid;gap:7px;margin-top:12px}.v360SyncRow{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:9px 10px;border-radius:10px;background:#fff;border:1px solid #e7e9ee}.v360SyncRow span{font-size:12px;color:#687180}.v360SyncRow b{font-size:12px}.v360SyncActions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.v360SyncActions button{height:36px;padding:0 12px;border:1px solid #d7dce6;border-radius:10px;background:#fff;color:#243c97;font-size:12px;font-weight:700}.v360SyncActions button.primary{background:#243c97;border-color:#243c97;color:#fff}.v360SyncNote{display:block;margin-top:9px;font-size:10px;line-height:1.55;color:#8a919e}
+@media(max-width:1099px){
+ .secV350{font-size:16px}.v350MobileTop b{font-size:17px!important}.v350MobileTop small{font-size:11px!important}.v350Bottom button b{font-size:11px!important}
+ .v350Welcome h1{font-size:29px}.v350Welcome p{font-size:15px}.v350PageHead h1{font-size:28px}.v350PageHead p{font-size:13px}.v350Task .line b{font-size:14px}.v350Task p{font-size:12px}.v350LessonBlock p{font-size:15px}.v350Recall p{font-size:15px}
+ .v360DeviceBadge{display:none}.v360SyncActions button{flex:1;min-width:130px}.v360SyncPanel{padding:13px}
+}

@@ -1,14 +1,24 @@
 {
-  "generated_at": "2026-08-25T13:23:44.369039+08:00",
+  "generated_at": "2026-08-25T15:30:39.959612+08:00",
   "schema_version": 3,
   "status": "warning",
   "counts": {
     "critical": 0,
-    "warning": 8,
+    "warning": 10,
     "info": 0,
-    "total": 8
+    "total": 10
   },
   "alerts": [
+    {
+      "code": "DATA_HEALTH_CANDIDATE_SCAN_DEGRADED",
+      "severity": "warning",
+      "source": "data_health",
+      "message": "Data-health blocker active: CANDIDATE_SCAN_DEGRADED",
+      "details": {
+        "blocker": "CANDIDATE_SCAN_DEGRADED",
+        "overall_status": "degraded"
+      }
+    },
     {
       "code": "PROVIDER_DOMAIN_STABILITY_WATCH",
       "severity": "warning",
@@ -17,9 +27,9 @@
       "details": {
         "provider": "akshare",
         "domain": "a_share_daily",
-        "success_rate": 0.1692,
-        "consecutive_failed_runs": 4,
-        "observations": 65,
+        "success_rate": 0.1429,
+        "consecutive_failed_runs": 5,
+        "observations": 77,
         "service_impact": "operational_watch_only_unless_data_health_or_readiness_gate_degrades"
       }
     },
@@ -31,9 +41,9 @@
       "details": {
         "provider": "eastmoney",
         "domain": "a_share_daily",
-        "success_rate": 0.0323,
-        "consecutive_failed_runs": 4,
-        "observations": 31,
+        "success_rate": 0.0312,
+        "consecutive_failed_runs": 5,
+        "observations": 32,
         "service_impact": "operational_watch_only_unless_data_health_or_readiness_gate_degrades"
       }
     },
@@ -46,8 +56,8 @@
         "provider": "tushare",
         "domain": "a_share_daily",
         "success_rate": 0.0,
-        "consecutive_failed_runs": 8,
-        "observations": 8,
+        "consecutive_failed_runs": 9,
+        "observations": 9,
         "service_impact": "operational_watch_only_unless_data_health_or_readiness_gate_degrades"
       }
     },
@@ -59,9 +69,9 @@
       "details": {
         "provider": "tushare",
         "domain": "a_share_minute",
-        "success_rate": 0.2,
-        "consecutive_failed_runs": 6,
-        "observations": 10,
+        "success_rate": 0.1818,
+        "consecutive_failed_runs": 7,
+        "observations": 11,
         "service_impact": "operational_watch_only_unless_data_health_or_readiness_gate_degrades"
       }
     },
@@ -74,8 +84,8 @@
         "provider": "tushare",
         "domain": "gold",
         "success_rate": 0.0,
-        "consecutive_failed_runs": 8,
-        "observations": 8,
+        "consecutive_failed_runs": 9,
+        "observations": 9,
         "service_impact": "operational_watch_only_unless_data_health_or_readiness_gate_degrades"
       }
     },
@@ -88,8 +98,8 @@
         "provider": "tushare",
         "domain": "hk_daily",
         "success_rate": 0.0,
-        "consecutive_failed_runs": 8,
-        "observations": 8,
+        "consecutive_failed_runs": 9,
+        "observations": 9,
         "service_impact": "operational_watch_only_unless_data_health_or_readiness_gate_degrades"
       }
     },
@@ -102,8 +112,8 @@
         "provider": "tushare",
         "domain": "us_daily",
         "success_rate": 0.0,
-        "consecutive_failed_runs": 8,
-        "observations": 8,
+        "consecutive_failed_runs": 9,
+        "observations": 9,
         "service_impact": "operational_watch_only_unless_data_health_or_readiness_gate_degrades"
       }
     },
@@ -116,9 +126,20 @@
         "provider": "yfinance",
         "domain": "a_share_daily",
         "success_rate": 0.0,
-        "consecutive_failed_runs": 3,
-        "observations": 6,
+        "consecutive_failed_runs": 4,
+        "observations": 8,
         "service_impact": "operational_watch_only_unless_data_health_or_readiness_gate_degrades"
+      }
+    },
+    {
+      "code": "REPORT_DEGRADED",
+      "severity": "warning",
+      "source": "report_readiness",
+      "message": "Report may be published only with explicit degradation disclosures.",
+      "details": {
+        "blockers": [
+          "DATA_HEALTH::CANDIDATE_SCAN_DEGRADED"
+        ]
       }
     }
   ],

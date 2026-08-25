@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-25T13:23:44.166689+08:00",
+  "generated_at": "2026-08-25T15:30:39.708413+08:00",
   "schema_version": 6,
-  "source_health_updated_at": "2026-08-25T13:21:16.077336+08:00",
-  "delivery_mode_17": "FULL_REPORT",
+  "source_health_updated_at": "2026-08-25T15:30:33.753144+08:00",
+  "delivery_mode_17": "FULL_REPORT_WITH_EXPLICIT_DEGRADATIONS",
   "a_share_exact_action_gate": {
     "ready": true,
     "coverage": "7/7",
@@ -50,8 +50,8 @@
       "expected_codes": 7,
       "covered_codes": 7,
       "coverage_ratio": 1.0,
-      "expected_latest_bar_at": "2026-08-25T13:21:00+08:00",
-      "latest_bar_at": "2026-08-25T13:22:00+08:00",
+      "expected_latest_bar_at": "2026-08-25T15:00:00+08:00",
+      "latest_bar_at": "2026-08-25T15:00:00+08:00",
       "fresh_codes": [
         "600006.SH",
         "002085.SZ",
@@ -64,51 +64,51 @@
       "stale_codes": [],
       "missing_codes": [],
       "max_lag_minutes": 6,
-      "rows": 998,
+      "rows": 1687,
       "probe": false,
-      "elapsed_ms": 7830.7,
+      "elapsed_ms": 4066.8,
       "per_symbol": {
         "600006.SH": {
           "symbol": "sh600006",
           "status": "ok",
-          "rows": 143,
-          "latest_bar_at": "2026-08-25T13:22:00+08:00"
+          "rows": 241,
+          "latest_bar_at": "2026-08-25T15:00:00+08:00"
         },
         "002085.SZ": {
           "symbol": "sz002085",
           "status": "ok",
-          "rows": 142,
-          "latest_bar_at": "2026-08-25T13:21:00+08:00"
+          "rows": 241,
+          "latest_bar_at": "2026-08-25T15:00:00+08:00"
         },
         "002475.SZ": {
           "symbol": "sz002475",
           "status": "ok",
-          "rows": 143,
-          "latest_bar_at": "2026-08-25T13:22:00+08:00"
+          "rows": 241,
+          "latest_bar_at": "2026-08-25T15:00:00+08:00"
         },
         "601138.SH": {
           "symbol": "sh601138",
           "status": "ok",
-          "rows": 142,
-          "latest_bar_at": "2026-08-25T13:21:00+08:00"
+          "rows": 241,
+          "latest_bar_at": "2026-08-25T15:00:00+08:00"
         },
         "002600.SZ": {
           "symbol": "sz002600",
           "status": "ok",
-          "rows": 142,
-          "latest_bar_at": "2026-08-25T13:21:00+08:00"
+          "rows": 241,
+          "latest_bar_at": "2026-08-25T15:00:00+08:00"
         },
         "601899.SH": {
           "symbol": "sh601899",
           "status": "ok",
-          "rows": 143,
-          "latest_bar_at": "2026-08-25T13:22:00+08:00"
+          "rows": 241,
+          "latest_bar_at": "2026-08-25T15:00:00+08:00"
         },
         "300059.SZ": {
           "symbol": "sz300059",
           "status": "ok",
-          "rows": 143,
-          "latest_bar_at": "2026-08-25T13:22:00+08:00"
+          "rows": 241,
+          "latest_bar_at": "2026-08-25T15:00:00+08:00"
         }
       },
       "provider_errors": [],
@@ -122,7 +122,7 @@
           "expected_codes": 7,
           "covered_codes": 0,
           "coverage_ratio": 0.0,
-          "expected_latest_bar_at": "2026-08-25T13:18:00+08:00",
+          "expected_latest_bar_at": "2026-08-25T15:00:00+08:00",
           "latest_bar_at": null,
           "max_lag_minutes": 6,
           "fresh_codes": [],
@@ -143,7 +143,7 @@
           "expected_codes": 7,
           "covered_codes": 0,
           "coverage_ratio": 0.0,
-          "expected_latest_bar_at": "2026-08-25T13:18:00+08:00",
+          "expected_latest_bar_at": "2026-08-25T15:00:00+08:00",
           "latest_bar_at": null,
           "max_lag_minutes": 6,
           "fresh_codes": [],
@@ -164,7 +164,7 @@
           "expected_codes": 7,
           "covered_codes": 0,
           "coverage_ratio": 0.0,
-          "expected_latest_bar_at": "2026-08-25T13:18:00+08:00",
+          "expected_latest_bar_at": "2026-08-25T15:00:00+08:00",
           "latest_bar_at": null,
           "max_lag_minutes": 6,
           "fresh_codes": [],
@@ -185,8 +185,8 @@
           "expected_codes": 7,
           "covered_codes": 7,
           "coverage_ratio": 1.0,
-          "expected_latest_bar_at": "2026-08-25T13:21:00+08:00",
-          "latest_bar_at": "2026-08-25T13:22:00+08:00",
+          "expected_latest_bar_at": "2026-08-25T15:00:00+08:00",
+          "latest_bar_at": "2026-08-25T15:00:00+08:00",
           "max_lag_minutes": 6,
           "fresh_codes": [
             "600006.SH",
@@ -213,21 +213,21 @@
       "semantics": "Current-session minute coverage is fresh enough for public intraday analysis."
     },
     "candidate_scan": {
-      "status": "degraded_no_fundamentals",
+      "status": "degraded_partial_inputs",
       "freshness_state": "fresh_same_session",
       "fresh_for_configured_cadence": true,
       "today_scan_claim_allowed": true,
       "same_reference_session": true,
-      "last_full_scan_trade_date": "20260824",
-      "reference_trade_date": "20260824",
-      "reference_basis": "last_completed_session_before_close_gate",
+      "last_full_scan_trade_date": "20260825",
+      "reference_trade_date": "20260825",
+      "reference_basis": "current_session_after_close_gate",
       "sessions_since_full_scan": 0,
       "session_age_basis": "same_or_earlier_reference",
       "scan_cadence_trading_days": 1,
       "scan_cadence_source": "config/universe.yml",
-      "persisted_scan_cadence_trading_days": 2,
+      "persisted_scan_cadence_trading_days": 1,
       "retained_pool_usable_for_watch_only": false,
-      "updated_at": "2026-08-24T16:24:12.531140+08:00",
+      "updated_at": "2026-08-25T15:30:33.217645+08:00",
       "provider": "akshare_sina_free_fallback",
       "last_attempt_errors": null
     }
@@ -393,7 +393,9 @@
     "report_contract_version": "1.0.0",
     "analysis_roadmap_version": "1.0.0"
   },
-  "blockers": [],
+  "blockers": [
+    "DATA_HEALTH::CANDIDATE_SCAN_DEGRADED"
+  ],
   "instruction": "At a fixed report anchor, inspect readiness first. Data readiness is only the input gate. Then satisfy content_contract without deleting required analysis. Join the Private Ledger only in the private report layer. Statistical evidence remains research-only and must keep its uncertainty/FDR caveats.",
   "privacy": "public market and research readiness only; no private positions, quantities, costs, cash, account ids, bank executable quotes or trade states",
   "intraday_public_market_gate": {
@@ -401,18 +403,20 @@
     "status": "fresh",
     "provider": "tencent_mkline:a_minutes",
     "coverage_ratio": 1.0,
-    "latest_bar_at": "2026-08-25T13:22:00+08:00",
-    "expected_latest_bar_at": "2026-08-25T13:21:00+08:00",
+    "latest_bar_at": "2026-08-25T15:00:00+08:00",
+    "expected_latest_bar_at": "2026-08-25T15:00:00+08:00",
     "semantics": "This is a public market-data gate only. It never authorizes or executes a trade."
   },
-  "freshness_hardening_updated_at": "2026-08-25T13:23:44.230565+08:00",
+  "freshness_hardening_updated_at": "2026-08-25T15:30:39.814886+08:00",
   "data_health_gate": {
-    "status": "ready",
-    "ready": true,
-    "blockers": [],
-    "generated_at": "2026-08-25T13:21:21.879864+08:00",
-    "run_id": "24e0bc1a2443dd83",
+    "status": "degraded",
+    "ready": false,
+    "blockers": [
+      "CANDIDATE_SCAN_DEGRADED"
+    ],
+    "generated_at": "2026-08-25T15:30:39.421025+08:00",
+    "run_id": "c4ac745f9ca3ac77",
     "semantics": "Report readiness must fail closed when the first-class data-health layer is degraded. This gate propagates provider/freshness/reference degradations; it never creates a trade signal."
   },
-  "data_health_gate_updated_at": "2026-08-25T13:23:44.323823+08:00"
+  "data_health_gate_updated_at": "2026-08-25T15:30:39.912957+08:00"
 }

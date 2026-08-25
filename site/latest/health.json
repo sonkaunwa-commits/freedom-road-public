@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-25T13:21:16.077336+08:00",
+  "updated_at": "2026-08-25T15:30:33.753144+08:00",
   "mode": "all",
   "counts": {
     "a_share_ok": 7,
@@ -27,8 +27,8 @@
     "expected_codes": 7,
     "covered_codes": 7,
     "coverage_ratio": 1.0,
-    "expected_latest_bar_at": "2026-08-25T13:21:00+08:00",
-    "latest_bar_at": "2026-08-25T13:22:00+08:00",
+    "expected_latest_bar_at": "2026-08-25T15:00:00+08:00",
+    "latest_bar_at": "2026-08-25T15:00:00+08:00",
     "fresh_codes": [
       "600006.SH",
       "002085.SZ",
@@ -41,51 +41,51 @@
     "stale_codes": [],
     "missing_codes": [],
     "max_lag_minutes": 6,
-    "rows": 998,
+    "rows": 1687,
     "probe": false,
-    "elapsed_ms": 7830.7,
+    "elapsed_ms": 4066.8,
     "per_symbol": {
       "600006.SH": {
         "symbol": "sh600006",
         "status": "ok",
-        "rows": 143,
-        "latest_bar_at": "2026-08-25T13:22:00+08:00"
+        "rows": 241,
+        "latest_bar_at": "2026-08-25T15:00:00+08:00"
       },
       "002085.SZ": {
         "symbol": "sz002085",
         "status": "ok",
-        "rows": 142,
-        "latest_bar_at": "2026-08-25T13:21:00+08:00"
+        "rows": 241,
+        "latest_bar_at": "2026-08-25T15:00:00+08:00"
       },
       "002475.SZ": {
         "symbol": "sz002475",
         "status": "ok",
-        "rows": 143,
-        "latest_bar_at": "2026-08-25T13:22:00+08:00"
+        "rows": 241,
+        "latest_bar_at": "2026-08-25T15:00:00+08:00"
       },
       "601138.SH": {
         "symbol": "sh601138",
         "status": "ok",
-        "rows": 142,
-        "latest_bar_at": "2026-08-25T13:21:00+08:00"
+        "rows": 241,
+        "latest_bar_at": "2026-08-25T15:00:00+08:00"
       },
       "002600.SZ": {
         "symbol": "sz002600",
         "status": "ok",
-        "rows": 142,
-        "latest_bar_at": "2026-08-25T13:21:00+08:00"
+        "rows": 241,
+        "latest_bar_at": "2026-08-25T15:00:00+08:00"
       },
       "601899.SH": {
         "symbol": "sh601899",
         "status": "ok",
-        "rows": 143,
-        "latest_bar_at": "2026-08-25T13:22:00+08:00"
+        "rows": 241,
+        "latest_bar_at": "2026-08-25T15:00:00+08:00"
       },
       "300059.SZ": {
         "symbol": "sz300059",
         "status": "ok",
-        "rows": 143,
-        "latest_bar_at": "2026-08-25T13:22:00+08:00"
+        "rows": 241,
+        "latest_bar_at": "2026-08-25T15:00:00+08:00"
       }
     },
     "provider_errors": [],
@@ -99,7 +99,7 @@
         "expected_codes": 7,
         "covered_codes": 0,
         "coverage_ratio": 0.0,
-        "expected_latest_bar_at": "2026-08-25T13:18:00+08:00",
+        "expected_latest_bar_at": "2026-08-25T15:00:00+08:00",
         "latest_bar_at": null,
         "max_lag_minutes": 6,
         "fresh_codes": [],
@@ -120,7 +120,7 @@
         "expected_codes": 7,
         "covered_codes": 0,
         "coverage_ratio": 0.0,
-        "expected_latest_bar_at": "2026-08-25T13:18:00+08:00",
+        "expected_latest_bar_at": "2026-08-25T15:00:00+08:00",
         "latest_bar_at": null,
         "max_lag_minutes": 6,
         "fresh_codes": [],
@@ -141,7 +141,7 @@
         "expected_codes": 7,
         "covered_codes": 0,
         "coverage_ratio": 0.0,
-        "expected_latest_bar_at": "2026-08-25T13:18:00+08:00",
+        "expected_latest_bar_at": "2026-08-25T15:00:00+08:00",
         "latest_bar_at": null,
         "max_lag_minutes": 6,
         "fresh_codes": [],
@@ -162,8 +162,8 @@
         "expected_codes": 7,
         "covered_codes": 7,
         "coverage_ratio": 1.0,
-        "expected_latest_bar_at": "2026-08-25T13:21:00+08:00",
-        "latest_bar_at": "2026-08-25T13:22:00+08:00",
+        "expected_latest_bar_at": "2026-08-25T15:00:00+08:00",
+        "latest_bar_at": "2026-08-25T15:00:00+08:00",
         "max_lag_minutes": 6,
         "fresh_codes": [
           "600006.SH",
@@ -195,12 +195,17 @@
       "message": "抱歉，您没有接口(daily)访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。"
     },
     {
-      "dataset": "akshare:a:002085.SZ",
+      "dataset": "akshare:a:600006.SH",
       "error": "ConnectionError",
       "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
     },
     {
-      "dataset": "eastmoney:a:002085.SZ",
+      "dataset": "eastmoney:a:600006.SH",
+      "error": "ConnectionError",
+      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "dataset": "akshare:a:002085.SZ",
       "error": "ConnectionError",
       "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
     },
@@ -230,6 +235,16 @@
       "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
     },
     {
+      "dataset": "akshare:a:002371.SZ",
+      "error": "ConnectionError",
+      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "dataset": "akshare:a:300124.SZ",
+      "error": "ConnectionError",
+      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
       "dataset": "akshare:a:002185.SZ",
       "error": "ConnectionError",
       "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
@@ -237,7 +252,7 @@
     {
       "dataset": "yfinance:a:002185.SZ:quality",
       "error": "DataQualityError",
-      "message": "impossible high: O=17.520000457763672,H=16.8799991607666,L=16.0,C=16.850000381469727"
+      "message": "impossible high: O=17.520000457763672,H=17.059999465942383,L=16.0,C=16.84000015258789"
     },
     {
       "dataset": "akshare:a:000977.SZ",
@@ -247,7 +262,7 @@
     {
       "dataset": "yfinance:a:000977.SZ:quality",
       "error": "DataQualityError",
-      "message": "impossible high: O=76.73999786376953,H=73.47000122070312,L=71.41999816894531,C=73.3499984741211"
+      "message": "impossible high: O=76.73999786376953,H=74.98999786376953,L=71.41999816894531,C=74.11000061035156"
     },
     {
       "dataset": "akshare:a:600276.SH",
@@ -277,7 +292,7 @@
   ],
   "coverage_ok": true,
   "intraday_a_share_ok": true,
-  "run_id": "8371ba3b4d5ecfab",
+  "run_id": "40b925bcf77284aa",
   "provider_circuits": {
     "eastmoney_a_daily": {
       "provider": "eastmoney",
@@ -290,7 +305,7 @@
       "successful_calls": 0,
       "failed_calls": 1,
       "empty_calls": 0,
-      "skipped_calls": 8,
+      "skipped_calls": 11,
       "policy": "one live canary per run when prior scoped stability is severely degraded; retry every run"
     },
     "akshare_a_daily": {
@@ -320,7 +335,7 @@
       {
         "code": "600006.SH",
         "status": "promoted",
-        "previous_provider": "akshare:a:600006.SH",
+        "previous_provider": "yfinance:a:600006.SH",
         "provider": "tencent_fqkline:a:600006.SH",
         "latest_trade_date": "20260825",
         "required_trade_date": "20260825"
@@ -376,7 +391,7 @@
       {
         "code": "002371.SZ",
         "status": "promoted",
-        "previous_provider": "akshare:a:002371.SZ",
+        "previous_provider": "yfinance:a:002371.SZ",
         "provider": "tencent_fqkline:a:002371.SZ",
         "latest_trade_date": "20260825",
         "required_trade_date": "20260825"
@@ -384,7 +399,7 @@
       {
         "code": "300124.SZ",
         "status": "promoted",
-        "previous_provider": "akshare:a:300124.SZ",
+        "previous_provider": "yfinance:a:300124.SZ",
         "provider": "tencent_fqkline:a:300124.SZ",
         "latest_trade_date": "20260825",
         "required_trade_date": "20260825"

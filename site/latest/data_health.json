@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-25T13:21:21.879864+08:00",
+  "generated_at": "2026-08-25T15:30:39.421025+08:00",
   "schema_version": 2,
-  "source_health_updated_at": "2026-08-25T13:21:16.077336+08:00",
+  "source_health_updated_at": "2026-08-25T15:30:33.753144+08:00",
   "domains": {
     "a_share_daily": {
       "status": "ready",
@@ -446,8 +446,8 @@
           "crosscheck": {
             "provider": "sina_hf_GC",
             "status": "validated_crosscheck",
-            "diff_pct": 0.1044,
-            "age_seconds": 0.2
+            "diff_pct": 0.1021,
+            "age_seconds": 1.6
           }
         },
         {
@@ -480,13 +480,13 @@
       "missing_codes": []
     },
     "candidate_scan": {
-      "status": "degraded_no_fundamentals",
-      "updated_at": "2026-08-24T16:24:12.531140+08:00",
-      "last_full_scan_trade_date": "20260824",
-      "fresh_for_report": true
+      "status": "degraded_partial_inputs",
+      "updated_at": "2026-08-25T15:30:33.217645+08:00",
+      "last_full_scan_trade_date": "20260825",
+      "fresh_for_report": false
     }
   },
-  "raw_error_count": 17,
+  "raw_error_count": 20,
   "principles": {
     "provider_provenance_required": true,
     "fallback_must_be_explicit": true,
@@ -494,16 +494,18 @@
     "international_gold_pilot_must_remain_explicit_until_independently_validated": true,
     "bank_gold_execution_price_is_private_and_must_not_be_inferred": true
   },
-  "blockers": [],
-  "overall_status": "ready",
-  "run_id": "24e0bc1a2443dd83",
+  "blockers": [
+    "CANDIDATE_SCAN_DEGRADED"
+  ],
+  "overall_status": "degraded",
+  "run_id": "c4ac745f9ca3ac77",
   "equity_freshness_gate": {
     "calendar_source": {
       "name": "pandas_market_calendars",
       "version": "5.4.0",
       "role": "historical session alignment, freshness-in-sessions, and planning calendars"
     },
-    "calendar_generated_at": "2026-08-25T11:55:05.293934+08:00",
+    "calendar_generated_at": "2026-08-25T13:23:17.629762+08:00",
     "calendar_fresh": true,
     "calendar_error": null,
     "status": "ready",

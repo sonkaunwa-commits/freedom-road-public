@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-25T11:29:34.283445+08:00",
+  "generated_at": "2026-08-25T11:55:30.863123+08:00",
   "schema_version": 6,
-  "source_health_updated_at": "2026-08-25T11:29:25.503725+08:00",
+  "source_health_updated_at": "2026-08-25T11:53:02.014376+08:00",
   "delivery_mode_17": "FULL_REPORT",
   "a_share_exact_action_gate": {
     "ready": true,
@@ -46,12 +46,12 @@
     "gold_public_analysis_ready": true,
     "minute": {
       "status": "fresh",
-      "provider": "akshare:a_minutes",
+      "provider": "tencent_mkline:a_minutes",
       "expected_codes": 7,
       "covered_codes": 7,
       "coverage_ratio": 1.0,
-      "expected_latest_bar_at": "2026-08-25T11:28:00+08:00",
-      "latest_bar_at": "2026-08-25T11:29:00+08:00",
+      "expected_latest_bar_at": "2026-08-25T11:30:00+08:00",
+      "latest_bar_at": "2026-08-25T11:30:00+08:00",
       "fresh_codes": [
         "600006.SH",
         "002085.SZ",
@@ -64,7 +64,57 @@
       "stale_codes": [],
       "missing_codes": [],
       "max_lag_minutes": 6,
-      "rows": 840,
+      "rows": 847,
+      "probe": false,
+      "elapsed_ms": 6003.3,
+      "per_symbol": {
+        "600006.SH": {
+          "symbol": "sh600006",
+          "status": "ok",
+          "rows": 121,
+          "latest_bar_at": "2026-08-25T11:30:00+08:00"
+        },
+        "002085.SZ": {
+          "symbol": "sz002085",
+          "status": "ok",
+          "rows": 121,
+          "latest_bar_at": "2026-08-25T11:30:00+08:00"
+        },
+        "002475.SZ": {
+          "symbol": "sz002475",
+          "status": "ok",
+          "rows": 121,
+          "latest_bar_at": "2026-08-25T11:30:00+08:00"
+        },
+        "601138.SH": {
+          "symbol": "sh601138",
+          "status": "ok",
+          "rows": 121,
+          "latest_bar_at": "2026-08-25T11:30:00+08:00"
+        },
+        "002600.SZ": {
+          "symbol": "sz002600",
+          "status": "ok",
+          "rows": 121,
+          "latest_bar_at": "2026-08-25T11:30:00+08:00"
+        },
+        "601899.SH": {
+          "symbol": "sh601899",
+          "status": "ok",
+          "rows": 121,
+          "latest_bar_at": "2026-08-25T11:30:00+08:00"
+        },
+        "300059.SZ": {
+          "symbol": "sz300059",
+          "status": "ok",
+          "rows": 121,
+          "latest_bar_at": "2026-08-25T11:30:00+08:00"
+        }
+      },
+      "provider_errors": [],
+      "result_policy": "metadata_only_no_minute_rows_persisted",
+      "promotion_status": "PUBLIC_FALLBACK_PILOT",
+      "source_note": "Tencent Finance 1-minute public fallback promoted after live 7/7 freshness evidence; primary Tushare/AKShare/TDX chain remains preferred and Yahoo remains the later fallback.",
       "attempts": [
         {
           "status": "unavailable",
@@ -72,7 +122,49 @@
           "expected_codes": 7,
           "covered_codes": 0,
           "coverage_ratio": 0.0,
-          "expected_latest_bar_at": "2026-08-25T11:28:00+08:00",
+          "expected_latest_bar_at": "2026-08-25T11:30:00+08:00",
+          "latest_bar_at": null,
+          "max_lag_minutes": 6,
+          "fresh_codes": [],
+          "stale_codes": [],
+          "missing_codes": [
+            "600006.SH",
+            "002085.SZ",
+            "002475.SZ",
+            "601138.SH",
+            "002600.SZ",
+            "601899.SH",
+            "300059.SZ"
+          ]
+        },
+        {
+          "status": "unavailable",
+          "provider": "akshare:a_minutes",
+          "expected_codes": 7,
+          "covered_codes": 0,
+          "coverage_ratio": 0.0,
+          "expected_latest_bar_at": "2026-08-25T11:30:00+08:00",
+          "latest_bar_at": null,
+          "max_lag_minutes": 6,
+          "fresh_codes": [],
+          "stale_codes": [],
+          "missing_codes": [
+            "600006.SH",
+            "002085.SZ",
+            "002475.SZ",
+            "601138.SH",
+            "002600.SZ",
+            "601899.SH",
+            "300059.SZ"
+          ]
+        },
+        {
+          "status": "unavailable",
+          "provider": "mootdx_tdx:a_minutes",
+          "expected_codes": 7,
+          "covered_codes": 0,
+          "coverage_ratio": 0.0,
+          "expected_latest_bar_at": "2026-08-25T11:30:00+08:00",
           "latest_bar_at": null,
           "max_lag_minutes": 6,
           "fresh_codes": [],
@@ -89,14 +181,13 @@
         },
         {
           "status": "fresh",
-          "provider": "akshare:a_minutes",
+          "provider": "tencent_mkline:a_minutes",
           "expected_codes": 7,
           "covered_codes": 7,
           "coverage_ratio": 1.0,
-          "expected_latest_bar_at": "2026-08-25T11:28:00+08:00",
-          "latest_bar_at": "2026-08-25T11:29:00+08:00",
+          "expected_latest_bar_at": "2026-08-25T11:30:00+08:00",
+          "latest_bar_at": "2026-08-25T11:30:00+08:00",
           "max_lag_minutes": 6,
-          "rows": 840,
           "fresh_codes": [
             "600006.SH",
             "002085.SZ",
@@ -143,13 +234,13 @@
   },
   "analysis_engine": {
     "stage": "STAGE_1_RUNNING",
-    "generated_at": "2026-08-25T11:19:53.746647+08:00",
+    "generated_at": "2026-08-25T11:54:02.195513+08:00",
     "stage1_fund_ready": true,
     "stage1_a_share_history_ready": true,
     "stage2_vectorbt_daily_pilot_ready": true,
     "stage2_daily_pilot": {
       "status": "STAGE_2_DAILY_PILOT_RUNNING",
-      "generated_at": "2026-08-25T11:21:02.534853+08:00",
+      "generated_at": "2026-08-25T11:55:20.807161+08:00",
       "research_core_ready": true,
       "coverage": {
         "a_research_core_ok": 7,
@@ -221,7 +312,7 @@
   },
   "evidence_packet": {
     "status": "READY_RESEARCH_ONLY",
-    "generated_at": "2026-08-25T11:21:08.156057+08:00",
+    "generated_at": "2026-08-25T11:55:30.122802+08:00",
     "production_use": "RESEARCH_ONLY"
   },
   "content_contract": {
@@ -308,20 +399,20 @@
   "intraday_public_market_gate": {
     "ready": true,
     "status": "fresh",
-    "provider": "akshare:a_minutes",
+    "provider": "tencent_mkline:a_minutes",
     "coverage_ratio": 1.0,
-    "latest_bar_at": "2026-08-25T11:29:00+08:00",
-    "expected_latest_bar_at": "2026-08-25T11:28:00+08:00",
+    "latest_bar_at": "2026-08-25T11:30:00+08:00",
+    "expected_latest_bar_at": "2026-08-25T11:30:00+08:00",
     "semantics": "This is a public market-data gate only. It never authorizes or executes a trade."
   },
-  "freshness_hardening_updated_at": "2026-08-25T11:29:34.381534+08:00",
+  "freshness_hardening_updated_at": "2026-08-25T11:55:30.928821+08:00",
   "data_health_gate": {
     "status": "ready",
     "ready": true,
     "blockers": [],
-    "generated_at": "2026-08-25T11:29:34.014935+08:00",
-    "run_id": "ea744fad855f6e0f",
+    "generated_at": "2026-08-25T11:53:14.167273+08:00",
+    "run_id": "132db7d6865bc94b",
     "semantics": "Report readiness must fail closed when the first-class data-health layer is degraded. This gate propagates provider/freshness/reference degradations; it never creates a trade signal."
   },
-  "data_health_gate_updated_at": "2026-08-25T11:29:34.470089+08:00"
+  "data_health_gate_updated_at": "2026-08-25T11:55:31.015269+08:00"
 }

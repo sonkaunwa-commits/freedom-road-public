@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-25T11:29:25.503725+08:00",
+  "updated_at": "2026-08-25T11:53:02.014376+08:00",
   "mode": "all",
   "counts": {
     "a_share_ok": 7,
@@ -23,12 +23,12 @@
   },
   "minute": {
     "status": "fresh",
-    "provider": "akshare:a_minutes",
+    "provider": "tencent_mkline:a_minutes",
     "expected_codes": 7,
     "covered_codes": 7,
     "coverage_ratio": 1.0,
-    "expected_latest_bar_at": "2026-08-25T11:28:00+08:00",
-    "latest_bar_at": "2026-08-25T11:29:00+08:00",
+    "expected_latest_bar_at": "2026-08-25T11:30:00+08:00",
+    "latest_bar_at": "2026-08-25T11:30:00+08:00",
     "fresh_codes": [
       "600006.SH",
       "002085.SZ",
@@ -41,7 +41,57 @@
     "stale_codes": [],
     "missing_codes": [],
     "max_lag_minutes": 6,
-    "rows": 840,
+    "rows": 847,
+    "probe": false,
+    "elapsed_ms": 6003.3,
+    "per_symbol": {
+      "600006.SH": {
+        "symbol": "sh600006",
+        "status": "ok",
+        "rows": 121,
+        "latest_bar_at": "2026-08-25T11:30:00+08:00"
+      },
+      "002085.SZ": {
+        "symbol": "sz002085",
+        "status": "ok",
+        "rows": 121,
+        "latest_bar_at": "2026-08-25T11:30:00+08:00"
+      },
+      "002475.SZ": {
+        "symbol": "sz002475",
+        "status": "ok",
+        "rows": 121,
+        "latest_bar_at": "2026-08-25T11:30:00+08:00"
+      },
+      "601138.SH": {
+        "symbol": "sh601138",
+        "status": "ok",
+        "rows": 121,
+        "latest_bar_at": "2026-08-25T11:30:00+08:00"
+      },
+      "002600.SZ": {
+        "symbol": "sz002600",
+        "status": "ok",
+        "rows": 121,
+        "latest_bar_at": "2026-08-25T11:30:00+08:00"
+      },
+      "601899.SH": {
+        "symbol": "sh601899",
+        "status": "ok",
+        "rows": 121,
+        "latest_bar_at": "2026-08-25T11:30:00+08:00"
+      },
+      "300059.SZ": {
+        "symbol": "sz300059",
+        "status": "ok",
+        "rows": 121,
+        "latest_bar_at": "2026-08-25T11:30:00+08:00"
+      }
+    },
+    "provider_errors": [],
+    "result_policy": "metadata_only_no_minute_rows_persisted",
+    "promotion_status": "PUBLIC_FALLBACK_PILOT",
+    "source_note": "Tencent Finance 1-minute public fallback promoted after live 7/7 freshness evidence; primary Tushare/AKShare/TDX chain remains preferred and Yahoo remains the later fallback.",
     "attempts": [
       {
         "status": "unavailable",
@@ -49,7 +99,49 @@
         "expected_codes": 7,
         "covered_codes": 0,
         "coverage_ratio": 0.0,
-        "expected_latest_bar_at": "2026-08-25T11:28:00+08:00",
+        "expected_latest_bar_at": "2026-08-25T11:30:00+08:00",
+        "latest_bar_at": null,
+        "max_lag_minutes": 6,
+        "fresh_codes": [],
+        "stale_codes": [],
+        "missing_codes": [
+          "600006.SH",
+          "002085.SZ",
+          "002475.SZ",
+          "601138.SH",
+          "002600.SZ",
+          "601899.SH",
+          "300059.SZ"
+        ]
+      },
+      {
+        "status": "unavailable",
+        "provider": "akshare:a_minutes",
+        "expected_codes": 7,
+        "covered_codes": 0,
+        "coverage_ratio": 0.0,
+        "expected_latest_bar_at": "2026-08-25T11:30:00+08:00",
+        "latest_bar_at": null,
+        "max_lag_minutes": 6,
+        "fresh_codes": [],
+        "stale_codes": [],
+        "missing_codes": [
+          "600006.SH",
+          "002085.SZ",
+          "002475.SZ",
+          "601138.SH",
+          "002600.SZ",
+          "601899.SH",
+          "300059.SZ"
+        ]
+      },
+      {
+        "status": "unavailable",
+        "provider": "mootdx_tdx:a_minutes",
+        "expected_codes": 7,
+        "covered_codes": 0,
+        "coverage_ratio": 0.0,
+        "expected_latest_bar_at": "2026-08-25T11:30:00+08:00",
         "latest_bar_at": null,
         "max_lag_minutes": 6,
         "fresh_codes": [],
@@ -66,14 +158,13 @@
       },
       {
         "status": "fresh",
-        "provider": "akshare:a_minutes",
+        "provider": "tencent_mkline:a_minutes",
         "expected_codes": 7,
         "covered_codes": 7,
         "coverage_ratio": 1.0,
-        "expected_latest_bar_at": "2026-08-25T11:28:00+08:00",
-        "latest_bar_at": "2026-08-25T11:29:00+08:00",
+        "expected_latest_bar_at": "2026-08-25T11:30:00+08:00",
+        "latest_bar_at": "2026-08-25T11:30:00+08:00",
         "max_lag_minutes": 6,
-        "rows": 840,
         "fresh_codes": [
           "600006.SH",
           "002085.SZ",
@@ -109,27 +200,7 @@
       "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
     },
     {
-      "dataset": "eastmoney:a:600006.SH",
-      "error": "ConnectionError",
-      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-    },
-    {
       "dataset": "akshare:a:002085.SZ",
-      "error": "ConnectionError",
-      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-    },
-    {
-      "dataset": "eastmoney:a:002085.SZ",
-      "error": "ConnectionError",
-      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-    },
-    {
-      "dataset": "akshare:a:002475.SZ",
-      "error": "ConnectionError",
-      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-    },
-    {
-      "dataset": "eastmoney:a:002475.SZ",
       "error": "ConnectionError",
       "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
     },
@@ -159,11 +230,6 @@
       "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
     },
     {
-      "dataset": "eastmoney:a:601899.SH",
-      "error": "ConnectionError",
-      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-    },
-    {
       "dataset": "akshare:a:300059.SZ",
       "error": "ConnectionError",
       "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
@@ -174,22 +240,52 @@
       "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
     },
     {
-      "dataset": "akshare:a:002371.SZ",
-      "error": "ConnectionError",
-      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-    },
-    {
-      "dataset": "eastmoney:a:002371.SZ",
-      "error": "ConnectionError",
-      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
-    },
-    {
       "dataset": "akshare:a:300124.SZ",
       "error": "ConnectionError",
       "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
     },
     {
       "dataset": "eastmoney:a:300124.SZ",
+      "error": "ConnectionError",
+      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "dataset": "akshare:a:002185.SZ",
+      "error": "ConnectionError",
+      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "dataset": "eastmoney:a:002185.SZ",
+      "error": "ConnectionError",
+      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "dataset": "yfinance:a:002185.SZ:quality",
+      "error": "DataQualityError",
+      "message": "impossible high: O=17.520000457763672,H=16.770000457763672,L=16.0,C=16.649999618530273"
+    },
+    {
+      "dataset": "akshare:a:000977.SZ",
+      "error": "ConnectionError",
+      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "dataset": "eastmoney:a:000977.SZ",
+      "error": "ConnectionError",
+      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "dataset": "yfinance:a:000977.SZ:quality",
+      "error": "DataQualityError",
+      "message": "impossible high: O=76.73999786376953,H=73.2300033569336,L=71.41999816894531,C=72.9000015258789"
+    },
+    {
+      "dataset": "akshare:a:600276.SH",
+      "error": "ConnectionError",
+      "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "dataset": "eastmoney:a:600276.SH",
       "error": "ConnectionError",
       "message": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
     },
@@ -216,7 +312,7 @@
   ],
   "coverage_ok": true,
   "intraday_a_share_ok": true,
-  "run_id": "ac134b9b74d3367f",
+  "run_id": "77de8517ac737855",
   "provider_circuits": {
     "eastmoney_a_daily": {
       "provider": "eastmoney",
@@ -259,7 +355,7 @@
       {
         "code": "600006.SH",
         "status": "promoted",
-        "previous_provider": "yfinance:a:600006.SH",
+        "previous_provider": "eastmoney:a:600006.SH",
         "provider": "tencent_fqkline:a:600006.SH",
         "latest_trade_date": "20260825",
         "required_trade_date": "20260825"
@@ -267,7 +363,7 @@
       {
         "code": "002085.SZ",
         "status": "promoted",
-        "previous_provider": "yfinance:a:002085.SZ",
+        "previous_provider": "eastmoney:a:002085.SZ",
         "provider": "tencent_fqkline:a:002085.SZ",
         "latest_trade_date": "20260825",
         "required_trade_date": "20260825"
@@ -275,7 +371,7 @@
       {
         "code": "002475.SZ",
         "status": "promoted",
-        "previous_provider": "yfinance:a:002475.SZ",
+        "previous_provider": "akshare:a:002475.SZ",
         "provider": "tencent_fqkline:a:002475.SZ",
         "latest_trade_date": "20260825",
         "required_trade_date": "20260825"
@@ -299,7 +395,7 @@
       {
         "code": "601899.SH",
         "status": "promoted",
-        "previous_provider": "yfinance:a:601899.SH",
+        "previous_provider": "eastmoney:a:601899.SH",
         "provider": "tencent_fqkline:a:601899.SH",
         "latest_trade_date": "20260825",
         "required_trade_date": "20260825"
@@ -315,7 +411,7 @@
       {
         "code": "002371.SZ",
         "status": "promoted",
-        "previous_provider": "yfinance:a:002371.SZ",
+        "previous_provider": "akshare:a:002371.SZ",
         "provider": "tencent_fqkline:a:002371.SZ",
         "latest_trade_date": "20260825",
         "required_trade_date": "20260825"
@@ -331,7 +427,7 @@
       {
         "code": "002185.SZ",
         "status": "promoted",
-        "previous_provider": "akshare:a:002185.SZ",
+        "previous_provider": "yfinance+tencent:a:002185.SZ",
         "provider": "tencent_fqkline:a:002185.SZ",
         "latest_trade_date": "20260825",
         "required_trade_date": "20260825"
@@ -339,7 +435,7 @@
       {
         "code": "000977.SZ",
         "status": "promoted",
-        "previous_provider": "akshare:a:000977.SZ",
+        "previous_provider": "yfinance+tencent:a:000977.SZ",
         "provider": "tencent_fqkline:a:000977.SZ",
         "latest_trade_date": "20260825",
         "required_trade_date": "20260825"
@@ -347,7 +443,7 @@
       {
         "code": "600276.SH",
         "status": "promoted",
-        "previous_provider": "akshare:a:600276.SH",
+        "previous_provider": "yfinance:a:600276.SH",
         "provider": "tencent_fqkline:a:600276.SH",
         "latest_trade_date": "20260825",
         "required_trade_date": "20260825"
@@ -467,7 +563,8 @@
       {
         "code": "XAUUSD",
         "provider": "yfinance:gold:XAUUSD=X",
-        "error": "RuntimeError"
+        "error": "RuntimeError",
+        "reason": "empty_reference_series"
       }
     ],
     "note": "International gold references are public analytical inputs only and never substitute for bank-specific executable accumulation-gold quotes."

@@ -3,10 +3,10 @@
   "market": "A",
   "provider": "tencent_fqkline:a:002085.SZ",
   "providers": [
-    "yfinance:a:002085.SZ",
+    "eastmoney:a:002085.SZ",
     "tencent_fqkline:a:002085.SZ"
   ],
-  "updated_at": "2026-08-25T11:28:56.247814+08:00",
+  "updated_at": "2026-08-25T11:52:21.246366+08:00",
   "promotion_status": "PUBLIC_FALLBACK_PILOT",
   "rows": [
     {
@@ -17142,7 +17142,7 @@
       "close": 10.32,
       "high": 10.34,
       "low": 10.09,
-      "vol": 92396.0,
+      "vol": 92676.0,
       "ts_code": "002085.SZ",
       "change": 0.15,
       "pct_chg": 1.4749262537,
@@ -17156,9 +17156,9 @@
       "macd_dea": -0.1210005172,
       "macd_hist": -0.0378441529,
       "rsi14": 44.4160976201,
-      "vol_ma5": 154243.6,
-      "vol_ma20": 240077.9,
-      "volume_ratio_20": 0.3848584147,
+      "vol_ma5": 154299.6,
+      "vol_ma20": 240091.9,
+      "volume_ratio_20": 0.3860021933,
       "high_20": 11.06,
       "low_20": 10.08,
       "high_60": 14.0,

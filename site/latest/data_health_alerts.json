@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T11:29:34.512209+08:00",
+  "generated_at": "2026-08-25T11:55:31.061487+08:00",
   "schema_version": 3,
   "status": "warning",
   "counts": {
@@ -17,9 +17,9 @@
       "details": {
         "provider": "akshare",
         "domain": "a_share_daily",
-        "success_rate": 0.2391,
-        "consecutive_failed_runs": 2,
-        "observations": 46,
+        "success_rate": 0.1964,
+        "consecutive_failed_runs": 3,
+        "observations": 56,
         "service_impact": "operational_watch_only_unless_data_health_or_readiness_gate_degrades"
       }
     },
@@ -31,9 +31,9 @@
       "details": {
         "provider": "eastmoney",
         "domain": "a_share_daily",
-        "success_rate": 0.0435,
-        "consecutive_failed_runs": 2,
-        "observations": 23,
+        "success_rate": 0.0333,
+        "consecutive_failed_runs": 3,
+        "observations": 30,
         "service_impact": "operational_watch_only_unless_data_health_or_readiness_gate_degrades"
       }
     },
@@ -46,8 +46,8 @@
         "provider": "tushare",
         "domain": "a_share_daily",
         "success_rate": 0.0,
-        "consecutive_failed_runs": 6,
-        "observations": 6,
+        "consecutive_failed_runs": 7,
+        "observations": 7,
         "service_impact": "operational_watch_only_unless_data_health_or_readiness_gate_degrades"
       }
     },
@@ -59,9 +59,9 @@
       "details": {
         "provider": "tushare",
         "domain": "a_share_minute",
-        "success_rate": 0.25,
-        "consecutive_failed_runs": 4,
-        "observations": 8,
+        "success_rate": 0.2222,
+        "consecutive_failed_runs": 5,
+        "observations": 9,
         "service_impact": "operational_watch_only_unless_data_health_or_readiness_gate_degrades"
       }
     },
@@ -74,8 +74,8 @@
         "provider": "tushare",
         "domain": "gold",
         "success_rate": 0.0,
-        "consecutive_failed_runs": 6,
-        "observations": 6,
+        "consecutive_failed_runs": 7,
+        "observations": 7,
         "service_impact": "operational_watch_only_unless_data_health_or_readiness_gate_degrades"
       }
     },
@@ -88,8 +88,8 @@
         "provider": "tushare",
         "domain": "hk_daily",
         "success_rate": 0.0,
-        "consecutive_failed_runs": 6,
-        "observations": 6,
+        "consecutive_failed_runs": 7,
+        "observations": 7,
         "service_impact": "operational_watch_only_unless_data_health_or_readiness_gate_degrades"
       }
     },
@@ -102,8 +102,8 @@
         "provider": "tushare",
         "domain": "us_daily",
         "success_rate": 0.0,
-        "consecutive_failed_runs": 6,
-        "observations": 6,
+        "consecutive_failed_runs": 7,
+        "observations": 7,
         "service_impact": "operational_watch_only_unless_data_health_or_readiness_gate_degrades"
       }
     }

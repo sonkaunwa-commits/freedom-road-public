@@ -51,9 +51,13 @@ jobs:
           [[ "$ok" == true ]] || { echo 'Recovery release not live before browser smoke' >&2; exit 1; }
       - name: Run real Chromium smoke
         id: smoke
+        continue-on-error: true
         env:
           SECURITIES_BASE: https://sonkaunwa-commits.github.io/freedom-road-public
-        run: node scripts/securities-browser-smoke.cjs
+        shell: bash
+        run: |
+          set -o pipefail
+          node scripts/securities-browser-smoke.cjs 2>&1 | tee /tmp/securities-browser-smoke.log
       - name: Write real-browser certificate
         if: always()
         env:
@@ -78,7 +82,13 @@ jobs:
           cloud_sync=false
           verified_at=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
           EOF
+          if [[ -f /tmp/securities-browser-smoke.log ]]; then tail -n 30 /tmp/securities-browser-smoke.log > release-status/securities-browser-smoke.log; else echo 'browser smoke did not start' > release-status/securities-browser-smoke.log; fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add release-status/securities-browser-smoke.txt
+          git add release-status/securities-browser-smoke.txt release-status/securities-browser-smoke.log
           if ! git diff --cached --quiet; then git commit -m 'status: record securities real-browser smoke'; git push; fi
+      - name: Enforce browser smoke result
+        if: always()
+        env:
+          SMOKE_OUTCOME: ${{ steps.smoke.outcome }}
+        run: test "$SMOKE_OUTCOME" = success

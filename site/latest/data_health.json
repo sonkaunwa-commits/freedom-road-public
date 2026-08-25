@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-25T11:53:14.167273+08:00",
+  "generated_at": "2026-08-25T13:21:21.879864+08:00",
   "schema_version": 2,
-  "source_health_updated_at": "2026-08-25T11:53:02.014376+08:00",
+  "source_health_updated_at": "2026-08-25T13:21:16.077336+08:00",
   "domains": {
     "a_share_daily": {
       "status": "ready",
@@ -440,14 +440,14 @@
           "role": "international_reference",
           "provider": "yfinance:gold:GC=F",
           "provider_grade": "validated_public_reference_fallback",
-          "latest_trade_date": "20260824",
+          "latest_trade_date": "20260825",
           "status": "ready",
           "is_bank_executable_quote": false,
           "crosscheck": {
             "provider": "sina_hf_GC",
             "status": "validated_crosscheck",
-            "diff_pct": 0.1149,
-            "age_seconds": 8.0
+            "diff_pct": 0.1044,
+            "age_seconds": 0.2
           }
         },
         {
@@ -486,7 +486,7 @@
       "fresh_for_report": true
     }
   },
-  "raw_error_count": 24,
+  "raw_error_count": 17,
   "principles": {
     "provider_provenance_required": true,
     "fallback_must_be_explicit": true,
@@ -496,14 +496,14 @@
   },
   "blockers": [],
   "overall_status": "ready",
-  "run_id": "132db7d6865bc94b",
+  "run_id": "24e0bc1a2443dd83",
   "equity_freshness_gate": {
     "calendar_source": {
       "name": "pandas_market_calendars",
       "version": "5.4.0",
       "role": "historical session alignment, freshness-in-sessions, and planning calendars"
     },
-    "calendar_generated_at": "2026-08-25T11:31:25.784225+08:00",
+    "calendar_generated_at": "2026-08-25T11:55:05.293934+08:00",
     "calendar_fresh": true,
     "calendar_error": null,
     "status": "ready",

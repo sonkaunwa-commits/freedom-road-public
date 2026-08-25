@@ -1,0 +1,92 @@
+name: securities-v360-live
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - site/securities-exam/**
+      - site/ks/**
+      - .github/workflows/securities-v360-live.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: securities-v360-live
+  cancel-in-progress: true
+
+jobs:
+  certify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify v3.6 static snapshot
+        shell: bash
+        run: |
+          set -euo pipefail
+          grep -Fq 'v3.6.0' site/ks/index.html
+          grep -Fq 'data-product-version="3.6.0"' site/securities-exam/index.html
+          for f in product-core-v350.js product-v350.js product-v350.css learning-content-v360.js content-bridge-v360.js release-v360.js release-v360.css sources-data-v350.js sw.js; do test -f "site/securities-exam/$f"; done
+          grep -Fq "VERSION='3.6.0'" site/securities-exam/product-core-v350.js
+          grep -Fq "const VERSION='3.6.0'" site/securities-exam/release-v360.js
+          grep -Fq 'SEC_SOURCE_CONTENT_V360' site/securities-exam/learning-content-v360.js
+          grep -Fq 'bilibili-finance-learning-v1.json' site/securities-exam/content-bridge-v360.js
+          grep -Fq 'bilibili-law-learning-v1.json' site/securities-exam/content-bridge-v360.js
+          grep -Fq "const CACHE='sec2026-v360'" site/securities-exam/sw.js
+          ! grep -Fq 'setInterval(' site/securities-exam/release-v360.js
+          node --check site/securities-exam/product-core-v350.js
+          node --check site/securities-exam/learning-content-v360.js
+          node --check site/securities-exam/content-bridge-v360.js
+          node --check site/securities-exam/release-v360.js
+          python3 - <<'PY'
+          from pathlib import Path
+          s=Path('site/securities-exam/learning-content-v360.js').read_text(encoding='utf-8')
+          assert s.count("sourceKind:'user-material-derived'") >= 20
+          assert 'count:cards.length' in s
+          print('v3.6 static securities snapshot PASS')
+          PY
+      - name: Wait for GitHub Pages and smoke v3.6
+        shell: bash
+        run: |
+          set -euo pipefail
+          base='https://sonkaunwa-commits.github.io/freedom-road-public'
+          get(){ curl -fsSL --max-time 25 --retry 2 "$base/$1?v360verify=${GITHUB_SHA}-$2" 2>/dev/null || true; }
+          ok=false
+          for attempt in {1..72}; do
+            html="$(get 'securities-exam/' "$attempt")"
+            ks="$(get 'ks/' "$attempt")"
+            sw="$(get 'securities-exam/sw.js' "$attempt")"
+            rel="$(get 'securities-exam/release-v360.js' "$attempt")"
+            learn="$(get 'securities-exam/learning-content-v360.js' "$attempt")"
+            if grep -Fq 'data-product-version="3.6.0"' <<<"$html" && grep -Fq 'release-v360.js?v=360' <<<"$html" && grep -Fq 'v3.6.0' <<<"$ks" && grep -Fq 'sec2026-v360' <<<"$sw" && grep -Fq "const VERSION='3.6.0'" <<<"$rel" && grep -Fq 'SEC_SOURCE_CONTENT_V360' <<<"$learn"; then ok=true; break; fi
+            sleep 5
+          done
+          [[ "$ok" == true ]] || { echo 'Public v3.6 did not become live in time' >&2; exit 1; }
+      - name: Write securities v3.6 live certificate
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p release-status
+          cat > release-status/securities-exam.txt <<EOF
+          status=ok
+          architecture=exam-prep-system-v2
+          deployed_sha=${GITHUB_SHA}
+          version=3.6.0
+          ui=PM-V2
+          plan=adaptive-nonempty
+          knowledge=active-recall-source-grounded-course-bridge
+          review=explanation-error-attribution-spaced
+          accounts=two-local-profiles
+          source_grounded_cards=24+
+          kdocs_sources=17
+          courses=finance+law
+          cache=sec2026-v360
+          url=https://sonkaunwa-commits.github.io/freedom-road-public/ks/
+          verified_at=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
+          EOF
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add release-status/securities-exam.txt
+          if ! git diff --cached --quiet; then git commit -m 'status: certify securities v3.6.0 live'; git push; fi

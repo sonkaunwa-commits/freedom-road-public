@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T17:24:37.189324+08:00",
+  "generated_at": "2026-08-25T17:41:47.328171+08:00",
   "schema_version": 2,
   "status": "validated_consensus",
   "required_sources": 2,
@@ -7,27 +7,27 @@
   "fresh_sources": 2,
   "max_source_diff_pct": 2.0,
   "max_source_age_seconds": 900,
-  "source_diff_pct": 0.0045,
-  "consensus_price": 4632.105,
-  "observation_at": "2026-08-25T09:24:32+00:00",
+  "source_diff_pct": 0.0082,
+  "consensus_price": 4634.41,
+  "observation_at": "2026-08-25T09:41:41+00:00",
   "observations": [
     {
       "provider": "goldprice.dev",
-      "price": 4632.21,
-      "as_of": "2026-08-25T09:24:32Z",
+      "price": 4634.22,
+      "as_of": "2026-08-25T09:41:41Z",
       "stale": false,
-      "parsed_as_of": "2026-08-25T09:24:32+00:00",
-      "age_seconds": 5.2,
+      "parsed_as_of": "2026-08-25T09:41:41+00:00",
+      "age_seconds": 6.3,
       "time_integrity": "fresh"
     },
     {
       "provider": "xaus.com",
-      "price": 4632.0,
-      "as_of": "2026-08-25T09:24:35.884Z",
+      "price": 4634.600098,
+      "as_of": "2026-08-25T09:41:47.985Z",
       "stale": false,
       "source_status": "fresh",
-      "parsed_as_of": "2026-08-25T09:24:35.884000+00:00",
-      "age_seconds": 1.3,
+      "parsed_as_of": "2026-08-25T09:41:47.985000+00:00",
+      "age_seconds": -0.7,
       "time_integrity": "fresh"
     }
   ],

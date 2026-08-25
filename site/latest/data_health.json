@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-25T17:24:39.023436+08:00",
+  "generated_at": "2026-08-25T17:41:49.338642+08:00",
   "schema_version": 2,
-  "source_health_updated_at": "2026-08-25T17:24:34.489093+08:00",
+  "source_health_updated_at": "2026-08-25T17:41:43.744578+08:00",
   "domains": {
     "a_share_daily": {
       "status": "ready",
@@ -165,7 +165,7 @@
           "latest_trade_date": "20260825",
           "status": "ready",
           "session_lag": 0,
-          "expected_trade_date": "2026-08-24",
+          "expected_trade_date": "2026-08-25",
           "freshness_status": "CURRENT_TO_LAST_COMPLETED_SESSION"
         },
         {
@@ -176,7 +176,7 @@
           "latest_trade_date": "20260825",
           "status": "ready",
           "session_lag": 0,
-          "expected_trade_date": "2026-08-24",
+          "expected_trade_date": "2026-08-25",
           "freshness_status": "CURRENT_TO_LAST_COMPLETED_SESSION"
         },
         {
@@ -187,7 +187,7 @@
           "latest_trade_date": "20260825",
           "status": "ready",
           "session_lag": 0,
-          "expected_trade_date": "2026-08-24",
+          "expected_trade_date": "2026-08-25",
           "freshness_status": "CURRENT_TO_LAST_COMPLETED_SESSION"
         },
         {
@@ -198,7 +198,7 @@
           "latest_trade_date": "20260825",
           "status": "ready",
           "session_lag": 0,
-          "expected_trade_date": "2026-08-24",
+          "expected_trade_date": "2026-08-25",
           "freshness_status": "CURRENT_TO_LAST_COMPLETED_SESSION"
         },
         {
@@ -209,7 +209,7 @@
           "latest_trade_date": "20260825",
           "status": "ready",
           "session_lag": 0,
-          "expected_trade_date": "2026-08-24",
+          "expected_trade_date": "2026-08-25",
           "freshness_status": "CURRENT_TO_LAST_COMPLETED_SESSION"
         },
         {
@@ -220,7 +220,7 @@
           "latest_trade_date": "20260825",
           "status": "ready",
           "session_lag": 0,
-          "expected_trade_date": "2026-08-24",
+          "expected_trade_date": "2026-08-25",
           "freshness_status": "CURRENT_TO_LAST_COMPLETED_SESSION"
         }
       ],
@@ -228,7 +228,7 @@
         "exact_action_ready": true,
         "stale_codes": [],
         "missing_alignment_codes": [],
-        "last_completed_session": "2026-08-24",
+        "last_completed_session": "2026-08-25",
         "calendar_fresh": true,
         "calendar_error": null
       }
@@ -446,8 +446,8 @@
           "crosscheck": {
             "provider": "sina_hf_GC",
             "status": "validated_crosscheck",
-            "diff_pct": 0.0158,
-            "age_seconds": 2.6
+            "diff_pct": 0.1361,
+            "age_seconds": 0.2
           }
         },
         {
@@ -498,14 +498,14 @@
     "CANDIDATE_SCAN_DEGRADED"
   ],
   "overall_status": "degraded",
-  "run_id": "908aa552a7ad3dc8",
+  "run_id": "10914092d71790b8",
   "equity_freshness_gate": {
     "calendar_source": {
       "name": "pandas_market_calendars",
       "version": "5.4.0",
       "role": "historical session alignment, freshness-in-sessions, and planning calendars"
     },
-    "calendar_generated_at": "2026-08-25T15:41:16.718650+08:00",
+    "calendar_generated_at": "2026-08-25T17:26:36.428133+08:00",
     "calendar_fresh": true,
     "calendar_error": null,
     "status": "ready",
@@ -522,7 +522,7 @@
         "exact_action_ready": true,
         "stale_codes": [],
         "missing_alignment_codes": [],
-        "last_completed_session": "2026-08-24",
+        "last_completed_session": "2026-08-25",
         "calendar_fresh": true,
         "calendar_error": null
       },

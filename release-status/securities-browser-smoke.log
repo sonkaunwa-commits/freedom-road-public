@@ -1,1 +1,10 @@
-desktop navigation status=200 url=https://sonkaunwa-commits.github.io/freedom-road-public/securities-exam/?browser_smoke=2e0bef793c7e8e11ac3e63ee8fb55eb86a604049
+desktop navigation status=200 url=https://sonkaunwa-commits.github.io/freedom-road-public/securities-exam/?browser_smoke=105e05ab4009af367b1ed3941346ca70a18825e8
+[desktop-load] url=https://sonkaunwa-commits.github.io/freedom-road-public/securities-exam/?browser_smoke=105e05ab4009af367b1ed3941346ca70a18825e8 title=
+[desktop-load] body=
+[desktop-load] html=
+page.waitForFunction: Timeout 25000ms exceeded.
+    at waitApp (/home/runner/work/freedom-road-public/freedom-road-public/scripts/securities-browser-smoke.cjs:29:24)
+    at desktop (/home/runner/work/freedom-road-public/freedom-road-public/scripts/securities-browser-smoke.cjs:59:9)
+    at async /home/runner/work/freedom-road-public/freedom-road-public/scripts/securities-browser-smoke.cjs:136:5 {
+  name: 'TimeoutError'
+}

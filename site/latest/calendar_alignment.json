@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T13:23:17.629762+08:00",
+  "generated_at": "2026-08-25T15:32:54.022472+08:00",
   "schema_version": 1,
   "status": "RESEARCH_ONLY",
   "tool": {
@@ -19,8 +19,8 @@
     {
       "market": "A",
       "calendar": "SSE",
-      "last_completed_session": "2026-08-24",
-      "next_or_current_unfinished_session": "2026-08-25",
+      "last_completed_session": "2026-08-25",
+      "next_or_current_unfinished_session": "2026-08-26",
       "symbols": 12,
       "missing_history": 0,
       "stale_symbols": 0,
@@ -54,7 +54,7 @@
       "scope": "research_core",
       "calendar": "SSE",
       "latest_history_date": "2026-08-25",
-      "last_completed_session": "2026-08-24",
+      "last_completed_session": "2026-08-25",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
     },
@@ -64,7 +64,7 @@
       "scope": "research_core",
       "calendar": "SSE",
       "latest_history_date": "2026-08-25",
-      "last_completed_session": "2026-08-24",
+      "last_completed_session": "2026-08-25",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
     },
@@ -74,7 +74,7 @@
       "scope": "research_core",
       "calendar": "SSE",
       "latest_history_date": "2026-08-25",
-      "last_completed_session": "2026-08-24",
+      "last_completed_session": "2026-08-25",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
     },
@@ -84,7 +84,7 @@
       "scope": "research_core",
       "calendar": "SSE",
       "latest_history_date": "2026-08-25",
-      "last_completed_session": "2026-08-24",
+      "last_completed_session": "2026-08-25",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
     },
@@ -94,7 +94,7 @@
       "scope": "research_core",
       "calendar": "SSE",
       "latest_history_date": "2026-08-25",
-      "last_completed_session": "2026-08-24",
+      "last_completed_session": "2026-08-25",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
     },
@@ -104,7 +104,7 @@
       "scope": "research_core",
       "calendar": "SSE",
       "latest_history_date": "2026-08-25",
-      "last_completed_session": "2026-08-24",
+      "last_completed_session": "2026-08-25",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
     },
@@ -114,7 +114,7 @@
       "scope": "research_core",
       "calendar": "SSE",
       "latest_history_date": "2026-08-25",
-      "last_completed_session": "2026-08-24",
+      "last_completed_session": "2026-08-25",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
     },
@@ -124,7 +124,7 @@
       "scope": "candidate_seed",
       "calendar": "SSE",
       "latest_history_date": "2026-08-25",
-      "last_completed_session": "2026-08-24",
+      "last_completed_session": "2026-08-25",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
     },
@@ -134,7 +134,7 @@
       "scope": "candidate_seed",
       "calendar": "SSE",
       "latest_history_date": "2026-08-25",
-      "last_completed_session": "2026-08-24",
+      "last_completed_session": "2026-08-25",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
     },
@@ -144,7 +144,7 @@
       "scope": "candidate_seed",
       "calendar": "SSE",
       "latest_history_date": "2026-08-25",
-      "last_completed_session": "2026-08-24",
+      "last_completed_session": "2026-08-25",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
     },
@@ -154,7 +154,7 @@
       "scope": "candidate_seed",
       "calendar": "SSE",
       "latest_history_date": "2026-08-25",
-      "last_completed_session": "2026-08-24",
+      "last_completed_session": "2026-08-25",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
     },
@@ -164,7 +164,7 @@
       "scope": "candidate_seed",
       "calendar": "SSE",
       "latest_history_date": "2026-08-25",
-      "last_completed_session": "2026-08-24",
+      "last_completed_session": "2026-08-25",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
     },

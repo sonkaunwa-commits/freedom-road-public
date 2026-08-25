@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T13:23:34.436865+08:00",
+  "generated_at": "2026-08-25T15:33:07.175481+08:00",
   "schema_version": 2,
   "analysis_engine_stage": "STAGE_2_DAILY_PILOT_RUNNING",
   "tool": {
@@ -11173,7 +11173,7 @@
             "5": {
               "sample_size": 30,
               "win_rate_pct": 56.67,
-              "mean_return_pct": 1.7137,
+              "mean_return_pct": 1.7083,
               "median_return_pct": 1.6656,
               "p25_return_pct": -2.6091,
               "p75_return_pct": 7.5939,
@@ -11182,16 +11182,16 @@
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 30,
-                "mean_return_pct": 1.713709,
-                "hac_standard_error_pct": 1.611821,
-                "p_value_two_sided": 0.28768519,
+                "mean_return_pct": 1.708315,
+                "hac_standard_error_pct": 1.610858,
+                "p_value_two_sided": 0.28891711,
                 "confidence_interval_95_pct": [
-                  -1.445401,
-                  4.87282
+                  -1.448908,
+                  4.865538
                 ],
                 "hac_maxlags": 4,
                 "raw_evidence_class": "INCONCLUSIVE",
-                "fdr_bh_q_value": 0.67998318,
+                "fdr_bh_q_value": 0.68119445,
                 "fdr_bh_reject_5pct": false,
                 "evidence_class_after_fdr": "INCONCLUSIVE_AFTER_FDR",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -11468,7 +11468,7 @@
               "forward": {
                 "5": {
                   "exit_date": "2026-08-25",
-                  "return_pct": -6.9321,
+                  "return_pct": -7.094,
                   "max_adverse_excursion_pct": -10.243
                 }
               }
@@ -12131,7 +12131,7 @@
                 ],
                 "hac_maxlags": 19,
                 "raw_evidence_class": "POSITIVE_MEAN_95CI_EXCLUDES_ZERO",
-                "fdr_bh_q_value": 0.01664759,
+                "fdr_bh_q_value": 0.01692628,
                 "fdr_bh_reject_5pct": true,
                 "evidence_class_after_fdr": "POSITIVE_FDR_5PCT",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -13513,7 +13513,7 @@
             "10": {
               "sample_size": 25,
               "win_rate_pct": 64.0,
-              "mean_return_pct": 4.7937,
+              "mean_return_pct": 4.7583,
               "median_return_pct": 3.022,
               "p25_return_pct": -1.8885,
               "p75_return_pct": 11.0623,
@@ -13522,16 +13522,16 @@
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 25,
-                "mean_return_pct": 4.793749,
-                "hac_standard_error_pct": 1.519041,
-                "p_value_two_sided": 0.00160073,
+                "mean_return_pct": 4.758331,
+                "hac_standard_error_pct": 1.514914,
+                "p_value_two_sided": 0.00168377,
                 "confidence_interval_95_pct": [
-                  1.816484,
-                  7.771015
+                  1.789156,
+                  7.727507
                 ],
                 "hac_maxlags": 9,
                 "raw_evidence_class": "POSITIVE_MEAN_95CI_EXCLUDES_ZERO",
-                "fdr_bh_q_value": 0.01664759,
+                "fdr_bh_q_value": 0.01692628,
                 "fdr_bh_reject_5pct": true,
                 "evidence_class_after_fdr": "POSITIVE_FDR_5PCT",
                 "caveat": "Signal events may overlap. HAC adjusts standard errors for serial dependence but does not make this causal evidence or a trading instruction."
@@ -13786,7 +13786,7 @@
                 },
                 "10": {
                   "exit_date": "2026-08-25",
-                  "return_pct": -5.9214,
+                  "return_pct": -6.8069,
                   "max_adverse_excursion_pct": -11.4555
                 }
               }
@@ -16503,7 +16503,7 @@
             "10": {
               "sample_size": 29,
               "win_rate_pct": 44.83,
-              "mean_return_pct": -1.1799,
+              "mean_return_pct": -1.1837,
               "median_return_pct": -1.0078,
               "p25_return_pct": -5.3402,
               "p75_return_pct": 3.1296,
@@ -16512,12 +16512,12 @@
               "statistical_evidence": {
                 "status": "RESEARCH_ONLY_ESTIMATE",
                 "sample_size": 29,
-                "mean_return_pct": -1.179913,
-                "hac_standard_error_pct": 1.424695,
-                "p_value_two_sided": 0.40756513,
+                "mean_return_pct": -1.1837,
+                "hac_standard_error_pct": 1.427365,
+                "p_value_two_sided": 0.40694026,
                 "confidence_interval_95_pct": [
-                  -3.972263,
-                  1.612438
+                  -3.981284,
+                  1.613884
                 ],
                 "hac_maxlags": 9,
                 "raw_evidence_class": "INCONCLUSIVE",
@@ -16771,7 +16771,7 @@
                 },
                 "10": {
                   "exit_date": "2026-08-25",
-                  "return_pct": -14.7904,
+                  "return_pct": -14.9002,
                   "max_adverse_excursion_pct": -15.3945
                 }
               }
@@ -16800,7 +16800,7 @@
             "10": {
               "sample_size": 17,
               "win_rate_pct": 41.18,
-              "mean_return_pct": -2.2203,
+              "mean_return_pct": -2.2267,
               "median_return_pct": -1.7877,
               "p25_return_pct": -7.463,
               "p75_return_pct": 2.7261,
@@ -17044,7 +17044,7 @@
                 },
                 "10": {
                   "exit_date": "2026-08-25",
-                  "return_pct": -14.7904,
+                  "return_pct": -14.9002,
                   "max_adverse_excursion_pct": -15.3945
                 }
               }

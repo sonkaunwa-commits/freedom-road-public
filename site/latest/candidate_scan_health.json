@@ -6,7 +6,7 @@
   "same_reference_session": true,
   "last_full_scan_trade_date": "20260825",
   "reference_trade_date": "20260825",
-  "reference_basis": "current_session_after_close_gate",
+  "reference_basis": "calendar_last_completed_session",
   "sessions_since_full_scan": 0,
   "session_age_basis": "same_or_earlier_reference",
   "scan_cadence_trading_days": 1,

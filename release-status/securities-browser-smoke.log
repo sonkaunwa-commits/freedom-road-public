@@ -1,0 +1,6 @@
+page.waitForFunction: Timeout 45000ms exceeded.
+    at waitApp (/home/runner/work/freedom-road-public/freedom-road-public/scripts/securities-browser-smoke.cjs:8:14)
+    at desktop (/home/runner/work/freedom-road-public/freedom-road-public/scripts/securities-browser-smoke.cjs:31:9)
+    at async /home/runner/work/freedom-road-public/freedom-road-public/scripts/securities-browser-smoke.cjs:94:5 {
+  name: 'TimeoutError'
+}

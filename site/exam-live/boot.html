@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta http-equiv="cache-control" content="no-cache,no-store,must-revalidate">
+<meta name="theme-color" content="#243c97">
+<title>正在修复并进入证券考试学习助手</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f5f6f8;color:#171a22;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}main{max-width:560px;margin:0 auto;padding:72px 20px}.card{background:#fff;border:1px solid #e3e6ec;border-radius:22px;padding:28px;box-shadow:0 10px 30px rgba(24,29,45,.06)}.tag{font-size:11px;font-weight:800;letter-spacing:.08em;color:#243c97}.card h1{font-size:24px;margin:10px 0 8px}.card p{font-size:14px;line-height:1.7;color:#667085}.bar{height:8px;background:#edf0f5;border-radius:99px;overflow:hidden;margin:22px 0 12px}.bar i{display:block;width:12%;height:100%;background:#243c97;border-radius:99px;transition:width .25s}.status{font-size:13px;color:#475467}.detail{font-size:12px;color:#b42318;white-space:pre-wrap;margin-top:10px}.actions{display:flex;gap:10px;margin-top:20px}.actions a,.actions button{min-height:42px;padding:0 14px;border-radius:10px;border:1px solid #d0d5dd;background:#fff;color:#344054;font:inherit;text-decoration:none;display:inline-flex;align-items:center}.actions .primary{background:#243c97;color:#fff;border-color:#243c97}@media(max-width:560px){main{padding:36px 14px}.card{padding:22px}}
+</style>
+</head>
+<body>
+<main><section class="card"><div class="tag">SECURITIES 2026 · RECOVERY ENTRY</div><h1>正在进入学习助手</h1><p>清理旧版离线缓存后直接进入。即使个别清理操作响应较慢，也不会再卡在本页。</p><div class="bar"><i id="bar"></i></div><div class="status" id="status">正在准备…</div><div class="detail" id="detail"></div><div class="actions"><button class="primary" id="retry" hidden>重新进入</button><a href="./?v=20260825-r3">直接进入</a></div></section></main>
+<script>
+(()=>{
+'use strict';
+const TARGET='./?v=20260825-r3';
+const status=document.getElementById('status'),detail=document.getElementById('detail'),bar=document.getElementById('bar'),retry=document.getElementById('retry');
+const set=(text,pct)=>{status.textContent=text;bar.style.width=Math.max(12,pct)+'%'};
+const delay=ms=>new Promise(resolve=>setTimeout(resolve,ms));
+let leaving=false,running=false;
+function enter(){if(leaving)return;leaving=true;set('正在打开学习助手…',100);location.replace(TARGET)}
+async function clearOld(){
+  set('正在清理旧版缓存…',36);
+  const jobs=[];
+  try{
+    if('serviceWorker'in navigator) jobs.push(navigator.serviceWorker.getRegistrations().then(rs=>Promise.allSettled(rs.filter(r=>{try{return new URL(r.scope).pathname.includes('/securities-exam/')}catch(_){return false}}).map(r=>r.unregister()))));
+  }catch(_){}
+  try{
+    if('caches'in window) jobs.push(caches.keys().then(ks=>Promise.allSettled(ks.filter(k=>/^sec2026-/.test(k)).map(k=>caches.delete(k)))));
+  }catch(_){}
+  if(jobs.length) await Promise.race([Promise.allSettled(jobs),delay(2500)]);
+}
+async function run(){
+  if(running||leaving)return;
+  running=true;retry.hidden=true;detail.textContent='';
+  const hard=setTimeout(enter,5000);
+  try{
+    await clearOld();
+    set('缓存处理完成，正在进入…',82);
+    await delay(120);
+  }catch(_){
+    detail.textContent='缓存清理未完全响应，将直接进入学习助手。';
+  }
+  clearTimeout(hard);
+  running=false;
+  enter();
+}
+retry.onclick=()=>{running=false;leaving=false;run()};
+run();
+})();
+</script>
+</body>
+</html>

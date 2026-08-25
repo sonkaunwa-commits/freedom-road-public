@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T00:17:09+08:00",
+  "generated_at": "2026-08-25T07:53:47+08:00",
   "source": "东方财富/天天基金公开数据（AKShare封装）",
   "count": 23899,
   "funds": [
@@ -17654,16 +17654,6 @@
       "fee": "0.08%"
     },
     {
-      "code": "007268",
-      "name": "山证资管裕睿6个月定开债券A",
-      "nav": 1.057,
-      "prev_nav": null,
-      "day_return": 0.08,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
-      "fee": "0.04%"
-    },
-    {
       "code": "007492",
       "name": "上银政策性金融债债券A",
       "nav": 1.0561,
@@ -19201,16 +19191,6 @@
       "day_return": 0.07,
       "buy_status": "限大额",
       "sell_status": "开放赎回",
-      "fee": "0.08%"
-    },
-    {
-      "code": "007212",
-      "name": "山证资管裕泰3个月定开债券发起式",
-      "nav": 1.0851,
-      "prev_nav": null,
-      "day_return": 0.07,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
       "fee": "0.08%"
     },
     {
@@ -22864,16 +22844,6 @@
       "fee": "0.00%"
     },
     {
-      "code": "009567",
-      "name": "山证资管裕丰一年定开债券发起式",
-      "nav": 1.0503,
-      "prev_nav": null,
-      "day_return": 0.06,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
-      "fee": "0.80%"
-    },
-    {
       "code": "019996",
       "name": "中银安享债券B",
       "nav": 1.0496,
@@ -23022,16 +22992,6 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.08%"
-    },
-    {
-      "code": "007269",
-      "name": "山证资管裕睿6个月定开债券C",
-      "nav": 1.0436,
-      "prev_nav": null,
-      "day_return": 0.06,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
-      "fee": "0.00%"
     },
     {
       "code": "009451",
@@ -57875,7 +57835,7 @@
     },
     {
       "code": "004020",
-      "name": "广发景祥纯债",
+      "name": "广发景祥纯债A",
       "nav": 1.019,
       "prev_nav": null,
       "day_return": 0.02,
@@ -69414,16 +69374,6 @@
       "fee": "0.00%"
     },
     {
-      "code": "018758",
-      "name": "山证资管汇利一年定开债券A",
-      "nav": 1.0086,
-      "prev_nav": null,
-      "day_return": 0.01,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
-      "fee": "0.05%"
-    },
-    {
       "code": "023684",
       "name": "方正富邦瑞实90天持有期债券C",
       "nav": 1.0081,
@@ -69572,16 +69522,6 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.03%"
-    },
-    {
-      "code": "018759",
-      "name": "山证资管汇利一年定开债券C",
-      "nav": 1.0064,
-      "prev_nav": null,
-      "day_return": 0.01,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
-      "fee": "0.00%"
     },
     {
       "code": "005428",
@@ -224184,6 +224124,16 @@
       "fee": "0.06%"
     },
     {
+      "code": "007212",
+      "name": "山证资管裕泰3个月定开债券发起式",
+      "nav": null,
+      "prev_nav": null,
+      "day_return": null,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.08%"
+    },
+    {
       "code": "009836",
       "name": "渤海汇金汇裕87个月定开债",
       "nav": null,
@@ -224994,6 +224944,16 @@
       "fee": "0.06%"
     },
     {
+      "code": "007268",
+      "name": "山证资管裕睿6个月定开债券A",
+      "nav": null,
+      "prev_nav": null,
+      "day_return": null,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.04%"
+    },
+    {
       "code": "009732",
       "name": "兴业稳泰66个月定开债券",
       "nav": null,
@@ -225254,6 +225214,16 @@
       "fee": "0.40%"
     },
     {
+      "code": "009567",
+      "name": "山证资管裕丰一年定开债券发起式",
+      "nav": null,
+      "prev_nav": null,
+      "day_return": null,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.80%"
+    },
+    {
       "code": "013173",
       "name": "红土创新科技创新3个月定开混合C",
       "nav": null,
@@ -225462,6 +225432,16 @@
       "buy_status": "暂停申购",
       "sell_status": "暂停赎回",
       "fee": "0.06%"
+    },
+    {
+      "code": "007269",
+      "name": "山证资管裕睿6个月定开债券C",
+      "nav": null,
+      "prev_nav": null,
+      "day_return": null,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.00%"
     },
     {
       "code": "003239",
@@ -227164,6 +227144,16 @@
       "fee": "0.50%"
     },
     {
+      "code": "018758",
+      "name": "山证资管汇利一年定开债券A",
+      "nav": null,
+      "prev_nav": null,
+      "day_return": null,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.05%"
+    },
+    {
       "code": "026157",
       "name": "鑫元鑫选盈泰进取配置3个月持有期混合发起式(ETF-FOF)C",
       "nav": null,
@@ -227346,6 +227336,16 @@
     {
       "code": "009553",
       "name": "财通资管丰乾39个月定开债C",
+      "nav": null,
+      "prev_nav": null,
+      "day_return": null,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.00%"
+    },
+    {
+      "code": "018759",
+      "name": "山证资管汇利一年定开债券C",
       "nav": null,
       "prev_nav": null,
       "day_return": null,

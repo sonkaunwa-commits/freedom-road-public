@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T00:17:09+08:00",
+  "generated_at": "2026-08-25T07:53:47+08:00",
   "method_version": "fund-screen-v2.0",
   "goal": "持续跟踪6-12个月高弹性候选；不承诺收益，不预测必然涨幅",
   "selection_policy": "核心池固定跟踪6只；仅在评分明显恶化、中期趋势转负、暂停申购或更优候选持续胜出时替换",
@@ -91,13 +91,8 @@
       "tracking": {
         "first_seen": "2026-08-18T21:59:00+08:00",
         "days_tracked": 8,
-        "refresh_count": 15,
+        "refresh_count": 16,
         "score_history": [
-          {
-            "at": "2026-08-19T07:58:05+08:00",
-            "score": 89.9,
-            "action": "继续等买点"
-          },
           {
             "at": "2026-08-19T16:06:50+08:00",
             "score": 89.9,
@@ -152,6 +147,11 @@
             "at": "2026-08-25T00:17:57+08:00",
             "score": 95.9,
             "action": "第一买入区"
+          },
+          {
+            "at": "2026-08-25T07:54:28+08:00",
+            "score": 95.9,
+            "action": "第一买入区"
           }
         ]
       },
@@ -186,9 +186,9 @@
         },
         "risk": {
           "period": "近1年",
-          "annual_volatility": 37.38482913410746,
+          "annual_volatility": 37.38,
           "sharpe": 4.74,
-          "max_drawdown": 16.2502711,
+          "max_drawdown": 16.25,
           "peer_risk_return": 100.0,
           "peer_resilience": 40.0
         },
@@ -309,7 +309,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-08-25T00:18:43+08:00"
+        "updated_at": "2026-08-25T07:55:04+08:00"
       },
       "profile": {
         "fund_type": "混合型-灵活",
@@ -407,13 +407,13 @@
           {
             "name": "杨宗昌",
             "company": "易方达基金",
-            "career_days": 2680.0,
+            "career_days": 2681.0,
             "current_aum_yi": 146.82,
-            "best_return": 816.8
+            "best_return": 804.98
           }
         ]
       },
-      "risk": "近1年历史最大回撤约16.3%；波动很大，短期涨跌可能比较猛；前十大股票占比约59%，集中度中等。历史数据不代表未来。",
+      "risk": "近1年历史最大回撤约16.2%；波动很大，短期涨跌可能比较猛；前十大股票占比约59%，集中度中等。历史数据不代表未来。",
       "deep_plain": [
         "基金经理：杨宗昌",
         "历史任意时点持有满1年的盈利概率约66%（仅作历史统计，不是未来预测）"
@@ -486,13 +486,8 @@
       "tracking": {
         "first_seen": "2026-08-18T21:59:00+08:00",
         "days_tracked": 8,
-        "refresh_count": 15,
+        "refresh_count": 16,
         "score_history": [
-          {
-            "at": "2026-08-19T07:58:05+08:00",
-            "score": 97.9,
-            "action": "等待回调"
-          },
           {
             "at": "2026-08-19T16:06:50+08:00",
             "score": 97.9,
@@ -545,6 +540,11 @@
           },
           {
             "at": "2026-08-25T00:17:57+08:00",
+            "score": 97.6,
+            "action": "继续等买点"
+          },
+          {
+            "at": "2026-08-25T07:54:28+08:00",
             "score": 97.6,
             "action": "继续等买点"
           }
@@ -696,7 +696,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-08-25T00:18:49+08:00"
+        "updated_at": "2026-08-25T07:55:09+08:00"
       },
       "profile": {
         "fund_type": "股票型",
@@ -790,9 +790,9 @@
           {
             "name": "卜忠林",
             "company": "申万菱信基金",
-            "career_days": 677.0,
+            "career_days": 678.0,
             "current_aum_yi": 51.29,
-            "best_return": 273.01
+            "best_return": 264.16
           }
         ]
       },
@@ -869,13 +869,8 @@
       "tracking": {
         "first_seen": "2026-08-18T21:59:00+08:00",
         "days_tracked": 8,
-        "refresh_count": 15,
+        "refresh_count": 16,
         "score_history": [
-          {
-            "at": "2026-08-19T07:58:05+08:00",
-            "score": 98.2,
-            "action": "等待回调"
-          },
           {
             "at": "2026-08-19T16:06:50+08:00",
             "score": 98.2,
@@ -930,6 +925,11 @@
             "at": "2026-08-25T00:17:57+08:00",
             "score": 95.2,
             "action": "继续等买点"
+          },
+          {
+            "at": "2026-08-25T07:54:28+08:00",
+            "score": 95.2,
+            "action": "继续等买点"
           }
         ]
       },
@@ -964,9 +964,9 @@
         },
         "risk": {
           "period": "近1年",
-          "annual_volatility": 59.638105905589,
+          "annual_volatility": 59.64,
           "sharpe": 2.51,
-          "max_drawdown": 41.511889000000004,
+          "max_drawdown": 41.510000000000005,
           "peer_risk_return": 99.0,
           "peer_resilience": 2.0
         },
@@ -1079,7 +1079,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-08-25T00:18:55+08:00"
+        "updated_at": "2026-08-25T07:55:14+08:00"
       },
       "profile": {
         "fund_type": "股票型",
@@ -1173,9 +1173,9 @@
           {
             "name": "金梓才",
             "company": "财通基金",
-            "career_days": 4296.0,
+            "career_days": 4297.0,
             "current_aum_yi": 565.48,
-            "best_return": 1367.54
+            "best_return": 1304.7
           }
         ]
       },
@@ -1252,13 +1252,8 @@
       "tracking": {
         "first_seen": "2026-08-18T21:59:00+08:00",
         "days_tracked": 8,
-        "refresh_count": 15,
+        "refresh_count": 16,
         "score_history": [
-          {
-            "at": "2026-08-19T07:58:05+08:00",
-            "score": 89.2,
-            "action": "等待回调"
-          },
           {
             "at": "2026-08-19T16:06:50+08:00",
             "score": 89.2,
@@ -1311,6 +1306,11 @@
           },
           {
             "at": "2026-08-25T00:17:57+08:00",
+            "score": 81.1,
+            "action": "继续等买点"
+          },
+          {
+            "at": "2026-08-25T07:54:28+08:00",
             "score": 81.1,
             "action": "继续等买点"
           }
@@ -1458,7 +1458,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-08-25T00:19:02+08:00"
+        "updated_at": "2026-08-25T07:55:18+08:00"
       },
       "profile": {
         "fund_type": "QDII-普通股票",
@@ -1548,9 +1548,9 @@
           {
             "name": "陈俊杰",
             "company": "嘉实基金",
-            "career_days": 1280.0,
+            "career_days": 1281.0,
             "current_aum_yi": 120.34,
-            "best_return": 304.36
+            "best_return": 307.0
           }
         ]
       },
@@ -1627,13 +1627,8 @@
       "tracking": {
         "first_seen": "2026-08-19T00:00:59+08:00",
         "days_tracked": 7,
-        "refresh_count": 14,
+        "refresh_count": 15,
         "score_history": [
-          {
-            "at": "2026-08-19T07:58:05+08:00",
-            "score": 98.1,
-            "action": "等待回调"
-          },
           {
             "at": "2026-08-19T16:06:50+08:00",
             "score": 98.1,
@@ -1688,6 +1683,11 @@
             "at": "2026-08-25T00:17:57+08:00",
             "score": 87.9,
             "action": "继续等买点"
+          },
+          {
+            "at": "2026-08-25T07:54:28+08:00",
+            "score": 87.9,
+            "action": "继续等买点"
           }
         ]
       },
@@ -1722,8 +1722,8 @@
         },
         "risk": {
           "period": "近1年",
-          "annual_volatility": 49.220000000000006,
-          "sharpe": 2.69,
+          "annual_volatility": 48.69,
+          "sharpe": 2.23,
           "max_drawdown": 30.72,
           "peer_risk_return": 99.0,
           "peer_resilience": 19.0
@@ -1837,7 +1837,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-08-25T00:19:07+08:00"
+        "updated_at": "2026-08-25T07:55:23+08:00"
       },
       "profile": {
         "fund_type": "混合型-偏股",
@@ -1931,9 +1931,9 @@
           {
             "name": "高翔",
             "company": "广发基金",
-            "career_days": 3055.0,
+            "career_days": 3056.0,
             "current_aum_yi": 376.05,
-            "best_return": 18.95
+            "best_return": 18.98
           }
         ]
       },
@@ -2010,13 +2010,8 @@
       "tracking": {
         "first_seen": "2026-08-19T00:00:59+08:00",
         "days_tracked": 7,
-        "refresh_count": 14,
+        "refresh_count": 15,
         "score_history": [
-          {
-            "at": "2026-08-19T07:58:05+08:00",
-            "score": 95.2,
-            "action": "等待回调"
-          },
           {
             "at": "2026-08-19T16:06:50+08:00",
             "score": 95.2,
@@ -2069,6 +2064,11 @@
           },
           {
             "at": "2026-08-25T00:17:57+08:00",
+            "score": 84.5,
+            "action": "继续等买点"
+          },
+          {
+            "at": "2026-08-25T07:54:28+08:00",
             "score": 84.5,
             "action": "继续等买点"
           }
@@ -2215,7 +2215,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-08-25T00:19:14+08:00"
+        "updated_at": "2026-08-25T07:55:28+08:00"
       },
       "profile": {
         "fund_type": "指数型-股票",
@@ -2309,9 +2309,9 @@
           {
             "name": "刘斌",
             "company": "嘉实基金",
-            "career_days": 5924.0,
+            "career_days": 5925.0,
             "current_aum_yi": 122.48,
-            "best_return": 233.96
+            "best_return": 228.47
           }
         ]
       },
@@ -2322,7 +2322,7 @@
       ]
     }
   ],
-  "deep_enriched_at": "2026-08-25T00:19:14+08:00",
+  "deep_enriched_at": "2026-08-25T07:55:28+08:00",
   "deep_method": "overview+risk_drawdown+historical_profit_probability+latest_disclosed_holdings+industry+fees+manager",
   "profile_note": "基金持仓和行业配置来自最新可获得的定期报告披露，不是实时持仓。"
 }

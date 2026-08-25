@@ -1,8 +1,8 @@
 {
   "version": "20260825-1535",
   "release": "FUND_ASSISTANT_UI_20260825_1535",
-  "entry": "v152.html",
-  "behavior": "v15.js",
+  "entry": "stable-15-2.html",
+  "behavior": "v152.js",
   "architecture": "static-product-v15.2",
   "updated_at": "2026-08-25T15:35:00+08:00"
 }

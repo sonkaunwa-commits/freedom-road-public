@@ -11,17 +11,44 @@
 </style>
 </head>
 <body>
-<main><section class="card"><div class="tag">SECURITIES 2026 · RECOVERY ENTRY</div><h1>正在进入学习助手</h1><p>先清理旧版离线缓存并检查核心资源，避免手机或电脑继续打开过期页面。</p><div class="bar"><i id="bar"></i></div><div class="status" id="status">正在准备…</div><div class="detail" id="detail"></div><div class="actions"><button class="primary" id="retry" hidden>重新检查</button><a href="./?v=20260825-r2">直接进入</a></div></section></main>
+<main><section class="card"><div class="tag">SECURITIES 2026 · RECOVERY ENTRY</div><h1>正在进入学习助手</h1><p>清理旧版离线缓存后直接进入。即使个别清理操作响应较慢，也不会再卡在本页。</p><div class="bar"><i id="bar"></i></div><div class="status" id="status">正在准备…</div><div class="detail" id="detail"></div><div class="actions"><button class="primary" id="retry" hidden>重新进入</button><a href="./?v=20260825-r3">直接进入</a></div></section></main>
 <script>
 (()=>{
 'use strict';
+const TARGET='./?v=20260825-r3';
 const status=document.getElementById('status'),detail=document.getElementById('detail'),bar=document.getElementById('bar'),retry=document.getElementById('retry');
-const ASSETS=['./index.html','./style-v1.css','./product-v350.css','./release-v360.css','./ui-tune-v360.css','./questions-v1.js','./bank/concepts-v2.js','./bank/generator-v2.js','./app-v1.js','./product-core-v350.js','./sources-data-v350.js','./learning-content-v360.js','./content-bridge-v360.js','./product-v350.js','./release-v360.js','./profile-sync-v360.js','./sw.js'];
 const set=(text,pct)=>{status.textContent=text;bar.style.width=Math.max(12,pct)+'%'};
-async function clearOld(){set('正在清理旧版缓存…',24);const jobs=[];try{if('serviceWorker'in navigator)jobs.push(navigator.serviceWorker.getRegistrations().then(rs=>Promise.all(rs.filter(r=>{try{return new URL(r.scope).pathname.includes('/securities-exam/')}catch(_){return false}}).map(r=>r.unregister()))))}catch(_){}try{if('caches'in window)jobs.push(caches.keys().then(ks=>Promise.all(ks.filter(k=>/^sec2026-/.test(k)).map(k=>caches.delete(k)))))}catch(_){}await Promise.allSettled(jobs)}
-async function probe(){set('正在检查网页核心资源…',48);const failed=[];let done=0;await Promise.all(ASSETS.map(async p=>{try{const r=await fetch(p+'?health=20260825-r2',{cache:'no-store'});if(!r.ok)failed.push(p+' ('+r.status+')')}catch(e){failed.push(p+' (网络失败)')}finally{done++;set('正在检查网页核心资源…',48+Math.round(done/ASSETS.length*42))}}));return failed}
-async function run(){retry.hidden=true;detail.textContent='';try{await clearOld();const failed=await probe();if(failed.length){set('有资源暂时无法访问',92);detail.textContent='未通过：'+failed.slice(0,5).join('、')+(failed.length>5?' 等':'');retry.hidden=false;return}set('检查通过，正在打开学习助手…',100);location.replace('./?v=20260825-r2')}catch(e){set('自动修复未完成',90);detail.textContent='请点击重新检查，或直接进入后刷新一次。';retry.hidden=false}}
-retry.onclick=run;run();
+const delay=ms=>new Promise(resolve=>setTimeout(resolve,ms));
+let leaving=false,running=false;
+function enter(){if(leaving)return;leaving=true;set('正在打开学习助手…',100);location.replace(TARGET)}
+async function clearOld(){
+  set('正在清理旧版缓存…',36);
+  const jobs=[];
+  try{
+    if('serviceWorker'in navigator) jobs.push(navigator.serviceWorker.getRegistrations().then(rs=>Promise.allSettled(rs.filter(r=>{try{return new URL(r.scope).pathname.includes('/securities-exam/')}catch(_){return false}}).map(r=>r.unregister()))));
+  }catch(_){}
+  try{
+    if('caches'in window) jobs.push(caches.keys().then(ks=>Promise.allSettled(ks.filter(k=>/^sec2026-/.test(k)).map(k=>caches.delete(k)))));
+  }catch(_){}
+  if(jobs.length) await Promise.race([Promise.allSettled(jobs),delay(2500)]);
+}
+async function run(){
+  if(running||leaving)return;
+  running=true;retry.hidden=true;detail.textContent='';
+  const hard=setTimeout(enter,5000);
+  try{
+    await clearOld();
+    set('缓存处理完成，正在进入…',82);
+    await delay(120);
+  }catch(_){
+    detail.textContent='缓存清理未完全响应，将直接进入学习助手。';
+  }
+  clearTimeout(hard);
+  running=false;
+  enter();
+}
+retry.onclick=()=>{running=false;leaving=false;run()};
+run();
 })();
 </script>
 </body>

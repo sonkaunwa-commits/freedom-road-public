@@ -1,6 +1,1 @@
-page.waitForFunction: Timeout 45000ms exceeded.
-    at waitApp (/home/runner/work/freedom-road-public/freedom-road-public/scripts/securities-browser-smoke.cjs:8:14)
-    at desktop (/home/runner/work/freedom-road-public/freedom-road-public/scripts/securities-browser-smoke.cjs:31:9)
-    at async /home/runner/work/freedom-road-public/freedom-road-public/scripts/securities-browser-smoke.cjs:94:5 {
-  name: 'TimeoutError'
-}
+desktop navigation status=200 url=https://sonkaunwa-commits.github.io/freedom-road-public/securities-exam/?browser_smoke=2e0bef793c7e8e11ac3e63ee8fb55eb86a604049

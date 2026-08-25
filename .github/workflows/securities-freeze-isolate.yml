@@ -1,0 +1,24 @@
+name: securities-freeze-isolate
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - scripts/securities-freeze-isolate.cjs
+      - .github/workflows/securities-freeze-isolate.yml
+permissions:
+  contents: read
+jobs:
+  isolate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: '20'}
+      - run: npm install --no-save --package-lock=false playwright@1.55.0
+      - run: npx playwright install --with-deps chromium
+      - name: Isolate first freezing script
+        env:
+          SECURITIES_BASE: https://sonkaunwa-commits.github.io/freedom-road-public
+        run: node scripts/securities-freeze-isolate.cjs

@@ -11,7 +11,7 @@ on:
       - .github/workflows/securities-browser-smoke.yml
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: securities-browser-smoke
@@ -51,3 +51,22 @@ jobs:
         env:
           SECURITIES_BASE: https://sonkaunwa-commits.github.io/freedom-road-public
         run: node scripts/securities-browser-smoke.cjs
+      - name: Write real-browser certificate
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p release-status
+          cat > release-status/securities-browser-smoke.txt <<EOF
+          status=ok
+          tested_sha=${GITHUB_SHA}
+          browser=chromium
+          desktop=direct-securities-exam-home+knowledge+practice+profiles+pin
+          mobile=ks-recovery+home+knowledge
+          typography=desktop14+mobile17+
+          cloud_sync=false
+          verified_at=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
+          EOF
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add release-status/securities-browser-smoke.txt
+          if ! git diff --cached --quiet; then git commit -m 'status: certify securities real-browser smoke'; git push; fi

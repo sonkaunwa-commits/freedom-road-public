@@ -1,10 +1,7 @@
-desktop navigation status=200 url=https://sonkaunwa-commits.github.io/freedom-road-public/securities-exam/?browser_smoke=105e05ab4009af367b1ed3941346ca70a18825e8
-[desktop-load] url=https://sonkaunwa-commits.github.io/freedom-road-public/securities-exam/?browser_smoke=105e05ab4009af367b1ed3941346ca70a18825e8 title=
-[desktop-load] body=
-[desktop-load] html=
-page.waitForFunction: Timeout 25000ms exceeded.
-    at waitApp (/home/runner/work/freedom-road-public/freedom-road-public/scripts/securities-browser-smoke.cjs:29:24)
-    at desktop (/home/runner/work/freedom-road-public/freedom-road-public/scripts/securities-browser-smoke.cjs:59:9)
-    at async /home/runner/work/freedom-road-public/freedom-road-public/scripts/securities-browser-smoke.cjs:136:5 {
-  name: 'TimeoutError'
-}
+desktop status=200 url=https://sonkaunwa-commits.github.io/freedom-road-public/exam-live/?smoke=2710a0af35fbba2a21671b46881c8e2d3973eb91
+desktop Chromium PASS
+chromium-mobile entry status=200 url=https://sonkaunwa-commits.github.io/freedom-road-public/exam-live/?v=20260825-r4
+chromium-mobile PASS
+webkit-iphone entry status=200 url=https://sonkaunwa-commits.github.io/freedom-road-public/ks/?smoke=2710a0af35fbba2a21671b46881c8e2d3973eb91&engine=webkit-iphone
+webkit-iphone PASS
+R4 clean-entry smoke PASS: Chromium desktop/mobile + WebKit iPhone + core flows

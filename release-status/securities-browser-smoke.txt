@@ -1,0 +1,11 @@
+status=failed
+tested_sha=bbd13bde2f6cd6ba2eb0f38d6ccaa7f497979556
+browser=chromium
+install=success
+live_wait=success
+browser_smoke=failure
+desktop=direct-securities-exam-home+knowledge+practice+profiles+pin
+mobile=ks-recovery+home+knowledge
+typography=desktop14+mobile17+
+cloud_sync=false
+verified_at=2026-08-25T09:57:41Z

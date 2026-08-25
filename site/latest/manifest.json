@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-08-25T00:11:56.278090+08:00",
+  "generated_at": "2026-08-25T11:29:34.283445+08:00",
   "schema_version": 8,
   "datasets": {
     "tracked_market.json": {
       "exists": true,
-      "updated_at": "2026-08-25T00:09:13.772754+08:00",
-      "bytes": 23240
+      "updated_at": "2026-08-25T11:29:08.499880+08:00",
+      "bytes": 23075
     },
     "funds.json": {
       "exists": true,
-      "updated_at": "2026-08-25T00:06:44.033625+08:00",
+      "updated_at": "2026-08-25T11:28:09.924890+08:00",
       "bytes": 595405
     },
     "gold.json": {
       "exists": true,
-      "updated_at": "2026-08-25T00:06:44.033625+08:00",
-      "bytes": 953902
+      "updated_at": "2026-08-25T11:29:29.237503+08:00",
+      "bytes": 1546466
     },
     "candidate_pool.json": {
       "exists": true,
@@ -24,48 +24,63 @@
     },
     "health.json": {
       "exists": true,
-      "updated_at": "2026-08-25T00:09:13.772754+08:00",
-      "bytes": 18110
+      "updated_at": "2026-08-25T11:29:25.503725+08:00",
+      "bytes": 15656
     },
     "analysis_stage1.json": {
       "exists": true,
-      "updated_at": "2026-08-25T00:10:19.974119+08:00",
-      "bytes": 18332
+      "updated_at": "2026-08-25T11:19:53.746647+08:00",
+      "bytes": 18338
     },
     "analysis_stage2_daily.json": {
       "exists": true,
-      "updated_at": "2026-08-25T00:11:47.134968+08:00",
-      "bytes": 653067
+      "updated_at": "2026-08-25T11:21:02.534853+08:00",
+      "bytes": 653257
     },
     "analysis_duckdb_evidence.json": {
       "exists": true,
-      "updated_at": "2026-08-25T00:11:52.518004+08:00",
-      "bytes": 10521
+      "updated_at": "2026-08-25T11:21:06.076985+08:00",
+      "bytes": 10514
     },
     "data_contracts.json": {
       "exists": true,
-      "updated_at": "2026-08-25T00:11:29.954634+08:00",
+      "updated_at": "2026-08-25T11:20:51.171930+08:00",
       "bytes": 5537
     },
     "calendar_alignment.json": {
       "exists": true,
-      "updated_at": "2026-08-25T00:11:30.576321+08:00",
+      "updated_at": "2026-08-25T11:20:51.968105+08:00",
       "bytes": 7777
     },
     "analysis_evidence_summary.json": {
       "exists": true,
-      "updated_at": "2026-08-25T00:11:55.758067+08:00",
-      "bytes": 7573
+      "updated_at": "2026-08-25T11:21:08.156057+08:00",
+      "bytes": 7574
     },
     "report_readiness.json": {
       "exists": true,
-      "updated_at": "2026-08-25T00:11:56.278090+08:00",
-      "bytes": 8266
+      "updated_at": "2026-08-25T11:29:34.283445+08:00",
+      "bytes": 8259
+    },
+    "data_health.json": {
+      "exists": true,
+      "updated_at": "2026-08-25T11:29:34.014935+08:00",
+      "bytes": 17857
+    },
+    "provider_stability.json": {
+      "exists": true,
+      "updated_at": "2026-08-25T11:29:34.204488+08:00",
+      "bytes": 41595
     },
     "candidate_scan_health.json": {
       "exists": true,
-      "updated_at": "2026-08-25T00:11:56.338511+08:00",
+      "updated_at": "2026-08-25T11:29:34.381534+08:00",
       "bytes": 728
+    },
+    "data_health_alerts.json": {
+      "exists": true,
+      "updated_at": "2026-08-25T11:29:34.512209+08:00",
+      "bytes": 4564
     }
   },
   "report_readiness": {
@@ -78,21 +93,24 @@
     "stage2_daily_pilot_status": "STAGE_2_DAILY_PILOT_RUNNING",
     "evidence_status": "READY_RESEARCH_ONLY",
     "blockers": [],
-    "minute_status": "not_expected",
-    "intraday_public_market_ready": false,
+    "minute_status": "fresh",
+    "intraday_public_market_ready": true,
     "candidate_scan_freshness_state": "fresh_same_session",
     "candidate_scan_same_session": true,
-    "candidate_scan_fresh_for_cadence": true
+    "candidate_scan_fresh_for_cadence": true,
+    "data_health_status": "ready",
+    "data_health_ready": true,
+    "data_health_blockers": []
   },
   "analysis_engine": {
     "stage": "STAGE_1_RUNNING",
-    "generated_at": "2026-08-25T00:10:19.974119+08:00",
+    "generated_at": "2026-08-25T11:19:53.746647+08:00",
     "stage1_fund_ready": true,
     "stage1_a_share_history_ready": true,
     "stage2_vectorbt_daily_pilot_ready": true,
     "stage2_daily_pilot": {
       "status": "STAGE_2_DAILY_PILOT_RUNNING",
-      "generated_at": "2026-08-25T00:11:47.134968+08:00",
+      "generated_at": "2026-08-25T11:21:02.534853+08:00",
       "research_core_ready": true,
       "coverage": {
         "a_research_core_ok": 7,
@@ -241,5 +259,30 @@
     "analysis_roadmap_version": "1.0.0"
   },
   "privacy": "public market data and research evidence only; no private account ids, position sizes, costs, cash balances, private bank quotes or trade states",
-  "freshness_hardening_updated_at": "2026-08-25T00:11:56.338511+08:00"
+  "data_health": {
+    "schema_version": 2,
+    "overall_status": "ready",
+    "blockers": [],
+    "source_health_updated_at": "2026-08-25T11:29:25.503725+08:00",
+    "equity_freshness_gate": "ready",
+    "provider_stability": {
+      "window_runs": 12,
+      "watch_providers": [
+        "akshare",
+        "eastmoney",
+        "tushare"
+      ]
+    },
+    "semantics": "Manifest-level pointer only; detailed provider, freshness and degradation evidence remains in data_health.json and provider_stability.json."
+  },
+  "freshness_hardening_updated_at": "2026-08-25T11:29:34.381534+08:00",
+  "data_health_gate_updated_at": "2026-08-25T11:29:34.470089+08:00",
+  "data_health_alerts": {
+    "status": "warning",
+    "critical": 0,
+    "warning": 7,
+    "total": 7,
+    "external_notification_enabled": false
+  },
+  "data_health_alerts_updated_at": "2026-08-25T11:29:34.512209+08:00"
 }

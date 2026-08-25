@@ -1,0 +1,538 @@
+{
+  "generated_at": "2026-08-25T11:29:34.014935+08:00",
+  "schema_version": 2,
+  "source_health_updated_at": "2026-08-25T11:29:25.503725+08:00",
+  "domains": {
+    "a_share_daily": {
+      "status": "ready",
+      "ready": 12,
+      "expected": 12,
+      "degraded_codes": [],
+      "rows": [
+        {
+          "code": "000977.SZ",
+          "market": "A",
+          "provider": "tencent_fqkline:a:000977.SZ",
+          "provider_grade": "validated_public_fallback",
+          "latest_trade_date": "20260825",
+          "status": "ready",
+          "session_lag": 0,
+          "expected_trade_date": "2026-08-24",
+          "freshness_status": "CURRENT_TO_LAST_COMPLETED_SESSION"
+        },
+        {
+          "code": "002085.SZ",
+          "market": "A",
+          "provider": "tencent_fqkline:a:002085.SZ",
+          "provider_grade": "validated_public_fallback",
+          "latest_trade_date": "20260825",
+          "status": "ready",
+          "session_lag": 0,
+          "expected_trade_date": "2026-08-24",
+          "freshness_status": "CURRENT_TO_LAST_COMPLETED_SESSION"
+        },
+        {
+          "code": "002185.SZ",
+          "market": "A",
+          "provider": "tencent_fqkline:a:002185.SZ",
+          "provider_grade": "validated_public_fallback",
+          "latest_trade_date": "20260825",
+          "status": "ready",
+          "session_lag": 0,
+          "expected_trade_date": "2026-08-24",
+          "freshness_status": "CURRENT_TO_LAST_COMPLETED_SESSION"
+        },
+        {
+          "code": "002371.SZ",
+          "market": "A",
+          "provider": "tencent_fqkline:a:002371.SZ",
+          "provider_grade": "validated_public_fallback",
+          "latest_trade_date": "20260825",
+          "status": "ready",
+          "session_lag": 0,
+          "expected_trade_date": "2026-08-24",
+          "freshness_status": "CURRENT_TO_LAST_COMPLETED_SESSION"
+        },
+        {
+          "code": "002475.SZ",
+          "market": "A",
+          "provider": "tencent_fqkline:a:002475.SZ",
+          "provider_grade": "validated_public_fallback",
+          "latest_trade_date": "20260825",
+          "status": "ready",
+          "session_lag": 0,
+          "expected_trade_date": "2026-08-24",
+          "freshness_status": "CURRENT_TO_LAST_COMPLETED_SESSION"
+        },
+        {
+          "code": "002600.SZ",
+          "market": "A",
+          "provider": "tencent_fqkline:a:002600.SZ",
+          "provider_grade": "validated_public_fallback",
+          "latest_trade_date": "20260825",
+          "status": "ready",
+          "session_lag": 0,
+          "expected_trade_date": "2026-08-24",
+          "freshness_status": "CURRENT_TO_LAST_COMPLETED_SESSION"
+        },
+        {
+          "code": "300059.SZ",
+          "market": "A",
+          "provider": "tencent_fqkline:a:300059.SZ",
+          "provider_grade": "validated_public_fallback",
+          "latest_trade_date": "20260825",
+          "status": "ready",
+          "session_lag": 0,
+          "expected_trade_date": "2026-08-24",
+          "freshness_status": "CURRENT_TO_LAST_COMPLETED_SESSION"
+        },
+        {
+          "code": "300124.SZ",
+          "market": "A",
+          "provider": "tencent_fqkline:a:300124.SZ",
+          "provider_grade": "validated_public_fallback",
+          "latest_trade_date": "20260825",
+          "status": "ready",
+          "session_lag": 0,
+          "expected_trade_date": "2026-08-24",
+          "freshness_status": "CURRENT_TO_LAST_COMPLETED_SESSION"
+        },
+        {
+          "code": "600006.SH",
+          "market": "A",
+          "provider": "tencent_fqkline:a:600006.SH",
+          "provider_grade": "validated_public_fallback",
+          "latest_trade_date": "20260825",
+          "status": "ready",
+          "session_lag": 0,
+          "expected_trade_date": "2026-08-24",
+          "freshness_status": "CURRENT_TO_LAST_COMPLETED_SESSION"
+        },
+        {
+          "code": "600276.SH",
+          "market": "A",
+          "provider": "tencent_fqkline:a:600276.SH",
+          "provider_grade": "validated_public_fallback",
+          "latest_trade_date": "20260825",
+          "status": "ready",
+          "session_lag": 0,
+          "expected_trade_date": "2026-08-24",
+          "freshness_status": "CURRENT_TO_LAST_COMPLETED_SESSION"
+        },
+        {
+          "code": "601138.SH",
+          "market": "A",
+          "provider": "tencent_fqkline:a:601138.SH",
+          "provider_grade": "validated_public_fallback",
+          "latest_trade_date": "20260825",
+          "status": "ready",
+          "session_lag": 0,
+          "expected_trade_date": "2026-08-24",
+          "freshness_status": "CURRENT_TO_LAST_COMPLETED_SESSION"
+        },
+        {
+          "code": "601899.SH",
+          "market": "A",
+          "provider": "tencent_fqkline:a:601899.SH",
+          "provider_grade": "validated_public_fallback",
+          "latest_trade_date": "20260825",
+          "status": "ready",
+          "session_lag": 0,
+          "expected_trade_date": "2026-08-24",
+          "freshness_status": "CURRENT_TO_LAST_COMPLETED_SESSION"
+        }
+      ],
+      "freshness_gate": {
+        "exact_action_ready": true,
+        "stale_codes": [],
+        "missing_alignment_codes": [],
+        "last_completed_session": "2026-08-24",
+        "calendar_fresh": true,
+        "calendar_error": null
+      }
+    },
+    "hk_daily": {
+      "status": "ready",
+      "ready": 6,
+      "expected": 6,
+      "degraded_codes": [],
+      "rows": [
+        {
+          "code": "00700.HK",
+          "market": "HK",
+          "provider": "tencent_fqkline:hk:00700.HK",
+          "provider_grade": "validated_public_fallback",
+          "latest_trade_date": "20260825",
+          "status": "ready",
+          "session_lag": 0,
+          "expected_trade_date": "2026-08-24",
+          "freshness_status": "CURRENT_TO_LAST_COMPLETED_SESSION"
+        },
+        {
+          "code": "00909.HK",
+          "market": "HK",
+          "provider": "tencent_fqkline:hk:00909.HK",
+          "provider_grade": "validated_public_fallback",
+          "latest_trade_date": "20260825",
+          "status": "ready",
+          "session_lag": 0,
+          "expected_trade_date": "2026-08-24",
+          "freshness_status": "CURRENT_TO_LAST_COMPLETED_SESSION"
+        },
+        {
+          "code": "06969.HK",
+          "market": "HK",
+          "provider": "tencent_fqkline:hk:06969.HK",
+          "provider_grade": "validated_public_fallback",
+          "latest_trade_date": "20260825",
+          "status": "ready",
+          "session_lag": 0,
+          "expected_trade_date": "2026-08-24",
+          "freshness_status": "CURRENT_TO_LAST_COMPLETED_SESSION"
+        },
+        {
+          "code": "09926.HK",
+          "market": "HK",
+          "provider": "tencent_fqkline:hk:09926.HK",
+          "provider_grade": "validated_public_fallback",
+          "latest_trade_date": "20260825",
+          "status": "ready",
+          "session_lag": 0,
+          "expected_trade_date": "2026-08-24",
+          "freshness_status": "CURRENT_TO_LAST_COMPLETED_SESSION"
+        },
+        {
+          "code": "09988.HK",
+          "market": "HK",
+          "provider": "tencent_fqkline:hk:09988.HK",
+          "provider_grade": "validated_public_fallback",
+          "latest_trade_date": "20260825",
+          "status": "ready",
+          "session_lag": 0,
+          "expected_trade_date": "2026-08-24",
+          "freshness_status": "CURRENT_TO_LAST_COMPLETED_SESSION"
+        },
+        {
+          "code": "09992.HK",
+          "market": "HK",
+          "provider": "tencent_fqkline:hk:09992.HK",
+          "provider_grade": "validated_public_fallback",
+          "latest_trade_date": "20260825",
+          "status": "ready",
+          "session_lag": 0,
+          "expected_trade_date": "2026-08-24",
+          "freshness_status": "CURRENT_TO_LAST_COMPLETED_SESSION"
+        }
+      ],
+      "freshness_gate": {
+        "exact_action_ready": true,
+        "stale_codes": [],
+        "missing_alignment_codes": [],
+        "last_completed_session": "2026-08-24",
+        "calendar_fresh": true,
+        "calendar_error": null
+      }
+    },
+    "us_daily": {
+      "status": "ready",
+      "ready": 4,
+      "expected": 4,
+      "degraded_codes": [],
+      "rows": [
+        {
+          "code": "LI",
+          "market": "US",
+          "provider": "tencent_fqkline:us:LI",
+          "provider_grade": "validated_public_fallback",
+          "latest_trade_date": "20260824",
+          "status": "ready",
+          "session_lag": 0,
+          "expected_trade_date": "2026-08-24",
+          "freshness_status": "CURRENT_TO_LAST_COMPLETED_SESSION"
+        },
+        {
+          "code": "NIO",
+          "market": "US",
+          "provider": "tencent_fqkline:us:NIO",
+          "provider_grade": "validated_public_fallback",
+          "latest_trade_date": "20260824",
+          "status": "ready",
+          "session_lag": 0,
+          "expected_trade_date": "2026-08-24",
+          "freshness_status": "CURRENT_TO_LAST_COMPLETED_SESSION"
+        },
+        {
+          "code": "RLX",
+          "market": "US",
+          "provider": "tencent_fqkline:us:RLX",
+          "provider_grade": "validated_public_fallback",
+          "latest_trade_date": "20260824",
+          "status": "ready",
+          "session_lag": 0,
+          "expected_trade_date": "2026-08-24",
+          "freshness_status": "CURRENT_TO_LAST_COMPLETED_SESSION"
+        },
+        {
+          "code": "XPEV",
+          "market": "US",
+          "provider": "tencent_fqkline:us:XPEV",
+          "provider_grade": "validated_public_fallback",
+          "latest_trade_date": "20260824",
+          "status": "ready",
+          "session_lag": 0,
+          "expected_trade_date": "2026-08-24",
+          "freshness_status": "CURRENT_TO_LAST_COMPLETED_SESSION"
+        }
+      ],
+      "freshness_gate": {
+        "exact_action_ready": true,
+        "stale_codes": [],
+        "missing_alignment_codes": [],
+        "last_completed_session": "2026-08-24",
+        "calendar_fresh": true,
+        "calendar_error": null
+      }
+    },
+    "funds": {
+      "status": "ready",
+      "ready": 12,
+      "expected": 12,
+      "degraded_codes": [],
+      "rows": [
+        {
+          "code": "003578",
+          "name": "中金中证500指数增强C",
+          "provider": "akshare:fund:003578",
+          "provider_grade": "public_fallback",
+          "latest_nav_date": "20260824",
+          "status": "ready"
+        },
+        {
+          "code": "501208",
+          "name": "中欧创新未来LOF",
+          "provider": "akshare:fund:501208",
+          "provider_grade": "public_fallback",
+          "latest_nav_date": "20260824",
+          "status": "ready"
+        },
+        {
+          "code": "003095",
+          "name": "中欧医疗健康A",
+          "provider": "akshare:fund:003095",
+          "provider_grade": "public_fallback",
+          "latest_nav_date": "20260824",
+          "status": "ready"
+        },
+        {
+          "code": "501058",
+          "name": "汇添富新能源汽车LOF C",
+          "provider": "akshare:fund:501058",
+          "provider_grade": "public_fallback",
+          "latest_nav_date": "20260824",
+          "status": "ready"
+        },
+        {
+          "code": "100038",
+          "name": "富国沪深300增强A",
+          "provider": "akshare:fund:100038",
+          "provider_grade": "public_fallback",
+          "latest_nav_date": "20260824",
+          "status": "ready"
+        },
+        {
+          "code": "519702",
+          "name": "交银趋势优先A",
+          "provider": "akshare:fund:519702",
+          "provider_grade": "public_fallback",
+          "latest_nav_date": "20260824",
+          "status": "ready"
+        },
+        {
+          "code": "005918",
+          "name": "天弘沪深300ETF联接C",
+          "provider": "akshare:fund:005918",
+          "provider_grade": "public_fallback",
+          "latest_nav_date": "20260824",
+          "status": "ready"
+        },
+        {
+          "code": "007824",
+          "name": "天弘弘择短债C",
+          "provider": "akshare:fund:007824",
+          "provider_grade": "public_fallback",
+          "latest_nav_date": "20260824",
+          "status": "ready"
+        },
+        {
+          "code": "016708",
+          "name": "华夏有色ETF联接C",
+          "provider": "akshare:fund:016708",
+          "provider_grade": "public_fallback",
+          "latest_nav_date": "20260824",
+          "status": "ready"
+        },
+        {
+          "code": "000218",
+          "name": "国泰黄金ETF联接A",
+          "provider": "akshare:fund:000218",
+          "provider_grade": "public_fallback",
+          "latest_nav_date": "20260824",
+          "status": "ready"
+        },
+        {
+          "code": "000217",
+          "name": "华安黄金ETF联接C",
+          "provider": "akshare:fund:000217",
+          "provider_grade": "public_fallback",
+          "latest_nav_date": "20260824",
+          "status": "ready"
+        },
+        {
+          "code": "020411",
+          "name": "永赢沪深港黄金产业A",
+          "provider": "akshare:fund:020411",
+          "provider_grade": "public_fallback",
+          "latest_nav_date": "20260824",
+          "status": "ready"
+        }
+      ]
+    },
+    "gold": {
+      "status": "ready",
+      "ready": 4,
+      "expected": 4,
+      "degraded_codes": [],
+      "private_execution_status": "private_source_required",
+      "rows": [
+        {
+          "code": "AU99.99",
+          "market": "SGE",
+          "role": "domestic_gold",
+          "provider": "sge_official_http:AU99.99",
+          "provider_grade": "official_public",
+          "latest_trade_date": "20260824",
+          "status": "ready",
+          "is_bank_executable_quote": false
+        },
+        {
+          "code": "AU0",
+          "market": "SHFE",
+          "role": "domestic_reference",
+          "provider": "akshare:shfe:AU0",
+          "provider_grade": "public_fallback",
+          "latest_trade_date": "20260824",
+          "status": "ready",
+          "is_bank_executable_quote": false
+        },
+        {
+          "code": "XAUUSD",
+          "market": "FX",
+          "role": "international_reference",
+          "provider": "gold_consensus:goldprice.dev+xaus.com",
+          "provider_grade": "validated_public_reference_fallback",
+          "latest_trade_date": "20260825",
+          "status": "ready",
+          "is_bank_executable_quote": false
+        },
+        {
+          "code": "COMEX_GC",
+          "market": "COMEX",
+          "role": "international_reference",
+          "provider": "yfinance:gold:GC=F",
+          "provider_grade": "validated_public_reference_fallback",
+          "latest_trade_date": "20260824",
+          "status": "ready",
+          "is_bank_executable_quote": false,
+          "crosscheck": {
+            "provider": "sina_hf_GC",
+            "status": "validated_crosscheck",
+            "diff_pct": 0.0315,
+            "age_seconds": 1.7
+          }
+        },
+        {
+          "code": "BANK_ACCUMULATION_GOLD",
+          "market": "PRIVATE_BANK",
+          "role": "private_execution",
+          "provider": null,
+          "provider_grade": "private_required",
+          "latest_trade_date": null,
+          "status": "private_source_required",
+          "is_bank_executable_quote": true,
+          "note": "浙商银行APP执行价不得由公开黄金价格换算；仅在用户提供正式APP数据时由投资主任务覆盖。"
+        }
+      ]
+    },
+    "a_share_minute": {
+      "status": "fresh",
+      "provider": "akshare:a_minutes",
+      "coverage_ratio": 1.0,
+      "fresh_codes": [
+        "600006.SH",
+        "002085.SZ",
+        "002475.SZ",
+        "601138.SH",
+        "002600.SZ",
+        "601899.SH",
+        "300059.SZ"
+      ],
+      "stale_codes": [],
+      "missing_codes": []
+    },
+    "candidate_scan": {
+      "status": "degraded_no_fundamentals",
+      "updated_at": "2026-08-24T16:24:12.531140+08:00",
+      "last_full_scan_trade_date": "20260824",
+      "fresh_for_report": true
+    }
+  },
+  "raw_error_count": 23,
+  "principles": {
+    "provider_provenance_required": true,
+    "fallback_must_be_explicit": true,
+    "stale_or_missing_data_must_not_trigger_exact_trade_action": true,
+    "international_gold_pilot_must_remain_explicit_until_independently_validated": true,
+    "bank_gold_execution_price_is_private_and_must_not_be_inferred": true
+  },
+  "blockers": [],
+  "overall_status": "ready",
+  "run_id": "ea744fad855f6e0f",
+  "equity_freshness_gate": {
+    "calendar_source": {
+      "name": "pandas_market_calendars",
+      "version": "5.4.0",
+      "role": "historical session alignment, freshness-in-sessions, and planning calendars"
+    },
+    "calendar_generated_at": "2026-08-25T11:20:51.968105+08:00",
+    "calendar_fresh": true,
+    "calendar_error": null,
+    "status": "ready",
+    "domains": {
+      "a_share_daily": {
+        "exact_action_ready": true,
+        "stale_codes": [],
+        "missing_alignment_codes": [],
+        "last_completed_session": "2026-08-24",
+        "calendar_fresh": true,
+        "calendar_error": null
+      },
+      "hk_daily": {
+        "exact_action_ready": true,
+        "stale_codes": [],
+        "missing_alignment_codes": [],
+        "last_completed_session": "2026-08-24",
+        "calendar_fresh": true,
+        "calendar_error": null
+      },
+      "us_daily": {
+        "exact_action_ready": true,
+        "stale_codes": [],
+        "missing_alignment_codes": [],
+        "last_completed_session": "2026-08-24",
+        "calendar_fresh": true,
+        "calendar_error": null
+      }
+    },
+    "semantics": "Exact equity actions require provider/data-health readiness, a recent calendar snapshot, and alignment to the latest completed exchange session. This is a data gate, not a forecast."
+  }
+}

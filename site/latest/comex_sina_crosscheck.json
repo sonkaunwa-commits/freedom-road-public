@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-08-25T11:29:32.746903+08:00",
+  "schema_version": 1,
+  "provider": "sina_hf_GC",
+  "status": "validated_crosscheck",
+  "promotion_status": "VALIDATED_PUBLIC_COMEX_CROSSCHECK",
+  "max_diff_pct": 2.0,
+  "max_age_seconds": 1800,
+  "yahoo_close": 4690.0,
+  "snapshot": {
+    "provider": "sina_hf_GC",
+    "close": 4691.476,
+    "change_pct": null,
+    "high": 4755.0,
+    "low": 4670.5,
+    "open": 4710.1,
+    "position": 0.0,
+    "trade_date": "20260825",
+    "observed_at": "2026-08-25T11:29:31+08:00"
+  },
+  "diff_pct": 0.0315,
+  "semantics": "Independent latest COMEX/front-month gold snapshot cross-check. It validates the current public reference only, does not replace history, and never supplies a bank executable gold price.",
+  "age_seconds": 1.7
+}

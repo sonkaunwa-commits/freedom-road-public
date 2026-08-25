@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T00:11:30.576321+08:00",
+  "generated_at": "2026-08-25T11:20:51.968105+08:00",
   "schema_version": 1,
   "status": "RESEARCH_ONLY",
   "tool": {
@@ -39,8 +39,8 @@
     {
       "market": "US",
       "calendar": "NYSE",
-      "last_completed_session": "2026-08-21",
-      "next_or_current_unfinished_session": "2026-08-24",
+      "last_completed_session": "2026-08-24",
+      "next_or_current_unfinished_session": "2026-08-25",
       "symbols": 4,
       "missing_history": 0,
       "stale_symbols": 0,
@@ -53,7 +53,7 @@
       "market": "A",
       "scope": "research_core",
       "calendar": "SSE",
-      "latest_history_date": "2026-08-24",
+      "latest_history_date": "2026-08-25",
       "last_completed_session": "2026-08-24",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
@@ -63,7 +63,7 @@
       "market": "A",
       "scope": "research_core",
       "calendar": "SSE",
-      "latest_history_date": "2026-08-24",
+      "latest_history_date": "2026-08-25",
       "last_completed_session": "2026-08-24",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
@@ -73,7 +73,7 @@
       "market": "A",
       "scope": "research_core",
       "calendar": "SSE",
-      "latest_history_date": "2026-08-24",
+      "latest_history_date": "2026-08-25",
       "last_completed_session": "2026-08-24",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
@@ -83,7 +83,7 @@
       "market": "A",
       "scope": "research_core",
       "calendar": "SSE",
-      "latest_history_date": "2026-08-24",
+      "latest_history_date": "2026-08-25",
       "last_completed_session": "2026-08-24",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
@@ -93,7 +93,7 @@
       "market": "A",
       "scope": "research_core",
       "calendar": "SSE",
-      "latest_history_date": "2026-08-24",
+      "latest_history_date": "2026-08-25",
       "last_completed_session": "2026-08-24",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
@@ -103,7 +103,7 @@
       "market": "A",
       "scope": "research_core",
       "calendar": "SSE",
-      "latest_history_date": "2026-08-24",
+      "latest_history_date": "2026-08-25",
       "last_completed_session": "2026-08-24",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
@@ -113,7 +113,7 @@
       "market": "A",
       "scope": "research_core",
       "calendar": "SSE",
-      "latest_history_date": "2026-08-24",
+      "latest_history_date": "2026-08-25",
       "last_completed_session": "2026-08-24",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
@@ -123,7 +123,7 @@
       "market": "A",
       "scope": "candidate_seed",
       "calendar": "SSE",
-      "latest_history_date": "2026-08-24",
+      "latest_history_date": "2026-08-25",
       "last_completed_session": "2026-08-24",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
@@ -133,7 +133,7 @@
       "market": "A",
       "scope": "candidate_seed",
       "calendar": "SSE",
-      "latest_history_date": "2026-08-24",
+      "latest_history_date": "2026-08-25",
       "last_completed_session": "2026-08-24",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
@@ -143,7 +143,7 @@
       "market": "A",
       "scope": "candidate_seed",
       "calendar": "SSE",
-      "latest_history_date": "2026-08-24",
+      "latest_history_date": "2026-08-25",
       "last_completed_session": "2026-08-24",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
@@ -153,7 +153,7 @@
       "market": "A",
       "scope": "candidate_seed",
       "calendar": "SSE",
-      "latest_history_date": "2026-08-24",
+      "latest_history_date": "2026-08-25",
       "last_completed_session": "2026-08-24",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
@@ -163,7 +163,7 @@
       "market": "A",
       "scope": "candidate_seed",
       "calendar": "SSE",
-      "latest_history_date": "2026-08-24",
+      "latest_history_date": "2026-08-25",
       "last_completed_session": "2026-08-24",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
@@ -173,7 +173,7 @@
       "market": "HK",
       "scope": "hk_research",
       "calendar": "HKEX",
-      "latest_history_date": "2026-08-24",
+      "latest_history_date": "2026-08-25",
       "last_completed_session": "2026-08-24",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
@@ -183,7 +183,7 @@
       "market": "HK",
       "scope": "hk_research",
       "calendar": "HKEX",
-      "latest_history_date": "2026-08-24",
+      "latest_history_date": "2026-08-25",
       "last_completed_session": "2026-08-24",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
@@ -193,7 +193,7 @@
       "market": "HK",
       "scope": "hk_research",
       "calendar": "HKEX",
-      "latest_history_date": "2026-08-24",
+      "latest_history_date": "2026-08-25",
       "last_completed_session": "2026-08-24",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
@@ -203,7 +203,7 @@
       "market": "HK",
       "scope": "hk_research",
       "calendar": "HKEX",
-      "latest_history_date": "2026-08-24",
+      "latest_history_date": "2026-08-25",
       "last_completed_session": "2026-08-24",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
@@ -213,7 +213,7 @@
       "market": "HK",
       "scope": "hk_research",
       "calendar": "HKEX",
-      "latest_history_date": "2026-08-24",
+      "latest_history_date": "2026-08-25",
       "last_completed_session": "2026-08-24",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
@@ -223,7 +223,7 @@
       "market": "HK",
       "scope": "hk_research",
       "calendar": "HKEX",
-      "latest_history_date": "2026-08-24",
+      "latest_history_date": "2026-08-25",
       "last_completed_session": "2026-08-24",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
@@ -234,7 +234,7 @@
       "scope": "us_research",
       "calendar": "NYSE",
       "latest_history_date": "2026-08-24",
-      "last_completed_session": "2026-08-21",
+      "last_completed_session": "2026-08-24",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
     },
@@ -244,7 +244,7 @@
       "scope": "us_research",
       "calendar": "NYSE",
       "latest_history_date": "2026-08-24",
-      "last_completed_session": "2026-08-21",
+      "last_completed_session": "2026-08-24",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
     },
@@ -254,7 +254,7 @@
       "scope": "us_research",
       "calendar": "NYSE",
       "latest_history_date": "2026-08-24",
-      "last_completed_session": "2026-08-21",
+      "last_completed_session": "2026-08-24",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
     },
@@ -264,7 +264,7 @@
       "scope": "us_research",
       "calendar": "NYSE",
       "latest_history_date": "2026-08-24",
-      "last_completed_session": "2026-08-21",
+      "last_completed_session": "2026-08-24",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
     }

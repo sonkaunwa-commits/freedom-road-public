@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-25T00:11:56.278090+08:00",
+  "generated_at": "2026-08-25T11:29:34.283445+08:00",
   "schema_version": 6,
-  "source_health_updated_at": "2026-08-25T00:09:13.772754+08:00",
+  "source_health_updated_at": "2026-08-25T11:29:25.503725+08:00",
   "delivery_mode_17": "FULL_REPORT",
   "a_share_exact_action_gate": {
     "ready": true,
@@ -45,16 +45,14 @@
     },
     "gold_public_analysis_ready": true,
     "minute": {
-      "status": "not_expected",
-      "provider": "tushare:a_minutes",
+      "status": "fresh",
+      "provider": "akshare:a_minutes",
       "expected_codes": 7,
-      "covered_codes": 0,
-      "coverage_ratio": 0.0,
-      "expected_latest_bar_at": null,
-      "latest_bar_at": null,
-      "fresh_codes": [],
-      "stale_codes": [],
-      "missing_codes": [
+      "covered_codes": 7,
+      "coverage_ratio": 1.0,
+      "expected_latest_bar_at": "2026-08-25T11:28:00+08:00",
+      "latest_bar_at": "2026-08-25T11:29:00+08:00",
+      "fresh_codes": [
         "600006.SH",
         "002085.SZ",
         "002475.SZ",
@@ -63,15 +61,18 @@
         "601899.SH",
         "300059.SZ"
       ],
+      "stale_codes": [],
+      "missing_codes": [],
       "max_lag_minutes": 6,
+      "rows": 840,
       "attempts": [
         {
-          "status": "not_expected",
+          "status": "unavailable",
           "provider": "tushare:a_minutes",
           "expected_codes": 7,
           "covered_codes": 0,
           "coverage_ratio": 0.0,
-          "expected_latest_bar_at": null,
+          "expected_latest_bar_at": "2026-08-25T11:28:00+08:00",
           "latest_bar_at": null,
           "max_lag_minutes": 6,
           "fresh_codes": [],
@@ -87,17 +88,16 @@
           ]
         },
         {
-          "status": "not_expected",
+          "status": "fresh",
           "provider": "akshare:a_minutes",
           "expected_codes": 7,
-          "covered_codes": 0,
-          "coverage_ratio": 0.0,
-          "expected_latest_bar_at": null,
-          "latest_bar_at": null,
+          "covered_codes": 7,
+          "coverage_ratio": 1.0,
+          "expected_latest_bar_at": "2026-08-25T11:28:00+08:00",
+          "latest_bar_at": "2026-08-25T11:29:00+08:00",
           "max_lag_minutes": 6,
-          "fresh_codes": [],
-          "stale_codes": [],
-          "missing_codes": [
+          "rows": 840,
+          "fresh_codes": [
             "600006.SH",
             "002085.SZ",
             "002475.SZ",
@@ -105,35 +105,21 @@
             "002600.SZ",
             "601899.SH",
             "300059.SZ"
-          ]
-        },
-        {
-          "status": "not_expected",
-          "provider": "mootdx_tdx:a_minutes",
-          "expected_codes": 7,
-          "covered_codes": 0,
-          "coverage_ratio": 0.0,
-          "expected_latest_bar_at": null,
-          "latest_bar_at": null,
-          "max_lag_minutes": 6,
-          "fresh_codes": [],
+          ],
           "stale_codes": [],
-          "missing_codes": [
-            "600006.SH",
-            "002085.SZ",
-            "002475.SZ",
-            "601138.SH",
-            "002600.SZ",
-            "601899.SH",
-            "300059.SZ"
-          ]
+          "missing_codes": []
         }
       ],
-      "raw_status": "not_expected",
-      "intraday_action_ready": false,
+      "trade_date": "20260825",
+      "holiday_gate": {
+        "status": "session_expected",
+        "calendar": "SSE"
+      },
+      "raw_status": "fresh",
+      "intraday_action_ready": true,
       "report_input_ready": true,
       "degraded": false,
-      "semantics": "Minute data is not expected at this time/session; this alone is not a report-readiness failure."
+      "semantics": "Current-session minute coverage is fresh enough for public intraday analysis."
     },
     "candidate_scan": {
       "status": "degraded_no_fundamentals",
@@ -157,13 +143,13 @@
   },
   "analysis_engine": {
     "stage": "STAGE_1_RUNNING",
-    "generated_at": "2026-08-25T00:10:19.974119+08:00",
+    "generated_at": "2026-08-25T11:19:53.746647+08:00",
     "stage1_fund_ready": true,
     "stage1_a_share_history_ready": true,
     "stage2_vectorbt_daily_pilot_ready": true,
     "stage2_daily_pilot": {
       "status": "STAGE_2_DAILY_PILOT_RUNNING",
-      "generated_at": "2026-08-25T00:11:47.134968+08:00",
+      "generated_at": "2026-08-25T11:21:02.534853+08:00",
       "research_core_ready": true,
       "coverage": {
         "a_research_core_ok": 7,
@@ -235,7 +221,7 @@
   },
   "evidence_packet": {
     "status": "READY_RESEARCH_ONLY",
-    "generated_at": "2026-08-25T00:11:55.758067+08:00",
+    "generated_at": "2026-08-25T11:21:08.156057+08:00",
     "production_use": "RESEARCH_ONLY"
   },
   "content_contract": {
@@ -320,13 +306,22 @@
   "instruction": "At a fixed report anchor, inspect readiness first. Data readiness is only the input gate. Then satisfy content_contract without deleting required analysis. Join the Private Ledger only in the private report layer. Statistical evidence remains research-only and must keep its uncertainty/FDR caveats.",
   "privacy": "public market and research readiness only; no private positions, quantities, costs, cash, account ids, bank executable quotes or trade states",
   "intraday_public_market_gate": {
-    "ready": false,
-    "status": "not_expected",
-    "provider": "tushare:a_minutes",
-    "coverage_ratio": 0.0,
-    "latest_bar_at": null,
-    "expected_latest_bar_at": null,
+    "ready": true,
+    "status": "fresh",
+    "provider": "akshare:a_minutes",
+    "coverage_ratio": 1.0,
+    "latest_bar_at": "2026-08-25T11:29:00+08:00",
+    "expected_latest_bar_at": "2026-08-25T11:28:00+08:00",
     "semantics": "This is a public market-data gate only. It never authorizes or executes a trade."
   },
-  "freshness_hardening_updated_at": "2026-08-25T00:11:56.338511+08:00"
+  "freshness_hardening_updated_at": "2026-08-25T11:29:34.381534+08:00",
+  "data_health_gate": {
+    "status": "ready",
+    "ready": true,
+    "blockers": [],
+    "generated_at": "2026-08-25T11:29:34.014935+08:00",
+    "run_id": "ea744fad855f6e0f",
+    "semantics": "Report readiness must fail closed when the first-class data-health layer is degraded. This gate propagates provider/freshness/reference degradations; it never creates a trade signal."
+  },
+  "data_health_gate_updated_at": "2026-08-25T11:29:34.470089+08:00"
 }

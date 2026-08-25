@@ -1,0 +1,119 @@
+{
+  "generated_at": "2026-08-25T11:29:34.512209+08:00",
+  "schema_version": 3,
+  "status": "warning",
+  "counts": {
+    "critical": 0,
+    "warning": 7,
+    "info": 0,
+    "total": 7
+  },
+  "alerts": [
+    {
+      "code": "PROVIDER_DOMAIN_STABILITY_WATCH",
+      "severity": "warning",
+      "source": "provider_domain:akshare/a_share_daily",
+      "message": "Provider akshare is unstable for domain a_share_daily; fallback/service-impact gates determine delivery severity.",
+      "details": {
+        "provider": "akshare",
+        "domain": "a_share_daily",
+        "success_rate": 0.2391,
+        "consecutive_failed_runs": 2,
+        "observations": 46,
+        "service_impact": "operational_watch_only_unless_data_health_or_readiness_gate_degrades"
+      }
+    },
+    {
+      "code": "PROVIDER_DOMAIN_STABILITY_WATCH",
+      "severity": "warning",
+      "source": "provider_domain:eastmoney/a_share_daily",
+      "message": "Provider eastmoney is unstable for domain a_share_daily; fallback/service-impact gates determine delivery severity.",
+      "details": {
+        "provider": "eastmoney",
+        "domain": "a_share_daily",
+        "success_rate": 0.0435,
+        "consecutive_failed_runs": 2,
+        "observations": 23,
+        "service_impact": "operational_watch_only_unless_data_health_or_readiness_gate_degrades"
+      }
+    },
+    {
+      "code": "PROVIDER_DOMAIN_STABILITY_WATCH",
+      "severity": "warning",
+      "source": "provider_domain:tushare/a_share_daily",
+      "message": "Provider tushare is unstable for domain a_share_daily; fallback/service-impact gates determine delivery severity.",
+      "details": {
+        "provider": "tushare",
+        "domain": "a_share_daily",
+        "success_rate": 0.0,
+        "consecutive_failed_runs": 6,
+        "observations": 6,
+        "service_impact": "operational_watch_only_unless_data_health_or_readiness_gate_degrades"
+      }
+    },
+    {
+      "code": "PROVIDER_DOMAIN_STABILITY_WATCH",
+      "severity": "warning",
+      "source": "provider_domain:tushare/a_share_minute",
+      "message": "Provider tushare is unstable for domain a_share_minute; fallback/service-impact gates determine delivery severity.",
+      "details": {
+        "provider": "tushare",
+        "domain": "a_share_minute",
+        "success_rate": 0.25,
+        "consecutive_failed_runs": 4,
+        "observations": 8,
+        "service_impact": "operational_watch_only_unless_data_health_or_readiness_gate_degrades"
+      }
+    },
+    {
+      "code": "PROVIDER_DOMAIN_STABILITY_WATCH",
+      "severity": "warning",
+      "source": "provider_domain:tushare/gold",
+      "message": "Provider tushare is unstable for domain gold; fallback/service-impact gates determine delivery severity.",
+      "details": {
+        "provider": "tushare",
+        "domain": "gold",
+        "success_rate": 0.0,
+        "consecutive_failed_runs": 6,
+        "observations": 6,
+        "service_impact": "operational_watch_only_unless_data_health_or_readiness_gate_degrades"
+      }
+    },
+    {
+      "code": "PROVIDER_DOMAIN_STABILITY_WATCH",
+      "severity": "warning",
+      "source": "provider_domain:tushare/hk_daily",
+      "message": "Provider tushare is unstable for domain hk_daily; fallback/service-impact gates determine delivery severity.",
+      "details": {
+        "provider": "tushare",
+        "domain": "hk_daily",
+        "success_rate": 0.0,
+        "consecutive_failed_runs": 6,
+        "observations": 6,
+        "service_impact": "operational_watch_only_unless_data_health_or_readiness_gate_degrades"
+      }
+    },
+    {
+      "code": "PROVIDER_DOMAIN_STABILITY_WATCH",
+      "severity": "warning",
+      "source": "provider_domain:tushare/us_daily",
+      "message": "Provider tushare is unstable for domain us_daily; fallback/service-impact gates determine delivery severity.",
+      "details": {
+        "provider": "tushare",
+        "domain": "us_daily",
+        "success_rate": 0.0,
+        "consecutive_failed_runs": 6,
+        "observations": 6,
+        "service_impact": "operational_watch_only_unless_data_health_or_readiness_gate_degrades"
+      }
+    }
+  ],
+  "severity_policy": {
+    "critical": "A current data-health, report-delivery, or exact intraday-action gate is blocked/unavailable.",
+    "warning": "Operational degradation/provider instability exists but validated fallback may still preserve delivery."
+  },
+  "notification_policy": {
+    "external_notification_enabled": false,
+    "semantics": "Internal alert object only; no external notification is sent by this module."
+  }
+}

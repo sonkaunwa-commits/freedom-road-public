@@ -1,0 +1,27 @@
+{
+  "generated_at": "2026-08-25T11:29:27.303593+08:00",
+  "schema_version": 1,
+  "provider": "stooq_snapshot",
+  "status": "degraded_probe",
+  "max_diff_pct": 2.0,
+  "available": 0,
+  "expected": 2,
+  "agreed": 0,
+  "results": [
+    {
+      "code": "XAUUSD",
+      "stooq_symbol": "xauusd",
+      "status": "unavailable",
+      "promotion_status": "CROSSCHECK_PROBE_ONLY",
+      "error": "HTTPError"
+    },
+    {
+      "code": "COMEX_GC",
+      "stooq_symbol": "gc.f",
+      "status": "unavailable",
+      "promotion_status": "CROSSCHECK_PROBE_ONLY",
+      "error": "HTTPError"
+    }
+  ],
+  "semantics": "Independent latest-snapshot cross-check only. It does not supply history, does not replace Yahoo, and does not infer any bank executable gold price."
+}

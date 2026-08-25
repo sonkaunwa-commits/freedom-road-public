@@ -1,0 +1,23 @@
+{
+  "generated_at": "2026-08-25T11:29:28.465536+08:00",
+  "schema_version": 1,
+  "provider": "goldprice.dev",
+  "status": "degraded_probe",
+  "max_diff_pct": 2.0,
+  "result": {
+    "code": "XAUUSD",
+    "status": "reference_missing",
+    "promotion_status": "CROSSCHECK_PROBE_ONLY",
+    "provider": "goldprice.dev",
+    "yahoo_close": null,
+    "goldprice": {
+      "symbol": "XAU",
+      "price": 4636.13,
+      "bid": 4634.45,
+      "ask": 4637.81,
+      "computed_at": "2026-08-25T03:29:21Z",
+      "is_stale": false
+    }
+  },
+  "semantics": "Independent XAU/USD latest-price cross-check only. It does not replace Yahoo history, does not validate COMEX futures, and never supplies or infers a bank executable gold quote."
+}

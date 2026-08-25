@@ -1,0 +1,1695 @@
+{
+  "generated_at": "2026-08-25T11:29:34.204488+08:00",
+  "schema_version": 3,
+  "window_runs": 12,
+  "max_runs": 100,
+  "providers": {
+    "akshare": {
+      "observations": 276,
+      "successes": 169,
+      "failures": 107,
+      "success_rate": 0.6123,
+      "consecutive_failed_runs": 0,
+      "watch": true
+    },
+    "eastmoney": {
+      "observations": 84,
+      "successes": 1,
+      "failures": 83,
+      "success_rate": 0.0119,
+      "consecutive_failed_runs": 2,
+      "watch": true
+    },
+    "gold_consensus": {
+      "observations": 11,
+      "successes": 11,
+      "failures": 0,
+      "success_rate": 1.0,
+      "consecutive_failed_runs": 0,
+      "watch": false
+    },
+    "sge_official_http": {
+      "observations": 12,
+      "successes": 12,
+      "failures": 0,
+      "success_rate": 1.0,
+      "consecutive_failed_runs": 0,
+      "watch": false
+    },
+    "tencent_fqkline": {
+      "observations": 254,
+      "successes": 254,
+      "failures": 0,
+      "success_rate": 1.0,
+      "consecutive_failed_runs": 0,
+      "watch": false
+    },
+    "tencent_mkline": {
+      "observations": 2,
+      "successes": 2,
+      "failures": 0,
+      "success_rate": 1.0,
+      "consecutive_failed_runs": 0,
+      "watch": false
+    },
+    "tushare": {
+      "observations": 68,
+      "successes": 8,
+      "failures": 60,
+      "success_rate": 0.1176,
+      "consecutive_failed_runs": 4,
+      "watch": true
+    },
+    "yfinance": {
+      "observations": 25,
+      "successes": 22,
+      "failures": 3,
+      "success_rate": 0.88,
+      "consecutive_failed_runs": 0,
+      "watch": false
+    }
+  },
+  "watch_providers": [
+    "akshare",
+    "eastmoney",
+    "tushare"
+  ],
+  "provider_domains": {
+    "akshare/a_share_daily": {
+      "provider": "akshare",
+      "domain": "a_share_daily",
+      "observations": 46,
+      "successes": 11,
+      "failures": 35,
+      "success_rate": 0.2391,
+      "consecutive_failed_runs": 2,
+      "watch": true
+    },
+    "akshare/a_share_minute": {
+      "provider": "akshare",
+      "domain": "a_share_minute",
+      "observations": 2,
+      "successes": 2,
+      "failures": 0,
+      "success_rate": 1.0,
+      "consecutive_failed_runs": 0,
+      "watch": false
+    },
+    "akshare/funds": {
+      "provider": "akshare",
+      "domain": "funds",
+      "observations": 72,
+      "successes": 72,
+      "failures": 0,
+      "success_rate": 1.0,
+      "consecutive_failed_runs": 0,
+      "watch": false
+    },
+    "akshare/gold": {
+      "provider": "akshare",
+      "domain": "gold",
+      "observations": 6,
+      "successes": 6,
+      "failures": 0,
+      "success_rate": 1.0,
+      "consecutive_failed_runs": 0,
+      "watch": false
+    },
+    "eastmoney/a_share_daily": {
+      "provider": "eastmoney",
+      "domain": "a_share_daily",
+      "observations": 23,
+      "successes": 1,
+      "failures": 22,
+      "success_rate": 0.0435,
+      "consecutive_failed_runs": 2,
+      "watch": true
+    },
+    "gold_consensus/gold": {
+      "provider": "gold_consensus",
+      "domain": "gold",
+      "observations": 6,
+      "successes": 6,
+      "failures": 0,
+      "success_rate": 1.0,
+      "consecutive_failed_runs": 0,
+      "watch": false
+    },
+    "sge_official_http/gold": {
+      "provider": "sge_official_http",
+      "domain": "gold",
+      "observations": 6,
+      "successes": 6,
+      "failures": 0,
+      "success_rate": 1.0,
+      "consecutive_failed_runs": 0,
+      "watch": false
+    },
+    "tencent_fqkline/a_share_daily": {
+      "provider": "tencent_fqkline",
+      "domain": "a_share_daily",
+      "observations": 72,
+      "successes": 72,
+      "failures": 0,
+      "success_rate": 1.0,
+      "consecutive_failed_runs": 0,
+      "watch": false
+    },
+    "tencent_fqkline/hk_daily": {
+      "provider": "tencent_fqkline",
+      "domain": "hk_daily",
+      "observations": 26,
+      "successes": 26,
+      "failures": 0,
+      "success_rate": 1.0,
+      "consecutive_failed_runs": 0,
+      "watch": false
+    },
+    "tencent_fqkline/us_daily": {
+      "provider": "tencent_fqkline",
+      "domain": "us_daily",
+      "observations": 24,
+      "successes": 24,
+      "failures": 0,
+      "success_rate": 1.0,
+      "consecutive_failed_runs": 0,
+      "watch": false
+    },
+    "tencent_mkline/a_share_minute": {
+      "provider": "tencent_mkline",
+      "domain": "a_share_minute",
+      "observations": 2,
+      "successes": 2,
+      "failures": 0,
+      "success_rate": 1.0,
+      "consecutive_failed_runs": 0,
+      "watch": false
+    },
+    "tushare/a_share_daily": {
+      "provider": "tushare",
+      "domain": "a_share_daily",
+      "observations": 6,
+      "successes": 0,
+      "failures": 6,
+      "success_rate": 0.0,
+      "consecutive_failed_runs": 6,
+      "watch": true
+    },
+    "tushare/a_share_minute": {
+      "provider": "tushare",
+      "domain": "a_share_minute",
+      "observations": 8,
+      "successes": 2,
+      "failures": 6,
+      "success_rate": 0.25,
+      "consecutive_failed_runs": 4,
+      "watch": true
+    },
+    "tushare/gold": {
+      "provider": "tushare",
+      "domain": "gold",
+      "observations": 6,
+      "successes": 0,
+      "failures": 6,
+      "success_rate": 0.0,
+      "consecutive_failed_runs": 6,
+      "watch": true
+    },
+    "tushare/hk_daily": {
+      "provider": "tushare",
+      "domain": "hk_daily",
+      "observations": 6,
+      "successes": 0,
+      "failures": 6,
+      "success_rate": 0.0,
+      "consecutive_failed_runs": 6,
+      "watch": true
+    },
+    "tushare/us_daily": {
+      "provider": "tushare",
+      "domain": "us_daily",
+      "observations": 6,
+      "successes": 0,
+      "failures": 6,
+      "success_rate": 0.0,
+      "consecutive_failed_runs": 6,
+      "watch": true
+    },
+    "yfinance/a_share_daily": {
+      "provider": "yfinance",
+      "domain": "a_share_daily",
+      "observations": 2,
+      "successes": 0,
+      "failures": 2,
+      "success_rate": 0.0,
+      "consecutive_failed_runs": 1,
+      "watch": false
+    },
+    "yfinance/gold": {
+      "provider": "yfinance",
+      "domain": "gold",
+      "observations": 6,
+      "successes": 6,
+      "failures": 0,
+      "success_rate": 1.0,
+      "consecutive_failed_runs": 0,
+      "watch": false
+    },
+    "yfinance/hk_daily": {
+      "provider": "yfinance",
+      "domain": "hk_daily",
+      "observations": 10,
+      "successes": 10,
+      "failures": 0,
+      "success_rate": 1.0,
+      "consecutive_failed_runs": 0,
+      "watch": false
+    }
+  },
+  "watch_provider_domains": [
+    "akshare/a_share_daily",
+    "eastmoney/a_share_daily",
+    "tushare/a_share_daily",
+    "tushare/a_share_minute",
+    "tushare/gold",
+    "tushare/hk_daily",
+    "tushare/us_daily"
+  ],
+  "runs": [
+    {
+      "run_id": "3269770d11649c29",
+      "generated_at": "2026-08-25T08:20:54.681113+08:00",
+      "providers": {
+        "tencent_fqkline": {
+          "success": 22,
+          "failure": 0,
+          "domains": [
+            "a_share_daily",
+            "hk_daily",
+            "us_daily"
+          ]
+        },
+        "akshare": {
+          "success": 13,
+          "failure": 12,
+          "domains": [
+            "funds",
+            "gold",
+            "raw_attempt"
+          ]
+        },
+        "sge_official_http": {
+          "success": 1,
+          "failure": 0,
+          "domains": [
+            "gold"
+          ]
+        },
+        "yfinance": {
+          "success": 1,
+          "failure": 1,
+          "domains": [
+            "gold"
+          ]
+        },
+        "tushare": {
+          "success": 1,
+          "failure": 5,
+          "domains": [
+            "a_share_minute",
+            "raw_attempt"
+          ]
+        },
+        "eastmoney": {
+          "success": 0,
+          "failure": 12,
+          "domains": [
+            "raw_attempt"
+          ]
+        }
+      }
+    },
+    {
+      "run_id": "b96e09142102ee18",
+      "generated_at": "2026-08-25T08:35:39.282920+08:00",
+      "providers": {
+        "tencent_fqkline": {
+          "success": 22,
+          "failure": 0,
+          "domains": [
+            "a_share_daily",
+            "hk_daily",
+            "us_daily"
+          ]
+        },
+        "akshare": {
+          "success": 13,
+          "failure": 12,
+          "domains": [
+            "funds",
+            "gold",
+            "raw_attempt"
+          ]
+        },
+        "sge_official_http": {
+          "success": 1,
+          "failure": 0,
+          "domains": [
+            "gold"
+          ]
+        },
+        "gold_consensus": {
+          "success": 1,
+          "failure": 0,
+          "domains": [
+            "gold"
+          ]
+        },
+        "yfinance": {
+          "success": 1,
+          "failure": 0,
+          "domains": [
+            "gold"
+          ]
+        },
+        "tushare": {
+          "success": 1,
+          "failure": 5,
+          "domains": [
+            "a_share_minute",
+            "raw_attempt"
+          ]
+        },
+        "eastmoney": {
+          "success": 0,
+          "failure": 12,
+          "domains": [
+            "raw_attempt"
+          ]
+        }
+      }
+    },
+    {
+      "run_id": "5b1e78b14dc73ad2",
+      "generated_at": "2026-08-25T08:45:34.487965+08:00",
+      "providers": {
+        "tencent_fqkline": {
+          "success": 22,
+          "failure": 0,
+          "domains": [
+            "a_share_daily",
+            "hk_daily",
+            "us_daily"
+          ]
+        },
+        "akshare": {
+          "success": 13,
+          "failure": 12,
+          "domains": [
+            "funds",
+            "gold",
+            "raw_attempt"
+          ]
+        },
+        "sge_official_http": {
+          "success": 1,
+          "failure": 0,
+          "domains": [
+            "gold"
+          ]
+        },
+        "gold_consensus": {
+          "success": 1,
+          "failure": 0,
+          "domains": [
+            "gold"
+          ]
+        },
+        "yfinance": {
+          "success": 1,
+          "failure": 0,
+          "domains": [
+            "gold"
+          ]
+        },
+        "tushare": {
+          "success": 1,
+          "failure": 5,
+          "domains": [
+            "a_share_minute",
+            "raw_attempt"
+          ]
+        },
+        "eastmoney": {
+          "success": 0,
+          "failure": 12,
+          "domains": [
+            "raw_attempt"
+          ]
+        }
+      }
+    },
+    {
+      "run_id": "784dff7f0628d4ba",
+      "generated_at": "2026-08-25T08:50:54.176612+08:00",
+      "providers": {
+        "tencent_fqkline": {
+          "success": 22,
+          "failure": 0,
+          "domains": [
+            "a_share_daily",
+            "hk_daily",
+            "us_daily"
+          ]
+        },
+        "akshare": {
+          "success": 13,
+          "failure": 12,
+          "domains": [
+            "funds",
+            "gold",
+            "raw_attempt"
+          ]
+        },
+        "sge_official_http": {
+          "success": 1,
+          "failure": 0,
+          "domains": [
+            "gold"
+          ]
+        },
+        "gold_consensus": {
+          "success": 1,
+          "failure": 0,
+          "domains": [
+            "gold"
+          ]
+        },
+        "yfinance": {
+          "success": 1,
+          "failure": 0,
+          "domains": [
+            "gold"
+          ]
+        },
+        "tushare": {
+          "success": 1,
+          "failure": 5,
+          "domains": [
+            "a_share_minute",
+            "raw_attempt"
+          ]
+        },
+        "eastmoney": {
+          "success": 0,
+          "failure": 12,
+          "domains": [
+            "raw_attempt"
+          ]
+        }
+      }
+    },
+    {
+      "run_id": "f7e12e3481751dc9",
+      "generated_at": "2026-08-25T08:56:20.370475+08:00",
+      "providers": {
+        "tencent_fqkline": {
+          "success": 22,
+          "failure": 0,
+          "domains": [
+            "a_share_daily",
+            "hk_daily",
+            "us_daily"
+          ]
+        },
+        "akshare": {
+          "success": 13,
+          "failure": 12,
+          "domains": [
+            "funds",
+            "gold",
+            "raw_attempt"
+          ]
+        },
+        "sge_official_http": {
+          "success": 1,
+          "failure": 0,
+          "domains": [
+            "gold"
+          ]
+        },
+        "gold_consensus": {
+          "success": 1,
+          "failure": 0,
+          "domains": [
+            "gold"
+          ]
+        },
+        "yfinance": {
+          "success": 1,
+          "failure": 0,
+          "domains": [
+            "gold"
+          ]
+        },
+        "tushare": {
+          "success": 1,
+          "failure": 5,
+          "domains": [
+            "a_share_minute",
+            "raw_attempt"
+          ]
+        },
+        "eastmoney": {
+          "success": 0,
+          "failure": 12,
+          "domains": [
+            "raw_attempt"
+          ]
+        }
+      }
+    },
+    {
+      "run_id": "b07ad70da90e7048",
+      "generated_at": "2026-08-25T09:15:38.517940+08:00",
+      "providers": {
+        "tencent_fqkline": {
+          "success": 22,
+          "failure": 0,
+          "domains": [
+            "a_share_daily",
+            "hk_daily",
+            "us_daily"
+          ]
+        },
+        "akshare": {
+          "success": 13,
+          "failure": 12,
+          "domains": [
+            "funds",
+            "gold",
+            "raw_attempt"
+          ]
+        },
+        "sge_official_http": {
+          "success": 1,
+          "failure": 0,
+          "domains": [
+            "gold"
+          ]
+        },
+        "gold_consensus": {
+          "success": 1,
+          "failure": 0,
+          "domains": [
+            "gold"
+          ]
+        },
+        "yfinance": {
+          "success": 1,
+          "failure": 0,
+          "domains": [
+            "gold"
+          ]
+        },
+        "tushare": {
+          "success": 1,
+          "failure": 5,
+          "domains": [
+            "a_share_minute",
+            "raw_attempt"
+          ]
+        },
+        "eastmoney": {
+          "success": 0,
+          "failure": 1,
+          "domains": [
+            "raw_attempt"
+          ]
+        }
+      }
+    },
+    {
+      "run_id": "7e0d94dda2161698",
+      "generated_at": "2026-08-25T09:21:57.250987+08:00",
+      "providers": {
+        "tencent_fqkline": {
+          "success": 18,
+          "failure": 0,
+          "domains": [
+            "a_share_daily",
+            "hk_daily",
+            "us_daily"
+          ]
+        },
+        "yfinance": {
+          "success": 5,
+          "failure": 0,
+          "domains": [
+            "gold",
+            "hk_daily"
+          ]
+        },
+        "akshare": {
+          "success": 13,
+          "failure": 12,
+          "domains": [
+            "a_share_daily",
+            "funds",
+            "gold"
+          ]
+        },
+        "sge_official_http": {
+          "success": 1,
+          "failure": 0,
+          "domains": [
+            "gold"
+          ]
+        },
+        "gold_consensus": {
+          "success": 1,
+          "failure": 0,
+          "domains": [
+            "gold"
+          ]
+        },
+        "tushare": {
+          "success": 1,
+          "failure": 5,
+          "domains": [
+            "a_share_daily",
+            "a_share_minute",
+            "gold",
+            "hk_daily",
+            "us_daily"
+          ]
+        },
+        "eastmoney": {
+          "success": 0,
+          "failure": 1,
+          "domains": [
+            "a_share_daily"
+          ]
+        }
+      },
+      "provider_domains": {
+        "tencent_fqkline/a_share_daily": {
+          "provider": "tencent_fqkline",
+          "domain": "a_share_daily",
+          "success": 12,
+          "failure": 0
+        },
+        "yfinance/hk_daily": {
+          "provider": "yfinance",
+          "domain": "hk_daily",
+          "success": 4,
+          "failure": 0
+        },
+        "tencent_fqkline/hk_daily": {
+          "provider": "tencent_fqkline",
+          "domain": "hk_daily",
+          "success": 2,
+          "failure": 0
+        },
+        "tencent_fqkline/us_daily": {
+          "provider": "tencent_fqkline",
+          "domain": "us_daily",
+          "success": 4,
+          "failure": 0
+        },
+        "akshare/funds": {
+          "provider": "akshare",
+          "domain": "funds",
+          "success": 12,
+          "failure": 0
+        },
+        "sge_official_http/gold": {
+          "provider": "sge_official_http",
+          "domain": "gold",
+          "success": 1,
+          "failure": 0
+        },
+        "akshare/gold": {
+          "provider": "akshare",
+          "domain": "gold",
+          "success": 1,
+          "failure": 0
+        },
+        "gold_consensus/gold": {
+          "provider": "gold_consensus",
+          "domain": "gold",
+          "success": 1,
+          "failure": 0
+        },
+        "yfinance/gold": {
+          "provider": "yfinance",
+          "domain": "gold",
+          "success": 1,
+          "failure": 0
+        },
+        "tushare/a_share_minute": {
+          "provider": "tushare",
+          "domain": "a_share_minute",
+          "success": 1,
+          "failure": 1
+        },
+        "tushare/a_share_daily": {
+          "provider": "tushare",
+          "domain": "a_share_daily",
+          "success": 0,
+          "failure": 1
+        },
+        "akshare/a_share_daily": {
+          "provider": "akshare",
+          "domain": "a_share_daily",
+          "success": 0,
+          "failure": 12
+        },
+        "eastmoney/a_share_daily": {
+          "provider": "eastmoney",
+          "domain": "a_share_daily",
+          "success": 0,
+          "failure": 1
+        },
+        "tushare/hk_daily": {
+          "provider": "tushare",
+          "domain": "hk_daily",
+          "success": 0,
+          "failure": 1
+        },
+        "tushare/us_daily": {
+          "provider": "tushare",
+          "domain": "us_daily",
+          "success": 0,
+          "failure": 1
+        },
+        "tushare/gold": {
+          "provider": "tushare",
+          "domain": "gold",
+          "success": 0,
+          "failure": 1
+        }
+      }
+    },
+    {
+      "run_id": "b4f2a17939891315",
+      "generated_at": "2026-08-25T09:29:34.512364+08:00",
+      "providers": {
+        "tencent_fqkline": {
+          "success": 16,
+          "failure": 0,
+          "domains": [
+            "a_share_daily",
+            "us_daily"
+          ]
+        },
+        "yfinance": {
+          "success": 7,
+          "failure": 0,
+          "domains": [
+            "gold",
+            "hk_daily"
+          ]
+        },
+        "akshare": {
+          "success": 13,
+          "failure": 1,
+          "domains": [
+            "a_share_daily",
+            "funds",
+            "gold"
+          ]
+        },
+        "sge_official_http": {
+          "success": 1,
+          "failure": 0,
+          "domains": [
+            "gold"
+          ]
+        },
+        "gold_consensus": {
+          "success": 1,
+          "failure": 0,
+          "domains": [
+            "gold"
+          ]
+        },
+        "tushare": {
+          "success": 1,
+          "failure": 5,
+          "domains": [
+            "a_share_daily",
+            "a_share_minute",
+            "gold",
+            "hk_daily",
+            "us_daily"
+          ]
+        },
+        "eastmoney": {
+          "success": 0,
+          "failure": 1,
+          "domains": [
+            "a_share_daily"
+          ]
+        }
+      },
+      "provider_domains": {
+        "tencent_fqkline/a_share_daily": {
+          "provider": "tencent_fqkline",
+          "domain": "a_share_daily",
+          "success": 12,
+          "failure": 0
+        },
+        "yfinance/hk_daily": {
+          "provider": "yfinance",
+          "domain": "hk_daily",
+          "success": 6,
+          "failure": 0
+        },
+        "tencent_fqkline/us_daily": {
+          "provider": "tencent_fqkline",
+          "domain": "us_daily",
+          "success": 4,
+          "failure": 0
+        },
+        "akshare/funds": {
+          "provider": "akshare",
+          "domain": "funds",
+          "success": 12,
+          "failure": 0
+        },
+        "sge_official_http/gold": {
+          "provider": "sge_official_http",
+          "domain": "gold",
+          "success": 1,
+          "failure": 0
+        },
+        "akshare/gold": {
+          "provider": "akshare",
+          "domain": "gold",
+          "success": 1,
+          "failure": 0
+        },
+        "gold_consensus/gold": {
+          "provider": "gold_consensus",
+          "domain": "gold",
+          "success": 1,
+          "failure": 0
+        },
+        "yfinance/gold": {
+          "provider": "yfinance",
+          "domain": "gold",
+          "success": 1,
+          "failure": 0
+        },
+        "tushare/a_share_minute": {
+          "provider": "tushare",
+          "domain": "a_share_minute",
+          "success": 1,
+          "failure": 1
+        },
+        "tushare/a_share_daily": {
+          "provider": "tushare",
+          "domain": "a_share_daily",
+          "success": 0,
+          "failure": 1
+        },
+        "akshare/a_share_daily": {
+          "provider": "akshare",
+          "domain": "a_share_daily",
+          "success": 0,
+          "failure": 1
+        },
+        "eastmoney/a_share_daily": {
+          "provider": "eastmoney",
+          "domain": "a_share_daily",
+          "success": 0,
+          "failure": 1
+        },
+        "tushare/hk_daily": {
+          "provider": "tushare",
+          "domain": "hk_daily",
+          "success": 0,
+          "failure": 1
+        },
+        "tushare/us_daily": {
+          "provider": "tushare",
+          "domain": "us_daily",
+          "success": 0,
+          "failure": 1
+        },
+        "tushare/gold": {
+          "provider": "tushare",
+          "domain": "gold",
+          "success": 0,
+          "failure": 1
+        }
+      }
+    },
+    {
+      "run_id": "64d01ddc23269983",
+      "generated_at": "2026-08-25T09:34:55.110427+08:00",
+      "providers": {
+        "tencent_fqkline": {
+          "success": 22,
+          "failure": 0,
+          "domains": [
+            "a_share_daily",
+            "hk_daily",
+            "us_daily"
+          ]
+        },
+        "akshare": {
+          "success": 14,
+          "failure": 1,
+          "domains": [
+            "a_share_daily",
+            "a_share_minute",
+            "funds",
+            "gold"
+          ]
+        },
+        "sge_official_http": {
+          "success": 1,
+          "failure": 0,
+          "domains": [
+            "gold"
+          ]
+        },
+        "gold_consensus": {
+          "success": 1,
+          "failure": 0,
+          "domains": [
+            "gold"
+          ]
+        },
+        "yfinance": {
+          "success": 1,
+          "failure": 0,
+          "domains": [
+            "gold"
+          ]
+        },
+        "tushare": {
+          "success": 0,
+          "failure": 5,
+          "domains": [
+            "a_share_daily",
+            "a_share_minute",
+            "gold",
+            "hk_daily",
+            "us_daily"
+          ]
+        }
+      },
+      "provider_domains": {
+        "tencent_fqkline/a_share_daily": {
+          "provider": "tencent_fqkline",
+          "domain": "a_share_daily",
+          "success": 12,
+          "failure": 0
+        },
+        "tencent_fqkline/hk_daily": {
+          "provider": "tencent_fqkline",
+          "domain": "hk_daily",
+          "success": 6,
+          "failure": 0
+        },
+        "tencent_fqkline/us_daily": {
+          "provider": "tencent_fqkline",
+          "domain": "us_daily",
+          "success": 4,
+          "failure": 0
+        },
+        "akshare/funds": {
+          "provider": "akshare",
+          "domain": "funds",
+          "success": 12,
+          "failure": 0
+        },
+        "sge_official_http/gold": {
+          "provider": "sge_official_http",
+          "domain": "gold",
+          "success": 1,
+          "failure": 0
+        },
+        "akshare/gold": {
+          "provider": "akshare",
+          "domain": "gold",
+          "success": 1,
+          "failure": 0
+        },
+        "gold_consensus/gold": {
+          "provider": "gold_consensus",
+          "domain": "gold",
+          "success": 1,
+          "failure": 0
+        },
+        "yfinance/gold": {
+          "provider": "yfinance",
+          "domain": "gold",
+          "success": 1,
+          "failure": 0
+        },
+        "akshare/a_share_minute": {
+          "provider": "akshare",
+          "domain": "a_share_minute",
+          "success": 1,
+          "failure": 0
+        },
+        "tushare/a_share_daily": {
+          "provider": "tushare",
+          "domain": "a_share_daily",
+          "success": 0,
+          "failure": 1
+        },
+        "akshare/a_share_daily": {
+          "provider": "akshare",
+          "domain": "a_share_daily",
+          "success": 0,
+          "failure": 1
+        },
+        "tushare/hk_daily": {
+          "provider": "tushare",
+          "domain": "hk_daily",
+          "success": 0,
+          "failure": 1
+        },
+        "tushare/us_daily": {
+          "provider": "tushare",
+          "domain": "us_daily",
+          "success": 0,
+          "failure": 1
+        },
+        "tushare/gold": {
+          "provider": "tushare",
+          "domain": "gold",
+          "success": 0,
+          "failure": 1
+        },
+        "tushare/a_share_minute": {
+          "provider": "tushare",
+          "domain": "a_share_minute",
+          "success": 0,
+          "failure": 1
+        }
+      }
+    },
+    {
+      "run_id": "69c3c8c79d8e4a42",
+      "generated_at": "2026-08-25T11:03:17.889582+08:00",
+      "providers": {
+        "tencent_fqkline": {
+          "success": 22,
+          "failure": 0,
+          "domains": [
+            "a_share_daily",
+            "hk_daily",
+            "us_daily"
+          ]
+        },
+        "akshare": {
+          "success": 24,
+          "failure": 1,
+          "domains": [
+            "a_share_daily",
+            "funds",
+            "gold"
+          ]
+        },
+        "sge_official_http": {
+          "success": 1,
+          "failure": 0,
+          "domains": [
+            "gold"
+          ]
+        },
+        "gold_consensus": {
+          "success": 1,
+          "failure": 0,
+          "domains": [
+            "gold"
+          ]
+        },
+        "yfinance": {
+          "success": 1,
+          "failure": 0,
+          "domains": [
+            "gold"
+          ]
+        },
+        "tencent_mkline": {
+          "success": 1,
+          "failure": 0,
+          "domains": [
+            "a_share_minute"
+          ]
+        },
+        "eastmoney": {
+          "success": 1,
+          "failure": 0,
+          "domains": [
+            "a_share_daily"
+          ]
+        },
+        "tushare": {
+          "success": 0,
+          "failure": 5,
+          "domains": [
+            "a_share_daily",
+            "a_share_minute",
+            "gold",
+            "hk_daily",
+            "us_daily"
+          ]
+        }
+      },
+      "provider_domains": {
+        "tencent_fqkline/a_share_daily": {
+          "provider": "tencent_fqkline",
+          "domain": "a_share_daily",
+          "success": 12,
+          "failure": 0
+        },
+        "tencent_fqkline/hk_daily": {
+          "provider": "tencent_fqkline",
+          "domain": "hk_daily",
+          "success": 6,
+          "failure": 0
+        },
+        "tencent_fqkline/us_daily": {
+          "provider": "tencent_fqkline",
+          "domain": "us_daily",
+          "success": 4,
+          "failure": 0
+        },
+        "akshare/funds": {
+          "provider": "akshare",
+          "domain": "funds",
+          "success": 12,
+          "failure": 0
+        },
+        "sge_official_http/gold": {
+          "provider": "sge_official_http",
+          "domain": "gold",
+          "success": 1,
+          "failure": 0
+        },
+        "akshare/gold": {
+          "provider": "akshare",
+          "domain": "gold",
+          "success": 1,
+          "failure": 0
+        },
+        "gold_consensus/gold": {
+          "provider": "gold_consensus",
+          "domain": "gold",
+          "success": 1,
+          "failure": 0
+        },
+        "yfinance/gold": {
+          "provider": "yfinance",
+          "domain": "gold",
+          "success": 1,
+          "failure": 0
+        },
+        "tencent_mkline/a_share_minute": {
+          "provider": "tencent_mkline",
+          "domain": "a_share_minute",
+          "success": 1,
+          "failure": 0
+        },
+        "eastmoney/a_share_daily": {
+          "provider": "eastmoney",
+          "domain": "a_share_daily",
+          "success": 1,
+          "failure": 0
+        },
+        "akshare/a_share_daily": {
+          "provider": "akshare",
+          "domain": "a_share_daily",
+          "success": 11,
+          "failure": 1
+        },
+        "tushare/a_share_daily": {
+          "provider": "tushare",
+          "domain": "a_share_daily",
+          "success": 0,
+          "failure": 1
+        },
+        "tushare/hk_daily": {
+          "provider": "tushare",
+          "domain": "hk_daily",
+          "success": 0,
+          "failure": 1
+        },
+        "tushare/us_daily": {
+          "provider": "tushare",
+          "domain": "us_daily",
+          "success": 0,
+          "failure": 1
+        },
+        "tushare/gold": {
+          "provider": "tushare",
+          "domain": "gold",
+          "success": 0,
+          "failure": 1
+        },
+        "tushare/a_share_minute": {
+          "provider": "tushare",
+          "domain": "a_share_minute",
+          "success": 0,
+          "failure": 1
+        }
+      },
+      "circuit_telemetry": {
+        "eastmoney_a_daily": {
+          "provider": "eastmoney",
+          "evidence_scope": "provider_domain:a_share_daily",
+          "armed_from_prior_stability": true,
+          "canary_attempted": true,
+          "canary_succeeded": true,
+          "tripped": false,
+          "attempted_calls": 1,
+          "successful_calls": 1,
+          "failed_calls": 0,
+          "empty_calls": 0,
+          "skipped_calls": 0,
+          "policy": "one live canary per run when prior scoped stability is severely degraded; retry every run"
+        },
+        "akshare_a_daily": {
+          "provider": "akshare",
+          "evidence_scope": "provider_domain:a_share_daily",
+          "armed_from_prior_stability": true,
+          "canary_attempted": true,
+          "canary_succeeded": true,
+          "tripped": false,
+          "attempted_calls": 12,
+          "successful_calls": 11,
+          "failed_calls": 1,
+          "empty_calls": 0,
+          "skipped_calls": 0,
+          "policy": "one live canary per run when prior scoped stability is severely degraded; retry every run"
+        }
+      }
+    },
+    {
+      "run_id": "cbc6c654891817e7",
+      "generated_at": "2026-08-25T11:19:06.311545+08:00",
+      "providers": {
+        "tencent_fqkline": {
+          "success": 22,
+          "failure": 0,
+          "domains": [
+            "a_share_daily",
+            "hk_daily",
+            "us_daily"
+          ]
+        },
+        "akshare": {
+          "success": 13,
+          "failure": 11,
+          "domains": [
+            "a_share_daily",
+            "funds",
+            "gold"
+          ]
+        },
+        "sge_official_http": {
+          "success": 1,
+          "failure": 0,
+          "domains": [
+            "gold"
+          ]
+        },
+        "gold_consensus": {
+          "success": 1,
+          "failure": 0,
+          "domains": [
+            "gold"
+          ]
+        },
+        "yfinance": {
+          "success": 1,
+          "failure": 2,
+          "domains": [
+            "a_share_daily",
+            "gold"
+          ]
+        },
+        "tencent_mkline": {
+          "success": 1,
+          "failure": 0,
+          "domains": [
+            "a_share_minute"
+          ]
+        },
+        "tushare": {
+          "success": 0,
+          "failure": 5,
+          "domains": [
+            "a_share_daily",
+            "a_share_minute",
+            "gold",
+            "hk_daily",
+            "us_daily"
+          ]
+        },
+        "eastmoney": {
+          "success": 0,
+          "failure": 11,
+          "domains": [
+            "a_share_daily"
+          ]
+        }
+      },
+      "provider_domains": {
+        "tencent_fqkline/a_share_daily": {
+          "provider": "tencent_fqkline",
+          "domain": "a_share_daily",
+          "success": 12,
+          "failure": 0
+        },
+        "tencent_fqkline/hk_daily": {
+          "provider": "tencent_fqkline",
+          "domain": "hk_daily",
+          "success": 6,
+          "failure": 0
+        },
+        "tencent_fqkline/us_daily": {
+          "provider": "tencent_fqkline",
+          "domain": "us_daily",
+          "success": 4,
+          "failure": 0
+        },
+        "akshare/funds": {
+          "provider": "akshare",
+          "domain": "funds",
+          "success": 12,
+          "failure": 0
+        },
+        "sge_official_http/gold": {
+          "provider": "sge_official_http",
+          "domain": "gold",
+          "success": 1,
+          "failure": 0
+        },
+        "akshare/gold": {
+          "provider": "akshare",
+          "domain": "gold",
+          "success": 1,
+          "failure": 0
+        },
+        "gold_consensus/gold": {
+          "provider": "gold_consensus",
+          "domain": "gold",
+          "success": 1,
+          "failure": 0
+        },
+        "yfinance/gold": {
+          "provider": "yfinance",
+          "domain": "gold",
+          "success": 1,
+          "failure": 0
+        },
+        "tencent_mkline/a_share_minute": {
+          "provider": "tencent_mkline",
+          "domain": "a_share_minute",
+          "success": 1,
+          "failure": 0
+        },
+        "tushare/a_share_daily": {
+          "provider": "tushare",
+          "domain": "a_share_daily",
+          "success": 0,
+          "failure": 1
+        },
+        "akshare/a_share_daily": {
+          "provider": "akshare",
+          "domain": "a_share_daily",
+          "success": 0,
+          "failure": 11
+        },
+        "eastmoney/a_share_daily": {
+          "provider": "eastmoney",
+          "domain": "a_share_daily",
+          "success": 0,
+          "failure": 11
+        },
+        "yfinance/a_share_daily": {
+          "provider": "yfinance",
+          "domain": "a_share_daily",
+          "success": 0,
+          "failure": 2
+        },
+        "tushare/hk_daily": {
+          "provider": "tushare",
+          "domain": "hk_daily",
+          "success": 0,
+          "failure": 1
+        },
+        "tushare/us_daily": {
+          "provider": "tushare",
+          "domain": "us_daily",
+          "success": 0,
+          "failure": 1
+        },
+        "tushare/gold": {
+          "provider": "tushare",
+          "domain": "gold",
+          "success": 0,
+          "failure": 1
+        },
+        "tushare/a_share_minute": {
+          "provider": "tushare",
+          "domain": "a_share_minute",
+          "success": 0,
+          "failure": 1
+        }
+      },
+      "circuit_telemetry": {
+        "eastmoney_a_daily": {
+          "provider": "eastmoney",
+          "evidence_scope": "provider_domain:a_share_daily",
+          "armed_from_prior_stability": false,
+          "canary_attempted": false,
+          "canary_succeeded": null,
+          "tripped": false,
+          "attempted_calls": 0,
+          "successful_calls": 0,
+          "failed_calls": 0,
+          "empty_calls": 0,
+          "skipped_calls": 0,
+          "policy": "one live canary per run when prior scoped stability is severely degraded; retry every run"
+        },
+        "akshare_a_daily": {
+          "provider": "akshare",
+          "evidence_scope": "provider_domain:a_share_daily",
+          "armed_from_prior_stability": false,
+          "canary_attempted": false,
+          "canary_succeeded": null,
+          "tripped": false,
+          "attempted_calls": 0,
+          "successful_calls": 0,
+          "failed_calls": 0,
+          "empty_calls": 0,
+          "skipped_calls": 0,
+          "policy": "one live canary per run when prior scoped stability is severely degraded; retry every run"
+        }
+      }
+    },
+    {
+      "run_id": "ea744fad855f6e0f",
+      "generated_at": "2026-08-25T11:29:34.204488+08:00",
+      "providers": {
+        "tencent_fqkline": {
+          "success": 22,
+          "failure": 0,
+          "domains": [
+            "a_share_daily",
+            "hk_daily",
+            "us_daily"
+          ]
+        },
+        "akshare": {
+          "success": 14,
+          "failure": 9,
+          "domains": [
+            "a_share_daily",
+            "a_share_minute",
+            "funds",
+            "gold"
+          ]
+        },
+        "sge_official_http": {
+          "success": 1,
+          "failure": 0,
+          "domains": [
+            "gold"
+          ]
+        },
+        "gold_consensus": {
+          "success": 1,
+          "failure": 0,
+          "domains": [
+            "gold"
+          ]
+        },
+        "yfinance": {
+          "success": 1,
+          "failure": 0,
+          "domains": [
+            "gold"
+          ]
+        },
+        "tushare": {
+          "success": 0,
+          "failure": 5,
+          "domains": [
+            "a_share_daily",
+            "a_share_minute",
+            "gold",
+            "hk_daily",
+            "us_daily"
+          ]
+        },
+        "eastmoney": {
+          "success": 0,
+          "failure": 9,
+          "domains": [
+            "a_share_daily"
+          ]
+        }
+      },
+      "provider_domains": {
+        "tencent_fqkline/a_share_daily": {
+          "provider": "tencent_fqkline",
+          "domain": "a_share_daily",
+          "success": 12,
+          "failure": 0
+        },
+        "tencent_fqkline/hk_daily": {
+          "provider": "tencent_fqkline",
+          "domain": "hk_daily",
+          "success": 6,
+          "failure": 0
+        },
+        "tencent_fqkline/us_daily": {
+          "provider": "tencent_fqkline",
+          "domain": "us_daily",
+          "success": 4,
+          "failure": 0
+        },
+        "akshare/funds": {
+          "provider": "akshare",
+          "domain": "funds",
+          "success": 12,
+          "failure": 0
+        },
+        "sge_official_http/gold": {
+          "provider": "sge_official_http",
+          "domain": "gold",
+          "success": 1,
+          "failure": 0
+        },
+        "akshare/gold": {
+          "provider": "akshare",
+          "domain": "gold",
+          "success": 1,
+          "failure": 0
+        },
+        "gold_consensus/gold": {
+          "provider": "gold_consensus",
+          "domain": "gold",
+          "success": 1,
+          "failure": 0
+        },
+        "yfinance/gold": {
+          "provider": "yfinance",
+          "domain": "gold",
+          "success": 1,
+          "failure": 0
+        },
+        "akshare/a_share_minute": {
+          "provider": "akshare",
+          "domain": "a_share_minute",
+          "success": 1,
+          "failure": 0
+        },
+        "tushare/a_share_daily": {
+          "provider": "tushare",
+          "domain": "a_share_daily",
+          "success": 0,
+          "failure": 1
+        },
+        "akshare/a_share_daily": {
+          "provider": "akshare",
+          "domain": "a_share_daily",
+          "success": 0,
+          "failure": 9
+        },
+        "eastmoney/a_share_daily": {
+          "provider": "eastmoney",
+          "domain": "a_share_daily",
+          "success": 0,
+          "failure": 9
+        },
+        "tushare/hk_daily": {
+          "provider": "tushare",
+          "domain": "hk_daily",
+          "success": 0,
+          "failure": 1
+        },
+        "tushare/us_daily": {
+          "provider": "tushare",
+          "domain": "us_daily",
+          "success": 0,
+          "failure": 1
+        },
+        "tushare/gold": {
+          "provider": "tushare",
+          "domain": "gold",
+          "success": 0,
+          "failure": 1
+        },
+        "tushare/a_share_minute": {
+          "provider": "tushare",
+          "domain": "a_share_minute",
+          "success": 0,
+          "failure": 1
+        }
+      },
+      "circuit_telemetry": {
+        "eastmoney_a_daily": {
+          "provider": "eastmoney",
+          "evidence_scope": "provider_domain:a_share_daily",
+          "armed_from_prior_stability": false,
+          "canary_attempted": false,
+          "canary_succeeded": null,
+          "tripped": false,
+          "attempted_calls": 0,
+          "successful_calls": 0,
+          "failed_calls": 0,
+          "empty_calls": 0,
+          "skipped_calls": 0,
+          "policy": "one live canary per run when prior scoped stability is severely degraded; retry every run"
+        },
+        "akshare_a_daily": {
+          "provider": "akshare",
+          "evidence_scope": "provider_domain:a_share_daily",
+          "armed_from_prior_stability": false,
+          "canary_attempted": false,
+          "canary_succeeded": null,
+          "tripped": false,
+          "attempted_calls": 0,
+          "successful_calls": 0,
+          "failed_calls": 0,
+          "empty_calls": 0,
+          "skipped_calls": 0,
+          "policy": "one live canary per run when prior scoped stability is severely degraded; retry every run"
+        }
+      }
+    }
+  ],
+  "semantics": "Operational stability telemetry only. Provider-level history remains backward-compatible; provider-domain statistics are evidence-based only for runs that contain provider_domains. When active circuit attempt telemetry exists it is authoritative for that provider/domain, preventing post-fetch provider promotion from hiding successful intermediate attempts. Telemetry never upgrades a provider to trusted status without separate quality and cross-source validation."
+}

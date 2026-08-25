@@ -1,0 +1,37 @@
+{
+  "generated_at": "2026-08-25T11:29:29.237503+08:00",
+  "schema_version": 2,
+  "status": "validated_consensus",
+  "required_sources": 2,
+  "available_sources": 2,
+  "fresh_sources": 2,
+  "max_source_diff_pct": 2.0,
+  "max_source_age_seconds": 900,
+  "source_diff_pct": 0.0619,
+  "consensus_price": 4637.565,
+  "observation_at": "2026-08-25T03:29:03.181966+00:00",
+  "observations": [
+    {
+      "provider": "goldprice.dev",
+      "price": 4636.13,
+      "as_of": "2026-08-25T03:29:03.181966+00:00",
+      "stale": false,
+      "parsed_as_of": "2026-08-25T03:29:03.181966+00:00",
+      "age_seconds": 26.1,
+      "time_integrity": "fresh"
+    },
+    {
+      "provider": "xaus.com",
+      "price": 4639.0,
+      "as_of": "2026-08-25T03:29:32.453Z",
+      "stale": false,
+      "source_status": "fresh",
+      "parsed_as_of": "2026-08-25T03:29:32.453000+00:00",
+      "age_seconds": -3.2,
+      "time_integrity": "fresh"
+    }
+  ],
+  "errors": [],
+  "promotion_status": "VALIDATED_PUBLIC_SPOT_FALLBACK",
+  "semantics": "Two-source XAU/USD spot consensus. Promotion requires both sources to have valid evidence timestamps, be within the age/skew limits, and agree within price tolerance. The source observation time—not the script run date—is authoritative. This never invents XAU history or a bank executable quote."
+}

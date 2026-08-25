@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T15:41:16.718650+08:00",
+  "generated_at": "2026-08-25T17:26:36.428133+08:00",
   "schema_version": 1,
   "status": "RESEARCH_ONLY",
   "tool": {
@@ -29,8 +29,8 @@
     {
       "market": "HK",
       "calendar": "HKEX",
-      "last_completed_session": "2026-08-24",
-      "next_or_current_unfinished_session": "2026-08-25",
+      "last_completed_session": "2026-08-25",
+      "next_or_current_unfinished_session": "2026-08-26",
       "symbols": 6,
       "missing_history": 0,
       "stale_symbols": 0,
@@ -174,7 +174,7 @@
       "scope": "hk_research",
       "calendar": "HKEX",
       "latest_history_date": "2026-08-25",
-      "last_completed_session": "2026-08-24",
+      "last_completed_session": "2026-08-25",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
     },
@@ -184,7 +184,7 @@
       "scope": "hk_research",
       "calendar": "HKEX",
       "latest_history_date": "2026-08-25",
-      "last_completed_session": "2026-08-24",
+      "last_completed_session": "2026-08-25",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
     },
@@ -194,7 +194,7 @@
       "scope": "hk_research",
       "calendar": "HKEX",
       "latest_history_date": "2026-08-25",
-      "last_completed_session": "2026-08-24",
+      "last_completed_session": "2026-08-25",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
     },
@@ -204,7 +204,7 @@
       "scope": "hk_research",
       "calendar": "HKEX",
       "latest_history_date": "2026-08-25",
-      "last_completed_session": "2026-08-24",
+      "last_completed_session": "2026-08-25",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
     },
@@ -214,7 +214,7 @@
       "scope": "hk_research",
       "calendar": "HKEX",
       "latest_history_date": "2026-08-25",
-      "last_completed_session": "2026-08-24",
+      "last_completed_session": "2026-08-25",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
     },
@@ -224,7 +224,7 @@
       "scope": "hk_research",
       "calendar": "HKEX",
       "latest_history_date": "2026-08-25",
-      "last_completed_session": "2026-08-24",
+      "last_completed_session": "2026-08-25",
       "session_lag": 0,
       "status": "CURRENT_TO_LAST_COMPLETED_SESSION"
     },

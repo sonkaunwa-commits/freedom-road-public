@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T15:41:33.516470+08:00",
+  "generated_at": "2026-08-25T17:27:01.104658+08:00",
   "schema_version": 1,
   "evidence_status": "READY_RESEARCH_ONLY",
   "production_use": "RESEARCH_ONLY",
@@ -218,9 +218,9 @@
       "above_ma20_pct": 16.67,
       "above_ma60_pct": 33.33,
       "positive_20d_pct": 33.33,
-      "median_return_20d_pct": -2.7843,
-      "median_return_60d_pct": -8.0815,
-      "median_drawdown_60d_pct": -14.0289
+      "median_return_20d_pct": -2.7712,
+      "median_return_60d_pct": -8.0189,
+      "median_drawdown_60d_pct": -13.9745
     },
     {
       "market": "US",

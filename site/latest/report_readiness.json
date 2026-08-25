@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-25T15:41:33.879619+08:00",
+  "generated_at": "2026-08-25T17:27:01.888933+08:00",
   "schema_version": 6,
-  "source_health_updated_at": "2026-08-25T15:39:14.404873+08:00",
+  "source_health_updated_at": "2026-08-25T17:24:34.489093+08:00",
   "delivery_mode_17": "FULL_REPORT_WITH_EXPLICIT_DEGRADATIONS",
   "a_share_exact_action_gate": {
     "ready": true,
@@ -66,7 +66,7 @@
       "max_lag_minutes": 6,
       "rows": 1687,
       "probe": false,
-      "elapsed_ms": 4186.0,
+      "elapsed_ms": 5583.7,
       "per_symbol": {
         "600006.SH": {
           "symbol": "sh600006",
@@ -234,13 +234,13 @@
   },
   "analysis_engine": {
     "stage": "STAGE_1_RUNNING",
-    "generated_at": "2026-08-25T15:40:08.763400+08:00",
+    "generated_at": "2026-08-25T17:25:34.642308+08:00",
     "stage1_fund_ready": true,
     "stage1_a_share_history_ready": true,
     "stage2_vectorbt_daily_pilot_ready": true,
     "stage2_daily_pilot": {
       "status": "STAGE_2_DAILY_PILOT_RUNNING",
-      "generated_at": "2026-08-25T15:41:27.879568+08:00",
+      "generated_at": "2026-08-25T17:26:52.050155+08:00",
       "research_core_ready": true,
       "coverage": {
         "a_research_core_ok": 7,
@@ -312,7 +312,7 @@
   },
   "evidence_packet": {
     "status": "READY_RESEARCH_ONLY",
-    "generated_at": "2026-08-25T15:41:33.516470+08:00",
+    "generated_at": "2026-08-25T17:27:01.104658+08:00",
     "production_use": "RESEARCH_ONLY"
   },
   "content_contract": {
@@ -407,16 +407,16 @@
     "expected_latest_bar_at": "2026-08-25T15:00:00+08:00",
     "semantics": "This is a public market-data gate only. It never authorizes or executes a trade."
   },
-  "freshness_hardening_updated_at": "2026-08-25T15:41:33.919097+08:00",
+  "freshness_hardening_updated_at": "2026-08-25T17:27:01.956785+08:00",
   "data_health_gate": {
     "status": "degraded",
     "ready": false,
     "blockers": [
       "CANDIDATE_SCAN_DEGRADED"
     ],
-    "generated_at": "2026-08-25T15:39:19.726396+08:00",
-    "run_id": "417e951b7fe2ac42",
+    "generated_at": "2026-08-25T17:24:39.023436+08:00",
+    "run_id": "908aa552a7ad3dc8",
     "semantics": "Report readiness must fail closed when the first-class data-health layer is degraded. This gate propagates provider/freshness/reference degradations; it never creates a trade signal."
   },
-  "data_health_gate_updated_at": "2026-08-25T15:41:33.973348+08:00"
+  "data_health_gate_updated_at": "2026-08-25T17:27:02.084023+08:00"
 }

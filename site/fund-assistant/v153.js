@@ -13,9 +13,9 @@ function phase(){const p=bj(),m=p.h*60+p.min;if(!tradeDay(p))return'closed';if(m
 function code(){return(q('#detailSubtitle')?.textContent||'').trim()}
 function dateCN(key=bj().key){const m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(String(key||''));return m?`${m[1]}年${m[2]}月${m[3]}日`:String(key||'')}
 function fmtNav(v){const n=Number(v);return Number.isFinite(n)?n.toFixed(4):'—'}
-function freshCN(v){return v==='fresh'?'数据正常':v==='partial'?'部分基金数据':v==='unavailable'?'数据不可用':'状态待确认'}
-function sourceCN(v){return v==='eastmoney_fundgz_public'?'公开基金盘中估算源':(v?'公开数据源':'来源待确认')}
 function currentLocalSamples(c){const p=bj();try{return JSON.parse(localStorage.getItem(`fund_intraday_v14_${p.key}_${c}`)||'[]')}catch{return[]}}
+function freshnessCN(v){return({fresh:'数据正常',partial:'部分数据',stale:'数据较旧',unavailable:'暂不可用',unknown:'状态待确认'})[v]||'状态待确认'}
+function sourceCN(v){return v==='eastmoney_fundgz_public'?'公开基金估算源':(v||'公开数据源')}
 
 async function loadServer(force=false){
  if(serverPromise&&!force)return serverPromise;
@@ -30,20 +30,6 @@ async function loadServer(force=false){
 function rowFor(c){return serverDoc?.funds?.find(x=>String(x.code)===String(c))||null}
 function todayServerRow(c){const p=bj();if(serverDoc?.trade_date!==p.key)return null;const row=rowFor(c);if(!row)return null;const pts=(row.points||[]).filter(x=>x?.sample_time&&Number.isFinite(Number(x.estimate_nav)));return pts.length?{...row,points:pts}:null}
 function oldServerDate(){const d=serverDoc?.trade_date,p=bj();return d&&d!==p.key?d:null}
-
-function enhanceLunchState(){
- if(phase()!=='lunch')return;
- const badge=q('#marketBadge');if(badge){badge.textContent='午间休市';badge.className='badge after'}
- if(q('#todayHeadline'))q('#todayHeadline').textContent='午间休市，13:00开盘后再看';
- if(q('#todaySummary'))q('#todaySummary').textContent='上午交易已经结束。盘中估算通常停在上午最后一个有效值，13:00以后再继续更新；午休期间不要把静止的旧值理解成行情仍在变化。';
- if(q('#liveFreshness'))q('#liveFreshness').textContent='午间暂停 · 13:00后继续';
- if(q('#nextRefresh'))q('#nextRefresh').textContent='13:00开盘后';
- const body=q('#detailBody');if(!body)return;
- const first=body.querySelector('.detail-card.action');
- if(first&&!first.querySelector('.lunch-note-v153')){
-   const n=document.createElement('div');n.className='lunch-note-v153';n.textContent='午间休市：上午盘已结束，13:00开盘后再复核盘中位置。';first.appendChild(n)
- }
-}
 
 function findCard(){
  let card=qa('#detailBody .detail-card').find(x=>x.querySelector('.intraday-v152-head'));
@@ -61,15 +47,15 @@ function statusText(row){
  if(ph==='closed')return'今日休市';
  if(ph==='pre')return'9:30后开始';
  if(ph==='lunch')return last?`午间休市 · 最近 ${last}`:'午间休市';
- if(ph==='morning'||ph==='afternoon')return last?`服务器已更新 ${last}`:'等待服务器采样';
+ if(ph==='morning'||ph==='afternoon')return last?`已更新 ${last}`:'等待服务器采样';
  if(ph==='after')return last?`今日已结束 · 最后 ${last}`:'今日盘中已结束';
  return'等待数据';
 }
 function statusClass(){const ph=phase();return ph==='morning'||ph==='afternoon'?'live':ph==='pre'?'wait':'closed'}
 function coverageText(row){
  const c=row?.coverage||{},n=(row?.points||[]).length;
- if(c.reasonably_full_day)return`较完整服务器盘中记录 · ${n} 个点`;
- if(n)return`部分服务器盘中采样 · ${n} 个点`;
+ if(c.reasonably_full_day)return`较完整全天记录 · ${n} 个点`;
+ if(n)return`已记录 ${n} 个盘中点`;
  return'暂无服务器采样';
 }
 function hideBrowserChart(card,hide){
@@ -85,7 +71,7 @@ function renderServer(card,row){
  hideBrowserChart(card,true);
  let box=card.querySelector('.server-intraday-v153');if(!box){box=document.createElement('div');box.className='server-intraday-v153';card.appendChild(box)}
  const pts=row.points||[],first=pts[0],last=pts[pts.length-1],fresh=serverDoc?.freshness||'unknown';
- box.innerHTML=`<div class="server-head"><div><b>今日实时参考走势（${dateCN()}）</b><span>服务器盘中采样 · ${esc(coverageText(row))}</span></div><span class="intraday-status ${statusClass()}">${esc(statusText(row))}</span></div>${chart(pts)}<div class="server-meta"><span>区间 ${esc(first?.sample_time||'—')}–${esc(last?.sample_time||'—')}</span><span>来源 ${esc(sourceCN(row.source||serverDoc?.source))}</span><span>状态 ${esc(freshCN(fresh))}</span></div><div class="server-note"><b>盘中估算，不是最终净值。</b>服务器按计划持续采样，但公开数据源和定时任务可能延迟或缺点，所以页面会明确标成“部分”或“较完整”，不会把缺点曲线说成完整全天行情。</div>`;
+ box.innerHTML=`<div class="server-head"><div><b>今日实时参考走势（${dateCN()}）</b><span>全天自动记录 · ${esc(coverageText(row))}</span></div><span class="intraday-status ${statusClass()}">${esc(statusText(row))}</span></div>${chart(pts)}<div class="server-meta"><span>记录区间 ${esc(first?.sample_time||'—')}–${esc(last?.sample_time||'—')}</span><span>${esc(sourceCN(row.source||serverDoc?.source))}</span><span>${esc(freshnessCN(fresh))}</span></div><div class="server-note"><b>盘中估算，不是最终净值。</b>系统会在交易时段自动记录。免费数据源偶尔可能延迟或缺少个别点，页面会如实显示“已记录多少个点”，不会把不完整数据说成完整全天行情。</div>`;
  const old=card.querySelector('.intraday-v152-head');if(old)old.style.display='none';
 }
 function renderFallback(card,c){
@@ -95,9 +81,10 @@ function renderFallback(card,c){
  let n=card.querySelector('.server-fallback-v153');if(!n){n=document.createElement('div');n.className='server-fallback-v153';card.appendChild(n)}
  const prior=oldServerDate(),local=currentLocalSamples(c),ph=phase();
  let html='';
- if(prior)html=`服务器最近一次盘中记录是 <b>${esc(prior)}</b>，不是今天，所以不会拿它冒充今日实时数据。${local.length?` 当前图仍使用本机今天已记录的 ${local.length} 个采样点。`:''}`;
- else if(serverState==='unavailable')html='服务器盘中历史暂时不可用；当前继续使用本页面打开后产生的本机采样，不影响正式净值和历史趋势查看。';
- else if(ph==='morning'||ph==='afternoon'||ph==='lunch')html='今天服务器暂未形成这只基金的有效盘中记录；当前继续使用本页面采样，等服务器真实数据到达后再切换。';
+ if(prior)html=`最近一次服务器盘中记录是 <b>${esc(prior)}</b>，不是今天，所以不会拿它冒充今日实时数据。${local.length?` 当前图仍使用本机今天已记录的 ${local.length} 个采样点。`:''}`;
+ else if(serverState==='unavailable')html='全天自动记录暂时不可用；当前继续使用本页面打开后产生的本机采样，不影响正式净值和历史趋势查看。';
+ else if(ph==='lunch')html='现在是午间休市。上午最后一个估算可能暂时不再变化，13:00开盘后系统会继续记录；当前仍可查看本页面已经保存的盘中点。';
+ else if(ph==='morning'||ph==='afternoon')html='今天服务器暂未形成这只基金的有效盘中记录；当前继续使用本页面采样，等当天有效数据到达后会自动切换。';
  else html='当前没有需要展示的服务器当日盘中历史。';
  if(n.innerHTML!==html)n.innerHTML=html;
 }
@@ -107,10 +94,15 @@ async function enhanceServerCurve(force=false){
  const seq=++detailSeq;if(force||serverState==='idle')await loadServer(force);if(seq!==detailSeq||c!==code())return;
  const row=todayServerRow(c);if(row)renderServer(card,row);else renderFallback(card,c);
 }
-function releaseMarker(){document.body.dataset.release=RELEASE;let s=q('#v153Candidate');if(!s){s=document.createElement('span');s.id='v153Candidate';s.className='candidate-marker';s.textContent='15.3 候选 · 服务器盘中曲线待实盘验收';q('.app-head>div')?.appendChild(s)}}
-function apply(){releaseMarker();enhanceLunchState();enhanceServerCurve(false)}
+function releaseMarker(){
+ document.body.dataset.release=RELEASE;
+ const old=q('#v152Release');if(old)old.style.display='none';
+ let s=q('#v153Candidate');if(!s){s=document.createElement('span');s.id='v153Candidate';s.className='candidate-marker';q('.app-head>div')?.appendChild(s)}
+ s.textContent='稳定版 15.3 · 全天盘中记录';
+}
+function apply(){releaseMarker();enhanceServerCurve(false)}
 let scheduled=false;function schedule(){if(scheduled)return;scheduled=true;requestAnimationFrame(()=>{scheduled=false;apply()})}
 const obs=new MutationObserver(schedule);
 document.addEventListener('DOMContentLoaded',()=>{apply();const b=q('#detailBody');if(b)obs.observe(b,{childList:true,subtree:false});q('#detailRefresh')?.addEventListener('click',()=>setTimeout(()=>enhanceServerCurve(true),900))});
-setTimeout(apply,900);setInterval(()=>{enhanceLunchState();enhanceServerCurve(true)},10*60*1000);
+setTimeout(apply,900);setInterval(()=>enhanceServerCurve(true),10*60*1000);
 })();

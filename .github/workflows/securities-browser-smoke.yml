@@ -1,0 +1,53 @@
+name: securities-browser-smoke
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - site/securities-exam/**
+      - site/ks/**
+      - scripts/securities-browser-smoke.cjs
+      - .github/workflows/securities-browser-smoke.yml
+
+permissions:
+  contents: read
+
+concurrency:
+  group: securities-browser-smoke
+  cancel-in-progress: true
+
+jobs:
+  browser-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install browser test runtime
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f package.json || npm init -y >/dev/null
+          npm install --no-save --package-lock=false playwright@1.55.0
+          npx playwright install --with-deps chromium
+      - name: Wait for recovery release on real Pages
+        shell: bash
+        run: |
+          set -euo pipefail
+          base='https://sonkaunwa-commits.github.io/freedom-road-public'
+          ok=false
+          for attempt in {1..72}; do
+            ks="$(curl -fsSL --max-time 20 "$base/ks/?browserwait=${GITHUB_SHA}-$attempt" 2>/dev/null || true)"
+            boot="$(curl -fsSL --max-time 20 "$base/securities-exam/boot.html?browserwait=${GITHUB_SHA}-$attempt" 2>/dev/null || true)"
+            sw="$(curl -fsSL --max-time 20 "$base/securities-exam/sw.js?browserwait=${GITHUB_SHA}-$attempt" 2>/dev/null || true)"
+            if grep -Fq 'boot.html?v=20260825-r2' <<<"$ks" && grep -Fq 'RECOVERY ENTRY' <<<"$boot" && grep -Fq 'sec2026-v361-recovery' <<<"$sw"; then ok=true; break; fi
+            sleep 5
+          done
+          [[ "$ok" == true ]] || { echo 'Recovery release not live before browser smoke' >&2; exit 1; }
+      - name: Run real Chromium smoke
+        env:
+          SECURITIES_BASE: https://sonkaunwa-commits.github.io/freedom-road-public
+        run: node scripts/securities-browser-smoke.cjs

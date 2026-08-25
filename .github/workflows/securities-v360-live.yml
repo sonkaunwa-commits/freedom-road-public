@@ -22,32 +22,48 @@ jobs:
     timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
-      - name: Verify v3.6 static snapshot
+      - name: Verify v3.6 static snapshot and recovery entry
         shell: bash
         run: |
           set -euo pipefail
           grep -Fq 'v3.6.0' site/ks/index.html
+          grep -Fq 'securities-exam/boot.html?v=20260825-r2' site/ks/index.html
           grep -Fq 'data-product-version="3.6.0"' site/securities-exam/index.html
-          for f in product-core-v350.js product-v350.js product-v350.css learning-content-v360.js content-bridge-v360.js release-v360.js release-v360.css sources-data-v350.js sw.js; do test -f "site/securities-exam/$f"; done
+          for f in boot.html product-core-v350.js product-v350.js product-v350.css learning-content-v360.js content-bridge-v360.js release-v360.js release-v360.css profile-sync-v360.js ui-tune-v360.css sources-data-v350.js sw.js; do test -f "site/securities-exam/$f"; done
           grep -Fq "VERSION='3.6.0'" site/securities-exam/product-core-v350.js
           grep -Fq "const VERSION='3.6.0'" site/securities-exam/release-v360.js
           grep -Fq 'SEC_SOURCE_CONTENT_V360' site/securities-exam/learning-content-v360.js
           grep -Fq 'bilibili-finance-learning-v1.json' site/securities-exam/content-bridge-v360.js
           grep -Fq 'bilibili-law-learning-v1.json' site/securities-exam/content-bridge-v360.js
-          grep -Fq "const CACHE='sec2026-v360'" site/securities-exam/sw.js
+          grep -Fq "const CACHE='sec2026-v361-recovery'" site/securities-exam/sw.js
+          grep -Fq "'./boot.html'" site/securities-exam/sw.js
+          grep -Fq 'RECOVERY ENTRY' site/securities-exam/boot.html
           ! grep -Fq 'setInterval(' site/securities-exam/release-v360.js
           node --check site/securities-exam/product-core-v350.js
           node --check site/securities-exam/learning-content-v360.js
           node --check site/securities-exam/content-bridge-v360.js
+          node --check site/securities-exam/product-v350.js
           node --check site/securities-exam/release-v360.js
+          node --check site/securities-exam/profile-sync-v360.js
+          node --check site/securities-exam/sw.js
           python3 - <<'PY'
+          import re
           from pathlib import Path
-          s=Path('site/securities-exam/learning-content-v360.js').read_text(encoding='utf-8')
+          base=Path('site/securities-exam')
+          html=(base/'index.html').read_text(encoding='utf-8')
+          for asset in sorted(set(re.findall(r'(?:src|href)="\./([^"?]+\.(?:js|css|webmanifest))',html))):
+              assert (base/asset).is_file(), asset
+          boot=(base/'boot.html').read_text(encoding='utf-8')
+          m=re.search(r'<script>\s*(.*?)\s*</script>',boot,re.S)
+          assert m, 'boot inline script missing'
+          Path('/tmp/securities-boot.js').write_text(m.group(1),encoding='utf-8')
+          s=(base/'learning-content-v360.js').read_text(encoding='utf-8')
           assert s.count("sourceKind:'user-material-derived'") >= 20
           assert 'count:cards.length' in s
-          print('v3.6 static securities snapshot PASS')
+          print('v3.6 static securities snapshot + recovery entry PASS')
           PY
-      - name: Wait for GitHub Pages and smoke v3.6
+          node --check /tmp/securities-boot.js
+      - name: Wait for GitHub Pages and smoke real v3.6 endpoints
         shell: bash
         run: |
           set -euo pipefail
@@ -57,13 +73,25 @@ jobs:
           for attempt in {1..72}; do
             html="$(get 'securities-exam/' "$attempt")"
             ks="$(get 'ks/' "$attempt")"
+            boot="$(get 'securities-exam/boot.html' "$attempt")"
             sw="$(get 'securities-exam/sw.js' "$attempt")"
             rel="$(get 'securities-exam/release-v360.js' "$attempt")"
             learn="$(get 'securities-exam/learning-content-v360.js' "$attempt")"
-            if grep -Fq 'data-product-version="3.6.0"' <<<"$html" && grep -Fq 'release-v360.js?v=360' <<<"$html" && grep -Fq 'v3.6.0' <<<"$ks" && grep -Fq 'sec2026-v360' <<<"$sw" && grep -Fq "const VERSION='3.6.0'" <<<"$rel" && grep -Fq 'SEC_SOURCE_CONTENT_V360' <<<"$learn"; then ok=true; break; fi
+            profile="$(get 'securities-exam/profile-sync-v360.js' "$attempt")"
+            if grep -Fq 'data-product-version="3.6.0"' <<<"$html" && grep -Fq 'release-v360.js?v=360' <<<"$html" && grep -Fq 'boot.html?v=20260825-r2' <<<"$ks" && grep -Fq 'RECOVERY ENTRY' <<<"$boot" && grep -Fq 'sec2026-v361-recovery' <<<"$sw" && grep -Fq "const VERSION='3.6.0'" <<<"$rel" && grep -Fq 'SEC_SOURCE_CONTENT_V360' <<<"$learn" && grep -Fq 'cloudSync:false' <<<"$profile"; then ok=true; break; fi
             sleep 5
           done
-          [[ "$ok" == true ]] || { echo 'Public v3.6 did not become live in time' >&2; exit 1; }
+          [[ "$ok" == true ]] || { echo 'Public v3.6 recovery release did not become live in time' >&2; exit 1; }
+          python3 - <<'PY' >/tmp/securities-assets
+          import re
+          from pathlib import Path
+          html=Path('site/securities-exam/index.html').read_text(encoding='utf-8')
+          for x in sorted(set(re.findall(r'(?:src|href)="\./([^"?]+\.(?:js|css|webmanifest))',html))): print(x)
+          PY
+          while IFS= read -r asset; do
+            body="$(get "securities-exam/$asset" "asset")"
+            [[ -n "$body" ]] || { echo "Public asset failed: $asset" >&2; exit 1; }
+          done </tmp/securities-assets
       - name: Write securities v3.6 live certificate
         shell: bash
         run: |
@@ -82,11 +110,12 @@ jobs:
           source_grounded_cards=24+
           kdocs_sources=17
           courses=finance+law
-          cache=sec2026-v360
+          cache=sec2026-v361-recovery
+          recovery_entry=securities-exam/boot.html
           url=https://sonkaunwa-commits.github.io/freedom-road-public/ks/
           verified_at=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
           EOF
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add release-status/securities-exam.txt
-          if ! git diff --cached --quiet; then git commit -m 'status: certify securities v3.6.0 live'; git push; fi
+          if ! git diff --cached --quiet; then git commit -m 'status: certify securities v3.6.0 recovery release'; git push; fi

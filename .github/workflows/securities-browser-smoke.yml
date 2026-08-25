@@ -20,7 +20,7 @@ concurrency:
 jobs:
   browser-smoke:
     runs-on: ubuntu-latest
-    timeout-minutes: 18
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -33,7 +33,7 @@ jobs:
           set -euo pipefail
           test -f package.json || npm init -y >/dev/null
           npm install --no-save --package-lock=false playwright@1.55.0
-          npx playwright install --with-deps chromium
+          npx playwright install --with-deps chromium webkit
       - name: Wait for recovery release on real Pages
         id: live
         shell: bash
@@ -45,11 +45,11 @@ jobs:
             ks="$(curl -fsSL --max-time 20 "$base/ks/?browserwait=${GITHUB_SHA}-$attempt" 2>/dev/null || true)"
             boot="$(curl -fsSL --max-time 20 "$base/securities-exam/boot.html?browserwait=${GITHUB_SHA}-$attempt" 2>/dev/null || true)"
             sw="$(curl -fsSL --max-time 20 "$base/securities-exam/sw.js?browserwait=${GITHUB_SHA}-$attempt" 2>/dev/null || true)"
-            if grep -Fq 'boot.html?v=20260825-r2' <<<"$ks" && grep -Fq 'RECOVERY ENTRY' <<<"$boot" && grep -Fq 'sec2026-v361-recovery' <<<"$sw"; then ok=true; break; fi
+            if grep -Fq 'boot.html?v=20260825-r3' <<<"$ks" && grep -Fq 'setTimeout(enter,5000)' <<<"$boot" && grep -Fq 'sec2026-v361-recovery' <<<"$sw"; then ok=true; break; fi
             sleep 5
           done
-          [[ "$ok" == true ]] || { echo 'Recovery release not live before browser smoke' >&2; exit 1; }
-      - name: Run real Chromium smoke
+          [[ "$ok" == true ]] || { echo 'Non-blocking recovery release not live before browser smoke' >&2; exit 1; }
+      - name: Run real Chromium and WebKit smoke
         id: smoke
         continue-on-error: true
         env:
@@ -72,17 +72,18 @@ jobs:
           cat > release-status/securities-browser-smoke.txt <<EOF
           status=${overall}
           tested_sha=${GITHUB_SHA}
-          browser=chromium
+          browsers=chromium+webkit
           install=${INSTALL_OUTCOME}
           live_wait=${LIVE_OUTCOME}
           browser_smoke=${SMOKE_OUTCOME}
-          desktop=direct-securities-exam-home+knowledge+practice+profiles+pin
-          mobile=ks-recovery+home+knowledge
+          desktop=chromium-direct-home+knowledge+practice+profiles+pin
+          mobile=chromium-ks-recovery+webkit-iphone-ks-recovery+home+knowledge
           typography=desktop14+mobile17+
+          recovery=non-blocking-r3
           cloud_sync=false
           verified_at=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
           EOF
-          if [[ -f /tmp/securities-browser-smoke.log ]]; then tail -n 30 /tmp/securities-browser-smoke.log > release-status/securities-browser-smoke.log; else echo 'browser smoke did not start' > release-status/securities-browser-smoke.log; fi
+          if [[ -f /tmp/securities-browser-smoke.log ]]; then tail -n 60 /tmp/securities-browser-smoke.log > release-status/securities-browser-smoke.log; else echo 'browser smoke did not start' > release-status/securities-browser-smoke.log; fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add release-status/securities-browser-smoke.txt release-status/securities-browser-smoke.log

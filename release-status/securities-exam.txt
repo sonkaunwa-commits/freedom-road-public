@@ -1,6 +1,6 @@
 status=ok
 architecture=exam-prep-system-v2
-deployed_sha=076246d660e973173a21e9589e24fe4a6db7641e
+deployed_sha=91d8929b00c04549c6b8150f6e469b61b47c59dc
 version=3.6.0
 ui=PM-V2
 plan=adaptive-nonempty
@@ -13,4 +13,4 @@ courses=finance+law
 entry=exam-live
 service_worker=disabled-on-clean-entry
 url=https://sonkaunwa-commits.github.io/freedom-road-public/ks/
-verified_at=2026-08-25T12:05:49Z
+verified_at=2026-08-25T12:08:03Z

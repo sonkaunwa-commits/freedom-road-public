@@ -6,8 +6,9 @@ on:
     branches: [main]
     paths:
       - site/securities-exam/**
+      - site/exam-live/**
       - site/ks/**
-      - scripts/securities-browser-smoke.cjs
+      - scripts/securities-browser-smoke-r4.cjs
       - .github/workflows/securities-browser-smoke.yml
 
 permissions:
@@ -34,7 +35,7 @@ jobs:
           test -f package.json || npm init -y >/dev/null
           npm install --no-save --package-lock=false playwright@1.55.0
           npx playwright install --with-deps chromium webkit
-      - name: Wait for recovery release on real Pages
+      - name: Wait for clean release on real Pages
         id: live
         shell: bash
         run: |
@@ -43,12 +44,11 @@ jobs:
           ok=false
           for attempt in {1..72}; do
             ks="$(curl -fsSL --max-time 20 "$base/ks/?browserwait=${GITHUB_SHA}-$attempt" 2>/dev/null || true)"
-            boot="$(curl -fsSL --max-time 20 "$base/securities-exam/boot.html?browserwait=${GITHUB_SHA}-$attempt" 2>/dev/null || true)"
-            sw="$(curl -fsSL --max-time 20 "$base/securities-exam/sw.js?browserwait=${GITHUB_SHA}-$attempt" 2>/dev/null || true)"
-            if grep -Fq 'boot.html?v=20260825-r3' <<<"$ks" && grep -Fq 'setTimeout(enter,5000)' <<<"$boot" && grep -Fq 'sec2026-v361-recovery' <<<"$sw"; then ok=true; break; fi
+            live="$(curl -fsSL --max-time 20 "$base/exam-live/?browserwait=${GITHUB_SHA}-$attempt" 2>/dev/null || true)"
+            if grep -Fq 'exam-live/?v=20260825-r4' <<<"$ks" && grep -Fq 'data-product-version="3.6.0"' <<<"$live" && ! grep -Fq 'serviceWorker.register' <<<"$live"; then ok=true; break; fi
             sleep 5
           done
-          [[ "$ok" == true ]] || { echo 'Non-blocking recovery release not live before browser smoke' >&2; exit 1; }
+          [[ "$ok" == true ]] || { echo 'Clean exam-live release not live before browser smoke' >&2; exit 1; }
       - name: Run real Chromium and WebKit smoke
         id: smoke
         continue-on-error: true
@@ -57,7 +57,7 @@ jobs:
         shell: bash
         run: |
           set -o pipefail
-          node scripts/securities-browser-smoke.cjs 2>&1 | tee /tmp/securities-browser-smoke.log
+          node scripts/securities-browser-smoke-r4.cjs 2>&1 | tee /tmp/securities-browser-smoke.log
       - name: Write real-browser certificate
         if: always()
         env:
@@ -76,14 +76,13 @@ jobs:
           install=${INSTALL_OUTCOME}
           live_wait=${LIVE_OUTCOME}
           browser_smoke=${SMOKE_OUTCOME}
-          desktop=chromium-direct-home+knowledge+practice+profiles+pin
-          mobile=chromium-ks-recovery+webkit-iphone-ks-recovery+home+knowledge
-          typography=desktop14+mobile17+
-          recovery=non-blocking-r3
+          desktop=chromium-exam-live-home+knowledge+practice+profiles+pin
+          mobile=chromium-ks-to-exam-live+webkit-iphone-ks-to-exam-live+home+knowledge
+          entry=clean-no-service-worker-r4
           cloud_sync=false
           verified_at=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
           EOF
-          if [[ -f /tmp/securities-browser-smoke.log ]]; then tail -n 60 /tmp/securities-browser-smoke.log > release-status/securities-browser-smoke.log; else echo 'browser smoke did not start' > release-status/securities-browser-smoke.log; fi
+          if [[ -f /tmp/securities-browser-smoke.log ]]; then tail -n 80 /tmp/securities-browser-smoke.log > release-status/securities-browser-smoke.log; else echo 'browser smoke did not start' > release-status/securities-browser-smoke.log; fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add release-status/securities-browser-smoke.txt release-status/securities-browser-smoke.log

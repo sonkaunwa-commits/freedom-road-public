@@ -5,7 +5,7 @@ const SKEY='sec2026state_v1',PKEY='sec_v350_profiles',AKEY='sec_v350_active',SET
 const AUTHKEY='sec_v360_local_auth',REMKEY='sec_v360_remember_profile',SESSIONKEY='sec_v360_session_profile';
 const read=(k,f)=>{try{return JSON.parse(localStorage.getItem(k)||'null')??f}catch(_){return f}};
 const write=(k,v)=>localStorage.setItem(k,JSON.stringify(v));
-const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot',"'":'&#39;'}[c]));
 const profiles=()=>read(PKEY,[]);
 const active=()=>{const ps=profiles(),id=localStorage.getItem(AKEY);return ps.find(x=>x.id===id)||ps[0]||null};
 const stateKey=id=>'sec_v350_state_'+id,masteryKey=id=>'sec_v350_mastery_'+id,dailyKey=id=>'sec_v350_daily_'+id,reasonKey=id=>'sec_v350_reasons_'+id;
@@ -42,8 +42,9 @@ function chooseImport(){
  const i=document.createElement('input');i.type='file';i.accept='.json,application/json';i.style.display='none';document.body.appendChild(i);i.onchange=async()=>{try{const f=i.files?.[0];if(!f)return;importData(JSON.parse(await f.text()))}catch(_){toast('文件读取失败')}finally{i.remove()}};i.click();
 }
 function addBadge(){
- const p=active(),top=document.querySelector('.v350TopActions');if(top){let s=top.querySelector('.v360DeviceBadge');if(!s){s=document.createElement('span');s.className='v360DeviceBadge';top.prepend(s)}s.textContent=p&&hasPin(p.id)?'已记住 · PIN保护':'本机档案 · 未云同步'}
- const mobile=document.querySelector('.v350MobileTop [data-v350-account]');if(mobile)mobile.title=p&&hasPin(p.id)?'当前学习账号已启用PIN':'当前为本机学习档案，尚未开启云同步';
+ const p=active(),enabled=!!(p&&hasPin(p.id)),label=enabled?'已记住 · PIN保护':'本机档案 · 未云同步',top=document.querySelector('.v350TopActions');
+ if(top){let s=top.querySelector('.v360DeviceBadge');if(!s){s=document.createElement('span');s.className='v360DeviceBadge';s.textContent=label;top.prepend(s)}else if(s.textContent!==label)s.textContent=label}
+ const mobile=document.querySelector('.v350MobileTop [data-v350-account]'),title=enabled?'当前学习账号已启用PIN':'当前为本机学习档案，尚未开启云同步';if(mobile&&mobile.title!==title)mobile.title=title;
 }
 async function setPinFromPanel(box){
  const p=active(),input=box.querySelector('[data-v360-pin]'),remember=box.querySelector('[data-v360-remember]')?.checked!==false,pin=String(input?.value||'').trim();

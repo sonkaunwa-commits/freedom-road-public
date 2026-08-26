@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+  <meta name="theme-color" content="#f7f8fa">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="证券刷题">
+  <title>证券从业刷题 · v4.0</title>
+  <link rel="stylesheet" href="./v4.css?v=20260826a">
+</head>
+<body>
+  <div id="app" class="shell">
+    <header class="topbar">
+      <button class="iconbtn hidden" id="backBtn" aria-label="返回">‹</button>
+      <div class="topTitle" id="topTitle">证券从业刷题</div>
+      <button class="iconbtn" id="topAction" aria-label="更多">•••</button>
+    </header>
+    <main id="main"></main>
+    <nav class="bottomNav" id="bottomNav" aria-label="主导航">
+      <button data-tab="home" class="active"><span>⌂</span><b>刷题</b></button>
+      <button data-tab="wrong"><span>↺</span><b>错题</b></button>
+      <button data-tab="me"><span>◎</span><b>我的</b></button>
+    </nav>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </div>
+
+  <script src="../exam-live/questions-v1.js?v=26"></script>
+  <script src="../exam-live/bank/concepts-v2.js?v=26"></script>
+  <script src="../exam-live/bank/generator-v2.js?v=26"></script>
+  <script src="../exam-live/bank-extra-v23.js?v=26"></script>
+  <script src="../exam-live/bank-normalize-v24.js?v=26"></script>
+  <script src="../exam-live/bank-supplement-v24.js?v=26"></script>
+  <script src="../exam-live/questions-auto.js?v=26"></script>
+  <script src="../exam-live/learning-content-v360.js?v=360"></script>
+  <script src="./v4.js?v=20260826a"></script>
+</body>
+</html>

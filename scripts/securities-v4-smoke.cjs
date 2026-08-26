@@ -26,11 +26,16 @@ async function exercise(browserType, name, contextOptions) {
 
   const response = await page.goto(ENTRY + `&engine=${name}`, { waitUntil: 'domcontentloaded', timeout: 45000 });
   await assert(response && response.ok(), `${name}: /ks/ entry did not return 2xx`);
-  await page.waitForFunction(() => window.SEC_QUIZ_V4?.version === '4.0.0', null, { timeout: 20000 });
+  await page.waitForFunction(() => window.SEC_QUIZ_V4?.version === '4.0.0' && window.SEC_QUIZ_V41?.version === '4.1.0', null, { timeout: 20000 });
   await assert(page.url().includes('/quiz-v4/'), `${name}: /ks/ did not resolve to v4 (${page.url()})`);
   await page.waitForSelector('.subject .continue', { timeout: 15000 });
-  const qCount = await page.evaluate(() => Array.isArray(window.SEC_QUESTIONS) ? window.SEC_QUESTIONS.length : 0);
-  await assert(qCount >= 100, `${name}: question bank unexpectedly small (${qCount})`);
+  const bankMeta = await page.evaluate(() => {
+    const rows = Array.isArray(window.SEC_QUESTIONS) ? window.SEC_QUESTIONS : [];
+    return { count: rows.length, types: [...new Set(rows.map(q => q.type))], sourced: rows.filter(q => q.source && q.sourceTruth).length };
+  });
+  await assert(bankMeta.count >= 100, `${name}: question bank unexpectedly small (${bankMeta.count})`);
+  for (const t of ['single', 'multi', 'judge', 'comprehensive']) await assert(bankMeta.types.includes(t), `${name}: missing question type ${t}`);
+  await assert(bankMeta.sourced === bankMeta.count, `${name}: not every question has provenance (${bankMeta.sourced}/${bankMeta.count})`);
 
   const shellWidth = await page.locator('.shell').evaluate(el => el.getBoundingClientRect().width);
   await assert(shellWidth <= 522, `${name}: shell is not mobile-width (${shellWidth})`);
@@ -40,6 +45,8 @@ async function exercise(browserType, name, contextOptions) {
 
   await page.locator('[data-subject="finance"]').click();
   await page.waitForSelector('.questionCard .option', { timeout: 15000 });
+  await page.waitForSelector('.sourceStrip', { timeout: 10000 });
+  await assert((await page.locator('.sourceStrip').innerText()).includes('题源'), `${name}: provenance strip missing`);
   const optionCount = await page.locator('.questionCard .option').count();
   await assert(optionCount >= 2, `${name}: options missing`);
   await assert(await page.locator('#answerBtn').isDisabled(), `${name}: answer button should start disabled`);
@@ -58,6 +65,23 @@ async function exercise(browserType, name, contextOptions) {
   await assert(await page.locator('.explainBox.key').isVisible(), `${name}: key-point explanation missing`);
   await assert(await page.locator('#detailBody').isVisible(), `${name}: wrong-answer details should auto expand`);
   await assert((await page.locator('.explainBox').count()) >= 3, `${name}: explanation stack too thin`);
+  await assert(await page.locator('.v41Extra .sourceBlock').isVisible(), `${name}: source credibility block missing`);
+  await assert(await page.locator('.v41Extra .deepBlock').count() >= 2, `${name}: deep explanation blocks missing`);
+  const answerBarPosition = await page.locator('.answerBar').evaluate(el => getComputedStyle(el).position);
+  await assert(answerBarPosition === 'static', `${name}: next button is still floating (${answerBarPosition})`);
+
+  await page.locator('#answerBtn').click();
+  await page.waitForSelector('.questionCard .option', { timeout: 10000 });
+  const correctIndexes = await page.evaluate(() => {
+    const text = document.querySelector('.questionCard h1')?.textContent || '';
+    const q = (window.SEC_QUESTIONS || []).find(x => x.q === text);
+    return q ? q.a : [0];
+  });
+  for (const idx of correctIndexes) await page.locator('.questionCard .option').nth(idx).click();
+  await page.locator('#answerBtn').click();
+  await page.waitForSelector('.result.good', { timeout: 10000 });
+  await assert(await page.locator('#detailBody').isVisible(), `${name}: correct-answer details should auto expand too`);
+  await assert(await page.locator('.v41Extra .sourceBlock').isVisible(), `${name}: correct-answer deep source block missing`);
 
   await page.locator('#answerBtn').click();
   await page.waitForSelector('.questionCard .option', { timeout: 10000 });
@@ -73,20 +97,18 @@ async function exercise(browserType, name, contextOptions) {
   if (badResponses.length) throw new Error(`${name}: app resource failures: ${badResponses.join(' | ')}`);
   if (errors.length) throw new Error(`${name}: runtime errors: ${errors.join(' | ')}`);
   await browser.close();
-  console.log(`${name} PASS entry=/ks/ questions=${qCount} shell=${shellWidth}`);
+  console.log(`${name} PASS entry=/ks/ questions=${bankMeta.count} source=${bankMeta.sourced} types=${bankMeta.types.join(',')} shell=${shellWidth}`);
 }
 
 async function releaseEntryChecks() {
   const browser = await chromium.launch({ headless: true });
   const page = await browser.newPage({ viewport: { width: 390, height: 844 } });
-
   await page.goto(`${BASE}/?release-check=${Date.now()}`, { waitUntil: 'domcontentloaded', timeout: 45000 });
   const securitiesHref = await page.locator('a.card').filter({ hasText: '证券从业 2026' }).getAttribute('href');
   await assert(securitiesHref && securitiesHref.startsWith('ks/'), `root securities card is not routed through /ks/ (${securitiesHref})`);
-
   await page.goto(`${BASE}/securities-exam/?legacy-check=${Date.now()}`, { waitUntil: 'domcontentloaded', timeout: 45000 });
   await page.waitForURL(/\/quiz-v4\//, { timeout: 15000 });
-  await page.waitForFunction(() => window.SEC_QUIZ_V4?.version === '4.0.0', null, { timeout: 15000 });
+  await page.waitForFunction(() => window.SEC_QUIZ_V4?.version === '4.0.0' && window.SEC_QUIZ_V41?.version === '4.1.0', null, { timeout: 15000 });
   await browser.close();
   console.log('release entry PASS root-card=/ks/ legacy=/securities-exam/->/quiz-v4/');
 }
@@ -96,5 +118,5 @@ async function releaseEntryChecks() {
   await exercise(chromium, 'chromium-mobile', { viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true });
   await exercise(webkit, 'webkit-iphone', { ...devices['iPhone 13'] });
   await releaseEntryChecks();
-  console.log('V4 release smoke PASS: formal /ks/ entry + desktop/mobile/iPhone + answer/explanation/chapter + root/legacy routing');
+  console.log('V4.1 release smoke PASS: source provenance + four question types + auto deep explanation + inline next + desktop/mobile/iPhone');
 })().catch(err => { console.error(err.stack || err); process.exit(1); });

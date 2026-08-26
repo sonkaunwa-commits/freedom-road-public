@@ -12,8 +12,17 @@ async function exercise(browserType, name, contextOptions) {
   const context = await browser.newContext(contextOptions);
   const page = await context.newPage();
   const errors = [];
+  const badResponses = [];
   page.on('pageerror', e => errors.push(`pageerror:${e.message}`));
-  page.on('console', msg => { if (msg.type() === 'error') errors.push(`console:${msg.text()}`); });
+  page.on('console', msg => {
+    if (msg.type() === 'error' && !msg.text().includes('Failed to load resource')) errors.push(`console:${msg.text()}`);
+  });
+  page.on('response', r => {
+    if (r.status() >= 400) {
+      const u = r.url();
+      if (!u.endsWith('/favicon.ico')) badResponses.push(`${r.status()}:${u}`);
+    }
+  });
 
   const response = await page.goto(URL + `&engine=${name}`, { waitUntil: 'domcontentloaded', timeout: 45000 });
   await assert(response && response.ok(), `${name}: page did not return 2xx`);
@@ -60,6 +69,7 @@ async function exercise(browserType, name, contextOptions) {
   await page.waitForSelector('.chapterBtn', { timeout: 10000 });
   await assert((await page.locator('.chapterBtn').count()) >= 5, `${name}: chapter list missing`);
 
+  if (badResponses.length) throw new Error(`${name}: app resource failures: ${badResponses.join(' | ')}`);
   if (errors.length) throw new Error(`${name}: runtime errors: ${errors.join(' | ')}`);
   await browser.close();
   console.log(`${name} PASS questions=${qCount} shell=${shellWidth}`);

@@ -1,12 +1,12 @@
 status=failed
-tested_sha=5a0b9cd035294e6cfc9f187549380920583cfd11
+tested_sha=3522f338faf395219f653e7711a119465c8ff518
 version=4.0.0
 browsers=chromium-desktop+chromium-mobile+webkit-iphone
-install=failure
-live_wait=skipped
-browser_smoke=skipped
+install=success
+live_wait=success
+browser_smoke=failure
 flows=home+question+wrong-answer+explanation+next+favourite+chapters
 layout=mobile-first-max-520px
 external_course_data=bilibili-finance+law-derived-json
 cloud_sync=false
-verified_at=2026-08-26T08:06:13Z
+verified_at=2026-08-26T08:09:23Z

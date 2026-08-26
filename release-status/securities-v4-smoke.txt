@@ -1,5 +1,5 @@
 status=ok
-tested_sha=f17a0b499a28f6cf586246f0d14fb9170017a1f2
+tested_sha=36c85ca75b0f7dea44a7021fcc93718c3f78ced3
 version=4.0.0
 formal_entry=/ks/
 legacy_entry=/securities-exam/
@@ -11,4 +11,4 @@ flows=formal-entry+home+question+wrong-answer+explanation+next+favourite+chapter
 layout=mobile-first-max-520px
 external_course_data=bilibili-finance+law-derived-json
 cloud_sync=false
-verified_at=2026-08-26T11:49:08Z
+verified_at=2026-08-26T11:55:30Z

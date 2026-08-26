@@ -76,9 +76,9 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          mkdir -p release-status
+          status_tmp="$(mktemp -d)"
           if [[ "$SMOKE_OUTCOME" == success ]]; then overall=ok; else overall=failed; fi
-          cat > release-status/securities-v4-smoke.txt <<EOF
+          cat > "$status_tmp/securities-v4-smoke.txt" <<EOF
           status=${overall}
           tested_sha=${GITHUB_SHA}
           version=4.0.0
@@ -94,12 +94,37 @@ jobs:
           cloud_sync=false
           verified_at=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
           EOF
-          if [[ -f /tmp/securities-v4-smoke.log ]]; then tail -n 120 /tmp/securities-v4-smoke.log > release-status/securities-v4-smoke.log; else echo 'v4 browser smoke did not start' > release-status/securities-v4-smoke.log; fi
+          if [[ -f /tmp/securities-v4-smoke.log ]]; then
+            tail -n 120 /tmp/securities-v4-smoke.log > "$status_tmp/securities-v4-smoke.log"
+          else
+            echo 'v4 browser smoke did not start' > "$status_tmp/securities-v4-smoke.log"
+          fi
+
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add release-status/securities-v4-smoke.txt release-status/securities-v4-smoke.log
-          if ! git diff --cached --quiet; then git commit -m 'status: record securities v4 browser smoke'; git push; fi
+
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            mkdir -p release-status
+            cp "$status_tmp/securities-v4-smoke.txt" release-status/securities-v4-smoke.txt
+            cp "$status_tmp/securities-v4-smoke.log" release-status/securities-v4-smoke.log
+            git add release-status/securities-v4-smoke.txt release-status/securities-v4-smoke.log
+            if git diff --cached --quiet; then
+              echo 'v4 browser certificate already current'
+              break
+            fi
+            git commit -m 'status: record securities v4 browser smoke'
+            if git push origin HEAD:main; then
+              break
+            fi
+            if [[ "$attempt" == 5 ]]; then
+              echo 'Could not persist v4 browser certificate after 5 moving-main retries.' >&2
+              exit 1
+            fi
+            sleep 2
+          done
       - name: Enforce v4 browser smoke result
         if: always()
         env:

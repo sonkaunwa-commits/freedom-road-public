@@ -1,3 +1,4 @@
-Error: chromium-desktop-mobile-shell: app resource failures: 404:https://sonkaunwa-commits.github.io/freedom-road-public/quiz-v4/fire-spq.json
-    at exercise (/__w/freedom-road-public/freedom-road-public/scripts/securities-v4-smoke.cjs:72:34)
-    at async /__w/freedom-road-public/freedom-road-public/scripts/securities-v4-smoke.cjs:79:3
+chromium-desktop-mobile-shell PASS questions=895 shell=520
+chromium-mobile PASS questions=895 shell=390
+webkit-iphone PASS questions=895 shell=390
+V4 quiz smoke PASS: desktop mobile-shell + Chromium mobile + WebKit iPhone + answer/explanation/chapter flows

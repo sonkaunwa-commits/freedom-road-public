@@ -1,5 +1,13 @@
-chromium-desktop-mobile-shell PASS entry=/ks/ questions=895 shell=520
-chromium-mobile PASS entry=/ks/ questions=895 shell=390
-webkit-iphone PASS entry=/ks/ questions=895 shell=390
-release entry PASS root-card=/ks/ legacy=/securities-exam/->/quiz-v4/
-V4 release smoke PASS: formal /ks/ entry + desktop/mobile/iPhone + answer/explanation/chapter + root/legacy routing
+locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('[data-subject="finance"]')
+    - locator resolved to <button class="continue" data-subject="finance">开始刷题 →</button>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - performing click action
+
+    at exercise (/__w/freedom-road-public/freedom-road-public/scripts/securities-v4-smoke.cjs:46:50)
+    at async /__w/freedom-road-public/freedom-road-public/scripts/securities-v4-smoke.cjs:117:3

@@ -59,7 +59,19 @@ jobs:
           behavior="$(python3 -c "import json;print(json.load(open('site/fund-assistant/release.json')).get('behavior',''))")"
           if [[ -n "$behavior" ]]; then node --check "site/fund-assistant/$behavior"; fi
 
-          if grep -Fq 'exam-live/?v=20260825-r4' site/ks/index.html; then
+          if grep -Fq '证券从业刷题 · v4.0' site/ks/index.html; then
+            for f in site/quiz-v4/index.html site/quiz-v4/v4.js site/quiz-v4/v4.css; do test -f "$f"; done
+            grep -Fq '../quiz-v4/' site/ks/index.html
+            grep -Fq '../quiz-v4/' site/securities-exam/index.html
+            grep -Fq 'href="ks/?v=20260826-v4"' site/index.html
+            grep -Fq '../exam-live/questions-v1.js' site/quiz-v4/index.html
+            ! grep -Fq 'questions-auto.js' site/quiz-v4/index.html
+            grep -Fq "const VERSION = '4.0.0'" site/quiz-v4/v4.js
+            grep -Fq "const SKEY = 'sec2026state_v1'" site/quiz-v4/v4.js
+            grep -Fq 'max-width:520px' site/quiz-v4/v4.css
+            node --check site/quiz-v4/v4.js
+            echo 'Securities v4 static PASS'
+          elif grep -Fq 'exam-live/?v=20260825-r4' site/ks/index.html; then
             test -f site/exam-live/index.html
             grep -Fq 'data-product-version="3.6.0"' site/exam-live/index.html
             ! grep -Fq 'serviceWorker.register' site/exam-live/index.html
@@ -108,13 +120,13 @@ jobs:
     timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
-      - name: Verify live endpoints and clean securities entry
+      - name: Verify live endpoints and securities entry
         shell: bash
         run: |
           set -euo pipefail
           base='https://sonkaunwa-commits.github.io/freedom-road-public'
           get(){ curl -fsSL --max-time 30 --retry 3 "$base/$1?verify=${GITHUB_SHA}"; }
-          for path in '' 'publication.json' 'fund-assistant/' 'securities-exam/' 'ks/' 'exam-live/' 'investment-advisor-exam/' 'tg/'; do
+          for path in '' 'publication.json' 'fund-assistant/' 'securities-exam/' 'ks/' 'exam-live/' 'quiz-v4/' 'investment-advisor-exam/' 'tg/'; do
             ok=false; for attempt in {1..36}; do if get "$path" >/dev/null; then ok=true; break; fi; sleep 5; done
             [[ "$ok" == true ]] || { echo "Endpoint failed: $path" >&2; exit 1; }
           done
@@ -128,7 +140,13 @@ jobs:
           grep -Fq "${fm[0]}" <<<"$live_release"; grep -Fq "${fm[1]}" <<<"$live_release"; grep -Fq "${fm[2]}" <<<"$live_release"
           live_entry="$(get "fund-assistant/${fm[2]}")"; grep -Fq "${fm[1]}" <<<"$live_entry"
 
-          if grep -Fq 'exam-live/?v=20260825-r4' site/ks/index.html; then
+          if grep -Fq '证券从业刷题 · v4.0' site/ks/index.html; then
+            ks="$(get 'ks/')"; grep -Fq '../quiz-v4/' <<<"$ks"
+            quiz="$(get 'quiz-v4/')"; grep -Fq '证券从业刷题 · v4.0' <<<"$quiz"
+            quizjs="$(get 'quiz-v4/v4.js')"; grep -Fq 'mobile-first-question-centric' <<<"$quizjs"; grep -Fq "const VERSION = '4.0.0'" <<<"$quizjs"
+            root="$(get '')"; grep -Fq 'href="ks/?v=20260826-v4"' <<<"$root"
+            legacy="$(get 'securities-exam/')"; grep -Fq '../quiz-v4/' <<<"$legacy"
+          elif grep -Fq 'exam-live/?v=20260825-r4' site/ks/index.html; then
             ks="$(get 'ks/')"; grep -Fq 'exam-live/?v=20260825-r4' <<<"$ks"
             live="$(get 'exam-live/')"; grep -Fq 'data-product-version="3.6.0"' <<<"$live"; ! grep -Fq 'serviceWorker.register' <<<"$live"
           fi

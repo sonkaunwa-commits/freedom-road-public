@@ -1,0 +1,92 @@
+name: securities-v4-smoke
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - site/quiz-v4/**
+      - scripts/securities-v4-smoke.cjs
+      - .github/workflows/securities-v4-smoke.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: securities-v4-smoke
+  cancel-in-progress: true
+
+jobs:
+  browser-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install browser test runtime
+        id: install
+        run: |
+          set -euo pipefail
+          test -f package.json || npm init -y >/dev/null
+          npm install --no-save --package-lock=false playwright@1.55.0
+          npx playwright install --with-deps chromium webkit
+      - name: Wait for v4 on real Pages
+        id: live
+        shell: bash
+        run: |
+          set -euo pipefail
+          base='https://sonkaunwa-commits.github.io/freedom-road-public'
+          ok=false
+          for attempt in {1..72}; do
+            html="$(curl -fsSL --max-time 20 "$base/quiz-v4/?wait=${GITHUB_SHA}-$attempt" 2>/dev/null || true)"
+            js="$(curl -fsSL --max-time 20 "$base/quiz-v4/v4.js?wait=${GITHUB_SHA}-$attempt" 2>/dev/null || true)"
+            if grep -Fq '证券从业刷题 · v4.0' <<<"$html" && grep -Fq 'mobile-first-question-centric' <<<"$js"; then ok=true; break; fi
+            sleep 5
+          done
+          [[ "$ok" == true ]] || { echo 'v4 quiz release not live before browser smoke' >&2; exit 1; }
+      - name: Run real mobile-first browser smoke
+        id: smoke
+        continue-on-error: true
+        env:
+          SECURITIES_BASE: https://sonkaunwa-commits.github.io/freedom-road-public
+        shell: bash
+        run: |
+          set -o pipefail
+          node scripts/securities-v4-smoke.cjs 2>&1 | tee /tmp/securities-v4-smoke.log
+      - name: Write v4 browser certificate
+        if: always()
+        env:
+          INSTALL_OUTCOME: ${{ steps.install.outcome }}
+          LIVE_OUTCOME: ${{ steps.live.outcome }}
+          SMOKE_OUTCOME: ${{ steps.smoke.outcome }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p release-status
+          if [[ "$SMOKE_OUTCOME" == success ]]; then overall=ok; else overall=failed; fi
+          cat > release-status/securities-v4-smoke.txt <<EOF
+          status=${overall}
+          tested_sha=${GITHUB_SHA}
+          version=4.0.0
+          browsers=chromium-desktop+chromium-mobile+webkit-iphone
+          install=${INSTALL_OUTCOME}
+          live_wait=${LIVE_OUTCOME}
+          browser_smoke=${SMOKE_OUTCOME}
+          flows=home+question+wrong-answer+explanation+next+favourite+chapters
+          layout=mobile-first-max-520px
+          external_course_data=bilibili-finance+law-derived-json
+          cloud_sync=false
+          verified_at=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
+          EOF
+          if [[ -f /tmp/securities-v4-smoke.log ]]; then tail -n 120 /tmp/securities-v4-smoke.log > release-status/securities-v4-smoke.log; else echo 'v4 browser smoke did not start' > release-status/securities-v4-smoke.log; fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add release-status/securities-v4-smoke.txt release-status/securities-v4-smoke.log
+          if ! git diff --cached --quiet; then git commit -m 'status: record securities v4 browser smoke'; git push; fi
+      - name: Enforce v4 browser smoke result
+        if: always()
+        env:
+          SMOKE_OUTCOME: ${{ steps.smoke.outcome }}
+        run: test "$SMOKE_OUTCOME" = success

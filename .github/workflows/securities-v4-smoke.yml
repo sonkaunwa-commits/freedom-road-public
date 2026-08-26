@@ -5,8 +5,10 @@ on:
   push:
     branches: [main]
     paths:
+      - site/index.html
       - site/quiz-v4/**
       - site/ks/**
+      - site/securities-exam/index.html
       - scripts/securities-v4-smoke.cjs
       - .github/workflows/securities-v4-smoke.yml
 
@@ -32,7 +34,7 @@ jobs:
           set -euo pipefail
           test -f package.json || npm init -y >/dev/null
           npm install --no-save --package-lock=false playwright@1.55.0
-      - name: Wait for v4 on real Pages
+      - name: Wait for complete v4 release on real Pages
         id: live
         shell: bash
         run: |
@@ -42,10 +44,20 @@ jobs:
           for attempt in {1..72}; do
             html="$(curl -fsSL --max-time 20 "$base/quiz-v4/?wait=${GITHUB_SHA}-$attempt" 2>/dev/null || true)"
             js="$(curl -fsSL --max-time 20 "$base/quiz-v4/v4.js?wait=${GITHUB_SHA}-$attempt" 2>/dev/null || true)"
-            if grep -Fq '证券从业刷题 · v4.0' <<<"$html" && grep -Fq 'mobile-first-question-centric' <<<"$js"; then ok=true; break; fi
+            ks="$(curl -fsSL --max-time 20 "$base/ks/?wait=${GITHUB_SHA}-$attempt" 2>/dev/null || true)"
+            root="$(curl -fsSL --max-time 20 "$base/?wait=${GITHUB_SHA}-$attempt" 2>/dev/null || true)"
+            legacy="$(curl -fsSL --max-time 20 "$base/securities-exam/?wait=${GITHUB_SHA}-$attempt" 2>/dev/null || true)"
+            if grep -Fq '证券从业刷题 · v4.0' <<<"$html" \
+              && grep -Fq 'mobile-first-question-centric' <<<"$js" \
+              && grep -Fq '../quiz-v4/' <<<"$ks" \
+              && grep -Fq 'href="ks/?v=20260826-v4"' <<<"$root" \
+              && grep -Fq '../quiz-v4/' <<<"$legacy"; then
+              ok=true
+              break
+            fi
             sleep 5
           done
-          [[ "$ok" == true ]] || { echo 'v4 quiz release not live before browser smoke' >&2; exit 1; }
+          [[ "$ok" == true ]] || { echo 'complete v4 release entries were not live before browser smoke' >&2; exit 1; }
       - name: Run real mobile-first browser smoke
         id: smoke
         continue-on-error: true
@@ -70,11 +82,13 @@ jobs:
           status=${overall}
           tested_sha=${GITHUB_SHA}
           version=4.0.0
+          formal_entry=/ks/
+          legacy_entry=/securities-exam/
           browsers=chromium-desktop+chromium-mobile+webkit-iphone
           install=${INSTALL_OUTCOME}
           live_wait=${LIVE_OUTCOME}
           browser_smoke=${SMOKE_OUTCOME}
-          flows=home+question+wrong-answer+explanation+next+favourite+chapters
+          flows=formal-entry+home+question+wrong-answer+explanation+next+favourite+chapters+root-card+legacy-redirect
           layout=mobile-first-max-520px
           external_course_data=bilibili-finance+law-derived-json
           cloud_sync=false

@@ -1,3 +1,1 @@
-page.waitForFunction: Timeout 20000ms exceeded.
-    at exercise (/__w/freedom-road-public/freedom-road-public/scripts/securities-v4-smoke.cjs:29:14)
-    at async /__w/freedom-road-public/freedom-road-public/scripts/securities-v4-smoke.cjs:95:3
+v4 browser smoke did not start

@@ -1,7 +1,7 @@
 const { chromium, webkit, devices } = require('playwright');
 
 const BASE = process.env.SECURITIES_BASE || 'https://sonkaunwa-commits.github.io/freedom-road-public';
-const URL = `${BASE}/quiz-v4/?smoke=${Date.now()}`;
+const ENTRY = `${BASE}/ks/?smoke=${Date.now()}`;
 
 async function assert(condition, message) {
   if (!condition) throw new Error(message);
@@ -24,9 +24,10 @@ async function exercise(browserType, name, contextOptions) {
     }
   });
 
-  const response = await page.goto(URL + `&engine=${name}`, { waitUntil: 'domcontentloaded', timeout: 45000 });
-  await assert(response && response.ok(), `${name}: page did not return 2xx`);
+  const response = await page.goto(ENTRY + `&engine=${name}`, { waitUntil: 'domcontentloaded', timeout: 45000 });
+  await assert(response && response.ok(), `${name}: /ks/ entry did not return 2xx`);
   await page.waitForFunction(() => window.SEC_QUIZ_V4?.version === '4.0.0', null, { timeout: 20000 });
+  await assert(page.url().includes('/quiz-v4/'), `${name}: /ks/ did not resolve to v4 (${page.url()})`);
   await page.waitForSelector('.subject .continue', { timeout: 15000 });
   const qCount = await page.evaluate(() => Array.isArray(window.SEC_QUESTIONS) ? window.SEC_QUESTIONS.length : 0);
   await assert(qCount >= 100, `${name}: question bank unexpectedly small (${qCount})`);
@@ -72,12 +73,28 @@ async function exercise(browserType, name, contextOptions) {
   if (badResponses.length) throw new Error(`${name}: app resource failures: ${badResponses.join(' | ')}`);
   if (errors.length) throw new Error(`${name}: runtime errors: ${errors.join(' | ')}`);
   await browser.close();
-  console.log(`${name} PASS questions=${qCount} shell=${shellWidth}`);
+  console.log(`${name} PASS entry=/ks/ questions=${qCount} shell=${shellWidth}`);
+}
+
+async function releaseEntryChecks() {
+  const browser = await chromium.launch({ headless: true });
+  const page = await browser.newPage({ viewport: { width: 390, height: 844 } });
+
+  await page.goto(`${BASE}/?release-check=${Date.now()}`, { waitUntil: 'domcontentloaded', timeout: 45000 });
+  const securitiesHref = await page.locator('a.card').filter({ hasText: '证券从业 2026' }).getAttribute('href');
+  await assert(securitiesHref && securitiesHref.startsWith('ks/'), `root securities card is not routed through /ks/ (${securitiesHref})`);
+
+  await page.goto(`${BASE}/securities-exam/?legacy-check=${Date.now()}`, { waitUntil: 'domcontentloaded', timeout: 45000 });
+  await page.waitForURL(/\/quiz-v4\//, { timeout: 15000 });
+  await page.waitForFunction(() => window.SEC_QUIZ_V4?.version === '4.0.0', null, { timeout: 15000 });
+  await browser.close();
+  console.log('release entry PASS root-card=/ks/ legacy=/securities-exam/->/quiz-v4/');
 }
 
 (async () => {
   await exercise(chromium, 'chromium-desktop-mobile-shell', { viewport: { width: 1280, height: 900 } });
   await exercise(chromium, 'chromium-mobile', { viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true });
   await exercise(webkit, 'webkit-iphone', { ...devices['iPhone 13'] });
-  console.log('V4 quiz smoke PASS: desktop mobile-shell + Chromium mobile + WebKit iPhone + answer/explanation/chapter flows');
+  await releaseEntryChecks();
+  console.log('V4 release smoke PASS: formal /ks/ entry + desktop/mobile/iPhone + answer/explanation/chapter + root/legacy routing');
 })().catch(err => { console.error(err.stack || err); process.exit(1); });

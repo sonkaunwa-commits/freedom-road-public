@@ -26,16 +26,33 @@ async function exercise(browserType, name, contextOptions) {
 
   const response = await page.goto(ENTRY + `&engine=${name}`, { waitUntil: 'domcontentloaded', timeout: 45000 });
   await assert(response && response.ok(), `${name}: /ks/ entry did not return 2xx`);
-  await page.waitForFunction(() => window.SEC_QUIZ_V4?.version === '4.0.0' && window.SEC_QUIZ_V41?.version === '4.1.0', null, { timeout: 20000 });
+  await page.waitForFunction(() => window.SEC_QUIZ_V4?.version === '4.0.0' && window.SEC_QUIZ_V41?.version === '4.1.0' && window.SEC_QUIZ_V42?.version === '4.2.0', null, { timeout: 20000 });
   await assert(page.url().includes('/quiz-v4/'), `${name}: /ks/ did not resolve to v4 (${page.url()})`);
   await page.waitForSelector('.subject .continue', { timeout: 15000 });
+  await page.waitForSelector('.qualitySummary', { timeout: 10000 });
+
   const bankMeta = await page.evaluate(() => {
     const rows = Array.isArray(window.SEC_QUESTIONS) ? window.SEC_QUESTIONS : [];
-    return { count: rows.length, types: [...new Set(rows.map(q => q.type))], sourced: rows.filter(q => q.source && q.sourceTruth).length };
+    const active = rows.filter(q => q && q.strict !== false);
+    const quality = window.SEC_V42_QUALITY || {};
+    return {
+      total: rows.length,
+      active: active.length,
+      types: [...new Set(active.map(q => q.type))],
+      sourced: rows.filter(q => q.source && q.sourceTruth).length,
+      tiered: rows.filter(q => q.qualityTier).length,
+      activeD: active.filter(q => q.qualityTier === 'D').length,
+      defaultPool: quality.defaultPool || 0,
+      counts: quality.counts || {}
+    };
   });
-  await assert(bankMeta.count >= 100, `${name}: question bank unexpectedly small (${bankMeta.count})`);
+  await assert(bankMeta.active >= 100, `${name}: high-value pool unexpectedly small (${bankMeta.active})`);
+  await assert(bankMeta.total > bankMeta.active, `${name}: low-value template quarantine did not reduce default pool (${bankMeta.active}/${bankMeta.total})`);
+  await assert(bankMeta.defaultPool === bankMeta.active, `${name}: quality metadata/default pool mismatch (${bankMeta.defaultPool}/${bankMeta.active})`);
+  await assert(bankMeta.activeD === 0, `${name}: D-tier questions leaked into default pool (${bankMeta.activeD})`);
+  await assert(bankMeta.tiered === bankMeta.total, `${name}: not every question has quality tier (${bankMeta.tiered}/${bankMeta.total})`);
   for (const t of ['single', 'multi', 'judge', 'comprehensive']) await assert(bankMeta.types.includes(t), `${name}: missing question type ${t}`);
-  await assert(bankMeta.sourced === bankMeta.count, `${name}: not every question has provenance (${bankMeta.sourced}/${bankMeta.count})`);
+  await assert(bankMeta.sourced === bankMeta.total, `${name}: not every question has provenance (${bankMeta.sourced}/${bankMeta.total})`);
 
   const shellWidth = await page.locator('.shell').evaluate(el => el.getBoundingClientRect().width);
   await assert(shellWidth <= 522, `${name}: shell is not mobile-width (${shellWidth})`);
@@ -46,6 +63,7 @@ async function exercise(browserType, name, contextOptions) {
   await page.locator('[data-subject="finance"]').click();
   await page.waitForSelector('.questionCard .option', { timeout: 15000 });
   await page.waitForSelector('.sourceStrip', { timeout: 10000 });
+  await page.waitForSelector('.sourceStrip .qualityBadge', { timeout: 10000 });
   await assert((await page.locator('.sourceStrip').innerText()).includes('题源'), `${name}: provenance strip missing`);
   const optionCount = await page.locator('.questionCard .option').count();
   await assert(optionCount >= 2, `${name}: options missing`);
@@ -67,8 +85,23 @@ async function exercise(browserType, name, contextOptions) {
   await assert((await page.locator('.explainBox').count()) >= 3, `${name}: explanation stack too thin`);
   await assert(await page.locator('.v41Extra .sourceBlock').isVisible(), `${name}: source credibility block missing`);
   await assert(await page.locator('.v41Extra .deepBlock').count() >= 2, `${name}: deep explanation blocks missing`);
+  await page.waitForSelector('.masteryBlock', { timeout: 10000 });
+  await page.waitForSelector('.transferQuiz', { timeout: 10000 });
+  const masteryRows = await page.evaluate(() => Object.keys(JSON.parse(localStorage.getItem('sec_v42_mastery_v1') || '{}')).length);
+  await assert(masteryRows >= 1, `${name}: mastery state was not persisted`);
   const answerBarPosition = await page.locator('.answerBar').evaluate(el => getComputedStyle(el).position);
   await assert(answerBarPosition === 'static', `${name}: next button is still floating (${answerBarPosition})`);
+
+  const transfer = page.locator('.transferQuiz');
+  const transferCorrect = await page.evaluate(() => {
+    const id = document.querySelector('.transferQuiz')?.dataset.qid;
+    const q = (window.SEC_QUESTIONS || []).find(x => x.id === id);
+    return q ? q.a : [];
+  });
+  await assert(transferCorrect.length > 0, `${name}: transfer question has no answer`);
+  for (const idx of transferCorrect) await transfer.locator('.transferOptions button').nth(idx).click();
+  await transfer.locator('.transferSubmit').click();
+  await page.waitForSelector('.transferOutcome.good', { timeout: 10000 });
 
   await page.locator('#answerBtn').click();
   await page.waitForSelector('.questionCard .option', { timeout: 10000 });
@@ -82,6 +115,7 @@ async function exercise(browserType, name, contextOptions) {
   await page.waitForSelector('.result.good', { timeout: 10000 });
   await assert(await page.locator('#detailBody').isVisible(), `${name}: correct-answer details should auto expand too`);
   await assert(await page.locator('.v41Extra .sourceBlock').isVisible(), `${name}: correct-answer deep source block missing`);
+  await assert(await page.locator('.masteryBlock').isVisible(), `${name}: correct-answer mastery block missing`);
 
   await page.locator('#answerBtn').click();
   await page.waitForSelector('.questionCard .option', { timeout: 10000 });
@@ -97,7 +131,7 @@ async function exercise(browserType, name, contextOptions) {
   if (badResponses.length) throw new Error(`${name}: app resource failures: ${badResponses.join(' | ')}`);
   if (errors.length) throw new Error(`${name}: runtime errors: ${errors.join(' | ')}`);
   await browser.close();
-  console.log(`${name} PASS entry=/ks/ questions=${bankMeta.count} source=${bankMeta.sourced} types=${bankMeta.types.join(',')} shell=${shellWidth}`);
+  console.log(`${name} PASS entry=/ks/ highValue=${bankMeta.active}/${bankMeta.total} tiers=A${bankMeta.counts.A||0},B${bankMeta.counts.B||0},C${bankMeta.counts.C||0},D${bankMeta.counts.D||0} types=${bankMeta.types.join(',')} shell=${shellWidth}`);
 }
 
 async function releaseEntryChecks() {
@@ -108,7 +142,7 @@ async function releaseEntryChecks() {
   await assert(securitiesHref && securitiesHref.startsWith('ks/'), `root securities card is not routed through /ks/ (${securitiesHref})`);
   await page.goto(`${BASE}/securities-exam/?legacy-check=${Date.now()}`, { waitUntil: 'domcontentloaded', timeout: 45000 });
   await page.waitForURL(/\/quiz-v4\//, { timeout: 15000 });
-  await page.waitForFunction(() => window.SEC_QUIZ_V4?.version === '4.0.0' && window.SEC_QUIZ_V41?.version === '4.1.0', null, { timeout: 15000 });
+  await page.waitForFunction(() => window.SEC_QUIZ_V4?.version === '4.0.0' && window.SEC_QUIZ_V41?.version === '4.1.0' && window.SEC_QUIZ_V42?.version === '4.2.0', null, { timeout: 15000 });
   await browser.close();
   console.log('release entry PASS root-card=/ks/ legacy=/securities-exam/->/quiz-v4/');
 }
@@ -118,5 +152,5 @@ async function releaseEntryChecks() {
   await exercise(chromium, 'chromium-mobile', { viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true });
   await exercise(webkit, 'webkit-iphone', { ...devices['iPhone 13'] });
   await releaseEntryChecks();
-  console.log('V4.1 release smoke PASS: source provenance + four question types + auto deep explanation + inline next + desktop/mobile/iPhone');
+  console.log('V4.2 release smoke PASS: quality-tiered pool + provenance + auto deep explanation + transfer practice + mastery + desktop/mobile/iPhone');
 })().catch(err => { console.error(err.stack || err); process.exit(1); });

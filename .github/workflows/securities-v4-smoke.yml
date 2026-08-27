@@ -34,7 +34,7 @@ jobs:
           set -euo pipefail
           test -f package.json || npm init -y >/dev/null
           npm install --no-save --package-lock=false playwright@1.55.0
-      - name: Wait for complete v4 release on real Pages
+      - name: Wait for complete v4.2 release on real Pages
         id: live
         shell: bash
         run: |
@@ -44,11 +44,15 @@ jobs:
           for attempt in {1..72}; do
             html="$(curl -fsSL --max-time 20 "$base/quiz-v4/?wait=${GITHUB_SHA}-$attempt" 2>/dev/null || true)"
             js="$(curl -fsSL --max-time 20 "$base/quiz-v4/v4.js?wait=${GITHUB_SHA}-$attempt" 2>/dev/null || true)"
+            q42="$(curl -fsSL --max-time 20 "$base/quiz-v4/question-quality-v42.js?wait=${GITHUB_SHA}-$attempt" 2>/dev/null || true)"
+            e42="$(curl -fsSL --max-time 20 "$base/quiz-v4/v42-enhance.js?wait=${GITHUB_SHA}-$attempt" 2>/dev/null || true)"
             ks="$(curl -fsSL --max-time 20 "$base/ks/?wait=${GITHUB_SHA}-$attempt" 2>/dev/null || true)"
             root="$(curl -fsSL --max-time 20 "$base/?wait=${GITHUB_SHA}-$attempt" 2>/dev/null || true)"
             legacy="$(curl -fsSL --max-time 20 "$base/securities-exam/?wait=${GITHUB_SHA}-$attempt" 2>/dev/null || true)"
-            if grep -Fq '证券从业刷题 · v4.0' <<<"$html" \
+            if grep -Fq '证券从业刷题 · v4.2' <<<"$html" \
               && grep -Fq 'mobile-first-question-centric' <<<"$js" \
+              && grep -Fq "version:'4.2.0'" <<<"$q42" \
+              && grep -Fq "window.SEC_QUIZ_V42" <<<"$e42" \
               && grep -Fq '../quiz-v4/' <<<"$ks" \
               && grep -Fq 'href="ks/?v=20260826-v4"' <<<"$root" \
               && grep -Fq '../quiz-v4/' <<<"$legacy"; then
@@ -57,7 +61,7 @@ jobs:
             fi
             sleep 5
           done
-          [[ "$ok" == true ]] || { echo 'complete v4 release entries were not live before browser smoke' >&2; exit 1; }
+          [[ "$ok" == true ]] || { echo 'complete v4.2 release entries were not live before browser smoke' >&2; exit 1; }
       - name: Run real mobile-first browser smoke
         id: smoke
         continue-on-error: true
@@ -67,7 +71,7 @@ jobs:
         run: |
           set -o pipefail
           node scripts/securities-v4-smoke.cjs 2>&1 | tee /tmp/securities-v4-smoke.log
-      - name: Write v4 browser certificate
+      - name: Write v4.2 browser certificate
         if: always()
         env:
           INSTALL_OUTCOME: ${{ steps.install.outcome }}
@@ -81,15 +85,16 @@ jobs:
           cat > "$status_tmp/securities-v4-smoke.txt" <<EOF
           status=${overall}
           tested_sha=${GITHUB_SHA}
-          version=4.0.0
+          version=4.2.0
           formal_entry=/ks/
           legacy_entry=/securities-exam/
           browsers=chromium-desktop+chromium-mobile+webkit-iphone
           install=${INSTALL_OUTCOME}
           live_wait=${LIVE_OUTCOME}
           browser_smoke=${SMOKE_OUTCOME}
-          flows=formal-entry+home+question+wrong-answer+explanation+next+favourite+chapters+root-card+legacy-redirect
+          flows=formal-entry+quality-pool+question+wrong-answer+deep-explanation+transfer-practice+mastery+next+favourite+chapters+root-card+legacy-redirect
           layout=mobile-first-max-520px
+          question_policy=A-B-C-default+D-quarantined
           external_course_data=bilibili-finance+law-derived-json
           cloud_sync=false
           verified_at=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
@@ -97,7 +102,7 @@ jobs:
           if [[ -f /tmp/securities-v4-smoke.log ]]; then
             tail -n 120 /tmp/securities-v4-smoke.log > "$status_tmp/securities-v4-smoke.log"
           else
-            echo 'v4 browser smoke did not start' > "$status_tmp/securities-v4-smoke.log"
+            echo 'v4.2 browser smoke did not start' > "$status_tmp/securities-v4-smoke.log"
           fi
 
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
@@ -112,7 +117,7 @@ jobs:
             cp "$status_tmp/securities-v4-smoke.log" release-status/securities-v4-smoke.log
             git add release-status/securities-v4-smoke.txt release-status/securities-v4-smoke.log
             if git diff --cached --quiet; then
-              echo 'v4 browser certificate already current'
+              echo 'v4.2 browser certificate already current'
               break
             fi
             git commit -m 'status: record securities v4 browser smoke'
@@ -120,12 +125,12 @@ jobs:
               break
             fi
             if [[ "$attempt" == 5 ]]; then
-              echo 'Could not persist v4 browser certificate after 5 moving-main retries.' >&2
+              echo 'Could not persist v4.2 browser certificate after 5 moving-main retries.' >&2
               exit 1
             fi
             sleep 2
           done
-      - name: Enforce v4 browser smoke result
+      - name: Enforce v4.2 browser smoke result
         if: always()
         env:
           SMOKE_OUTCOME: ${{ steps.smoke.outcome }}

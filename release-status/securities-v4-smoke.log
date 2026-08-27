@@ -1,5 +1,5 @@
-chromium-desktop-mobile-shell PASS entry=/ks/ questions=917 source=917 types=comprehensive,judge,multi,single shell=520
-chromium-mobile PASS entry=/ks/ questions=917 source=917 types=comprehensive,judge,multi,single shell=390
-webkit-iphone PASS entry=/ks/ questions=917 source=917 types=comprehensive,judge,multi,single shell=390
+chromium-desktop-mobile-shell PASS entry=/ks/ highValue=711/917 tiers=A11,B11,C689,D206 types=comprehensive,judge,multi,single shell=520
+chromium-mobile PASS entry=/ks/ highValue=711/917 tiers=A11,B11,C689,D206 types=comprehensive,judge,multi,single shell=390
+webkit-iphone PASS entry=/ks/ highValue=711/917 tiers=A11,B11,C689,D206 types=comprehensive,judge,multi,single shell=390
 release entry PASS root-card=/ks/ legacy=/securities-exam/->/quiz-v4/
-V4.1 release smoke PASS: source provenance + four question types + auto deep explanation + inline next + desktop/mobile/iPhone
+V4.2 release smoke PASS: quality-tiered pool + provenance + auto deep explanation + transfer practice + mastery + desktop/mobile/iPhone

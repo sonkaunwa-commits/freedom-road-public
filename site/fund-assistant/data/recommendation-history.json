@@ -1,49 +1,49 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-25T16:23:33+08:00",
+  "updated_at": "2026-08-26T16:25:00+08:00",
   "policy": "记录核心推荐池每次换入/换出；换出原因由当次可解释规则推断并保留",
   "current": [
     {
       "code": "002910",
       "name": "易方达供给改革混合",
-      "score": 95.9,
+      "score": 97.6,
       "first_seen": "2026-08-18T21:59:00+08:00",
-      "days_tracked": 8
+      "days_tracked": 9
     },
     {
       "code": "005825",
       "name": "申万菱信智能驱动股票A",
-      "score": 97.6,
+      "score": 96.9,
       "first_seen": "2026-08-18T21:59:00+08:00",
-      "days_tracked": 8
+      "days_tracked": 9
     },
     {
       "code": "006502",
       "name": "财通集成电路产业股票A",
-      "score": 95.2,
+      "score": 91.8,
       "first_seen": "2026-08-18T21:59:00+08:00",
-      "days_tracked": 8
+      "days_tracked": 9
     },
     {
       "code": "017730",
       "name": "嘉实全球产业升级股票发起式(QDII)A",
-      "score": 81.1,
+      "score": 77.5,
       "first_seen": "2026-08-18T21:59:00+08:00",
-      "days_tracked": 8
+      "days_tracked": 9
     },
     {
       "code": "016500",
       "name": "华夏半导体龙头混合发起A",
-      "score": 87.9,
+      "score": 87.3,
       "first_seen": "2026-08-19T00:00:59+08:00",
-      "days_tracked": 7
+      "days_tracked": 8
     },
     {
       "code": "014854",
       "name": "嘉实中证半导体指数增强发起式A",
-      "score": 84.5,
+      "score": 78.0,
       "first_seen": "2026-08-19T00:00:59+08:00",
-      "days_tracked": 7
+      "days_tracked": 8
     }
   ],
   "events": [

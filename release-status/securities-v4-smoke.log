@@ -1,1 +1,4 @@
-v4.6 browser smoke did not start
+Error: chromium-desktop: active bank too small
+    at assert (/__w/freedom-road-public/freedom-road-public/scripts/securities-v4-smoke.cjs:4:34)
+    at exercise (/__w/freedom-road-public/freedom-road-public/scripts/securities-v4-smoke.cjs:14:324)
+    at async /__w/freedom-road-public/freedom-road-public/scripts/securities-v4-smoke.cjs:27:12

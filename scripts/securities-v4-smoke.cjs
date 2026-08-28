@@ -27,8 +27,8 @@ async function authenticate(page, creds, create=false) {
     await f.locator('[name="password"]').fill(creds.password);
     await f.locator('button[type="submit"]').click();
   }
+  await page.waitForFunction(() => !document.querySelector('.v43Auth.show'), null, { timeout: 25000 });
   await page.waitForSelector('.subject .continue', { timeout: 25000 });
-  await assert((await page.locator('.v43Auth.show').count()) === 0, 'auth overlay remained after login');
 }
 async function openAndAuth(page, creds, create=false, suffix='') {
   const r = await page.goto(ENTRY + `&case=${suffix}`, { waitUntil: 'domcontentloaded', timeout: 45000 });

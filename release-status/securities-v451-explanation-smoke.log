@@ -1,4 +1,5 @@
-chromium-desktop PASS deep practice + mock review explanations
-chromium-mobile PASS deep practice + mock review explanations
-webkit-iphone PASS deep practice + mock review explanations
-V4.5.1 explanation smoke PASS
+Error: chromium-desktop: LOF option rationales missing
+    at assert (/__w/freedom-road-public/freedom-road-public/scripts/securities-v451-explanation-smoke.cjs:5:34)
+    at bankQuality (/__w/freedom-road-public/freedom-road-public/scripts/securities-v451-explanation-smoke.cjs:14:53)
+    at async run (/__w/freedom-road-public/freedom-road-public/scripts/securities-v451-explanation-smoke.cjs:36:205)
+    at async /__w/freedom-road-public/freedom-road-public/scripts/securities-v451-explanation-smoke.cjs:37:12

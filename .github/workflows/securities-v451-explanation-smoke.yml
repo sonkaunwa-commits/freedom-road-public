@@ -8,8 +8,11 @@ on:
       - site/quiz-v4/index.html
       - site/quiz-v4/v451-explanation.js
       - site/quiz-v4/v451-explanation.css
+      - site/quiz-v4/v461-polish.js
+      - site/quiz-v4/v461-polish.css
       - site/quiz-v4/bank-highvalue-v43.js
       - site/quiz-v4/bank-authenticity-v46.js
+      - site/quiz-v4/bank-polish-v461.js
       - site/quiz-v4/question-quality-v42.js
       - site/exam-live/bank/generator-v2.js
       - scripts/securities-v451-explanation-smoke.cjs
@@ -37,26 +40,26 @@ jobs:
         run: |
           test -f package.json || npm init -y >/dev/null
           npm install --no-save --package-lock=false playwright@1.55.0
-      - name: Wait for v4.6.0 live
+      - name: Wait for v4.6.1 live
         run: |
           set -euo pipefail
           base='https://sonkaunwa-commits.github.io/freedom-road-public'
           ok=false
           for attempt in {1..60}; do
             html="$(curl -fsSL --max-time 20 "$base/quiz-v4/?wait=${GITHUB_SHA}-$attempt" 2>/dev/null || true)"
-            js="$(curl -fsSL --max-time 20 "$base/quiz-v4/v451-explanation.js?wait=${GITHUB_SHA}-$attempt" 2>/dev/null || true)"
-            bank="$(curl -fsSL --max-time 20 "$base/quiz-v4/bank-authenticity-v46.js?wait=${GITHUB_SHA}-$attempt" 2>/dev/null || true)"
-            if grep -Fq '证券从业刷题 · v4.6.0' <<<"$html" && grep -Fq "const VERSION='4.6.0'" <<<"$js" && grep -Fq "version:'4.6.0'" <<<"$bank"; then ok=true; break; fi
+            polish="$(curl -fsSL --max-time 20 "$base/quiz-v4/v461-polish.js?wait=${GITHUB_SHA}-$attempt" 2>/dev/null || true)"
+            bank="$(curl -fsSL --max-time 20 "$base/quiz-v4/bank-polish-v461.js?wait=${GITHUB_SHA}-$attempt" 2>/dev/null || true)"
+            if grep -Fq '证券从业刷题 · v4.6.1' <<<"$html" && grep -Fq "const VERSION='4.6.1'" <<<"$polish" && grep -Fq "version:'4.6.1'" <<<"$bank"; then ok=true; break; fi
             sleep 5
           done
-          [[ "$ok" == true ]] || { echo 'v4.6.0 did not become live' >&2; exit 1; }
-      - name: Run bank and explanation regression smoke
+          [[ "$ok" == true ]] || { echo 'v4.6.1 did not become live' >&2; exit 1; }
+      - name: Run targeted polish browser regression
         id: smoke
         continue-on-error: true
         env:
           SECURITIES_BASE: https://sonkaunwa-commits.github.io/freedom-road-public
         run: node scripts/securities-v451-explanation-smoke.cjs 2>&1 | tee /tmp/v451.log
-      - name: Write bank quality certificate
+      - name: Write targeted polish certificate
         if: always()
         env:
           OUTCOME: ${{ steps.smoke.outcome }}
@@ -67,18 +70,18 @@ jobs:
           cat > release-status/securities-v451-explanation-smoke.txt <<EOF
           status=${status}
           tested_sha=${GITHUB_SHA}
-          version=4.6.0
+          version=4.6.1
           browsers=chromium-desktop+chromium-mobile+webkit-iphone
-          flows=authentic-exam-stems+meta-stem-quarantine+1000-plus-active-bank+long-comprehensive-cases+lof-option-rationale+deep-explanation+knowledge-card+related-transfer-questions+course-noise-filter+mock-post-submit-review
+          flows=continue-subject-resumes-current-group+mechanical-wording-quarantine+commercial-bank-question-repair+humanized-option-reasons+related-question-answers+expanded-course-or-material-teaching+deep-explanation+mock-post-submit-review
           browser_smoke=${OUTCOME}
           verified_at=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
           EOF
-          tail -n 120 /tmp/v451.log > release-status/securities-v451-explanation-smoke.log || true
+          tail -n 140 /tmp/v451.log > release-status/securities-v451-explanation-smoke.log || true
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add release-status/securities-v451-explanation-smoke.*
-          git commit -m 'status: record securities v4.6 bank quality smoke' || exit 0
+          git commit -m 'status: record securities v4.6.1 targeted polish smoke' || exit 0
           for attempt in 1 2 3 4 5; do
             git pull --rebase origin main && git push origin HEAD:main && break
             [[ "$attempt" == 5 ]] && exit 1

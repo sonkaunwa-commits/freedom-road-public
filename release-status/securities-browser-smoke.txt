@@ -1,12 +1,12 @@
 status=failed
-tested_sha=047b320038eb0acabbce32e5b4db2cd59b84251e
+tested_sha=01d629f711ac4b0e819f826274309bcde8e1f703
 browsers=chromium+webkit
-install=cancelled
-live_wait=skipped
+install=success
+live_wait=failure
 browser_smoke=skipped
 desktop=chromium-exam-live-home+knowledge+practice+profiles+pin
 mobile=chromium-ks-to-exam-live+webkit-iphone-ks-to-exam-live+home+knowledge
 entry=clean-no-service-worker-r4
 profile_loop_fix=20260825-r4b
 cloud_sync=false
-verified_at=2026-08-26T09:08:41Z
+verified_at=2026-08-28T09:14:48Z

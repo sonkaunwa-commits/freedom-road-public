@@ -34,7 +34,7 @@ jobs:
           set -euo pipefail
           test -f package.json || npm init -y >/dev/null
           npm install --no-save --package-lock=false playwright@1.55.0
-      - name: Wait for complete v4.5 release on real Pages
+      - name: Wait for complete v4.6 release on real Pages
         id: live
         shell: bash
         run: |
@@ -44,13 +44,19 @@ jobs:
           for attempt in {1..72}; do
             html="$(curl -fsSL --max-time 20 "$base/quiz-v4/?wait=${GITHUB_SHA}-$attempt" 2>/dev/null || true)"
             app="$(curl -fsSL --max-time 20 "$base/quiz-v4/v45-app.js?wait=${GITHUB_SHA}-$attempt" 2>/dev/null || true)"
+            explain="$(curl -fsSL --max-time 20 "$base/quiz-v4/v451-explanation.js?wait=${GITHUB_SHA}-$attempt" 2>/dev/null || true)"
+            bank="$(curl -fsSL --max-time 20 "$base/quiz-v4/bank-authenticity-v46.js?wait=${GITHUB_SHA}-$attempt" 2>/dev/null || true)"
+            order="$(curl -fsSL --max-time 20 "$base/quiz-v4/bank-option-order-v46.js?wait=${GITHUB_SHA}-$attempt" 2>/dev/null || true)"
             css="$(curl -fsSL --max-time 20 "$base/quiz-v4/v45.css?wait=${GITHUB_SHA}-$attempt" 2>/dev/null || true)"
             sync="$(curl -fsSL --max-time 20 "$base/quiz-v4/cloud-sync-v43.js?wait=${GITHUB_SHA}-$attempt" 2>/dev/null || true)"
             ks="$(curl -fsSL --max-time 20 "$base/ks/?wait=${GITHUB_SHA}-$attempt" 2>/dev/null || true)"
             root="$(curl -fsSL --max-time 20 "$base/?wait=${GITHUB_SHA}-$attempt" 2>/dev/null || true)"
             legacy="$(curl -fsSL --max-time 20 "$base/securities-exam/?wait=${GITHUB_SHA}-$attempt" 2>/dev/null || true)"
-            if grep -Fq '证券从业刷题 · v4.5' <<<"$html" \
+            if grep -Fq '证券从业刷题 · v4.6.0' <<<"$html" \
               && grep -Fq "const VERSION='4.5.0'" <<<"$app" \
+              && grep -Fq "const VERSION='4.6.0'" <<<"$explain" \
+              && grep -Fq "version:'4.6.0'" <<<"$bank" \
+              && grep -Fq "version:'4.6.0'" <<<"$order" \
               && grep -Fq 'countdown-dashboard' <<<"$app" \
               && grep -Fq 'shared-material-mixed-subquestions' <<<"$app" \
               && grep -Fq 'cloud-reset-current-account' <<<"$app" \
@@ -64,8 +70,8 @@ jobs:
             fi
             sleep 5
           done
-          [[ "$ok" == true ]] || { echo 'complete v4.5 release was not live before browser smoke' >&2; exit 1; }
-      - name: Run v4.5 real-browser smoke
+          [[ "$ok" == true ]] || { echo 'complete v4.6 release was not live before browser smoke' >&2; exit 1; }
+      - name: Run v4.6 real-browser smoke
         id: smoke
         continue-on-error: true
         env:
@@ -74,7 +80,7 @@ jobs:
         run: |
           set -o pipefail
           node scripts/securities-v4-smoke.cjs 2>&1 | tee /tmp/securities-v4-smoke.log
-      - name: Write v4.5 browser certificate
+      - name: Write v4.6 browser certificate
         if: always()
         env:
           INSTALL_OUTCOME: ${{ steps.install.outcome }}
@@ -88,16 +94,16 @@ jobs:
           cat > "$status_tmp/securities-v4-smoke.txt" <<EOF
           status=${overall}
           tested_sha=${GITHUB_SHA}
-          version=4.5.0
+          version=4.6.0
           formal_entry=/ks/
           legacy_entry=/securities-exam/
           browsers=chromium-desktop+chromium-mobile+webkit-iphone
           install=${INSTALL_OUTCOME}
           live_wait=${LIVE_OUTCOME}
           browser_smoke=${SMOKE_OUTCOME}
-          flows=formal-entry+fixed-pin-gate+remembered-session+automatic-cross-device-sync+separate-code-isolation+countdown-dashboard+adaptive-daily-target+home-return+single-multi-judge-case-order+shared-long-case-material+mixed-case-subquestions+question-palette+jump-back+previous+skip+high-value-review+redo+chapter+five-mocks-per-subject+120-question-mock+mock-long-case+mock-no-answer-leak+current-account-reset-ui+root-card+legacy-redirect
+          flows=formal-entry+fixed-pin-gate+remembered-session+automatic-cross-device-sync+separate-code-isolation+countdown-dashboard+adaptive-daily-target+home-return+authentic-question-bank+meta-stem-quarantine+distributed-answer-positions+single-multi-judge-case-order+shared-long-case-material+mixed-case-subquestions+question-palette+jump-back+previous+skip+high-value-review+redo+chapter+five-mocks-per-subject+120-question-mock+mock-long-case+mock-no-answer-leak+current-account-reset-ui+root-card+legacy-redirect
           layout=mobile-first-max-520px
-          question_policy=A-B-C-default+D-quarantined+shared-case-material
+          question_policy=A-B-C-default+D-quarantined+v46-authenticity-gate+shared-case-material
           account_model=two-fixed-pin-codes+isolated-server-state
           cloud_sync=automatic-background-sync
           mock_papers=finance-5x120+law-5x120
@@ -107,7 +113,7 @@ jobs:
           if [[ -f /tmp/securities-v4-smoke.log ]]; then
             tail -n 180 /tmp/securities-v4-smoke.log > "$status_tmp/securities-v4-smoke.log"
           else
-            echo 'v4.5 browser smoke did not start' > "$status_tmp/securities-v4-smoke.log"
+            echo 'v4.6 browser smoke did not start' > "$status_tmp/securities-v4-smoke.log"
           fi
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           git config user.name 'github-actions[bot]'
@@ -119,13 +125,13 @@ jobs:
             cp "$status_tmp/securities-v4-smoke.txt" release-status/securities-v4-smoke.txt
             cp "$status_tmp/securities-v4-smoke.log" release-status/securities-v4-smoke.log
             git add release-status/securities-v4-smoke.txt release-status/securities-v4-smoke.log
-            if git diff --cached --quiet; then echo 'v4.5 browser certificate already current'; break; fi
-            git commit -m 'status: record securities v4.5 browser smoke'
+            if git diff --cached --quiet; then echo 'v4.6 browser certificate already current'; break; fi
+            git commit -m 'status: record securities v4.6 browser smoke'
             if git push origin HEAD:main; then break; fi
-            if [[ "$attempt" == 5 ]]; then echo 'Could not persist v4.5 browser certificate after retries.' >&2; exit 1; fi
+            if [[ "$attempt" == 5 ]]; then echo 'Could not persist v4.6 browser certificate after retries.' >&2; exit 1; fi
             sleep 2
           done
-      - name: Enforce v4.5 browser smoke result
+      - name: Enforce v4.6 browser smoke result
         if: always()
         env:
           SMOKE_OUTCOME: ${{ steps.smoke.outcome }}

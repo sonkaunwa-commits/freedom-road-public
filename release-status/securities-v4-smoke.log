@@ -1,1 +1,6 @@
-v4.3 browser smoke did not start
+chromium-desktop-mobile-shell PASS pin=0917 highValue=1210/1416 added=499 shell=520
+chromium-mobile PASS pin=0917 highValue=1210/1416 added=499 shell=390
+webkit-iphone PASS pin=0917 highValue=1210/1416 added=499 shell=390
+PIN account PASS same-code identity + separate-code isolation + no direct profile switch
+release entry PASS root-card=/ks/ legacy=/securities-exam/->/quiz-v4/ fixed-PIN-gate
+V4.3.1 release smoke PASS: two fixed PINs + isolated cloud accounts + remembered sessions + high-value bank

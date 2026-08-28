@@ -48,16 +48,23 @@ function showAuth(message=''){
 }
 async function logout(){const t=rawToken();clearSession();try{if(t)await call('logout',{},t)}catch(_){}location.reload()}
 function patchAccountCard(){
- const main=document.getElementById('main');if(!main)return;main.querySelectorAll('[data-profile]').forEach(x=>x.closest('.meCard')?.remove()||x.remove());
+ const main=document.getElementById('main');if(!main)return;
+ main.querySelectorAll('[data-profile]').forEach(x=>{const card=x.closest('.meCard');card?card.remove():x.remove()});
  const title=[...main.querySelectorAll('.meCard h3')].find(x=>x.textContent.includes('本机学习档案'));if(title)title.closest('.meCard')?.remove();
- if(!main.querySelector('.sheetTitle h1')?.textContent.includes('学习进度'))return;let box=main.querySelector('.v43AccountCard');if(!box){box=document.createElement('div');box.className='meCard v43AccountCard';const cards=main.querySelectorAll('.meCard');cards[0]?.insertAdjacentElement('afterend',box)}
- if(!box)return;const u=user();box.innerHTML=`<h3>学习账号</h3><div class="statLine"><span>当前账号</span><b>${esc(u?.displayName||u?.username||'—')}</b></div><div class="statLine"><span>云端同步</span><b>${esc(lastStatus||localStorage.getItem(STATUS)||'—')}</b></div><div class="v43AccountActions"><button data-v43-sync>立即同步</button><button data-v43-logout>退出当前账号</button></div><small>退出后不会出现可直接切换的账号列表。另一个人必须输入自己的账号和密码登录。</small>`;box.querySelector('[data-v43-sync]').onclick=async()=>{await pull();patchAccountCard()};box.querySelector('[data-v43-logout]').onclick=logout;
+ if(!main.querySelector('.sheetTitle h1')?.textContent.includes('学习进度'))return;
+ let box=main.querySelector('.v43AccountCard');if(!box){box=document.createElement('div');box.className='meCard v43AccountCard';const cards=main.querySelectorAll('.meCard');cards[0]?.insertAdjacentElement('afterend',box)}
+ if(!box)return;
+ const u=user(),status=lastStatus||localStorage.getItem(STATUS)||'—',identity=u?.displayName||u?.username||'—',sig=`${identity}|${status}`;
+ if(box.dataset.sig===sig)return;
+ box.dataset.sig=sig;
+ box.innerHTML=`<h3>学习账号</h3><div class="statLine"><span>当前账号</span><b>${esc(identity)}</b></div><div class="statLine"><span>云端同步</span><b>${esc(status)}</b></div><div class="v43AccountActions"><button data-v43-sync>立即同步</button><button data-v43-logout>退出当前账号</button></div><small>退出后不会出现可直接切换的账号列表。另一个人必须输入自己的账号和密码登录。</small>`;
+ box.querySelector('[data-v43-sync]').onclick=async()=>{await pull();patchAccountCard()};box.querySelector('[data-v43-logout]').onclick=logout;
 }
 function boot(){
  const t=rawToken();if(!t){showAuth();return}
  const marker=sessionStorage.getItem('sec_v43_boot_synced');if(marker!==t.slice(0,12)){const m=authShell();m.innerHTML='<section class="v43LoginCard v43Syncing"><h1>正在同步学习进度</h1><p>正在载入这个账号自己的错题、收藏和答题记录…</p></section>';m.classList.add('show');pull({boot:true});return}
  setStatus(localStorage.getItem(STATUS)||'已登录');pull();
- const obs=new MutationObserver(()=>patchAccountCard());obs.observe(document.getElementById('main')||document.body,{childList:true,subtree:true});patchAccountCard();
+ const obs=new MutationObserver(()=>queueMicrotask(patchAccountCard));obs.observe(document.getElementById('main')||document.body,{childList:true,subtree:true});patchAccountCard();
  window.addEventListener('online',()=>{pull();push()});document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')pull()});
 }
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});else boot();

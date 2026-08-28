@@ -1,5 +1,6 @@
-chromium-desktop-mobile-shell PASS entry=/ks/ highValue=711/917 tiers=A11,B11,C689,D206 types=comprehensive,judge,multi,single shell=520
-chromium-mobile PASS entry=/ks/ highValue=711/917 tiers=A11,B11,C689,D206 types=comprehensive,judge,multi,single shell=390
-webkit-iphone PASS entry=/ks/ highValue=711/917 tiers=A11,B11,C689,D206 types=comprehensive,judge,multi,single shell=390
-release entry PASS root-card=/ks/ legacy=/securities-exam/->/quiz-v4/
-V4.2 release smoke PASS: quality-tiered pool + provenance + auto deep explanation + transfer practice + mastery + desktop/mobile/iPhone
+Error: auth overlay remained after login
+    at assert (/__w/freedom-road-public/freedom-road-public/scripts/securities-v4-smoke.cjs:9:70)
+    at authenticate (/__w/freedom-road-public/freedom-road-public/scripts/securities-v4-smoke.cjs:31:9)
+    at async openAndAuth (/__w/freedom-road-public/freedom-road-public/scripts/securities-v4-smoke.cjs:38:3)
+    at async exercise (/__w/freedom-road-public/freedom-road-public/scripts/securities-v4-smoke.cjs:49:35)
+    at async /__w/freedom-road-public/freedom-road-public/scripts/securities-v4-smoke.cjs:96:12

@@ -1,5 +1,15 @@
-Error: chromium-desktop: repaired banking questions not specific enough 3
-    at assert (/__w/freedom-road-public/freedom-road-public/scripts/securities-v451-explanation-smoke.cjs:5:34)
-    at bankQuality (/__w/freedom-road-public/freedom-road-public/scripts/securities-v451-explanation-smoke.cjs:18:373)
-    at async run (/__w/freedom-road-public/freedom-road-public/scripts/securities-v451-explanation-smoke.cjs:38:205)
-    at async /__w/freedom-road-public/freedom-road-public/scripts/securities-v451-explanation-smoke.cjs:39:12
+chromium-desktop BANK active=792 curated=594 cases=43 banking=8 quarantined=417
+locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('#backBtn')
+    - locator resolved to <button id="backBtn" class="iconbtn" aria-label="返回刷题首页">‹</button>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - performing click action
+
+    at resumeAndExplanation (/__w/freedom-road-public/freedom-road-public/scripts/securities-v451-explanation-smoke.cjs:26:33)
+    at async run (/__w/freedom-road-public/freedom-road-public/scripts/securities-v451-explanation-smoke.cjs:39:257)
+    at async /__w/freedom-road-public/freedom-road-public/scripts/securities-v451-explanation-smoke.cjs:40:12

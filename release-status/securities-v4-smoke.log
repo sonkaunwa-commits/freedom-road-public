@@ -1,6 +1,1 @@
-chromium-desktop PASS v4.5 countdown=true homeReturn=true longCase=95 mock=5x120 reset=true shell=520
-chromium-mobile PASS v4.5 countdown=true homeReturn=true longCase=95 mock=5x120 reset=true shell=390
-webkit-iphone PASS v4.5 countdown=true homeReturn=true longCase=95 mock=5x120 reset=true shell=390
-cloud PASS same-account sync + separate-account isolation + marker cleanup
-entry PASS
-V4.5 release smoke PASS
+v4.5 browser smoke did not start

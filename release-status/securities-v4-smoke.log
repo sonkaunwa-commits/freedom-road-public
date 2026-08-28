@@ -1,7 +1,6 @@
 chromium-desktop-mobile-shell PASS pin=0917 highValue=1210/1416 added=499 shell=520
 chromium-mobile PASS pin=0917 highValue=1210/1416 added=499 shell=390
 webkit-iphone PASS pin=0917 highValue=1210/1416 added=499 shell=390
-Error: same PIN did not resolve to same cloud account
-    at assert (/__w/freedom-road-public/freedom-road-public/scripts/securities-v4-smoke.cjs:7:70)
-    at accountIsolation (/__w/freedom-road-public/freedom-road-public/scripts/securities-v4-smoke.cjs:70:9)
-    at async /__w/freedom-road-public/freedom-road-public/scripts/securities-v4-smoke.cjs:84:274
+PIN account PASS instant local entry + same-code cloud identity + separate-code isolation + no direct profile switch
+release entry PASS root-card=/ks/ legacy=/securities-exam/->/quiz-v4/ hidden-code gate
+V4.3.1 release smoke PASS: hidden fixed PINs + instant local entry + isolated cloud accounts + remembered sessions + high-value bank

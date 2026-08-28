@@ -1,5 +1,7 @@
-Error: chromium-desktop: LOF option rationales missing
-    at assert (/__w/freedom-road-public/freedom-road-public/scripts/securities-v451-explanation-smoke.cjs:5:34)
-    at bankQuality (/__w/freedom-road-public/freedom-road-public/scripts/securities-v451-explanation-smoke.cjs:14:53)
-    at async run (/__w/freedom-road-public/freedom-road-public/scripts/securities-v451-explanation-smoke.cjs:36:205)
-    at async /__w/freedom-road-public/freedom-road-public/scripts/securities-v451-explanation-smoke.cjs:37:12
+chromium-desktop BANK active=1209 curated=1011 cases=117 lof=9
+chromium-desktop PASS v4.6 authentic bank + deep explanation + mock review
+chromium-mobile BANK active=1209 curated=1011 cases=117 lof=9
+chromium-mobile PASS v4.6 authentic bank + deep explanation + mock review
+webkit-iphone BANK active=1209 curated=1011 cases=117 lof=9
+webkit-iphone PASS v4.6 authentic bank + deep explanation + mock review
+V4.6.0 bank-quality browser smoke PASS

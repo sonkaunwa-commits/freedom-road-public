@@ -1,6 +1,1 @@
-chromium-desktop PASS v4.6 active=1209 answerDist=116/102/96/105 countdown=true homeReturn=true longCase=106 mock=5x120 reset=true shell=520
-chromium-mobile PASS v4.6 active=1209 answerDist=116/102/96/105 countdown=true homeReturn=true longCase=106 mock=5x120 reset=true shell=390
-webkit-iphone PASS v4.6 active=1209 answerDist=116/102/96/105 countdown=true homeReturn=true longCase=106 mock=5x120 reset=true shell=390
-cloud PASS same-account sync + separate-account isolation + marker cleanup
-entry PASS
-V4.6 release smoke PASS
+v4.6 browser smoke did not start

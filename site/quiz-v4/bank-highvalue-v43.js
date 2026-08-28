@@ -8,12 +8,23 @@ function seeded(seed){let x=seed>>>0;return()=>{x=(x+0x6D2B79F5)>>>0;let t=x;t=M
 function shuffleRows(rows,seed){const a=rows.map((v,i)=>({v,i})),r=seeded(hash(seed));for(let i=a.length-1;i>0;i--){const j=Math.floor(r()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
 function cleanText(s){return String(s||'').replace(/\s+/g,' ').trim()}
 function norm(s){return cleanText(s).replace(/[\s，。！？、；：,.!?;:（）()“”"'《》「」]/g,'').toLowerCase()}
+function ownerFor(text,subject){const n=norm(text);for(const x of C.filter(v=>v.s===subject)){for(const [field,label] of [['definition','定义'],['key','关键点'],['wrong','错误说法'],['falsekey','常见陷阱']]){if(x[field]&&norm(x[field])===n)return{x,field,label}}}return null}
+function whyFor(text,c,isRight,e){
+ const own=ownerFor(text,c.s);
+ if(own){if(own.x.term===c.term){if(own.field==='definition')return `正确框架：这是“${c.term}”的基本定义——${c.definition}`;if(own.field==='key')return `关键判断点：${c.key}`;if(own.field==='wrong')return `错误。该项正是“${c.term}”的典型错误理解：${c.wrong}；正确理解为：${c.definition}`;if(own.field==='falsekey')return `错误。该项属于“${c.term}”的常见陷阱：${c.falsekey}。`}
+  return `该项对应的是“${own.x.term}”的${own.label}，不是本题“${c.term}”的核心判断。${own.x.term}应理解为：${own.x.definition}`;
+ }
+ if(isRight)return `正确。${e} 做题时要回到“${c.term}”的定义和关键条件：${c.definition}；${c.key}`;
+ if(/[一定|必然|完全|任何|全部|绝不|无条件|唯一|仅仅]/.test(text))return `错误。该项把结论绝对化了。证券业务规则通常有适用条件，不能用“任何/全部/完全”等词把“${c.term}”扩大为无条件结论。`;
+ return `错误。该项不符合“${c.term}”的定义或边界。正确框架：${c.definition}；判断线索：${c.key}`;
+}
 function pack(id,c,type,q,opts,correct,e,difficulty=2,caseStem=''){
  const uniq=[];opts.forEach((x,i)=>{const t=cleanText(x);if(t&&!uniq.some(v=>v.t===t))uniq.push({t,orig:i})});
  if(uniq.length<2)return null;
  const sh=shuffleRows(uniq,id),answers=[];sh.forEach((x,ni)=>{if(correct.includes(x.v.orig))answers.push(ni)});
  if(!answers.length)return null;
- return {id,s:c.s,ch:c.ch,type,valid:c.valid,q:cleanText(q),o:sh.map(x=>x.v.t),a:answers.sort((a,b)=>a-b),e:cleanText(e),knowledge:c.term,difficulty,caseStem:cleanText(caseStem),source:'高价值变式·按2026现行大纲与知识卡复核',sourceType:'curated_generated',sourceTruth:'原创变式·非官方真题',sourceBasis:'基于当前结构化考点的情境、辨析、反向与多选变式；用于巩固同一知识点而非宣称高频原题',updated:UPDATED,quality:'highvalue-v4.3',strict:true};
+ const oa=sh.map(x=>whyFor(x.v.t,c,correct.includes(x.v.orig),cleanText(e)));
+ return {id,s:c.s,ch:c.ch,type,valid:c.valid,q:cleanText(q),o:sh.map(x=>x.v.t),a:answers.sort((a,b)=>a-b),e:cleanText(e),oa,learn:{term:c.term,definition:c.definition,key:c.key,wrong:c.wrong,falsekey:c.falsekey,example:c.example},knowledge:c.term,difficulty,caseStem:cleanText(caseStem),source:'高价值变式·按2026现行大纲与知识卡复核',sourceType:'curated_generated',sourceTruth:'原创变式·非官方真题',sourceBasis:'基于当前结构化考点的情境、辨析、反向与多选变式；用于巩固同一知识点而非宣称高频原题',updated:UPDATED,quality:'highvalue-v4.3',strict:true};
 }
 const qs=[];
 C.forEach((c,ix)=>{
@@ -36,5 +47,5 @@ C.forEach((c,ix)=>{
 const seen=new Set(B.map(q=>norm(q?.q)));const added=[];
 for(const q of qs){const k=norm(q?.q);if(!k||seen.has(k))continue;seen.add(k);added.push(q);B.push(q)}
 window.SEC_QUESTIONS=B;
-window.SEC_V43_BANK={version:'4.3.0',generated:qs.length,added:added.length,total:B.length,finance:added.filter(q=>q.s==='finance').length,law:added.filter(q=>q.s==='law').length,note:'新增高价值变式用于覆盖情境、多选、辨析、边界与案例迁移；不宣称为官方真题或全部高频原题。'};
+window.SEC_V43_BANK={version:'4.3.1',generated:qs.length,added:added.length,total:B.length,finance:added.filter(q=>q.s==='finance').length,law:added.filter(q=>q.s==='law').length,note:'新增高价值变式用于覆盖情境、多选、辨析、边界与案例迁移；每个选项携带独立解析；不宣称为官方真题或全部高频原题。'};
 })();

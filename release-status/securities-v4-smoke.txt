@@ -1,5 +1,5 @@
 status=failed
-tested_sha=e85bf8e60221a3c01edd0e032b4c11724466cd65
+tested_sha=024bfc303366ae5b5a85651483ee18b691f1882c
 version=4.3.1
 formal_entry=/ks/
 legacy_entry=/securities-exam/
@@ -13,4 +13,4 @@ question_policy=A-B-C-default+D-quarantined+v43-high-value-expansion
 account_model=two-fixed-pin-codes+local-first+isolated-server-state
 cloud_sync=background-best-effort
 smoke_data_policy=non-destructive-no-learning-state-mutation
-verified_at=2026-08-28T06:43:00Z
+verified_at=2026-08-28T06:45:38Z

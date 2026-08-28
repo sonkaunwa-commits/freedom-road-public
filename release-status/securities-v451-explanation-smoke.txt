@@ -1,0 +1,7 @@
+status=ok
+tested_sha=a6c013df0c478733befab66d97a17d327267b6c0
+version=4.5.1
+browsers=chromium-desktop+chromium-mobile+webkit-iphone
+flows=practice-wrong-answer+deep-explanation+per-option-analysis+correct-wrong-highlights+mock-post-submit-review
+browser_smoke=success
+verified_at=2026-08-28T08:49:54Z

@@ -1,7 +1,7 @@
 status=failed
-tested_sha=01d629f711ac4b0e819f826274309bcde8e1f703
+tested_sha=b1a9e50444a318c9a8e46ebfb23741dc33ebe8d3
 version=4.5.2
 browsers=chromium-desktop+chromium-mobile+webkit-iphone
 flows=lof-option-rationale-quality+practice-wrong-answer+core-rule+per-option-analysis+knowledge-card+related-transfer-questions+correct-wrong-highlights+mock-post-submit-review
 browser_smoke=failure
-verified_at=2026-08-28T09:08:15Z
+verified_at=2026-08-28T09:17:11Z

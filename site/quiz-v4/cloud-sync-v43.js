@@ -3,7 +3,7 @@
 const VERSION='4.3.1';
 const API='https://qygzovuihtnxfciyowty.supabase.co/functions/v1/exam-sync';
 const APIKEY='sb_publishable_mTlFbbYmjOGtsXhGbIb5Hw_rIurluQP';
-const TOKEN='sec_v43_cloud_token',USER='sec_v43_cloud_user',REV='sec_v43_cloud_revision',STATUS='sec_v43_cloud_status';
+const TOKEN='sec_v43_cloud_token',USER='sec_v43_cloud_user',REV='sec_v43_cloud_revision',STATUS='sec_v43_cloud_status',MIGRATE='sec_v431_pin_migration_done';
 const SKEY='sec2026state_v1',RKEY='sec_v4_recovery',LASTKEY='sec_v4_last',MKEY='sec_v42_mastery_v1',TKEY='sec_v42_transfer_history';
 const TRACKED=new Set([SKEY,RKEY,LASTKEY,MKEY,TKEY]);
 let applying=false,pushTimer=null,pushing=false,lastStatus='';
@@ -44,7 +44,7 @@ function errText(code){return ({invalid_pin:'编号不正确，请输入 0917 �
 function showAuth(message=''){
  const m=authShell();m.innerHTML=`<section class="v43LoginCard"><span class="eyebrow">SECURITIES STUDY</span><h1>输入学习编号</h1><p>只需要输入自己的四位编号。系统会记住这个编号对应的学习进度。</p>${message?`<div class="v43Notice">${esc(message)}</div>`:''}<form data-pin-form><label>学习编号<input name="pin" inputmode="numeric" autocomplete="one-time-code" maxlength="4" pattern="[0-9]{4}" placeholder="请输入 4 位编号"></label><button class="primary" type="submit">进入学习</button></form><div class="v43AuthError" aria-live="polite"></div><small>可用编号：0917、4294。换手机或电脑时，输入同一个编号即可继续自己的进度。</small></section>`;m.classList.add('show');
  const f=m.querySelector('[data-pin-form]');const input=f.querySelector('[name="pin"]');input.focus();
- f.onsubmit=async e=>{e.preventDefault();const btn=f.querySelector('button[type=submit]'),er=m.querySelector('.v43AuthError'),pin=String(new FormData(f).get('pin')||'').replace(/\D/g,'').slice(0,4);er.textContent='';if(pin.length!==4){er.textContent='请输入 4 位学习编号';return}btn.disabled=true;btn.textContent='正在进入…';try{const localBefore=snapshot();const x=await call('pin_login',{pin},'');storeSession(x);if(x.created&&meaningful(localBefore)){const merged=mergePayload(x.payload||{},localBefore);applyPayload(merged);const y=await call('push',{payload:merged,baseRevision:Number(x.revision||0)});localStorage.setItem(REV,String(y.revision||1))}else applyPayload(x.payload||{});sessionStorage.setItem('sec_v43_boot_synced',rawToken().slice(0,12));m.classList.remove('show');location.reload()}catch(ex){er.textContent=errText(ex.code)}finally{btn.disabled=false;btn.textContent='进入学习'}};
+ f.onsubmit=async e=>{e.preventDefault();const btn=f.querySelector('button[type=submit]'),er=m.querySelector('.v43AuthError'),pin=String(new FormData(f).get('pin')||'').replace(/\D/g,'').slice(0,4);er.textContent='';if(pin.length!==4){er.textContent='请输入 4 位学习编号';return}btn.disabled=true;btn.textContent='正在进入…';try{const localBefore=snapshot(),migrationDone=localStorage.getItem(MIGRATE)==='1';const x=await call('pin_login',{pin},'');storeSession(x);if(!migrationDone&&meaningful(localBefore)&&!meaningful(x.payload||{})){const merged=mergePayload(x.payload||{},localBefore);applyPayload(merged);const y=await call('push',{payload:merged,baseRevision:Number(x.revision||0)});localStorage.setItem(REV,String(y.revision||1))}else applyPayload(x.payload||{});localStorage.setItem(MIGRATE,'1');sessionStorage.setItem('sec_v43_boot_synced',rawToken().slice(0,12));m.classList.remove('show');location.reload()}catch(ex){er.textContent=errText(ex.code)}finally{btn.disabled=false;btn.textContent='进入学习'}};
 }
 async function logout(){const t=rawToken();clearSession();try{if(t)await call('logout',{},t)}catch(_){}location.reload()}
 function patchAccountCard(){

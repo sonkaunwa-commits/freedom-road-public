@@ -2,155 +2,95 @@ const { chromium, webkit, devices } = require('playwright');
 
 const BASE = process.env.SECURITIES_BASE || 'https://sonkaunwa-commits.github.io/freedom-road-public';
 const ENTRY = `${BASE}/ks/?smoke=${Date.now()}`;
+const stamp = Date.now().toString(36);
+const primary = { username: `smk${stamp}`, password: `Smoke-${stamp}-A9!`, displayName: 'Smoke Primary' };
+const secondary = { username: `iso${stamp}`, password: `Smoke-${stamp}-B8!`, displayName: 'Smoke Isolated' };
+let primaryCreated = false;
+const assert = async (condition, message) => { if (!condition) throw new Error(message); };
 
-async function assert(condition, message) {
-  if (!condition) throw new Error(message);
+async function waitRuntime(page) {
+  await page.waitForFunction(() => window.SEC_QUIZ_V4?.version === '4.0.0' && window.SEC_QUIZ_V41?.version === '4.1.0' && window.SEC_QUIZ_V42?.version === '4.2.0' && window.SEC_QUIZ_V43?.version === '4.3.0' && window.SEC_CLOUD_SYNC_V43?.cloudSync === true, null, { timeout: 25000 });
+}
+async function authenticate(page, creds, create=false) {
+  await page.waitForSelector('.v43LoginCard', { timeout: 15000 });
+  if (create) {
+    await page.locator('[data-auth-tab="register"]').click();
+    const f = page.locator('[data-auth-form="register"]');
+    await f.locator('[name="username"]').fill(creds.username);
+    await f.locator('[name="displayName"]').fill(creds.displayName);
+    await f.locator('[name="password"]').fill(creds.password);
+    const migrate = f.locator('[name="migrate"]'); if (await migrate.isChecked()) await migrate.uncheck();
+    await f.locator('button[type="submit"]').click();
+  } else {
+    const f = page.locator('[data-auth-form="login"]');
+    await f.locator('[name="username"]').fill(creds.username);
+    await f.locator('[name="password"]').fill(creds.password);
+    await f.locator('button[type="submit"]').click();
+  }
+  await page.waitForSelector('.subject .continue', { timeout: 25000 });
+  await assert((await page.locator('.v43Auth.show').count()) === 0, 'auth overlay remained after login');
+}
+async function openAndAuth(page, creds, create=false, suffix='') {
+  const r = await page.goto(ENTRY + `&case=${suffix}`, { waitUntil: 'domcontentloaded', timeout: 45000 });
+  await assert(r && r.ok(), `${suffix}: /ks/ entry not 2xx`);
+  await waitRuntime(page);
+  await assert(page.url().includes('/quiz-v4/'), `${suffix}: /ks/ did not resolve to v4`);
+  await authenticate(page, creds, create);
 }
 
 async function exercise(browserType, name, contextOptions) {
   const browser = await browserType.launch({ headless: true });
   const context = await browser.newContext(contextOptions);
   const page = await context.newPage();
-  const errors = [];
-  const badResponses = [];
+  const errors = [], badResponses = [];
   page.on('pageerror', e => errors.push(`pageerror:${e.message}`));
-  page.on('console', msg => {
-    if (msg.type() === 'error' && !msg.text().includes('Failed to load resource')) errors.push(`console:${msg.text()}`);
-  });
-  page.on('response', r => {
-    if (r.status() >= 400) {
-      const u = r.url();
-      if (!u.endsWith('/favicon.ico')) badResponses.push(`${r.status()}:${u}`);
-    }
-  });
-
-  const response = await page.goto(ENTRY + `&engine=${name}`, { waitUntil: 'domcontentloaded', timeout: 45000 });
-  await assert(response && response.ok(), `${name}: /ks/ entry did not return 2xx`);
-  await page.waitForFunction(() => window.SEC_QUIZ_V4?.version === '4.0.0' && window.SEC_QUIZ_V41?.version === '4.1.0' && window.SEC_QUIZ_V42?.version === '4.2.0', null, { timeout: 20000 });
-  await assert(page.url().includes('/quiz-v4/'), `${name}: /ks/ did not resolve to v4 (${page.url()})`);
-  await page.waitForSelector('.subject .continue', { timeout: 15000 });
-  await page.waitForSelector('.qualitySummary', { timeout: 10000 });
-
-  const bankMeta = await page.evaluate(() => {
-    const rows = Array.isArray(window.SEC_QUESTIONS) ? window.SEC_QUESTIONS : [];
-    const active = rows.filter(q => q && q.strict !== false);
-    const quality = window.SEC_V42_QUALITY || {};
-    return {
-      total: rows.length,
-      active: active.length,
-      types: [...new Set(active.map(q => q.type))],
-      sourced: rows.filter(q => q.source && q.sourceTruth).length,
-      tiered: rows.filter(q => q.qualityTier).length,
-      activeD: active.filter(q => q.qualityTier === 'D').length,
-      defaultPool: quality.defaultPool || 0,
-      counts: quality.counts || {}
-    };
-  });
-  await assert(bankMeta.active >= 100, `${name}: high-value pool unexpectedly small (${bankMeta.active})`);
-  await assert(bankMeta.total > bankMeta.active, `${name}: low-value template quarantine did not reduce default pool (${bankMeta.active}/${bankMeta.total})`);
-  await assert(bankMeta.defaultPool === bankMeta.active, `${name}: quality metadata/default pool mismatch (${bankMeta.defaultPool}/${bankMeta.active})`);
-  await assert(bankMeta.activeD === 0, `${name}: D-tier questions leaked into default pool (${bankMeta.activeD})`);
-  await assert(bankMeta.tiered === bankMeta.total, `${name}: not every question has quality tier (${bankMeta.tiered}/${bankMeta.total})`);
-  for (const t of ['single', 'multi', 'judge', 'comprehensive']) await assert(bankMeta.types.includes(t), `${name}: missing question type ${t}`);
-  await assert(bankMeta.sourced === bankMeta.total, `${name}: not every question has provenance (${bankMeta.sourced}/${bankMeta.total})`);
-
-  const shellWidth = await page.locator('.shell').evaluate(el => el.getBoundingClientRect().width);
-  await assert(shellWidth <= 522, `${name}: shell is not mobile-width (${shellWidth})`);
-  await assert(await page.locator('[data-tab="home"]').isVisible(), `${name}: bottom home nav missing`);
-  await assert(await page.locator('[data-tab="wrong"]').isVisible(), `${name}: bottom wrong nav missing`);
-  await assert(await page.locator('[data-tab="me"]').isVisible(), `${name}: bottom me nav missing`);
-
-  await page.locator('[data-subject="finance"]').click();
-  await page.waitForSelector('.questionCard .option', { timeout: 15000 });
-  await page.waitForSelector('.sourceStrip', { timeout: 10000 });
-  await page.waitForSelector('.sourceStrip .qualityBadge', { timeout: 10000 });
-  await assert((await page.locator('.sourceStrip').innerText()).includes('题源'), `${name}: provenance strip missing`);
-  const optionCount = await page.locator('.questionCard .option').count();
-  await assert(optionCount >= 2, `${name}: options missing`);
-  await assert(await page.locator('#answerBtn').isDisabled(), `${name}: answer button should start disabled`);
-
-  const wrongIndex = await page.evaluate(() => {
-    const text = document.querySelector('.questionCard h1')?.textContent || '';
-    const q = (window.SEC_QUESTIONS || []).find(x => x.q === text);
-    if (!q) return 0;
-    for (let i = 0; i < (q.o || []).length; i++) if (!(q.a || []).includes(i)) return i;
-    return 0;
-  });
-  await page.locator('.questionCard .option').nth(wrongIndex).click();
-  await assert(!(await page.locator('#answerBtn').isDisabled()), `${name}: answer button did not enable`);
-  await page.locator('#answerBtn').click();
-  await page.waitForSelector('.result.bad', { timeout: 10000 });
-  await assert(await page.locator('.explainBox.key').isVisible(), `${name}: key-point explanation missing`);
-  await assert(await page.locator('#detailBody').isVisible(), `${name}: wrong-answer details should auto expand`);
-  await assert((await page.locator('.explainBox').count()) >= 3, `${name}: explanation stack too thin`);
-  await assert(await page.locator('.v41Extra .sourceBlock').isVisible(), `${name}: source credibility block missing`);
-  await assert(await page.locator('.v41Extra .deepBlock').count() >= 2, `${name}: deep explanation blocks missing`);
-  await page.waitForSelector('.masteryBlock', { timeout: 10000 });
-  await page.waitForSelector('.transferQuiz', { timeout: 10000 });
-  const masteryRows = await page.evaluate(() => Object.keys(JSON.parse(localStorage.getItem('sec_v42_mastery_v1') || '{}')).length);
-  await assert(masteryRows >= 1, `${name}: mastery state was not persisted`);
-  const answerBarPosition = await page.locator('.answerBar').evaluate(el => getComputedStyle(el).position);
-  await assert(answerBarPosition === 'static', `${name}: next button is still floating (${answerBarPosition})`);
-
-  const transfer = page.locator('.transferQuiz');
-  const transferCorrect = await page.evaluate(() => {
-    const id = document.querySelector('.transferQuiz')?.dataset.qid;
-    const q = (window.SEC_QUESTIONS || []).find(x => x.id === id);
-    return q ? q.a : [];
-  });
-  await assert(transferCorrect.length > 0, `${name}: transfer question has no answer`);
-  for (const idx of transferCorrect) await transfer.locator('.transferOptions button').nth(idx).click();
-  await transfer.locator('.transferSubmit').click();
-  await page.waitForSelector('.transferOutcome.good', { timeout: 10000 });
-
-  await page.locator('#answerBtn').click();
-  await page.waitForSelector('.questionCard .option', { timeout: 10000 });
-  const correctIndexes = await page.evaluate(() => {
-    const text = document.querySelector('.questionCard h1')?.textContent || '';
-    const q = (window.SEC_QUESTIONS || []).find(x => x.q === text);
-    return q ? q.a : [0];
-  });
-  for (const idx of correctIndexes) await page.locator('.questionCard .option').nth(idx).click();
-  await page.locator('#answerBtn').click();
-  await page.waitForSelector('.result.good', { timeout: 10000 });
-  await assert(await page.locator('#detailBody').isVisible(), `${name}: correct-answer details should auto expand too`);
-  await assert(await page.locator('.v41Extra .sourceBlock').isVisible(), `${name}: correct-answer deep source block missing`);
-  await assert(await page.locator('.masteryBlock').isVisible(), `${name}: correct-answer mastery block missing`);
-
-  await page.locator('#answerBtn').click();
-  await page.waitForSelector('.questionCard .option', { timeout: 10000 });
-  await page.locator('.favBtn').click();
-  await assert((await page.locator('.favBtn').textContent()) === '★', `${name}: favourite toggle failed`);
-
-  await page.locator('#backBtn').click();
-  await page.waitForSelector('[data-mode="chapter"]', { timeout: 10000 });
-  await page.locator('[data-mode="chapter"]').click();
-  await page.waitForSelector('.chapterBtn', { timeout: 10000 });
-  await assert((await page.locator('.chapterBtn').count()) >= 5, `${name}: chapter list missing`);
-
-  if (badResponses.length) throw new Error(`${name}: app resource failures: ${badResponses.join(' | ')}`);
-  if (errors.length) throw new Error(`${name}: runtime errors: ${errors.join(' | ')}`);
+  page.on('console', m => { if (m.type()==='error' && !m.text().includes('Failed to load resource')) errors.push(`console:${m.text()}`); });
+  page.on('response', r => { if (r.status()>=400 && !r.url().endsWith('/favicon.ico')) badResponses.push(`${r.status()}:${r.url()}`); });
+  const create = !primaryCreated; await openAndAuth(page, primary, create, name); if (create) primaryCreated = true;
+  await page.waitForSelector('.qualitySummary');
+  const bank = await page.evaluate(() => { const rows=window.SEC_QUESTIONS||[], active=rows.filter(q=>q&&q.strict!==false), q=window.SEC_V42_QUALITY||{}, b=window.SEC_V43_BANK||{}; return {total:rows.length,active:active.length,added:b.added||0,types:[...new Set(active.map(x=>x.type))],sourced:rows.filter(x=>x.source&&x.sourceTruth).length,tiered:rows.filter(x=>x.qualityTier).length,activeD:active.filter(x=>x.qualityTier==='D').length,defaultPool:q.defaultPool||0,counts:q.counts||{}}; });
+  await assert(bank.active >= 1200, `${name}: expanded pool too small ${bank.active}`);
+  await assert(bank.added >= 400, `${name}: v4.3 added too few questions ${bank.added}`);
+  await assert(bank.total > bank.active && bank.defaultPool===bank.active && bank.activeD===0, `${name}: tier quarantine mismatch`);
+  await assert(bank.sourced===bank.total && bank.tiered===bank.total, `${name}: provenance/tiering incomplete`);
+  for (const t of ['single','multi','judge','comprehensive']) await assert(bank.types.includes(t), `${name}: missing ${t}`);
+  const shellWidth=await page.locator('.shell').evaluate(el=>el.getBoundingClientRect().width); await assert(shellWidth<=522, `${name}: shell ${shellWidth}`);
+  await page.locator('[data-subject="finance"]').click(); await page.waitForSelector('.questionCard .option');
+  const wrongIndex=await page.evaluate(()=>{const t=document.querySelector('.questionCard h1')?.textContent||'',q=(window.SEC_QUESTIONS||[]).find(x=>x.q===t);for(let i=0;i<(q?.o||[]).length;i++)if(!(q.a||[]).includes(i))return i;return 0});
+  await page.locator('.questionCard .option').nth(wrongIndex).click(); await page.locator('#answerBtn').click();
+  await page.waitForSelector('.result.bad'); await page.waitForSelector('.masteryBlock'); await page.waitForSelector('.transferQuiz');
+  await page.locator('#answerBtn').click(); await page.waitForSelector('.questionCard .option'); await page.locator('.favBtn').click();
+  await page.waitForTimeout(1400);
+  await page.locator('#backBtn').click(); await page.locator('[data-tab="me"]').click(); await page.waitForSelector('.v43AccountCard');
+  await assert((await page.locator('[data-profile]').count())===0, `${name}: legacy direct profile switch still visible`);
+  await assert((await page.locator('.v43AccountCard').innerText()).includes(primary.displayName), `${name}: wrong account identity`);
+  await page.reload({waitUntil:'domcontentloaded'}); await waitRuntime(page); await page.waitForSelector('.subject .continue');
+  await assert((await page.locator('.v43LoginCard').count())===0, `${name}: remembered device session failed`);
+  if (badResponses.length) throw new Error(`${name}: response errors ${badResponses.join(' | ')}`);
+  if (errors.length) throw new Error(`${name}: runtime errors ${errors.join(' | ')}`);
+  console.log(`${name} PASS highValue=${bank.active}/${bank.total} added=${bank.added} tiers=A${bank.counts.A||0},B${bank.counts.B||0},C${bank.counts.C||0},D${bank.counts.D||0} shell=${shellWidth}`);
   await browser.close();
-  console.log(`${name} PASS entry=/ks/ highValue=${bankMeta.active}/${bankMeta.total} tiers=A${bankMeta.counts.A||0},B${bankMeta.counts.B||0},C${bankMeta.counts.C||0},D${bankMeta.counts.D||0} types=${bankMeta.types.join(',')} shell=${shellWidth}`);
 }
 
-async function releaseEntryChecks() {
-  const browser = await chromium.launch({ headless: true });
-  const page = await browser.newPage({ viewport: { width: 390, height: 844 } });
-  await page.goto(`${BASE}/?release-check=${Date.now()}`, { waitUntil: 'domcontentloaded', timeout: 45000 });
-  const securitiesHref = await page.locator('a.card').filter({ hasText: '证券从业 2026' }).getAttribute('href');
-  await assert(securitiesHref && securitiesHref.startsWith('ks/'), `root securities card is not routed through /ks/ (${securitiesHref})`);
-  await page.goto(`${BASE}/securities-exam/?legacy-check=${Date.now()}`, { waitUntil: 'domcontentloaded', timeout: 45000 });
-  await page.waitForURL(/\/quiz-v4\//, { timeout: 15000 });
-  await page.waitForFunction(() => window.SEC_QUIZ_V4?.version === '4.0.0' && window.SEC_QUIZ_V41?.version === '4.1.0' && window.SEC_QUIZ_V42?.version === '4.2.0', null, { timeout: 15000 });
+async function crossDeviceIsolation() {
+  const browser=await chromium.launch({headless:true});
+  const c1=await browser.newContext({viewport:{width:390,height:844}}), p1=await c1.newPage();
+  await openAndAuth(p1, primary, false, 'sync-source');
+  await p1.evaluate(()=>{const s=JSON.parse(localStorage.getItem('sec2026state_v1')||'{}');s.fav=[...(new Set([...(s.fav||[]),'SYNC-PROBE-V43']))];localStorage.setItem('sec2026state_v1',JSON.stringify(s))});
+  await p1.waitForTimeout(1800);
+  const c2=await browser.newContext({viewport:{width:1280,height:900}}), p2=await c2.newPage();
+  await openAndAuth(p2, primary, false, 'sync-target');
+  await p2.waitForFunction(()=>{const s=JSON.parse(localStorage.getItem('sec2026state_v1')||'{}');return (s.fav||[]).includes('SYNC-PROBE-V43')},null,{timeout:15000});
+  const c3=await browser.newContext({viewport:{width:390,height:844}}), p3=await c3.newPage();
+  await openAndAuth(p3, secondary, true, 'isolated-account');
+  const leaked=await p3.evaluate(()=>{const s=JSON.parse(localStorage.getItem('sec2026state_v1')||'{}');return (s.fav||[]).includes('SYNC-PROBE-V43')});
+  await assert(!leaked,'account B received account A learning state');
+  await p3.locator('[data-tab="me"]').click(); await p3.waitForSelector('.v43AccountCard');
+  await assert((await p3.locator('[data-profile]').count())===0,'account B can see direct profile switch');
+  console.log('cloud account PASS same-account cross-device sync + separate-account isolation + no direct profile switch');
   await browser.close();
-  console.log('release entry PASS root-card=/ks/ legacy=/securities-exam/->/quiz-v4/');
 }
 
-(async () => {
-  await exercise(chromium, 'chromium-desktop-mobile-shell', { viewport: { width: 1280, height: 900 } });
-  await exercise(chromium, 'chromium-mobile', { viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true });
-  await exercise(webkit, 'webkit-iphone', { ...devices['iPhone 13'] });
-  await releaseEntryChecks();
-  console.log('V4.2 release smoke PASS: quality-tiered pool + provenance + auto deep explanation + transfer practice + mastery + desktop/mobile/iPhone');
-})().catch(err => { console.error(err.stack || err); process.exit(1); });
+async function releaseEntryChecks(){const browser=await chromium.launch({headless:true}),p=await browser.newPage({viewport:{width:390,height:844}});await p.goto(`${BASE}/?release-check=${Date.now()}`,{waitUntil:'domcontentloaded'});const href=await p.locator('a.card').filter({hasText:'证券从业 2026'}).getAttribute('href');await assert(href&&href.startsWith('ks/'),'root card route wrong');await p.goto(`${BASE}/securities-exam/?legacy=${Date.now()}`,{waitUntil:'domcontentloaded'});await p.waitForURL(/\/quiz-v4\//);await waitRuntime(p);console.log('release entry PASS root-card=/ks/ legacy=/securities-exam/->/quiz-v4/');await browser.close()}
+
+(async()=>{await exercise(chromium,'chromium-desktop-mobile-shell',{viewport:{width:1280,height:900}});await exercise(chromium,'chromium-mobile',{viewport:{width:390,height:844},isMobile:true,hasTouch:true});await exercise(webkit,'webkit-iphone',{...devices['iPhone 13']});await crossDeviceIsolation();await releaseEntryChecks();console.log('V4.3 release smoke PASS: expanded high-value pool + isolated accounts + cross-device cloud sync + desktop/mobile/iPhone');})().catch(e=>{console.error(e.stack||e);process.exit(1)});

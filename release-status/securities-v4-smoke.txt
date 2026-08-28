@@ -1,5 +1,5 @@
 status=failed
-tested_sha=392c134a44b74184a18a54e0301f2ce37273b4fc
+tested_sha=e281b6ec0c3a5fdd6720f1b230f28b1ec767eef6
 version=4.3.0
 formal_entry=/ks/
 legacy_entry=/securities-exam/
@@ -12,4 +12,4 @@ layout=mobile-first-max-520px
 question_policy=A-B-C-default+D-quarantined+v43-high-value-expansion
 account_model=username-password+isolated-server-state
 cloud_sync=true
-verified_at=2026-08-28T04:34:49Z
+verified_at=2026-08-28T04:38:50Z

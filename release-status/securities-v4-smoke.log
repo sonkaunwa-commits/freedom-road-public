@@ -1,6 +1,13 @@
-Error: auth overlay remained after login
-    at assert (/__w/freedom-road-public/freedom-road-public/scripts/securities-v4-smoke.cjs:9:70)
-    at authenticate (/__w/freedom-road-public/freedom-road-public/scripts/securities-v4-smoke.cjs:31:9)
-    at async openAndAuth (/__w/freedom-road-public/freedom-road-public/scripts/securities-v4-smoke.cjs:38:3)
-    at async exercise (/__w/freedom-road-public/freedom-road-public/scripts/securities-v4-smoke.cjs:49:35)
+locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('[data-tab="me"]')
+    - locator resolved to <button data-tab="me">…</button>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - performing click action
+
+    at exercise (/__w/freedom-road-public/freedom-road-public/scripts/securities-v4-smoke.cjs:64:81)
     at async /__w/freedom-road-public/freedom-road-public/scripts/securities-v4-smoke.cjs:96:12

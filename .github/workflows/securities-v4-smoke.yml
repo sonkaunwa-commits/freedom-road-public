@@ -52,7 +52,7 @@ jobs:
             if grep -Fq '证券从业刷题 · v4.3.1' <<<"$html" \
               && grep -Fq "window.SEC_V43_BANK" <<<"$bank" \
               && grep -Fq "mode:'two-pin-isolated-cloud-state'" <<<"$sync" \
-              && grep -Fq "pins:['0917','4294']" <<<"$sync" \
+              && grep -Fq "VALID_PINS=new Set(['0917','4294'])" <<<"$sync" \
               && grep -Fq "version:'4.3.1'" <<<"$runtime" \
               && grep -Fq "accountIsolation:'two-fixed-pin-codes'" <<<"$runtime" \
               && grep -Fq '../quiz-v4/' <<<"$ks" \
@@ -94,11 +94,11 @@ jobs:
           install=${INSTALL_OUTCOME}
           live_wait=${LIVE_OUTCOME}
           browser_smoke=${SMOKE_OUTCOME}
-          flows=formal-entry+fixed-pin-gate+0917-login+4294-login+remembered-session+same-code-account-identity+separate-code-isolation+no-direct-profile-switch+quality-pool+root-card+legacy-redirect
+          flows=formal-entry+fixed-pin-gate+local-first-login+0917-login+4294-login+remembered-session+same-code-account-identity+separate-code-isolation+background-cloud-sync+no-direct-profile-switch+quality-pool+root-card+legacy-redirect
           layout=mobile-first-max-520px
           question_policy=A-B-C-default+D-quarantined+v43-high-value-expansion
-          account_model=two-fixed-pin-codes+isolated-server-state
-          cloud_sync=true
+          account_model=two-fixed-pin-codes+local-first+isolated-server-state
+          cloud_sync=background-best-effort
           smoke_data_policy=non-destructive-no-learning-state-mutation
           verified_at=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
           EOF

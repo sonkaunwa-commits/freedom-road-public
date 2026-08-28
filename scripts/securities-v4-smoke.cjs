@@ -11,6 +11,9 @@ async function waitRuntime(page) {
 }
 async function authenticate(page, pin) {
   await page.waitForSelector('.v43LoginCard', { timeout: 15000 });
+  const card = page.locator('.v43LoginCard');
+  const authText = await card.innerText();
+  await assert(!authText.includes(PRIMARY_PIN) && !authText.includes(SECONDARY_PIN), 'login UI reveals valid study codes');
   const form = page.locator('[data-pin-form]');
   await assert((await page.locator('[data-auth-tab]').count()) === 0, 'legacy login/register tabs still visible');
   await form.locator('[name="pin"]').fill(pin);
@@ -28,8 +31,17 @@ async function openAndAuth(page, pin, suffix='') {
 async function accountMeta(page) {
   return page.evaluate(() => {
     const u = JSON.parse(localStorage.getItem('sec_v43_cloud_user') || 'null');
-    return { id: u?.id || '', username: u?.username || '', displayName: u?.displayName || '' };
+    return { id: u?.id || '', username: u?.username || '', displayName: u?.displayName || '', token: localStorage.getItem('sec_v43_cloud_token') || '' };
   });
+}
+async function waitCloudAccount(page, expectedUsername) {
+  await page.waitForFunction((expected) => {
+    try {
+      const u = JSON.parse(localStorage.getItem('sec_v43_cloud_user') || 'null');
+      return u?.username === expected && !!u?.id && !!localStorage.getItem('sec_v43_cloud_token');
+    } catch (_) { return false; }
+  }, expectedUsername, { timeout: 18000 });
+  return accountMeta(page);
 }
 
 async function exercise(browserType, name, contextOptions) {
@@ -64,21 +76,21 @@ async function exercise(browserType, name, contextOptions) {
 async function accountIsolation() {
   const browser=await chromium.launch({headless:true});
   const c1=await browser.newContext({viewport:{width:390,height:844}}), p1=await c1.newPage();
-  await openAndAuth(p1, PRIMARY_PIN, 'pin-primary-a'); const a1=await accountMeta(p1);
+  await openAndAuth(p1, PRIMARY_PIN, 'pin-primary-a'); const a1=await waitCloudAccount(p1,'study_0917');
   const c2=await browser.newContext({viewport:{width:1280,height:900}}), p2=await c2.newPage();
-  await openAndAuth(p2, PRIMARY_PIN, 'pin-primary-b'); const a2=await accountMeta(p2);
+  await openAndAuth(p2, PRIMARY_PIN, 'pin-primary-b'); const a2=await waitCloudAccount(p2,'study_0917');
   await assert(a1.id && a1.id===a2.id, 'same PIN did not resolve to same cloud account');
   const c3=await browser.newContext({viewport:{width:390,height:844}}), p3=await c3.newPage();
-  await openAndAuth(p3, SECONDARY_PIN, 'pin-secondary'); const b=await accountMeta(p3);
-  await assert(b.username==='study_4294', '4294 did not resolve to its own account');
-  await assert(b.id && b.id!==a1.id, '0917 and 4294 resolved to the same cloud account');
+  await openAndAuth(p3, SECONDARY_PIN, 'pin-secondary'); const b=await waitCloudAccount(p3,'study_4294');
+  await assert(b.username==='study_4294', 'secondary PIN did not resolve to its own account');
+  await assert(b.id && b.id!==a1.id, 'the two study codes resolved to the same cloud account');
   await p3.locator('[data-tab="me"]').click(); await p3.waitForSelector('.v43AccountCard');
   await assert((await p3.locator('[data-profile]').count())===0,'secondary account can see direct profile switch');
-  await assert((await p3.locator('.v43AccountCard').innerText()).includes('4294'),'secondary account card missing 4294');
-  console.log('PIN account PASS same-code identity + separate-code isolation + no direct profile switch');
+  await assert((await p3.locator('.v43AccountCard').innerText()).includes('4294'),'secondary account card missing expected code');
+  console.log('PIN account PASS instant local entry + same-code cloud identity + separate-code isolation + no direct profile switch');
   await browser.close();
 }
 
-async function releaseEntryChecks(){const browser=await chromium.launch({headless:true}),p=await browser.newPage({viewport:{width:390,height:844}});await p.goto(`${BASE}/?release-check=${Date.now()}`,{waitUntil:'domcontentloaded'});const href=await p.locator('a.card').filter({hasText:'证券从业 2026'}).getAttribute('href');await assert(href&&href.startsWith('ks/'),'root card route wrong');await p.goto(`${BASE}/securities-exam/?legacy=${Date.now()}`,{waitUntil:'domcontentloaded'});await p.waitForURL(/\/quiz-v4\//);await waitRuntime(p);await p.waitForSelector('[data-pin-form]');console.log('release entry PASS root-card=/ks/ legacy=/securities-exam/->/quiz-v4/ fixed-PIN-gate');await browser.close()}
+async function releaseEntryChecks(){const browser=await chromium.launch({headless:true}),p=await browser.newPage({viewport:{width:390,height:844}});await p.goto(`${BASE}/?release-check=${Date.now()}`,{waitUntil:'domcontentloaded'});const href=await p.locator('a.card').filter({hasText:'证券从业 2026'}).getAttribute('href');await assert(href&&href.startsWith('ks/'),'root card route wrong');await p.goto(`${BASE}/securities-exam/?legacy=${Date.now()}`,{waitUntil:'domcontentloaded'});await p.waitForURL(/\/quiz-v4\//);await waitRuntime(p);await p.waitForSelector('[data-pin-form]');const authText=await p.locator('.v43LoginCard').innerText();await assert(!authText.includes(PRIMARY_PIN)&&!authText.includes(SECONDARY_PIN),'legacy entry reveals valid study codes');console.log('release entry PASS root-card=/ks/ legacy=/securities-exam/->/quiz-v4/ hidden-code gate');await browser.close()}
 
-(async()=>{await exercise(chromium,'chromium-desktop-mobile-shell',{viewport:{width:1280,height:900}});await exercise(chromium,'chromium-mobile',{viewport:{width:390,height:844},isMobile:true,hasTouch:true});await exercise(webkit,'webkit-iphone',{...devices['iPhone 13']});await accountIsolation();await releaseEntryChecks();console.log('V4.3.1 release smoke PASS: two fixed PINs + isolated cloud accounts + remembered sessions + high-value bank');})().catch(e=>{console.error(e.stack||e);process.exit(1)});
+(async()=>{await exercise(chromium,'chromium-desktop-mobile-shell',{viewport:{width:1280,height:900}});await exercise(chromium,'chromium-mobile',{viewport:{width:390,height:844},isMobile:true,hasTouch:true});await exercise(webkit,'webkit-iphone',{...devices['iPhone 13']});await accountIsolation();await releaseEntryChecks();console.log('V4.3.1 release smoke PASS: hidden fixed PINs + instant local entry + isolated cloud accounts + remembered sessions + high-value bank');})().catch(e=>{console.error(e.stack||e);process.exit(1)});

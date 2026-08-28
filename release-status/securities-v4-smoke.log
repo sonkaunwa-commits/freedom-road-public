@@ -1,6 +1,4 @@
-chromium-desktop-mobile-shell PASS pin=0917 highValue=1210/1416 added=499 shell=520
-chromium-mobile PASS pin=0917 highValue=1210/1416 added=499 shell=390
-webkit-iphone PASS pin=0917 highValue=1210/1416 added=499 shell=390
-PIN account PASS instant local entry + same-code cloud identity + separate-code isolation + no direct profile switch
-release entry PASS root-card=/ks/ legacy=/securities-exam/->/quiz-v4/ hidden-code gate
-V4.3.1 release smoke PASS: hidden fixed PINs + instant local entry + isolated cloud accounts + remembered sessions + high-value bank
+Error: chromium-desktop: manual sync action still exposed
+    at assert (/__w/freedom-road-public/freedom-road-public/scripts/securities-v4-smoke.cjs:7:70)
+    at exercise (/__w/freedom-road-public/freedom-road-public/scripts/securities-v4-smoke.cjs:82:9)
+    at async /__w/freedom-road-public/freedom-road-public/scripts/securities-v4-smoke.cjs:109:12

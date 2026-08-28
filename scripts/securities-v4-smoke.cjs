@@ -79,7 +79,7 @@ async function exercise(browserType, name, contextOptions) {
 
   await page.evaluate(()=>{document.querySelector('[data-tab="me"]')?.click()});await page.waitForSelector('.sheetTitle');
   const meText=await page.locator('#main').innerText();await assert(meText.includes('自动同步')&&meText.includes('无需手动点'),`${name}: My page does not explain automatic sync`);
-  await assert(!meText.includes('立即同步'),`${name}: manual sync action still exposed`);
+  await assert((await page.locator('[data-v43-sync]').count())===0,`${name}: manual sync button still exposed`);
   await assert((await page.locator('[data-profile]').count())===0,`${name}: legacy direct profile switch visible`);
   const meta=await accountMeta(page);await assert(meta.username==='study_0917',`${name}: wrong PIN account ${meta.username}`);
 
@@ -96,12 +96,13 @@ async function accountIsolationAndSync(){
   const c1=await browser.newContext({viewport:{width:390,height:844}}),p1=await c1.newPage();await openAndAuth(p1,PRIMARY_PIN,'sync-primary-a');const a1=await waitCloudAccount(p1,'study_0917');
   const c2=await browser.newContext({viewport:{width:1280,height:900}}),p2=await c2.newPage();await openAndAuth(p2,PRIMARY_PIN,'sync-primary-b');const a2=await waitCloudAccount(p2,'study_0917');await assert(a1.id===a2.id,'same PIN did not resolve to same cloud account');
   const marker=`smoke-${Date.now()}-${Math.random()}`;
-  await p1.evaluate(m=>{const k='sec2026state_v1',s=JSON.parse(localStorage.getItem(k)||'{"answered":{},"wrong":[],"fav":[],"daily":{},"history":[]}');s.daily=s.daily||{};s.daily.__v44_smoke=m;localStorage.setItem(k,JSON.stringify(s));},marker);await waitSynced(p1);
+  await p1.evaluate(m=>{const k='sec2026state_v1',s=JSON.parse(localStorage.getItem(k)||'{"answered":{},"wrong":[],"fav":[],"daily":{},"history":[]}');s.daily=s.daily||{};s.daily.__v44_smoke=m;localStorage.setItem(k,JSON.stringify(s));},marker);await p1.waitForTimeout(900);await waitSynced(p1);
   await p2.reload({waitUntil:'domcontentloaded'});await waitRuntime(p2);await p2.waitForSelector('.v44Hero');
   await p2.waitForFunction(m=>{try{return JSON.parse(localStorage.getItem('sec2026state_v1')||'{}').daily?.__v44_smoke===m}catch(_){return false}},marker,{timeout:18000});
   const c3=await browser.newContext({viewport:{width:390,height:844}}),p3=await c3.newPage();await openAndAuth(p3,SECONDARY_PIN,'sync-secondary');const b=await waitCloudAccount(p3,'study_4294');await assert(b.id&&b.id!==a1.id,'two study codes resolved to same cloud account');
   const leaked=await p3.evaluate(m=>{try{return JSON.parse(localStorage.getItem('sec2026state_v1')||'{}').daily?.__v44_smoke===m}catch(_){return false}},marker);await assert(!leaked,'secondary account received primary sync marker');
-  console.log('cloud account PASS automatic same-account cross-device sync + separate-code isolation');await browser.close();
+  await p1.evaluate(()=>{const k='sec2026state_v1',s=JSON.parse(localStorage.getItem(k)||'{}');if(s.daily)delete s.daily.__v44_smoke;localStorage.setItem(k,JSON.stringify(s));});await p1.waitForTimeout(900);await waitSynced(p1);
+  console.log('cloud account PASS automatic same-account cross-device sync + separate-code isolation + smoke-marker cleanup');await browser.close();
 }
 
 async function releaseEntryChecks(){const browser=await chromium.launch({headless:true}),p=await browser.newPage({viewport:{width:390,height:844}});await p.goto(`${BASE}/?release-check=${Date.now()}`,{waitUntil:'domcontentloaded'});const href=await p.locator('a.card').filter({hasText:'证券从业 2026'}).getAttribute('href');await assert(href&&href.startsWith('ks/'),'root card route wrong');await p.goto(`${BASE}/securities-exam/?legacy=${Date.now()}`,{waitUntil:'domcontentloaded'});await p.waitForURL(/\/quiz-v4\//);await waitRuntime(p);await p.waitForSelector('[data-pin-form]');console.log('release entry PASS root-card=/ks/ legacy=/securities-exam/->/quiz-v4/');await browser.close()}

@@ -1,6 +1,6 @@
-chromium-desktop PASS v4.4 highValue=1210/1416 mock=5x120 caseRequired=true palette=true shell=520
-chromium-mobile PASS v4.4 highValue=1210/1416 mock=5x120 caseRequired=true palette=true shell=390
-webkit-iphone PASS v4.4 highValue=1210/1416 mock=5x120 caseRequired=true palette=true shell=390
-cloud account PASS automatic same-account cross-device sync + separate-code isolation + smoke-marker cleanup
-release entry PASS root-card=/ks/ legacy=/securities-exam/->/quiz-v4/
-V4.4 release smoke PASS: coherent ordered practice + case-required comprehensive + palette review + skip + fixed mocks + automatic cloud sync
+chromium-desktop PASS v4.5 countdown=true homeReturn=true longCase=95 mock=5x120 reset=true shell=520
+chromium-mobile PASS v4.5 countdown=true homeReturn=true longCase=95 mock=5x120 reset=true shell=390
+webkit-iphone PASS v4.5 countdown=true homeReturn=true longCase=95 mock=5x120 reset=true shell=390
+cloud PASS same-account sync + separate-account isolation + marker cleanup
+entry PASS
+V4.5 release smoke PASS

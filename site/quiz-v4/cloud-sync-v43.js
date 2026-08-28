@@ -42,7 +42,7 @@ function storeSession(x){nativeSet.call(localStorage,TOKEN,x.token);nativeSet.ca
 function clearSession(){localStorage.removeItem(TOKEN);localStorage.removeItem(USER);localStorage.removeItem(REV)}
 function activatePin(pin){
  const old=activePin();if(old)savePin(old);
- if(hasPinData(pin)){loadPin(pin)}else{const legacy=snapshot();if(!localStorage.getItem(MIGRATE)&&meaningful(legacy)){savePin(pin);nativeSet.call(localStorage,MIGRATE,'1')}else{clearTracked();savePin(pin);if(!localStorage.getItem(MIGRATE))nativeSet.call(localStorage,MIGRATE,'1')}}
+ if(hasPinData(pin)){loadPin(pin)}else{const legacy=snapshot();if(!old&&meaningful(legacy)){savePin(pin)}else{clearTracked();savePin(pin)}nativeSet.call(localStorage,MIGRATE,'1')}
  nativeSet.call(localStorage,ACTIVE,pin);clearSession();setLocalIdentity(pin);setStatus('本机已保存')
 }
 async function push(){

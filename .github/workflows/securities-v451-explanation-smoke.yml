@@ -1,0 +1,79 @@
+name: securities-v451-explanation-smoke
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - site/quiz-v4/index.html
+      - site/quiz-v4/v451-explanation.js
+      - site/quiz-v4/v451-explanation.css
+      - scripts/securities-v451-explanation-smoke.cjs
+      - .github/workflows/securities-v451-explanation-smoke.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: securities-v451-explanation-smoke
+  cancel-in-progress: true
+
+jobs:
+  browser-smoke:
+    runs-on: ubuntu-latest
+    container:
+      image: mcr.microsoft.com/playwright:v1.55.0-noble
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Playwright
+        run: |
+          test -f package.json || npm init -y >/dev/null
+          npm install --no-save --package-lock=false playwright@1.55.0
+      - name: Wait for v4.5.1 live
+        run: |
+          set -euo pipefail
+          base='https://sonkaunwa-commits.github.io/freedom-road-public'
+          ok=false
+          for attempt in {1..60}; do
+            html="$(curl -fsSL --max-time 20 "$base/quiz-v4/?wait=${GITHUB_SHA}-$attempt" 2>/dev/null || true)"
+            js="$(curl -fsSL --max-time 20 "$base/quiz-v4/v451-explanation.js?wait=${GITHUB_SHA}-$attempt" 2>/dev/null || true)"
+            if grep -Fq '证券从业刷题 · v4.5.1' <<<"$html" && grep -Fq "const VERSION='4.5.1'" <<<"$js"; then ok=true; break; fi
+            sleep 5
+          done
+          [[ "$ok" == true ]] || { echo 'v4.5.1 did not become live' >&2; exit 1; }
+      - name: Run explanation regression smoke
+        id: smoke
+        continue-on-error: true
+        env:
+          SECURITIES_BASE: https://sonkaunwa-commits.github.io/freedom-road-public
+        run: node scripts/securities-v451-explanation-smoke.cjs 2>&1 | tee /tmp/v451.log
+      - name: Write explanation certificate
+        if: always()
+        env:
+          OUTCOME: ${{ steps.smoke.outcome }}
+        run: |
+          set -euo pipefail
+          mkdir -p release-status
+          status=failed; [[ "$OUTCOME" == success ]] && status=ok
+          cat > release-status/securities-v451-explanation-smoke.txt <<EOF
+          status=${status}
+          tested_sha=${GITHUB_SHA}
+          version=4.5.1
+          browsers=chromium-desktop+chromium-mobile+webkit-iphone
+          flows=practice-wrong-answer+deep-explanation+per-option-analysis+correct-wrong-highlights+mock-post-submit-review
+          browser_smoke=${OUTCOME}
+          verified_at=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
+          EOF
+          tail -n 120 /tmp/v451.log > release-status/securities-v451-explanation-smoke.log || true
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add release-status/securities-v451-explanation-smoke.*
+          git commit -m 'status: record securities v4.5.1 explanation smoke' || exit 0
+          for attempt in 1 2 3 4 5; do git pull --rebase origin main && git push origin HEAD:main && break || sleep 2; done
+      - name: Enforce smoke
+        if: always()
+        env:
+          OUTCOME: ${{ steps.smoke.outcome }}
+        run: test "$OUTCOME" = success

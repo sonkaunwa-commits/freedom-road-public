@@ -12,10 +12,11 @@ async function open(page,name){
 async function bankQuality(page,name){
  const x=await page.evaluate(()=>{
   const bank=window.SEC_QUESTIONS||[],active=bank.filter(q=>q?.quizEligible!==false&&q?.strict!==false),mechanical=/(考生|复习时|做题时|答题时|考试常把|最应记住|有助于正确理解|无需结合具体条件判断|忽略题干中的主体|所有产品、渠道和业务场景中均适用完全相同的规则|不受任何市场规则约束|仅由单一因素决定|无需考虑任何具体条件即可)/;
+  const specific=/(存款|贷款|贴现|票据|担保|承诺|同业|负债|资产|表外|债权|偿还|资金|履约|风险)/;
   const curated=active.filter(q=>/^SE23\d+/.test(String(q.id||''))||/^HV43-/.test(String(q.id||''))),cases=active.filter(q=>q.type==='comprehensive'),banking=active.filter(q=>q.bankPolishV461);
-  return {active:active.length,curated:curated.length,cases:cases.length,mechanicalActive:active.filter(q=>mechanical.test([q.q,...(q.o||[])].join(' '))).length,banking:banking.length,badBanking:banking.filter(q=>!Array.isArray(q.oa)||q.oa.length!==(q.o||[]).length||q.oa.some(v=>String(v||'').trim().length<35)||[q.q,...(q.o||[])].some(v=>/考试常把|复习|考生/.test(String(v||'')))).length,quarantined:window.SEC_V461_BANK_POLISH?.mechanicalQuarantined||0};
+  return {active:active.length,curated:curated.length,cases:cases.length,mechanicalActive:active.filter(q=>mechanical.test([q.q,...(q.o||[])].join(' '))).length,banking:banking.length,badBanking:banking.filter(q=>!Array.isArray(q.oa)||q.oa.length!==(q.o||[]).length||q.oa.some(v=>String(v||'').trim().length<20||!specific.test(String(v||'')))||[q.q,...(q.o||[])].some(v=>/考试常把|复习|考生/.test(String(v||'')))).length,quarantined:window.SEC_V461_BANK_POLISH?.mechanicalQuarantined||0};
  });
- assert(x.active>=600,`${name}: active bank too small ${x.active}`);assert(x.curated>=350,`${name}: curated pool too small ${x.curated}`);assert(x.cases>=30,`${name}: comprehensive cases too few ${x.cases}`);assert(x.mechanicalActive===0,`${name}: mechanical wording leaked ${x.mechanicalActive}`);assert(x.banking>=5,`${name}: repaired banking set missing ${x.banking}`);assert(x.badBanking===0,`${name}: repaired banking questions not specific enough ${x.badBanking}`);
+ assert(x.active>=600,`${name}: active bank too small ${x.active}`);assert(x.curated>=350,`${name}: curated pool too small ${x.curated}`);assert(x.cases>=30,`${name}: comprehensive cases too few ${x.cases}`);assert(x.mechanicalActive===0,`${name}: mechanical wording leaked ${x.mechanicalActive}`);assert(x.banking>=5,`${name}: repaired banking set missing ${x.banking}`);assert(x.badBanking===0,`${name}: repaired banking rationales lack business-specific reasoning ${x.badBanking}`);
  console.log(`${name} BANK active=${x.active} curated=${x.curated} cases=${x.cases} banking=${x.banking} quarantined=${x.quarantined}`);
 }
 async function resumeAndExplanation(page,name){

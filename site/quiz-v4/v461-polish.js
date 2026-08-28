@@ -2,7 +2,7 @@
 'use strict';
 const VERSION='4.6.1';
 const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
-const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot',"'":'&#39;'}[c]||c));
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]||c));
 const norm=s=>String(s||'').replace(/[\s，。！？、；：,.!?;:（）()“”"'《》「」]/g,'').toLowerCase();
 const bank=()=>Array.isArray(window.SEC_QUESTIONS)?window.SEC_QUESTIONS:[];
 const genericReason=/(回到.*定义|适用条件或业务边界|正确框架|判断抓手|无条件结论|绝对化表述|与.*定义.*不一致|结合题干条件)/;

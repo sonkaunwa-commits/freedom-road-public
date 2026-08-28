@@ -1,4 +1,6 @@
-Error: chromium-desktop: manual sync action still exposed
-    at assert (/__w/freedom-road-public/freedom-road-public/scripts/securities-v4-smoke.cjs:7:70)
-    at exercise (/__w/freedom-road-public/freedom-road-public/scripts/securities-v4-smoke.cjs:82:9)
-    at async /__w/freedom-road-public/freedom-road-public/scripts/securities-v4-smoke.cjs:109:12
+chromium-desktop PASS v4.4 highValue=1210/1416 mock=5x120 caseRequired=true palette=true shell=520
+chromium-mobile PASS v4.4 highValue=1210/1416 mock=5x120 caseRequired=true palette=true shell=390
+webkit-iphone PASS v4.4 highValue=1210/1416 mock=5x120 caseRequired=true palette=true shell=390
+cloud account PASS automatic same-account cross-device sync + separate-code isolation + smoke-marker cleanup
+release entry PASS root-card=/ks/ legacy=/securities-exam/->/quiz-v4/
+V4.4 release smoke PASS: coherent ordered practice + case-required comprehensive + palette review + skip + fixed mocks + automatic cloud sync

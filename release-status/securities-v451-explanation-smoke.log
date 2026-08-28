@@ -1,15 +1,8 @@
-chromium-desktop BANK active=792 curated=594 cases=43 banking=8 quarantined=417
-locator.click: Timeout 30000ms exceeded.
-Call log:
-  - waiting for locator('#backBtn')
-    - locator resolved to <button id="backBtn" class="iconbtn" aria-label="返回刷题首页">‹</button>
-  - attempting click action
-    - waiting for element to be visible, enabled and stable
-    - element is visible, enabled and stable
-    - scrolling into view if needed
-    - done scrolling
-    - performing click action
-
-    at resumeAndExplanation (/__w/freedom-road-public/freedom-road-public/scripts/securities-v451-explanation-smoke.cjs:26:33)
-    at async run (/__w/freedom-road-public/freedom-road-public/scripts/securities-v451-explanation-smoke.cjs:39:257)
+Error: chromium-desktop: mechanical wording leaked 6
+    at assert (/__w/freedom-road-public/freedom-road-public/scripts/securities-v451-explanation-smoke.cjs:5:34)
+    at bankQuality (/__w/freedom-road-public/freedom-road-public/scripts/securities-v451-explanation-smoke.cjs:19:209)
+    at runNextTicks (node:internal/process/task_queues:65:5)
+    at process.processImmediate (node:internal/timers:453:9)
+    at process.callbackTrampoline (node:internal/async_hooks:130:17)
+    at async run (/__w/freedom-road-public/freedom-road-public/scripts/securities-v451-explanation-smoke.cjs:39:205)
     at async /__w/freedom-road-public/freedom-road-public/scripts/securities-v451-explanation-smoke.cjs:40:12

@@ -1,6 +1,0 @@
-chromium-desktop-mobile-shell PASS highValue=1210/1416 added=499 tiers=A11,B11,C1188,D206 shell=520
-chromium-mobile PASS highValue=1210/1416 added=499 tiers=A11,B11,C1188,D206 shell=390
-webkit-iphone PASS highValue=1210/1416 added=499 tiers=A11,B11,C1188,D206 shell=390
-cloud account PASS same-account cross-device sync + separate-account isolation + no direct profile switch
-release entry PASS root-card=/ks/ legacy=/securities-exam/->/quiz-v4/
-V4.3 release smoke PASS: expanded high-value pool + isolated accounts + cross-device cloud sync + desktop/mobile/iPhone

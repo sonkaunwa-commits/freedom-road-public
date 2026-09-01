@@ -233,3 +233,18 @@ P1 第一阶段：
 - **P1：国际黄金独立交叉验证源与 provider 升级门槛**
 - **P1：数据源稳定性统计、连续失败监控和统一告警**
 - **P1：QMT/Level-2 增强行情层评估与接入**
+
+---
+
+## 2026-09-02：平台能力演进 / Agent Capability System
+
+新增通用平台能力子路线图：`roadmap/platform-evolution.md`。
+
+本轮正式纳入以下能力：
+- **DESIGN.md / Design System**：统一报告、Dashboard、研究工具和后续 Agent 生成页面的视觉语言，并接入 Release Quality Gate；
+- **Research Orchestrator**：把资料搜索、筛选、证据提取、比较、置信度、报告和归档做成可追踪研究流水线；
+- **Creator Engine**：把公众号/自媒体实验升级为选题→研究→写作→视觉→发布→数据回流的闭环，不把单纯 AI 自动写作视为商业模式；
+- **Model Router**：按任务复杂度、风险、延迟和成本做模型分级，目标为 `Quality × Latency × Cost` 最优；
+- **Skill Registry + Evaluation**：所有新 Skill / MCP / Agent / 开源工具先登记、试用、评估和监控，再决定是否进入生产。
+
+实施原则：先建立 Skill Registry 与评估能力，再建设 DESIGN.md、Research Orchestrator、Model Router，最后扩大 Creator Engine 与自动 benchmark。热门项目不得未经验证直接进入核心生产链路。

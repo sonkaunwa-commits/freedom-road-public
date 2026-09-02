@@ -1,0 +1,8 @@
+{
+  "policy_version": "1.0.0",
+  "max_evidence_age_days": 90,
+  "consecutive_failure_threshold": 3,
+  "failure_rate_threshold": 0.5,
+  "recommendation_only": true,
+  "external_notification_enabled": false
+}

@@ -1,0 +1,31 @@
+{
+  "review_id": "MMR-SAMPLE-001",
+  "risk_level": "HIGH",
+  "task_ref": "research/high-value-example",
+  "primary": {
+    "run_id": "run-primary-001",
+    "capability_id": "model-primary",
+    "version_ref": "primary@1",
+    "provenance_ref": "router-decision-001",
+    "evidence_refs": ["E-1", "E-2"],
+    "metrics": {"quality_score": 0.92, "latency_ms": 1200, "cost_units": 1.8}
+  },
+  "challenger": {
+    "run_id": "run-challenger-001",
+    "capability_id": "model-challenger",
+    "version_ref": "challenger@2",
+    "provenance_ref": "router-decision-002",
+    "evidence_refs": ["E-1", "E-3"],
+    "metrics": {"quality_score": 0.9, "latency_ms": 980, "cost_units": 1.2}
+  },
+  "disagreement": {
+    "severity": "HIGH",
+    "dimensions": ["conclusion", "risk_assessment"]
+  },
+  "review": {
+    "decision": "REVIEW_REQUIRED",
+    "reviewer_ref": "independent-review-policy-v1",
+    "evidence_refs": ["E-1", "E-2", "E-3"]
+  },
+  "auto_promote": false
+}

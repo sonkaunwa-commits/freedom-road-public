@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "tiers": ["L0", "L1", "L2", "L3"],
+  "risk_floor": {
+    "LOW": "L0",
+    "MEDIUM": "L1",
+    "HIGH": "L2",
+    "CRITICAL": "L3"
+  },
+  "complexity_floor": {
+    "TRIVIAL": "L0",
+    "ROUTINE": "L1",
+    "COMPLEX": "L2",
+    "EXPERT": "L3"
+  },
+  "accuracy_floor": {
+    "BASIC": "L0",
+    "STANDARD": "L1",
+    "HIGH": "L2",
+    "VERY_HIGH": "L3"
+  },
+  "budget_order": ["FREE", "LOW", "MEDIUM", "HIGH", "PREMIUM"],
+  "protected_domains": {
+    "INVESTMENT_DECISION": "L2",
+    "ARCHITECTURE": "L2",
+    "SECURITY_PRIVACY": "L3",
+    "EXTERNAL_IRREVERSIBLE_ACTION": "L3"
+  },
+  "rules": {
+    "cross_check_requires": "L3",
+    "tools_required_minimum": "L1",
+    "budget_cannot_lower_policy_floor": true,
+    "no_candidate_above_floor_returns_escalation": true,
+    "protected_domain_cannot_silent_downgrade": true,
+    "routing_decision_must_record_reasons": true
+  }
+}

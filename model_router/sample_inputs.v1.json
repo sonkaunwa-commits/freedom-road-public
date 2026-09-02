@@ -1,0 +1,82 @@
+{
+  "candidates": [
+    {
+      "candidate_id": "local-simple",
+      "tier": "L0",
+      "enabled": true,
+      "cost_class": "FREE",
+      "quality_score": 0.55,
+      "estimated_latency_ms": 120,
+      "max_context_tokens": 16000,
+      "supports_tools": false,
+      "supports_cross_check": false
+    },
+    {
+      "candidate_id": "standard-general",
+      "tier": "L1",
+      "enabled": true,
+      "cost_class": "LOW",
+      "quality_score": 0.72,
+      "estimated_latency_ms": 400,
+      "max_context_tokens": 64000,
+      "supports_tools": true,
+      "supports_cross_check": false
+    },
+    {
+      "candidate_id": "strong-reasoning",
+      "tier": "L2",
+      "enabled": true,
+      "cost_class": "MEDIUM",
+      "quality_score": 0.91,
+      "estimated_latency_ms": 900,
+      "max_context_tokens": 128000,
+      "supports_tools": true,
+      "supports_cross_check": false
+    },
+    {
+      "candidate_id": "strong-reviewed",
+      "tier": "L3",
+      "enabled": true,
+      "cost_class": "HIGH",
+      "quality_score": 0.96,
+      "estimated_latency_ms": 1400,
+      "max_context_tokens": 128000,
+      "supports_tools": true,
+      "supports_cross_check": true
+    }
+  ],
+  "tasks": {
+    "formatting": {
+      "complexity": "TRIVIAL",
+      "risk": "LOW",
+      "required_accuracy": "BASIC",
+      "budget_class": "FREE",
+      "context_tokens": 2000,
+      "tools_required": false,
+      "cross_check_required": false,
+      "max_latency_ms": 1000
+    },
+    "investment_research": {
+      "complexity": "COMPLEX",
+      "risk": "HIGH",
+      "required_accuracy": "HIGH",
+      "budget_class": "MEDIUM",
+      "protected_domain": "INVESTMENT_DECISION",
+      "context_tokens": 50000,
+      "tools_required": true,
+      "cross_check_required": false,
+      "max_latency_ms": 2000
+    },
+    "critical_review": {
+      "complexity": "EXPERT",
+      "risk": "CRITICAL",
+      "required_accuracy": "VERY_HIGH",
+      "budget_class": "HIGH",
+      "protected_domain": "SECURITY_PRIVACY",
+      "context_tokens": 60000,
+      "tools_required": true,
+      "cross_check_required": true,
+      "max_latency_ms": 2500
+    }
+  }
+}

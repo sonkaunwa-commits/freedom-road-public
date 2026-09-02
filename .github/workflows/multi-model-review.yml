@@ -1,0 +1,22 @@
+name: multi-model-review
+
+on:
+  pull_request:
+    paths:
+      - 'multi_model_review/**'
+      - 'scripts/validate_multi_model_review.py'
+      - '.github/workflows/multi-model-review.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/validate_multi_model_review.py

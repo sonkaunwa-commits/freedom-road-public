@@ -1,0 +1,22 @@
+name: evaluation-engine
+
+on:
+  pull_request:
+    paths:
+      - 'evaluation_engine/**'
+      - 'scripts/validate_evaluation_engine.py'
+      - '.github/workflows/evaluation-engine.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 2
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/validate_evaluation_engine.py

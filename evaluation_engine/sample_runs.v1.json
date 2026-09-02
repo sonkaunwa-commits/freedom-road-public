@@ -1,0 +1,38 @@
+{
+  "baseline": {
+    "run_id": "RUN-BASE-001",
+    "capability_ref": "MODEL-ROUTER-L2",
+    "version_ref": "baseline-v1",
+    "benchmark_ref": "BENCH-RESEARCH-001",
+    "evidence_refs": ["EVAL-EVIDENCE-BASE"],
+    "metrics": {
+      "quality_score": 0.92,
+      "success_rate": 0.95,
+      "human_correction_rate": 0.12,
+      "latency_ms": 4200,
+      "monetary_cost": 1.00,
+      "critical_failure_count": 0
+    }
+  },
+  "candidate": {
+    "run_id": "RUN-CAND-001",
+    "capability_ref": "MODEL-ROUTER-L2-CANDIDATE",
+    "version_ref": "candidate-v2",
+    "benchmark_ref": "BENCH-RESEARCH-001",
+    "evidence_refs": ["EVAL-EVIDENCE-CAND"],
+    "metrics": {
+      "quality_score": 0.92,
+      "success_rate": 0.96,
+      "human_correction_rate": 0.09,
+      "latency_ms": 3600,
+      "monetary_cost": 0.78,
+      "critical_failure_count": 0
+    }
+  },
+  "feedback": {
+    "feedback_id": "FEEDBACK-001",
+    "evaluation_evidence_refs": ["EVAL-EVIDENCE-BASE", "EVAL-EVIDENCE-CAND"],
+    "recommendation": "PROMOTE_CANDIDATE",
+    "policy_change_applied": false
+  }
+}

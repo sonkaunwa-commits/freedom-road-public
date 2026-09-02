@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "content_id": "CONTENT-2026-09-03-001",
+  "stage": "LEARNING",
+  "channel": "WECHAT_OFFICIAL",
+  "topic": {"title": "Example evidence-led topic", "source": "OWNER_SELECTED"},
+  "research": {"status": "COMPLETE", "research_record_ref": "RESEARCH-001", "evidence_refs": ["E-1", "E-2"]},
+  "thesis": {"statement": "The article should lead with the verified problem rather than generic AI claims.", "human_owner": "OWNER", "decision": "APPROVE"},
+  "draft": {"content_ref": "DRAFT-001", "derived_from_evidence_refs": ["E-1", "E-2"]},
+  "channel_adaptation": {"channel": "WECHAT_OFFICIAL", "adaptation_ref": "ADAPT-001"},
+  "quality_gates": {
+    "research_grounded": "PASS",
+    "thesis_owned": "PASS",
+    "style_checked": "PASS",
+    "channel_adapted": "PASS",
+    "provenance_present": "PASS",
+    "human_final_decision": "PASS"
+  },
+  "human_final_decision": "APPROVE",
+  "publish": {"external_publish_authority": false, "publication_ref": "MANUAL-PUBLISH-001"},
+  "performance": {"observation_id": "OBS-001", "metrics": {"reads": 100, "saves": 12, "shares": 4}},
+  "learning": {"learning_id": "LEARN-001", "based_on_observation_refs": ["OBS-001"], "hypothesis": "Evidence-led openings may improve saves.", "policy_change_applied": false}
+}

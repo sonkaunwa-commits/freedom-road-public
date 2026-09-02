@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0",
+  "registry_id": "freovia-skill-registry-v1",
+  "updated_at": "2026-09-02",
+  "entries": [
+    {
+      "skill_id": "freovia.design-validator.v1",
+      "name": "FREOVIA Design System Validator",
+      "source": {
+        "type": "INTERNAL",
+        "ref": "scripts/validate-design-system.cjs",
+        "version": "1.0.0"
+      },
+      "problem": "Detect drift in the shared FREOVIA design-token and semantic financial-state contract.",
+      "input_contract": "Repository DESIGN.md and design/tokens.v1.json",
+      "output_contract": "Deterministic pass/fail with a specific contract-drift reason",
+      "permissions": ["FILESYSTEM_READ"],
+      "overlap_with_existing": [],
+      "maintenance": {
+        "owner": "FREOVIA platform",
+        "activity_state": "INTERNAL"
+      },
+      "risk": {
+        "security": "LOW",
+        "privacy": "LOW"
+      },
+      "cost": {
+        "class": "ZERO",
+        "notes": "Local deterministic Node.js validation; no network or model call."
+      },
+      "status": "APPROVED",
+      "metrics": {
+        "success_rate": null,
+        "p95_latency_ms": null,
+        "evaluated_runs": 0
+      },
+      "approval_evidence": ["roadmap/platform-evolution.md#designmd", "internal-contract-review-2026-09-02"],
+      "alternatives": ["manual design review"],
+      "last_evaluated_at": "2026-09-02",
+      "notes": "Approval is limited to deterministic repository contract validation; it does not replace visual/browser review."
+    },
+    {
+      "skill_id": "freovia.securities-browser-smoke.v4",
+      "name": "Securities Browser Smoke",
+      "source": {
+        "type": "INTERNAL",
+        "ref": "scripts/securities-v4-smoke.cjs",
+        "version": "4"
+      },
+      "problem": "Run browser-level smoke checks for the public securities exam surface before release.",
+      "input_contract": "Built public securities site and browser-test environment",
+      "output_contract": "Pass/fail browser smoke evidence for the covered release contract",
+      "permissions": ["FILESYSTEM_READ", "NETWORK_READ"],
+      "overlap_with_existing": ["scripts/securities-browser-smoke.cjs"],
+      "maintenance": {
+        "owner": "FREOVIA public exam",
+        "activity_state": "INTERNAL"
+      },
+      "risk": {
+        "security": "LOW",
+        "privacy": "LOW"
+      },
+      "cost": {
+        "class": "LOW",
+        "notes": "Browser execution can consume CI minutes; run only on scoped release paths."
+      },
+      "status": "APPROVED",
+      "metrics": {
+        "success_rate": null,
+        "p95_latency_ms": null,
+        "evaluated_runs": 0
+      },
+      "approval_evidence": ["existing-release-smoke-contract", "release-status-browser-smoke-history"],
+      "alternatives": ["manual browser verification"],
+      "last_evaluated_at": "2026-09-02",
+      "notes": "Registry entry records the existing capability; it does not widen its network or release authority."
+    }
+  ]
+}

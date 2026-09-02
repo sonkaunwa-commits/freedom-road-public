@@ -1,0 +1,14 @@
+{
+  "skill_id": "freovia.example.skill",
+  "registered_version": "1.2.0",
+  "observed_version": "1.3.0",
+  "source_ref": "registry:freovia.example.skill",
+  "provenance_ref": "health-observation-001",
+  "observed_at": "2026-09-03T07:00:00+08:00",
+  "maintenance_state": "ACTIVE",
+  "evidence_age_days": 14,
+  "consecutive_failures": 0,
+  "failure_rate": 0.05,
+  "critical_breakage": false,
+  "auto_registry_mutation": false
+}

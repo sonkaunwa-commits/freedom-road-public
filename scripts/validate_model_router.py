@@ -2,12 +2,15 @@ from __future__ import annotations
 
 import copy
 import json
+import sys
 from pathlib import Path
-
-from model_router.core import route_task
 
 
 ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from model_router.core import route_task
 
 
 def load(path: str) -> dict:

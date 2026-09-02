@@ -2,12 +2,15 @@ from __future__ import annotations
 
 import copy
 import json
+import sys
 from pathlib import Path
-
-from research_orchestrator.core import ResearchContractError, validate_record
 
 
 ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from research_orchestrator.core import ResearchContractError, validate_record
 
 
 def load(path: str) -> dict:

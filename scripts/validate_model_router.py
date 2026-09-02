@@ -52,7 +52,7 @@ def main() -> None:
     assert blocked.selected_candidate is None
 
     tool_task = copy.deepcopy(sample["tasks"]["formatting"])
-    tool_task["tools_required"] = true
+    tool_task["tools_required"] = True
     tool_task["budget_class"] = "LOW"
     routed = route_task(policy, tool_task, candidates)
     assert routed.minimum_tier == "L1"

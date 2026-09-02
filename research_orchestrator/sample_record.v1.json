@@ -1,0 +1,66 @@
+{
+  "research_id": "R-DEMO-001",
+  "question": "Is the observed platform capability ready for a bounded pilot?",
+  "as_of": "2026-09-02T21:20:00+08:00",
+  "sources": [
+    {
+      "source_id": "SRC-1",
+      "locator": "internal://capability-evaluation/1",
+      "quality": "HIGH",
+      "freshness": "CURRENT",
+      "acquired_at": "2026-09-02T21:20:00+08:00"
+    },
+    {
+      "source_id": "SRC-2",
+      "locator": "internal://regression-result/1",
+      "quality": "HIGH",
+      "freshness": "RECENT",
+      "acquired_at": "2026-09-02T21:20:00+08:00"
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "E-1",
+      "type": "FACT",
+      "claim": "The deterministic acceptance gate passed.",
+      "source_refs": ["SRC-1"],
+      "evidence_refs": [],
+      "current_fact": true
+    },
+    {
+      "evidence_id": "E-2",
+      "type": "FACT",
+      "claim": "The latest regression run reported no contract drift.",
+      "source_refs": ["SRC-2"],
+      "evidence_refs": [],
+      "current_fact": true
+    },
+    {
+      "evidence_id": "E-3",
+      "type": "INFERENCE",
+      "claim": "A bounded pilot is technically supportable under the tested contract.",
+      "source_refs": [],
+      "evidence_refs": ["E-1", "E-2"],
+      "current_fact": false
+    },
+    {
+      "evidence_id": "E-4",
+      "type": "OPINION",
+      "claim": "Proceeding only as a reversible pilot is preferable to immediate production rollout.",
+      "source_refs": [],
+      "evidence_refs": ["E-3"],
+      "current_fact": false,
+      "presented_as_source_fact": false
+    }
+  ],
+  "contradictions": [],
+  "findings": [
+    {
+      "finding_id": "F-1",
+      "statement": "The capability is suitable for a bounded pilot, not an automatic production promotion.",
+      "evidence_refs": ["E-1", "E-2", "E-3", "E-4"]
+    }
+  ],
+  "confidence": "HIGH",
+  "status": "FINAL"
+}

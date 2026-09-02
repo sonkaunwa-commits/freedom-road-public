@@ -1,0 +1,22 @@
+name: design-contract
+
+on:
+  pull_request:
+    paths:
+      - 'DESIGN.md'
+      - 'design/**'
+      - 'scripts/validate-design-system.cjs'
+      - '.github/workflows/design-contract.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate design-system contract
+        run: node scripts/validate-design-system.cjs

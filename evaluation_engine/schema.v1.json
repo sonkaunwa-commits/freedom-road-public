@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "recommendations": ["PROMOTE_CANDIDATE", "KEEP_BASELINE", "REVIEW_REQUIRED", "REJECT_CANDIDATE"],
+  "required_metrics": ["quality_score", "success_rate", "human_correction_rate", "latency_ms", "monetary_cost", "critical_failure_count"],
+  "quality_floor": 0.85,
+  "success_rate_floor": 0.90,
+  "max_quality_regression": 0.02,
+  "max_success_rate_regression": 0.03,
+  "critical_failure_limit": 0,
+  "promotion_policy": {
+    "auto_apply": false,
+    "evidence_required": true,
+    "quality_floor_has_priority_over_cost": true,
+    "quality_floor_has_priority_over_latency": true
+  }
+}

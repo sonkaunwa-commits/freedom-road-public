@@ -1,0 +1,21 @@
+name: skill-registry
+
+on:
+  pull_request:
+    paths:
+      - 'skill_registry/**'
+      - 'scripts/validate-skill-registry.cjs'
+      - '.github/workflows/skill-registry.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate Skill Registry
+        run: node scripts/validate-skill-registry.cjs

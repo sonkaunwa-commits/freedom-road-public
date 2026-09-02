@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "pipeline_stages": ["TOPIC", "RESEARCH", "THESIS", "DRAFT", "STYLE_CHECK", "VISUAL", "PUBLISH_READY", "PUBLISHED", "PERFORMANCE", "LEARNING"],
+  "channels": ["WECHAT_OFFICIAL", "WEB", "GENERIC"],
+  "research_statuses": ["NOT_STARTED", "IN_PROGRESS", "COMPLETE"],
+  "gate_statuses": ["PASS", "FAIL", "NOT_RUN"],
+  "human_decisions": ["PENDING", "APPROVE", "REVISE", "REJECT"],
+  "required_publish_gates": ["research_grounded", "thesis_owned", "style_checked", "channel_adapted", "provenance_present", "human_final_decision"],
+  "policy": {
+    "research_required_before_publish_ready": true,
+    "human_thesis_owner_required": true,
+    "human_final_decision_required": true,
+    "performance_feedback_may_auto_change_policy": false,
+    "external_publish_authority_granted": false
+  }
+}

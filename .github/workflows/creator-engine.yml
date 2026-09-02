@@ -1,0 +1,22 @@
+name: creator-engine
+
+on:
+  pull_request:
+    paths:
+      - 'creator_engine/**'
+      - 'scripts/validate_creator_engine.py'
+      - '.github/workflows/creator-engine.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 2
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/validate_creator_engine.py

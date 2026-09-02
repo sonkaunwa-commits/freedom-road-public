@@ -1,0 +1,22 @@
+name: skill-health
+
+on:
+  pull_request:
+    paths:
+      - 'skill_health/**'
+      - 'scripts/validate_skill_health.py'
+      - '.github/workflows/skill-health.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/validate_skill_health.py

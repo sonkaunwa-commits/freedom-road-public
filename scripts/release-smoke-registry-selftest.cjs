@@ -24,6 +24,14 @@ function expectFailure(label, fn, pattern) {
   if (!failed) throw new Error(`${label} unexpectedly passed`);
 }
 
+function cleanCoreConfig() {
+  return {
+    name: 'core',
+    baseUrl: 'https://example.test/',
+    checks: [{ id: 'root', path: './', status: 200, contentTypeContains: 'text/html', contains: ['ROOT_MARKER'] }],
+  };
+}
+
 function run() {
   const root = fs.mkdtempSync(path.join(os.tmpdir(), 'release-smoke-registry-'));
   try {
@@ -31,11 +39,8 @@ function run() {
     fs.writeFileSync(path.join(root, 'site', 'index.html'), 'ROOT_MARKER', 'utf8');
     fs.writeFileSync(path.join(root, 'site', 'fund-assistant', 'index.html'), 'FUND_MARKER', 'utf8');
 
-    writeJson(path.join(root, 'release-smoke', 'core.v1.json'), {
-      name: 'core',
-      baseUrl: 'https://example.test/',
-      checks: [{ id: 'root', path: './', status: 200, contentTypeContains: 'text/html', contains: ['ROOT_MARKER'] }],
-    });
+    const corePath = path.join(root, 'release-smoke', 'core.v1.json');
+    writeJson(corePath, cleanCoreConfig());
     writeJson(path.join(root, 'release-smoke', 'fund.v1.json'), {
       name: 'fund',
       baseUrl: 'https://example.test/',
@@ -58,10 +63,20 @@ function run() {
     expectFailure('missing config', () => validateRegistry({ ...registry, entries: [{ ...registry.entries[0], config: 'release-smoke/missing.json' }] }, root), /config not found/);
     expectFailure('missing check', () => validateRegistry({ ...registry, entries: [{ ...registry.entries[0], checkId: 'missing' }] }, root), /checkId not found/);
 
-    const noMarker = JSON.parse(fs.readFileSync(path.join(root, 'release-smoke', 'core.v1.json'), 'utf8'));
+    const noMarker = cleanCoreConfig();
     delete noMarker.checks[0].contains;
-    writeJson(path.join(root, 'release-smoke', 'core.v1.json'), noMarker);
+    writeJson(corePath, noMarker);
     expectFailure('missing marker assertion', () => validateRegistry(registry, root), /release\/key marker/);
+
+    const staleMarker = cleanCoreConfig();
+    staleMarker.checks[0].contains = ['STALE_MARKER'];
+    writeJson(corePath, staleMarker);
+    expectFailure('stale local marker', () => validateRegistry(registry, root), /marker missing from local source/);
+
+    const duplicateChecks = cleanCoreConfig();
+    duplicateChecks.checks.push({ ...duplicateChecks.checks[0] });
+    writeJson(corePath, duplicateChecks);
+    expectFailure('duplicate check id', () => validateRegistry(registry, root), /duplicate check id/);
 
     process.stdout.write('release-smoke-registry self-test PASS: valid coverage passes and duplicate/missing/stale coverage fails closed\n');
   } finally {

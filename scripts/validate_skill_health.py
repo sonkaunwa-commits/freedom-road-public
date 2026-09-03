@@ -63,6 +63,31 @@ def main() -> None:
     broken["provenance_ref"] = ""
     expect_failure(broken, policy, "missing provenance")
 
+    unsafe_policy = copy.deepcopy(policy)
+    unsafe_policy["recommendation_only"] = False
+    expect_failure(sample, unsafe_policy, "recommendation-only policy drift")
+
+    unsafe_policy = copy.deepcopy(policy)
+    unsafe_policy["external_notification_enabled"] = True
+    expect_failure(sample, unsafe_policy, "external notification policy drift")
+
+    malformed_policy = copy.deepcopy(policy)
+    malformed_policy.pop("max_evidence_age_days")
+    expect_failure(sample, malformed_policy, "missing evidence-age threshold")
+
+    malformed_policy = copy.deepcopy(policy)
+    malformed_policy["consecutive_failure_threshold"] = True
+    expect_failure(sample, malformed_policy, "boolean failure threshold")
+
+    malformed_policy = copy.deepcopy(policy)
+    malformed_policy["failure_rate_threshold"] = "0.5"
+    expect_failure(sample, malformed_policy, "string failure-rate threshold")
+
+    for field in ("evidence_age_days", "consecutive_failures", "failure_rate"):
+        broken = copy.deepcopy(sample)
+        broken[field] = True
+        expect_failure(broken, policy, f"boolean numeric evidence: {field}")
+
     print("skill-health-v1: PASS")
 
 

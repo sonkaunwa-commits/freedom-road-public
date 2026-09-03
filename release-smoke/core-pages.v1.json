@@ -1,0 +1,56 @@
+{
+  "name": "core-public-pages-release",
+  "baseUrl": "https://sonkaunwa-commits.github.io/freedom-road-public/",
+  "timeoutMs": 15000,
+  "checks": [
+    {
+      "id": "root-entry",
+      "path": "./",
+      "status": 200,
+      "contentTypeContains": "text/html",
+      "contains": ["Freedom Road 工具入口", "FREEDOM ROAD"]
+    },
+    {
+      "id": "securities-short-entry",
+      "path": "ks/",
+      "status": 200,
+      "contentTypeContains": "text/html",
+      "contains": ["证券从业刷题 · v4.0", "quiz-v4"]
+    },
+    {
+      "id": "securities-legacy-entry",
+      "path": "securities-exam/",
+      "status": 200,
+      "contentTypeContains": "text/html",
+      "contains": ["证券从业刷题 · v4.0", "quiz-v4"]
+    },
+    {
+      "id": "securities-live-entry",
+      "path": "exam-live/",
+      "status": 200,
+      "contentTypeContains": "text/html",
+      "contains": ["证券考试学习助手 2026 · v3.6.0", "data-product-version=\"3.6.0\""]
+    },
+    {
+      "id": "securities-quiz-entry",
+      "path": "quiz-v4/",
+      "status": 200,
+      "contentTypeContains": "text/html",
+      "contains": ["证券从业刷题 · v4.6.1", "证券从业刷题 · v4.0"]
+    },
+    {
+      "id": "investment-advisor-entry",
+      "path": "investment-advisor-exam/",
+      "status": 200,
+      "contentTypeContains": "text/html",
+      "contains": ["证券投资顾问 2026 在线刷题", "v2.6"]
+    },
+    {
+      "id": "investment-advisor-short-entry",
+      "path": "tg/",
+      "status": 200,
+      "contentTypeContains": "text/html",
+      "contains": ["投顾刷题", "investment-advisor-exam"]
+    }
+  ]
+}

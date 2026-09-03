@@ -25,7 +25,37 @@ def _require_text(value: Any, field: str) -> str:
     return value.strip()
 
 
+def _require_policy_int(policy: dict[str, Any], field: str, minimum: int) -> int:
+    value = policy.get(field)
+    if isinstance(value, bool) or not isinstance(value, int) or value < minimum:
+        raise SkillHealthContractError(f"{field} must be an integer >= {minimum}")
+    return value
+
+
+def _require_policy_rate(policy: dict[str, Any], field: str) -> float:
+    value = policy.get(field)
+    if isinstance(value, bool) or not isinstance(value, (int, float)) or not 0 <= value <= 1:
+        raise SkillHealthContractError(f"{field} must be numeric within [0, 1]")
+    return float(value)
+
+
+def _validate_policy(policy: dict[str, Any]) -> tuple[int, int, float]:
+    if not isinstance(policy, dict):
+        raise SkillHealthContractError("policy must be an object")
+    if policy.get("recommendation_only") is not True:
+        raise SkillHealthContractError("recommendation_only must remain true")
+    if policy.get("external_notification_enabled") is not False:
+        raise SkillHealthContractError("external_notification_enabled must remain false")
+
+    max_evidence_age = _require_policy_int(policy, "max_evidence_age_days", 0)
+    failure_threshold = _require_policy_int(policy, "consecutive_failure_threshold", 1)
+    failure_rate_threshold = _require_policy_rate(policy, "failure_rate_threshold")
+    return max_evidence_age, failure_threshold, failure_rate_threshold
+
+
 def evaluate_health(record: dict[str, Any], policy: dict[str, Any]) -> SkillHealthDecision:
+    max_evidence_age, failure_threshold, failure_rate_threshold = _validate_policy(policy)
+
     for field in ("skill_id", "registered_version", "observed_version", "source_ref", "provenance_ref", "observed_at"):
         _require_text(record.get(field), field)
 
@@ -36,18 +66,14 @@ def evaluate_health(record: dict[str, Any], policy: dict[str, Any]) -> SkillHeal
     evidence_age = record.get("evidence_age_days")
     failures = record.get("consecutive_failures")
     failure_rate = record.get("failure_rate")
-    if not isinstance(evidence_age, int) or evidence_age < 0:
+    if isinstance(evidence_age, bool) or not isinstance(evidence_age, int) or evidence_age < 0:
         raise SkillHealthContractError("evidence_age_days must be a non-negative integer")
-    if not isinstance(failures, int) or failures < 0:
+    if isinstance(failures, bool) or not isinstance(failures, int) or failures < 0:
         raise SkillHealthContractError("consecutive_failures must be a non-negative integer")
-    if not isinstance(failure_rate, (int, float)) or not 0 <= failure_rate <= 1:
+    if isinstance(failure_rate, bool) or not isinstance(failure_rate, (int, float)) or not 0 <= failure_rate <= 1:
         raise SkillHealthContractError("failure_rate must be within [0, 1]")
     if record.get("auto_registry_mutation") is not False:
         raise SkillHealthContractError("auto_registry_mutation must remain false")
-
-    max_evidence_age = int(policy["max_evidence_age_days"])
-    failure_threshold = int(policy["consecutive_failure_threshold"])
-    failure_rate_threshold = float(policy["failure_rate_threshold"])
 
     version_drift = record["registered_version"] != record["observed_version"]
     stale_evidence = evidence_age > max_evidence_age

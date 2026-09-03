@@ -1,0 +1,56 @@
+{
+  "ledger_version": "1.0.0",
+  "records": [
+    {
+      "active_work_id": "AW-RELEASE-SMOKE-COVERAGE-REGISTRY-V1",
+      "task_id": "RELEASE-SMOKE-COVERAGE-REGISTRY-V1",
+      "objective": "Govern release-smoke coverage for supported public entries.",
+      "status_chain": [
+        "CLAIMED",
+        "RUN_TO_HANDOFF"
+      ],
+      "mutation_planned": true,
+      "write_intent": [
+        "release-smoke/registry.v1.json",
+        ".github/workflows/pages.yml"
+      ],
+      "private_data": false,
+      "verification": []
+    },
+    {
+      "active_work_id": "AW-STATIC-ASSET-REFERENCE-GATE-V1",
+      "task_id": "STATIC-ASSET-REFERENCE-GATE-V1",
+      "objective": "Add an offline scanner for local static asset references after the current Pages writer releases its lease.",
+      "status_chain": [
+        "CLAIMED",
+        "PREPARING",
+        "WAITING_FOR_WRITE_LEASE"
+      ],
+      "mutation_planned": true,
+      "write_intent": [
+        "scripts/validate-static-asset-references.py",
+        ".github/workflows/pages.yml"
+      ],
+      "blocker_ref": "issue:#46",
+      "private_data": false,
+      "verification": []
+    },
+    {
+      "active_work_id": "AW-CLOSED-EXAMPLE-V1",
+      "task_id": "CLOSED-EXAMPLE-V1",
+      "objective": "Demonstrate the evidence required for a terminal work record.",
+      "status_chain": [
+        "COMPLETED"
+      ],
+      "mutation_planned": true,
+      "write_intent": [
+        "examples/closed.txt"
+      ],
+      "private_data": false,
+      "verification": [
+        "self-test:PASS"
+      ],
+      "closeout_ref": "commit:example"
+    }
+  ]
+}

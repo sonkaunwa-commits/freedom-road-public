@@ -80,6 +80,7 @@ def validate_manifest(manifest: dict[str, Any]) -> None:
         "multi-model-review",
         "skill-health",
         "content-feedback",
+        "execution-traceability",
     }
     missing_components = minimum_components.difference(component_ids)
     if missing_components:

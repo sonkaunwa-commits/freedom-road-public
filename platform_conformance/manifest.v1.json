@@ -39,6 +39,10 @@
     {
       "id": "content-feedback",
       "required_files": ["content_feedback/policy.v1.json", "content_feedback/core.py", "content_feedback/sample_record.v1.json"]
+    },
+    {
+      "id": "execution-traceability",
+      "required_files": ["execution_traceability/policy.v1.json", "execution_traceability/core.py", "execution_traceability/sample_ledger.v1.json", "execution_traceability/README.md", "scripts/test_execution_traceability.py"]
     }
   ],
   "json_assertions": [
@@ -95,6 +99,26 @@
     {
       "path": "content_feedback/policy.v1.json",
       "pointer": ["rules", "policy_mutation_allowed"],
+      "equals": false
+    },
+    {
+      "path": "execution_traceability/policy.v1.json",
+      "pointer": ["rules", "active_write_scope_conflict_forbidden"],
+      "equals": true
+    },
+    {
+      "path": "execution_traceability/policy.v1.json",
+      "pointer": ["rules", "completed_requires_verification"],
+      "equals": true
+    },
+    {
+      "path": "execution_traceability/policy.v1.json",
+      "pointer": ["network_required"],
+      "equals": false
+    },
+    {
+      "path": "execution_traceability/policy.v1.json",
+      "pointer": ["mutation_authority"],
       "equals": false
     }
   ],

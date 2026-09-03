@@ -1,0 +1,36 @@
+{
+  "policy_version": "1.0.0",
+  "record_kind": "execution_trace",
+  "network_required": false,
+  "mutation_authority": false,
+  "id_patterns": {
+    "active_work_id": "^AW-[A-Z0-9]+(?:-[A-Z0-9]+)*$",
+    "task_id": "^[A-Z0-9]+(?:-[A-Z0-9]+)*$"
+  },
+  "allowed_status_tokens": [
+    "CLAIMED",
+    "PREPARING",
+    "RUN_TO_HANDOFF",
+    "IN_PROGRESS",
+    "WAITING_FOR_WRITE_LEASE",
+    "BLOCKED",
+    "COMPLETED",
+    "ABORTED"
+  ],
+  "terminal_status_tokens": [
+    "COMPLETED",
+    "ABORTED"
+  ],
+  "rules": {
+    "unique_active_work_id": true,
+    "unique_task_id": true,
+    "active_write_scope_conflict_forbidden": true,
+    "waiting_for_write_lease_is_non_writer": true,
+    "completed_requires_verification": true,
+    "completed_requires_closeout_ref": true,
+    "blocked_or_waiting_requires_blocker_ref": true,
+    "write_paths_must_be_repo_relative": true,
+    "path_escape_forbidden": true,
+    "private_data_forbidden": true
+  }
+}

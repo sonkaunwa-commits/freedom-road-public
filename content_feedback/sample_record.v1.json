@@ -1,0 +1,39 @@
+{
+  "feedback_id": "feedback-demo-001",
+  "experiment_id": "creator-exp-001",
+  "content_group_id": "topic-family-ai-workflow",
+  "channel": "public-account",
+  "observed_at": "2026-09-03T00:00:00Z",
+  "sources": [
+    {
+      "source_id": "obs-current",
+      "provider": "manual-export",
+      "collected_at": "2026-09-03T00:00:00Z",
+      "locator": "creator-exp-001/current-window"
+    },
+    {
+      "source_id": "obs-baseline",
+      "provider": "manual-export",
+      "collected_at": "2026-08-20T00:00:00Z",
+      "locator": "creator-exp-001/baseline-window"
+    }
+  ],
+  "sample": {
+    "published_items": 8,
+    "eligible_items": 8
+  },
+  "metrics": {
+    "view_rate": {"numerator": 2400, "denominator": 10000, "source_ref": "obs-current"},
+    "save_rate": {"numerator": 144, "denominator": 2400, "source_ref": "obs-current"},
+    "share_rate": {"numerator": 72, "denominator": 2400, "source_ref": "obs-current"}
+  },
+  "baseline": {
+    "channel": "public-account",
+    "sample_items": 12,
+    "metrics": {
+      "view_rate": {"numerator": 2000, "denominator": 10000, "source_ref": "obs-baseline"},
+      "save_rate": {"numerator": 100, "denominator": 2000, "source_ref": "obs-baseline"},
+      "share_rate": {"numerator": 60, "denominator": 2000, "source_ref": "obs-baseline"}
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "version": "1.0.0",
+  "minimum_directional_items": 3,
+  "minimum_stop_items": 8,
+  "material_change_ratio": 0.15,
+  "positive_metrics": ["view_rate", "completion_rate", "save_rate", "share_rate", "follow_rate", "lead_rate"],
+  "recommendations": ["INSUFFICIENT_DATA", "KEEP", "ITERATE", "REVIEW", "STOP_EXPERIMENT"],
+  "rules": {
+    "same_channel_baseline_required": true,
+    "metric_provenance_required": true,
+    "preserve_denominators": true,
+    "single_item_policy_change_forbidden": true,
+    "causality_claim_forbidden": true,
+    "stop_requires_review": true,
+    "policy_mutation_allowed": false
+  }
+}

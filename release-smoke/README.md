@@ -63,7 +63,7 @@ node scripts/release-smoke.cjs release-smoke/fund-assistant.v1.json --json --out
 }
 ```
 
-每个 check 可以使用 `path`（相对 `baseUrl`）或完整 `url`。`status` 默认 200。`contains`、`notContains` 可为字符串或字符串数组。
+每个 check 必须且只能使用 `path`（相对 `baseUrl`）或完整 `url` 其中一种；同一配置内 check `id` 必须唯一。`status` 省略时默认 200，显式填写时必须是 100–599 的整数 HTTP 状态码。`timeoutMs` 省略时默认 15000，显式填写时必须是正整数。非法显式值不会静默回退。`contains`、`notContains` 可为字符串或字符串数组。
 
 ## 发布纪律
 

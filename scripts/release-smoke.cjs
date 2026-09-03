@@ -43,23 +43,48 @@ function validateConfig(config) {
     if (!['http:', 'https:'].includes(baseUrl.protocol)) throw new Error('baseUrl must use http or https');
   }
 
+  let timeoutMs = 15000;
+  if (config.timeoutMs !== undefined) {
+    if (!Number.isInteger(config.timeoutMs) || config.timeoutMs <= 0) {
+      throw new Error('timeoutMs must be a positive integer');
+    }
+    timeoutMs = config.timeoutMs;
+  }
+
+  const checkIds = new Set();
   const normalized = checks.map((raw, index) => {
     if (!raw || typeof raw !== 'object' || Array.isArray(raw)) throw new Error(`checks[${index}] must be an object`);
     const id = requireString(raw.id || `check-${index + 1}`, `checks[${index}].id`);
+    if (checkIds.has(id)) throw new Error(`check id must be unique: ${id}`);
+    checkIds.add(id);
+
+    const hasPath = raw.path !== undefined && raw.path !== null;
+    const hasUrl = raw.url !== undefined && raw.url !== null;
+    if (hasPath === hasUrl) {
+      throw new Error(`${id} must declare exactly one of path or url`);
+    }
+
+    let status = 200;
+    if (raw.status !== undefined) {
+      if (!Number.isInteger(raw.status) || raw.status < 100 || raw.status > 599) {
+        throw new Error(`${id}.status must be an integer HTTP status between 100 and 599`);
+      }
+      status = raw.status;
+    }
+
     const target = { ...raw, id };
     const url = resolveTargetUrl(baseUrl, target);
     if (!['http:', 'https:'].includes(url.protocol)) throw new Error(`${id} must use http or https`);
     return {
       id,
       url,
-      status: Number.isInteger(raw.status) ? raw.status : 200,
+      status,
       contains: asArray(raw.contains).map((item, i) => requireString(item, `${id}.contains[${i}]`)),
       notContains: asArray(raw.notContains).map((item, i) => requireString(item, `${id}.notContains[${i}]`)),
       contentTypeContains: raw.contentTypeContains ? requireString(raw.contentTypeContains, `${id}.contentTypeContains`) : null,
     };
   });
 
-  const timeoutMs = Number.isInteger(config.timeoutMs) && config.timeoutMs > 0 ? config.timeoutMs : 15000;
   return {
     name: requireString(config.name || 'release-smoke', 'name'),
     baseUrl: baseUrl ? baseUrl.toString() : null,

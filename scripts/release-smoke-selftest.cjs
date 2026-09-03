@@ -3,7 +3,7 @@
 
 const assert = require('node:assert/strict');
 const http = require('node:http');
-const { runSmoke } = require('./release-smoke.cjs');
+const { runSmoke, validateConfig } = require('./release-smoke.cjs');
 
 function startFixtureServer() {
   const server = http.createServer((req, res) => {
@@ -32,6 +32,10 @@ function startFixtureServer() {
   });
 }
 
+function expectConfigError(config, pattern) {
+  assert.throws(() => validateConfig(config), pattern);
+}
+
 (async () => {
   const server = await startFixtureServer();
   try {
@@ -52,6 +56,12 @@ function startFixtureServer() {
     assert.equal(good.pass, true, JSON.stringify(good, null, 2));
     assert.equal(good.checks.length, 3);
 
+    const absoluteUrlConfig = validateConfig({
+      name: 'absolute-url',
+      checks: [{ id: 'absolute', url: `${baseUrl}data.json`, status: 200 }],
+    });
+    assert.equal(absoluteUrlConfig.checks[0].url.toString(), `${baseUrl}data.json`);
+
     const bad = await runSmoke({
       ...config,
       name: 'release-smoke-negative-selftest',
@@ -60,7 +70,16 @@ function startFixtureServer() {
     assert.equal(bad.pass, false, 'negative self-test must fail');
     assert.equal(bad.checks[0].assertions.some(item => item.type === 'contains' && item.pass === false), true);
 
-    console.log('release-smoke self-test PASS: positive checks pass and missing release marker fails closed');
+    expectConfigError({ ...config, checks: [{ id: 'dup', path: '/' }, { id: 'dup', path: 'app.js' }] }, /check id must be unique/);
+    expectConfigError({ ...config, checks: [{ id: 'ambiguous', path: '/', url: baseUrl }] }, /exactly one of path or url/);
+    expectConfigError({ ...config, checks: [{ id: 'missing-locator' }] }, /exactly one of path or url/);
+    expectConfigError({ ...config, checks: [{ id: 'bad-status-low', path: '/', status: 99 }] }, /status must be an integer HTTP status/);
+    expectConfigError({ ...config, checks: [{ id: 'bad-status-high', path: '/', status: 600 }] }, /status must be an integer HTTP status/);
+    expectConfigError({ ...config, checks: [{ id: 'bad-status-type', path: '/', status: 200.5 }] }, /status must be an integer HTTP status/);
+    expectConfigError({ ...config, timeoutMs: 0 }, /timeoutMs must be a positive integer/);
+    expectConfigError({ ...config, timeoutMs: true }, /timeoutMs must be a positive integer/);
+
+    console.log('release-smoke self-test PASS: valid configs execute and ambiguous/malformed contracts fail closed');
   } finally {
     await new Promise(resolve => server.close(resolve));
   }

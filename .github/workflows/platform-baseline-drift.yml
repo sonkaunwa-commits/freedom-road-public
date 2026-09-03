@@ -16,6 +16,7 @@ on:
       - 'platform_baseline/**'
       - 'platform_baseline_tests/**'
       - 'scripts/check_platform_baseline_drift.py'
+      - 'scripts/platform_rebaseline_proposal.py'
       - '.github/workflows/platform-baseline-drift.yml'
   workflow_dispatch:
 
@@ -30,5 +31,5 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: python -m unittest platform_baseline_tests.test_baseline_drift
+      - run: python -m unittest platform_baseline_tests.test_baseline_drift platform_baseline_tests.test_rebaseline_proposal
       - run: python scripts/check_platform_baseline_drift.py --target-ref HEAD --json

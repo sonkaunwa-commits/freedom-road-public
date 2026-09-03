@@ -3,7 +3,12 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: [site/**, .github/workflows/pages.yml]
+    paths:
+      - 'site/**'
+      - '.github/workflows/pages.yml'
+      - 'release-smoke/**'
+      - 'scripts/release-smoke*.cjs'
+      - 'scripts/validate-release-smoke-registry.cjs'
 permissions:
   contents: write
   pages: write
@@ -30,6 +35,8 @@ jobs:
           python3 -m json.tool site/publication.json >/dev/null
           python3 -m json.tool site/fund-assistant/release.json >/dev/null
           python3 scripts/validate_publication_boundary.py
+          node scripts/release-smoke-registry-selftest.cjs
+          node scripts/validate-release-smoke-registry.cjs
           if find site -type l -print -quit | grep -q .; then echo 'Symlinks are not allowed.' >&2; exit 1; fi
           grep -Fq 'FUND_ASSISTANT_BOOTSTRAP_' site/fund-assistant/index.html
           grep -Fq 'investment-advisor-exam' site/tg/index.html

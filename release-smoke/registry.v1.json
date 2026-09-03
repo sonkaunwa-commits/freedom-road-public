@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "release-smoke-registry/v1",
+  "baseUrl": "https://sonkaunwa-commits.github.io/freedom-road-public/",
+  "entries": [
+    {"id": "root", "entryPath": "./", "config": "release-smoke/core-pages.v1.json", "checkId": "root-entry"},
+    {"id": "fund-assistant", "entryPath": "fund-assistant/", "config": "release-smoke/fund-assistant.v1.json", "checkId": "fund-assistant-bootstrap"},
+    {"id": "securities-short", "entryPath": "ks/", "config": "release-smoke/core-pages.v1.json", "checkId": "securities-short-entry"},
+    {"id": "securities-legacy", "entryPath": "securities-exam/", "config": "release-smoke/core-pages.v1.json", "checkId": "securities-legacy-entry"},
+    {"id": "securities-live", "entryPath": "exam-live/", "config": "release-smoke/core-pages.v1.json", "checkId": "securities-live-entry"},
+    {"id": "securities-quiz", "entryPath": "quiz-v4/", "config": "release-smoke/core-pages.v1.json", "checkId": "securities-quiz-entry"},
+    {"id": "investment-advisor", "entryPath": "investment-advisor-exam/", "config": "release-smoke/core-pages.v1.json", "checkId": "investment-advisor-entry"},
+    {"id": "investment-advisor-short", "entryPath": "tg/", "config": "release-smoke/core-pages.v1.json", "checkId": "investment-advisor-short-entry"}
+  ]
+}

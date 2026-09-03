@@ -9,6 +9,9 @@ on:
       - 'release-smoke/**'
       - 'scripts/release-smoke*.cjs'
       - 'scripts/validate-release-smoke-registry.cjs'
+      - 'static_asset_gate/**'
+      - 'scripts/validate-static-asset-references.py'
+      - 'scripts/test_static_asset_references.py'
 permissions:
   contents: write
   pages: write
@@ -37,6 +40,8 @@ jobs:
           python3 scripts/validate_publication_boundary.py
           node scripts/release-smoke-registry-selftest.cjs
           node scripts/validate-release-smoke-registry.cjs
+          python3 scripts/test_static_asset_references.py
+          python3 scripts/validate-static-asset-references.py
           if find site -type l -print -quit | grep -q .; then echo 'Symlinks are not allowed.' >&2; exit 1; fi
           grep -Fq 'FUND_ASSISTANT_BOOTSTRAP_' site/fund-assistant/index.html
           grep -Fq 'investment-advisor-exam' site/tg/index.html

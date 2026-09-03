@@ -19,7 +19,7 @@ function requireString(value, label) {
 }
 
 function resolveTargetUrl(baseUrl, check) {
-  if (check.url) return new URL(requireString(check.url, `${check.id}.url`));
+  if (check.url !== undefined && check.url !== null) return new URL(requireString(check.url, `${check.id}.url`));
   if (!baseUrl) throw new Error(`${check.id} needs url or config.baseUrl`);
   return new URL(requireString(check.path, `${check.id}.path`), baseUrl);
 }
@@ -38,7 +38,7 @@ function validateConfig(config) {
   if (checks.length === 0) throw new Error('config.checks must contain at least one check');
 
   let baseUrl = null;
-  if (config.baseUrl) {
+  if (config.baseUrl !== undefined && config.baseUrl !== null) {
     baseUrl = new URL(requireString(config.baseUrl, 'baseUrl'));
     if (!['http:', 'https:'].includes(baseUrl.protocol)) throw new Error('baseUrl must use http or https');
   }
@@ -54,7 +54,9 @@ function validateConfig(config) {
   const checkIds = new Set();
   const normalized = checks.map((raw, index) => {
     if (!raw || typeof raw !== 'object' || Array.isArray(raw)) throw new Error(`checks[${index}] must be an object`);
-    const id = requireString(raw.id || `check-${index + 1}`, `checks[${index}].id`);
+    const id = raw.id === undefined
+      ? `check-${index + 1}`
+      : requireString(raw.id, `checks[${index}].id`);
     if (checkIds.has(id)) throw new Error(`check id must be unique: ${id}`);
     checkIds.add(id);
 

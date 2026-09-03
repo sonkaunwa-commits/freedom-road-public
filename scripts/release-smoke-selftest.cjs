@@ -73,6 +73,8 @@ function expectConfigError(config, pattern) {
     expectConfigError({ ...config, checks: [{ id: 'dup', path: '/' }, { id: 'dup', path: 'app.js' }] }, /check id must be unique/);
     expectConfigError({ ...config, checks: [{ id: 'ambiguous', path: '/', url: baseUrl }] }, /exactly one of path or url/);
     expectConfigError({ ...config, checks: [{ id: 'missing-locator' }] }, /exactly one of path or url/);
+    expectConfigError({ ...config, checks: [{ id: '', path: '/' }] }, /id must be a non-empty string/);
+    expectConfigError({ name: 'empty-base', baseUrl: '', checks: [{ id: 'entry', path: '/' }] }, /baseUrl must be a non-empty string/);
     expectConfigError({ ...config, checks: [{ id: 'bad-status-low', path: '/', status: 99 }] }, /status must be an integer HTTP status/);
     expectConfigError({ ...config, checks: [{ id: 'bad-status-high', path: '/', status: 600 }] }, /status must be an integer HTTP status/);
     expectConfigError({ ...config, checks: [{ id: 'bad-status-type', path: '/', status: 200.5 }] }, /status must be an integer HTTP status/);

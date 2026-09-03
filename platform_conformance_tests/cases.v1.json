@@ -1,0 +1,52 @@
+{
+  "version": "1.0.0",
+  "fixture_mode": "TEMPORARY_COPY_ONLY",
+  "canonical_mutation_allowed": false,
+  "cases": [
+    {
+      "id": "MODEL_ROUTER_BUDGET_FLOOR_DISABLED",
+      "target": "model_router/policy.v1.json",
+      "expected": "REJECT"
+    },
+    {
+      "id": "EVALUATION_AUTO_PROMOTION_ENABLED",
+      "target": "evaluation_engine/schema.v1.json",
+      "expected": "REJECT"
+    },
+    {
+      "id": "MULTI_MODEL_HIGH_RISK_FAIL_CLOSED_REMOVED",
+      "target": "multi_model_review/core.py",
+      "expected": "REJECT"
+    },
+    {
+      "id": "SKILL_HEALTH_RECOMMENDATION_ONLY_DISABLED",
+      "target": "skill_health/policy.v1.json",
+      "expected": "REJECT"
+    },
+    {
+      "id": "SKILL_HEALTH_EXTERNAL_NOTIFICATION_ENABLED",
+      "target": "skill_health/policy.v1.json",
+      "expected": "REJECT"
+    },
+    {
+      "id": "CONTENT_FEEDBACK_CAUSALITY_ALLOWED",
+      "target": "content_feedback/policy.v1.json",
+      "expected": "REJECT"
+    },
+    {
+      "id": "CONTENT_FEEDBACK_POLICY_MUTATION_ENABLED",
+      "target": "content_feedback/policy.v1.json",
+      "expected": "REJECT"
+    },
+    {
+      "id": "CRITICAL_ARTIFACT_MISSING",
+      "target": "DESIGN.md",
+      "expected": "REJECT"
+    },
+    {
+      "id": "DUPLICATE_COMPONENT_DECLARATION",
+      "target": "platform_conformance/manifest.v1.json",
+      "expected": "REJECT"
+    }
+  ]
+}

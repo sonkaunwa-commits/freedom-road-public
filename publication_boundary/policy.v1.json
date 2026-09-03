@@ -1,0 +1,52 @@
+{
+  "schema_version": "publication-boundary/v1",
+  "scan_roots": ["site"],
+  "text_extensions": [".html", ".htm", ".js", ".cjs", ".mjs", ".css", ".json", ".txt", ".svg", ".webmanifest", ".xml", ".csv"],
+  "forbidden_file_globs": [
+    "**/.env",
+    "**/.env.*",
+    "**/*.pem",
+    "**/*.key",
+    "**/*.p12",
+    "**/*.pfx",
+    "**/*.sqlite",
+    "**/*.sqlite3",
+    "**/*.db"
+  ],
+  "secret_patterns": [
+    {"id": "pem-private-key", "pattern": "-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----"},
+    {"id": "github-token", "pattern": "\\b(?:ghp|gho|ghu|ghs|ghr)_[A-Za-z0-9]{30,}\\b"},
+    {"id": "github-fine-grained-token", "pattern": "\\bgithub_pat_[A-Za-z0-9_]{30,}\\b"},
+    {"id": "aws-access-key", "pattern": "\\bAKIA[0-9A-Z]{16}\\b"},
+    {"id": "openai-secret-key", "pattern": "\\bsk-(?:proj-)?[A-Za-z0-9_-]{24,}\\b"},
+    {"id": "slack-token", "pattern": "\\bxox[baprs]-[A-Za-z0-9-]{20,}\\b"}
+  ],
+  "forbidden_json_keys": [
+    "account_number",
+    "broker_account_number",
+    "bank_account_number",
+    "user_cost_basis",
+    "private_cost_basis",
+    "private_position_size",
+    "private_portfolio_value",
+    "private_cash_balance",
+    "private_positions",
+    "private_holdings",
+    "private_trade_plan",
+    "api_key",
+    "api_secret",
+    "access_token",
+    "refresh_token",
+    "client_secret",
+    "private_key",
+    "wallet_private_key",
+    "password",
+    "credential"
+  ],
+  "required_json_files": [
+    {
+      "path": "site/publication.json",
+      "required_keys": ["schema_version", "source_repository", "source_commit", "source_generated_at"]
+    }
+  ]
+}

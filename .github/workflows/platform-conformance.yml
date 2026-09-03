@@ -13,8 +13,10 @@ on:
       - 'multi_model_review/**'
       - 'skill_health/**'
       - 'content_feedback/**'
+      - 'execution_traceability/**'
       - 'platform_conformance/**'
       - 'scripts/validate_platform_conformance.py'
+      - 'scripts/test_execution_traceability.py'
       - '.github/workflows/platform-conformance.yml'
 
 jobs:
@@ -27,3 +29,4 @@ jobs:
         with:
           python-version: '3.12'
       - run: python scripts/validate_platform_conformance.py
+      - run: python scripts/test_execution_traceability.py

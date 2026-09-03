@@ -57,7 +57,7 @@ function validateConfig(config) {
     const id = raw.id === undefined
       ? `check-${index + 1}`
       : requireString(raw.id, `checks[${index}].id`);
-    if (checkIds.has(id)) throw new Error(`check id must be unique: ${id}`);
+    if (checkIds.has(id)) throw new Error(`duplicate check id: ${id}`);
     checkIds.add(id);
 
     const hasPath = raw.path !== undefined && raw.path !== null;

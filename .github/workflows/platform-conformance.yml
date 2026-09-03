@@ -1,0 +1,29 @@
+name: platform-conformance
+
+on:
+  pull_request:
+    paths:
+      - 'DESIGN.md'
+      - 'design/**'
+      - 'research_orchestrator/**'
+      - 'model_router/**'
+      - 'skill_registry/**'
+      - 'creator_engine/**'
+      - 'evaluation_engine/**'
+      - 'multi_model_review/**'
+      - 'skill_health/**'
+      - 'content_feedback/**'
+      - 'platform_conformance/**'
+      - 'scripts/validate_platform_conformance.py'
+      - '.github/workflows/platform-conformance.yml'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/validate_platform_conformance.py

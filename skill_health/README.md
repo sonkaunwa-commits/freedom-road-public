@@ -11,3 +11,5 @@ Canonical recommendations:
 - `DEPRECATE_CANDIDATE`: critical breakage plus unmaintained status warrants explicit deprecation review.
 
 Health output emits machine-readable event types only. It does not send notifications, upgrade packages, change registry state or alter production routing. Any re-evaluation, deprecation or replacement remains a separate governed action.
+
+The evaluator validates the policy before it evaluates health evidence. `recommendation_only` must remain `true`, `external_notification_enabled` must remain `false`, and threshold fields must have valid non-boolean numeric types. Policy authority drift or malformed evidence fails closed with `SkillHealthContractError` rather than being coerced into a health decision.

@@ -1,0 +1,20 @@
+name: platform-baseline
+
+on:
+  pull_request:
+    paths:
+      - 'platform_baseline/**'
+      - 'scripts/validate_platform_baseline.py'
+      - '.github/workflows/platform-baseline.yml'
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 2
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/validate_platform_baseline.py

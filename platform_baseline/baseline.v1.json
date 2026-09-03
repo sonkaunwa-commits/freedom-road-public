@@ -1,0 +1,99 @@
+{
+  "baseline_id": "FREOVIA-PLATFORM-P2-2026-09-03",
+  "baseline_version": "1.0.0",
+  "baseline_type": "ACCEPTED_DETERMINISTIC_PLATFORM_BASELINE",
+  "source_sha": "02deb12729c8f9b0a486ee2f13fbf90e7ad17c5c",
+  "roadmap_ref": "roadmap/platform-evolution.md",
+  "conformance_ref": "platform_conformance/manifest.v1.json",
+  "component_count": 9,
+  "components": [
+    {
+      "id": "design-system",
+      "maturity": "DETERMINISTIC_BASELINE",
+      "artifacts": ["DESIGN.md", "design/tokens.v1.json"],
+      "acceptance_ref": "PR#20"
+    },
+    {
+      "id": "research-orchestrator",
+      "maturity": "DETERMINISTIC_BASELINE",
+      "artifacts": ["research_orchestrator/schema.v1.json", "research_orchestrator/core.py"],
+      "acceptance_ref": "PR#24"
+    },
+    {
+      "id": "model-router",
+      "maturity": "DETERMINISTIC_BASELINE",
+      "artifacts": ["model_router/policy.v1.json", "model_router/core.py"],
+      "acceptance_ref": "PR#25"
+    },
+    {
+      "id": "skill-registry",
+      "maturity": "DETERMINISTIC_BASELINE",
+      "artifacts": ["skill_registry/schema.v1.json", "skill_registry/registry.v1.json"],
+      "acceptance_ref": "PR#21"
+    },
+    {
+      "id": "creator-engine",
+      "maturity": "PILOT_BASELINE",
+      "artifacts": ["creator_engine/schema.v1.json", "creator_engine/core.py"],
+      "acceptance_ref": "PR#27"
+    },
+    {
+      "id": "evaluation-engine",
+      "maturity": "DETERMINISTIC_BASELINE",
+      "artifacts": ["evaluation_engine/schema.v1.json", "evaluation_engine/core.py"],
+      "acceptance_ref": "PR#29"
+    },
+    {
+      "id": "multi-model-review",
+      "maturity": "DETERMINISTIC_BASELINE",
+      "artifacts": ["multi_model_review/core.py", "multi_model_review/sample_record.v1.json"],
+      "acceptance_ref": "PR#32"
+    },
+    {
+      "id": "skill-health",
+      "maturity": "DETERMINISTIC_BASELINE",
+      "artifacts": ["skill_health/policy.v1.json", "skill_health/core.py"],
+      "acceptance_ref": "PR#33"
+    },
+    {
+      "id": "content-feedback",
+      "maturity": "DETERMINISTIC_BASELINE",
+      "artifacts": ["content_feedback/policy.v1.json", "content_feedback/core.py"],
+      "acceptance_ref": "PR#35"
+    }
+  ],
+  "accepted_invariants": [
+    "budget_cannot_lower_required_quality_or_risk_floor",
+    "candidate_promotion_is_recommendation_only",
+    "high_risk_material_model_disagreement_fails_closed",
+    "skill_health_cannot_mutate_registry_or_send_notifications",
+    "content_feedback_cannot_claim_causality_or_mutate_policy",
+    "creator_external_publish_authority_is_not_granted",
+    "capability_admission_does_not_equal_execution_permission"
+  ],
+  "explicit_non_capabilities": [
+    "NO_LIVE_MODEL_PROVIDER_INTEGRATION_FROM_THIS_BASELINE",
+    "NO_LIVE_AB_TRAFFIC_SPLITTING",
+    "NO_AUTONOMOUS_MODEL_OR_SKILL_PROMOTION",
+    "NO_AUTOMATIC_EXTERNAL_PUBLISHING",
+    "NO_ANALYTICS_API_COLLECTION",
+    "NO_CREDENTIAL_OR_SECRET_AUTHORITY",
+    "NO_PAID_RESOURCE_AUTHORITY",
+    "NO_PRIVATE_DATA_EGRESS_EXPANSION",
+    "NO_INVESTMENT_OR_TRADING_EXECUTION_AUTHORITY",
+    "NO_PRODUCTION_CUTOVER_AUTHORITY"
+  ],
+  "authority": {
+    "production_activation": false,
+    "external_publish": false,
+    "registry_mutation": false,
+    "provider_activation": false,
+    "paid_resource_creation": false,
+    "trading_execution": false
+  },
+  "acceptance_evidence": {
+    "conformance_pr": "PR#37",
+    "conformance_merge_sha": "02deb12729c8f9b0a486ee2f13fbf90e7ad17c5c",
+    "validation": "platform-conformance success"
+  }
+}

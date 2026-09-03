@@ -1,0 +1,27 @@
+name: platform-conformance-adversarial
+
+on:
+  pull_request:
+    paths:
+      - 'platform_conformance/**'
+      - 'platform_conformance_tests/**'
+      - 'model_router/**'
+      - 'evaluation_engine/**'
+      - 'multi_model_review/**'
+      - 'skill_health/**'
+      - 'content_feedback/**'
+      - 'scripts/validate_platform_conformance.py'
+      - 'scripts/validate_platform_conformance_adversarial.py'
+      - '.github/workflows/platform-conformance-adversarial.yml'
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 2
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/validate_platform_conformance_adversarial.py

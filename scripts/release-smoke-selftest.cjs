@@ -70,7 +70,7 @@ function expectConfigError(config, pattern) {
     assert.equal(bad.pass, false, 'negative self-test must fail');
     assert.equal(bad.checks[0].assertions.some(item => item.type === 'contains' && item.pass === false), true);
 
-    expectConfigError({ ...config, checks: [{ id: 'dup', path: '/' }, { id: 'dup', path: 'app.js' }] }, /check id must be unique/);
+    expectConfigError({ ...config, checks: [{ id: 'dup', path: '/' }, { id: 'dup', path: 'app.js' }] }, /duplicate check id/);
     expectConfigError({ ...config, checks: [{ id: 'ambiguous', path: '/', url: baseUrl }] }, /exactly one of path or url/);
     expectConfigError({ ...config, checks: [{ id: 'missing-locator' }] }, /exactly one of path or url/);
     expectConfigError({ ...config, checks: [{ id: '', path: '/' }] }, /id must be a non-empty string/);

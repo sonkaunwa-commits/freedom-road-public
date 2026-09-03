@@ -17,3 +17,28 @@ Validation:
 ```bash
 python scripts/validate_platform_baseline.py
 ```
+
+Drift detection:
+
+```bash
+python scripts/check_platform_baseline_drift.py --target-ref HEAD --json
+```
+
+The drift detector intentionally fails when an accepted component artifact changes. It never rewrites the baseline.
+
+## Explicit rebaseline proposal gate
+
+An intentional component change does not authorize an automatic rebaseline. After drift is detected, a review-only proposal can be generated with the exact target revision, affected protected artifacts, and durable drift/conformance/independent-review evidence references:
+
+```bash
+python scripts/platform_rebaseline_proposal.py \
+  --target-sha <40-char-target-sha> \
+  --proposed-version <major.minor.patch> \
+  --drift-artifact <baseline-artifact-path> \
+  --drift-ref <drift-evidence-ref> \
+  --conformance-ref <conformance-evidence-ref> \
+  --independent-review-ref <review-evidence-ref> \
+  --request-ref <issue-or-task-ref>
+```
+
+A valid proposal is only `REVIEW_READY`. It must preserve the historical baseline, keep `auto_apply=false`, and retain all production/provider/publishing/paid/trading authority fields as false. Updating `baseline.v1.json` remains a separate explicit acceptance action after review; this gate never performs that mutation itself.

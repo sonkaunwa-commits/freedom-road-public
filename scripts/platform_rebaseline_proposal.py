@@ -46,6 +46,13 @@ def _sha(value: Any, field: str) -> str:
     return normalized
 
 
+def _semver(value: Any, field: str) -> tuple[str, tuple[int, int, int]]:
+    normalized = _text(value, field)
+    match = SEMVER.fullmatch(normalized)
+    _require(match is not None, f"{field} must be semantic version MAJOR.MINOR.PATCH")
+    return normalized, tuple(int(part) for part in match.groups())
+
+
 def load_baseline(path: Path = DEFAULT_BASELINE) -> dict[str, Any]:
     try:
         data = json.loads(path.read_text(encoding="utf-8"))
@@ -58,7 +65,7 @@ def load_baseline(path: Path = DEFAULT_BASELINE) -> dict[str, Any]:
 def component_artifact_index(baseline: dict[str, Any]) -> dict[str, str]:
     _sha(baseline.get("source_sha"), "baseline.source_sha")
     _text(baseline.get("baseline_id"), "baseline.baseline_id")
-    _text(baseline.get("baseline_version"), "baseline.baseline_version")
+    _semver(baseline.get("baseline_version"), "baseline.baseline_version")
     components = baseline.get("components")
     _require(isinstance(components, list) and bool(components), "baseline.components must be a non-empty list")
 
@@ -117,10 +124,14 @@ def build_proposal(
     target = _sha(target_sha, "target_sha")
     _require(target != source_sha, "target_sha must differ from the accepted baseline source_sha")
 
-    version = _text(proposed_version, "proposed_version")
-    _require(SEMVER.fullmatch(version) is not None, "proposed_version must be semantic version MAJOR.MINOR.PATCH")
-    current_version = _text(baseline.get("baseline_version"), "baseline.baseline_version")
-    _require(version != current_version, "proposed_version must differ from the accepted baseline_version")
+    version, version_tuple = _semver(proposed_version, "proposed_version")
+    current_version, current_version_tuple = _semver(
+        baseline.get("baseline_version"), "baseline.baseline_version"
+    )
+    _require(
+        version_tuple > current_version_tuple,
+        "proposed_version must strictly advance the accepted baseline_version",
+    )
 
     drifted, by_component = _normalized_drifted_artifacts(baseline, drifted_artifacts)
     validated_evidence = _validated_evidence(evidence)
@@ -166,18 +177,25 @@ def validate_proposal(proposal: dict[str, Any], baseline: dict[str, Any]) -> Non
 
     current = proposal.get("current_baseline")
     _require(isinstance(current, dict), "current_baseline must be an object")
+    expected_version, expected_version_tuple = _semver(
+        baseline.get("baseline_version"), "baseline.baseline_version"
+    )
     expected_current = {
         "baseline_id": _text(baseline.get("baseline_id"), "baseline.baseline_id"),
-        "baseline_version": _text(baseline.get("baseline_version"), "baseline.baseline_version"),
+        "baseline_version": expected_version,
         "source_sha": _sha(baseline.get("source_sha"), "baseline.source_sha"),
     }
     _require(current == expected_current, "proposal current_baseline does not match accepted baseline")
 
     target = _sha(proposal.get("target_sha"), "target_sha")
     _require(target != expected_current["source_sha"], "target_sha must differ from accepted source_sha")
-    proposed_version = _text(proposal.get("proposed_baseline_version"), "proposed_baseline_version")
-    _require(SEMVER.fullmatch(proposed_version) is not None, "proposed_baseline_version must be semantic version")
-    _require(proposed_version != expected_current["baseline_version"], "proposed baseline version must advance")
+    proposed_version, proposed_version_tuple = _semver(
+        proposal.get("proposed_baseline_version"), "proposed_baseline_version"
+    )
+    _require(
+        proposed_version_tuple > expected_version_tuple,
+        "proposed baseline version must strictly advance the accepted baseline version",
+    )
 
     artifacts = proposal.get("drifted_artifacts")
     _require(isinstance(artifacts, list), "drifted_artifacts must be a list")

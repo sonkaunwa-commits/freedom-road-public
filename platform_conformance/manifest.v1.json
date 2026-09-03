@@ -6,95 +6,200 @@
   "components": [
     {
       "id": "design-system",
-      "required_files": ["DESIGN.md", "design/tokens.v1.json"]
+      "required_files": [
+        "DESIGN.md",
+        "design/tokens.v1.json"
+      ]
     },
     {
       "id": "research-orchestrator",
-      "required_files": ["research_orchestrator/schema.v1.json", "research_orchestrator/core.py", "research_orchestrator/sample_record.v1.json"]
+      "required_files": [
+        "research_orchestrator/schema.v1.json",
+        "research_orchestrator/core.py",
+        "research_orchestrator/sample_record.v1.json"
+      ]
     },
     {
       "id": "model-router",
-      "required_files": ["model_router/policy.v1.json", "model_router/core.py", "model_router/sample_inputs.v1.json"]
+      "required_files": [
+        "model_router/policy.v1.json",
+        "model_router/core.py",
+        "model_router/sample_inputs.v1.json"
+      ]
     },
     {
       "id": "skill-registry",
-      "required_files": ["skill_registry/schema.v1.json", "skill_registry/registry.v1.json", "skill_registry/README.md"]
+      "required_files": [
+        "skill_registry/schema.v1.json",
+        "skill_registry/registry.v1.json",
+        "skill_registry/README.md"
+      ]
     },
     {
       "id": "creator-engine",
-      "required_files": ["creator_engine/schema.v1.json", "creator_engine/core.py", "creator_engine/sample_record.v1.json"]
+      "required_files": [
+        "creator_engine/schema.v1.json",
+        "creator_engine/core.py",
+        "creator_engine/sample_record.v1.json"
+      ]
     },
     {
       "id": "evaluation-engine",
-      "required_files": ["evaluation_engine/schema.v1.json", "evaluation_engine/core.py", "evaluation_engine/sample_runs.v1.json"]
+      "required_files": [
+        "evaluation_engine/schema.v1.json",
+        "evaluation_engine/core.py",
+        "evaluation_engine/sample_runs.v1.json"
+      ]
     },
     {
       "id": "multi-model-review",
-      "required_files": ["multi_model_review/core.py", "multi_model_review/sample_record.v1.json"]
+      "required_files": [
+        "multi_model_review/core.py",
+        "multi_model_review/sample_record.v1.json"
+      ]
     },
     {
       "id": "skill-health",
-      "required_files": ["skill_health/policy.v1.json", "skill_health/core.py", "skill_health/sample_record.v1.json"]
+      "required_files": [
+        "skill_health/policy.v1.json",
+        "skill_health/core.py",
+        "skill_health/sample_record.v1.json"
+      ]
     },
     {
       "id": "content-feedback",
-      "required_files": ["content_feedback/policy.v1.json", "content_feedback/core.py", "content_feedback/sample_record.v1.json"]
+      "required_files": [
+        "content_feedback/policy.v1.json",
+        "content_feedback/core.py",
+        "content_feedback/sample_record.v1.json"
+      ]
+    },
+    {
+      "id": "execution-traceability",
+      "required_files": [
+        "execution_traceability/policy.v1.json",
+        "execution_traceability/core.py",
+        "execution_traceability/sample_ledger.v1.json",
+        "execution_traceability/README.md",
+        "scripts/test_execution_traceability.py"
+      ]
     }
   ],
   "json_assertions": [
     {
       "path": "model_router/policy.v1.json",
-      "pointer": ["rules", "budget_cannot_lower_policy_floor"],
+      "pointer": [
+        "rules",
+        "budget_cannot_lower_policy_floor"
+      ],
       "equals": true
     },
     {
       "path": "model_router/policy.v1.json",
-      "pointer": ["rules", "protected_domain_cannot_silent_downgrade"],
+      "pointer": [
+        "rules",
+        "protected_domain_cannot_silent_downgrade"
+      ],
       "equals": true
     },
     {
       "path": "evaluation_engine/schema.v1.json",
-      "pointer": ["promotion_policy", "auto_apply"],
+      "pointer": [
+        "promotion_policy",
+        "auto_apply"
+      ],
       "equals": false
     },
     {
       "path": "evaluation_engine/schema.v1.json",
-      "pointer": ["promotion_policy", "evidence_required"],
+      "pointer": [
+        "promotion_policy",
+        "evidence_required"
+      ],
       "equals": true
     },
     {
       "path": "evaluation_engine/schema.v1.json",
-      "pointer": ["promotion_policy", "quality_floor_has_priority_over_cost"],
+      "pointer": [
+        "promotion_policy",
+        "quality_floor_has_priority_over_cost"
+      ],
       "equals": true
     },
     {
       "path": "evaluation_engine/schema.v1.json",
-      "pointer": ["promotion_policy", "quality_floor_has_priority_over_latency"],
+      "pointer": [
+        "promotion_policy",
+        "quality_floor_has_priority_over_latency"
+      ],
       "equals": true
     },
     {
       "path": "skill_health/policy.v1.json",
-      "pointer": ["recommendation_only"],
+      "pointer": [
+        "recommendation_only"
+      ],
       "equals": true
     },
     {
       "path": "skill_health/policy.v1.json",
-      "pointer": ["external_notification_enabled"],
+      "pointer": [
+        "external_notification_enabled"
+      ],
       "equals": false
     },
     {
       "path": "content_feedback/policy.v1.json",
-      "pointer": ["rules", "same_channel_baseline_required"],
+      "pointer": [
+        "rules",
+        "same_channel_baseline_required"
+      ],
       "equals": true
     },
     {
       "path": "content_feedback/policy.v1.json",
-      "pointer": ["rules", "causality_claim_forbidden"],
+      "pointer": [
+        "rules",
+        "causality_claim_forbidden"
+      ],
       "equals": true
     },
     {
       "path": "content_feedback/policy.v1.json",
-      "pointer": ["rules", "policy_mutation_allowed"],
+      "pointer": [
+        "rules",
+        "policy_mutation_allowed"
+      ],
+      "equals": false
+    },
+    {
+      "path": "execution_traceability/policy.v1.json",
+      "pointer": [
+        "rules",
+        "active_write_scope_conflict_forbidden"
+      ],
+      "equals": true
+    },
+    {
+      "path": "execution_traceability/policy.v1.json",
+      "pointer": [
+        "rules",
+        "completed_requires_verification"
+      ],
+      "equals": true
+    },
+    {
+      "path": "execution_traceability/policy.v1.json",
+      "pointer": [
+        "network_required"
+      ],
+      "equals": false
+    },
+    {
+      "path": "execution_traceability/policy.v1.json",
+      "pointer": [
+        "mutation_authority"
+      ],
       "equals": false
     }
   ],

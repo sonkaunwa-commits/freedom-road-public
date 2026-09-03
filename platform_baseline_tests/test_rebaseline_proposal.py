@@ -96,6 +96,20 @@ class RebaselineProposalTests(unittest.TestCase):
                         request_ref="issue#48",
                     )
 
+    def test_version_must_strictly_advance(self):
+        baseline = fixture_baseline()
+        for proposed_version in ("1.0.0", "0.9.9", "not-semver"):
+            with self.subTest(proposed_version=proposed_version):
+                with self.assertRaises(RebaselineProposalError):
+                    build_proposal(
+                        baseline,
+                        target_sha="1" * 40,
+                        proposed_version=proposed_version,
+                        drifted_artifacts=["alpha/core.py"],
+                        evidence=evidence(),
+                        request_ref="issue#48",
+                    )
+
     def test_missing_evidence_fails_closed(self):
         for field in ("drift_ref", "conformance_ref", "independent_review_ref"):
             broken = evidence()
@@ -126,6 +140,11 @@ class RebaselineProposalTests(unittest.TestCase):
         with self.assertRaisesRegex(RebaselineProposalError, "auto_apply"):
             validate_proposal(auto_apply, baseline)
 
+        rollback = copy.deepcopy(proposal)
+        rollback["proposed_baseline_version"] = "0.9.9"
+        with self.assertRaisesRegex(RebaselineProposalError, "strictly advance"):
+            validate_proposal(rollback, baseline)
+
         for field in AUTHORITY_FIELDS:
             expanded = copy.deepcopy(proposal)
             expanded["authority"][field] = True
@@ -146,7 +165,7 @@ class RebaselineProposalTests(unittest.TestCase):
         proposal = build_proposal(
             baseline,
             target_sha="1" * 40 if baseline["source_sha"] != "1" * 40 else "2" * 40,
-            proposed_version="1.0.1" if baseline["baseline_version"] != "1.0.1" else "1.0.2",
+            proposed_version="1.0.1" if baseline["baseline_version"] == "1.0.0" else "99.0.0",
             drifted_artifacts=[first_artifact],
             evidence=evidence(),
             request_ref="issue#48",

@@ -1,0 +1,41 @@
+{
+  "name": "fund-assistant-public-release",
+  "baseUrl": "https://sonkaunwa-commits.github.io/freedom-road-public/",
+  "timeoutMs": 15000,
+  "checks": [
+    {
+      "id": "fund-assistant-bootstrap",
+      "path": "fund-assistant/",
+      "status": 200,
+      "contentTypeContains": "text/html",
+      "contains": [
+        "基金小帮手",
+        "FUND_ASSISTANT_BOOTSTRAP_20260822_1812",
+        "release.json"
+      ]
+    },
+    {
+      "id": "fund-assistant-release-manifest",
+      "path": "fund-assistant/release.json",
+      "status": 200,
+      "contentTypeContains": "application/json",
+      "contains": [
+        "FUND_ASSISTANT_UI_20260827_2104",
+        "stable-15-4.html",
+        "v154.js"
+      ]
+    },
+    {
+      "id": "fund-assistant-entry",
+      "path": "fund-assistant/stable-15-4.html",
+      "status": 200,
+      "contentTypeContains": "text/html"
+    },
+    {
+      "id": "fund-assistant-behavior",
+      "path": "fund-assistant/v154.js",
+      "status": 200,
+      "contentTypeContains": "javascript"
+    }
+  ]
+}

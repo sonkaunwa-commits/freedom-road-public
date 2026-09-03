@@ -53,6 +53,7 @@ function validateRegistry(raw, repoRoot = process.cwd()) {
   const urls = new Set();
   const entries = [];
   const rootPath = path.resolve(repoRoot);
+  const configCache = new Map();
 
   for (const [index, entry] of raw.entries.entries()) {
     if (!entry || typeof entry !== 'object' || Array.isArray(entry)) {
@@ -81,7 +82,16 @@ function validateRegistry(raw, repoRoot = process.cwd()) {
       throw new Error(`${id}.config not found: ${configRel}`);
     }
 
-    const config = validateConfig(readJson(configPath));
+    let config = configCache.get(configRel);
+    if (!config) {
+      config = validateConfig(readJson(configPath));
+      const checkIds = new Set();
+      for (const check of config.checks) {
+        if (checkIds.has(check.id)) throw new Error(`${configRel} contains duplicate check id: ${check.id}`);
+        checkIds.add(check.id);
+      }
+      configCache.set(configRel, config);
+    }
     if (config.baseUrl !== baseUrl.toString()) {
       throw new Error(`${id}.config baseUrl differs from registry baseUrl`);
     }
@@ -99,8 +109,15 @@ function validateRegistry(raw, repoRoot = process.cwd()) {
     }
 
     const localSource = sourceIndexPath(entryPath);
-    if (!fs.existsSync(path.resolve(repoRoot, localSource))) {
+    const localPath = path.resolve(repoRoot, localSource);
+    if (!fs.existsSync(localPath)) {
       throw new Error(`${id} local entry source missing: ${localSource}`);
+    }
+    const localText = fs.readFileSync(localPath, 'utf8');
+    for (const marker of check.contains) {
+      if (!localText.includes(marker)) {
+        throw new Error(`${id} marker missing from local source: ${JSON.stringify(marker)}`);
+      }
     }
 
     entries.push({ id, entryPath, config: configRel, checkId, localSource, url: expectedUrl });

@@ -1,0 +1,24 @@
+{
+  "schema_version": "static-asset-reference/v1",
+  "site_root": "site",
+  "html_glob": "**/*.html",
+  "reference_attributes": ["src", "href", "poster"],
+  "asset_extensions": [
+    ".js",
+    ".css",
+    ".webmanifest",
+    ".png",
+    ".jpg",
+    ".jpeg",
+    ".gif",
+    ".webp",
+    ".svg",
+    ".ico",
+    ".avif",
+    ".woff",
+    ".woff2",
+    ".ttf",
+    ".otf"
+  ],
+  "ignored_schemes": ["http", "https", "mailto", "tel", "data", "javascript", "blob"]
+}

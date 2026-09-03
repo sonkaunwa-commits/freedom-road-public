@@ -1,5 +1,6 @@
 import copy
 import json
+import math
 import sys
 from pathlib import Path
 
@@ -19,9 +20,13 @@ def expect_error(record, policy, expected_fragment):
         evaluate_feedback(record, policy)
     except FeedbackContractError as exc:
         if expected_fragment not in str(exc):
-            raise AssertionError(f"expected error containing {expected_fragment!r}, got {exc!r}") from exc
+            raise AssertionError(
+                f"expected error containing {expected_fragment!r}, got {exc!r}"
+            ) from exc
         return
-    raise AssertionError(f"expected FeedbackContractError containing {expected_fragment!r}")
+    raise AssertionError(
+        f"expected FeedbackContractError containing {expected_fragment!r}"
+    )
 
 
 def main():
@@ -63,11 +68,99 @@ def main():
     assert stop.review_required is True
     assert stop.policy_mutation_allowed is False
 
-    assert policy["rules"]["same_channel_baseline_required"] is True
-    assert policy["rules"]["preserve_denominators"] is True
-    assert policy["rules"]["single_item_policy_change_forbidden"] is True
-    assert policy["rules"]["causality_claim_forbidden"] is True
-    assert policy["rules"]["policy_mutation_allowed"] is False
+    for location, expected in (
+        (("sample", "published_items"), "published_items must be an integer"),
+        (("sample", "eligible_items"), "eligible_items must be an integer"),
+        (("baseline", "sample_items"), "baseline.sample_items must be an integer"),
+        (
+            ("metrics", "view_rate", "numerator"),
+            "numerator must be a finite number",
+        ),
+        (
+            ("metrics", "view_rate", "denominator"),
+            "denominator must be a finite number",
+        ),
+    ):
+        malformed = copy.deepcopy(sample)
+        target = malformed
+        for key in location[:-1]:
+            target = target[key]
+        target[location[-1]] = True
+        expect_error(malformed, policy, expected)
+
+    for value in (math.nan, math.inf, -math.inf):
+        malformed = copy.deepcopy(sample)
+        malformed["metrics"]["view_rate"]["numerator"] = value
+        expect_error(malformed, policy, "numerator must be a finite number")
+
+    malformed_policy = copy.deepcopy(policy)
+    malformed_policy.pop("minimum_directional_items")
+    expect_error(sample, malformed_policy, "policy.minimum_directional_items")
+
+    malformed_policy = copy.deepcopy(policy)
+    malformed_policy["minimum_stop_items"] = True
+    expect_error(sample, malformed_policy, "policy.minimum_stop_items")
+
+    malformed_policy = copy.deepcopy(policy)
+    malformed_policy["minimum_stop_items"] = 2
+    expect_error(
+        sample,
+        malformed_policy,
+        "must be >= policy.minimum_directional_items",
+    )
+
+    malformed_policy = copy.deepcopy(policy)
+    malformed_policy["material_change_ratio"] = math.nan
+    expect_error(
+        sample,
+        malformed_policy,
+        "policy.material_change_ratio must be a finite number",
+    )
+
+    malformed_policy = copy.deepcopy(policy)
+    malformed_policy["material_change_ratio"] = 0
+    expect_error(sample, malformed_policy, "policy.material_change_ratio must be > 0")
+
+    malformed_policy = copy.deepcopy(policy)
+    malformed_policy["positive_metrics"] = "view_rate"
+    expect_error(
+        sample,
+        malformed_policy,
+        "policy.positive_metrics must be a non-empty list",
+    )
+
+    malformed_policy = copy.deepcopy(policy)
+    malformed_policy["positive_metrics"].append("view_rate")
+    expect_error(
+        sample,
+        malformed_policy,
+        "policy.positive_metrics values must be unique",
+    )
+
+    malformed_policy = copy.deepcopy(policy)
+    malformed_policy["recommendations"] = ["KEEP"]
+    expect_error(sample, malformed_policy, "supported recommendation set")
+
+    for rule_name, bad_value in (
+        ("policy_mutation_allowed", True),
+        ("stop_requires_review", False),
+        ("same_channel_baseline_required", False),
+        ("metric_provenance_required", False),
+        ("preserve_denominators", False),
+        ("single_item_policy_change_forbidden", False),
+        ("causality_claim_forbidden", False),
+    ):
+        malformed_policy = copy.deepcopy(policy)
+        malformed_policy["rules"][rule_name] = bad_value
+        expect_error(sample, malformed_policy, f"policy.rules.{rule_name}")
+
+    malformed_policy = copy.deepcopy(policy)
+    malformed_policy["rules"].pop("policy_mutation_allowed")
+    expect_error(
+        sample,
+        malformed_policy,
+        "policy.rules.policy_mutation_allowed is required",
+    )
 
     print("content-feedback validation: PASS")
 

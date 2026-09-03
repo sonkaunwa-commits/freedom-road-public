@@ -13,4 +13,8 @@ Key invariants:
 - STOP_EXPERIMENT is recommendation-only and requires review;
 - no output may mutate Creator Engine policy automatically.
 
+The evaluator validates those policy invariants itself before consuming evidence. Required thresholds, metric/recommendation lists and safety rules fail closed when missing or malformed; recommendation-only and no-policy-mutation rules cannot be weakened by policy drift.
+
+Numeric evidence is strict: sample counts must be real integers, metric numerator/denominator values must be finite numbers, and booleans, NaN and infinity are rejected rather than coerced into valid evidence.
+
 This v1 performs no analytics API calls, network polling, external publishing or production mutation.

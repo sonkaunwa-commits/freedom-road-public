@@ -1,66 +1,21 @@
 {
   "baseline_id": "FREOVIA-PLATFORM-P2-2026-09-04",
-  "baseline_version": "1.0.4",
+  "baseline_version": "1.0.5",
   "baseline_type": "ACCEPTED_DETERMINISTIC_PLATFORM_BASELINE",
-  "source_sha": "e85ad5cba78ae2cdb35f8c29bffb46ed8bd26cfb",
+  "source_sha": "5d20cc3dff0148fc8fe69ef31768f4b034591e75",
   "roadmap_ref": "roadmap/platform-evolution.md",
   "conformance_ref": "platform_conformance/manifest.v1.json",
   "component_count": 9,
   "components": [
-    {
-      "id": "design-system",
-      "maturity": "DETERMINISTIC_BASELINE",
-      "artifacts": ["DESIGN.md", "design/tokens.v1.json"],
-      "acceptance_ref": "PR#20"
-    },
-    {
-      "id": "research-orchestrator",
-      "maturity": "DETERMINISTIC_BASELINE",
-      "artifacts": ["research_orchestrator/schema.v1.json", "research_orchestrator/core.py"],
-      "acceptance_ref": "PR#24"
-    },
-    {
-      "id": "model-router",
-      "maturity": "DETERMINISTIC_BASELINE",
-      "artifacts": ["model_router/policy.v1.json", "model_router/core.py"],
-      "acceptance_ref": "PR#25"
-    },
-    {
-      "id": "skill-registry",
-      "maturity": "DETERMINISTIC_BASELINE",
-      "artifacts": ["skill_registry/schema.v1.json", "skill_registry/registry.v1.json"],
-      "acceptance_ref": "PR#21"
-    },
-    {
-      "id": "creator-engine",
-      "maturity": "PILOT_BASELINE",
-      "artifacts": ["creator_engine/schema.v1.json", "creator_engine/core.py"],
-      "acceptance_ref": "PR#85"
-    },
-    {
-      "id": "evaluation-engine",
-      "maturity": "DETERMINISTIC_BASELINE",
-      "artifacts": ["evaluation_engine/schema.v1.json", "evaluation_engine/core.py"],
-      "acceptance_ref": "PR#78"
-    },
-    {
-      "id": "multi-model-review",
-      "maturity": "DETERMINISTIC_BASELINE",
-      "artifacts": ["multi_model_review/core.py", "multi_model_review/sample_record.v1.json"],
-      "acceptance_ref": "PR#32"
-    },
-    {
-      "id": "skill-health",
-      "maturity": "DETERMINISTIC_BASELINE",
-      "artifacts": ["skill_health/policy.v1.json", "skill_health/core.py"],
-      "acceptance_ref": "PR#52"
-    },
-    {
-      "id": "content-feedback",
-      "maturity": "DETERMINISTIC_BASELINE",
-      "artifacts": ["content_feedback/policy.v1.json", "content_feedback/core.py"],
-      "acceptance_ref": "PR#64"
-    }
+    {"id":"design-system","maturity":"DETERMINISTIC_BASELINE","artifacts":["DESIGN.md","design/tokens.v1.json"],"acceptance_ref":"PR#20"},
+    {"id":"research-orchestrator","maturity":"DETERMINISTIC_BASELINE","artifacts":["research_orchestrator/schema.v1.json","research_orchestrator/core.py"],"acceptance_ref":"PR#24"},
+    {"id":"model-router","maturity":"DETERMINISTIC_BASELINE","artifacts":["model_router/policy.v1.json","model_router/core.py"],"acceptance_ref":"PR#25"},
+    {"id":"skill-registry","maturity":"DETERMINISTIC_BASELINE","artifacts":["skill_registry/schema.v1.json","skill_registry/registry.v1.json"],"acceptance_ref":"PR#21"},
+    {"id":"creator-engine","maturity":"PILOT_BASELINE","artifacts":["creator_engine/schema.v1.json","creator_engine/core.py"],"acceptance_ref":"PR#85"},
+    {"id":"evaluation-engine","maturity":"DETERMINISTIC_BASELINE","artifacts":["evaluation_engine/schema.v1.json","evaluation_engine/core.py"],"acceptance_ref":"PR#78"},
+    {"id":"multi-model-review","maturity":"DETERMINISTIC_BASELINE","artifacts":["multi_model_review/core.py","multi_model_review/sample_record.v1.json"],"acceptance_ref":"PR#32"},
+    {"id":"skill-health","maturity":"DETERMINISTIC_BASELINE","artifacts":["skill_health/policy.v1.json","skill_health/core.py"],"acceptance_ref":"PR#52"},
+    {"id":"content-feedback","maturity":"DETERMINISTIC_BASELINE","artifacts":["content_feedback/policy.v1.json","content_feedback/core.py"],"acceptance_ref":"PR#97"}
   ],
   "accepted_invariants": [
     "budget_cannot_lower_required_quality_or_risk_floor",
@@ -92,8 +47,8 @@
     "trading_execution": false
   },
   "acceptance_evidence": {
-    "conformance_pr": "PR#85",
-    "conformance_merge_sha": "e85ad5cba78ae2cdb35f8c29bffb46ed8bd26cfb",
-    "validation": "creator-engine + platform-conformance success; explicit baseline drift review"
+    "conformance_pr": "PR#97",
+    "conformance_merge_sha": "5d20cc3dff0148fc8fe69ef31768f4b034591e75",
+    "validation": "content-feedback + platform-conformance + platform-conformance-adversarial success; explicit baseline drift review"
   }
 }

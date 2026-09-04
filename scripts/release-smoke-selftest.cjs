@@ -62,6 +62,13 @@ function expectConfigError(config, pattern) {
     });
     assert.equal(absoluteUrlConfig.checks[0].url.toString(), `${baseUrl}data.json`);
 
+    const rootRelative = validateConfig({
+      name: 'root-relative-path',
+      baseUrl: `${baseUrl}nested/`,
+      checks: [{ id: 'root-relative', path: '/data.json' }],
+    });
+    assert.equal(rootRelative.checks[0].url.toString(), `${baseUrl}data.json`);
+
     const defaultNameConfig = validateConfig({
       baseUrl,
       checks: [{ id: 'default-name', path: '/' }],
@@ -87,13 +94,16 @@ function expectConfigError(config, pattern) {
     expectConfigError({ ...config, checks: [{ id: 'missing-locator' }] }, /exactly one of path or url/);
     expectConfigError({ ...config, checks: [{ id: '', path: '/' }] }, /id must be a non-empty string/);
     expectConfigError({ name: 'empty-base', baseUrl: '', checks: [{ id: 'entry', path: '/' }] }, /baseUrl must be a non-empty string/);
+    expectConfigError({ ...config, checks: [{ id: 'absolute-path-url', path: 'https://evil.test/' }] }, /path must be relative to config\.baseUrl/);
+    expectConfigError({ ...config, checks: [{ id: 'scheme-relative-path', path: '//evil.test/' }] }, /path must be relative to config\.baseUrl/);
+    expectConfigError({ ...config, checks: [{ id: 'javascript-path', path: 'javascript:alert(1)' }] }, /path must be relative to config\.baseUrl/);
     expectConfigError({ ...config, checks: [{ id: 'bad-status-low', path: '/', status: 99 }] }, /status must be an integer HTTP status/);
     expectConfigError({ ...config, checks: [{ id: 'bad-status-high', path: '/', status: 600 }] }, /status must be an integer HTTP status/);
     expectConfigError({ ...config, checks: [{ id: 'bad-status-type', path: '/', status: 200.5 }] }, /status must be an integer HTTP status/);
     expectConfigError({ ...config, timeoutMs: 0 }, /timeoutMs must be a positive integer/);
     expectConfigError({ ...config, timeoutMs: true }, /timeoutMs must be a positive integer/);
 
-    console.log('release-smoke self-test PASS: valid configs execute and ambiguous/malformed contracts fail closed');
+    console.log('release-smoke self-test PASS: valid relative/root-relative paths execute and cross-origin path escapes fail closed');
   } finally {
     await new Promise(resolve => server.close(resolve));
   }

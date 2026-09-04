@@ -56,6 +56,15 @@ def make_clean(root: Path) -> None:
     write(root / "site" / "docs" / "index.html", "<html><body>docs</body></html>")
 
 
+def expect_value_error(fn, text: str) -> None:
+    try:
+        fn()
+    except ValueError as exc:
+        assert text in str(exc), exc
+    else:
+        raise AssertionError(f"expected ValueError containing {text!r}")
+
+
 def run() -> None:
     with tempfile.TemporaryDirectory() as tmp:
         root = Path(tmp)
@@ -86,7 +95,56 @@ def run() -> None:
         ignored = module.scan_repository(root, POLICY)
         assert ignored["pass"] is True, ignored
 
-    print("static-asset-reference self-test PASS: clean assets and explicit external/data/hash refs pass; missing asset and site-root escape fail closed")
+        policy_path = root / "static_asset_gate" / "policy.v1.json"
+        write(policy_path, json.dumps(POLICY))
+        assert module.load_policy(root, "static_asset_gate/policy.v1.json")["schema_version"] == POLICY["schema_version"]
+
+        outside = root.parent / f"{root.name}-outside-policy.json"
+        write(outside, json.dumps(POLICY))
+        expect_value_error(lambda: module.load_policy(root, "../" + outside.name), "policy path escapes repository")
+        expect_value_error(lambda: module.load_policy(root, str(outside)), "policy path must be repository-relative")
+
+        policy_link = root / "static_asset_gate" / "external-policy.json"
+        try:
+            policy_link.symlink_to(outside)
+        except OSError:
+            policy_link = None
+        if policy_link is not None:
+            expect_value_error(lambda: module.load_policy(root, "static_asset_gate/external-policy.json"), "policy path escapes repository")
+
+        rendered = json.dumps(clean) + "\n"
+        written = module.write_report(root, "release-status/static-assets.json", rendered)
+        assert written == (root / "release-status" / "static-assets.json").resolve()
+        assert written.read_text(encoding="utf-8") == rendered
+
+        outside_output = root.parent / f"{root.name}-outside-output.json"
+        if outside_output.exists():
+            outside_output.unlink()
+        expect_value_error(lambda: module.write_report(root, "../" + outside_output.name, rendered), "output path escapes repository")
+        assert not outside_output.exists()
+        expect_value_error(lambda: module.write_report(root, str(outside_output), rendered), "output path must be repository-relative")
+        assert not outside_output.exists()
+
+        external_dir = root.parent / f"{root.name}-external-output-dir"
+        external_dir.mkdir(exist_ok=True)
+        link_dir = root / "release-status-link"
+        try:
+            link_dir.symlink_to(external_dir, target_is_directory=True)
+        except OSError:
+            link_dir = None
+        if link_dir is not None:
+            escaped = external_dir / "escaped.json"
+            if escaped.exists():
+                escaped.unlink()
+            expect_value_error(lambda: module.write_report(root, "release-status-link/escaped.json", rendered), "output path escapes repository")
+            assert not escaped.exists()
+
+        outside.unlink(missing_ok=True)
+        for child in external_dir.iterdir():
+            child.unlink()
+        external_dir.rmdir()
+
+    print("static-asset-reference self-test PASS: asset semantics preserved; policy/output traversal, absolute paths and symlink escapes fail closed")
 
 
 if __name__ == "__main__":

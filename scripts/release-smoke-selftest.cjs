@@ -74,6 +74,10 @@ function expectConfigError(config, pattern) {
       checks: [{ id: 'default-name', path: '/' }],
     });
     assert.equal(defaultNameConfig.name, 'release-smoke');
+    assert.equal(defaultNameConfig.timeoutMs, 15000);
+
+    const maxTimeoutConfig = validateConfig({ ...config, timeoutMs: 120000 });
+    assert.equal(maxTimeoutConfig.timeoutMs, 120000);
 
     const bad = await runSmoke({
       ...config,
@@ -106,8 +110,10 @@ function expectConfigError(config, pattern) {
     expectConfigError({ ...config, checks: [{ id: 'bad-status-type', path: '/', status: 200.5 }] }, /status must be an integer HTTP status/);
     expectConfigError({ ...config, timeoutMs: 0 }, /timeoutMs must be a positive integer/);
     expectConfigError({ ...config, timeoutMs: true }, /timeoutMs must be a positive integer/);
+    expectConfigError({ ...config, timeoutMs: 120001 }, /timeoutMs must be a positive integer <= 120000/);
+    expectConfigError({ ...config, timeoutMs: Number.MAX_SAFE_INTEGER }, /timeoutMs must be a positive integer <= 120000/);
 
-    console.log('release-smoke self-test PASS: valid targets execute while URL credentials and path escapes fail closed');
+    console.log('release-smoke self-test PASS: URL/path guards and bounded timeouts fail closed');
   } finally {
     await new Promise(resolve => server.close(resolve));
   }

@@ -5,6 +5,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 
 const SCHEMA_VERSION = 'release-smoke/v1';
+const MAX_TIMEOUT_MS = 120000;
 
 function asArray(value) {
   if (value == null) return [];
@@ -68,8 +69,8 @@ function validateConfig(config) {
 
   let timeoutMs = 15000;
   if (config.timeoutMs !== undefined) {
-    if (!Number.isInteger(config.timeoutMs) || config.timeoutMs <= 0) {
-      throw new Error('timeoutMs must be a positive integer');
+    if (!Number.isSafeInteger(config.timeoutMs) || config.timeoutMs <= 0 || config.timeoutMs > MAX_TIMEOUT_MS) {
+      throw new Error(`timeoutMs must be a positive integer <= ${MAX_TIMEOUT_MS}`);
     }
     timeoutMs = config.timeoutMs;
   }

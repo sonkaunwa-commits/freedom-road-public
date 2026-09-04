@@ -21,7 +21,17 @@ function requireString(value, label) {
 function resolveTargetUrl(baseUrl, check) {
   if (check.url !== undefined && check.url !== null) return new URL(requireString(check.url, `${check.id}.url`));
   if (!baseUrl) throw new Error(`${check.id} needs url or config.baseUrl`);
-  return new URL(requireString(check.path, `${check.id}.path`), baseUrl);
+
+  const rawPath = requireString(check.path, `${check.id}.path`);
+  if (/^[A-Za-z][A-Za-z0-9+.-]*:/.test(rawPath) || rawPath.startsWith('//')) {
+    throw new Error(`${check.id}.path must be relative to config.baseUrl; use url for an explicit absolute target`);
+  }
+
+  const target = new URL(rawPath, baseUrl);
+  if (target.origin !== baseUrl.origin) {
+    throw new Error(`${check.id}.path must stay on config.baseUrl origin`);
+  }
+  return target;
 }
 
 function addCacheBust(url, token) {

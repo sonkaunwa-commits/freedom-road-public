@@ -41,8 +41,23 @@ class ReferenceParser(HTMLParser):
         self.handle_starttag(tag, attrs)
 
 
+def resolve_repo_path(repo_root: Path, raw_path: str, label: str) -> Path:
+    if not isinstance(raw_path, str) or not raw_path.strip():
+        raise ValueError(f"{label} must be a non-empty repository-relative path")
+    candidate = Path(raw_path)
+    if candidate.is_absolute():
+        raise ValueError(f"{label} must be repository-relative")
+    root = repo_root.resolve()
+    resolved = (root / candidate).resolve()
+    try:
+        resolved.relative_to(root)
+    except ValueError as exc:
+        raise ValueError(f"{label} escapes repository") from exc
+    return resolved
+
+
 def load_policy(repo_root: Path, policy_path: str) -> dict[str, Any]:
-    path = (repo_root / policy_path).resolve()
+    path = resolve_repo_path(repo_root, policy_path, "policy path")
     try:
         policy = json.loads(path.read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError) as exc:
@@ -178,6 +193,13 @@ def format_report(report: dict[str, Any]) -> str:
     return "\n".join(lines)
 
 
+def write_report(repo_root: Path, output_path: str, rendered_json: str) -> Path:
+    output = resolve_repo_path(repo_root, output_path, "output path")
+    output.parent.mkdir(parents=True, exist_ok=True)
+    output.write_text(rendered_json, encoding="utf-8")
+    return output
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--policy", default=DEFAULT_POLICY)
@@ -190,15 +212,13 @@ def main() -> int:
     try:
         policy = load_policy(repo_root, args.policy)
         report = scan_repository(repo_root, policy)
-    except ValueError as exc:
+        rendered_json = json.dumps(report, ensure_ascii=False, indent=2) + "\n"
+        if args.output:
+            write_report(repo_root, args.output, rendered_json)
+    except (OSError, ValueError) as exc:
         print(f"static-asset-reference ERROR: {exc}", file=sys.stderr)
         return 2
 
-    rendered_json = json.dumps(report, ensure_ascii=False, indent=2) + "\n"
-    if args.output:
-        output = Path(args.output)
-        output.parent.mkdir(parents=True, exist_ok=True)
-        output.write_text(rendered_json, encoding="utf-8")
     print(rendered_json if args.json else format_report(report))
     return 0 if report["pass"] else 1
 

@@ -18,6 +18,24 @@ on:
       - 'scripts/check_platform_baseline_drift.py'
       - 'scripts/platform_rebaseline_proposal.py'
       - '.github/workflows/platform-baseline-drift.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'DESIGN.md'
+      - 'design/**'
+      - 'research_orchestrator/**'
+      - 'model_router/**'
+      - 'skill_registry/**'
+      - 'creator_engine/**'
+      - 'evaluation_engine/**'
+      - 'multi_model_review/**'
+      - 'skill_health/**'
+      - 'content_feedback/**'
+      - 'platform_baseline/**'
+      - 'platform_baseline_tests/**'
+      - 'scripts/check_platform_baseline_drift.py'
+      - 'scripts/platform_rebaseline_proposal.py'
+      - '.github/workflows/platform-baseline-drift.yml'
   workflow_dispatch:
 
 jobs:

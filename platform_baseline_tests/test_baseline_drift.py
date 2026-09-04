@@ -46,6 +46,9 @@ class BaselineDriftTests(unittest.TestCase):
         with self.assertRaises(BaselineDriftError):
             baseline_artifact_paths(broken)
 
+    def test_real_baseline_source_is_ancestor_of_current_head(self):
+        assert_source_commit(ROOT, BASELINE["source_sha"], "HEAD")
+
     @patch("scripts.check_platform_baseline_drift.subprocess.run")
     def test_missing_source_commit_fails_closed(self, run):
         run.return_value = subprocess.CompletedProcess(["git"], 1, "", "missing")

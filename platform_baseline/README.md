@@ -1,6 +1,6 @@
 # FREOVIA Platform P2 Baseline Snapshot v1
 
-This directory freezes the accepted deterministic Platform Evolution P2 baseline at source commit `02deb12729c8f9b0a486ee2f13fbf90e7ad17c5c`.
+This directory freezes the accepted deterministic Platform Evolution P2 baseline at the full `source_sha` recorded in `baseline.v1.json`.
 
 The snapshot exists to distinguish three things that must not be conflated:
 
@@ -42,3 +42,17 @@ python scripts/platform_rebaseline_proposal.py \
 ```
 
 A valid proposal is only `REVIEW_READY`. It must preserve the historical baseline, keep `auto_apply=false`, and retain all production/provider/publishing/paid/trading authority fields as false. Updating `baseline.v1.json` remains a separate explicit acceptance action after review; this gate never performs that mutation itself.
+
+## Post-merge anchoring
+
+The accepted `source_sha` must be reachable from the repository branch being verified. A pull-request head that will be squash-merged is not a durable baseline anchor because its commit identity is not preserved on `main`.
+
+For a protected component change:
+
+1. merge the accepted component change;
+2. start a separate baseline-only acceptance change from the fresh merged `main`;
+3. set `source_sha` to that fresh-main base commit and advance `baseline_version`;
+4. run drift, baseline, conformance, and component checks on the proposal head;
+5. rerun the drift check on merged `main` before closeout.
+
+The path-scoped workflow runs for both pull requests and relevant pushes to `main`, so a pre-squash-only anchor fails after merge instead of being reported as accepted.

@@ -1,8 +1,8 @@
 {
   "baseline_id": "FREOVIA-PLATFORM-P2-2026-09-04",
-  "baseline_version": "1.0.2",
+  "baseline_version": "1.0.3",
   "baseline_type": "ACCEPTED_DETERMINISTIC_PLATFORM_BASELINE",
-  "source_sha": "ad88fce58cb991d5c3b1b5e3389db1fdeee5a45a",
+  "source_sha": "9c54e10f93244af86f30eb131b7b67317a914c42",
   "roadmap_ref": "roadmap/platform-evolution.md",
   "conformance_ref": "platform_conformance/manifest.v1.json",
   "component_count": 9,
@@ -41,7 +41,7 @@
       "id": "evaluation-engine",
       "maturity": "DETERMINISTIC_BASELINE",
       "artifacts": ["evaluation_engine/schema.v1.json", "evaluation_engine/core.py"],
-      "acceptance_ref": "PR#29"
+      "acceptance_ref": "PR#78"
     },
     {
       "id": "multi-model-review",
@@ -92,8 +92,8 @@
     "trading_execution": false
   },
   "acceptance_evidence": {
-    "conformance_pr": "PR#64",
-    "conformance_merge_sha": "ad88fce58cb991d5c3b1b5e3389db1fdeee5a45a",
-    "validation": "content-feedback + platform-conformance + platform-conformance-adversarial success; explicit baseline drift review"
+    "conformance_pr": "PR#78",
+    "conformance_merge_sha": "9c54e10f93244af86f30eb131b7b67317a914c42",
+    "validation": "evaluation-engine + platform-conformance + platform-conformance-adversarial success; explicit baseline drift review"
   }
 }

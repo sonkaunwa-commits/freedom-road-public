@@ -5,12 +5,14 @@ on:
     paths:
       - 'model_router/**'
       - 'scripts/validate_model_router.py'
+      - 'scripts/test_model_router.py'
       - '.github/workflows/model-router.yml'
   push:
     branches: [main]
     paths:
       - 'model_router/**'
       - 'scripts/validate_model_router.py'
+      - 'scripts/test_model_router.py'
       - '.github/workflows/model-router.yml'
 
 permissions:
@@ -26,3 +28,4 @@ jobs:
         with:
           python-version: '3.12'
       - run: python scripts/validate_model_router.py
+      - run: python scripts/test_model_router.py

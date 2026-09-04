@@ -3,10 +3,14 @@ from copy import deepcopy
 import json
 import math
 from pathlib import Path
+import sys
+
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 
 from model_router.core import RoutingPolicyError, route_task
 
-ROOT = Path(__file__).resolve().parents[1]
 POLICY = json.loads((ROOT / "model_router/policy.v1.json").read_text(encoding="utf-8"))
 SAMPLES = json.loads((ROOT / "model_router/sample_inputs.v1.json").read_text(encoding="utf-8"))
 

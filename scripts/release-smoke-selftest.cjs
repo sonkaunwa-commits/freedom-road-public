@@ -36,6 +36,15 @@ function expectConfigError(config, pattern) {
   assert.throws(() => validateConfig(config), pattern);
 }
 
+function fakeResponse(url, body = 'OK_MARKER') {
+  return {
+    status: 200,
+    url,
+    headers: { get: name => name.toLowerCase() === 'content-type' ? 'text/html; charset=utf-8' : null },
+    text: async () => body,
+  };
+}
+
 (async () => {
   const server = await startFixtureServer();
   try {
@@ -87,6 +96,41 @@ function expectConfigError(config, pattern) {
     assert.equal(bad.pass, false, 'negative self-test must fail');
     assert.equal(bad.checks[0].assertions.some(item => item.type === 'contains' && item.pass === false), true);
 
+    const sameOriginRedirect = await runSmoke({
+      name: 'same-origin-redirect',
+      baseUrl,
+      checks: [{ id: 'same-origin', path: 'start', contains: ['OK_MARKER'] }],
+    }, {
+      cacheBustToken: 'selftest-same-redirect',
+      fetchImpl: async () => fakeResponse(`${baseUrl}final`),
+    });
+    assert.equal(sameOriginRedirect.pass, true, JSON.stringify(sameOriginRedirect, null, 2));
+    assert.equal(sameOriginRedirect.checks[0].assertions.some(item => item.type === 'redirect_origin' && item.pass === true), true);
+
+    const crossOriginRedirect = await runSmoke({
+      name: 'cross-origin-redirect',
+      baseUrl,
+      checks: [{ id: 'cross-origin', path: 'start', contains: ['OK_MARKER'] }],
+    }, {
+      cacheBustToken: 'selftest-cross-redirect',
+      fetchImpl: async () => fakeResponse('https://evil.test/final'),
+    });
+    assert.equal(crossOriginRedirect.pass, false, 'cross-origin redirect for path check must fail');
+    const redirectAssertion = crossOriginRedirect.checks[0].assertions.find(item => item.type === 'redirect_origin');
+    assert.equal(redirectAssertion.pass, false);
+    assert.equal(redirectAssertion.expected, new URL(baseUrl).origin);
+    assert.equal(redirectAssertion.actual, 'https://evil.test');
+
+    const explicitUrlRedirect = await runSmoke({
+      name: 'explicit-url-redirect',
+      checks: [{ id: 'explicit-url', url: `${baseUrl}start`, contains: ['OK_MARKER'] }],
+    }, {
+      cacheBustToken: 'selftest-explicit-url-redirect',
+      fetchImpl: async () => fakeResponse('https://evil.test/final'),
+    });
+    assert.equal(explicitUrlRedirect.pass, true, JSON.stringify(explicitUrlRedirect, null, 2));
+    assert.equal(explicitUrlRedirect.checks[0].assertions.some(item => item.type === 'redirect_origin'), false);
+
     expectConfigError({ ...config, checks: { id: 'scalar-check', path: '/' } }, /config\.checks must be a non-empty array/);
     expectConfigError({ ...config, checks: [] }, /config\.checks must be a non-empty array/);
     expectConfigError({ ...config, name: '' }, /name must be a non-empty string/);
@@ -113,7 +157,7 @@ function expectConfigError(config, pattern) {
     expectConfigError({ ...config, timeoutMs: 120001 }, /timeoutMs must be a positive integer <= 120000/);
     expectConfigError({ ...config, timeoutMs: Number.MAX_SAFE_INTEGER }, /timeoutMs must be a positive integer <= 120000/);
 
-    console.log('release-smoke self-test PASS: URL/path guards and bounded timeouts fail closed');
+    console.log('release-smoke self-test PASS: URL/path/timeout guards and cross-origin path redirects fail closed');
   } finally {
     await new Promise(resolve => server.close(resolve));
   }

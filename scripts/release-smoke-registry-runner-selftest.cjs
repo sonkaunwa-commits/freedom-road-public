@@ -4,7 +4,7 @@
 const fs = require('node:fs');
 const os = require('node:os');
 const path = require('node:path');
-const { runRegistry } = require('./run-release-smoke-registry.cjs');
+const { resolveRegistryPath, runRegistry } = require('./run-release-smoke-registry.cjs');
 
 function writeJson(filePath, value) {
   fs.mkdirSync(path.dirname(filePath), { recursive: true });
@@ -25,8 +25,19 @@ function fakeResponse(url, body, contentType = 'text/html; charset=utf-8', statu
   };
 }
 
+function expectError(fn, text) {
+  try {
+    fn();
+  } catch (error) {
+    if (!String(error.message).includes(text)) throw error;
+    return;
+  }
+  throw new Error(`expected error containing ${JSON.stringify(text)}`);
+}
+
 async function run() {
   const root = fs.mkdtempSync(path.join(os.tmpdir(), 'release-smoke-registry-runner-'));
+  const outsideRegistry = path.join(path.dirname(root), `${path.basename(root)}-outside-registry.json`);
   try {
     writeText(path.join(root, 'site', 'index.html'), 'ROOT_MARKER');
     writeText(path.join(root, 'site', 'alpha', 'index.html'), 'ALPHA_MARKER');
@@ -57,6 +68,21 @@ async function run() {
         { id: 'beta', entryPath: 'beta/', config: 'release-smoke/beta.v1.json', checkId: 'beta' },
       ],
     };
+    writeJson(path.join(root, 'release-smoke', 'registry.v1.json'), registry);
+
+    const resolvedRegistry = resolveRegistryPath(root, 'release-smoke/registry.v1.json');
+    if (resolvedRegistry !== fs.realpathSync(path.join(root, 'release-smoke', 'registry.v1.json'))) {
+      throw new Error('valid registry path did not resolve canonically');
+    }
+    expectError(() => resolveRegistryPath(root, '../outside.json'), 'registry path escapes repository');
+    expectError(() => resolveRegistryPath(root, outsideRegistry), 'registry path must be repository-relative');
+    writeJson(path.join(root, 'not-governed.json'), registry);
+    expectError(() => resolveRegistryPath(root, 'not-governed.json'), 'registry path must stay under release-smoke/');
+
+    writeJson(outsideRegistry, registry);
+    const externalLink = path.join(root, 'release-smoke', 'external-registry.json');
+    fs.symlinkSync(outsideRegistry, externalLink);
+    expectError(() => resolveRegistryPath(root, 'release-smoke/external-registry.json'), 'registry path resolves outside repository');
 
     const calls = [];
     const bodies = new Map([
@@ -88,9 +114,10 @@ async function run() {
     const beta = failed.configs.find(item => item.config === 'release-smoke/beta.v1.json');
     if (!beta || beta.pass) throw new Error('failed beta config was not preserved in aggregate report');
 
-    process.stdout.write('release-smoke-registry-runner self-test PASS: registry configs deduplicate and live assertion failures fail closed\n');
+    process.stdout.write('release-smoke-registry-runner self-test PASS: registry input is confined; configs deduplicate and live assertion failures fail closed\n');
   } finally {
     fs.rmSync(root, { recursive: true, force: true });
+    fs.rmSync(outsideRegistry, { force: true });
   }
 }
 

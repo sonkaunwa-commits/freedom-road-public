@@ -45,6 +45,8 @@ node scripts/release-smoke.cjs release-smoke/fund-assistant.v1.json --json --out
 
 `run-release-smoke-registry.cjs` 用同一份 Registry 驱动部署后的真实 HTTP smoke。它先执行 Registry fail-closed 校验，再按 Registry 中首次出现的顺序去重 smoke config，并复用 `release-smoke.cjs` 的 HTTP、Content-Type、contains/notContains、timeout 和 cache-busting 逻辑。任一配置或任一线上断言失败，聚合结果即失败。这样 Registry 不再只是“声明覆盖”，而是实际决定通用线上验收覆盖。
 
+Runner 的可选 Registry 参数只能指向 **当前仓库 `release-smoke/` 下真实存在的文件**。绝对路径、`..` 越界、仓库内其他目录，以及 `release-smoke/` 内通过符号链接解析到仓库外或其他命名空间的文件都会 fail closed。该约束只针对 Registry 输入；`--output` 仍可写入 `/tmp` 等运行时临时目录，以保持现有 Pages 结构化证据输出兼容。
+
 Pages workflow 仍保留产品专项 smoke，用于验证基金助手版本元数据和证券页面专项行为；Registry Runner 提供所有登记入口的通用线上基线，两者职责不同，不互相替代。
 
 ## 配置

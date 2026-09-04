@@ -63,6 +63,57 @@ def main():
     assert stop.review_required is True
     assert stop.policy_mutation_allowed is False
 
+    missing_threshold = copy.deepcopy(policy)
+    missing_threshold.pop("minimum_directional_items")
+    expect_error(sample, missing_threshold, "policy.minimum_directional_items")
+
+    malformed_threshold = copy.deepcopy(policy)
+    malformed_threshold["material_change_ratio"] = "0.15"
+    expect_error(sample, malformed_threshold, "policy.material_change_ratio")
+
+    boolean_threshold = copy.deepcopy(policy)
+    boolean_threshold["minimum_stop_items"] = True
+    expect_error(sample, boolean_threshold, "policy.minimum_stop_items")
+
+    reversed_thresholds = copy.deepcopy(policy)
+    reversed_thresholds["minimum_directional_items"] = 10
+    reversed_thresholds["minimum_stop_items"] = 8
+    expect_error(sample, reversed_thresholds, "must be >= minimum_directional_items")
+
+    duplicate_metrics = copy.deepcopy(policy)
+    duplicate_metrics["positive_metrics"].append(duplicate_metrics["positive_metrics"][0])
+    expect_error(sample, duplicate_metrics, "positive_metrics must be unique")
+
+    for rule in (
+        "same_channel_baseline_required",
+        "metric_provenance_required",
+        "preserve_denominators",
+        "single_item_policy_change_forbidden",
+        "causality_claim_forbidden",
+        "stop_requires_review",
+    ):
+        unsafe_policy = copy.deepcopy(policy)
+        unsafe_policy["rules"][rule] = False
+        expect_error(sample, unsafe_policy, f"policy.rules.{rule} must remain true")
+
+    unsafe_policy = copy.deepcopy(policy)
+    unsafe_policy["rules"]["policy_mutation_allowed"] = True
+    expect_error(sample, unsafe_policy, "policy.rules.policy_mutation_allowed must remain false")
+
+    for field in ("published_items", "eligible_items"):
+        broken = copy.deepcopy(sample)
+        broken["sample"][field] = True
+        expect_error(broken, policy, field)
+
+    broken = copy.deepcopy(sample)
+    broken["baseline"]["sample_items"] = True
+    expect_error(broken, policy, "baseline.sample_items")
+
+    for field in ("numerator", "denominator"):
+        broken = copy.deepcopy(sample)
+        broken["metrics"]["view_rate"][field] = True
+        expect_error(broken, policy, field)
+
     assert policy["rules"]["same_channel_baseline_required"] is True
     assert policy["rules"]["preserve_denominators"] is True
     assert policy["rules"]["single_item_policy_change_forbidden"] is True

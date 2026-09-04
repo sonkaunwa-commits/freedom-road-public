@@ -57,6 +57,42 @@ def main() -> None:
     missing_evidence["evidence_refs"] = []
     expect_failure(lambda: evaluate_candidate(baseline, missing_evidence, schema), "candidate without evidence")
 
+    for metric in ("quality_score", "success_rate", "human_correction_rate", "latency_ms", "monetary_cost"):
+        broken = copy.deepcopy(candidate)
+        broken["metrics"][metric] = True
+        expect_failure(lambda broken=broken: evaluate_candidate(baseline, broken, schema), f"boolean {metric}")
+
+    broken = copy.deepcopy(candidate)
+    broken["metrics"]["critical_failure_count"] = True
+    expect_failure(lambda: evaluate_candidate(baseline, broken, schema), "boolean critical failure count")
+
+    broken = copy.deepcopy(candidate)
+    broken["metrics"]["latency_ms"] = "fast"
+    expect_failure(lambda: evaluate_candidate(baseline, broken, schema), "string latency")
+
+    for field in ("quality_floor", "success_rate_floor", "max_quality_regression", "max_success_rate_regression"):
+        broken_schema = copy.deepcopy(schema)
+        broken_schema[field] = True
+        expect_failure(lambda broken_schema=broken_schema: evaluate_candidate(baseline, candidate, broken_schema), f"boolean schema threshold {field}")
+
+    broken_schema = copy.deepcopy(schema)
+    broken_schema["critical_failure_limit"] = 0.5
+    expect_failure(lambda: evaluate_candidate(baseline, candidate, broken_schema), "fractional critical failure limit")
+
+    for rule, bad_value in (
+        ("auto_apply", True),
+        ("evidence_required", False),
+        ("quality_floor_has_priority_over_cost", False),
+        ("quality_floor_has_priority_over_latency", False),
+    ):
+        broken_schema = copy.deepcopy(schema)
+        broken_schema["promotion_policy"][rule] = bad_value
+        expect_failure(lambda broken_schema=broken_schema: evaluate_candidate(baseline, candidate, broken_schema), f"promotion policy drift {rule}")
+
+    broken_schema = copy.deepcopy(schema)
+    broken_schema["required_metrics"].append("quality_score")
+    expect_failure(lambda: evaluate_candidate(baseline, candidate, broken_schema), "duplicate required metric")
+
     feedback = copy.deepcopy(samples["feedback"])
     feedback["policy_change_applied"] = True
     expect_failure(lambda: validate_feedback(feedback, evaluate_candidate(baseline, candidate, schema)), "feedback auto-applies policy")

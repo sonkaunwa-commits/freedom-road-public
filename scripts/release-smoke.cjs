@@ -19,9 +19,15 @@ function requireString(value, label) {
 }
 
 function resolveTargetUrl(baseUrl, check) {
-  if (check.url !== undefined && check.url !== null) return new URL(requireString(check.url, `${check.id}.url`));
+  if (check.url !== undefined && check.url !== null) {
+    return new URL(requireString(check.url, `${check.id}.url`));
+  }
   if (!baseUrl) throw new Error(`${check.id} needs url or config.baseUrl`);
-  return new URL(requireString(check.path, `${check.id}.path`), baseUrl);
+  const resolved = new URL(requireString(check.path, `${check.id}.path`), baseUrl);
+  if (resolved.origin !== baseUrl.origin) {
+    throw new Error(`${check.id}.path must stay on config.baseUrl origin`);
+  }
+  return resolved;
 }
 
 function addCacheBust(url, token) {

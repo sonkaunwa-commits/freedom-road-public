@@ -1,15 +1,15 @@
 {
   "baseline_id": "FREOVIA-PLATFORM-P2-2026-09-04",
-  "baseline_version": "1.0.5",
+  "baseline_version": "1.0.6",
   "baseline_type": "ACCEPTED_DETERMINISTIC_PLATFORM_BASELINE",
-  "source_sha": "5d20cc3dff0148fc8fe69ef31768f4b034591e75",
+  "source_sha": "933289ee612deb6ea9ffa1c07c31cc5db7ec12b3",
   "roadmap_ref": "roadmap/platform-evolution.md",
   "conformance_ref": "platform_conformance/manifest.v1.json",
   "component_count": 9,
   "components": [
     {"id":"design-system","maturity":"DETERMINISTIC_BASELINE","artifacts":["DESIGN.md","design/tokens.v1.json"],"acceptance_ref":"PR#20"},
     {"id":"research-orchestrator","maturity":"DETERMINISTIC_BASELINE","artifacts":["research_orchestrator/schema.v1.json","research_orchestrator/core.py"],"acceptance_ref":"PR#24"},
-    {"id":"model-router","maturity":"DETERMINISTIC_BASELINE","artifacts":["model_router/policy.v1.json","model_router/core.py"],"acceptance_ref":"PR#25"},
+    {"id":"model-router","maturity":"DETERMINISTIC_BASELINE","artifacts":["model_router/policy.v1.json","model_router/core.py"],"acceptance_ref":"PR#104"},
     {"id":"skill-registry","maturity":"DETERMINISTIC_BASELINE","artifacts":["skill_registry/schema.v1.json","skill_registry/registry.v1.json"],"acceptance_ref":"PR#21"},
     {"id":"creator-engine","maturity":"PILOT_BASELINE","artifacts":["creator_engine/schema.v1.json","creator_engine/core.py"],"acceptance_ref":"PR#85"},
     {"id":"evaluation-engine","maturity":"DETERMINISTIC_BASELINE","artifacts":["evaluation_engine/schema.v1.json","evaluation_engine/core.py"],"acceptance_ref":"PR#78"},
@@ -47,8 +47,8 @@
     "trading_execution": false
   },
   "acceptance_evidence": {
-    "conformance_pr": "PR#97",
-    "conformance_merge_sha": "5d20cc3dff0148fc8fe69ef31768f4b034591e75",
-    "validation": "content-feedback + platform-conformance + platform-conformance-adversarial success; explicit baseline drift review"
+    "conformance_pr": "PR#104",
+    "conformance_merge_sha": "933289ee612deb6ea9ffa1c07c31cc5db7ec12b3",
+    "validation": "model-router + platform-conformance + platform-conformance-adversarial success; explicit baseline drift review"
   }
 }

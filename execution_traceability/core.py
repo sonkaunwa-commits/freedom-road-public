@@ -27,6 +27,18 @@ def _matches(value: Any, pattern: str, field: str) -> str:
     return value
 
 
+def _evidence_ref(value: Any, field: str) -> str:
+    _require(isinstance(value, str) and bool(value.strip()), f"{field} must be a non-empty text evidence ref")
+    return value.strip()
+
+
+def _verification_refs(value: Any) -> tuple[str, ...]:
+    _require(isinstance(value, list), "verification must be a list")
+    refs = tuple(_evidence_ref(item, "verification entry") for item in value)
+    _require(len(set(refs)) == len(refs), "duplicate verification evidence ref")
+    return refs
+
+
 def _validate_repo_path(value: Any) -> str:
     _require(isinstance(value, str) and bool(value), "write_intent path must be non-empty")
     _require("\\" not in value, f"write_intent path must use repo-relative POSIX form: {value}")
@@ -86,14 +98,20 @@ def _validate_record(record: Any, policy: dict[str, Any]) -> dict[str, Any]:
 
     _require(record.get("private_data") is False, "private_data must remain false in this public ledger")
 
+    blocker_ref = record.get("blocker_ref")
+    if blocker_ref is not None:
+        blocker_ref = _evidence_ref(blocker_ref, "blocker_ref")
     if "WAITING_FOR_WRITE_LEASE" in token_set or "BLOCKED" in token_set:
-        _require(bool(record.get("blocker_ref")), "blocked or waiting work requires blocker_ref")
+        _require(blocker_ref is not None, "blocked or waiting work requires blocker_ref")
 
-    verification = record.get("verification", [])
-    _require(isinstance(verification, list), "verification must be a list")
+    verification = _verification_refs(record.get("verification", []))
+
+    closeout_ref = record.get("closeout_ref")
+    if closeout_ref is not None:
+        closeout_ref = _evidence_ref(closeout_ref, "closeout_ref")
     if "COMPLETED" in token_set:
         _require(bool(verification), "COMPLETED work requires verification evidence")
-        _require(bool(record.get("closeout_ref")), "COMPLETED work requires closeout_ref")
+        _require(closeout_ref is not None, "COMPLETED work requires closeout_ref")
 
     terminal = bool(set(policy["terminal_status_tokens"]).intersection(token_set))
     non_writer_state = "WAITING_FOR_WRITE_LEASE" in token_set or "BLOCKED" in token_set

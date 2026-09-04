@@ -1,4 +1,6 @@
 from dataclasses import dataclass
+from datetime import datetime
+from math import isfinite
 from typing import Any
 
 
@@ -30,6 +32,29 @@ def _require_nonempty(value: Any, name: str) -> None:
         raise FeedbackContractError(f"{name} must be a non-empty string")
 
 
+def _require_aware_iso8601(value: Any, name: str) -> datetime:
+    _require_nonempty(value, name)
+    text = value.strip()
+    if text.endswith("Z"):
+        text = text[:-1] + "+00:00"
+    try:
+        parsed = datetime.fromisoformat(text)
+    except ValueError as exc:
+        raise FeedbackContractError(f"{name} must be ISO-8601") from exc
+    if parsed.tzinfo is None or parsed.utcoffset() is None:
+        raise FeedbackContractError(f"{name} must include a timezone")
+    return parsed
+
+
+def _require_finite_number(value: Any, name: str) -> float:
+    if isinstance(value, bool) or not isinstance(value, (int, float)):
+        raise FeedbackContractError(f"{name} must be numeric")
+    numeric = float(value)
+    if not isfinite(numeric):
+        raise FeedbackContractError(f"{name} must be finite")
+    return numeric
+
+
 def _require_policy_int(policy: dict[str, Any], field: str, minimum: int) -> int:
     value = policy.get(field)
     if isinstance(value, bool) or not isinstance(value, int) or value < minimum:
@@ -38,10 +63,10 @@ def _require_policy_int(policy: dict[str, Any], field: str, minimum: int) -> int
 
 
 def _require_policy_rate(policy: dict[str, Any], field: str) -> float:
-    value = policy.get(field)
-    if isinstance(value, bool) or not isinstance(value, (int, float)) or not 0 <= value <= 1:
+    value = _require_finite_number(policy.get(field), f"policy.{field}")
+    if not 0 <= value <= 1:
         raise FeedbackContractError(f"policy.{field} must be numeric within [0, 1]")
-    return float(value)
+    return value
 
 
 def _validate_policy(policy: dict[str, Any]) -> tuple[int, int, float, set[str]]:
@@ -79,18 +104,18 @@ def _validate_policy(policy: dict[str, Any]) -> tuple[int, int, float, set[str]]
 def _validate_rate(metric_name: str, metric: dict[str, Any], source_ids: set[str]) -> float:
     if not isinstance(metric, dict):
         raise FeedbackContractError(f"metric {metric_name} must be an object")
-    numerator = metric.get("numerator")
-    denominator = metric.get("denominator")
+    numerator = _require_finite_number(metric.get("numerator"), f"metric {metric_name} numerator")
+    denominator = _require_finite_number(metric.get("denominator"), f"metric {metric_name} denominator")
     source_ref = metric.get("source_ref")
-    if isinstance(numerator, bool) or not isinstance(numerator, (int, float)) or numerator < 0:
+    if numerator < 0:
         raise FeedbackContractError(f"metric {metric_name} numerator must be >= 0")
-    if isinstance(denominator, bool) or not isinstance(denominator, (int, float)) or denominator <= 0:
+    if denominator <= 0:
         raise FeedbackContractError(f"metric {metric_name} denominator must be > 0")
     if numerator > denominator:
         raise FeedbackContractError(f"metric {metric_name} numerator cannot exceed denominator")
     if source_ref not in source_ids:
         raise FeedbackContractError(f"metric {metric_name} has unknown source_ref")
-    return float(numerator) / float(denominator)
+    return numerator / denominator
 
 
 def evaluate_feedback(record: dict[str, Any], policy: dict[str, Any]) -> FeedbackDecision:
@@ -98,8 +123,9 @@ def evaluate_feedback(record: dict[str, Any], policy: dict[str, Any]) -> Feedbac
         raise FeedbackContractError("record must be an object")
     min_directional, min_stop, material, positive_metrics = _validate_policy(policy)
 
-    for field in ("feedback_id", "experiment_id", "content_group_id", "channel", "observed_at"):
+    for field in ("feedback_id", "experiment_id", "content_group_id", "channel"):
         _require_nonempty(record.get(field), field)
+    observed_at = _require_aware_iso8601(record.get("observed_at"), "observed_at")
 
     sources = record.get("sources")
     if not isinstance(sources, list) or not sources:
@@ -108,8 +134,11 @@ def evaluate_feedback(record: dict[str, Any], policy: dict[str, Any]) -> Feedbac
     for source in sources:
         if not isinstance(source, dict):
             raise FeedbackContractError("source must be an object")
-        for field in ("source_id", "provider", "collected_at", "locator"):
+        for field in ("source_id", "provider", "locator"):
             _require_nonempty(source.get(field), f"source.{field}")
+        collected_at = _require_aware_iso8601(source.get("collected_at"), "source.collected_at")
+        if collected_at > observed_at:
+            raise FeedbackContractError("source.collected_at cannot be after observed_at")
         source_id = source["source_id"]
         if source_id in source_ids:
             raise FeedbackContractError("source_id values must be unique")

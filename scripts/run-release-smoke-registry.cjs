@@ -17,6 +17,42 @@ function readJson(filePath) {
   }
 }
 
+function resolveRegistryPath(repoRoot, registryPath) {
+  if (typeof registryPath !== 'string' || registryPath.trim() === '') {
+    throw new Error('registry path must be a non-empty repository-relative path');
+  }
+  const raw = registryPath.trim();
+  if (path.isAbsolute(raw)) {
+    throw new Error('registry path must be repository-relative');
+  }
+
+  const root = fs.realpathSync(repoRoot);
+  const candidate = path.resolve(root, raw);
+  const lexicalRelative = path.relative(root, candidate);
+  if (lexicalRelative === '..' || lexicalRelative.startsWith(`..${path.sep}`) || path.isAbsolute(lexicalRelative)) {
+    throw new Error('registry path escapes repository');
+  }
+  const releasePrefix = `release-smoke${path.sep}`;
+  if (!lexicalRelative.startsWith(releasePrefix)) {
+    throw new Error('registry path must stay under release-smoke/');
+  }
+
+  let resolved;
+  try {
+    resolved = fs.realpathSync(candidate);
+  } catch (error) {
+    throw new Error(`cannot resolve registry path ${registryPath}: ${error.message}`);
+  }
+  const realRelative = path.relative(root, resolved);
+  if (realRelative === '..' || realRelative.startsWith(`..${path.sep}`) || path.isAbsolute(realRelative)) {
+    throw new Error('registry path resolves outside repository');
+  }
+  if (!realRelative.startsWith(releasePrefix)) {
+    throw new Error('registry path must resolve under release-smoke/');
+  }
+  return resolved;
+}
+
 function uniqueConfigPaths(entries) {
   const seen = new Set();
   const result = [];
@@ -103,7 +139,8 @@ function parseArgs(argv) {
 async function main() {
   const { registryPath, jsonOnly, outputPath } = parseArgs(process.argv);
   const repoRoot = process.cwd();
-  const rawRegistry = readJson(path.resolve(repoRoot, registryPath));
+  const resolvedRegistry = resolveRegistryPath(repoRoot, registryPath);
+  const rawRegistry = readJson(resolvedRegistry);
   const result = await runRegistry(rawRegistry, repoRoot);
   const json = `${JSON.stringify(result, null, 2)}\n`;
 
@@ -124,4 +161,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = { SCHEMA_VERSION, uniqueConfigPaths, runRegistry, formatTextReport };
+module.exports = { SCHEMA_VERSION, resolveRegistryPath, uniqueConfigPaths, runRegistry, formatTextReport };

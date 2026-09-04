@@ -62,13 +62,6 @@ function expectConfigError(config, pattern) {
     });
     assert.equal(absoluteUrlConfig.checks[0].url.toString(), `${baseUrl}data.json`);
 
-    const sameOriginAbsolutePath = validateConfig({
-      name: 'same-origin-absolute-path',
-      baseUrl,
-      checks: [{ id: 'same-origin', path: `${baseUrl}data.json`, status: 200 }],
-    });
-    assert.equal(sameOriginAbsolutePath.checks[0].url.toString(), `${baseUrl}data.json`);
-
     const rootRelativePath = validateConfig({
       name: 'root-relative',
       baseUrl: `${baseUrl}nested/`,
@@ -101,16 +94,17 @@ function expectConfigError(config, pattern) {
     expectConfigError({ ...config, checks: [{ id: 'missing-locator' }] }, /exactly one of path or url/);
     expectConfigError({ ...config, checks: [{ id: '', path: '/' }] }, /id must be a non-empty string/);
     expectConfigError({ name: 'empty-base', baseUrl: '', checks: [{ id: 'entry', path: '/' }] }, /baseUrl must be a non-empty string/);
-    expectConfigError({ ...config, checks: [{ id: 'absolute-cross-origin-path', path: 'https://example.com/data.json' }] }, /path must stay on config\.baseUrl origin/);
-    expectConfigError({ ...config, checks: [{ id: 'scheme-relative-cross-origin-path', path: '//example.com/data.json' }] }, /path must stay on config\.baseUrl origin/);
-    expectConfigError({ ...config, checks: [{ id: 'protocol-cross-origin-path', path: `https://127.0.0.1:${address.port}/data.json` }] }, /path must stay on config\.baseUrl origin/);
+    expectConfigError({ ...config, checks: [{ id: 'same-origin-absolute-path', path: `${baseUrl}data.json` }] }, /path must be relative to config\.baseUrl/);
+    expectConfigError({ ...config, checks: [{ id: 'absolute-cross-origin-path', path: 'https://example.com/data.json' }] }, /path must be relative to config\.baseUrl/);
+    expectConfigError({ ...config, checks: [{ id: 'scheme-relative-cross-origin-path', path: '//example.com/data.json' }] }, /path must be relative to config\.baseUrl/);
+    expectConfigError({ ...config, checks: [{ id: 'protocol-cross-origin-path', path: `https://127.0.0.1:${address.port}/data.json` }] }, /path must be relative to config\.baseUrl/);
     expectConfigError({ ...config, checks: [{ id: 'bad-status-low', path: '/', status: 99 }] }, /status must be an integer HTTP status/);
     expectConfigError({ ...config, checks: [{ id: 'bad-status-high', path: '/', status: 600 }] }, /status must be an integer HTTP status/);
     expectConfigError({ ...config, checks: [{ id: 'bad-status-type', path: '/', status: 200.5 }] }, /status must be an integer HTTP status/);
     expectConfigError({ ...config, timeoutMs: 0 }, /timeoutMs must be a positive integer/);
     expectConfigError({ ...config, timeoutMs: true }, /timeoutMs must be a positive integer/);
 
-    console.log('release-smoke self-test PASS: valid configs execute and cross-origin/ambiguous/malformed path contracts fail closed');
+    console.log('release-smoke self-test PASS: valid configs execute and absolute/cross-origin path contracts fail closed');
   } finally {
     await new Promise(resolve => server.close(resolve));
   }

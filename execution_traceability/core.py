@@ -16,9 +16,66 @@ class ValidationResult:
     active_writers: int
 
 
+_REQUIRED_TRUE_RULES = (
+    "unique_active_work_id",
+    "unique_task_id",
+    "active_write_scope_conflict_forbidden",
+    "waiting_for_write_lease_is_non_writer",
+    "completed_requires_verification",
+    "completed_requires_closeout_ref",
+    "blocked_or_waiting_requires_blocker_ref",
+    "write_paths_must_be_repo_relative",
+    "path_escape_forbidden",
+    "private_data_forbidden",
+)
+
+
 def _require(condition: bool, message: str) -> None:
     if not condition:
         raise TraceabilityError(message)
+
+
+def _validate_token_list(value: Any, field: str) -> tuple[str, ...]:
+    _require(isinstance(value, list) and bool(value), f"{field} must be a non-empty list")
+    tokens: list[str] = []
+    for item in value:
+        _require(isinstance(item, str) and bool(item.strip()), f"{field} entries must be non-empty text")
+        token = item.strip()
+        _require(token not in tokens, f"duplicate {field} token: {token}")
+        tokens.append(token)
+    return tuple(tokens)
+
+
+def _validate_regex(value: Any, field: str) -> str:
+    _require(isinstance(value, str) and bool(value), f"{field} must be a non-empty regex string")
+    try:
+        re.compile(value)
+    except re.error as exc:
+        raise TraceabilityError(f"invalid {field} regex: {exc}") from exc
+    return value
+
+
+def _validate_policy(policy: Any) -> None:
+    _require(isinstance(policy, dict), "policy root must be an object")
+    _require(policy.get("policy_version") == "1.0.0", "policy_version must be 1.0.0")
+    _require(policy.get("record_kind") == "execution_trace", "record_kind must be execution_trace")
+    _require(policy.get("network_required") is False, "traceability validation must remain offline")
+    _require(policy.get("mutation_authority") is False, "traceability validation must not mutate work")
+
+    patterns = policy.get("id_patterns")
+    _require(isinstance(patterns, dict), "id_patterns must be an object")
+    _validate_regex(patterns.get("active_work_id"), "id_patterns.active_work_id")
+    _validate_regex(patterns.get("task_id"), "id_patterns.task_id")
+
+    allowed = _validate_token_list(policy.get("allowed_status_tokens"), "allowed_status_tokens")
+    terminal = _validate_token_list(policy.get("terminal_status_tokens"), "terminal_status_tokens")
+    unknown_terminal = set(terminal).difference(allowed)
+    _require(not unknown_terminal, f"terminal status tokens must be allowed: {sorted(unknown_terminal)}")
+
+    rules = policy.get("rules")
+    _require(isinstance(rules, dict), "rules must be an object")
+    for rule in _REQUIRED_TRUE_RULES:
+        _require(rules.get(rule) is True, f"rules.{rule} must remain true")
 
 
 def _matches(value: Any, pattern: str, field: str) -> str:
@@ -133,8 +190,7 @@ def _paths_overlap(left: str, right: str) -> bool:
 def validate_ledger(ledger: Any, policy: dict[str, Any]) -> ValidationResult:
     _require(isinstance(ledger, dict), "ledger root must be an object")
     _require(ledger.get("ledger_version") == "1.0.0", "ledger_version must be 1.0.0")
-    _require(policy.get("network_required") is False, "traceability validation must remain offline")
-    _require(policy.get("mutation_authority") is False, "traceability validation must not mutate work")
+    _validate_policy(policy)
 
     records = ledger.get("records")
     _require(isinstance(records, list) and bool(records), "records must be a non-empty list")

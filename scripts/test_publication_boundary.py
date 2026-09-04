@@ -46,18 +46,66 @@ def make_clean_repo(root: Path) -> None:
         "source_commit": "0123456789abcdef",
         "source_generated_at": "2026-09-04T06:00:00+08:00",
     })
+    write_json(root / "publication_boundary" / "policy.v1.json", POLICY)
 
 
 def assert_rule(report, rule: str) -> None:
     assert any(item["rule"] == rule for item in report["findings"]), report
 
 
+def expect_value_error(fn, label: str) -> None:
+    try:
+        fn()
+    except ValueError:
+        return
+    raise AssertionError(f"expected ValueError: {label}")
+
+
 def run() -> None:
     with tempfile.TemporaryDirectory() as tmp:
-        root = Path(tmp)
+        base = Path(tmp)
+        root = base / "repo"
+        root.mkdir()
         make_clean_repo(root)
         clean = module.scan_repository(root, POLICY)
         assert clean["pass"] is True, clean
+
+        loaded_policy = module.load_policy(root, "publication_boundary/policy.v1.json")
+        assert loaded_policy["schema_version"] == "publication-boundary/v1"
+
+        outside_policy = base / "outside-policy.json"
+        write_json(outside_policy, POLICY)
+        expect_value_error(lambda: module.load_policy(root, str(outside_policy)), "absolute external policy")
+        expect_value_error(lambda: module.load_policy(root, "../outside-policy.json"), "traversal policy")
+
+        report_path = root / "reports" / "publication.json"
+        exit_code = module.main([
+            "--repo-root", str(root),
+            "--policy", "publication_boundary/policy.v1.json",
+            "--json",
+            "--output", "reports/publication.json",
+        ])
+        assert exit_code == 0
+        assert report_path.is_file()
+
+        outside_report = base / "outside-report.json"
+        exit_code = module.main([
+            "--repo-root", str(root),
+            "--policy", "publication_boundary/policy.v1.json",
+            "--json",
+            "--output", str(outside_report),
+        ])
+        assert exit_code == 2
+        assert not outside_report.exists(), "escape output must fail before write"
+
+        exit_code = module.main([
+            "--repo-root", str(root),
+            "--policy", "publication_boundary/policy.v1.json",
+            "--json",
+            "--output", "../traversal-report.json",
+        ])
+        assert exit_code == 2
+        assert not (base / "traversal-report.json").exists(), "traversal output must fail before write"
 
         (root / "site" / "token.txt").write_text("ghp_" + "A" * 36, encoding="utf-8")
         secret = module.scan_repository(root, POLICY)
@@ -80,7 +128,7 @@ def run() -> None:
         provenance = module.scan_repository(root, POLICY)
         assert_rule(provenance, "required-json-key-missing")
 
-    print("publication-boundary self-test PASS: clean publication passes; secret/file/private-key/provenance leaks fail closed")
+    print("publication-boundary self-test PASS: publication scan and repository path confinement fail closed")
 
 
 if __name__ == "__main__":

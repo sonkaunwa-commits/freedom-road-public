@@ -19,6 +19,8 @@ If a task needs L2 and the available budget only admits L1, the result is `ESCAL
 
 Routing considers task complexity, risk, required accuracy, latency class, context size, tool requirement, budget class, protected domain and cross-check requirement.
 
+Task and candidate machine fields are fail-closed. Context/latency fields require real bounded non-negative integers rather than `int()` coercion; capability flags require real booleans; enabled candidate IDs must be non-empty and unique; candidate quality must be finite and within `[0, 1]`. Malformed values raise `RoutingPolicyError` instead of silently changing eligibility or sort order.
+
 ## Observability
 
 Each routing decision records the policy floor, selected candidate when any, quality score, cost class, expected latency and reason codes. Later provider adapters can append actual latency/cost/success without changing this contract.

@@ -16,7 +16,10 @@
 ```bash
 node scripts/release-smoke-selftest.cjs
 node scripts/release-smoke-registry-selftest.cjs
+node scripts/release-smoke-registry-runner-selftest.cjs
 node scripts/validate-release-smoke-registry.cjs
+node scripts/run-release-smoke-registry.cjs
+node scripts/run-release-smoke-registry.cjs --json --output /tmp/release-smoke-registry.json
 node scripts/release-smoke.cjs release-smoke/fund-assistant.v1.json
 node scripts/release-smoke.cjs release-smoke/core-pages.v1.json
 node scripts/release-smoke.cjs release-smoke/fund-assistant.v1.json --json --output release-status/fund-assistant-release-smoke.json
@@ -36,6 +39,10 @@ node scripts/release-smoke.cjs release-smoke/fund-assistant.v1.json --json --out
 - 在 `site/` 中存在对应的 `index.html` 源文件。
 
 `validate-release-smoke-registry.cjs` 只验证覆盖合同，不访问网络；因此可放进现有 Pages `verify` 阶段，在部署前发现缺配置、错路径、重复入口或丢失 marker。它不会创建新的定时任务或独立 workflow。
+
+`run-release-smoke-registry.cjs` 用同一份 Registry 驱动部署后的真实 HTTP smoke。它先执行 Registry fail-closed 校验，再按 Registry 中首次出现的顺序去重 smoke config，并复用 `release-smoke.cjs` 的 HTTP、Content-Type、contains/notContains、timeout 和 cache-busting 逻辑。任一配置或任一线上断言失败，聚合结果即失败。这样 Registry 不再只是“声明覆盖”，而是实际决定通用线上验收覆盖。
+
+Pages workflow 仍保留产品专项 smoke，用于验证基金助手版本元数据和证券页面专项行为；Registry Runner 提供所有登记入口的通用线上基线，两者职责不同，不互相替代。
 
 ## 配置
 
@@ -69,6 +76,6 @@ node scripts/release-smoke.cjs release-smoke/fund-assistant.v1.json --json --out
 
 配置中的 release marker 应指向准备验收的精确版本。新版本发布时同步更新 marker 和资源文件名；如果线上仍是旧版本，检查必须失败，而不是因为页面能打开就判定发布成功。
 
-新增或替换正式用户入口时，应同步更新 Coverage Registry；不能让新入口绕过通用 smoke 覆盖。
+新增或替换正式用户入口时，应同步更新 Coverage Registry；不能让新入口绕过通用 smoke 覆盖。Registry 中同一个 config 可被多个入口引用，但在线 Runner 每次发布只执行该 config 一次，避免重复 HTTP 请求和无意义 Actions 时间。
 
 该工具只做 HTTP/内容级 smoke。需要验证按钮、布局、移动端、登录状态或复杂业务交互时，继续使用对应产品的 Playwright/browser smoke。

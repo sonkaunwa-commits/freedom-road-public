@@ -23,7 +23,11 @@ function resolveTargetUrl(baseUrl, check) {
     return new URL(requireString(check.url, `${check.id}.url`));
   }
   if (!baseUrl) throw new Error(`${check.id} needs url or config.baseUrl`);
-  const resolved = new URL(requireString(check.path, `${check.id}.path`), baseUrl);
+  const rawPath = requireString(check.path, `${check.id}.path`);
+  if (/^[a-z][a-z0-9+.-]*:/i.test(rawPath) || rawPath.startsWith('//')) {
+    throw new Error(`${check.id}.path must be relative to config.baseUrl; use url for absolute targets`);
+  }
+  const resolved = new URL(rawPath, baseUrl);
   if (resolved.origin !== baseUrl.origin) {
     throw new Error(`${check.id}.path must stay on config.baseUrl origin`);
   }

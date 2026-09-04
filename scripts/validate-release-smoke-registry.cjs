@@ -22,14 +22,43 @@ function readJson(filePath) {
   }
 }
 
+function validateEntryPath(value, label = 'entryPath') {
+  const entryPath = requireString(value, label);
+  if (entryPath === './') return entryPath;
+  if (entryPath.includes('\\')) throw new Error(`${label} must use forward slashes only`);
+  if (entryPath.includes('?') || entryPath.includes('#')) throw new Error(`${label} must not contain query or fragment`);
+  if (entryPath.startsWith('/') || entryPath.startsWith('//')) throw new Error(`${label} must be relative to the registry base URL`);
+  if (/^[A-Za-z][A-Za-z0-9+.-]*:/.test(entryPath)) throw new Error(`${label} must not be an absolute URL`);
+  if (!entryPath.endsWith('/')) throw new Error(`${label} must identify a directory and end with /`);
+  if (entryPath.includes('//')) throw new Error(`${label} must not contain empty path segments`);
+
+  const segments = entryPath.slice(0, -1).split('/');
+  if (segments.length === 0 || segments.some(segment => segment === '')) {
+    throw new Error(`${label} must contain a relative directory path`);
+  }
+  for (const segment of segments) {
+    let decoded;
+    try {
+      decoded = decodeURIComponent(segment);
+    } catch (error) {
+      throw new Error(`${label} contains invalid percent encoding`);
+    }
+    if (decoded === '.' || decoded === '..') throw new Error(`${label} must not contain dot-segment traversal`);
+    if (decoded.includes('/') || decoded.includes('\\')) throw new Error(`${label} must not encode path separators`);
+    if (/^[\x00-\x1f\x7f]+$/.test(decoded) || /[\x00-\x1f\x7f]/.test(decoded)) {
+      throw new Error(`${label} must not contain control characters`);
+    }
+  }
+  return entryPath;
+}
+
 function canonicalUrl(baseUrl, relativePath) {
-  return new URL(requireString(relativePath, 'entryPath'), baseUrl).toString();
+  return new URL(validateEntryPath(relativePath), baseUrl).toString();
 }
 
 function sourceIndexPath(entryPath) {
-  const cleaned = entryPath === './'
-    ? ''
-    : entryPath.replace(/^\.\//, '').replace(/^\/+/, '').replace(/\/+$/, '');
+  const safePath = validateEntryPath(entryPath);
+  const cleaned = safePath === './' ? '' : safePath.slice(0, -1);
   return cleaned ? path.posix.join('site', cleaned, 'index.html') : 'site/index.html';
 }
 
@@ -53,6 +82,7 @@ function validateRegistry(raw, repoRoot = process.cwd()) {
   const urls = new Set();
   const entries = [];
   const rootPath = path.resolve(repoRoot);
+  const siteRoot = path.resolve(rootPath, 'site');
   const configCache = new Map();
 
   for (const [index, entry] of raw.entries.entries()) {
@@ -60,7 +90,7 @@ function validateRegistry(raw, repoRoot = process.cwd()) {
       throw new Error(`entries[${index}] must be an object`);
     }
     const id = requireString(entry.id, `entries[${index}].id`);
-    const entryPath = requireString(entry.entryPath, `${id}.entryPath`);
+    const entryPath = validateEntryPath(entry.entryPath, `${id}.entryPath`);
     const configRel = requireString(entry.config, `${id}.config`);
     const checkId = requireString(entry.checkId, `${id}.checkId`);
 
@@ -68,6 +98,9 @@ function validateRegistry(raw, repoRoot = process.cwd()) {
     ids.add(id);
 
     const expectedUrl = canonicalUrl(baseUrl, entryPath);
+    if (!expectedUrl.startsWith(baseUrl.toString())) {
+      throw new Error(`${id}.entryPath escapes registry base URL`);
+    }
     if (urls.has(expectedUrl)) throw new Error(`duplicate entry URL: ${expectedUrl}`);
     urls.add(expectedUrl);
 
@@ -110,6 +143,9 @@ function validateRegistry(raw, repoRoot = process.cwd()) {
 
     const localSource = sourceIndexPath(entryPath);
     const localPath = path.resolve(repoRoot, localSource);
+    if (!localPath.startsWith(`${siteRoot}${path.sep}`)) {
+      throw new Error(`${id}.entryPath escapes local site root`);
+    }
     if (!fs.existsSync(localPath)) {
       throw new Error(`${id} local entry source missing: ${localSource}`);
     }
@@ -144,4 +180,4 @@ function main() {
 }
 
 if (require.main === module) main();
-module.exports = { SCHEMA_VERSION, validateRegistry, sourceIndexPath };
+module.exports = { SCHEMA_VERSION, validateEntryPath, validateRegistry, sourceIndexPath };

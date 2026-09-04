@@ -78,7 +78,28 @@ function run() {
     writeJson(corePath, duplicateChecks);
     expectFailure('duplicate check id', () => validateRegistry(registry, root), /duplicate check id/);
 
-    process.stdout.write('release-smoke-registry self-test PASS: valid coverage passes and duplicate/missing/stale coverage fails closed\n');
+    writeJson(corePath, cleanCoreConfig());
+    const invalidEntryPaths = [
+      '../escape/',
+      '%2e%2e/escape/',
+      'https://evil.test/',
+      '//evil.test/',
+      '/absolute/',
+      'back\\slash/',
+      'query/?v=1',
+      'fragment/#x',
+      './nested/',
+      'file.html',
+      'double//slash/',
+    ];
+    for (const entryPath of invalidEntryPaths) {
+      expectFailure(`invalid entryPath ${entryPath}`, () => validateRegistry({
+        ...registry,
+        entries: [{ ...registry.entries[0], entryPath }],
+      }, root), /entryPath/);
+    }
+
+    process.stdout.write('release-smoke-registry self-test PASS: valid coverage passes and duplicate/missing/stale/path-escape coverage fails closed\n');
   } finally {
     fs.rmSync(root, { recursive: true, force: true });
   }

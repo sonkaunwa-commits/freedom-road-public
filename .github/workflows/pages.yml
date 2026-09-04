@@ -8,6 +8,7 @@ on:
       - '.github/workflows/pages.yml'
       - 'release-smoke/**'
       - 'scripts/release-smoke*.cjs'
+      - 'scripts/run-release-smoke-registry.cjs'
       - 'scripts/validate-release-smoke-registry.cjs'
       - 'static_asset_gate/**'
       - 'scripts/validate-static-asset-references.py'
@@ -39,6 +40,7 @@ jobs:
           python3 -m json.tool site/fund-assistant/release.json >/dev/null
           python3 scripts/validate_publication_boundary.py
           node scripts/release-smoke-registry-selftest.cjs
+          node scripts/release-smoke-registry-runner-selftest.cjs
           node scripts/validate-release-smoke-registry.cjs
           python3 scripts/test_static_asset_references.py
           python3 scripts/validate-static-asset-references.py
@@ -143,6 +145,8 @@ jobs:
             ok=false; for attempt in {1..36}; do if get "$path" >/dev/null; then ok=true; break; fi; sleep 5; done
             [[ "$ok" == true ]] || { echo "Endpoint failed: $path" >&2; exit 1; }
           done
+
+          node scripts/run-release-smoke-registry.cjs --output /tmp/release-smoke-registry.json
 
           python3 - <<'PY' >/tmp/fund-meta
           import json

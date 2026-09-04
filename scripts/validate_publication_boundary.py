@@ -32,8 +32,21 @@ def _load_json(path: Path) -> Any:
         return json.load(handle)
 
 
+def _resolve_repo_path(repo_root: Path, raw_path: str | Path, label: str) -> Path:
+    root = repo_root.resolve()
+    candidate = Path(raw_path)
+    if not candidate.is_absolute():
+        candidate = root / candidate
+    candidate = candidate.resolve()
+    try:
+        candidate.relative_to(root)
+    except ValueError as exc:
+        raise ValueError(f"{label} escapes repository: {raw_path}") from exc
+    return candidate
+
+
 def load_policy(repo_root: Path, policy_path: str) -> dict[str, Any]:
-    path = (repo_root / policy_path).resolve()
+    path = _resolve_repo_path(repo_root, policy_path, "policy path")
     if not path.is_file():
         raise ValueError(f"policy file not found: {policy_path}")
     try:
@@ -63,11 +76,7 @@ def _matches_any(path: str, globs: Iterable[str]) -> str | None:
 
 def _iter_scan_files(repo_root: Path, roots: list[str]) -> Iterable[Path]:
     for root_name in roots:
-        root = (repo_root / root_name).resolve()
-        try:
-            root.relative_to(repo_root.resolve())
-        except ValueError as exc:
-            raise ValueError(f"scan root escapes repository: {root_name}") from exc
+        root = _resolve_repo_path(repo_root, root_name, "scan root")
         if not root.exists():
             raise ValueError(f"scan root not found: {root_name}")
         for path in root.rglob("*"):
@@ -146,11 +155,7 @@ def _validate_required_json(repo_root: Path, rules: list[dict[str, Any]]) -> lis
         if not isinstance(rule, dict) or not isinstance(rule.get("path"), str):
             raise ValueError(f"required_json_files[{index}] must contain path")
         rel = rule["path"]
-        path = (repo_root / rel).resolve()
-        try:
-            path.relative_to(repo_root.resolve())
-        except ValueError as exc:
-            raise ValueError(f"required JSON path escapes repository: {rel}") from exc
+        path = _resolve_repo_path(repo_root, rel, "required JSON path")
         if not path.is_file():
             findings.append(Finding("required-json-missing", rel, "file", "required publication provenance file is missing"))
             continue
@@ -209,24 +214,26 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--repo-root", default=".", help="repository root; defaults to current directory")
     parser.add_argument("--policy", default=DEFAULT_POLICY, help=f"policy path relative to repo root (default: {DEFAULT_POLICY})")
     parser.add_argument("--json", action="store_true", help="emit JSON report")
-    parser.add_argument("--output", help="optional path to write the report")
+    parser.add_argument("--output", help="optional repository-local path to write the report")
     args = parser.parse_args(argv)
 
-    repo_root = Path(args.repo_root)
+    repo_root = Path(args.repo_root).resolve()
     try:
         policy = load_policy(repo_root, args.policy)
         report = scan_repository(repo_root, policy)
+        output = _resolve_repo_path(repo_root, args.output, "output path") if args.output else None
     except ValueError as exc:
         print(f"publication-boundary CONFIG_ERROR: {exc}", file=sys.stderr)
         return 2
 
     rendered = json.dumps(report, ensure_ascii=False, indent=2) if args.json else _format_text(report)
-    if args.output:
-        output = Path(args.output)
-        if not output.is_absolute():
-            output = repo_root / output
-        output.parent.mkdir(parents=True, exist_ok=True)
-        output.write_text(rendered + "\n", encoding="utf-8")
+    if output is not None:
+        try:
+            output.parent.mkdir(parents=True, exist_ok=True)
+            output.write_text(rendered + "\n", encoding="utf-8")
+        except OSError as exc:
+            print(f"publication-boundary OUTPUT_ERROR: {exc}", file=sys.stderr)
+            return 2
     print(rendered)
     return 0 if report["pass"] else 1
 

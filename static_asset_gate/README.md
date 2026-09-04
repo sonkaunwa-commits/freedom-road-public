@@ -25,7 +25,9 @@ python3 scripts/validate-static-asset-references.py --json
 python3 scripts/validate-static-asset-references.py --json --output release-status/static-assets.json
 ```
 
-退出码：`0` 为通过，`1` 为发现缺失/越界资源，`2` 为策略或运行配置错误。
+`--policy` 与 `--output` 都是 **repository-relative** 路径。绝对路径、`..` 越界以及通过符号链接逃出仓库的路径都会在读取策略或创建输出文件前 fail closed。这样发布门禁不会因为调用参数被改写而读取或写入 checkout 之外的文件。`site_root` 与页面内静态资源路径继续执行各自已有的仓库/站点根边界检查。
+
+退出码：`0` 为通过，`1` 为发现缺失/越界资源，`2` 为策略、路径或运行配置错误。
 
 ## 发布纪律
 

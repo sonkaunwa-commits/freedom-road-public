@@ -15,9 +15,65 @@ class FeedbackDecision:
     policy_mutation_allowed: bool = False
 
 
+_REQUIRED_TRUE_RULES = {
+    "same_channel_baseline_required",
+    "metric_provenance_required",
+    "preserve_denominators",
+    "single_item_policy_change_forbidden",
+    "causality_claim_forbidden",
+    "stop_requires_review",
+}
+
+
 def _require_nonempty(value: Any, name: str) -> None:
     if not isinstance(value, str) or not value.strip():
         raise FeedbackContractError(f"{name} must be a non-empty string")
+
+
+def _require_policy_int(policy: dict[str, Any], field: str, minimum: int) -> int:
+    value = policy.get(field)
+    if isinstance(value, bool) or not isinstance(value, int) or value < minimum:
+        raise FeedbackContractError(f"policy.{field} must be an integer >= {minimum}")
+    return value
+
+
+def _require_policy_rate(policy: dict[str, Any], field: str) -> float:
+    value = policy.get(field)
+    if isinstance(value, bool) or not isinstance(value, (int, float)) or not 0 <= value <= 1:
+        raise FeedbackContractError(f"policy.{field} must be numeric within [0, 1]")
+    return float(value)
+
+
+def _validate_policy(policy: dict[str, Any]) -> tuple[int, int, float, set[str]]:
+    if not isinstance(policy, dict):
+        raise FeedbackContractError("policy must be an object")
+
+    min_directional = _require_policy_int(policy, "minimum_directional_items", 1)
+    min_stop = _require_policy_int(policy, "minimum_stop_items", 1)
+    if min_stop < min_directional:
+        raise FeedbackContractError("policy.minimum_stop_items must be >= minimum_directional_items")
+    material = _require_policy_rate(policy, "material_change_ratio")
+
+    positive_metrics_value = policy.get("positive_metrics")
+    if not isinstance(positive_metrics_value, list) or not positive_metrics_value:
+        raise FeedbackContractError("policy.positive_metrics must be a non-empty list")
+    positive_metrics: list[str] = []
+    for metric_name in positive_metrics_value:
+        _require_nonempty(metric_name, "policy.positive_metrics[]")
+        positive_metrics.append(metric_name.strip())
+    if len(positive_metrics) != len(set(positive_metrics)):
+        raise FeedbackContractError("policy.positive_metrics must be unique")
+
+    rules = policy.get("rules")
+    if not isinstance(rules, dict):
+        raise FeedbackContractError("policy.rules must be an object")
+    for rule in _REQUIRED_TRUE_RULES:
+        if rules.get(rule) is not True:
+            raise FeedbackContractError(f"policy.rules.{rule} must remain true")
+    if rules.get("policy_mutation_allowed") is not False:
+        raise FeedbackContractError("policy.rules.policy_mutation_allowed must remain false")
+
+    return min_directional, min_stop, material, set(positive_metrics)
 
 
 def _validate_rate(metric_name: str, metric: dict[str, Any], source_ids: set[str]) -> float:
@@ -26,9 +82,9 @@ def _validate_rate(metric_name: str, metric: dict[str, Any], source_ids: set[str
     numerator = metric.get("numerator")
     denominator = metric.get("denominator")
     source_ref = metric.get("source_ref")
-    if not isinstance(numerator, (int, float)) or numerator < 0:
+    if isinstance(numerator, bool) or not isinstance(numerator, (int, float)) or numerator < 0:
         raise FeedbackContractError(f"metric {metric_name} numerator must be >= 0")
-    if not isinstance(denominator, (int, float)) or denominator <= 0:
+    if isinstance(denominator, bool) or not isinstance(denominator, (int, float)) or denominator <= 0:
         raise FeedbackContractError(f"metric {metric_name} denominator must be > 0")
     if numerator > denominator:
         raise FeedbackContractError(f"metric {metric_name} numerator cannot exceed denominator")
@@ -38,6 +94,10 @@ def _validate_rate(metric_name: str, metric: dict[str, Any], source_ids: set[str
 
 
 def evaluate_feedback(record: dict[str, Any], policy: dict[str, Any]) -> FeedbackDecision:
+    if not isinstance(record, dict):
+        raise FeedbackContractError("record must be an object")
+    min_directional, min_stop, material, positive_metrics = _validate_policy(policy)
+
     for field in ("feedback_id", "experiment_id", "content_group_id", "channel", "observed_at"):
         _require_nonempty(record.get(field), field)
 
@@ -60,9 +120,14 @@ def evaluate_feedback(record: dict[str, Any], policy: dict[str, Any]) -> Feedbac
         raise FeedbackContractError("sample must be an object")
     published_items = sample.get("published_items")
     eligible_items = sample.get("eligible_items")
-    if not isinstance(published_items, int) or published_items < 1:
+    if isinstance(published_items, bool) or not isinstance(published_items, int) or published_items < 1:
         raise FeedbackContractError("published_items must be >= 1")
-    if not isinstance(eligible_items, int) or eligible_items < 1 or eligible_items > published_items:
+    if (
+        isinstance(eligible_items, bool)
+        or not isinstance(eligible_items, int)
+        or eligible_items < 1
+        or eligible_items > published_items
+    ):
         raise FeedbackContractError("eligible_items must be between 1 and published_items")
 
     metrics = record.get("metrics")
@@ -76,7 +141,7 @@ def evaluate_feedback(record: dict[str, Any], policy: dict[str, Any]) -> Feedbac
     if baseline.get("channel") != record.get("channel"):
         raise FeedbackContractError("baseline channel must match observation channel")
     baseline_items = baseline.get("sample_items")
-    if not isinstance(baseline_items, int) or baseline_items < 1:
+    if isinstance(baseline_items, bool) or not isinstance(baseline_items, int) or baseline_items < 1:
         raise FeedbackContractError("baseline.sample_items must be >= 1")
     baseline_metrics = baseline.get("metrics")
     if not isinstance(baseline_metrics, dict) or not baseline_metrics:
@@ -86,11 +151,6 @@ def evaluate_feedback(record: dict[str, Any], policy: dict[str, Any]) -> Feedbac
     common_metrics = set(observed_rates).intersection(baseline_rates)
     if not common_metrics:
         raise FeedbackContractError("observation and baseline must share at least one metric")
-
-    min_directional = int(policy.get("minimum_directional_items", 3))
-    min_stop = int(policy.get("minimum_stop_items", 8))
-    material = float(policy.get("material_change_ratio", 0.15))
-    positive_metrics = set(policy.get("positive_metrics", []))
 
     deltas: dict[str, float] = {}
     for name in sorted(common_metrics):

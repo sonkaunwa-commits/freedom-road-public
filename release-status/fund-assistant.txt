@@ -1,10 +1,10 @@
 status=ok
 architecture=static-direct
-deployed_sha=ce729af53fe1fc0bb05f3e810c2df888da2c2012
+deployed_sha=59ab7eb3aa69c55d42d8df052a2a6ec6cd8c1977
 version=20260827-2104
 release=FUND_ASSISTANT_UI_20260827_2104
 url=https://sonkaunwa-commits.github.io/freedom-road-public/fund-assistant/
 entry=stable-15-4.html
 behavior=v154.js
 live_entry_verified=true
-verified_at=2026-09-04T02:56:11Z
+verified_at=2026-09-04T03:08:04Z

@@ -62,6 +62,12 @@ function expectConfigError(config, pattern) {
     });
     assert.equal(absoluteUrlConfig.checks[0].url.toString(), `${baseUrl}data.json`);
 
+    const defaultNameConfig = validateConfig({
+      baseUrl,
+      checks: [{ id: 'default-name', path: '/' }],
+    });
+    assert.equal(defaultNameConfig.name, 'release-smoke');
+
     const bad = await runSmoke({
       ...config,
       name: 'release-smoke-negative-selftest',
@@ -70,6 +76,12 @@ function expectConfigError(config, pattern) {
     assert.equal(bad.pass, false, 'negative self-test must fail');
     assert.equal(bad.checks[0].assertions.some(item => item.type === 'contains' && item.pass === false), true);
 
+    expectConfigError({ ...config, checks: { id: 'scalar-check', path: '/' } }, /config\.checks must be a non-empty array/);
+    expectConfigError({ ...config, checks: [] }, /config\.checks must be a non-empty array/);
+    expectConfigError({ ...config, name: '' }, /name must be a non-empty string/);
+    expectConfigError({ ...config, name: false }, /name must be a non-empty string/);
+    expectConfigError({ ...config, checks: [{ id: 'empty-content-type', path: '/', contentTypeContains: '' }] }, /contentTypeContains must be a non-empty string/);
+    expectConfigError({ ...config, checks: [{ id: 'null-content-type', path: '/', contentTypeContains: null }] }, /contentTypeContains must be a non-empty string/);
     expectConfigError({ ...config, checks: [{ id: 'dup', path: '/' }, { id: 'dup', path: 'app.js' }] }, /duplicate check id/);
     expectConfigError({ ...config, checks: [{ id: 'ambiguous', path: '/', url: baseUrl }] }, /exactly one of path or url/);
     expectConfigError({ ...config, checks: [{ id: 'missing-locator' }] }, /exactly one of path or url/);

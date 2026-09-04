@@ -18,8 +18,15 @@ function requireString(value, label) {
   return value.trim();
 }
 
+function rejectUrlCredentials(url, label) {
+  if (url.username || url.password) throw new Error(`${label} must not contain URL credentials`);
+  return url;
+}
+
 function resolveTargetUrl(baseUrl, check) {
-  if (check.url !== undefined && check.url !== null) return new URL(requireString(check.url, `${check.id}.url`));
+  if (check.url !== undefined && check.url !== null) {
+    return rejectUrlCredentials(new URL(requireString(check.url, `${check.id}.url`)), `${check.id}.url`);
+  }
   if (!baseUrl) throw new Error(`${check.id} needs url or config.baseUrl`);
 
   const rawPath = requireString(check.path, `${check.id}.path`);
@@ -55,7 +62,7 @@ function validateConfig(config) {
 
   let baseUrl = null;
   if (config.baseUrl !== undefined && config.baseUrl !== null) {
-    baseUrl = new URL(requireString(config.baseUrl, 'baseUrl'));
+    baseUrl = rejectUrlCredentials(new URL(requireString(config.baseUrl, 'baseUrl')), 'baseUrl');
     if (!['http:', 'https:'].includes(baseUrl.protocol)) throw new Error('baseUrl must use http or https');
   }
 

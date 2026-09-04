@@ -32,13 +32,16 @@ node scripts/release-smoke.cjs release-smoke/fund-assistant.v1.json --json --out
 `release-smoke/registry.v1.json` 是当前正式用户入口与 HTTP smoke 配置之间的机器可读绑定。每个登记入口必须：
 
 - 有唯一 ID 和唯一正式 URL；
+- `entryPath` 必须是被 Pages 根目录包含的相对目录路径：根入口仅使用 `./`，子入口使用 `fund-assistant/` 这类规范目录形式；
+- 禁止 `..`、绝对 URL、`//`、前导 `/`、反斜杠、query/fragment、编码后的点段/分隔符、重复斜杠和文件式路径；
 - 指向 `release-smoke/` 下真实存在的配置；
 - 绑定一个真实存在的 check ID；
 - 预期 HTTP 200 和 `text/html`；
 - 至少检查一个 release marker 或稳定关键文本；
-- 在 `site/` 中存在对应的 `index.html` 源文件。
+- 在 `site/` 中存在对应的 `index.html` 源文件，且解析结果不得逃出 `site/`；
+- Registry 绑定 check 的所有 `contains` marker 必须已经存在于该本地入口源文件中，避免部署后才发现 marker 漂移。
 
-`validate-release-smoke-registry.cjs` 只验证覆盖合同，不访问网络；因此可放进现有 Pages `verify` 阶段，在部署前发现缺配置、错路径、重复入口或丢失 marker。它不会创建新的定时任务或独立 workflow。
+`validate-release-smoke-registry.cjs` 只验证覆盖合同，不访问网络；因此可放进现有 Pages `verify` 阶段，在部署前发现缺配置、错路径、路径逃逸、重复入口、丢失 marker 或本地 marker 漂移。它不会创建新的定时任务或独立 workflow。
 
 `run-release-smoke-registry.cjs` 用同一份 Registry 驱动部署后的真实 HTTP smoke。它先执行 Registry fail-closed 校验，再按 Registry 中首次出现的顺序去重 smoke config，并复用 `release-smoke.cjs` 的 HTTP、Content-Type、contains/notContains、timeout 和 cache-busting 逻辑。任一配置或任一线上断言失败，聚合结果即失败。这样 Registry 不再只是“声明覆盖”，而是实际决定通用线上验收覆盖。
 

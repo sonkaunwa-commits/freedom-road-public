@@ -34,8 +34,14 @@ function validateConfig(config) {
   if (!config || typeof config !== 'object' || Array.isArray(config)) {
     throw new Error('config must be a JSON object');
   }
-  const checks = asArray(config.checks);
-  if (checks.length === 0) throw new Error('config.checks must contain at least one check');
+  if (!Array.isArray(config.checks) || config.checks.length === 0) {
+    throw new Error('config.checks must be a non-empty array');
+  }
+  const checks = config.checks;
+
+  const name = config.name === undefined
+    ? 'release-smoke'
+    : requireString(config.name, 'name');
 
   let baseUrl = null;
   if (config.baseUrl !== undefined && config.baseUrl !== null) {
@@ -74,6 +80,11 @@ function validateConfig(config) {
       status = raw.status;
     }
 
+    let contentTypeContains = null;
+    if (raw.contentTypeContains !== undefined) {
+      contentTypeContains = requireString(raw.contentTypeContains, `${id}.contentTypeContains`);
+    }
+
     const target = { ...raw, id };
     const url = resolveTargetUrl(baseUrl, target);
     if (!['http:', 'https:'].includes(url.protocol)) throw new Error(`${id} must use http or https`);
@@ -83,12 +94,12 @@ function validateConfig(config) {
       status,
       contains: asArray(raw.contains).map((item, i) => requireString(item, `${id}.contains[${i}]`)),
       notContains: asArray(raw.notContains).map((item, i) => requireString(item, `${id}.notContains[${i}]`)),
-      contentTypeContains: raw.contentTypeContains ? requireString(raw.contentTypeContains, `${id}.contentTypeContains`) : null,
+      contentTypeContains,
     };
   });
 
   return {
-    name: requireString(config.name || 'release-smoke', 'name'),
+    name,
     baseUrl: baseUrl ? baseUrl.toString() : null,
     timeoutMs,
     checks: normalized,

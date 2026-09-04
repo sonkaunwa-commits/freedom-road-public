@@ -107,6 +107,7 @@ function validateConfig(config) {
     if (!['http:', 'https:'].includes(url.protocol)) throw new Error(`${id} must use http or https`);
     return {
       id,
+      locator: hasPath ? 'path' : 'url',
       url,
       status,
       contains: asArray(raw.contains).map((item, i) => requireString(item, `${id}.contains[${i}]`)),
@@ -150,6 +151,16 @@ async function runOne(check, options) {
     const response = await fetchWithTimeout(targetUrl, options.timeoutMs, options.fetchImpl);
     const body = await response.text();
     const contentType = response.headers.get('content-type') || '';
+    const finalUrl = new URL(response.url || targetUrl.toString());
+
+    if (check.locator === 'path') {
+      assertions.push({
+        type: 'redirect_origin',
+        expected: check.url.origin,
+        actual: finalUrl.origin,
+        pass: finalUrl.origin === check.url.origin,
+      });
+    }
 
     assertions.push({
       type: 'status',
@@ -176,7 +187,7 @@ async function runOne(check, options) {
     return {
       id: check.id,
       url: check.url.toString(),
-      final_url: response.url || targetUrl.toString(),
+      final_url: finalUrl.toString(),
       status: response.status,
       content_type: contentType,
       pass: assertions.every(item => item.pass),

@@ -1,8 +1,5 @@
 Error: chromium-desktop: mechanical wording leaked 6
     at assert (/__w/freedom-road-public/freedom-road-public/scripts/securities-v451-explanation-smoke.cjs:5:34)
     at bankQuality (/__w/freedom-road-public/freedom-road-public/scripts/securities-v451-explanation-smoke.cjs:19:209)
-    at runNextTicks (node:internal/process/task_queues:65:5)
-    at process.processImmediate (node:internal/timers:453:9)
-    at process.callbackTrampoline (node:internal/async_hooks:130:17)
     at async run (/__w/freedom-road-public/freedom-road-public/scripts/securities-v451-explanation-smoke.cjs:39:205)
     at async /__w/freedom-road-public/freedom-road-public/scripts/securities-v451-explanation-smoke.cjs:40:12

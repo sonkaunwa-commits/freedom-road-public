@@ -1,5 +1,5 @@
 status=ok
-tested_sha=d0b66720db241efe4bd07d3ea1ed079ed76a5a92
+tested_sha=bc5da48229934c7fd406e424d7290c65a21d4e18
 version=4.6.1
 formal_entry=/ks/
 legacy_entry=/securities-exam/
@@ -14,4 +14,4 @@ account_model=two-fixed-pin-codes+isolated-server-state
 cloud_sync=automatic-background-sync
 mock_papers=finance-5x120+law-5x120
 reset_scope=current-account-local-and-cloud
-verified_at=2026-08-28T12:04:07Z
+verified_at=2026-09-12T22:10:20Z

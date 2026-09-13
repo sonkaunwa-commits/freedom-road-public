@@ -1,1 +1,5 @@
-v4.6.1 browser smoke did not start
+page.waitForFunction: Timeout 30000ms exceeded.
+    at waitRuntime (/__w/freedom-road-public/freedom-road-public/scripts/securities-v4-smoke.cjs:5:39)
+    at open (/__w/freedom-road-public/freedom-road-public/scripts/securities-v4-smoke.cjs:7:173)
+    at async exercise (/__w/freedom-road-public/freedom-road-public/scripts/securities-v4-smoke.cjs:13:2)
+    at async /__w/freedom-road-public/freedom-road-public/scripts/securities-v4-smoke.cjs:27:12

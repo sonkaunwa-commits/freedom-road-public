@@ -1,7 +1,7 @@
 status=failed
-tested_sha=56b7df76f6467689f82098f1751d955249e49236
+tested_sha=24602ee9a9d3ae4dca1dd476a93598dca4c225b9
 version=4.6.1
 browsers=chromium-desktop+chromium-mobile+webkit-iphone
 flows=continue-subject-resumes-current-group+mechanical-wording-quarantine+commercial-bank-question-repair+humanized-option-reasons+related-question-answers+expanded-course-or-material-teaching+deep-explanation+mock-post-submit-review
 browser_smoke=failure
-verified_at=2026-09-13T04:45:07Z
+verified_at=2026-09-13T04:48:55Z

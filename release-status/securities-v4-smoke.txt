@@ -1,5 +1,5 @@
 status=failed
-tested_sha=6ddf0848087474c621c049756504355cc719cf56
+tested_sha=bbaa85dcf4aafd41494ef04ace6f648697d6fe3a
 version=4.6.1
 formal_entry=/ks/
 legacy_entry=/securities-exam/
@@ -14,4 +14,4 @@ account_model=two-fixed-pin-codes+isolated-server-state
 cloud_sync=automatic-background-sync
 mock_papers=finance-5x120+law-5x120
 reset_scope=current-account-local-and-cloud
-verified_at=2026-09-12T22:40:11Z
+verified_at=2026-09-13T04:23:26Z

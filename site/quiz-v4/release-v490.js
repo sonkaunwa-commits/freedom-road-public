@@ -1,10 +1,11 @@
 (()=>{
 'use strict';
-const RELEASE='4.9.0';
+const RELEASE='4.9.1';
 const CORE='4.5.0';
 const $=(s,r=document)=>r.querySelector(s);
 let scheduled=false;
 function setText(el,text){if(el&&el.textContent!==text)el.textContent=text;}
+function meta(){return window.SEC_BANK_V491||window.SEC_CURATED_BANK_V490||{};}
 function patchVersion(){
  const cards=[...document.querySelectorAll('.meCard')];
  const card=cards.find(x=>x.querySelector('h3')?.textContent.trim()==='版本');
@@ -31,25 +32,21 @@ function patchType(){
 }
 function patchHome(){
  const dash=$('.v45Dashboard'); if(!dash||$('.v490Notice'))return;
+ const m=meta();
  const x=document.createElement('div');x.className='v45Coach good v490Notice';
- const m=window.SEC_CURATED_BANK_V490||{};
- x.innerHTML=`<b>高质量题库重建模式</b><p>当前仅使用重新审校题库：金融 ${m.finance||0} 题、法规 ${m.law||0} 题。旧生成题已退出默认池；每题均要求大纲考点、逐项解析、边界与关联知识。</p>`;
+ x.innerHTML=`<b>现成题源模式 · ${m.count||0} 题</b><p>当前题库：金融 ${m.finance||0} 题、法规 ${m.law||0} 题；其中开源 FIRE-Bench 题源 ${m.fire||0} 题、深度精解题 ${m.curated||0} 题。旧机械生成题已退出默认池。FIRE-Bench 为 Apache-2.0 开放题源，法规敏感题已做第一轮过时规则过滤。</p>`;
  dash.appendChild(x);
 }
-function disableMock(){
- document.querySelectorAll('[data-tab="mock"],.v45MockEntry,[data-mode="mock"]').forEach(b=>{
-   if(b.dataset.v490MockBound==='1')return;
-   b.dataset.v490MockBound='1';
-   b.addEventListener('click',e=>{
-     e.preventDefault();e.stopImmediatePropagation();
-     const t=document.getElementById('toast');
-     if(t){t.textContent='模拟卷暂时关闭：新题库达到足够题量后再恢复，避免旧题凑数。';t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2600)}
-   },true);
+function patchMockLabel(){
+ const m=meta();
+ document.querySelectorAll('.v45MockEntry').forEach(b=>{
+   const span=b.querySelector('span');
+   if(span&&m.count>=240)setText(span,'题库已扩容 · 支持120题模拟卷');
  });
 }
-function patch(){scheduled=false;patchVersion();patchType();patchHome();disableMock();}
+function patch(){scheduled=false;patchVersion();patchType();patchHome();patchMockLabel();}
 function schedulePatch(){if(scheduled)return;scheduled=true;requestAnimationFrame(patch);}
 new MutationObserver(schedulePatch).observe(document.getElementById('app')||document.body,{childList:true,subtree:true});
 patch();
-window.SEC_RELEASE_V490={version:RELEASE,core:CORE,mode:'curated-bank-rebuild',hotfix:'mutation-loop-fixed'};
+window.SEC_RELEASE_V490={version:RELEASE,core:CORE,mode:'open-source-bank-plus-curated',hotfix:'mutation-loop-fixed',bank:'FIRE-Bench+curated'};
 })();

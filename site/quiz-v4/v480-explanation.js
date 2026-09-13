@@ -1,0 +1,24 @@
+(()=>{
+'use strict';
+const VERSION='4.8.0';
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]||c));
+const norm=s=>String(s||'').replace(/[\s，。！？、；：,.!?;:（）()“”"'《》「」]/g,'').toLowerCase();
+const bank=()=>Array.isArray(window.SEC_QUESTIONS)?window.SEC_QUESTIONS:[];
+const concepts=()=>Array.isArray(window.SEC_CONCEPTS)?window.SEC_CONCEPTS:[];
+let busy=false;
+function currentQuestion(){const h=$('.questionCard h1');if(!h)return null;const t=h.textContent.trim();return bank().find(q=>String(q.q||'').trim()===t)||null}
+function conceptFor(q){if(!q)return null;const n=norm(q.knowledge);return concepts().find(c=>c.s===q.s&&norm(c.term)===n)||null}
+function learnFor(q,c){return q?.learn||c||{} }
+function selected(){return $$('.questionCard .option').map((x,i)=>x.classList.contains('selected')?i:-1).filter(i=>i>=0)}
+function letters(xs){return xs.map(i=>String.fromCharCode(65+i)).join('、')||'未作答'}
+function isCorrect(q,sel){const a=[...(q.a||[])].sort((x,y)=>x-y),b=[...sel].sort((x,y)=>x-y);return a.length===b.length&&a.every((x,i)=>x===b[i])}
+function reason(q,l,i,chosen){if(Array.isArray(q.oa)&&q.oa[i])return q.oa[i];const txt=String(q.o?.[i]||''),right=(q.a||[]).includes(i);if(right)return `该项符合本题考点“${q.knowledge||l.term||'核心规则'}”的定义、适用条件或判断标准。${l.key?`判断抓手：${l.key}`:''}`;if(chosen&&l.wrong)return `你误选了这一项。它容易落入本知识点的典型错误理解：${l.wrong}。${l.definition?`正确理解：${l.definition}`:''}`;if(/[一定|必然|任何|全部|完全|只能|唯一|无条件|一律]/.test(txt))return `该项把有条件成立的规则扩大成绝对结论。${l.definition?`正确框架：${l.definition}`:''}${l.key?`；适用时还要核对：${l.key}`:''}`;return `该项与本题考点的定义、条件、边界或例外不一致。${l.definition?`正确框架：${l.definition}`:''}${l.key?`；判断时关注：${l.key}`:''}`}
+function optionBlock(q,l,sel){return (q.o||[]).map((t,i)=>{const right=(q.a||[]).includes(i),picked=sel.includes(i);return `<div class="v480Opt ${right?'right':picked?'picked':''}"><div><b>${String.fromCharCode(65+i)}. ${esc(t)}</b><em>${right?'正确项':picked?'你的误选':'错误项'}</em></div><p>${esc(reason(q,l,i,picked))}</p></div>`}).join('')}
+function knowledgeBlock(q,l){const lines=[];if(l.definition)lines.push(['核心定义',l.definition]);if(l.key)lines.push(['适用条件 / 判断标准',l.key]);if(l.wrong)lines.push(['高频错误理解',l.wrong]);if(l.falsekey)lines.push(['边界与易混点',l.falsekey]);if(l.example)lines.push(['情境理解',l.example]);if(Array.isArray(q.relatedPoints)&&q.relatedPoints.length)lines.push(['相关联知识',q.relatedPoints.join('；')]);if(q.e&&!lines.some(([,x])=>norm(x)===norm(q.e)))lines.push(['本题规则说明',q.e]);if(!lines.length)return '';return `<section class="v480Block v480Knowledge"><h3>知识点精讲</h3><p class="lead">把这题背后的规则一次弄懂，不做无关题目跳转。</p>${lines.map(([k,v])=>`<div class="v480Line"><b>${esc(k)}</b><p>${esc(v)}</p></div>`).join('')}</section>`}
+function mistakeBlock(q,l,sel){const right=new Set(q.a||[]),wrongSel=sel.filter(i=>!right.has(i)),miss=(q.a||[]).filter(i=>!sel.includes(i));const parts=[];if(wrongSel.length)parts.push(`误选 ${letters(wrongSel)}：${wrongSel.map(i=>reason(q,l,i,true)).join(' ')}`);if(miss.length)parts.push(`漏选 ${letters(miss)}：${miss.map(i=>reason(q,l,i,false)).join(' ')}`);if(!parts.length)parts.push('本题答对。建议再确认错误选项究竟错在定义、条件、边界还是绝对化表述。');return parts.join(' ')}
+function sourceBlock(q){const src=q.sourceTruth||'练习题';const basis=q.sourceBasis||q.source||'依据现行考试大纲与公开规则整理';return `<section class="v480Block source"><h3>依据</h3><p><b>${esc(src)}</b><br>${esc(basis)}</p>${q.sourceUrl?`<a target="_blank" rel="noopener" href="${esc(q.sourceUrl)}">查看公开依据 →</a>`:''}</section>`}
+function enhance(){if(busy)return;busy=true;try{const fb=$('#feedback'),q=currentQuestion(),opts=$$('.questionCard .option');if(!fb||!q||!opts.length)return;if(!opts.every(x=>x.disabled))return;if($('.v480Deep',fb))return;const old=$('.v451Deep',fb);if(old)old.remove();const c=conceptFor(q),l=learnFor(q,c),sel=selected(),ok=isCorrect(q,sel);const wrap=document.createElement('div');wrap.className='v480Deep';wrap.innerHTML=`<section class="v480Summary ${ok?'good':'bad'}"><b>${ok?'✓ 正确':'× 这题要弄懂'}</b><span>你的答案：${esc(letters(sel))} · 正确答案：${esc(letters(q.a||[]))}</span></section><section class="v480Block"><h3>这题考什么</h3><p>${esc(q.knowledge||l.term||q.ch||'本题核心知识点')}</p></section><section class="v480Block"><h3>为什么这个答案对</h3><p>${esc(q.e||l.definition||'根据题干条件与现行规则判断。')}</p></section><section class="v480Block"><h3>逐项拆解</h3>${optionBlock(q,l,sel)}</section><section class="v480Block ${ok?'':'mistake'}"><h3>${ok?'你真正要记住的':'你这次错在哪里'}</h3><p>${esc(mistakeBlock(q,l,sel))}</p></section>${knowledgeBlock(q,l)}${sourceBlock(q)}`;fb.appendChild(wrap)}finally{busy=false}}
+const obs=new MutationObserver(()=>queueMicrotask(enhance));obs.observe($('#main')||document.body,{childList:true,subtree:true});enhance();
+window.SEC_QUIZ_V480={version:VERSION,features:['deep-knowledge-explanation','option-rationale','no-related-question-module','source-grounding']};
+})();

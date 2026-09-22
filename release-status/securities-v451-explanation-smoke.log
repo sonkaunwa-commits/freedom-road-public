@@ -1,4 +1,0 @@
-page.waitForFunction: Timeout 30000ms exceeded.
-    at open (/__w/freedom-road-public/freedom-road-public/scripts/securities-v451-explanation-smoke.cjs:8:13)
-    at async run (/__w/freedom-road-public/freedom-road-public/scripts/securities-v451-explanation-smoke.cjs:39:186)
-    at async /__w/freedom-road-public/freedom-road-public/scripts/securities-v451-explanation-smoke.cjs:40:12

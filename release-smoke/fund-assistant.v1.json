@@ -1,6 +1,6 @@
 {
   "name": "fund-assistant-public-release",
-  "baseUrl": "https://exam.freovia.com/",
+  "baseUrl": "https://sonkaunwa-commits.github.io/freedom-road-public/",
   "timeoutMs": 15000,
   "checks": [
     {
@@ -8,22 +8,14 @@
       "path": "fund-assistant/",
       "status": 200,
       "contentTypeContains": "text/html",
-      "contains": [
-        "基金小帮手",
-        "FUND_ASSISTANT_BOOTSTRAP_20260822_1812",
-        "release.json"
-      ]
+      "contains": ["基金小帮手", "FUND_ASSISTANT_BOOTSTRAP_20260822_1812", "release.json"]
     },
     {
       "id": "fund-assistant-release-manifest",
       "path": "fund-assistant/release.json",
       "status": 200,
       "contentTypeContains": "application/json",
-      "contains": [
-        "FUND_ASSISTANT_UI_20260827_2104",
-        "stable-15-4.html",
-        "v154.js"
-      ]
+      "contains": ["FUND_ASSISTANT_UI_20260827_2104", "stable-15-4.html", "v154.js"]
     },
     {
       "id": "fund-assistant-entry",

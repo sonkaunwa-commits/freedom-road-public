@@ -139,7 +139,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          base='https://sonkaunwa-commits.github.io/freedom-road-public'
+          base='https://exam.freovia.com'
           get(){ curl -fsSL --max-time 30 --retry 3 "$base/$1?verify=${GITHUB_SHA}"; }
           for path in '' 'publication.json' 'fund-assistant/' 'securities-exam/' 'ks/' 'exam-live/' 'quiz-v4/' 'investment-advisor-exam/' 'tg/'; do
             ok=false; for attempt in {1..36}; do if get "$path" >/dev/null; then ok=true; break; fi; sleep 5; done

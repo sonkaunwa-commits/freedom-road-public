@@ -78,6 +78,35 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v7
+      - name: Retire stale exam custom domain binding
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          api="https://api.github.com/repos/${GITHUB_REPOSITORY}/pages"
+          current="$(curl -fsSL \
+            -H 'Accept: application/vnd.github+json' \
+            -H "Authorization: Bearer ${GH_TOKEN}" \
+            -H 'X-GitHub-Api-Version: 2026-03-10' \
+            "$api")"
+          cname="$(python3 -c 'import json,sys; print(json.load(sys.stdin).get("cname") or "")' <<<"$current")"
+          if [[ -z "$cname" ]]; then
+            echo 'Pages custom domain already absent.'
+          elif [[ "$cname" == 'exam.freovia.com' ]]; then
+            code="$(curl -sS -o "$RUNNER_TEMP/pages-domain-retire.json" -w '%{http_code}' \
+              -L -X PUT \
+              -H 'Accept: application/vnd.github+json' \
+              -H "Authorization: Bearer ${GH_TOKEN}" \
+              -H 'X-GitHub-Api-Version: 2026-03-10' \
+              "$api" \
+              -d '{"cname":null}')"
+            [[ "$code" == '204' ]] || { cat "$RUNNER_TEMP/pages-domain-retire.json" >&2 || true; echo "Failed to retire Pages custom domain: HTTP $code" >&2; exit 1; }
+            echo 'Retired Pages custom domain: exam.freovia.com'
+          else
+            echo "Unexpected Pages custom domain present: $cname" >&2
+            exit 1
+          fi
       - uses: actions/configure-pages@v6
       - uses: actions/upload-pages-artifact@v5
         with: {path: site}

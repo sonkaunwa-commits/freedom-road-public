@@ -1,0 +1,2423 @@
+{
+  "code": "300059.SZ",
+  "provider": "tencent_mkline:a_minutes",
+  "providers": [
+    "akshare:a_minutes",
+    "tencent_mkline:a_minutes"
+  ],
+  "updated_at": "2026-09-22T21:30:09.025187+08:00",
+  "freshness_status": "fresh",
+  "source_history_merged": true,
+  "rows": [
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T09:30:00+08:00",
+      "open": 18.75,
+      "high": 18.75,
+      "low": 18.75,
+      "close": 18.75,
+      "volume": 15958.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T09:31:00+08:00",
+      "open": 18.73,
+      "high": 18.83,
+      "low": 18.64,
+      "close": 18.73,
+      "volume": 99730.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T09:32:00+08:00",
+      "open": 18.71,
+      "high": 18.76,
+      "low": 18.69,
+      "close": 18.76,
+      "volume": 42988.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T09:33:00+08:00",
+      "open": 18.79,
+      "high": 18.88,
+      "low": 18.79,
+      "close": 18.88,
+      "volume": 62902.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T09:34:00+08:00",
+      "open": 18.87,
+      "high": 18.87,
+      "low": 18.84,
+      "close": 18.84,
+      "volume": 35826.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T09:35:00+08:00",
+      "open": 18.84,
+      "high": 18.89,
+      "low": 18.84,
+      "close": 18.85,
+      "volume": 40955.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T09:36:00+08:00",
+      "open": 18.85,
+      "high": 18.92,
+      "low": 18.84,
+      "close": 18.9,
+      "volume": 45891.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T09:37:00+08:00",
+      "open": 18.9,
+      "high": 18.92,
+      "low": 18.9,
+      "close": 18.91,
+      "volume": 33804.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T09:38:00+08:00",
+      "open": 18.92,
+      "high": 18.94,
+      "low": 18.88,
+      "close": 18.88,
+      "volume": 30639.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T09:39:00+08:00",
+      "open": 18.89,
+      "high": 18.89,
+      "low": 18.85,
+      "close": 18.88,
+      "volume": 22409.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T09:40:00+08:00",
+      "open": 18.9,
+      "high": 18.9,
+      "low": 18.87,
+      "close": 18.87,
+      "volume": 12478.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T09:41:00+08:00",
+      "open": 18.87,
+      "high": 18.9,
+      "low": 18.85,
+      "close": 18.85,
+      "volume": 23596.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T09:42:00+08:00",
+      "open": 18.87,
+      "high": 18.87,
+      "low": 18.82,
+      "close": 18.83,
+      "volume": 14388.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T09:43:00+08:00",
+      "open": 18.83,
+      "high": 18.84,
+      "low": 18.82,
+      "close": 18.82,
+      "volume": 12989.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T09:44:00+08:00",
+      "open": 18.8,
+      "high": 18.8,
+      "low": 18.78,
+      "close": 18.79,
+      "volume": 25108.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T09:45:00+08:00",
+      "open": 18.8,
+      "high": 18.84,
+      "low": 18.79,
+      "close": 18.83,
+      "volume": 10615.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T09:46:00+08:00",
+      "open": 18.83,
+      "high": 18.86,
+      "low": 18.83,
+      "close": 18.85,
+      "volume": 12259.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T09:47:00+08:00",
+      "open": 18.85,
+      "high": 18.85,
+      "low": 18.81,
+      "close": 18.81,
+      "volume": 19823.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T09:48:00+08:00",
+      "open": 18.81,
+      "high": 18.82,
+      "low": 18.79,
+      "close": 18.79,
+      "volume": 15731.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T09:49:00+08:00",
+      "open": 18.81,
+      "high": 18.85,
+      "low": 18.81,
+      "close": 18.84,
+      "volume": 14325.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T09:50:00+08:00",
+      "open": 18.84,
+      "high": 18.84,
+      "low": 18.81,
+      "close": 18.82,
+      "volume": 12423.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T09:51:00+08:00",
+      "open": 18.83,
+      "high": 18.91,
+      "low": 18.83,
+      "close": 18.9,
+      "volume": 27330.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T09:52:00+08:00",
+      "open": 18.9,
+      "high": 18.92,
+      "low": 18.87,
+      "close": 18.92,
+      "volume": 20420.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T09:53:00+08:00",
+      "open": 18.92,
+      "high": 18.93,
+      "low": 18.9,
+      "close": 18.91,
+      "volume": 20085.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T09:54:00+08:00",
+      "open": 18.9,
+      "high": 18.91,
+      "low": 18.88,
+      "close": 18.88,
+      "volume": 12851.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T09:55:00+08:00",
+      "open": 18.9,
+      "high": 18.91,
+      "low": 18.89,
+      "close": 18.89,
+      "volume": 8583.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T09:56:00+08:00",
+      "open": 18.89,
+      "high": 18.89,
+      "low": 18.86,
+      "close": 18.86,
+      "volume": 10939.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T09:57:00+08:00",
+      "open": 18.86,
+      "high": 18.87,
+      "low": 18.85,
+      "close": 18.85,
+      "volume": 7536.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T09:58:00+08:00",
+      "open": 18.85,
+      "high": 18.86,
+      "low": 18.82,
+      "close": 18.83,
+      "volume": 13180.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T09:59:00+08:00",
+      "open": 18.83,
+      "high": 18.85,
+      "low": 18.83,
+      "close": 18.85,
+      "volume": 6133.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:00:00+08:00",
+      "open": 18.85,
+      "high": 18.87,
+      "low": 18.84,
+      "close": 18.86,
+      "volume": 11764.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:01:00+08:00",
+      "open": 18.85,
+      "high": 18.86,
+      "low": 18.84,
+      "close": 18.84,
+      "volume": 5363.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:02:00+08:00",
+      "open": 18.84,
+      "high": 18.85,
+      "low": 18.82,
+      "close": 18.82,
+      "volume": 9079.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:03:00+08:00",
+      "open": 18.82,
+      "high": 18.84,
+      "low": 18.82,
+      "close": 18.83,
+      "volume": 14291.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:04:00+08:00",
+      "open": 18.82,
+      "high": 18.84,
+      "low": 18.82,
+      "close": 18.83,
+      "volume": 11581.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:05:00+08:00",
+      "open": 18.83,
+      "high": 18.83,
+      "low": 18.8,
+      "close": 18.8,
+      "volume": 12569.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:06:00+08:00",
+      "open": 18.8,
+      "high": 18.8,
+      "low": 18.79,
+      "close": 18.79,
+      "volume": 9059.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:07:00+08:00",
+      "open": 18.79,
+      "high": 18.86,
+      "low": 18.79,
+      "close": 18.86,
+      "volume": 11232.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:08:00+08:00",
+      "open": 18.85,
+      "high": 18.87,
+      "low": 18.83,
+      "close": 18.84,
+      "volume": 8089.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:09:00+08:00",
+      "open": 18.85,
+      "high": 18.91,
+      "low": 18.85,
+      "close": 18.9,
+      "volume": 23305.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:10:00+08:00",
+      "open": 18.9,
+      "high": 18.91,
+      "low": 18.9,
+      "close": 18.9,
+      "volume": 8703.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:11:00+08:00",
+      "open": 18.9,
+      "high": 18.9,
+      "low": 18.89,
+      "close": 18.89,
+      "volume": 15255.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:12:00+08:00",
+      "open": 18.89,
+      "high": 18.9,
+      "low": 18.88,
+      "close": 18.89,
+      "volume": 7288.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:13:00+08:00",
+      "open": 18.9,
+      "high": 18.9,
+      "low": 18.89,
+      "close": 18.89,
+      "volume": 10334.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:14:00+08:00",
+      "open": 18.9,
+      "high": 18.9,
+      "low": 18.89,
+      "close": 18.89,
+      "volume": 11799.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:15:00+08:00",
+      "open": 18.9,
+      "high": 18.94,
+      "low": 18.9,
+      "close": 18.94,
+      "volume": 32059.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:16:00+08:00",
+      "open": 18.94,
+      "high": 18.94,
+      "low": 18.89,
+      "close": 18.89,
+      "volume": 9880.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:17:00+08:00",
+      "open": 18.9,
+      "high": 18.9,
+      "low": 18.89,
+      "close": 18.89,
+      "volume": 4554.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:18:00+08:00",
+      "open": 18.9,
+      "high": 18.9,
+      "low": 18.88,
+      "close": 18.88,
+      "volume": 3844.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:19:00+08:00",
+      "open": 18.87,
+      "high": 18.88,
+      "low": 18.87,
+      "close": 18.88,
+      "volume": 4122.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:20:00+08:00",
+      "open": 18.87,
+      "high": 18.89,
+      "low": 18.87,
+      "close": 18.87,
+      "volume": 3458.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:21:00+08:00",
+      "open": 18.87,
+      "high": 18.87,
+      "low": 18.85,
+      "close": 18.87,
+      "volume": 6682.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:22:00+08:00",
+      "open": 18.86,
+      "high": 18.88,
+      "low": 18.86,
+      "close": 18.86,
+      "volume": 5244.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:23:00+08:00",
+      "open": 18.87,
+      "high": 18.87,
+      "low": 18.86,
+      "close": 18.87,
+      "volume": 2764.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:24:00+08:00",
+      "open": 18.88,
+      "high": 18.88,
+      "low": 18.87,
+      "close": 18.88,
+      "volume": 2834.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:25:00+08:00",
+      "open": 18.87,
+      "high": 18.88,
+      "low": 18.87,
+      "close": 18.88,
+      "volume": 2774.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:26:00+08:00",
+      "open": 18.88,
+      "high": 18.88,
+      "low": 18.87,
+      "close": 18.87,
+      "volume": 4311.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:27:00+08:00",
+      "open": 18.87,
+      "high": 18.88,
+      "low": 18.86,
+      "close": 18.86,
+      "volume": 2096.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:28:00+08:00",
+      "open": 18.86,
+      "high": 18.87,
+      "low": 18.86,
+      "close": 18.86,
+      "volume": 3853.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:29:00+08:00",
+      "open": 18.85,
+      "high": 18.85,
+      "low": 18.83,
+      "close": 18.83,
+      "volume": 6472.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:30:00+08:00",
+      "open": 18.83,
+      "high": 18.86,
+      "low": 18.83,
+      "close": 18.85,
+      "volume": 7183.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:31:00+08:00",
+      "open": 18.86,
+      "high": 18.86,
+      "low": 18.85,
+      "close": 18.86,
+      "volume": 4263.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:32:00+08:00",
+      "open": 18.85,
+      "high": 18.86,
+      "low": 18.83,
+      "close": 18.83,
+      "volume": 5802.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:33:00+08:00",
+      "open": 18.83,
+      "high": 18.85,
+      "low": 18.83,
+      "close": 18.85,
+      "volume": 6999.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:34:00+08:00",
+      "open": 18.84,
+      "high": 18.85,
+      "low": 18.83,
+      "close": 18.84,
+      "volume": 3619.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:35:00+08:00",
+      "open": 18.84,
+      "high": 18.85,
+      "low": 18.84,
+      "close": 18.84,
+      "volume": 1122.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:36:00+08:00",
+      "open": 18.85,
+      "high": 18.85,
+      "low": 18.84,
+      "close": 18.84,
+      "volume": 5685.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:37:00+08:00",
+      "open": 18.84,
+      "high": 18.85,
+      "low": 18.84,
+      "close": 18.84,
+      "volume": 1789.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:38:00+08:00",
+      "open": 18.83,
+      "high": 18.85,
+      "low": 18.83,
+      "close": 18.84,
+      "volume": 4653.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:39:00+08:00",
+      "open": 18.84,
+      "high": 18.85,
+      "low": 18.84,
+      "close": 18.84,
+      "volume": 1612.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:40:00+08:00",
+      "open": 18.84,
+      "high": 18.85,
+      "low": 18.83,
+      "close": 18.85,
+      "volume": 3647.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:41:00+08:00",
+      "open": 18.84,
+      "high": 18.85,
+      "low": 18.84,
+      "close": 18.85,
+      "volume": 5004.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:42:00+08:00",
+      "open": 18.85,
+      "high": 18.85,
+      "low": 18.84,
+      "close": 18.84,
+      "volume": 4254.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:43:00+08:00",
+      "open": 18.83,
+      "high": 18.84,
+      "low": 18.83,
+      "close": 18.84,
+      "volume": 5192.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:44:00+08:00",
+      "open": 18.83,
+      "high": 18.85,
+      "low": 18.83,
+      "close": 18.84,
+      "volume": 2645.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:45:00+08:00",
+      "open": 18.84,
+      "high": 18.86,
+      "low": 18.84,
+      "close": 18.86,
+      "volume": 1899.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:46:00+08:00",
+      "open": 18.85,
+      "high": 18.86,
+      "low": 18.84,
+      "close": 18.85,
+      "volume": 3875.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:47:00+08:00",
+      "open": 18.84,
+      "high": 18.86,
+      "low": 18.84,
+      "close": 18.86,
+      "volume": 3721.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:48:00+08:00",
+      "open": 18.85,
+      "high": 18.87,
+      "low": 18.85,
+      "close": 18.87,
+      "volume": 3007.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:49:00+08:00",
+      "open": 18.86,
+      "high": 18.86,
+      "low": 18.85,
+      "close": 18.85,
+      "volume": 4355.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:50:00+08:00",
+      "open": 18.85,
+      "high": 18.86,
+      "low": 18.84,
+      "close": 18.85,
+      "volume": 2474.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:51:00+08:00",
+      "open": 18.84,
+      "high": 18.85,
+      "low": 18.83,
+      "close": 18.83,
+      "volume": 4938.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:52:00+08:00",
+      "open": 18.82,
+      "high": 18.83,
+      "low": 18.81,
+      "close": 18.82,
+      "volume": 10999.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:53:00+08:00",
+      "open": 18.81,
+      "high": 18.81,
+      "low": 18.8,
+      "close": 18.81,
+      "volume": 6703.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:54:00+08:00",
+      "open": 18.8,
+      "high": 18.81,
+      "low": 18.8,
+      "close": 18.81,
+      "volume": 6645.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:55:00+08:00",
+      "open": 18.81,
+      "high": 18.81,
+      "low": 18.79,
+      "close": 18.79,
+      "volume": 11651.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:56:00+08:00",
+      "open": 18.8,
+      "high": 18.81,
+      "low": 18.79,
+      "close": 18.8,
+      "volume": 9203.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:57:00+08:00",
+      "open": 18.8,
+      "high": 18.8,
+      "low": 18.79,
+      "close": 18.8,
+      "volume": 3686.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:58:00+08:00",
+      "open": 18.79,
+      "high": 18.8,
+      "low": 18.79,
+      "close": 18.79,
+      "volume": 5234.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T10:59:00+08:00",
+      "open": 18.8,
+      "high": 18.81,
+      "low": 18.79,
+      "close": 18.81,
+      "volume": 5256.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T11:00:00+08:00",
+      "open": 18.81,
+      "high": 18.82,
+      "low": 18.8,
+      "close": 18.8,
+      "volume": 2521.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T11:01:00+08:00",
+      "open": 18.8,
+      "high": 18.81,
+      "low": 18.79,
+      "close": 18.8,
+      "volume": 4630.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T11:02:00+08:00",
+      "open": 18.8,
+      "high": 18.83,
+      "low": 18.8,
+      "close": 18.83,
+      "volume": 4442.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T11:03:00+08:00",
+      "open": 18.83,
+      "high": 18.84,
+      "low": 18.82,
+      "close": 18.83,
+      "volume": 2655.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T11:04:00+08:00",
+      "open": 18.82,
+      "high": 18.82,
+      "low": 18.8,
+      "close": 18.8,
+      "volume": 2805.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T11:05:00+08:00",
+      "open": 18.8,
+      "high": 18.81,
+      "low": 18.8,
+      "close": 18.8,
+      "volume": 2542.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T11:06:00+08:00",
+      "open": 18.8,
+      "high": 18.81,
+      "low": 18.8,
+      "close": 18.81,
+      "volume": 2038.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T11:07:00+08:00",
+      "open": 18.81,
+      "high": 18.81,
+      "low": 18.8,
+      "close": 18.8,
+      "volume": 1649.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T11:08:00+08:00",
+      "open": 18.8,
+      "high": 18.82,
+      "low": 18.8,
+      "close": 18.81,
+      "volume": 2635.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T11:09:00+08:00",
+      "open": 18.81,
+      "high": 18.82,
+      "low": 18.81,
+      "close": 18.82,
+      "volume": 1985.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T11:10:00+08:00",
+      "open": 18.82,
+      "high": 18.83,
+      "low": 18.82,
+      "close": 18.82,
+      "volume": 739.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T11:11:00+08:00",
+      "open": 18.83,
+      "high": 18.83,
+      "low": 18.82,
+      "close": 18.82,
+      "volume": 2285.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T11:12:00+08:00",
+      "open": 18.83,
+      "high": 18.83,
+      "low": 18.8,
+      "close": 18.81,
+      "volume": 2213.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T11:13:00+08:00",
+      "open": 18.81,
+      "high": 18.81,
+      "low": 18.8,
+      "close": 18.81,
+      "volume": 1487.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T11:14:00+08:00",
+      "open": 18.81,
+      "high": 18.81,
+      "low": 18.8,
+      "close": 18.8,
+      "volume": 1305.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T11:15:00+08:00",
+      "open": 18.8,
+      "high": 18.81,
+      "low": 18.8,
+      "close": 18.8,
+      "volume": 1375.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T11:16:00+08:00",
+      "open": 18.8,
+      "high": 18.81,
+      "low": 18.8,
+      "close": 18.8,
+      "volume": 2806.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T11:17:00+08:00",
+      "open": 18.8,
+      "high": 18.81,
+      "low": 18.79,
+      "close": 18.79,
+      "volume": 2966.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T11:18:00+08:00",
+      "open": 18.79,
+      "high": 18.8,
+      "low": 18.79,
+      "close": 18.79,
+      "volume": 2406.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T11:19:00+08:00",
+      "open": 18.8,
+      "high": 18.8,
+      "low": 18.79,
+      "close": 18.79,
+      "volume": 1806.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T11:20:00+08:00",
+      "open": 18.79,
+      "high": 18.8,
+      "low": 18.79,
+      "close": 18.79,
+      "volume": 2981.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T11:21:00+08:00",
+      "open": 18.79,
+      "high": 18.8,
+      "low": 18.79,
+      "close": 18.79,
+      "volume": 5252.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T11:22:00+08:00",
+      "open": 18.79,
+      "high": 18.8,
+      "low": 18.79,
+      "close": 18.79,
+      "volume": 1937.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T11:23:00+08:00",
+      "open": 18.79,
+      "high": 18.8,
+      "low": 18.79,
+      "close": 18.79,
+      "volume": 4166.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T11:24:00+08:00",
+      "open": 18.8,
+      "high": 18.8,
+      "low": 18.79,
+      "close": 18.8,
+      "volume": 1914.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T11:25:00+08:00",
+      "open": 18.8,
+      "high": 18.8,
+      "low": 18.79,
+      "close": 18.79,
+      "volume": 700.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T11:26:00+08:00",
+      "open": 18.8,
+      "high": 18.8,
+      "low": 18.79,
+      "close": 18.8,
+      "volume": 2383.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T11:27:00+08:00",
+      "open": 18.79,
+      "high": 18.81,
+      "low": 18.79,
+      "close": 18.79,
+      "volume": 5034.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T11:28:00+08:00",
+      "open": 18.8,
+      "high": 18.8,
+      "low": 18.78,
+      "close": 18.78,
+      "volume": 6059.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T11:29:00+08:00",
+      "open": 18.78,
+      "high": 18.78,
+      "low": 18.77,
+      "close": 18.77,
+      "volume": 5614.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T11:30:00+08:00",
+      "open": 18.77,
+      "high": 18.78,
+      "low": 18.76,
+      "close": 18.77,
+      "volume": 3862.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:01:00+08:00",
+      "open": 18.77,
+      "high": 18.77,
+      "low": 18.73,
+      "close": 18.75,
+      "volume": 32407.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:02:00+08:00",
+      "open": 18.76,
+      "high": 18.76,
+      "low": 18.73,
+      "close": 18.73,
+      "volume": 5422.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:03:00+08:00",
+      "open": 18.73,
+      "high": 18.76,
+      "low": 18.73,
+      "close": 18.76,
+      "volume": 5405.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:04:00+08:00",
+      "open": 18.76,
+      "high": 18.76,
+      "low": 18.74,
+      "close": 18.74,
+      "volume": 2048.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:05:00+08:00",
+      "open": 18.74,
+      "high": 18.75,
+      "low": 18.73,
+      "close": 18.75,
+      "volume": 3715.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:06:00+08:00",
+      "open": 18.74,
+      "high": 18.75,
+      "low": 18.74,
+      "close": 18.75,
+      "volume": 2253.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:07:00+08:00",
+      "open": 18.74,
+      "high": 18.75,
+      "low": 18.72,
+      "close": 18.72,
+      "volume": 8477.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:08:00+08:00",
+      "open": 18.72,
+      "high": 18.73,
+      "low": 18.72,
+      "close": 18.72,
+      "volume": 6611.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:09:00+08:00",
+      "open": 18.71,
+      "high": 18.74,
+      "low": 18.71,
+      "close": 18.74,
+      "volume": 9188.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:10:00+08:00",
+      "open": 18.73,
+      "high": 18.75,
+      "low": 18.73,
+      "close": 18.74,
+      "volume": 10660.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:11:00+08:00",
+      "open": 18.73,
+      "high": 18.76,
+      "low": 18.73,
+      "close": 18.76,
+      "volume": 5535.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:12:00+08:00",
+      "open": 18.77,
+      "high": 18.77,
+      "low": 18.76,
+      "close": 18.76,
+      "volume": 2571.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:13:00+08:00",
+      "open": 18.77,
+      "high": 18.77,
+      "low": 18.76,
+      "close": 18.77,
+      "volume": 2106.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:14:00+08:00",
+      "open": 18.77,
+      "high": 18.78,
+      "low": 18.77,
+      "close": 18.77,
+      "volume": 3020.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:15:00+08:00",
+      "open": 18.78,
+      "high": 18.78,
+      "low": 18.76,
+      "close": 18.76,
+      "volume": 3951.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:16:00+08:00",
+      "open": 18.77,
+      "high": 18.77,
+      "low": 18.76,
+      "close": 18.76,
+      "volume": 2913.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:17:00+08:00",
+      "open": 18.76,
+      "high": 18.78,
+      "low": 18.75,
+      "close": 18.78,
+      "volume": 5621.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:18:00+08:00",
+      "open": 18.77,
+      "high": 18.77,
+      "low": 18.74,
+      "close": 18.75,
+      "volume": 3935.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:19:00+08:00",
+      "open": 18.74,
+      "high": 18.75,
+      "low": 18.73,
+      "close": 18.73,
+      "volume": 4686.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:20:00+08:00",
+      "open": 18.73,
+      "high": 18.75,
+      "low": 18.73,
+      "close": 18.75,
+      "volume": 8298.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:21:00+08:00",
+      "open": 18.74,
+      "high": 18.75,
+      "low": 18.73,
+      "close": 18.74,
+      "volume": 4445.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:22:00+08:00",
+      "open": 18.73,
+      "high": 18.75,
+      "low": 18.73,
+      "close": 18.74,
+      "volume": 2888.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:23:00+08:00",
+      "open": 18.75,
+      "high": 18.75,
+      "low": 18.74,
+      "close": 18.75,
+      "volume": 3472.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:24:00+08:00",
+      "open": 18.75,
+      "high": 18.75,
+      "low": 18.74,
+      "close": 18.75,
+      "volume": 1828.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:25:00+08:00",
+      "open": 18.73,
+      "high": 18.75,
+      "low": 18.73,
+      "close": 18.74,
+      "volume": 1698.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:26:00+08:00",
+      "open": 18.73,
+      "high": 18.73,
+      "low": 18.72,
+      "close": 18.73,
+      "volume": 5760.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:27:00+08:00",
+      "open": 18.73,
+      "high": 18.74,
+      "low": 18.72,
+      "close": 18.72,
+      "volume": 4047.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:28:00+08:00",
+      "open": 18.72,
+      "high": 18.74,
+      "low": 18.72,
+      "close": 18.74,
+      "volume": 9146.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:29:00+08:00",
+      "open": 18.74,
+      "high": 18.75,
+      "low": 18.74,
+      "close": 18.75,
+      "volume": 5531.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:30:00+08:00",
+      "open": 18.74,
+      "high": 18.77,
+      "low": 18.74,
+      "close": 18.76,
+      "volume": 14768.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:31:00+08:00",
+      "open": 18.76,
+      "high": 18.77,
+      "low": 18.73,
+      "close": 18.73,
+      "volume": 18513.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:32:00+08:00",
+      "open": 18.73,
+      "high": 18.73,
+      "low": 18.7,
+      "close": 18.72,
+      "volume": 10715.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:33:00+08:00",
+      "open": 18.71,
+      "high": 18.72,
+      "low": 18.7,
+      "close": 18.7,
+      "volume": 6946.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:34:00+08:00",
+      "open": 18.7,
+      "high": 18.71,
+      "low": 18.69,
+      "close": 18.69,
+      "volume": 12390.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:35:00+08:00",
+      "open": 18.69,
+      "high": 18.71,
+      "low": 18.69,
+      "close": 18.71,
+      "volume": 5724.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:36:00+08:00",
+      "open": 18.71,
+      "high": 18.72,
+      "low": 18.71,
+      "close": 18.72,
+      "volume": 3313.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:37:00+08:00",
+      "open": 18.73,
+      "high": 18.73,
+      "low": 18.72,
+      "close": 18.72,
+      "volume": 2900.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:38:00+08:00",
+      "open": 18.73,
+      "high": 18.74,
+      "low": 18.73,
+      "close": 18.73,
+      "volume": 2757.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:39:00+08:00",
+      "open": 18.74,
+      "high": 18.75,
+      "low": 18.73,
+      "close": 18.75,
+      "volume": 2356.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:40:00+08:00",
+      "open": 18.75,
+      "high": 18.75,
+      "low": 18.73,
+      "close": 18.74,
+      "volume": 2309.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:41:00+08:00",
+      "open": 18.74,
+      "high": 18.76,
+      "low": 18.73,
+      "close": 18.76,
+      "volume": 6389.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:42:00+08:00",
+      "open": 18.75,
+      "high": 18.76,
+      "low": 18.75,
+      "close": 18.76,
+      "volume": 1187.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:43:00+08:00",
+      "open": 18.76,
+      "high": 18.76,
+      "low": 18.75,
+      "close": 18.76,
+      "volume": 3530.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:44:00+08:00",
+      "open": 18.76,
+      "high": 18.77,
+      "low": 18.75,
+      "close": 18.76,
+      "volume": 4279.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:45:00+08:00",
+      "open": 18.76,
+      "high": 18.76,
+      "low": 18.74,
+      "close": 18.76,
+      "volume": 6010.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:46:00+08:00",
+      "open": 18.75,
+      "high": 18.76,
+      "low": 18.75,
+      "close": 18.75,
+      "volume": 3124.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:47:00+08:00",
+      "open": 18.75,
+      "high": 18.76,
+      "low": 18.75,
+      "close": 18.75,
+      "volume": 1248.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:48:00+08:00",
+      "open": 18.75,
+      "high": 18.76,
+      "low": 18.75,
+      "close": 18.75,
+      "volume": 2702.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:49:00+08:00",
+      "open": 18.76,
+      "high": 18.77,
+      "low": 18.75,
+      "close": 18.77,
+      "volume": 1784.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:50:00+08:00",
+      "open": 18.77,
+      "high": 18.77,
+      "low": 18.76,
+      "close": 18.76,
+      "volume": 3866.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:51:00+08:00",
+      "open": 18.77,
+      "high": 18.77,
+      "low": 18.76,
+      "close": 18.76,
+      "volume": 1780.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:52:00+08:00",
+      "open": 18.77,
+      "high": 18.78,
+      "low": 18.76,
+      "close": 18.77,
+      "volume": 4149.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:53:00+08:00",
+      "open": 18.76,
+      "high": 18.77,
+      "low": 18.76,
+      "close": 18.76,
+      "volume": 1415.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:54:00+08:00",
+      "open": 18.77,
+      "high": 18.77,
+      "low": 18.75,
+      "close": 18.76,
+      "volume": 3581.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:55:00+08:00",
+      "open": 18.75,
+      "high": 18.76,
+      "low": 18.75,
+      "close": 18.75,
+      "volume": 1486.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:56:00+08:00",
+      "open": 18.76,
+      "high": 18.77,
+      "low": 18.75,
+      "close": 18.76,
+      "volume": 3821.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:57:00+08:00",
+      "open": 18.77,
+      "high": 18.78,
+      "low": 18.76,
+      "close": 18.76,
+      "volume": 2008.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:58:00+08:00",
+      "open": 18.77,
+      "high": 18.78,
+      "low": 18.76,
+      "close": 18.78,
+      "volume": 4062.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T13:59:00+08:00",
+      "open": 18.78,
+      "high": 18.78,
+      "low": 18.77,
+      "close": 18.78,
+      "volume": 3025.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:00:00+08:00",
+      "open": 18.78,
+      "high": 18.78,
+      "low": 18.77,
+      "close": 18.78,
+      "volume": 2638.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:01:00+08:00",
+      "open": 18.78,
+      "high": 18.79,
+      "low": 18.77,
+      "close": 18.77,
+      "volume": 2614.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:02:00+08:00",
+      "open": 18.76,
+      "high": 18.77,
+      "low": 18.75,
+      "close": 18.75,
+      "volume": 3920.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:03:00+08:00",
+      "open": 18.76,
+      "high": 18.77,
+      "low": 18.75,
+      "close": 18.75,
+      "volume": 2635.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:04:00+08:00",
+      "open": 18.76,
+      "high": 18.77,
+      "low": 18.75,
+      "close": 18.76,
+      "volume": 2549.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:05:00+08:00",
+      "open": 18.76,
+      "high": 18.77,
+      "low": 18.76,
+      "close": 18.76,
+      "volume": 1596.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:06:00+08:00",
+      "open": 18.76,
+      "high": 18.76,
+      "low": 18.74,
+      "close": 18.74,
+      "volume": 2449.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:07:00+08:00",
+      "open": 18.74,
+      "high": 18.75,
+      "low": 18.74,
+      "close": 18.75,
+      "volume": 3218.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:08:00+08:00",
+      "open": 18.75,
+      "high": 18.77,
+      "low": 18.75,
+      "close": 18.76,
+      "volume": 3821.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:09:00+08:00",
+      "open": 18.76,
+      "high": 18.77,
+      "low": 18.75,
+      "close": 18.76,
+      "volume": 2164.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:10:00+08:00",
+      "open": 18.76,
+      "high": 18.77,
+      "low": 18.75,
+      "close": 18.76,
+      "volume": 2706.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:11:00+08:00",
+      "open": 18.76,
+      "high": 18.77,
+      "low": 18.75,
+      "close": 18.76,
+      "volume": 3305.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:12:00+08:00",
+      "open": 18.77,
+      "high": 18.77,
+      "low": 18.76,
+      "close": 18.76,
+      "volume": 2508.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:13:00+08:00",
+      "open": 18.76,
+      "high": 18.77,
+      "low": 18.76,
+      "close": 18.77,
+      "volume": 3675.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:14:00+08:00",
+      "open": 18.76,
+      "high": 18.77,
+      "low": 18.76,
+      "close": 18.76,
+      "volume": 1835.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:15:00+08:00",
+      "open": 18.76,
+      "high": 18.76,
+      "low": 18.74,
+      "close": 18.75,
+      "volume": 3531.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:16:00+08:00",
+      "open": 18.75,
+      "high": 18.76,
+      "low": 18.74,
+      "close": 18.74,
+      "volume": 4221.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:17:00+08:00",
+      "open": 18.75,
+      "high": 18.76,
+      "low": 18.75,
+      "close": 18.75,
+      "volume": 1703.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:18:00+08:00",
+      "open": 18.75,
+      "high": 18.75,
+      "low": 18.74,
+      "close": 18.74,
+      "volume": 3359.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:19:00+08:00",
+      "open": 18.74,
+      "high": 18.76,
+      "low": 18.74,
+      "close": 18.74,
+      "volume": 3987.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:20:00+08:00",
+      "open": 18.75,
+      "high": 18.76,
+      "low": 18.74,
+      "close": 18.75,
+      "volume": 2447.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:21:00+08:00",
+      "open": 18.74,
+      "high": 18.76,
+      "low": 18.74,
+      "close": 18.75,
+      "volume": 5569.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:22:00+08:00",
+      "open": 18.76,
+      "high": 18.77,
+      "low": 18.75,
+      "close": 18.76,
+      "volume": 3941.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:23:00+08:00",
+      "open": 18.75,
+      "high": 18.77,
+      "low": 18.75,
+      "close": 18.77,
+      "volume": 1819.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:24:00+08:00",
+      "open": 18.77,
+      "high": 18.77,
+      "low": 18.76,
+      "close": 18.76,
+      "volume": 1243.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:25:00+08:00",
+      "open": 18.76,
+      "high": 18.77,
+      "low": 18.75,
+      "close": 18.76,
+      "volume": 2471.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:26:00+08:00",
+      "open": 18.75,
+      "high": 18.77,
+      "low": 18.75,
+      "close": 18.76,
+      "volume": 1969.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:27:00+08:00",
+      "open": 18.76,
+      "high": 18.77,
+      "low": 18.76,
+      "close": 18.77,
+      "volume": 1526.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:28:00+08:00",
+      "open": 18.76,
+      "high": 18.76,
+      "low": 18.75,
+      "close": 18.75,
+      "volume": 2734.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:29:00+08:00",
+      "open": 18.76,
+      "high": 18.76,
+      "low": 18.75,
+      "close": 18.76,
+      "volume": 967.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:30:00+08:00",
+      "open": 18.76,
+      "high": 18.76,
+      "low": 18.75,
+      "close": 18.76,
+      "volume": 2434.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:31:00+08:00",
+      "open": 18.75,
+      "high": 18.76,
+      "low": 18.74,
+      "close": 18.75,
+      "volume": 4051.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:32:00+08:00",
+      "open": 18.74,
+      "high": 18.75,
+      "low": 18.73,
+      "close": 18.73,
+      "volume": 5620.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:33:00+08:00",
+      "open": 18.73,
+      "high": 18.73,
+      "low": 18.71,
+      "close": 18.71,
+      "volume": 6960.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:34:00+08:00",
+      "open": 18.71,
+      "high": 18.73,
+      "low": 18.71,
+      "close": 18.73,
+      "volume": 8373.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:35:00+08:00",
+      "open": 18.72,
+      "high": 18.72,
+      "low": 18.71,
+      "close": 18.71,
+      "volume": 5959.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:36:00+08:00",
+      "open": 18.72,
+      "high": 18.73,
+      "low": 18.71,
+      "close": 18.73,
+      "volume": 7269.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:37:00+08:00",
+      "open": 18.72,
+      "high": 18.74,
+      "low": 18.72,
+      "close": 18.74,
+      "volume": 5270.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:38:00+08:00",
+      "open": 18.74,
+      "high": 18.74,
+      "low": 18.73,
+      "close": 18.74,
+      "volume": 2994.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:39:00+08:00",
+      "open": 18.73,
+      "high": 18.74,
+      "low": 18.72,
+      "close": 18.72,
+      "volume": 5847.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:40:00+08:00",
+      "open": 18.73,
+      "high": 18.73,
+      "low": 18.71,
+      "close": 18.71,
+      "volume": 3856.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:41:00+08:00",
+      "open": 18.72,
+      "high": 18.73,
+      "low": 18.71,
+      "close": 18.72,
+      "volume": 4393.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:42:00+08:00",
+      "open": 18.73,
+      "high": 18.73,
+      "low": 18.72,
+      "close": 18.72,
+      "volume": 3252.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:43:00+08:00",
+      "open": 18.72,
+      "high": 18.73,
+      "low": 18.72,
+      "close": 18.72,
+      "volume": 7946.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:44:00+08:00",
+      "open": 18.72,
+      "high": 18.73,
+      "low": 18.72,
+      "close": 18.72,
+      "volume": 6723.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:45:00+08:00",
+      "open": 18.73,
+      "high": 18.73,
+      "low": 18.72,
+      "close": 18.73,
+      "volume": 7994.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:46:00+08:00",
+      "open": 18.74,
+      "high": 18.74,
+      "low": 18.73,
+      "close": 18.73,
+      "volume": 6093.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:47:00+08:00",
+      "open": 18.73,
+      "high": 18.74,
+      "low": 18.73,
+      "close": 18.74,
+      "volume": 13067.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:48:00+08:00",
+      "open": 18.74,
+      "high": 18.75,
+      "low": 18.73,
+      "close": 18.75,
+      "volume": 3486.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:49:00+08:00",
+      "open": 18.74,
+      "high": 18.75,
+      "low": 18.74,
+      "close": 18.74,
+      "volume": 6389.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:50:00+08:00",
+      "open": 18.74,
+      "high": 18.75,
+      "low": 18.73,
+      "close": 18.74,
+      "volume": 5072.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:51:00+08:00",
+      "open": 18.75,
+      "high": 18.75,
+      "low": 18.74,
+      "close": 18.74,
+      "volume": 5283.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:52:00+08:00",
+      "open": 18.75,
+      "high": 18.76,
+      "low": 18.75,
+      "close": 18.76,
+      "volume": 17600.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:53:00+08:00",
+      "open": 18.75,
+      "high": 18.77,
+      "low": 18.75,
+      "close": 18.77,
+      "volume": 11476.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:54:00+08:00",
+      "open": 18.76,
+      "high": 18.78,
+      "low": 18.76,
+      "close": 18.77,
+      "volume": 9368.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:55:00+08:00",
+      "open": 18.77,
+      "high": 18.78,
+      "low": 18.76,
+      "close": 18.76,
+      "volume": 6399.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:56:00+08:00",
+      "open": 18.77,
+      "high": 18.78,
+      "low": 18.77,
+      "close": 18.77,
+      "volume": 15946.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:57:00+08:00",
+      "open": 18.77,
+      "high": 18.78,
+      "low": 18.76,
+      "close": 18.77,
+      "volume": 17817.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:58:00+08:00",
+      "open": 18.78,
+      "high": 18.78,
+      "low": 18.78,
+      "close": 18.78,
+      "volume": 180.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T14:59:00+08:00",
+      "open": 18.78,
+      "high": 18.78,
+      "low": 18.78,
+      "close": 18.78,
+      "volume": 0.0,
+      "turnover": null
+    },
+    {
+      "ts_code": "300059.SZ",
+      "datetime": "2026-09-22T15:00:00+08:00",
+      "open": 18.78,
+      "high": 18.78,
+      "low": 18.77,
+      "close": 18.77,
+      "volume": 16147.0,
+      "turnover": null
+    }
+  ]
+}

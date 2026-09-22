@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-25T17:39:22.721479+08:00",
+  "updated_at": "2026-09-23T02:08:57.631485+08:00",
   "funds": [
     {
       "code": "003578",
@@ -7,158 +7,11 @@
       "status": "ok",
       "provider": "akshare:fund:003578",
       "ts_code": "003578",
-      "nav_date": "20260824",
-      "ann_date": "20260824",
-      "unit_nav": 2.3817,
+      "nav_date": "20260922",
+      "ann_date": "20260922",
+      "unit_nav": 2.4294,
       "accum_nav": null,
       "history": [
-        {
-          "nav_date": "20250702",
-          "unit_nav": 1.7638,
-          "pct_chg": -0.42,
-          "ts_code": "003578",
-          "ann_date": "20250702"
-        },
-        {
-          "nav_date": "20250703",
-          "unit_nav": 1.7724,
-          "pct_chg": 0.49,
-          "ts_code": "003578",
-          "ann_date": "20250703"
-        },
-        {
-          "nav_date": "20250704",
-          "unit_nav": 1.7717,
-          "pct_chg": -0.04,
-          "ts_code": "003578",
-          "ann_date": "20250704"
-        },
-        {
-          "nav_date": "20250707",
-          "unit_nav": 1.7705,
-          "pct_chg": -0.07,
-          "ts_code": "003578",
-          "ann_date": "20250707"
-        },
-        {
-          "nav_date": "20250708",
-          "unit_nav": 1.7914,
-          "pct_chg": 1.18,
-          "ts_code": "003578",
-          "ann_date": "20250708"
-        },
-        {
-          "nav_date": "20250709",
-          "unit_nav": 1.7873,
-          "pct_chg": -0.23,
-          "ts_code": "003578",
-          "ann_date": "20250709"
-        },
-        {
-          "nav_date": "20250710",
-          "unit_nav": 1.7958,
-          "pct_chg": 0.48,
-          "ts_code": "003578",
-          "ann_date": "20250710"
-        },
-        {
-          "nav_date": "20250711",
-          "unit_nav": 1.8052,
-          "pct_chg": 0.52,
-          "ts_code": "003578",
-          "ann_date": "20250711"
-        },
-        {
-          "nav_date": "20250714",
-          "unit_nav": 1.8061,
-          "pct_chg": 0.05,
-          "ts_code": "003578",
-          "ann_date": "20250714"
-        },
-        {
-          "nav_date": "20250715",
-          "unit_nav": 1.8084,
-          "pct_chg": 0.13,
-          "ts_code": "003578",
-          "ann_date": "20250715"
-        },
-        {
-          "nav_date": "20250716",
-          "unit_nav": 1.8083,
-          "pct_chg": -0.01,
-          "ts_code": "003578",
-          "ann_date": "20250716"
-        },
-        {
-          "nav_date": "20250717",
-          "unit_nav": 1.824,
-          "pct_chg": 0.87,
-          "ts_code": "003578",
-          "ann_date": "20250717"
-        },
-        {
-          "nav_date": "20250718",
-          "unit_nav": 1.8276,
-          "pct_chg": 0.2,
-          "ts_code": "003578",
-          "ann_date": "20250718"
-        },
-        {
-          "nav_date": "20250721",
-          "unit_nav": 1.8498,
-          "pct_chg": 1.21,
-          "ts_code": "003578",
-          "ann_date": "20250721"
-        },
-        {
-          "nav_date": "20250722",
-          "unit_nav": 1.8709,
-          "pct_chg": 1.14,
-          "ts_code": "003578",
-          "ann_date": "20250722"
-        },
-        {
-          "nav_date": "20250723",
-          "unit_nav": 1.8716,
-          "pct_chg": 0.04,
-          "ts_code": "003578",
-          "ann_date": "20250723"
-        },
-        {
-          "nav_date": "20250724",
-          "unit_nav": 1.8917,
-          "pct_chg": 1.07,
-          "ts_code": "003578",
-          "ann_date": "20250724"
-        },
-        {
-          "nav_date": "20250725",
-          "unit_nav": 1.8904,
-          "pct_chg": -0.07,
-          "ts_code": "003578",
-          "ann_date": "20250725"
-        },
-        {
-          "nav_date": "20250728",
-          "unit_nav": 1.8952,
-          "pct_chg": 0.25,
-          "ts_code": "003578",
-          "ann_date": "20250728"
-        },
-        {
-          "nav_date": "20250729",
-          "unit_nav": 1.9039,
-          "pct_chg": 0.46,
-          "ts_code": "003578",
-          "ann_date": "20250729"
-        },
-        {
-          "nav_date": "20250730",
-          "unit_nav": 1.8969,
-          "pct_chg": -0.37,
-          "ts_code": "003578",
-          "ann_date": "20250730"
-        },
         {
           "nav_date": "20250731",
           "unit_nav": 1.8695,
@@ -1971,6 +1824,153 @@
           "pct_chg": -1.83,
           "ts_code": "003578",
           "ann_date": "20260824"
+        },
+        {
+          "nav_date": "20260825",
+          "unit_nav": 2.3772,
+          "pct_chg": -0.19,
+          "ts_code": "003578",
+          "ann_date": "20260825"
+        },
+        {
+          "nav_date": "20260826",
+          "unit_nav": 2.3908,
+          "pct_chg": 0.57,
+          "ts_code": "003578",
+          "ann_date": "20260826"
+        },
+        {
+          "nav_date": "20260827",
+          "unit_nav": 2.4467,
+          "pct_chg": 2.34,
+          "ts_code": "003578",
+          "ann_date": "20260827"
+        },
+        {
+          "nav_date": "20260828",
+          "unit_nav": 2.4325,
+          "pct_chg": -0.58,
+          "ts_code": "003578",
+          "ann_date": "20260828"
+        },
+        {
+          "nav_date": "20260831",
+          "unit_nav": 2.4517,
+          "pct_chg": 0.79,
+          "ts_code": "003578",
+          "ann_date": "20260831"
+        },
+        {
+          "nav_date": "20260901",
+          "unit_nav": 2.422,
+          "pct_chg": -1.21,
+          "ts_code": "003578",
+          "ann_date": "20260901"
+        },
+        {
+          "nav_date": "20260902",
+          "unit_nav": 2.3846,
+          "pct_chg": -1.54,
+          "ts_code": "003578",
+          "ann_date": "20260902"
+        },
+        {
+          "nav_date": "20260903",
+          "unit_nav": 2.3951,
+          "pct_chg": 0.44,
+          "ts_code": "003578",
+          "ann_date": "20260903"
+        },
+        {
+          "nav_date": "20260904",
+          "unit_nav": 2.3665,
+          "pct_chg": -1.19,
+          "ts_code": "003578",
+          "ann_date": "20260904"
+        },
+        {
+          "nav_date": "20260907",
+          "unit_nav": 2.4,
+          "pct_chg": 1.42,
+          "ts_code": "003578",
+          "ann_date": "20260907"
+        },
+        {
+          "nav_date": "20260908",
+          "unit_nav": 2.4082,
+          "pct_chg": 0.34,
+          "ts_code": "003578",
+          "ann_date": "20260908"
+        },
+        {
+          "nav_date": "20260909",
+          "unit_nav": 2.4082,
+          "pct_chg": 0.0,
+          "ts_code": "003578",
+          "ann_date": "20260909"
+        },
+        {
+          "nav_date": "20260910",
+          "unit_nav": 2.3939,
+          "pct_chg": -0.59,
+          "ts_code": "003578",
+          "ann_date": "20260910"
+        },
+        {
+          "nav_date": "20260911",
+          "unit_nav": 2.3564,
+          "pct_chg": -1.57,
+          "ts_code": "003578",
+          "ann_date": "20260911"
+        },
+        {
+          "nav_date": "20260914",
+          "unit_nav": 2.3509,
+          "pct_chg": -0.23,
+          "ts_code": "003578",
+          "ann_date": "20260914"
+        },
+        {
+          "nav_date": "20260915",
+          "unit_nav": 2.3471,
+          "pct_chg": -0.16,
+          "ts_code": "003578",
+          "ann_date": "20260915"
+        },
+        {
+          "nav_date": "20260916",
+          "unit_nav": 2.3823,
+          "pct_chg": 1.5,
+          "ts_code": "003578",
+          "ann_date": "20260916"
+        },
+        {
+          "nav_date": "20260917",
+          "unit_nav": 2.3731,
+          "pct_chg": -0.39,
+          "ts_code": "003578",
+          "ann_date": "20260917"
+        },
+        {
+          "nav_date": "20260918",
+          "unit_nav": 2.4165,
+          "pct_chg": 1.83,
+          "ts_code": "003578",
+          "ann_date": "20260918"
+        },
+        {
+          "nav_date": "20260921",
+          "unit_nav": 2.4338,
+          "pct_chg": 0.72,
+          "ts_code": "003578",
+          "ann_date": "20260921"
+        },
+        {
+          "nav_date": "20260922",
+          "unit_nav": 2.4294,
+          "pct_chg": -0.18,
+          "ts_code": "003578",
+          "ann_date": "20260922"
         }
       ]
     },
@@ -1980,158 +1980,11 @@
       "status": "ok",
       "provider": "akshare:fund:501208",
       "ts_code": "501208",
-      "nav_date": "20260824",
-      "ann_date": "20260824",
-      "unit_nav": 1.3063,
+      "nav_date": "20260922",
+      "ann_date": "20260922",
+      "unit_nav": 1.3207,
       "accum_nav": null,
       "history": [
-        {
-          "nav_date": "20250702",
-          "unit_nav": 0.9867,
-          "pct_chg": -2.02,
-          "ts_code": "501208",
-          "ann_date": "20250702"
-        },
-        {
-          "nav_date": "20250703",
-          "unit_nav": 0.985,
-          "pct_chg": -0.17,
-          "ts_code": "501208",
-          "ann_date": "20250703"
-        },
-        {
-          "nav_date": "20250704",
-          "unit_nav": 0.9829,
-          "pct_chg": -0.21,
-          "ts_code": "501208",
-          "ann_date": "20250704"
-        },
-        {
-          "nav_date": "20250707",
-          "unit_nav": 0.9824,
-          "pct_chg": -0.05,
-          "ts_code": "501208",
-          "ann_date": "20250707"
-        },
-        {
-          "nav_date": "20250708",
-          "unit_nav": 1.0044,
-          "pct_chg": 2.24,
-          "ts_code": "501208",
-          "ann_date": "20250708"
-        },
-        {
-          "nav_date": "20250709",
-          "unit_nav": 0.9981,
-          "pct_chg": -0.63,
-          "ts_code": "501208",
-          "ann_date": "20250709"
-        },
-        {
-          "nav_date": "20250710",
-          "unit_nav": 1.0006,
-          "pct_chg": 0.25,
-          "ts_code": "501208",
-          "ann_date": "20250710"
-        },
-        {
-          "nav_date": "20250711",
-          "unit_nav": 1.017,
-          "pct_chg": 1.64,
-          "ts_code": "501208",
-          "ann_date": "20250711"
-        },
-        {
-          "nav_date": "20250714",
-          "unit_nav": 1.0138,
-          "pct_chg": -0.31,
-          "ts_code": "501208",
-          "ann_date": "20250714"
-        },
-        {
-          "nav_date": "20250715",
-          "unit_nav": 1.0234,
-          "pct_chg": 0.95,
-          "ts_code": "501208",
-          "ann_date": "20250715"
-        },
-        {
-          "nav_date": "20250716",
-          "unit_nav": 1.0242,
-          "pct_chg": 0.08,
-          "ts_code": "501208",
-          "ann_date": "20250716"
-        },
-        {
-          "nav_date": "20250717",
-          "unit_nav": 1.0411,
-          "pct_chg": 1.65,
-          "ts_code": "501208",
-          "ann_date": "20250717"
-        },
-        {
-          "nav_date": "20250718",
-          "unit_nav": 1.0475,
-          "pct_chg": 0.61,
-          "ts_code": "501208",
-          "ann_date": "20250718"
-        },
-        {
-          "nav_date": "20250721",
-          "unit_nav": 1.0503,
-          "pct_chg": 0.27,
-          "ts_code": "501208",
-          "ann_date": "20250721"
-        },
-        {
-          "nav_date": "20250722",
-          "unit_nav": 1.0482,
-          "pct_chg": -0.2,
-          "ts_code": "501208",
-          "ann_date": "20250722"
-        },
-        {
-          "nav_date": "20250723",
-          "unit_nav": 1.06,
-          "pct_chg": 1.13,
-          "ts_code": "501208",
-          "ann_date": "20250723"
-        },
-        {
-          "nav_date": "20250724",
-          "unit_nav": 1.0699,
-          "pct_chg": 0.93,
-          "ts_code": "501208",
-          "ann_date": "20250724"
-        },
-        {
-          "nav_date": "20250725",
-          "unit_nav": 1.0763,
-          "pct_chg": 0.6,
-          "ts_code": "501208",
-          "ann_date": "20250725"
-        },
-        {
-          "nav_date": "20250728",
-          "unit_nav": 1.0868,
-          "pct_chg": 0.98,
-          "ts_code": "501208",
-          "ann_date": "20250728"
-        },
-        {
-          "nav_date": "20250729",
-          "unit_nav": 1.1095,
-          "pct_chg": 2.09,
-          "ts_code": "501208",
-          "ann_date": "20250729"
-        },
-        {
-          "nav_date": "20250730",
-          "unit_nav": 1.0854,
-          "pct_chg": -2.17,
-          "ts_code": "501208",
-          "ann_date": "20250730"
-        },
         {
           "nav_date": "20250731",
           "unit_nav": 1.0838,
@@ -3944,6 +3797,153 @@
           "pct_chg": -2.51,
           "ts_code": "501208",
           "ann_date": "20260824"
+        },
+        {
+          "nav_date": "20260825",
+          "unit_nav": 1.2961,
+          "pct_chg": -0.78,
+          "ts_code": "501208",
+          "ann_date": "20260825"
+        },
+        {
+          "nav_date": "20260826",
+          "unit_nav": 1.3114,
+          "pct_chg": 1.18,
+          "ts_code": "501208",
+          "ann_date": "20260826"
+        },
+        {
+          "nav_date": "20260827",
+          "unit_nav": 1.3469,
+          "pct_chg": 2.71,
+          "ts_code": "501208",
+          "ann_date": "20260827"
+        },
+        {
+          "nav_date": "20260828",
+          "unit_nav": 1.3327,
+          "pct_chg": -1.05,
+          "ts_code": "501208",
+          "ann_date": "20260828"
+        },
+        {
+          "nav_date": "20260831",
+          "unit_nav": 1.3455,
+          "pct_chg": 0.96,
+          "ts_code": "501208",
+          "ann_date": "20260831"
+        },
+        {
+          "nav_date": "20260901",
+          "unit_nav": 1.3207,
+          "pct_chg": -1.84,
+          "ts_code": "501208",
+          "ann_date": "20260901"
+        },
+        {
+          "nav_date": "20260902",
+          "unit_nav": 1.2923,
+          "pct_chg": -2.15,
+          "ts_code": "501208",
+          "ann_date": "20260902"
+        },
+        {
+          "nav_date": "20260903",
+          "unit_nav": 1.2915,
+          "pct_chg": -0.06,
+          "ts_code": "501208",
+          "ann_date": "20260903"
+        },
+        {
+          "nav_date": "20260904",
+          "unit_nav": 1.2661,
+          "pct_chg": -1.97,
+          "ts_code": "501208",
+          "ann_date": "20260904"
+        },
+        {
+          "nav_date": "20260907",
+          "unit_nav": 1.2968,
+          "pct_chg": 2.42,
+          "ts_code": "501208",
+          "ann_date": "20260907"
+        },
+        {
+          "nav_date": "20260908",
+          "unit_nav": 1.2761,
+          "pct_chg": -1.6,
+          "ts_code": "501208",
+          "ann_date": "20260908"
+        },
+        {
+          "nav_date": "20260909",
+          "unit_nav": 1.2726,
+          "pct_chg": -0.27,
+          "ts_code": "501208",
+          "ann_date": "20260909"
+        },
+        {
+          "nav_date": "20260910",
+          "unit_nav": 1.2674,
+          "pct_chg": -0.41,
+          "ts_code": "501208",
+          "ann_date": "20260910"
+        },
+        {
+          "nav_date": "20260911",
+          "unit_nav": 1.2486,
+          "pct_chg": -1.48,
+          "ts_code": "501208",
+          "ann_date": "20260911"
+        },
+        {
+          "nav_date": "20260914",
+          "unit_nav": 1.2374,
+          "pct_chg": -0.9,
+          "ts_code": "501208",
+          "ann_date": "20260914"
+        },
+        {
+          "nav_date": "20260915",
+          "unit_nav": 1.2455,
+          "pct_chg": 0.65,
+          "ts_code": "501208",
+          "ann_date": "20260915"
+        },
+        {
+          "nav_date": "20260916",
+          "unit_nav": 1.2847,
+          "pct_chg": 3.15,
+          "ts_code": "501208",
+          "ann_date": "20260916"
+        },
+        {
+          "nav_date": "20260917",
+          "unit_nav": 1.2853,
+          "pct_chg": 0.05,
+          "ts_code": "501208",
+          "ann_date": "20260917"
+        },
+        {
+          "nav_date": "20260918",
+          "unit_nav": 1.3236,
+          "pct_chg": 2.98,
+          "ts_code": "501208",
+          "ann_date": "20260918"
+        },
+        {
+          "nav_date": "20260921",
+          "unit_nav": 1.3252,
+          "pct_chg": 0.12,
+          "ts_code": "501208",
+          "ann_date": "20260921"
+        },
+        {
+          "nav_date": "20260922",
+          "unit_nav": 1.3207,
+          "pct_chg": -0.34,
+          "ts_code": "501208",
+          "ann_date": "20260922"
         }
       ]
     },
@@ -3953,158 +3953,11 @@
       "status": "ok",
       "provider": "akshare:fund:003095",
       "ts_code": "003095",
-      "nav_date": "20260824",
-      "ann_date": "20260824",
-      "unit_nav": 1.9443,
+      "nav_date": "20260922",
+      "ann_date": "20260922",
+      "unit_nav": 2.0277,
       "accum_nav": null,
       "history": [
-        {
-          "nav_date": "20250702",
-          "unit_nav": 1.7119,
-          "pct_chg": -1.76,
-          "ts_code": "003095",
-          "ann_date": "20250702"
-        },
-        {
-          "nav_date": "20250703",
-          "unit_nav": 1.7375,
-          "pct_chg": 1.5,
-          "ts_code": "003095",
-          "ann_date": "20250703"
-        },
-        {
-          "nav_date": "20250704",
-          "unit_nav": 1.7478,
-          "pct_chg": 0.59,
-          "ts_code": "003095",
-          "ann_date": "20250704"
-        },
-        {
-          "nav_date": "20250707",
-          "unit_nav": 1.7142,
-          "pct_chg": -1.92,
-          "ts_code": "003095",
-          "ann_date": "20250707"
-        },
-        {
-          "nav_date": "20250708",
-          "unit_nav": 1.718,
-          "pct_chg": 0.22,
-          "ts_code": "003095",
-          "ann_date": "20250708"
-        },
-        {
-          "nav_date": "20250709",
-          "unit_nav": 1.7343,
-          "pct_chg": 0.95,
-          "ts_code": "003095",
-          "ann_date": "20250709"
-        },
-        {
-          "nav_date": "20250710",
-          "unit_nav": 1.7441,
-          "pct_chg": 0.57,
-          "ts_code": "003095",
-          "ann_date": "20250710"
-        },
-        {
-          "nav_date": "20250711",
-          "unit_nav": 1.7877,
-          "pct_chg": 2.5,
-          "ts_code": "003095",
-          "ann_date": "20250711"
-        },
-        {
-          "nav_date": "20250714",
-          "unit_nav": 1.8006,
-          "pct_chg": 0.72,
-          "ts_code": "003095",
-          "ann_date": "20250714"
-        },
-        {
-          "nav_date": "20250715",
-          "unit_nav": 1.8237,
-          "pct_chg": 1.28,
-          "ts_code": "003095",
-          "ann_date": "20250715"
-        },
-        {
-          "nav_date": "20250716",
-          "unit_nav": 1.8234,
-          "pct_chg": -0.02,
-          "ts_code": "003095",
-          "ann_date": "20250716"
-        },
-        {
-          "nav_date": "20250717",
-          "unit_nav": 1.8724,
-          "pct_chg": 2.69,
-          "ts_code": "003095",
-          "ann_date": "20250717"
-        },
-        {
-          "nav_date": "20250718",
-          "unit_nav": 1.8967,
-          "pct_chg": 1.3,
-          "ts_code": "003095",
-          "ann_date": "20250718"
-        },
-        {
-          "nav_date": "20250721",
-          "unit_nav": 1.8741,
-          "pct_chg": -1.19,
-          "ts_code": "003095",
-          "ann_date": "20250721"
-        },
-        {
-          "nav_date": "20250722",
-          "unit_nav": 1.8733,
-          "pct_chg": -0.04,
-          "ts_code": "003095",
-          "ann_date": "20250722"
-        },
-        {
-          "nav_date": "20250723",
-          "unit_nav": 1.8769,
-          "pct_chg": 0.19,
-          "ts_code": "003095",
-          "ann_date": "20250723"
-        },
-        {
-          "nav_date": "20250724",
-          "unit_nav": 1.9028,
-          "pct_chg": 1.38,
-          "ts_code": "003095",
-          "ann_date": "20250724"
-        },
-        {
-          "nav_date": "20250725",
-          "unit_nav": 1.9025,
-          "pct_chg": -0.02,
-          "ts_code": "003095",
-          "ann_date": "20250725"
-        },
-        {
-          "nav_date": "20250728",
-          "unit_nav": 1.9608,
-          "pct_chg": 3.06,
-          "ts_code": "003095",
-          "ann_date": "20250728"
-        },
-        {
-          "nav_date": "20250729",
-          "unit_nav": 2.0295,
-          "pct_chg": 3.5,
-          "ts_code": "003095",
-          "ann_date": "20250729"
-        },
-        {
-          "nav_date": "20250730",
-          "unit_nav": 2.009,
-          "pct_chg": -1.01,
-          "ts_code": "003095",
-          "ann_date": "20250730"
-        },
         {
           "nav_date": "20250731",
           "unit_nav": 1.9928,
@@ -5917,6 +5770,153 @@
           "pct_chg": -5.2,
           "ts_code": "003095",
           "ann_date": "20260824"
+        },
+        {
+          "nav_date": "20260825",
+          "unit_nav": 1.9936,
+          "pct_chg": 2.54,
+          "ts_code": "003095",
+          "ann_date": "20260825"
+        },
+        {
+          "nav_date": "20260826",
+          "unit_nav": 1.9859,
+          "pct_chg": -0.39,
+          "ts_code": "003095",
+          "ann_date": "20260826"
+        },
+        {
+          "nav_date": "20260827",
+          "unit_nav": 1.9969,
+          "pct_chg": 0.55,
+          "ts_code": "003095",
+          "ann_date": "20260827"
+        },
+        {
+          "nav_date": "20260828",
+          "unit_nav": 1.9674,
+          "pct_chg": -1.48,
+          "ts_code": "003095",
+          "ann_date": "20260828"
+        },
+        {
+          "nav_date": "20260831",
+          "unit_nav": 1.9433,
+          "pct_chg": -1.22,
+          "ts_code": "003095",
+          "ann_date": "20260831"
+        },
+        {
+          "nav_date": "20260901",
+          "unit_nav": 1.9292,
+          "pct_chg": -0.73,
+          "ts_code": "003095",
+          "ann_date": "20260901"
+        },
+        {
+          "nav_date": "20260902",
+          "unit_nav": 1.9279,
+          "pct_chg": -0.07,
+          "ts_code": "003095",
+          "ann_date": "20260902"
+        },
+        {
+          "nav_date": "20260903",
+          "unit_nav": 1.957,
+          "pct_chg": 1.51,
+          "ts_code": "003095",
+          "ann_date": "20260903"
+        },
+        {
+          "nav_date": "20260904",
+          "unit_nav": 1.936,
+          "pct_chg": -1.07,
+          "ts_code": "003095",
+          "ann_date": "20260904"
+        },
+        {
+          "nav_date": "20260907",
+          "unit_nav": 1.9282,
+          "pct_chg": -0.4,
+          "ts_code": "003095",
+          "ann_date": "20260907"
+        },
+        {
+          "nav_date": "20260908",
+          "unit_nav": 1.945,
+          "pct_chg": 0.87,
+          "ts_code": "003095",
+          "ann_date": "20260908"
+        },
+        {
+          "nav_date": "20260909",
+          "unit_nav": 1.9194,
+          "pct_chg": -1.32,
+          "ts_code": "003095",
+          "ann_date": "20260909"
+        },
+        {
+          "nav_date": "20260910",
+          "unit_nav": 1.8978,
+          "pct_chg": -1.13,
+          "ts_code": "003095",
+          "ann_date": "20260910"
+        },
+        {
+          "nav_date": "20260911",
+          "unit_nav": 1.8588,
+          "pct_chg": -2.06,
+          "ts_code": "003095",
+          "ann_date": "20260911"
+        },
+        {
+          "nav_date": "20260914",
+          "unit_nav": 1.9438,
+          "pct_chg": 4.57,
+          "ts_code": "003095",
+          "ann_date": "20260914"
+        },
+        {
+          "nav_date": "20260915",
+          "unit_nav": 1.9245,
+          "pct_chg": -0.99,
+          "ts_code": "003095",
+          "ann_date": "20260915"
+        },
+        {
+          "nav_date": "20260916",
+          "unit_nav": 1.9395,
+          "pct_chg": 0.78,
+          "ts_code": "003095",
+          "ann_date": "20260916"
+        },
+        {
+          "nav_date": "20260917",
+          "unit_nav": 1.9514,
+          "pct_chg": 0.61,
+          "ts_code": "003095",
+          "ann_date": "20260917"
+        },
+        {
+          "nav_date": "20260918",
+          "unit_nav": 1.9645,
+          "pct_chg": 0.67,
+          "ts_code": "003095",
+          "ann_date": "20260918"
+        },
+        {
+          "nav_date": "20260921",
+          "unit_nav": 2.0493,
+          "pct_chg": 4.32,
+          "ts_code": "003095",
+          "ann_date": "20260921"
+        },
+        {
+          "nav_date": "20260922",
+          "unit_nav": 2.0277,
+          "pct_chg": -1.05,
+          "ts_code": "003095",
+          "ann_date": "20260922"
         }
       ]
     },
@@ -5926,158 +5926,11 @@
       "status": "ok",
       "provider": "akshare:fund:501058",
       "ts_code": "501058",
-      "nav_date": "20260824",
-      "ann_date": "20260824",
-      "unit_nav": 2.1307,
+      "nav_date": "20260922",
+      "ann_date": "20260922",
+      "unit_nav": 1.9801,
       "accum_nav": null,
       "history": [
-        {
-          "nav_date": "20250702",
-          "unit_nav": 1.6738,
-          "pct_chg": -0.27,
-          "ts_code": "501058",
-          "ann_date": "20250702"
-        },
-        {
-          "nav_date": "20250703",
-          "unit_nav": 1.7016,
-          "pct_chg": 1.66,
-          "ts_code": "501058",
-          "ann_date": "20250703"
-        },
-        {
-          "nav_date": "20250704",
-          "unit_nav": 1.6775,
-          "pct_chg": -1.42,
-          "ts_code": "501058",
-          "ann_date": "20250704"
-        },
-        {
-          "nav_date": "20250707",
-          "unit_nav": 1.6612,
-          "pct_chg": -0.97,
-          "ts_code": "501058",
-          "ann_date": "20250707"
-        },
-        {
-          "nav_date": "20250708",
-          "unit_nav": 1.6841,
-          "pct_chg": 1.38,
-          "ts_code": "501058",
-          "ann_date": "20250708"
-        },
-        {
-          "nav_date": "20250709",
-          "unit_nav": 1.6798,
-          "pct_chg": -0.26,
-          "ts_code": "501058",
-          "ann_date": "20250709"
-        },
-        {
-          "nav_date": "20250710",
-          "unit_nav": 1.6767,
-          "pct_chg": -0.18,
-          "ts_code": "501058",
-          "ann_date": "20250710"
-        },
-        {
-          "nav_date": "20250711",
-          "unit_nav": 1.6854,
-          "pct_chg": 0.52,
-          "ts_code": "501058",
-          "ann_date": "20250711"
-        },
-        {
-          "nav_date": "20250714",
-          "unit_nav": 1.6873,
-          "pct_chg": 0.11,
-          "ts_code": "501058",
-          "ann_date": "20250714"
-        },
-        {
-          "nav_date": "20250715",
-          "unit_nav": 1.6794,
-          "pct_chg": -0.47,
-          "ts_code": "501058",
-          "ann_date": "20250715"
-        },
-        {
-          "nav_date": "20250716",
-          "unit_nav": 1.684,
-          "pct_chg": 0.27,
-          "ts_code": "501058",
-          "ann_date": "20250716"
-        },
-        {
-          "nav_date": "20250717",
-          "unit_nav": 1.7117,
-          "pct_chg": 1.64,
-          "ts_code": "501058",
-          "ann_date": "20250717"
-        },
-        {
-          "nav_date": "20250718",
-          "unit_nav": 1.7295,
-          "pct_chg": 1.04,
-          "ts_code": "501058",
-          "ann_date": "20250718"
-        },
-        {
-          "nav_date": "20250721",
-          "unit_nav": 1.7469,
-          "pct_chg": 1.01,
-          "ts_code": "501058",
-          "ann_date": "20250721"
-        },
-        {
-          "nav_date": "20250722",
-          "unit_nav": 1.7692,
-          "pct_chg": 1.28,
-          "ts_code": "501058",
-          "ann_date": "20250722"
-        },
-        {
-          "nav_date": "20250723",
-          "unit_nav": 1.7592,
-          "pct_chg": -0.57,
-          "ts_code": "501058",
-          "ann_date": "20250723"
-        },
-        {
-          "nav_date": "20250724",
-          "unit_nav": 1.803,
-          "pct_chg": 2.49,
-          "ts_code": "501058",
-          "ann_date": "20250724"
-        },
-        {
-          "nav_date": "20250725",
-          "unit_nav": 1.7991,
-          "pct_chg": -0.22,
-          "ts_code": "501058",
-          "ann_date": "20250725"
-        },
-        {
-          "nav_date": "20250728",
-          "unit_nav": 1.8049,
-          "pct_chg": 0.32,
-          "ts_code": "501058",
-          "ann_date": "20250728"
-        },
-        {
-          "nav_date": "20250729",
-          "unit_nav": 1.8102,
-          "pct_chg": 0.29,
-          "ts_code": "501058",
-          "ann_date": "20250729"
-        },
-        {
-          "nav_date": "20250730",
-          "unit_nav": 1.769,
-          "pct_chg": -2.28,
-          "ts_code": "501058",
-          "ann_date": "20250730"
-        },
         {
           "nav_date": "20250731",
           "unit_nav": 1.7282,
@@ -7890,6 +7743,153 @@
           "pct_chg": -0.73,
           "ts_code": "501058",
           "ann_date": "20260824"
+        },
+        {
+          "nav_date": "20260825",
+          "unit_nav": 2.1035,
+          "pct_chg": -1.28,
+          "ts_code": "501058",
+          "ann_date": "20260825"
+        },
+        {
+          "nav_date": "20260826",
+          "unit_nav": 2.1237,
+          "pct_chg": 0.96,
+          "ts_code": "501058",
+          "ann_date": "20260826"
+        },
+        {
+          "nav_date": "20260827",
+          "unit_nav": 2.1327,
+          "pct_chg": 0.42,
+          "ts_code": "501058",
+          "ann_date": "20260827"
+        },
+        {
+          "nav_date": "20260828",
+          "unit_nav": 2.1332,
+          "pct_chg": 0.02,
+          "ts_code": "501058",
+          "ann_date": "20260828"
+        },
+        {
+          "nav_date": "20260831",
+          "unit_nav": 2.1114,
+          "pct_chg": -1.02,
+          "ts_code": "501058",
+          "ann_date": "20260831"
+        },
+        {
+          "nav_date": "20260901",
+          "unit_nav": 2.0832,
+          "pct_chg": -1.34,
+          "ts_code": "501058",
+          "ann_date": "20260901"
+        },
+        {
+          "nav_date": "20260902",
+          "unit_nav": 2.0343,
+          "pct_chg": -2.35,
+          "ts_code": "501058",
+          "ann_date": "20260902"
+        },
+        {
+          "nav_date": "20260903",
+          "unit_nav": 2.0551,
+          "pct_chg": 1.02,
+          "ts_code": "501058",
+          "ann_date": "20260903"
+        },
+        {
+          "nav_date": "20260904",
+          "unit_nav": 2.0251,
+          "pct_chg": -1.46,
+          "ts_code": "501058",
+          "ann_date": "20260904"
+        },
+        {
+          "nav_date": "20260907",
+          "unit_nav": 2.0327,
+          "pct_chg": 0.38,
+          "ts_code": "501058",
+          "ann_date": "20260907"
+        },
+        {
+          "nav_date": "20260908",
+          "unit_nav": 2.0185,
+          "pct_chg": -0.7,
+          "ts_code": "501058",
+          "ann_date": "20260908"
+        },
+        {
+          "nav_date": "20260909",
+          "unit_nav": 2.0184,
+          "pct_chg": 0.0,
+          "ts_code": "501058",
+          "ann_date": "20260909"
+        },
+        {
+          "nav_date": "20260910",
+          "unit_nav": 1.9906,
+          "pct_chg": -1.38,
+          "ts_code": "501058",
+          "ann_date": "20260910"
+        },
+        {
+          "nav_date": "20260911",
+          "unit_nav": 1.9516,
+          "pct_chg": -1.96,
+          "ts_code": "501058",
+          "ann_date": "20260911"
+        },
+        {
+          "nav_date": "20260914",
+          "unit_nav": 1.9729,
+          "pct_chg": 1.09,
+          "ts_code": "501058",
+          "ann_date": "20260914"
+        },
+        {
+          "nav_date": "20260915",
+          "unit_nav": 1.9452,
+          "pct_chg": -1.4,
+          "ts_code": "501058",
+          "ann_date": "20260915"
+        },
+        {
+          "nav_date": "20260916",
+          "unit_nav": 1.9449,
+          "pct_chg": -0.02,
+          "ts_code": "501058",
+          "ann_date": "20260916"
+        },
+        {
+          "nav_date": "20260917",
+          "unit_nav": 1.9459,
+          "pct_chg": 0.05,
+          "ts_code": "501058",
+          "ann_date": "20260917"
+        },
+        {
+          "nav_date": "20260918",
+          "unit_nav": 1.9693,
+          "pct_chg": 1.2,
+          "ts_code": "501058",
+          "ann_date": "20260918"
+        },
+        {
+          "nav_date": "20260921",
+          "unit_nav": 1.9693,
+          "pct_chg": 0.0,
+          "ts_code": "501058",
+          "ann_date": "20260921"
+        },
+        {
+          "nav_date": "20260922",
+          "unit_nav": 1.9801,
+          "pct_chg": 0.55,
+          "ts_code": "501058",
+          "ann_date": "20260922"
         }
       ]
     },
@@ -7899,158 +7899,11 @@
       "status": "ok",
       "provider": "akshare:fund:100038",
       "ts_code": "100038",
-      "nav_date": "20260824",
-      "ann_date": "20260824",
-      "unit_nav": 1.905,
+      "nav_date": "20260922",
+      "ann_date": "20260922",
+      "unit_nav": 1.911,
       "accum_nav": null,
       "history": [
-        {
-          "nav_date": "20250702",
-          "unit_nav": 1.617,
-          "pct_chg": 0.0,
-          "ts_code": "100038",
-          "ann_date": "20250702"
-        },
-        {
-          "nav_date": "20250703",
-          "unit_nav": 1.624,
-          "pct_chg": 0.43,
-          "ts_code": "100038",
-          "ann_date": "20250703"
-        },
-        {
-          "nav_date": "20250704",
-          "unit_nav": 1.63,
-          "pct_chg": 0.37,
-          "ts_code": "100038",
-          "ann_date": "20250704"
-        },
-        {
-          "nav_date": "20250707",
-          "unit_nav": 1.628,
-          "pct_chg": -0.12,
-          "ts_code": "100038",
-          "ann_date": "20250707"
-        },
-        {
-          "nav_date": "20250708",
-          "unit_nav": 1.637,
-          "pct_chg": 0.55,
-          "ts_code": "100038",
-          "ann_date": "20250708"
-        },
-        {
-          "nav_date": "20250709",
-          "unit_nav": 1.634,
-          "pct_chg": -0.18,
-          "ts_code": "100038",
-          "ann_date": "20250709"
-        },
-        {
-          "nav_date": "20250710",
-          "unit_nav": 1.641,
-          "pct_chg": 0.43,
-          "ts_code": "100038",
-          "ann_date": "20250710"
-        },
-        {
-          "nav_date": "20250711",
-          "unit_nav": 1.643,
-          "pct_chg": 0.12,
-          "ts_code": "100038",
-          "ann_date": "20250711"
-        },
-        {
-          "nav_date": "20250714",
-          "unit_nav": 1.651,
-          "pct_chg": 0.49,
-          "ts_code": "100038",
-          "ann_date": "20250714"
-        },
-        {
-          "nav_date": "20250715",
-          "unit_nav": 1.648,
-          "pct_chg": -0.18,
-          "ts_code": "100038",
-          "ann_date": "20250715"
-        },
-        {
-          "nav_date": "20250716",
-          "unit_nav": 1.643,
-          "pct_chg": -0.3,
-          "ts_code": "100038",
-          "ann_date": "20250716"
-        },
-        {
-          "nav_date": "20250717",
-          "unit_nav": 1.652,
-          "pct_chg": 0.55,
-          "ts_code": "100038",
-          "ann_date": "20250717"
-        },
-        {
-          "nav_date": "20250718",
-          "unit_nav": 1.662,
-          "pct_chg": 0.61,
-          "ts_code": "100038",
-          "ann_date": "20250718"
-        },
-        {
-          "nav_date": "20250721",
-          "unit_nav": 1.679,
-          "pct_chg": 1.02,
-          "ts_code": "100038",
-          "ann_date": "20250721"
-        },
-        {
-          "nav_date": "20250722",
-          "unit_nav": 1.692,
-          "pct_chg": 0.77,
-          "ts_code": "100038",
-          "ann_date": "20250722"
-        },
-        {
-          "nav_date": "20250723",
-          "unit_nav": 1.692,
-          "pct_chg": 0.0,
-          "ts_code": "100038",
-          "ann_date": "20250723"
-        },
-        {
-          "nav_date": "20250724",
-          "unit_nav": 1.702,
-          "pct_chg": 0.59,
-          "ts_code": "100038",
-          "ann_date": "20250724"
-        },
-        {
-          "nav_date": "20250725",
-          "unit_nav": 1.695,
-          "pct_chg": -0.41,
-          "ts_code": "100038",
-          "ann_date": "20250725"
-        },
-        {
-          "nav_date": "20250728",
-          "unit_nav": 1.696,
-          "pct_chg": 0.06,
-          "ts_code": "100038",
-          "ann_date": "20250728"
-        },
-        {
-          "nav_date": "20250729",
-          "unit_nav": 1.698,
-          "pct_chg": 0.12,
-          "ts_code": "100038",
-          "ann_date": "20250729"
-        },
-        {
-          "nav_date": "20250730",
-          "unit_nav": 1.701,
-          "pct_chg": 0.18,
-          "ts_code": "100038",
-          "ann_date": "20250730"
-        },
         {
           "nav_date": "20250731",
           "unit_nav": 1.671,
@@ -9863,6 +9716,153 @@
           "pct_chg": -1.35,
           "ts_code": "100038",
           "ann_date": "20260824"
+        },
+        {
+          "nav_date": "20260825",
+          "unit_nav": 1.899,
+          "pct_chg": -0.31,
+          "ts_code": "100038",
+          "ann_date": "20260825"
+        },
+        {
+          "nav_date": "20260826",
+          "unit_nav": 1.913,
+          "pct_chg": 0.74,
+          "ts_code": "100038",
+          "ann_date": "20260826"
+        },
+        {
+          "nav_date": "20260827",
+          "unit_nav": 1.932,
+          "pct_chg": 0.99,
+          "ts_code": "100038",
+          "ann_date": "20260827"
+        },
+        {
+          "nav_date": "20260828",
+          "unit_nav": 1.925,
+          "pct_chg": -0.36,
+          "ts_code": "100038",
+          "ann_date": "20260828"
+        },
+        {
+          "nav_date": "20260831",
+          "unit_nav": 1.935,
+          "pct_chg": 0.52,
+          "ts_code": "100038",
+          "ann_date": "20260831"
+        },
+        {
+          "nav_date": "20260901",
+          "unit_nav": 1.926,
+          "pct_chg": -0.47,
+          "ts_code": "100038",
+          "ann_date": "20260901"
+        },
+        {
+          "nav_date": "20260902",
+          "unit_nav": 1.9,
+          "pct_chg": -1.35,
+          "ts_code": "100038",
+          "ann_date": "20260902"
+        },
+        {
+          "nav_date": "20260903",
+          "unit_nav": 1.903,
+          "pct_chg": 0.16,
+          "ts_code": "100038",
+          "ann_date": "20260903"
+        },
+        {
+          "nav_date": "20260904",
+          "unit_nav": 1.896,
+          "pct_chg": -0.37,
+          "ts_code": "100038",
+          "ann_date": "20260904"
+        },
+        {
+          "nav_date": "20260907",
+          "unit_nav": 1.907,
+          "pct_chg": 0.58,
+          "ts_code": "100038",
+          "ann_date": "20260907"
+        },
+        {
+          "nav_date": "20260908",
+          "unit_nav": 1.904,
+          "pct_chg": -0.16,
+          "ts_code": "100038",
+          "ann_date": "20260908"
+        },
+        {
+          "nav_date": "20260909",
+          "unit_nav": 1.913,
+          "pct_chg": 0.47,
+          "ts_code": "100038",
+          "ann_date": "20260909"
+        },
+        {
+          "nav_date": "20260910",
+          "unit_nav": 1.907,
+          "pct_chg": -0.31,
+          "ts_code": "100038",
+          "ann_date": "20260910"
+        },
+        {
+          "nav_date": "20260911",
+          "unit_nav": 1.89,
+          "pct_chg": -0.89,
+          "ts_code": "100038",
+          "ann_date": "20260911"
+        },
+        {
+          "nav_date": "20260914",
+          "unit_nav": 1.879,
+          "pct_chg": -0.58,
+          "ts_code": "100038",
+          "ann_date": "20260914"
+        },
+        {
+          "nav_date": "20260915",
+          "unit_nav": 1.867,
+          "pct_chg": -0.64,
+          "ts_code": "100038",
+          "ann_date": "20260915"
+        },
+        {
+          "nav_date": "20260916",
+          "unit_nav": 1.883,
+          "pct_chg": 0.86,
+          "ts_code": "100038",
+          "ann_date": "20260916"
+        },
+        {
+          "nav_date": "20260917",
+          "unit_nav": 1.875,
+          "pct_chg": -0.42,
+          "ts_code": "100038",
+          "ann_date": "20260917"
+        },
+        {
+          "nav_date": "20260918",
+          "unit_nav": 1.896,
+          "pct_chg": 1.12,
+          "ts_code": "100038",
+          "ann_date": "20260918"
+        },
+        {
+          "nav_date": "20260921",
+          "unit_nav": 1.909,
+          "pct_chg": 0.69,
+          "ts_code": "100038",
+          "ann_date": "20260921"
+        },
+        {
+          "nav_date": "20260922",
+          "unit_nav": 1.911,
+          "pct_chg": 0.1,
+          "ts_code": "100038",
+          "ann_date": "20260922"
         }
       ]
     },
@@ -9872,158 +9872,11 @@
       "status": "ok",
       "provider": "akshare:fund:519702",
       "ts_code": "519702",
-      "nav_date": "20260824",
-      "ann_date": "20260824",
-      "unit_nav": 5.1998,
+      "nav_date": "20260922",
+      "ann_date": "20260922",
+      "unit_nav": 5.127,
       "accum_nav": null,
       "history": [
-        {
-          "nav_date": "20250702",
-          "unit_nav": 4.4269,
-          "pct_chg": 0.23,
-          "ts_code": "519702",
-          "ann_date": "20250702"
-        },
-        {
-          "nav_date": "20250703",
-          "unit_nav": 4.4374,
-          "pct_chg": 0.24,
-          "ts_code": "519702",
-          "ann_date": "20250703"
-        },
-        {
-          "nav_date": "20250704",
-          "unit_nav": 4.4104,
-          "pct_chg": -0.61,
-          "ts_code": "519702",
-          "ann_date": "20250704"
-        },
-        {
-          "nav_date": "20250707",
-          "unit_nav": 4.4341,
-          "pct_chg": 0.54,
-          "ts_code": "519702",
-          "ann_date": "20250707"
-        },
-        {
-          "nav_date": "20250708",
-          "unit_nav": 4.4479,
-          "pct_chg": 0.31,
-          "ts_code": "519702",
-          "ann_date": "20250708"
-        },
-        {
-          "nav_date": "20250709",
-          "unit_nav": 4.4323,
-          "pct_chg": -0.35,
-          "ts_code": "519702",
-          "ann_date": "20250709"
-        },
-        {
-          "nav_date": "20250710",
-          "unit_nav": 4.4307,
-          "pct_chg": -0.04,
-          "ts_code": "519702",
-          "ann_date": "20250710"
-        },
-        {
-          "nav_date": "20250711",
-          "unit_nav": 4.433,
-          "pct_chg": 0.05,
-          "ts_code": "519702",
-          "ann_date": "20250711"
-        },
-        {
-          "nav_date": "20250714",
-          "unit_nav": 4.474,
-          "pct_chg": 0.92,
-          "ts_code": "519702",
-          "ann_date": "20250714"
-        },
-        {
-          "nav_date": "20250715",
-          "unit_nav": 4.4532,
-          "pct_chg": -0.46,
-          "ts_code": "519702",
-          "ann_date": "20250715"
-        },
-        {
-          "nav_date": "20250716",
-          "unit_nav": 4.4722,
-          "pct_chg": 0.43,
-          "ts_code": "519702",
-          "ann_date": "20250716"
-        },
-        {
-          "nav_date": "20250717",
-          "unit_nav": 4.4749,
-          "pct_chg": 0.06,
-          "ts_code": "519702",
-          "ann_date": "20250717"
-        },
-        {
-          "nav_date": "20250718",
-          "unit_nav": 4.4907,
-          "pct_chg": 0.35,
-          "ts_code": "519702",
-          "ann_date": "20250718"
-        },
-        {
-          "nav_date": "20250721",
-          "unit_nav": 4.5617,
-          "pct_chg": 1.58,
-          "ts_code": "519702",
-          "ann_date": "20250721"
-        },
-        {
-          "nav_date": "20250722",
-          "unit_nav": 4.6229,
-          "pct_chg": 1.34,
-          "ts_code": "519702",
-          "ann_date": "20250722"
-        },
-        {
-          "nav_date": "20250723",
-          "unit_nav": 4.5909,
-          "pct_chg": -0.69,
-          "ts_code": "519702",
-          "ann_date": "20250723"
-        },
-        {
-          "nav_date": "20250724",
-          "unit_nav": 4.5853,
-          "pct_chg": -0.12,
-          "ts_code": "519702",
-          "ann_date": "20250724"
-        },
-        {
-          "nav_date": "20250725",
-          "unit_nav": 4.5894,
-          "pct_chg": 0.09,
-          "ts_code": "519702",
-          "ann_date": "20250725"
-        },
-        {
-          "nav_date": "20250728",
-          "unit_nav": 4.5805,
-          "pct_chg": -0.19,
-          "ts_code": "519702",
-          "ann_date": "20250728"
-        },
-        {
-          "nav_date": "20250729",
-          "unit_nav": 4.5748,
-          "pct_chg": -0.12,
-          "ts_code": "519702",
-          "ann_date": "20250729"
-        },
-        {
-          "nav_date": "20250730",
-          "unit_nav": 4.602,
-          "pct_chg": 0.59,
-          "ts_code": "519702",
-          "ann_date": "20250730"
-        },
         {
           "nav_date": "20250731",
           "unit_nav": 4.5344,
@@ -11836,6 +11689,153 @@
           "pct_chg": 0.4,
           "ts_code": "519702",
           "ann_date": "20260824"
+        },
+        {
+          "nav_date": "20260825",
+          "unit_nav": 5.2046,
+          "pct_chg": 0.09,
+          "ts_code": "519702",
+          "ann_date": "20260825"
+        },
+        {
+          "nav_date": "20260826",
+          "unit_nav": 5.25,
+          "pct_chg": 0.87,
+          "ts_code": "519702",
+          "ann_date": "20260826"
+        },
+        {
+          "nav_date": "20260827",
+          "unit_nav": 5.2933,
+          "pct_chg": 0.82,
+          "ts_code": "519702",
+          "ann_date": "20260827"
+        },
+        {
+          "nav_date": "20260828",
+          "unit_nav": 5.2975,
+          "pct_chg": 0.08,
+          "ts_code": "519702",
+          "ann_date": "20260828"
+        },
+        {
+          "nav_date": "20260831",
+          "unit_nav": 5.2839,
+          "pct_chg": -0.26,
+          "ts_code": "519702",
+          "ann_date": "20260831"
+        },
+        {
+          "nav_date": "20260901",
+          "unit_nav": 5.3042,
+          "pct_chg": 0.38,
+          "ts_code": "519702",
+          "ann_date": "20260901"
+        },
+        {
+          "nav_date": "20260902",
+          "unit_nav": 5.2226,
+          "pct_chg": -1.54,
+          "ts_code": "519702",
+          "ann_date": "20260902"
+        },
+        {
+          "nav_date": "20260903",
+          "unit_nav": 5.2415,
+          "pct_chg": 0.36,
+          "ts_code": "519702",
+          "ann_date": "20260903"
+        },
+        {
+          "nav_date": "20260904",
+          "unit_nav": 5.2486,
+          "pct_chg": 0.14,
+          "ts_code": "519702",
+          "ann_date": "20260904"
+        },
+        {
+          "nav_date": "20260907",
+          "unit_nav": 5.2353,
+          "pct_chg": -0.25,
+          "ts_code": "519702",
+          "ann_date": "20260907"
+        },
+        {
+          "nav_date": "20260908",
+          "unit_nav": 5.2601,
+          "pct_chg": 0.47,
+          "ts_code": "519702",
+          "ann_date": "20260908"
+        },
+        {
+          "nav_date": "20260909",
+          "unit_nav": 5.266,
+          "pct_chg": 0.11,
+          "ts_code": "519702",
+          "ann_date": "20260909"
+        },
+        {
+          "nav_date": "20260910",
+          "unit_nav": 5.2278,
+          "pct_chg": -0.73,
+          "ts_code": "519702",
+          "ann_date": "20260910"
+        },
+        {
+          "nav_date": "20260911",
+          "unit_nav": 5.164,
+          "pct_chg": -1.22,
+          "ts_code": "519702",
+          "ann_date": "20260911"
+        },
+        {
+          "nav_date": "20260914",
+          "unit_nav": 5.1492,
+          "pct_chg": -0.29,
+          "ts_code": "519702",
+          "ann_date": "20260914"
+        },
+        {
+          "nav_date": "20260915",
+          "unit_nav": 5.1212,
+          "pct_chg": -0.54,
+          "ts_code": "519702",
+          "ann_date": "20260915"
+        },
+        {
+          "nav_date": "20260916",
+          "unit_nav": 5.1327,
+          "pct_chg": 0.22,
+          "ts_code": "519702",
+          "ann_date": "20260916"
+        },
+        {
+          "nav_date": "20260917",
+          "unit_nav": 5.1122,
+          "pct_chg": -0.4,
+          "ts_code": "519702",
+          "ann_date": "20260917"
+        },
+        {
+          "nav_date": "20260918",
+          "unit_nav": 5.1471,
+          "pct_chg": 0.68,
+          "ts_code": "519702",
+          "ann_date": "20260918"
+        },
+        {
+          "nav_date": "20260921",
+          "unit_nav": 5.1893,
+          "pct_chg": 0.82,
+          "ts_code": "519702",
+          "ann_date": "20260921"
+        },
+        {
+          "nav_date": "20260922",
+          "unit_nav": 5.127,
+          "pct_chg": -1.2,
+          "ts_code": "519702",
+          "ann_date": "20260922"
         }
       ]
     },
@@ -11845,158 +11845,11 @@
       "status": "ok",
       "provider": "akshare:fund:005918",
       "ts_code": "005918",
-      "nav_date": "20260824",
-      "ann_date": "20260824",
-      "unit_nav": 1.4373,
+      "nav_date": "20260922",
+      "ann_date": "20260922",
+      "unit_nav": 1.4349,
       "accum_nav": null,
       "history": [
-        {
-          "nav_date": "20250702",
-          "unit_nav": 1.2155,
-          "pct_chg": 0.02,
-          "ts_code": "005918",
-          "ann_date": "20250702"
-        },
-        {
-          "nav_date": "20250703",
-          "unit_nav": 1.2229,
-          "pct_chg": 0.61,
-          "ts_code": "005918",
-          "ann_date": "20250703"
-        },
-        {
-          "nav_date": "20250704",
-          "unit_nav": 1.227,
-          "pct_chg": 0.34,
-          "ts_code": "005918",
-          "ann_date": "20250704"
-        },
-        {
-          "nav_date": "20250707",
-          "unit_nav": 1.2225,
-          "pct_chg": -0.37,
-          "ts_code": "005918",
-          "ann_date": "20250707"
-        },
-        {
-          "nav_date": "20250708",
-          "unit_nav": 1.2323,
-          "pct_chg": 0.8,
-          "ts_code": "005918",
-          "ann_date": "20250708"
-        },
-        {
-          "nav_date": "20250709",
-          "unit_nav": 1.2304,
-          "pct_chg": -0.15,
-          "ts_code": "005918",
-          "ann_date": "20250709"
-        },
-        {
-          "nav_date": "20250710",
-          "unit_nav": 1.2365,
-          "pct_chg": 0.5,
-          "ts_code": "005918",
-          "ann_date": "20250710"
-        },
-        {
-          "nav_date": "20250711",
-          "unit_nav": 1.2396,
-          "pct_chg": 0.25,
-          "ts_code": "005918",
-          "ann_date": "20250711"
-        },
-        {
-          "nav_date": "20250714",
-          "unit_nav": 1.2408,
-          "pct_chg": 0.1,
-          "ts_code": "005918",
-          "ann_date": "20250714"
-        },
-        {
-          "nav_date": "20250715",
-          "unit_nav": 1.2413,
-          "pct_chg": 0.04,
-          "ts_code": "005918",
-          "ann_date": "20250715"
-        },
-        {
-          "nav_date": "20250716",
-          "unit_nav": 1.2387,
-          "pct_chg": -0.21,
-          "ts_code": "005918",
-          "ann_date": "20250716"
-        },
-        {
-          "nav_date": "20250717",
-          "unit_nav": 1.2473,
-          "pct_chg": 0.69,
-          "ts_code": "005918",
-          "ann_date": "20250717"
-        },
-        {
-          "nav_date": "20250718",
-          "unit_nav": 1.2558,
-          "pct_chg": 0.68,
-          "ts_code": "005918",
-          "ann_date": "20250718"
-        },
-        {
-          "nav_date": "20250721",
-          "unit_nav": 1.2639,
-          "pct_chg": 0.65,
-          "ts_code": "005918",
-          "ann_date": "20250721"
-        },
-        {
-          "nav_date": "20250722",
-          "unit_nav": 1.2738,
-          "pct_chg": 0.78,
-          "ts_code": "005918",
-          "ann_date": "20250722"
-        },
-        {
-          "nav_date": "20250723",
-          "unit_nav": 1.2743,
-          "pct_chg": 0.04,
-          "ts_code": "005918",
-          "ann_date": "20250723"
-        },
-        {
-          "nav_date": "20250724",
-          "unit_nav": 1.2829,
-          "pct_chg": 0.67,
-          "ts_code": "005918",
-          "ann_date": "20250724"
-        },
-        {
-          "nav_date": "20250725",
-          "unit_nav": 1.2769,
-          "pct_chg": -0.47,
-          "ts_code": "005918",
-          "ann_date": "20250725"
-        },
-        {
-          "nav_date": "20250728",
-          "unit_nav": 1.2796,
-          "pct_chg": 0.21,
-          "ts_code": "005918",
-          "ann_date": "20250728"
-        },
-        {
-          "nav_date": "20250729",
-          "unit_nav": 1.2846,
-          "pct_chg": 0.39,
-          "ts_code": "005918",
-          "ann_date": "20250729"
-        },
-        {
-          "nav_date": "20250730",
-          "unit_nav": 1.2843,
-          "pct_chg": -0.02,
-          "ts_code": "005918",
-          "ann_date": "20250730"
-        },
         {
           "nav_date": "20250731",
           "unit_nav": 1.2622,
@@ -13809,6 +13662,153 @@
           "pct_chg": -1.16,
           "ts_code": "005918",
           "ann_date": "20260824"
+        },
+        {
+          "nav_date": "20260825",
+          "unit_nav": 1.4342,
+          "pct_chg": -0.22,
+          "ts_code": "005918",
+          "ann_date": "20260825"
+        },
+        {
+          "nav_date": "20260826",
+          "unit_nav": 1.4458,
+          "pct_chg": 0.81,
+          "ts_code": "005918",
+          "ann_date": "20260826"
+        },
+        {
+          "nav_date": "20260827",
+          "unit_nav": 1.4582,
+          "pct_chg": 0.86,
+          "ts_code": "005918",
+          "ann_date": "20260827"
+        },
+        {
+          "nav_date": "20260828",
+          "unit_nav": 1.4521,
+          "pct_chg": -0.42,
+          "ts_code": "005918",
+          "ann_date": "20260828"
+        },
+        {
+          "nav_date": "20260831",
+          "unit_nav": 1.4567,
+          "pct_chg": 0.32,
+          "ts_code": "005918",
+          "ann_date": "20260831"
+        },
+        {
+          "nav_date": "20260901",
+          "unit_nav": 1.4526,
+          "pct_chg": -0.28,
+          "ts_code": "005918",
+          "ann_date": "20260901"
+        },
+        {
+          "nav_date": "20260902",
+          "unit_nav": 1.4335,
+          "pct_chg": -1.31,
+          "ts_code": "005918",
+          "ann_date": "20260902"
+        },
+        {
+          "nav_date": "20260903",
+          "unit_nav": 1.435,
+          "pct_chg": 0.1,
+          "ts_code": "005918",
+          "ann_date": "20260903"
+        },
+        {
+          "nav_date": "20260904",
+          "unit_nav": 1.4336,
+          "pct_chg": -0.1,
+          "ts_code": "005918",
+          "ann_date": "20260904"
+        },
+        {
+          "nav_date": "20260907",
+          "unit_nav": 1.4419,
+          "pct_chg": 0.58,
+          "ts_code": "005918",
+          "ann_date": "20260907"
+        },
+        {
+          "nav_date": "20260908",
+          "unit_nav": 1.437,
+          "pct_chg": -0.34,
+          "ts_code": "005918",
+          "ann_date": "20260908"
+        },
+        {
+          "nav_date": "20260909",
+          "unit_nav": 1.4411,
+          "pct_chg": 0.29,
+          "ts_code": "005918",
+          "ann_date": "20260909"
+        },
+        {
+          "nav_date": "20260910",
+          "unit_nav": 1.4346,
+          "pct_chg": -0.45,
+          "ts_code": "005918",
+          "ann_date": "20260910"
+        },
+        {
+          "nav_date": "20260911",
+          "unit_nav": 1.4236,
+          "pct_chg": -0.77,
+          "ts_code": "005918",
+          "ann_date": "20260911"
+        },
+        {
+          "nav_date": "20260914",
+          "unit_nav": 1.4144,
+          "pct_chg": -0.65,
+          "ts_code": "005918",
+          "ann_date": "20260914"
+        },
+        {
+          "nav_date": "20260915",
+          "unit_nav": 1.4056,
+          "pct_chg": -0.62,
+          "ts_code": "005918",
+          "ann_date": "20260915"
+        },
+        {
+          "nav_date": "20260916",
+          "unit_nav": 1.415,
+          "pct_chg": 0.67,
+          "ts_code": "005918",
+          "ann_date": "20260916"
+        },
+        {
+          "nav_date": "20260917",
+          "unit_nav": 1.409,
+          "pct_chg": -0.42,
+          "ts_code": "005918",
+          "ann_date": "20260917"
+        },
+        {
+          "nav_date": "20260918",
+          "unit_nav": 1.4235,
+          "pct_chg": 1.03,
+          "ts_code": "005918",
+          "ann_date": "20260918"
+        },
+        {
+          "nav_date": "20260921",
+          "unit_nav": 1.4332,
+          "pct_chg": 0.68,
+          "ts_code": "005918",
+          "ann_date": "20260921"
+        },
+        {
+          "nav_date": "20260922",
+          "unit_nav": 1.4349,
+          "pct_chg": 0.12,
+          "ts_code": "005918",
+          "ann_date": "20260922"
         }
       ]
     },
@@ -13818,158 +13818,11 @@
       "status": "ok",
       "provider": "akshare:fund:007824",
       "ts_code": "007824",
-      "nav_date": "20260824",
-      "ann_date": "20260824",
-      "unit_nav": 1.1679,
+      "nav_date": "20260922",
+      "ann_date": "20260922",
+      "unit_nav": 1.1687,
       "accum_nav": null,
       "history": [
-        {
-          "nav_date": "20250702",
-          "unit_nav": 1.1534,
-          "pct_chg": 0.01,
-          "ts_code": "007824",
-          "ann_date": "20250702"
-        },
-        {
-          "nav_date": "20250703",
-          "unit_nav": 1.1536,
-          "pct_chg": 0.02,
-          "ts_code": "007824",
-          "ann_date": "20250703"
-        },
-        {
-          "nav_date": "20250704",
-          "unit_nav": 1.1537,
-          "pct_chg": 0.01,
-          "ts_code": "007824",
-          "ann_date": "20250704"
-        },
-        {
-          "nav_date": "20250707",
-          "unit_nav": 1.1538,
-          "pct_chg": 0.01,
-          "ts_code": "007824",
-          "ann_date": "20250707"
-        },
-        {
-          "nav_date": "20250708",
-          "unit_nav": 1.1539,
-          "pct_chg": 0.01,
-          "ts_code": "007824",
-          "ann_date": "20250708"
-        },
-        {
-          "nav_date": "20250709",
-          "unit_nav": 1.1539,
-          "pct_chg": 0.0,
-          "ts_code": "007824",
-          "ann_date": "20250709"
-        },
-        {
-          "nav_date": "20250710",
-          "unit_nav": 1.1539,
-          "pct_chg": 0.0,
-          "ts_code": "007824",
-          "ann_date": "20250710"
-        },
-        {
-          "nav_date": "20250711",
-          "unit_nav": 1.1539,
-          "pct_chg": 0.0,
-          "ts_code": "007824",
-          "ann_date": "20250711"
-        },
-        {
-          "nav_date": "20250714",
-          "unit_nav": 1.154,
-          "pct_chg": 0.01,
-          "ts_code": "007824",
-          "ann_date": "20250714"
-        },
-        {
-          "nav_date": "20250715",
-          "unit_nav": 1.1541,
-          "pct_chg": 0.01,
-          "ts_code": "007824",
-          "ann_date": "20250715"
-        },
-        {
-          "nav_date": "20250716",
-          "unit_nav": 1.1541,
-          "pct_chg": 0.0,
-          "ts_code": "007824",
-          "ann_date": "20250716"
-        },
-        {
-          "nav_date": "20250717",
-          "unit_nav": 1.1542,
-          "pct_chg": 0.01,
-          "ts_code": "007824",
-          "ann_date": "20250717"
-        },
-        {
-          "nav_date": "20250718",
-          "unit_nav": 1.1542,
-          "pct_chg": 0.0,
-          "ts_code": "007824",
-          "ann_date": "20250718"
-        },
-        {
-          "nav_date": "20250721",
-          "unit_nav": 1.1543,
-          "pct_chg": 0.01,
-          "ts_code": "007824",
-          "ann_date": "20250721"
-        },
-        {
-          "nav_date": "20250722",
-          "unit_nav": 1.1543,
-          "pct_chg": 0.0,
-          "ts_code": "007824",
-          "ann_date": "20250722"
-        },
-        {
-          "nav_date": "20250723",
-          "unit_nav": 1.1543,
-          "pct_chg": 0.0,
-          "ts_code": "007824",
-          "ann_date": "20250723"
-        },
-        {
-          "nav_date": "20250724",
-          "unit_nav": 1.1542,
-          "pct_chg": -0.01,
-          "ts_code": "007824",
-          "ann_date": "20250724"
-        },
-        {
-          "nav_date": "20250725",
-          "unit_nav": 1.1542,
-          "pct_chg": 0.0,
-          "ts_code": "007824",
-          "ann_date": "20250725"
-        },
-        {
-          "nav_date": "20250728",
-          "unit_nav": 1.1544,
-          "pct_chg": 0.02,
-          "ts_code": "007824",
-          "ann_date": "20250728"
-        },
-        {
-          "nav_date": "20250729",
-          "unit_nav": 1.1544,
-          "pct_chg": 0.0,
-          "ts_code": "007824",
-          "ann_date": "20250729"
-        },
-        {
-          "nav_date": "20250730",
-          "unit_nav": 1.1544,
-          "pct_chg": 0.0,
-          "ts_code": "007824",
-          "ann_date": "20250730"
-        },
         {
           "nav_date": "20250731",
           "unit_nav": 1.1545,
@@ -15782,6 +15635,153 @@
           "pct_chg": 0.01,
           "ts_code": "007824",
           "ann_date": "20260824"
+        },
+        {
+          "nav_date": "20260825",
+          "unit_nav": 1.1679,
+          "pct_chg": 0.0,
+          "ts_code": "007824",
+          "ann_date": "20260825"
+        },
+        {
+          "nav_date": "20260826",
+          "unit_nav": 1.1679,
+          "pct_chg": 0.0,
+          "ts_code": "007824",
+          "ann_date": "20260826"
+        },
+        {
+          "nav_date": "20260827",
+          "unit_nav": 1.1679,
+          "pct_chg": 0.0,
+          "ts_code": "007824",
+          "ann_date": "20260827"
+        },
+        {
+          "nav_date": "20260828",
+          "unit_nav": 1.168,
+          "pct_chg": 0.01,
+          "ts_code": "007824",
+          "ann_date": "20260828"
+        },
+        {
+          "nav_date": "20260831",
+          "unit_nav": 1.1681,
+          "pct_chg": 0.01,
+          "ts_code": "007824",
+          "ann_date": "20260831"
+        },
+        {
+          "nav_date": "20260901",
+          "unit_nav": 1.1681,
+          "pct_chg": 0.0,
+          "ts_code": "007824",
+          "ann_date": "20260901"
+        },
+        {
+          "nav_date": "20260902",
+          "unit_nav": 1.1681,
+          "pct_chg": 0.0,
+          "ts_code": "007824",
+          "ann_date": "20260902"
+        },
+        {
+          "nav_date": "20260903",
+          "unit_nav": 1.1682,
+          "pct_chg": 0.01,
+          "ts_code": "007824",
+          "ann_date": "20260903"
+        },
+        {
+          "nav_date": "20260904",
+          "unit_nav": 1.1682,
+          "pct_chg": 0.0,
+          "ts_code": "007824",
+          "ann_date": "20260904"
+        },
+        {
+          "nav_date": "20260907",
+          "unit_nav": 1.1683,
+          "pct_chg": 0.01,
+          "ts_code": "007824",
+          "ann_date": "20260907"
+        },
+        {
+          "nav_date": "20260908",
+          "unit_nav": 1.1683,
+          "pct_chg": 0.0,
+          "ts_code": "007824",
+          "ann_date": "20260908"
+        },
+        {
+          "nav_date": "20260909",
+          "unit_nav": 1.1684,
+          "pct_chg": 0.01,
+          "ts_code": "007824",
+          "ann_date": "20260909"
+        },
+        {
+          "nav_date": "20260910",
+          "unit_nav": 1.1684,
+          "pct_chg": 0.0,
+          "ts_code": "007824",
+          "ann_date": "20260910"
+        },
+        {
+          "nav_date": "20260911",
+          "unit_nav": 1.1684,
+          "pct_chg": 0.0,
+          "ts_code": "007824",
+          "ann_date": "20260911"
+        },
+        {
+          "nav_date": "20260914",
+          "unit_nav": 1.1685,
+          "pct_chg": 0.01,
+          "ts_code": "007824",
+          "ann_date": "20260914"
+        },
+        {
+          "nav_date": "20260915",
+          "unit_nav": 1.1685,
+          "pct_chg": 0.0,
+          "ts_code": "007824",
+          "ann_date": "20260915"
+        },
+        {
+          "nav_date": "20260916",
+          "unit_nav": 1.1686,
+          "pct_chg": 0.01,
+          "ts_code": "007824",
+          "ann_date": "20260916"
+        },
+        {
+          "nav_date": "20260917",
+          "unit_nav": 1.1686,
+          "pct_chg": 0.0,
+          "ts_code": "007824",
+          "ann_date": "20260917"
+        },
+        {
+          "nav_date": "20260918",
+          "unit_nav": 1.1686,
+          "pct_chg": 0.0,
+          "ts_code": "007824",
+          "ann_date": "20260918"
+        },
+        {
+          "nav_date": "20260921",
+          "unit_nav": 1.1687,
+          "pct_chg": 0.01,
+          "ts_code": "007824",
+          "ann_date": "20260921"
+        },
+        {
+          "nav_date": "20260922",
+          "unit_nav": 1.1687,
+          "pct_chg": 0.0,
+          "ts_code": "007824",
+          "ann_date": "20260922"
         }
       ]
     },
@@ -15791,158 +15791,11 @@
       "status": "ok",
       "provider": "akshare:fund:016708",
       "ts_code": "016708",
-      "nav_date": "20260824",
-      "ann_date": "20260824",
-      "unit_nav": 1.8184,
+      "nav_date": "20260922",
+      "ann_date": "20260922",
+      "unit_nav": 1.6876,
       "accum_nav": null,
       "history": [
-        {
-          "nav_date": "20250702",
-          "unit_nav": 1.1146,
-          "pct_chg": 0.82,
-          "ts_code": "016708",
-          "ann_date": "20250702"
-        },
-        {
-          "nav_date": "20250703",
-          "unit_nav": 1.1187,
-          "pct_chg": 0.37,
-          "ts_code": "016708",
-          "ann_date": "20250703"
-        },
-        {
-          "nav_date": "20250704",
-          "unit_nav": 1.1037,
-          "pct_chg": -1.34,
-          "ts_code": "016708",
-          "ann_date": "20250704"
-        },
-        {
-          "nav_date": "20250707",
-          "unit_nav": 1.094,
-          "pct_chg": -0.88,
-          "ts_code": "016708",
-          "ann_date": "20250707"
-        },
-        {
-          "nav_date": "20250708",
-          "unit_nav": 1.1045,
-          "pct_chg": 0.96,
-          "ts_code": "016708",
-          "ann_date": "20250708"
-        },
-        {
-          "nav_date": "20250709",
-          "unit_nav": 1.0812,
-          "pct_chg": -2.11,
-          "ts_code": "016708",
-          "ann_date": "20250709"
-        },
-        {
-          "nav_date": "20250710",
-          "unit_nav": 1.0941,
-          "pct_chg": 1.19,
-          "ts_code": "016708",
-          "ann_date": "20250710"
-        },
-        {
-          "nav_date": "20250711",
-          "unit_nav": 1.1124,
-          "pct_chg": 1.67,
-          "ts_code": "016708",
-          "ann_date": "20250711"
-        },
-        {
-          "nav_date": "20250714",
-          "unit_nav": 1.1175,
-          "pct_chg": 0.46,
-          "ts_code": "016708",
-          "ann_date": "20250714"
-        },
-        {
-          "nav_date": "20250715",
-          "unit_nav": 1.1071,
-          "pct_chg": -0.93,
-          "ts_code": "016708",
-          "ann_date": "20250715"
-        },
-        {
-          "nav_date": "20250716",
-          "unit_nav": 1.1028,
-          "pct_chg": -0.39,
-          "ts_code": "016708",
-          "ann_date": "20250716"
-        },
-        {
-          "nav_date": "20250717",
-          "unit_nav": 1.1072,
-          "pct_chg": 0.4,
-          "ts_code": "016708",
-          "ann_date": "20250717"
-        },
-        {
-          "nav_date": "20250718",
-          "unit_nav": 1.1317,
-          "pct_chg": 2.21,
-          "ts_code": "016708",
-          "ann_date": "20250718"
-        },
-        {
-          "nav_date": "20250721",
-          "unit_nav": 1.1629,
-          "pct_chg": 2.76,
-          "ts_code": "016708",
-          "ann_date": "20250721"
-        },
-        {
-          "nav_date": "20250722",
-          "unit_nav": 1.1878,
-          "pct_chg": 2.14,
-          "ts_code": "016708",
-          "ann_date": "20250722"
-        },
-        {
-          "nav_date": "20250723",
-          "unit_nav": 1.1839,
-          "pct_chg": -0.33,
-          "ts_code": "016708",
-          "ann_date": "20250723"
-        },
-        {
-          "nav_date": "20250724",
-          "unit_nav": 1.214,
-          "pct_chg": 2.54,
-          "ts_code": "016708",
-          "ann_date": "20250724"
-        },
-        {
-          "nav_date": "20250725",
-          "unit_nav": 1.2146,
-          "pct_chg": 0.05,
-          "ts_code": "016708",
-          "ann_date": "20250725"
-        },
-        {
-          "nav_date": "20250728",
-          "unit_nav": 1.2095,
-          "pct_chg": -0.42,
-          "ts_code": "016708",
-          "ann_date": "20250728"
-        },
-        {
-          "nav_date": "20250729",
-          "unit_nav": 1.2061,
-          "pct_chg": -0.28,
-          "ts_code": "016708",
-          "ann_date": "20250729"
-        },
-        {
-          "nav_date": "20250730",
-          "unit_nav": 1.2013,
-          "pct_chg": -0.4,
-          "ts_code": "016708",
-          "ann_date": "20250730"
-        },
         {
           "nav_date": "20250731",
           "unit_nav": 1.162,
@@ -17755,6 +17608,153 @@
           "pct_chg": 0.24,
           "ts_code": "016708",
           "ann_date": "20260824"
+        },
+        {
+          "nav_date": "20260825",
+          "unit_nav": 1.7715,
+          "pct_chg": -2.58,
+          "ts_code": "016708",
+          "ann_date": "20260825"
+        },
+        {
+          "nav_date": "20260826",
+          "unit_nav": 1.8077,
+          "pct_chg": 2.04,
+          "ts_code": "016708",
+          "ann_date": "20260826"
+        },
+        {
+          "nav_date": "20260827",
+          "unit_nav": 1.8318,
+          "pct_chg": 1.33,
+          "ts_code": "016708",
+          "ann_date": "20260827"
+        },
+        {
+          "nav_date": "20260828",
+          "unit_nav": 1.8438,
+          "pct_chg": 0.66,
+          "ts_code": "016708",
+          "ann_date": "20260828"
+        },
+        {
+          "nav_date": "20260831",
+          "unit_nav": 1.8184,
+          "pct_chg": -1.38,
+          "ts_code": "016708",
+          "ann_date": "20260831"
+        },
+        {
+          "nav_date": "20260901",
+          "unit_nav": 1.8011,
+          "pct_chg": -0.95,
+          "ts_code": "016708",
+          "ann_date": "20260901"
+        },
+        {
+          "nav_date": "20260902",
+          "unit_nav": 1.7626,
+          "pct_chg": -2.14,
+          "ts_code": "016708",
+          "ann_date": "20260902"
+        },
+        {
+          "nav_date": "20260903",
+          "unit_nav": 1.7843,
+          "pct_chg": 1.23,
+          "ts_code": "016708",
+          "ann_date": "20260903"
+        },
+        {
+          "nav_date": "20260904",
+          "unit_nav": 1.7588,
+          "pct_chg": -1.43,
+          "ts_code": "016708",
+          "ann_date": "20260904"
+        },
+        {
+          "nav_date": "20260907",
+          "unit_nav": 1.7467,
+          "pct_chg": -0.69,
+          "ts_code": "016708",
+          "ann_date": "20260907"
+        },
+        {
+          "nav_date": "20260908",
+          "unit_nav": 1.7729,
+          "pct_chg": 1.5,
+          "ts_code": "016708",
+          "ann_date": "20260908"
+        },
+        {
+          "nav_date": "20260909",
+          "unit_nav": 1.8005,
+          "pct_chg": 1.56,
+          "ts_code": "016708",
+          "ann_date": "20260909"
+        },
+        {
+          "nav_date": "20260910",
+          "unit_nav": 1.781,
+          "pct_chg": -1.08,
+          "ts_code": "016708",
+          "ann_date": "20260910"
+        },
+        {
+          "nav_date": "20260911",
+          "unit_nav": 1.71,
+          "pct_chg": -3.99,
+          "ts_code": "016708",
+          "ann_date": "20260911"
+        },
+        {
+          "nav_date": "20260914",
+          "unit_nav": 1.6988,
+          "pct_chg": -0.65,
+          "ts_code": "016708",
+          "ann_date": "20260914"
+        },
+        {
+          "nav_date": "20260915",
+          "unit_nav": 1.6838,
+          "pct_chg": -0.88,
+          "ts_code": "016708",
+          "ann_date": "20260915"
+        },
+        {
+          "nav_date": "20260916",
+          "unit_nav": 1.7101,
+          "pct_chg": 1.56,
+          "ts_code": "016708",
+          "ann_date": "20260916"
+        },
+        {
+          "nav_date": "20260917",
+          "unit_nav": 1.6658,
+          "pct_chg": -2.59,
+          "ts_code": "016708",
+          "ann_date": "20260917"
+        },
+        {
+          "nav_date": "20260918",
+          "unit_nav": 1.6865,
+          "pct_chg": 1.24,
+          "ts_code": "016708",
+          "ann_date": "20260918"
+        },
+        {
+          "nav_date": "20260921",
+          "unit_nav": 1.6841,
+          "pct_chg": -0.14,
+          "ts_code": "016708",
+          "ann_date": "20260921"
+        },
+        {
+          "nav_date": "20260922",
+          "unit_nav": 1.6876,
+          "pct_chg": 0.21,
+          "ts_code": "016708",
+          "ann_date": "20260922"
         }
       ]
     },
@@ -17764,158 +17764,11 @@
       "status": "ok",
       "provider": "akshare:fund:000218",
       "ts_code": "000218",
-      "nav_date": "20260824",
-      "ann_date": "20260824",
-      "unit_nav": 3.6231,
+      "nav_date": "20260922",
+      "ann_date": "20260922",
+      "unit_nav": 3.3625,
       "accum_nav": null,
       "history": [
-        {
-          "nav_date": "20250702",
-          "unit_nav": 2.7993,
-          "pct_chg": -0.22,
-          "ts_code": "000218",
-          "ann_date": "20250702"
-        },
-        {
-          "nav_date": "20250703",
-          "unit_nav": 2.8183,
-          "pct_chg": 0.68,
-          "ts_code": "000218",
-          "ann_date": "20250703"
-        },
-        {
-          "nav_date": "20250704",
-          "unit_nav": 2.8029,
-          "pct_chg": -0.55,
-          "ts_code": "000218",
-          "ann_date": "20250704"
-        },
-        {
-          "nav_date": "20250707",
-          "unit_nav": 2.7878,
-          "pct_chg": -0.54,
-          "ts_code": "000218",
-          "ann_date": "20250707"
-        },
-        {
-          "nav_date": "20250708",
-          "unit_nav": 2.8012,
-          "pct_chg": 0.48,
-          "ts_code": "000218",
-          "ann_date": "20250708"
-        },
-        {
-          "nav_date": "20250709",
-          "unit_nav": 2.772,
-          "pct_chg": -1.04,
-          "ts_code": "000218",
-          "ann_date": "20250709"
-        },
-        {
-          "nav_date": "20250710",
-          "unit_nav": 2.7943,
-          "pct_chg": 0.8,
-          "ts_code": "000218",
-          "ann_date": "20250710"
-        },
-        {
-          "nav_date": "20250711",
-          "unit_nav": 2.7944,
-          "pct_chg": 0.0,
-          "ts_code": "000218",
-          "ann_date": "20250711"
-        },
-        {
-          "nav_date": "20250714",
-          "unit_nav": 2.8217,
-          "pct_chg": 0.98,
-          "ts_code": "000218",
-          "ann_date": "20250714"
-        },
-        {
-          "nav_date": "20250715",
-          "unit_nav": 2.8169,
-          "pct_chg": -0.17,
-          "ts_code": "000218",
-          "ann_date": "20250715"
-        },
-        {
-          "nav_date": "20250716",
-          "unit_nav": 2.8039,
-          "pct_chg": -0.46,
-          "ts_code": "000218",
-          "ann_date": "20250716"
-        },
-        {
-          "nav_date": "20250717",
-          "unit_nav": 2.799,
-          "pct_chg": -0.17,
-          "ts_code": "000218",
-          "ann_date": "20250717"
-        },
-        {
-          "nav_date": "20250718",
-          "unit_nav": 2.8074,
-          "pct_chg": 0.3,
-          "ts_code": "000218",
-          "ann_date": "20250718"
-        },
-        {
-          "nav_date": "20250721",
-          "unit_nav": 2.8214,
-          "pct_chg": 0.5,
-          "ts_code": "000218",
-          "ann_date": "20250721"
-        },
-        {
-          "nav_date": "20250722",
-          "unit_nav": 2.8329,
-          "pct_chg": 0.41,
-          "ts_code": "000218",
-          "ann_date": "20250722"
-        },
-        {
-          "nav_date": "20250723",
-          "unit_nav": 2.8623,
-          "pct_chg": 1.04,
-          "ts_code": "000218",
-          "ann_date": "20250723"
-        },
-        {
-          "nav_date": "20250724",
-          "unit_nav": 2.8148,
-          "pct_chg": -1.66,
-          "ts_code": "000218",
-          "ann_date": "20250724"
-        },
-        {
-          "nav_date": "20250725",
-          "unit_nav": 2.8097,
-          "pct_chg": -0.18,
-          "ts_code": "000218",
-          "ann_date": "20250725"
-        },
-        {
-          "nav_date": "20250728",
-          "unit_nav": 2.8007,
-          "pct_chg": -0.32,
-          "ts_code": "000218",
-          "ann_date": "20250728"
-        },
-        {
-          "nav_date": "20250729",
-          "unit_nav": 2.7861,
-          "pct_chg": -0.52,
-          "ts_code": "000218",
-          "ann_date": "20250729"
-        },
-        {
-          "nav_date": "20250730",
-          "unit_nav": 2.7933,
-          "pct_chg": 0.26,
-          "ts_code": "000218",
-          "ann_date": "20250730"
-        },
         {
           "nav_date": "20250731",
           "unit_nav": 2.7846,
@@ -19728,6 +19581,153 @@
           "pct_chg": 2.1,
           "ts_code": "000218",
           "ann_date": "20260824"
+        },
+        {
+          "nav_date": "20260825",
+          "unit_nav": 3.6097,
+          "pct_chg": -0.37,
+          "ts_code": "000218",
+          "ann_date": "20260825"
+        },
+        {
+          "nav_date": "20260826",
+          "unit_nav": 3.6113,
+          "pct_chg": 0.04,
+          "ts_code": "000218",
+          "ann_date": "20260826"
+        },
+        {
+          "nav_date": "20260827",
+          "unit_nav": 3.5817,
+          "pct_chg": -0.82,
+          "ts_code": "000218",
+          "ann_date": "20260827"
+        },
+        {
+          "nav_date": "20260828",
+          "unit_nav": 3.5897,
+          "pct_chg": 0.22,
+          "ts_code": "000218",
+          "ann_date": "20260828"
+        },
+        {
+          "nav_date": "20260831",
+          "unit_nav": 3.4727,
+          "pct_chg": -3.26,
+          "ts_code": "000218",
+          "ann_date": "20260831"
+        },
+        {
+          "nav_date": "20260901",
+          "unit_nav": 3.4567,
+          "pct_chg": -0.46,
+          "ts_code": "000218",
+          "ann_date": "20260901"
+        },
+        {
+          "nav_date": "20260902",
+          "unit_nav": 3.3824,
+          "pct_chg": -2.15,
+          "ts_code": "000218",
+          "ann_date": "20260902"
+        },
+        {
+          "nav_date": "20260903",
+          "unit_nav": 3.4537,
+          "pct_chg": 2.11,
+          "ts_code": "000218",
+          "ann_date": "20260903"
+        },
+        {
+          "nav_date": "20260904",
+          "unit_nav": 3.4853,
+          "pct_chg": 0.91,
+          "ts_code": "000218",
+          "ann_date": "20260904"
+        },
+        {
+          "nav_date": "20260907",
+          "unit_nav": 3.4262,
+          "pct_chg": -1.7,
+          "ts_code": "000218",
+          "ann_date": "20260907"
+        },
+        {
+          "nav_date": "20260908",
+          "unit_nav": 3.4335,
+          "pct_chg": 0.21,
+          "ts_code": "000218",
+          "ann_date": "20260908"
+        },
+        {
+          "nav_date": "20260909",
+          "unit_nav": 3.4328,
+          "pct_chg": -0.02,
+          "ts_code": "000218",
+          "ann_date": "20260909"
+        },
+        {
+          "nav_date": "20260910",
+          "unit_nav": 3.4382,
+          "pct_chg": 0.16,
+          "ts_code": "000218",
+          "ann_date": "20260910"
+        },
+        {
+          "nav_date": "20260911",
+          "unit_nav": 3.3893,
+          "pct_chg": -1.42,
+          "ts_code": "000218",
+          "ann_date": "20260911"
+        },
+        {
+          "nav_date": "20260914",
+          "unit_nav": 3.3664,
+          "pct_chg": -0.68,
+          "ts_code": "000218",
+          "ann_date": "20260914"
+        },
+        {
+          "nav_date": "20260915",
+          "unit_nav": 3.3484,
+          "pct_chg": -0.53,
+          "ts_code": "000218",
+          "ann_date": "20260915"
+        },
+        {
+          "nav_date": "20260916",
+          "unit_nav": 3.3783,
+          "pct_chg": 0.89,
+          "ts_code": "000218",
+          "ann_date": "20260916"
+        },
+        {
+          "nav_date": "20260917",
+          "unit_nav": 3.3715,
+          "pct_chg": -0.2,
+          "ts_code": "000218",
+          "ann_date": "20260917"
+        },
+        {
+          "nav_date": "20260918",
+          "unit_nav": 3.4154,
+          "pct_chg": 1.3,
+          "ts_code": "000218",
+          "ann_date": "20260918"
+        },
+        {
+          "nav_date": "20260921",
+          "unit_nav": 3.3846,
+          "pct_chg": -0.9,
+          "ts_code": "000218",
+          "ann_date": "20260921"
+        },
+        {
+          "nav_date": "20260922",
+          "unit_nav": 3.3625,
+          "pct_chg": -0.65,
+          "ts_code": "000218",
+          "ann_date": "20260922"
         }
       ]
     },
@@ -19737,158 +19737,11 @@
       "status": "ok",
       "provider": "akshare:fund:000217",
       "ts_code": "000217",
-      "nav_date": "20260824",
-      "ann_date": "20260824",
-      "unit_nav": 3.3774,
+      "nav_date": "20260922",
+      "ann_date": "20260922",
+      "unit_nav": 3.1338,
       "accum_nav": null,
       "history": [
-        {
-          "nav_date": "20250702",
-          "unit_nav": 2.6249,
-          "pct_chg": -0.22,
-          "ts_code": "000217",
-          "ann_date": "20250702"
-        },
-        {
-          "nav_date": "20250703",
-          "unit_nav": 2.6425,
-          "pct_chg": 0.67,
-          "ts_code": "000217",
-          "ann_date": "20250703"
-        },
-        {
-          "nav_date": "20250704",
-          "unit_nav": 2.6281,
-          "pct_chg": -0.54,
-          "ts_code": "000217",
-          "ann_date": "20250704"
-        },
-        {
-          "nav_date": "20250707",
-          "unit_nav": 2.614,
-          "pct_chg": -0.54,
-          "ts_code": "000217",
-          "ann_date": "20250707"
-        },
-        {
-          "nav_date": "20250708",
-          "unit_nav": 2.6264,
-          "pct_chg": 0.47,
-          "ts_code": "000217",
-          "ann_date": "20250708"
-        },
-        {
-          "nav_date": "20250709",
-          "unit_nav": 2.5992,
-          "pct_chg": -1.04,
-          "ts_code": "000217",
-          "ann_date": "20250709"
-        },
-        {
-          "nav_date": "20250710",
-          "unit_nav": 2.6199,
-          "pct_chg": 0.8,
-          "ts_code": "000217",
-          "ann_date": "20250710"
-        },
-        {
-          "nav_date": "20250711",
-          "unit_nav": 2.6199,
-          "pct_chg": 0.0,
-          "ts_code": "000217",
-          "ann_date": "20250711"
-        },
-        {
-          "nav_date": "20250714",
-          "unit_nav": 2.6451,
-          "pct_chg": 0.96,
-          "ts_code": "000217",
-          "ann_date": "20250714"
-        },
-        {
-          "nav_date": "20250715",
-          "unit_nav": 2.6407,
-          "pct_chg": -0.17,
-          "ts_code": "000217",
-          "ann_date": "20250715"
-        },
-        {
-          "nav_date": "20250716",
-          "unit_nav": 2.6286,
-          "pct_chg": -0.46,
-          "ts_code": "000217",
-          "ann_date": "20250716"
-        },
-        {
-          "nav_date": "20250717",
-          "unit_nav": 2.6241,
-          "pct_chg": -0.17,
-          "ts_code": "000217",
-          "ann_date": "20250717"
-        },
-        {
-          "nav_date": "20250718",
-          "unit_nav": 2.6317,
-          "pct_chg": 0.29,
-          "ts_code": "000217",
-          "ann_date": "20250718"
-        },
-        {
-          "nav_date": "20250721",
-          "unit_nav": 2.6447,
-          "pct_chg": 0.49,
-          "ts_code": "000217",
-          "ann_date": "20250721"
-        },
-        {
-          "nav_date": "20250722",
-          "unit_nav": 2.6554,
-          "pct_chg": 0.4,
-          "ts_code": "000217",
-          "ann_date": "20250722"
-        },
-        {
-          "nav_date": "20250723",
-          "unit_nav": 2.6828,
-          "pct_chg": 1.03,
-          "ts_code": "000217",
-          "ann_date": "20250723"
-        },
-        {
-          "nav_date": "20250724",
-          "unit_nav": 2.6384,
-          "pct_chg": -1.65,
-          "ts_code": "000217",
-          "ann_date": "20250724"
-        },
-        {
-          "nav_date": "20250725",
-          "unit_nav": 2.6335,
-          "pct_chg": -0.19,
-          "ts_code": "000217",
-          "ann_date": "20250725"
-        },
-        {
-          "nav_date": "20250728",
-          "unit_nav": 2.625,
-          "pct_chg": -0.32,
-          "ts_code": "000217",
-          "ann_date": "20250728"
-        },
-        {
-          "nav_date": "20250729",
-          "unit_nav": 2.6116,
-          "pct_chg": -0.51,
-          "ts_code": "000217",
-          "ann_date": "20250729"
-        },
-        {
-          "nav_date": "20250730",
-          "unit_nav": 2.6182,
-          "pct_chg": 0.25,
-          "ts_code": "000217",
-          "ann_date": "20250730"
-        },
         {
           "nav_date": "20250731",
           "unit_nav": 2.61,
@@ -21701,6 +21554,153 @@
           "pct_chg": 2.1,
           "ts_code": "000217",
           "ann_date": "20260824"
+        },
+        {
+          "nav_date": "20260825",
+          "unit_nav": 3.3653,
+          "pct_chg": -0.36,
+          "ts_code": "000217",
+          "ann_date": "20260825"
+        },
+        {
+          "nav_date": "20260826",
+          "unit_nav": 3.3666,
+          "pct_chg": 0.04,
+          "ts_code": "000217",
+          "ann_date": "20260826"
+        },
+        {
+          "nav_date": "20260827",
+          "unit_nav": 3.3392,
+          "pct_chg": -0.81,
+          "ts_code": "000217",
+          "ann_date": "20260827"
+        },
+        {
+          "nav_date": "20260828",
+          "unit_nav": 3.346,
+          "pct_chg": 0.2,
+          "ts_code": "000217",
+          "ann_date": "20260828"
+        },
+        {
+          "nav_date": "20260831",
+          "unit_nav": 3.2376,
+          "pct_chg": -3.24,
+          "ts_code": "000217",
+          "ann_date": "20260831"
+        },
+        {
+          "nav_date": "20260901",
+          "unit_nav": 3.2223,
+          "pct_chg": -0.47,
+          "ts_code": "000217",
+          "ann_date": "20260901"
+        },
+        {
+          "nav_date": "20260902",
+          "unit_nav": 3.1529,
+          "pct_chg": -2.15,
+          "ts_code": "000217",
+          "ann_date": "20260902"
+        },
+        {
+          "nav_date": "20260903",
+          "unit_nav": 3.2189,
+          "pct_chg": 2.09,
+          "ts_code": "000217",
+          "ann_date": "20260903"
+        },
+        {
+          "nav_date": "20260904",
+          "unit_nav": 3.2487,
+          "pct_chg": 0.93,
+          "ts_code": "000217",
+          "ann_date": "20260904"
+        },
+        {
+          "nav_date": "20260907",
+          "unit_nav": 3.1935,
+          "pct_chg": -1.7,
+          "ts_code": "000217",
+          "ann_date": "20260907"
+        },
+        {
+          "nav_date": "20260908",
+          "unit_nav": 3.2002,
+          "pct_chg": 0.21,
+          "ts_code": "000217",
+          "ann_date": "20260908"
+        },
+        {
+          "nav_date": "20260909",
+          "unit_nav": 3.1992,
+          "pct_chg": -0.03,
+          "ts_code": "000217",
+          "ann_date": "20260909"
+        },
+        {
+          "nav_date": "20260910",
+          "unit_nav": 3.2045,
+          "pct_chg": 0.17,
+          "ts_code": "000217",
+          "ann_date": "20260910"
+        },
+        {
+          "nav_date": "20260911",
+          "unit_nav": 3.1588,
+          "pct_chg": -1.43,
+          "ts_code": "000217",
+          "ann_date": "20260911"
+        },
+        {
+          "nav_date": "20260914",
+          "unit_nav": 3.1377,
+          "pct_chg": -0.67,
+          "ts_code": "000217",
+          "ann_date": "20260914"
+        },
+        {
+          "nav_date": "20260915",
+          "unit_nav": 3.1206,
+          "pct_chg": -0.54,
+          "ts_code": "000217",
+          "ann_date": "20260915"
+        },
+        {
+          "nav_date": "20260916",
+          "unit_nav": 3.1482,
+          "pct_chg": 0.88,
+          "ts_code": "000217",
+          "ann_date": "20260916"
+        },
+        {
+          "nav_date": "20260917",
+          "unit_nav": 3.1418,
+          "pct_chg": -0.2,
+          "ts_code": "000217",
+          "ann_date": "20260917"
+        },
+        {
+          "nav_date": "20260918",
+          "unit_nav": 3.1826,
+          "pct_chg": 1.3,
+          "ts_code": "000217",
+          "ann_date": "20260918"
+        },
+        {
+          "nav_date": "20260921",
+          "unit_nav": 3.1543,
+          "pct_chg": -0.89,
+          "ts_code": "000217",
+          "ann_date": "20260921"
+        },
+        {
+          "nav_date": "20260922",
+          "unit_nav": 3.1338,
+          "pct_chg": -0.65,
+          "ts_code": "000217",
+          "ann_date": "20260922"
         }
       ]
     },
@@ -21710,158 +21710,11 @@
       "status": "ok",
       "provider": "akshare:fund:020411",
       "ts_code": "020411",
-      "nav_date": "20260824",
-      "ann_date": "20260824",
-      "unit_nav": 2.1339,
+      "nav_date": "20260922",
+      "ann_date": "20260922",
+      "unit_nav": 1.8869,
       "accum_nav": null,
       "history": [
-        {
-          "nav_date": "20250702",
-          "unit_nav": 1.4981,
-          "pct_chg": 0.5,
-          "ts_code": "020411",
-          "ann_date": "20250702"
-        },
-        {
-          "nav_date": "20250703",
-          "unit_nav": 1.5009,
-          "pct_chg": 0.19,
-          "ts_code": "020411",
-          "ann_date": "20250703"
-        },
-        {
-          "nav_date": "20250704",
-          "unit_nav": 1.4864,
-          "pct_chg": -0.97,
-          "ts_code": "020411",
-          "ann_date": "20250704"
-        },
-        {
-          "nav_date": "20250707",
-          "unit_nav": 1.467,
-          "pct_chg": -1.31,
-          "ts_code": "020411",
-          "ann_date": "20250707"
-        },
-        {
-          "nav_date": "20250708",
-          "unit_nav": 1.4796,
-          "pct_chg": 0.86,
-          "ts_code": "020411",
-          "ann_date": "20250708"
-        },
-        {
-          "nav_date": "20250709",
-          "unit_nav": 1.4461,
-          "pct_chg": -2.26,
-          "ts_code": "020411",
-          "ann_date": "20250709"
-        },
-        {
-          "nav_date": "20250710",
-          "unit_nav": 1.441,
-          "pct_chg": -0.35,
-          "ts_code": "020411",
-          "ann_date": "20250710"
-        },
-        {
-          "nav_date": "20250711",
-          "unit_nav": 1.4483,
-          "pct_chg": 0.51,
-          "ts_code": "020411",
-          "ann_date": "20250711"
-        },
-        {
-          "nav_date": "20250714",
-          "unit_nav": 1.4774,
-          "pct_chg": 2.01,
-          "ts_code": "020411",
-          "ann_date": "20250714"
-        },
-        {
-          "nav_date": "20250715",
-          "unit_nav": 1.4697,
-          "pct_chg": -0.52,
-          "ts_code": "020411",
-          "ann_date": "20250715"
-        },
-        {
-          "nav_date": "20250716",
-          "unit_nav": 1.4643,
-          "pct_chg": -0.37,
-          "ts_code": "020411",
-          "ann_date": "20250716"
-        },
-        {
-          "nav_date": "20250717",
-          "unit_nav": 1.4454,
-          "pct_chg": -1.29,
-          "ts_code": "020411",
-          "ann_date": "20250717"
-        },
-        {
-          "nav_date": "20250718",
-          "unit_nav": 1.4592,
-          "pct_chg": 0.95,
-          "ts_code": "020411",
-          "ann_date": "20250718"
-        },
-        {
-          "nav_date": "20250721",
-          "unit_nav": 1.4812,
-          "pct_chg": 1.51,
-          "ts_code": "020411",
-          "ann_date": "20250721"
-        },
-        {
-          "nav_date": "20250722",
-          "unit_nav": 1.5098,
-          "pct_chg": 1.93,
-          "ts_code": "020411",
-          "ann_date": "20250722"
-        },
-        {
-          "nav_date": "20250723",
-          "unit_nav": 1.5032,
-          "pct_chg": -0.44,
-          "ts_code": "020411",
-          "ann_date": "20250723"
-        },
-        {
-          "nav_date": "20250724",
-          "unit_nav": 1.4867,
-          "pct_chg": -1.1,
-          "ts_code": "020411",
-          "ann_date": "20250724"
-        },
-        {
-          "nav_date": "20250725",
-          "unit_nav": 1.4721,
-          "pct_chg": -0.98,
-          "ts_code": "020411",
-          "ann_date": "20250725"
-        },
-        {
-          "nav_date": "20250728",
-          "unit_nav": 1.4528,
-          "pct_chg": -1.31,
-          "ts_code": "020411",
-          "ann_date": "20250728"
-        },
-        {
-          "nav_date": "20250729",
-          "unit_nav": 1.4501,
-          "pct_chg": -0.19,
-          "ts_code": "020411",
-          "ann_date": "20250729"
-        },
-        {
-          "nav_date": "20250730",
-          "unit_nav": 1.4539,
-          "pct_chg": 0.26,
-          "ts_code": "020411",
-          "ann_date": "20250730"
-        },
         {
           "nav_date": "20250731",
           "unit_nav": 1.4141,
@@ -23674,6 +23527,153 @@
           "pct_chg": 0.63,
           "ts_code": "020411",
           "ann_date": "20260824"
+        },
+        {
+          "nav_date": "20260825",
+          "unit_nav": 2.0711,
+          "pct_chg": -2.94,
+          "ts_code": "020411",
+          "ann_date": "20260825"
+        },
+        {
+          "nav_date": "20260826",
+          "unit_nav": 2.0797,
+          "pct_chg": 0.42,
+          "ts_code": "020411",
+          "ann_date": "20260826"
+        },
+        {
+          "nav_date": "20260827",
+          "unit_nav": 2.1012,
+          "pct_chg": 1.03,
+          "ts_code": "020411",
+          "ann_date": "20260827"
+        },
+        {
+          "nav_date": "20260828",
+          "unit_nav": 2.1412,
+          "pct_chg": 1.9,
+          "ts_code": "020411",
+          "ann_date": "20260828"
+        },
+        {
+          "nav_date": "20260831",
+          "unit_nav": 2.078,
+          "pct_chg": -2.95,
+          "ts_code": "020411",
+          "ann_date": "20260831"
+        },
+        {
+          "nav_date": "20260901",
+          "unit_nav": 2.0565,
+          "pct_chg": -1.03,
+          "ts_code": "020411",
+          "ann_date": "20260901"
+        },
+        {
+          "nav_date": "20260902",
+          "unit_nav": 2.0385,
+          "pct_chg": -0.88,
+          "ts_code": "020411",
+          "ann_date": "20260902"
+        },
+        {
+          "nav_date": "20260903",
+          "unit_nav": 2.0782,
+          "pct_chg": 1.95,
+          "ts_code": "020411",
+          "ann_date": "20260903"
+        },
+        {
+          "nav_date": "20260904",
+          "unit_nav": 2.0661,
+          "pct_chg": -0.58,
+          "ts_code": "020411",
+          "ann_date": "20260904"
+        },
+        {
+          "nav_date": "20260907",
+          "unit_nav": 2.0238,
+          "pct_chg": -2.05,
+          "ts_code": "020411",
+          "ann_date": "20260907"
+        },
+        {
+          "nav_date": "20260908",
+          "unit_nav": 2.0395,
+          "pct_chg": 0.78,
+          "ts_code": "020411",
+          "ann_date": "20260908"
+        },
+        {
+          "nav_date": "20260909",
+          "unit_nav": 2.0688,
+          "pct_chg": 1.44,
+          "ts_code": "020411",
+          "ann_date": "20260909"
+        },
+        {
+          "nav_date": "20260910",
+          "unit_nav": 2.0448,
+          "pct_chg": -1.16,
+          "ts_code": "020411",
+          "ann_date": "20260910"
+        },
+        {
+          "nav_date": "20260911",
+          "unit_nav": 1.986,
+          "pct_chg": -2.88,
+          "ts_code": "020411",
+          "ann_date": "20260911"
+        },
+        {
+          "nav_date": "20260914",
+          "unit_nav": 1.976,
+          "pct_chg": -0.5,
+          "ts_code": "020411",
+          "ann_date": "20260914"
+        },
+        {
+          "nav_date": "20260915",
+          "unit_nav": 1.9379,
+          "pct_chg": -1.93,
+          "ts_code": "020411",
+          "ann_date": "20260915"
+        },
+        {
+          "nav_date": "20260916",
+          "unit_nav": 2.0014,
+          "pct_chg": 3.28,
+          "ts_code": "020411",
+          "ann_date": "20260916"
+        },
+        {
+          "nav_date": "20260917",
+          "unit_nav": 1.922,
+          "pct_chg": -3.97,
+          "ts_code": "020411",
+          "ann_date": "20260917"
+        },
+        {
+          "nav_date": "20260918",
+          "unit_nav": 1.9462,
+          "pct_chg": 1.26,
+          "ts_code": "020411",
+          "ann_date": "20260918"
+        },
+        {
+          "nav_date": "20260921",
+          "unit_nav": 1.9122,
+          "pct_chg": -1.75,
+          "ts_code": "020411",
+          "ann_date": "20260921"
+        },
+        {
+          "nav_date": "20260922",
+          "unit_nav": 1.8869,
+          "pct_chg": -1.32,
+          "ts_code": "020411",
+          "ann_date": "20260922"
         }
       ]
     }

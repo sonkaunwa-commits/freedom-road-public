@@ -1,0 +1,55 @@
+{
+  "artifact_count": 7,
+  "artifacts": [
+    {
+      "artifact_timestamp": "2026-09-23T02:15:05.196143+08:00",
+      "path": "public/latest/analysis_duckdb_evidence.json",
+      "schema_version": "1",
+      "sha256": "d3d6d52a148f9c529ef2c5ed4fa0d2b59b56b85ae7fa97396a7542e899726b9b"
+    },
+    {
+      "artifact_timestamp": "2026-09-23T02:15:08.353513+08:00",
+      "path": "public/latest/analysis_evidence_summary.json",
+      "schema_version": "1",
+      "sha256": "91bfe63ac1fb95845cae79a7e7f2749e941a3ffbb9840ecff7273c8c1d5bebf6"
+    },
+    {
+      "artifact_timestamp": "2026-09-23T02:14:59.573498+08:00",
+      "path": "public/latest/analysis_stage2_daily.json",
+      "schema_version": "2",
+      "sha256": "8c3baa3c66b9277e434af8d4386a1ed319c1cc626bfa0655b70c420a8ca0e896"
+    },
+    {
+      "artifact_timestamp": "2026-09-23T02:14:43.267048+08:00",
+      "path": "public/latest/calendar_alignment.json",
+      "schema_version": "1",
+      "sha256": "dd816ddc0864251daf04d2bffa067c24192efc2daffc43883e20a4e85db01f61"
+    },
+    {
+      "artifact_timestamp": "2026-09-23T02:14:42.705700+08:00",
+      "path": "public/latest/data_contracts.json",
+      "schema_version": "1",
+      "sha256": "e4c5ae0afad46432c5575f544041e37e3066b24965a6f91b85febab8538754aa"
+    },
+    {
+      "artifact_timestamp": "2026-09-23T02:15:09.026514+08:00",
+      "path": "public/latest/manifest.json",
+      "schema_version": "9",
+      "sha256": "af0d58a01e2c0d8af50557f0a542c7074ea05c6c0af472a7300f819cf10224df"
+    },
+    {
+      "artifact_timestamp": "2026-09-23T02:15:09.026514+08:00",
+      "path": "public/latest/report_readiness.json",
+      "schema_version": "7",
+      "sha256": "9ae27ccd88dbe0bb32303aa28289a934ac9d6bddbdd35a9c48c5257c0ced5ce6"
+    }
+  ],
+  "generated_at": "2026-09-22T18:15:09.317333+00:00",
+  "privacy_boundary": "PUBLIC artifact hashes and generator source commit only; no private payloads, Secrets, account data or executable bank quotes.",
+  "provenance_type": "GENERATOR_SOURCE_COMMIT_BINDING",
+  "schema_version": 1,
+  "source_commit": "834145056686087e356659cd845f5471e22f1663",
+  "source_commit_resolution": "GIT_HEAD",
+  "source_ref": "main",
+  "workflow": "analysis-stage2-daily"
+}

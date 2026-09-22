@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T17:41:46.833842+08:00",
+  "generated_at": "2026-09-23T02:11:28.305280+08:00",
   "schema_version": 1,
   "provider": "goldprice.dev",
   "status": "degraded_probe",
@@ -12,10 +12,10 @@
     "yahoo_close": null,
     "goldprice": {
       "symbol": "XAU",
-      "price": 4634.22,
-      "bid": 4633.12,
-      "ask": 4635.31,
-      "computed_at": "2026-08-25T09:41:41Z",
+      "price": 4355.28,
+      "bid": null,
+      "ask": null,
+      "computed_at": "2026-09-22T18:11:28.594853Z",
       "is_stale": false
     }
   },

@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-08-25T17:44:09.763315+08:00",
+  "generated_at": "2026-09-23T02:15:09.232205+08:00",
   "schema_version": 3,
   "status": "warning",
   "counts": {
     "critical": 0,
-    "warning": 10,
+    "warning": 13,
     "info": 0,
-    "total": 10
+    "total": 13
   },
   "alerts": [
     {
@@ -27,9 +27,9 @@
       "details": {
         "provider": "akshare",
         "domain": "a_share_daily",
-        "success_rate": 0.0973,
-        "consecutive_failed_runs": 8,
-        "observations": 113,
+        "success_rate": 0.1105,
+        "consecutive_failed_runs": 3,
+        "observations": 851,
         "service_impact": "operational_watch_only_unless_data_health_or_readiness_gate_degrades"
       }
     },
@@ -41,9 +41,23 @@
       "details": {
         "provider": "eastmoney",
         "domain": "a_share_daily",
-        "success_rate": 0.0286,
-        "consecutive_failed_runs": 8,
-        "observations": 35,
+        "success_rate": 0.0956,
+        "consecutive_failed_runs": 2,
+        "observations": 596,
+        "service_impact": "operational_watch_only_unless_data_health_or_readiness_gate_degrades"
+      }
+    },
+    {
+      "code": "PROVIDER_DOMAIN_STABILITY_WATCH",
+      "severity": "warning",
+      "source": "provider_domain:missing/funds",
+      "message": "Provider missing is unstable for domain funds; fallback/service-impact gates determine delivery severity.",
+      "details": {
+        "provider": "missing",
+        "domain": "funds",
+        "success_rate": 0.0,
+        "consecutive_failed_runs": 3,
+        "observations": 4,
         "service_impact": "operational_watch_only_unless_data_health_or_readiness_gate_degrades"
       }
     },
@@ -56,8 +70,8 @@
         "provider": "tushare",
         "domain": "a_share_daily",
         "success_rate": 0.0,
-        "consecutive_failed_runs": 12,
-        "observations": 12,
+        "consecutive_failed_runs": 100,
+        "observations": 100,
         "service_impact": "operational_watch_only_unless_data_health_or_readiness_gate_degrades"
       }
     },
@@ -69,9 +83,9 @@
       "details": {
         "provider": "tushare",
         "domain": "a_share_minute",
-        "success_rate": 0.1429,
-        "consecutive_failed_runs": 10,
-        "observations": 14,
+        "success_rate": 0.2,
+        "consecutive_failed_runs": 0,
+        "observations": 125,
         "service_impact": "operational_watch_only_unless_data_health_or_readiness_gate_degrades"
       }
     },
@@ -84,8 +98,8 @@
         "provider": "tushare",
         "domain": "gold",
         "success_rate": 0.0,
-        "consecutive_failed_runs": 12,
-        "observations": 12,
+        "consecutive_failed_runs": 100,
+        "observations": 100,
         "service_impact": "operational_watch_only_unless_data_health_or_readiness_gate_degrades"
       }
     },
@@ -98,8 +112,8 @@
         "provider": "tushare",
         "domain": "hk_daily",
         "success_rate": 0.0,
-        "consecutive_failed_runs": 12,
-        "observations": 12,
+        "consecutive_failed_runs": 100,
+        "observations": 100,
         "service_impact": "operational_watch_only_unless_data_health_or_readiness_gate_degrades"
       }
     },
@@ -112,8 +126,8 @@
         "provider": "tushare",
         "domain": "us_daily",
         "success_rate": 0.0,
-        "consecutive_failed_runs": 12,
-        "observations": 12,
+        "consecutive_failed_runs": 100,
+        "observations": 100,
         "service_impact": "operational_watch_only_unless_data_health_or_readiness_gate_degrades"
       }
     },
@@ -125,9 +139,37 @@
       "details": {
         "provider": "yfinance",
         "domain": "a_share_daily",
-        "success_rate": 0.0,
-        "consecutive_failed_runs": 7,
-        "observations": 14,
+        "success_rate": 0.0398,
+        "consecutive_failed_runs": 37,
+        "observations": 226,
+        "service_impact": "operational_watch_only_unless_data_health_or_readiness_gate_degrades"
+      }
+    },
+    {
+      "code": "PROVIDER_DOMAIN_STABILITY_WATCH",
+      "severity": "warning",
+      "source": "provider_domain:yfinance/hk_daily",
+      "message": "Provider yfinance is unstable for domain hk_daily; fallback/service-impact gates determine delivery severity.",
+      "details": {
+        "provider": "yfinance",
+        "domain": "hk_daily",
+        "success_rate": 0.0909,
+        "consecutive_failed_runs": 5,
+        "observations": 66,
+        "service_impact": "operational_watch_only_unless_data_health_or_readiness_gate_degrades"
+      }
+    },
+    {
+      "code": "PROVIDER_DOMAIN_STABILITY_WATCH",
+      "severity": "warning",
+      "source": "provider_domain:yfinance/us_daily",
+      "message": "Provider yfinance is unstable for domain us_daily; fallback/service-impact gates determine delivery severity.",
+      "details": {
+        "provider": "yfinance",
+        "domain": "us_daily",
+        "success_rate": 0.2381,
+        "consecutive_failed_runs": 0,
+        "observations": 42,
         "service_impact": "operational_watch_only_unless_data_health_or_readiness_gate_degrades"
       }
     },
@@ -138,6 +180,7 @@
       "message": "Report may be published only with explicit degradation disclosures.",
       "details": {
         "blockers": [
+          "US_FORMAL_CLOSE_NOT_READY",
           "DATA_HEALTH::CANDIDATE_SCAN_DEGRADED"
         ]
       }

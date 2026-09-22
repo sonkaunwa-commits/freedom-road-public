@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-25T17:41:49.338642+08:00",
+  "generated_at": "2026-09-23T02:11:31.679614+08:00",
   "schema_version": 2,
-  "source_health_updated_at": "2026-08-25T17:41:43.744578+08:00",
+  "source_health_updated_at": "2026-09-23T02:11:25.065600+08:00",
   "domains": {
     "a_share_daily": {
       "status": "ready",
@@ -14,10 +14,10 @@
           "market": "A",
           "provider": "tencent_fqkline:a:000977.SZ",
           "provider_grade": "validated_public_fallback",
-          "latest_trade_date": "20260825",
+          "latest_trade_date": "20260922",
           "status": "ready",
           "session_lag": 0,
-          "expected_trade_date": "2026-08-25",
+          "expected_trade_date": "2026-09-21",
           "freshness_status": "CURRENT_TO_LAST_COMPLETED_SESSION"
         },
         {
@@ -25,10 +25,10 @@
           "market": "A",
           "provider": "tencent_fqkline:a:002085.SZ",
           "provider_grade": "validated_public_fallback",
-          "latest_trade_date": "20260825",
+          "latest_trade_date": "20260922",
           "status": "ready",
           "session_lag": 0,
-          "expected_trade_date": "2026-08-25",
+          "expected_trade_date": "2026-09-21",
           "freshness_status": "CURRENT_TO_LAST_COMPLETED_SESSION"
         },
         {
@@ -36,10 +36,10 @@
           "market": "A",
           "provider": "tencent_fqkline:a:002185.SZ",
           "provider_grade": "validated_public_fallback",
-          "latest_trade_date": "20260825",
+          "latest_trade_date": "20260922",
           "status": "ready",
           "session_lag": 0,
-          "expected_trade_date": "2026-08-25",
+          "expected_trade_date": "2026-09-21",
           "freshness_status": "CURRENT_TO_LAST_COMPLETED_SESSION"
         },
         {
@@ -47,10 +47,10 @@
           "market": "A",
           "provider": "tencent_fqkline:a:002371.SZ",
           "provider_grade": "validated_public_fallback",
-          "latest_trade_date": "20260825",
+          "latest_trade_date": "20260922",
           "status": "ready",
           "session_lag": 0,
-          "expected_trade_date": "2026-08-25",
+          "expected_trade_date": "2026-09-21",
           "freshness_status": "CURRENT_TO_LAST_COMPLETED_SESSION"
         },
         {
@@ -58,10 +58,10 @@
           "market": "A",
           "provider": "tencent_fqkline:a:002475.SZ",
           "provider_grade": "validated_public_fallback",
-          "latest_trade_date": "20260825",
+          "latest_trade_date": "20260922",
           "status": "ready",
           "session_lag": 0,
-          "expected_trade_date": "2026-08-25",
+          "expected_trade_date": "2026-09-21",
           "freshness_status": "CURRENT_TO_LAST_COMPLETED_SESSION"
         },
         {
@@ -69,10 +69,10 @@
           "market": "A",
           "provider": "tencent_fqkline:a:002600.SZ",
           "provider_grade": "validated_public_fallback",
-          "latest_trade_date": "20260825",
+          "latest_trade_date": "20260922",
           "status": "ready",
           "session_lag": 0,
-          "expected_trade_date": "2026-08-25",
+          "expected_trade_date": "2026-09-21",
           "freshness_status": "CURRENT_TO_LAST_COMPLETED_SESSION"
         },
         {
@@ -80,10 +80,10 @@
           "market": "A",
           "provider": "tencent_fqkline:a:300059.SZ",
           "provider_grade": "validated_public_fallback",
-          "latest_trade_date": "20260825",
+          "latest_trade_date": "20260922",
           "status": "ready",
           "session_lag": 0,
-          "expected_trade_date": "2026-08-25",
+          "expected_trade_date": "2026-09-21",
           "freshness_status": "CURRENT_TO_LAST_COMPLETED_SESSION"
         },
         {
@@ -91,10 +91,10 @@
           "market": "A",
           "provider": "tencent_fqkline:a:300124.SZ",
           "provider_grade": "validated_public_fallback",
-          "latest_trade_date": "20260825",
+          "latest_trade_date": "20260922",
           "status": "ready",
           "session_lag": 0,
-          "expected_trade_date": "2026-08-25",
+          "expected_trade_date": "2026-09-21",
           "freshness_status": "CURRENT_TO_LAST_COMPLETED_SESSION"
         },
         {
@@ -102,10 +102,10 @@
           "market": "A",
           "provider": "tencent_fqkline:a:600006.SH",
           "provider_grade": "validated_public_fallback",
-          "latest_trade_date": "20260825",
+          "latest_trade_date": "20260922",
           "status": "ready",
           "session_lag": 0,
-          "expected_trade_date": "2026-08-25",
+          "expected_trade_date": "2026-09-21",
           "freshness_status": "CURRENT_TO_LAST_COMPLETED_SESSION"
         },
         {
@@ -113,10 +113,10 @@
           "market": "A",
           "provider": "tencent_fqkline:a:600276.SH",
           "provider_grade": "validated_public_fallback",
-          "latest_trade_date": "20260825",
+          "latest_trade_date": "20260922",
           "status": "ready",
           "session_lag": 0,
-          "expected_trade_date": "2026-08-25",
+          "expected_trade_date": "2026-09-21",
           "freshness_status": "CURRENT_TO_LAST_COMPLETED_SESSION"
         },
         {
@@ -124,10 +124,10 @@
           "market": "A",
           "provider": "tencent_fqkline:a:601138.SH",
           "provider_grade": "validated_public_fallback",
-          "latest_trade_date": "20260825",
+          "latest_trade_date": "20260922",
           "status": "ready",
           "session_lag": 0,
-          "expected_trade_date": "2026-08-25",
+          "expected_trade_date": "2026-09-21",
           "freshness_status": "CURRENT_TO_LAST_COMPLETED_SESSION"
         },
         {
@@ -135,10 +135,10 @@
           "market": "A",
           "provider": "tencent_fqkline:a:601899.SH",
           "provider_grade": "validated_public_fallback",
-          "latest_trade_date": "20260825",
+          "latest_trade_date": "20260922",
           "status": "ready",
           "session_lag": 0,
-          "expected_trade_date": "2026-08-25",
+          "expected_trade_date": "2026-09-21",
           "freshness_status": "CURRENT_TO_LAST_COMPLETED_SESSION"
         }
       ],
@@ -146,7 +146,7 @@
         "exact_action_ready": true,
         "stale_codes": [],
         "missing_alignment_codes": [],
-        "last_completed_session": "2026-08-25",
+        "last_completed_session": "2026-09-21",
         "calendar_fresh": true,
         "calendar_error": null
       }
@@ -162,10 +162,10 @@
           "market": "HK",
           "provider": "tencent_fqkline:hk:00700.HK",
           "provider_grade": "validated_public_fallback",
-          "latest_trade_date": "20260825",
+          "latest_trade_date": "20260922",
           "status": "ready",
           "session_lag": 0,
-          "expected_trade_date": "2026-08-25",
+          "expected_trade_date": "2026-09-21",
           "freshness_status": "CURRENT_TO_LAST_COMPLETED_SESSION"
         },
         {
@@ -173,10 +173,10 @@
           "market": "HK",
           "provider": "tencent_fqkline:hk:00909.HK",
           "provider_grade": "validated_public_fallback",
-          "latest_trade_date": "20260825",
+          "latest_trade_date": "20260922",
           "status": "ready",
           "session_lag": 0,
-          "expected_trade_date": "2026-08-25",
+          "expected_trade_date": "2026-09-21",
           "freshness_status": "CURRENT_TO_LAST_COMPLETED_SESSION"
         },
         {
@@ -184,10 +184,10 @@
           "market": "HK",
           "provider": "tencent_fqkline:hk:06969.HK",
           "provider_grade": "validated_public_fallback",
-          "latest_trade_date": "20260825",
+          "latest_trade_date": "20260922",
           "status": "ready",
           "session_lag": 0,
-          "expected_trade_date": "2026-08-25",
+          "expected_trade_date": "2026-09-21",
           "freshness_status": "CURRENT_TO_LAST_COMPLETED_SESSION"
         },
         {
@@ -195,10 +195,10 @@
           "market": "HK",
           "provider": "tencent_fqkline:hk:09926.HK",
           "provider_grade": "validated_public_fallback",
-          "latest_trade_date": "20260825",
+          "latest_trade_date": "20260922",
           "status": "ready",
           "session_lag": 0,
-          "expected_trade_date": "2026-08-25",
+          "expected_trade_date": "2026-09-21",
           "freshness_status": "CURRENT_TO_LAST_COMPLETED_SESSION"
         },
         {
@@ -206,10 +206,10 @@
           "market": "HK",
           "provider": "tencent_fqkline:hk:09988.HK",
           "provider_grade": "validated_public_fallback",
-          "latest_trade_date": "20260825",
+          "latest_trade_date": "20260922",
           "status": "ready",
           "session_lag": 0,
-          "expected_trade_date": "2026-08-25",
+          "expected_trade_date": "2026-09-21",
           "freshness_status": "CURRENT_TO_LAST_COMPLETED_SESSION"
         },
         {
@@ -217,10 +217,10 @@
           "market": "HK",
           "provider": "tencent_fqkline:hk:09992.HK",
           "provider_grade": "validated_public_fallback",
-          "latest_trade_date": "20260825",
+          "latest_trade_date": "20260922",
           "status": "ready",
           "session_lag": 0,
-          "expected_trade_date": "2026-08-25",
+          "expected_trade_date": "2026-09-21",
           "freshness_status": "CURRENT_TO_LAST_COMPLETED_SESSION"
         }
       ],
@@ -228,7 +228,7 @@
         "exact_action_ready": true,
         "stale_codes": [],
         "missing_alignment_codes": [],
-        "last_completed_session": "2026-08-25",
+        "last_completed_session": "2026-09-21",
         "calendar_fresh": true,
         "calendar_error": null
       }
@@ -244,10 +244,10 @@
           "market": "US",
           "provider": "tencent_fqkline:us:LI",
           "provider_grade": "validated_public_fallback",
-          "latest_trade_date": "20260824",
+          "latest_trade_date": "20260922",
           "status": "ready",
           "session_lag": 0,
-          "expected_trade_date": "2026-08-24",
+          "expected_trade_date": "2026-09-18",
           "freshness_status": "CURRENT_TO_LAST_COMPLETED_SESSION"
         },
         {
@@ -255,10 +255,10 @@
           "market": "US",
           "provider": "tencent_fqkline:us:NIO",
           "provider_grade": "validated_public_fallback",
-          "latest_trade_date": "20260824",
+          "latest_trade_date": "20260922",
           "status": "ready",
           "session_lag": 0,
-          "expected_trade_date": "2026-08-24",
+          "expected_trade_date": "2026-09-18",
           "freshness_status": "CURRENT_TO_LAST_COMPLETED_SESSION"
         },
         {
@@ -266,10 +266,10 @@
           "market": "US",
           "provider": "tencent_fqkline:us:RLX",
           "provider_grade": "validated_public_fallback",
-          "latest_trade_date": "20260824",
+          "latest_trade_date": "20260922",
           "status": "ready",
           "session_lag": 0,
-          "expected_trade_date": "2026-08-24",
+          "expected_trade_date": "2026-09-18",
           "freshness_status": "CURRENT_TO_LAST_COMPLETED_SESSION"
         },
         {
@@ -277,10 +277,10 @@
           "market": "US",
           "provider": "tencent_fqkline:us:XPEV",
           "provider_grade": "validated_public_fallback",
-          "latest_trade_date": "20260824",
+          "latest_trade_date": "20260922",
           "status": "ready",
           "session_lag": 0,
-          "expected_trade_date": "2026-08-24",
+          "expected_trade_date": "2026-09-18",
           "freshness_status": "CURRENT_TO_LAST_COMPLETED_SESSION"
         }
       ],
@@ -288,7 +288,7 @@
         "exact_action_ready": true,
         "stale_codes": [],
         "missing_alignment_codes": [],
-        "last_completed_session": "2026-08-24",
+        "last_completed_session": "2026-09-18",
         "calendar_fresh": true,
         "calendar_error": null
       }
@@ -304,7 +304,7 @@
           "name": "中金中证500指数增强C",
           "provider": "akshare:fund:003578",
           "provider_grade": "public_fallback",
-          "latest_nav_date": "20260824",
+          "latest_nav_date": "20260922",
           "status": "ready"
         },
         {
@@ -312,7 +312,7 @@
           "name": "中欧创新未来LOF",
           "provider": "akshare:fund:501208",
           "provider_grade": "public_fallback",
-          "latest_nav_date": "20260824",
+          "latest_nav_date": "20260922",
           "status": "ready"
         },
         {
@@ -320,7 +320,7 @@
           "name": "中欧医疗健康A",
           "provider": "akshare:fund:003095",
           "provider_grade": "public_fallback",
-          "latest_nav_date": "20260824",
+          "latest_nav_date": "20260922",
           "status": "ready"
         },
         {
@@ -328,7 +328,7 @@
           "name": "汇添富新能源汽车LOF C",
           "provider": "akshare:fund:501058",
           "provider_grade": "public_fallback",
-          "latest_nav_date": "20260824",
+          "latest_nav_date": "20260922",
           "status": "ready"
         },
         {
@@ -336,7 +336,7 @@
           "name": "富国沪深300增强A",
           "provider": "akshare:fund:100038",
           "provider_grade": "public_fallback",
-          "latest_nav_date": "20260824",
+          "latest_nav_date": "20260922",
           "status": "ready"
         },
         {
@@ -344,7 +344,7 @@
           "name": "交银趋势优先A",
           "provider": "akshare:fund:519702",
           "provider_grade": "public_fallback",
-          "latest_nav_date": "20260824",
+          "latest_nav_date": "20260922",
           "status": "ready"
         },
         {
@@ -352,7 +352,7 @@
           "name": "天弘沪深300ETF联接C",
           "provider": "akshare:fund:005918",
           "provider_grade": "public_fallback",
-          "latest_nav_date": "20260824",
+          "latest_nav_date": "20260922",
           "status": "ready"
         },
         {
@@ -360,7 +360,7 @@
           "name": "天弘弘择短债C",
           "provider": "akshare:fund:007824",
           "provider_grade": "public_fallback",
-          "latest_nav_date": "20260824",
+          "latest_nav_date": "20260922",
           "status": "ready"
         },
         {
@@ -368,7 +368,7 @@
           "name": "华夏有色ETF联接C",
           "provider": "akshare:fund:016708",
           "provider_grade": "public_fallback",
-          "latest_nav_date": "20260824",
+          "latest_nav_date": "20260922",
           "status": "ready"
         },
         {
@@ -376,7 +376,7 @@
           "name": "国泰黄金ETF联接A",
           "provider": "akshare:fund:000218",
           "provider_grade": "public_fallback",
-          "latest_nav_date": "20260824",
+          "latest_nav_date": "20260922",
           "status": "ready"
         },
         {
@@ -384,7 +384,7 @@
           "name": "华安黄金ETF联接C",
           "provider": "akshare:fund:000217",
           "provider_grade": "public_fallback",
-          "latest_nav_date": "20260824",
+          "latest_nav_date": "20260922",
           "status": "ready"
         },
         {
@@ -392,7 +392,7 @@
           "name": "永赢沪深港黄金产业A",
           "provider": "akshare:fund:020411",
           "provider_grade": "public_fallback",
-          "latest_nav_date": "20260824",
+          "latest_nav_date": "20260922",
           "status": "ready"
         }
       ]
@@ -410,7 +410,7 @@
           "role": "domestic_gold",
           "provider": "sge_official_http:AU99.99",
           "provider_grade": "official_public",
-          "latest_trade_date": "20260825",
+          "latest_trade_date": "20260922",
           "status": "ready",
           "is_bank_executable_quote": false
         },
@@ -420,7 +420,7 @@
           "role": "domestic_reference",
           "provider": "akshare:shfe:AU0",
           "provider_grade": "public_fallback",
-          "latest_trade_date": "20260825",
+          "latest_trade_date": "20260922",
           "status": "ready",
           "is_bank_executable_quote": false
         },
@@ -430,7 +430,7 @@
           "role": "international_reference",
           "provider": "gold_consensus:goldprice.dev+xaus.com",
           "provider_grade": "validated_public_reference_fallback",
-          "latest_trade_date": "20260825",
+          "latest_trade_date": "20260923",
           "status": "ready",
           "is_bank_executable_quote": false
         },
@@ -440,14 +440,14 @@
           "role": "international_reference",
           "provider": "yfinance:gold:GC=F",
           "provider_grade": "validated_public_reference_fallback",
-          "latest_trade_date": "20260825",
+          "latest_trade_date": "20260922",
           "status": "ready",
           "is_bank_executable_quote": false,
           "crosscheck": {
             "provider": "sina_hf_GC",
             "status": "validated_crosscheck",
-            "diff_pct": 0.1361,
-            "age_seconds": 0.2
+            "diff_pct": 0.2469,
+            "age_seconds": 0.5
           }
         },
         {
@@ -464,10 +464,12 @@
       ]
     },
     "a_share_minute": {
-      "status": "fresh",
-      "provider": "tencent_mkline:a_minutes",
-      "coverage_ratio": 1.0,
-      "fresh_codes": [
+      "status": "not_expected",
+      "provider": "tushare:a_minutes",
+      "coverage_ratio": 0.0,
+      "fresh_codes": [],
+      "stale_codes": [],
+      "missing_codes": [
         "600006.SH",
         "002085.SZ",
         "002475.SZ",
@@ -475,18 +477,16 @@
         "002600.SZ",
         "601899.SH",
         "300059.SZ"
-      ],
-      "stale_codes": [],
-      "missing_codes": []
+      ]
     },
     "candidate_scan": {
       "status": "degraded_partial_inputs",
-      "updated_at": "2026-08-25T15:30:33.217645+08:00",
-      "last_full_scan_trade_date": "20260825",
+      "updated_at": "2026-09-22T20:39:40.370779+08:00",
+      "last_full_scan_trade_date": "20260922",
       "fresh_for_report": false
     }
   },
-  "raw_error_count": 20,
+  "raw_error_count": 18,
   "principles": {
     "provider_provenance_required": true,
     "fallback_must_be_explicit": true,
@@ -498,14 +498,14 @@
     "CANDIDATE_SCAN_DEGRADED"
   ],
   "overall_status": "degraded",
-  "run_id": "10914092d71790b8",
+  "run_id": "bc595e952ad4ac84",
   "equity_freshness_gate": {
     "calendar_source": {
       "name": "pandas_market_calendars",
       "version": "5.4.0",
       "role": "historical session alignment, freshness-in-sessions, and planning calendars"
     },
-    "calendar_generated_at": "2026-08-25T17:26:36.428133+08:00",
+    "calendar_generated_at": "2026-09-22T03:41:06.903433+08:00",
     "calendar_fresh": true,
     "calendar_error": null,
     "status": "ready",
@@ -514,7 +514,7 @@
         "exact_action_ready": true,
         "stale_codes": [],
         "missing_alignment_codes": [],
-        "last_completed_session": "2026-08-25",
+        "last_completed_session": "2026-09-21",
         "calendar_fresh": true,
         "calendar_error": null
       },
@@ -522,7 +522,7 @@
         "exact_action_ready": true,
         "stale_codes": [],
         "missing_alignment_codes": [],
-        "last_completed_session": "2026-08-25",
+        "last_completed_session": "2026-09-21",
         "calendar_fresh": true,
         "calendar_error": null
       },
@@ -530,7 +530,7 @@
         "exact_action_ready": true,
         "stale_codes": [],
         "missing_alignment_codes": [],
-        "last_completed_session": "2026-08-24",
+        "last_completed_session": "2026-09-18",
         "calendar_fresh": true,
         "calendar_error": null
       }

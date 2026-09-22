@@ -1,17 +1,131 @@
 {
-  "updated_at": "2026-08-25T15:30:33.217645+08:00",
+  "updated_at": "2026-09-22T20:39:40.370779+08:00",
   "status": "degraded_partial_inputs",
   "provider": "akshare_sina_free_fallback",
-  "last_full_scan_trade_date": "20260825",
+  "last_full_scan_trade_date": "20260922",
   "scan_cadence_trading_days": 1,
   "pool": [
+    {
+      "code": "688825.SH",
+      "name": "长鑫科技",
+      "industry": null,
+      "trade_date": "20260922",
+      "close": 57.86,
+      "amount_cny": 16698122275.0,
+      "growth_30": 30,
+      "growth_status": "public_fundamental",
+      "catalyst_proxy_20": 8.0,
+      "valuation_20": 10.0,
+      "valuation_status": "neutral_placeholder_valuation_unavailable",
+      "technical_20": 0,
+      "technical_status": "partial_spot_only_history_unavailable",
+      "portfolio_proxy_10": 5.0,
+      "machine_score_100": 53.0,
+      "machine_score_status": "degraded_partial_inputs",
+      "ret_20d": null,
+      "distance_ma20_pct": null,
+      "rsi14": null,
+      "pe_ttm": null,
+      "pb": null,
+      "fundamental_asof": "20260630",
+      "fundamental_provider": "akshare_sina_financial_indicator",
+      "fundamental_status": "ready",
+      "needs_human_fundamental_review": false,
+      "needs_human_catalyst_review": true,
+      "first_seen": "20260825",
+      "last_seen": "20260922",
+      "score_history": [
+        {
+          "trade_date": "20260909",
+          "score": 53.0
+        },
+        {
+          "trade_date": "20260910",
+          "score": 53.0
+        },
+        {
+          "trade_date": "20260911",
+          "score": 53.0
+        },
+        {
+          "trade_date": "20260914",
+          "score": 53.0
+        },
+        {
+          "trade_date": "20260915",
+          "score": 53.0
+        },
+        {
+          "trade_date": "20260916",
+          "score": 53.0
+        },
+        {
+          "trade_date": "20260917",
+          "score": 53.0
+        },
+        {
+          "trade_date": "20260918",
+          "score": 53.0
+        },
+        {
+          "trade_date": "20260921",
+          "score": 53.0
+        },
+        {
+          "trade_date": "20260922",
+          "score": 53.0
+        }
+      ],
+      "consecutive_low_scans": 0,
+      "rank": 1,
+      "tier": "focus"
+    },
+    {
+      "code": "300475.SZ",
+      "name": "香农芯创",
+      "industry": null,
+      "trade_date": "20260921",
+      "close": 183.2,
+      "amount_cny": 7173272304.0,
+      "growth_30": 30,
+      "growth_status": "public_fundamental",
+      "catalyst_proxy_20": 8.0,
+      "valuation_20": 10.0,
+      "valuation_status": "neutral_placeholder_valuation_unavailable",
+      "technical_20": 0,
+      "technical_status": "partial_spot_only_history_unavailable",
+      "portfolio_proxy_10": 5.0,
+      "machine_score_100": 53.0,
+      "machine_score_status": "degraded_partial_inputs",
+      "ret_20d": null,
+      "distance_ma20_pct": null,
+      "rsi14": null,
+      "pe_ttm": null,
+      "pb": null,
+      "fundamental_asof": "20260630",
+      "fundamental_provider": "akshare_sina_financial_indicator",
+      "fundamental_status": "ready",
+      "needs_human_fundamental_review": false,
+      "needs_human_catalyst_review": true,
+      "first_seen": "20260921",
+      "last_seen": "20260921",
+      "score_history": [
+        {
+          "trade_date": "20260921",
+          "score": 53.0
+        }
+      ],
+      "consecutive_low_scans": 1,
+      "rank": 2,
+      "tier": "focus"
+    },
     {
       "code": "300308.SZ",
       "name": "中际旭创",
       "industry": null,
-      "trade_date": "20260825",
-      "close": 846.0,
-      "amount_cny": 25019267513.0,
+      "trade_date": "20260922",
+      "close": 927.72,
+      "amount_cny": 22337435054.0,
       "growth_30": 27.52,
       "growth_status": "public_fundamental",
       "catalyst_proxy_20": 8.0,
@@ -28,23 +142,51 @@
       "needs_human_fundamental_review": false,
       "needs_human_catalyst_review": true,
       "first_seen": "20260820",
-      "last_seen": "20260825",
+      "last_seen": "20260922",
       "score_history": [
         {
-          "trade_date": "20260820",
-          "score": 33.0
+          "trade_date": "20260909",
+          "score": 50.52
         },
         {
-          "trade_date": "20260824",
-          "score": 33.0
+          "trade_date": "20260910",
+          "score": 50.52
         },
         {
-          "trade_date": "20260825",
+          "trade_date": "20260911",
+          "score": 50.52
+        },
+        {
+          "trade_date": "20260914",
+          "score": 50.52
+        },
+        {
+          "trade_date": "20260915",
+          "score": 50.52
+        },
+        {
+          "trade_date": "20260916",
+          "score": 50.52
+        },
+        {
+          "trade_date": "20260917",
+          "score": 50.52
+        },
+        {
+          "trade_date": "20260918",
+          "score": 50.52
+        },
+        {
+          "trade_date": "20260921",
+          "score": 50.52
+        },
+        {
+          "trade_date": "20260922",
           "score": 50.52
         }
       ],
       "consecutive_low_scans": 0,
-      "rank": 1,
+      "rank": 3,
       "tier": "focus",
       "valuation_status": "neutral_placeholder_valuation_unavailable",
       "technical_status": "partial_spot_only_history_unavailable",
@@ -56,9 +198,9 @@
       "code": "300502.SZ",
       "name": "新易盛",
       "industry": null,
-      "trade_date": "20260825",
-      "close": 400.87,
-      "amount_cny": 14132371802.0,
+      "trade_date": "20260922",
+      "close": 455.0,
+      "amount_cny": 16043117635.0,
       "growth_30": 26.97,
       "growth_status": "public_fundamental",
       "catalyst_proxy_20": 8.0,
@@ -75,19 +217,51 @@
       "needs_human_fundamental_review": false,
       "needs_human_catalyst_review": true,
       "first_seen": "20260824",
-      "last_seen": "20260825",
+      "last_seen": "20260922",
       "score_history": [
         {
-          "trade_date": "20260824",
-          "score": 33.0
+          "trade_date": "20260909",
+          "score": 49.97
         },
         {
-          "trade_date": "20260825",
+          "trade_date": "20260910",
+          "score": 49.97
+        },
+        {
+          "trade_date": "20260911",
+          "score": 49.97
+        },
+        {
+          "trade_date": "20260914",
+          "score": 49.97
+        },
+        {
+          "trade_date": "20260915",
+          "score": 49.97
+        },
+        {
+          "trade_date": "20260916",
+          "score": 49.97
+        },
+        {
+          "trade_date": "20260917",
+          "score": 49.97
+        },
+        {
+          "trade_date": "20260918",
+          "score": 49.97
+        },
+        {
+          "trade_date": "20260921",
+          "score": 49.97
+        },
+        {
+          "trade_date": "20260922",
           "score": 49.97
         }
       ],
       "consecutive_low_scans": 0,
-      "rank": 2,
+      "rank": 4,
       "tier": "focus",
       "valuation_status": "neutral_placeholder_valuation_unavailable",
       "technical_status": "partial_spot_only_history_unavailable",
@@ -96,13 +270,13 @@
       "fundamental_status": "ready"
     },
     {
-      "code": "688825.SH",
-      "name": "长鑫科技",
+      "code": "688766.SH",
+      "name": "普冉半导体",
       "industry": null,
-      "trade_date": "20260825",
-      "close": 56.5,
-      "amount_cny": 13316746353.0,
-      "growth_30": 26.06,
+      "trade_date": "20260922",
+      "close": 428.4,
+      "amount_cny": 5642978157.0,
+      "growth_30": 25.75,
       "growth_status": "public_fundamental",
       "catalyst_proxy_20": 8.0,
       "valuation_20": 10.0,
@@ -110,40 +284,387 @@
       "technical_20": 0,
       "technical_status": "partial_spot_only_history_unavailable",
       "portfolio_proxy_10": 5.0,
-      "machine_score_100": 49.06,
+      "machine_score_100": 48.75,
       "machine_score_status": "degraded_partial_inputs",
       "ret_20d": null,
       "distance_ma20_pct": null,
       "rsi14": null,
       "pe_ttm": null,
       "pb": null,
-      "fundamental_asof": "20260331",
+      "fundamental_asof": "20260630",
       "fundamental_provider": "akshare_sina_financial_indicator",
       "fundamental_status": "ready",
       "needs_human_fundamental_review": false,
       "needs_human_catalyst_review": true,
-      "first_seen": "20260825",
-      "last_seen": "20260825",
+      "first_seen": "20260918",
+      "last_seen": "20260922",
       "score_history": [
         {
-          "trade_date": "20260825",
-          "score": 49.06
+          "trade_date": "20260918",
+          "score": 48.75
+        },
+        {
+          "trade_date": "20260922",
+          "score": 48.75
         }
       ],
       "consecutive_low_scans": 0,
-      "rank": 3,
+      "rank": 5,
       "tier": "focus"
+    },
+    {
+      "code": "603986.SH",
+      "name": "兆易创新",
+      "industry": null,
+      "trade_date": "20260922",
+      "close": 402.1,
+      "amount_cny": 20578129157.0,
+      "growth_30": 24.63,
+      "growth_status": "public_fundamental",
+      "catalyst_proxy_20": 8.0,
+      "valuation_20": 10.0,
+      "valuation_status": "neutral_placeholder_valuation_unavailable",
+      "technical_20": 0,
+      "technical_status": "partial_spot_only_history_unavailable",
+      "portfolio_proxy_10": 5.0,
+      "machine_score_100": 47.63,
+      "machine_score_status": "degraded_partial_inputs",
+      "ret_20d": null,
+      "distance_ma20_pct": null,
+      "rsi14": null,
+      "pe_ttm": null,
+      "pb": null,
+      "fundamental_asof": "20260630",
+      "fundamental_provider": "akshare_sina_financial_indicator",
+      "fundamental_status": "ready",
+      "needs_human_fundamental_review": false,
+      "needs_human_catalyst_review": true,
+      "first_seen": "20260826",
+      "last_seen": "20260922",
+      "score_history": [
+        {
+          "trade_date": "20260909",
+          "score": 47.63
+        },
+        {
+          "trade_date": "20260910",
+          "score": 47.63
+        },
+        {
+          "trade_date": "20260911",
+          "score": 47.63
+        },
+        {
+          "trade_date": "20260914",
+          "score": 47.63
+        },
+        {
+          "trade_date": "20260915",
+          "score": 47.63
+        },
+        {
+          "trade_date": "20260916",
+          "score": 47.63
+        },
+        {
+          "trade_date": "20260917",
+          "score": 47.63
+        },
+        {
+          "trade_date": "20260918",
+          "score": 47.63
+        },
+        {
+          "trade_date": "20260921",
+          "score": 47.63
+        },
+        {
+          "trade_date": "20260922",
+          "score": 47.63
+        }
+      ],
+      "consecutive_low_scans": 0,
+      "rank": 6,
+      "tier": "reserve"
+    },
+    {
+      "code": "688498.SH",
+      "name": "源杰科技",
+      "industry": null,
+      "trade_date": "20260922",
+      "close": 1753.1,
+      "amount_cny": 5909858615.0,
+      "growth_30": 24.42,
+      "growth_status": "public_fundamental",
+      "catalyst_proxy_20": 8.0,
+      "valuation_20": 10.0,
+      "valuation_status": "neutral_placeholder_valuation_unavailable",
+      "technical_20": 0,
+      "technical_status": "partial_spot_only_history_unavailable",
+      "portfolio_proxy_10": 5.0,
+      "machine_score_100": 47.42,
+      "machine_score_status": "degraded_partial_inputs",
+      "ret_20d": null,
+      "distance_ma20_pct": null,
+      "rsi14": null,
+      "pe_ttm": null,
+      "pb": null,
+      "fundamental_asof": "20260630",
+      "fundamental_provider": "akshare_sina_financial_indicator",
+      "fundamental_status": "ready",
+      "needs_human_fundamental_review": false,
+      "needs_human_catalyst_review": true,
+      "first_seen": "20260907",
+      "last_seen": "20260922",
+      "score_history": [
+        {
+          "trade_date": "20260908",
+          "score": 47.42
+        },
+        {
+          "trade_date": "20260909",
+          "score": 47.42
+        },
+        {
+          "trade_date": "20260910",
+          "score": 47.42
+        },
+        {
+          "trade_date": "20260911",
+          "score": 47.42
+        },
+        {
+          "trade_date": "20260914",
+          "score": 47.42
+        },
+        {
+          "trade_date": "20260916",
+          "score": 47.42
+        },
+        {
+          "trade_date": "20260917",
+          "score": 47.42
+        },
+        {
+          "trade_date": "20260918",
+          "score": 47.42
+        },
+        {
+          "trade_date": "20260921",
+          "score": 47.42
+        },
+        {
+          "trade_date": "20260922",
+          "score": 47.42
+        }
+      ],
+      "consecutive_low_scans": 0,
+      "rank": 7,
+      "tier": "reserve"
+    },
+    {
+      "code": "002636.SZ",
+      "name": "金安国纪",
+      "industry": null,
+      "trade_date": "20260922",
+      "close": 85.58,
+      "amount_cny": 6339088007.0,
+      "growth_30": 23.88,
+      "growth_status": "public_fundamental",
+      "catalyst_proxy_20": 8.0,
+      "valuation_20": 10.0,
+      "valuation_status": "neutral_placeholder_valuation_unavailable",
+      "technical_20": 0,
+      "technical_status": "partial_spot_only_history_unavailable",
+      "portfolio_proxy_10": 5.0,
+      "machine_score_100": 46.88,
+      "machine_score_status": "degraded_partial_inputs",
+      "ret_20d": null,
+      "distance_ma20_pct": null,
+      "rsi14": null,
+      "pe_ttm": null,
+      "pb": null,
+      "fundamental_asof": "20260630",
+      "fundamental_provider": "akshare_sina_financial_indicator",
+      "fundamental_status": "ready",
+      "needs_human_fundamental_review": false,
+      "needs_human_catalyst_review": true,
+      "first_seen": "20260922",
+      "last_seen": "20260922",
+      "score_history": [
+        {
+          "trade_date": "20260922",
+          "score": 46.88
+        }
+      ],
+      "consecutive_low_scans": 0,
+      "rank": 8,
+      "tier": "reserve"
+    },
+    {
+      "code": "601869.SH",
+      "name": "长飞光纤",
+      "industry": null,
+      "trade_date": "20260922",
+      "close": 456.6,
+      "amount_cny": 6956934520.0,
+      "growth_30": 23.84,
+      "growth_status": "public_fundamental",
+      "catalyst_proxy_20": 8.0,
+      "valuation_20": 10.0,
+      "valuation_status": "neutral_placeholder_valuation_unavailable",
+      "technical_20": 0,
+      "technical_status": "partial_spot_only_history_unavailable",
+      "portfolio_proxy_10": 5.0,
+      "machine_score_100": 46.84,
+      "machine_score_status": "degraded_partial_inputs",
+      "ret_20d": null,
+      "distance_ma20_pct": null,
+      "rsi14": null,
+      "pe_ttm": null,
+      "pb": null,
+      "fundamental_asof": "20260630",
+      "fundamental_provider": "akshare_sina_financial_indicator",
+      "fundamental_status": "ready",
+      "needs_human_fundamental_review": false,
+      "needs_human_catalyst_review": true,
+      "first_seen": "20260902",
+      "last_seen": "20260922",
+      "score_history": [
+        {
+          "trade_date": "20260908",
+          "score": 46.84
+        },
+        {
+          "trade_date": "20260909",
+          "score": 46.84
+        },
+        {
+          "trade_date": "20260910",
+          "score": 46.84
+        },
+        {
+          "trade_date": "20260911",
+          "score": 46.84
+        },
+        {
+          "trade_date": "20260914",
+          "score": 46.84
+        },
+        {
+          "trade_date": "20260915",
+          "score": 46.84
+        },
+        {
+          "trade_date": "20260916",
+          "score": 46.84
+        },
+        {
+          "trade_date": "20260917",
+          "score": 46.84
+        },
+        {
+          "trade_date": "20260918",
+          "score": 46.84
+        },
+        {
+          "trade_date": "20260922",
+          "score": 46.84
+        }
+      ],
+      "consecutive_low_scans": 0,
+      "rank": 9,
+      "tier": "reserve"
+    },
+    {
+      "code": "300604.SZ",
+      "name": "长川科技",
+      "industry": null,
+      "trade_date": "20260922",
+      "close": 272.85,
+      "amount_cny": 5571039545.0,
+      "growth_30": 23.7,
+      "growth_status": "public_fundamental",
+      "catalyst_proxy_20": 8.0,
+      "valuation_20": 10.0,
+      "valuation_status": "neutral_placeholder_valuation_unavailable",
+      "technical_20": 0,
+      "technical_status": "partial_spot_only_history_unavailable",
+      "portfolio_proxy_10": 5.0,
+      "machine_score_100": 46.7,
+      "machine_score_status": "degraded_partial_inputs",
+      "ret_20d": null,
+      "distance_ma20_pct": null,
+      "rsi14": null,
+      "pe_ttm": null,
+      "pb": null,
+      "fundamental_asof": "20260630",
+      "fundamental_provider": "akshare_sina_financial_indicator",
+      "fundamental_status": "ready",
+      "needs_human_fundamental_review": false,
+      "needs_human_catalyst_review": true,
+      "first_seen": "20260916",
+      "last_seen": "20260922",
+      "score_history": [
+        {
+          "trade_date": "20260916",
+          "score": 46.7
+        },
+        {
+          "trade_date": "20260918",
+          "score": 46.7
+        },
+        {
+          "trade_date": "20260921",
+          "score": 46.7
+        },
+        {
+          "trade_date": "20260922",
+          "score": 46.7
+        }
+      ],
+      "consecutive_low_scans": 0,
+      "rank": 10,
+      "tier": "reserve"
     }
   ],
   "dropped_recommendations": [],
   "top_machine_screen": [
     {
+      "code": "688825.SH",
+      "name": "长鑫科技",
+      "industry": null,
+      "trade_date": "20260922",
+      "close": 57.86,
+      "amount_cny": 16698122275.0,
+      "growth_30": 30,
+      "growth_status": "public_fundamental",
+      "catalyst_proxy_20": 8.0,
+      "valuation_20": 10.0,
+      "valuation_status": "neutral_placeholder_valuation_unavailable",
+      "technical_20": 0,
+      "technical_status": "partial_spot_only_history_unavailable",
+      "portfolio_proxy_10": 5.0,
+      "machine_score_100": 53.0,
+      "machine_score_status": "degraded_partial_inputs",
+      "ret_20d": null,
+      "distance_ma20_pct": null,
+      "rsi14": null,
+      "pe_ttm": null,
+      "pb": null,
+      "fundamental_asof": "20260630",
+      "fundamental_provider": "akshare_sina_financial_indicator",
+      "fundamental_status": "ready",
+      "needs_human_fundamental_review": false,
+      "needs_human_catalyst_review": true
+    },
+    {
       "code": "300308.SZ",
       "name": "中际旭创",
       "industry": null,
-      "trade_date": "20260825",
-      "close": 846.0,
-      "amount_cny": 25019267513.0,
+      "trade_date": "20260922",
+      "close": 927.72,
+      "amount_cny": 22337435054.0,
       "growth_30": 27.52,
       "growth_status": "public_fundamental",
       "catalyst_proxy_20": 8.0,
@@ -169,9 +690,9 @@
       "code": "300502.SZ",
       "name": "新易盛",
       "industry": null,
-      "trade_date": "20260825",
-      "close": 400.87,
-      "amount_cny": 14132371802.0,
+      "trade_date": "20260922",
+      "close": 455.0,
+      "amount_cny": 16043117635.0,
       "growth_30": 26.97,
       "growth_status": "public_fundamental",
       "catalyst_proxy_20": 8.0,
@@ -194,40 +715,12 @@
       "needs_human_catalyst_review": true
     },
     {
-      "code": "688825.SH",
-      "name": "长鑫科技",
-      "industry": null,
-      "trade_date": "20260825",
-      "close": 56.5,
-      "amount_cny": 13316746353.0,
-      "growth_30": 26.06,
-      "growth_status": "public_fundamental",
-      "catalyst_proxy_20": 8.0,
-      "valuation_20": 10.0,
-      "valuation_status": "neutral_placeholder_valuation_unavailable",
-      "technical_20": 0,
-      "technical_status": "partial_spot_only_history_unavailable",
-      "portfolio_proxy_10": 5.0,
-      "machine_score_100": 49.06,
-      "machine_score_status": "degraded_partial_inputs",
-      "ret_20d": null,
-      "distance_ma20_pct": null,
-      "rsi14": null,
-      "pe_ttm": null,
-      "pb": null,
-      "fundamental_asof": "20260331",
-      "fundamental_provider": "akshare_sina_financial_indicator",
-      "fundamental_status": "ready",
-      "needs_human_fundamental_review": false,
-      "needs_human_catalyst_review": true
-    },
-    {
       "code": "688766.SH",
-      "name": "普冉股份",
+      "name": "普冉半导体",
       "industry": null,
-      "trade_date": "20260825",
-      "close": 410.0,
-      "amount_cny": 4276684969.0,
+      "trade_date": "20260922",
+      "close": 428.4,
+      "amount_cny": 5642978157.0,
       "growth_30": 25.75,
       "growth_status": "public_fundamental",
       "catalyst_proxy_20": 8.0,
@@ -253,9 +746,9 @@
       "code": "603986.SH",
       "name": "兆易创新",
       "industry": null,
-      "trade_date": "20260825",
-      "close": 395.51,
-      "amount_cny": 15343138130.0,
+      "trade_date": "20260922",
+      "close": 402.1,
+      "amount_cny": 20578129157.0,
       "growth_30": 24.63,
       "growth_status": "public_fundamental",
       "catalyst_proxy_20": 8.0,
@@ -278,13 +771,13 @@
       "needs_human_catalyst_review": true
     },
     {
-      "code": "000657.SZ",
-      "name": "中钨高新",
+      "code": "688498.SH",
+      "name": "源杰科技",
       "industry": null,
-      "trade_date": "20260825",
-      "close": 63.81,
-      "amount_cny": 5027663482.0,
-      "growth_30": 23.86,
+      "trade_date": "20260922",
+      "close": 1753.1,
+      "amount_cny": 5909858615.0,
+      "growth_30": 24.42,
       "growth_status": "public_fundamental",
       "catalyst_proxy_20": 8.0,
       "valuation_20": 10.0,
@@ -292,7 +785,35 @@
       "technical_20": 0,
       "technical_status": "partial_spot_only_history_unavailable",
       "portfolio_proxy_10": 5.0,
-      "machine_score_100": 46.86,
+      "machine_score_100": 47.42,
+      "machine_score_status": "degraded_partial_inputs",
+      "ret_20d": null,
+      "distance_ma20_pct": null,
+      "rsi14": null,
+      "pe_ttm": null,
+      "pb": null,
+      "fundamental_asof": "20260630",
+      "fundamental_provider": "akshare_sina_financial_indicator",
+      "fundamental_status": "ready",
+      "needs_human_fundamental_review": false,
+      "needs_human_catalyst_review": true
+    },
+    {
+      "code": "002636.SZ",
+      "name": "金安国纪",
+      "industry": null,
+      "trade_date": "20260922",
+      "close": 85.58,
+      "amount_cny": 6339088007.0,
+      "growth_30": 23.88,
+      "growth_status": "public_fundamental",
+      "catalyst_proxy_20": 8.0,
+      "valuation_20": 10.0,
+      "valuation_status": "neutral_placeholder_valuation_unavailable",
+      "technical_20": 0,
+      "technical_status": "partial_spot_only_history_unavailable",
+      "portfolio_proxy_10": 5.0,
+      "machine_score_100": 46.88,
       "machine_score_status": "degraded_partial_inputs",
       "ret_20d": null,
       "distance_ma20_pct": null,
@@ -309,9 +830,9 @@
       "code": "601869.SH",
       "name": "长飞光纤",
       "industry": null,
-      "trade_date": "20260825",
-      "close": 394.5,
-      "amount_cny": 8066645578.0,
+      "trade_date": "20260922",
+      "close": 456.6,
+      "amount_cny": 6956934520.0,
       "growth_30": 23.84,
       "growth_status": "public_fundamental",
       "catalyst_proxy_20": 8.0,
@@ -334,12 +855,40 @@
       "needs_human_catalyst_review": true
     },
     {
+      "code": "300604.SZ",
+      "name": "长川科技",
+      "industry": null,
+      "trade_date": "20260922",
+      "close": 272.85,
+      "amount_cny": 5571039545.0,
+      "growth_30": 23.7,
+      "growth_status": "public_fundamental",
+      "catalyst_proxy_20": 8.0,
+      "valuation_20": 10.0,
+      "valuation_status": "neutral_placeholder_valuation_unavailable",
+      "technical_20": 0,
+      "technical_status": "partial_spot_only_history_unavailable",
+      "portfolio_proxy_10": 5.0,
+      "machine_score_100": 46.7,
+      "machine_score_status": "degraded_partial_inputs",
+      "ret_20d": null,
+      "distance_ma20_pct": null,
+      "rsi14": null,
+      "pe_ttm": null,
+      "pb": null,
+      "fundamental_asof": "20260630",
+      "fundamental_provider": "akshare_sina_financial_indicator",
+      "fundamental_status": "ready",
+      "needs_human_fundamental_review": false,
+      "needs_human_catalyst_review": true
+    },
+    {
       "code": "600183.SH",
       "name": "生益科技",
       "industry": null,
-      "trade_date": "20260825",
-      "close": 129.0,
-      "amount_cny": 8137042198.0,
+      "trade_date": "20260922",
+      "close": 143.45,
+      "amount_cny": 8866227688.0,
       "growth_30": 23.63,
       "growth_status": "public_fundamental",
       "catalyst_proxy_20": 8.0,
@@ -363,11 +912,11 @@
     },
     {
       "code": "688256.SH",
-      "name": "寒武纪",
+      "name": "寒武纪科技",
       "industry": null,
-      "trade_date": "20260825",
-      "close": 1010.48,
-      "amount_cny": 12588517790.0,
+      "trade_date": "20260922",
+      "close": 1121.0,
+      "amount_cny": 9710436822.0,
       "growth_30": 23.61,
       "growth_status": "public_fundamental",
       "catalyst_proxy_20": 8.0,
@@ -390,12 +939,96 @@
       "needs_human_catalyst_review": true
     },
     {
+      "code": "002463.SZ",
+      "name": "沪电股份",
+      "industry": null,
+      "trade_date": "20260922",
+      "close": 125.14,
+      "amount_cny": 5574760721.0,
+      "growth_30": 23.48,
+      "growth_status": "public_fundamental",
+      "catalyst_proxy_20": 8.0,
+      "valuation_20": 10.0,
+      "valuation_status": "neutral_placeholder_valuation_unavailable",
+      "technical_20": 0,
+      "technical_status": "partial_spot_only_history_unavailable",
+      "portfolio_proxy_10": 5.0,
+      "machine_score_100": 46.48,
+      "machine_score_status": "degraded_partial_inputs",
+      "ret_20d": null,
+      "distance_ma20_pct": null,
+      "rsi14": null,
+      "pe_ttm": null,
+      "pb": null,
+      "fundamental_asof": "20260630",
+      "fundamental_provider": "akshare_sina_financial_indicator",
+      "fundamental_status": "ready",
+      "needs_human_fundamental_review": false,
+      "needs_human_catalyst_review": true
+    },
+    {
+      "code": "001389.SZ",
+      "name": "广合科技",
+      "industry": null,
+      "trade_date": "20260922",
+      "close": 198.65,
+      "amount_cny": 5542927423.0,
+      "growth_30": 23.21,
+      "growth_status": "public_fundamental",
+      "catalyst_proxy_20": 8.0,
+      "valuation_20": 10.0,
+      "valuation_status": "neutral_placeholder_valuation_unavailable",
+      "technical_20": 0,
+      "technical_status": "partial_spot_only_history_unavailable",
+      "portfolio_proxy_10": 5.0,
+      "machine_score_100": 46.21,
+      "machine_score_status": "degraded_partial_inputs",
+      "ret_20d": null,
+      "distance_ma20_pct": null,
+      "rsi14": null,
+      "pe_ttm": null,
+      "pb": null,
+      "fundamental_asof": "20260630",
+      "fundamental_provider": "akshare_sina_financial_indicator",
+      "fundamental_status": "ready",
+      "needs_human_fundamental_review": false,
+      "needs_human_catalyst_review": true
+    },
+    {
+      "code": "603256.SH",
+      "name": "宏和科技",
+      "industry": null,
+      "trade_date": "20260922",
+      "close": 159.22,
+      "amount_cny": 7893546704.0,
+      "growth_30": 23.06,
+      "growth_status": "public_fundamental",
+      "catalyst_proxy_20": 8.0,
+      "valuation_20": 10.0,
+      "valuation_status": "neutral_placeholder_valuation_unavailable",
+      "technical_20": 0,
+      "technical_status": "partial_spot_only_history_unavailable",
+      "portfolio_proxy_10": 5.0,
+      "machine_score_100": 46.06,
+      "machine_score_status": "degraded_partial_inputs",
+      "ret_20d": null,
+      "distance_ma20_pct": null,
+      "rsi14": null,
+      "pe_ttm": null,
+      "pb": null,
+      "fundamental_asof": "20260630",
+      "fundamental_provider": "akshare_sina_financial_indicator",
+      "fundamental_status": "ready",
+      "needs_human_fundamental_review": false,
+      "needs_human_catalyst_review": true
+    },
+    {
       "code": "600105.SH",
       "name": "永鼎股份",
       "industry": null,
-      "trade_date": "20260825",
-      "close": 38.48,
-      "amount_cny": 4314972769.0,
+      "trade_date": "20260922",
+      "close": 45.41,
+      "amount_cny": 5924906771.0,
       "growth_30": 22.95,
       "growth_status": "public_fundamental",
       "catalyst_proxy_20": 8.0,
@@ -421,9 +1054,9 @@
       "code": "002384.SZ",
       "name": "东山精密",
       "industry": null,
-      "trade_date": "20260825",
-      "close": 190.84,
-      "amount_cny": 10599337092.0,
+      "trade_date": "20260922",
+      "close": 198.12,
+      "amount_cny": 16105978073.0,
       "growth_30": 22.58,
       "growth_status": "public_fundamental",
       "catalyst_proxy_20": 8.0,
@@ -449,9 +1082,9 @@
       "code": "300750.SZ",
       "name": "宁德时代",
       "industry": null,
-      "trade_date": "20260825",
-      "close": 376.73,
-      "amount_cny": 9924585378.0,
+      "trade_date": "20260922",
+      "close": 304.63,
+      "amount_cny": 14476584270.0,
       "growth_30": 22.42,
       "growth_status": "public_fundamental",
       "catalyst_proxy_20": 8.0,
@@ -475,11 +1108,11 @@
     },
     {
       "code": "688012.SH",
-      "name": "中微公司",
+      "name": "中微半导体设备",
       "industry": null,
-      "trade_date": "20260825",
-      "close": 354.0,
-      "amount_cny": 5029704935.0,
+      "trade_date": "20260922",
+      "close": 350.06,
+      "amount_cny": 5632498584.0,
       "growth_30": 22.31,
       "growth_status": "public_fundamental",
       "catalyst_proxy_20": 8.0,
@@ -502,13 +1135,13 @@
       "needs_human_catalyst_review": true
     },
     {
-      "code": "300666.SZ",
-      "name": "江丰电子",
+      "code": "688008.SH",
+      "name": "澜起科技",
       "industry": null,
-      "trade_date": "20260825",
-      "close": 235.5,
-      "amount_cny": 4538650747.0,
-      "growth_30": 21.59,
+      "trade_date": "20260922",
+      "close": 221.83,
+      "amount_cny": 16970058462.0,
+      "growth_30": 22.14,
       "growth_status": "public_fundamental",
       "catalyst_proxy_20": 8.0,
       "valuation_20": 10.0,
@@ -516,7 +1149,7 @@
       "technical_20": 0,
       "technical_status": "partial_spot_only_history_unavailable",
       "portfolio_proxy_10": 5.0,
-      "machine_score_100": 44.59,
+      "machine_score_100": 45.14,
       "machine_score_status": "degraded_partial_inputs",
       "ret_20d": null,
       "distance_ma20_pct": null,
@@ -530,13 +1163,13 @@
       "needs_human_catalyst_review": true
     },
     {
-      "code": "002491.SZ",
-      "name": "通鼎互联",
+      "code": "002156.SZ",
+      "name": "通富微电",
       "industry": null,
-      "trade_date": "20260825",
-      "close": 21.4,
-      "amount_cny": 6021230751.0,
-      "growth_30": 21.58,
+      "trade_date": "20260922",
+      "close": 63.52,
+      "amount_cny": 9152312880.0,
+      "growth_30": 22.11,
       "growth_status": "public_fundamental",
       "catalyst_proxy_20": 8.0,
       "valuation_20": 10.0,
@@ -544,147 +1177,7 @@
       "technical_20": 0,
       "technical_status": "partial_spot_only_history_unavailable",
       "portfolio_proxy_10": 5.0,
-      "machine_score_100": 44.58,
-      "machine_score_status": "degraded_partial_inputs",
-      "ret_20d": null,
-      "distance_ma20_pct": null,
-      "rsi14": null,
-      "pe_ttm": null,
-      "pb": null,
-      "fundamental_asof": "20260630",
-      "fundamental_provider": "akshare_sina_financial_indicator",
-      "fundamental_status": "ready",
-      "needs_human_fundamental_review": false,
-      "needs_human_catalyst_review": true
-    },
-    {
-      "code": "002463.SZ",
-      "name": "沪电股份",
-      "industry": null,
-      "trade_date": "20260825",
-      "close": 114.29,
-      "amount_cny": 4734042966.0,
-      "growth_30": 21.56,
-      "growth_status": "public_fundamental",
-      "catalyst_proxy_20": 8.0,
-      "valuation_20": 10.0,
-      "valuation_status": "neutral_placeholder_valuation_unavailable",
-      "technical_20": 0,
-      "technical_status": "partial_spot_only_history_unavailable",
-      "portfolio_proxy_10": 5.0,
-      "machine_score_100": 44.56,
-      "machine_score_status": "degraded_partial_inputs",
-      "ret_20d": null,
-      "distance_ma20_pct": null,
-      "rsi14": null,
-      "pe_ttm": null,
-      "pb": null,
-      "fundamental_asof": "20260331",
-      "fundamental_provider": "akshare_sina_financial_indicator",
-      "fundamental_status": "ready",
-      "needs_human_fundamental_review": false,
-      "needs_human_catalyst_review": true
-    },
-    {
-      "code": "688498.SH",
-      "name": "源杰科技",
-      "industry": null,
-      "trade_date": "20260825",
-      "close": 1553.0,
-      "amount_cny": 4717290571.0,
-      "growth_30": 21.48,
-      "growth_status": "public_fundamental",
-      "catalyst_proxy_20": 8.0,
-      "valuation_20": 10.0,
-      "valuation_status": "neutral_placeholder_valuation_unavailable",
-      "technical_20": 0,
-      "technical_status": "partial_spot_only_history_unavailable",
-      "portfolio_proxy_10": 5.0,
-      "machine_score_100": 44.48,
-      "machine_score_status": "degraded_partial_inputs",
-      "ret_20d": null,
-      "distance_ma20_pct": null,
-      "rsi14": null,
-      "pe_ttm": null,
-      "pb": null,
-      "fundamental_asof": "20260331",
-      "fundamental_provider": "akshare_sina_financial_indicator",
-      "fundamental_status": "ready",
-      "needs_human_fundamental_review": false,
-      "needs_human_catalyst_review": true
-    },
-    {
-      "code": "300604.SZ",
-      "name": "长川科技",
-      "industry": null,
-      "trade_date": "20260825",
-      "close": 263.62,
-      "amount_cny": 4772992505.0,
-      "growth_30": 21.43,
-      "growth_status": "public_fundamental",
-      "catalyst_proxy_20": 8.0,
-      "valuation_20": 10.0,
-      "valuation_status": "neutral_placeholder_valuation_unavailable",
-      "technical_20": 0,
-      "technical_status": "partial_spot_only_history_unavailable",
-      "portfolio_proxy_10": 5.0,
-      "machine_score_100": 44.43,
-      "machine_score_status": "degraded_partial_inputs",
-      "ret_20d": null,
-      "distance_ma20_pct": null,
-      "rsi14": null,
-      "pe_ttm": null,
-      "pb": null,
-      "fundamental_asof": "20260331",
-      "fundamental_provider": "akshare_sina_financial_indicator",
-      "fundamental_status": "ready",
-      "needs_human_fundamental_review": false,
-      "needs_human_catalyst_review": true
-    },
-    {
-      "code": "600176.SH",
-      "name": "中国巨石",
-      "industry": null,
-      "trade_date": "20260825",
-      "close": 39.79,
-      "amount_cny": 6567402894.0,
-      "growth_30": 20.94,
-      "growth_status": "public_fundamental",
-      "catalyst_proxy_20": 8.0,
-      "valuation_20": 10.0,
-      "valuation_status": "neutral_placeholder_valuation_unavailable",
-      "technical_20": 0,
-      "technical_status": "partial_spot_only_history_unavailable",
-      "portfolio_proxy_10": 5.0,
-      "machine_score_100": 43.94,
-      "machine_score_status": "degraded_partial_inputs",
-      "ret_20d": null,
-      "distance_ma20_pct": null,
-      "rsi14": null,
-      "pe_ttm": null,
-      "pb": null,
-      "fundamental_asof": "20260630",
-      "fundamental_provider": "akshare_sina_financial_indicator",
-      "fundamental_status": "ready",
-      "needs_human_fundamental_review": false,
-      "needs_human_catalyst_review": true
-    },
-    {
-      "code": "002716.SZ",
-      "name": "湖南白银",
-      "industry": null,
-      "trade_date": "20260825",
-      "close": 10.77,
-      "amount_cny": 5251667582.0,
-      "growth_30": 20.87,
-      "growth_status": "public_fundamental",
-      "catalyst_proxy_20": 8.0,
-      "valuation_20": 10.0,
-      "valuation_status": "neutral_placeholder_valuation_unavailable",
-      "technical_20": 0,
-      "technical_status": "partial_spot_only_history_unavailable",
-      "portfolio_proxy_10": 5.0,
-      "machine_score_100": 43.87,
+      "machine_score_100": 45.11,
       "machine_score_status": "degraded_partial_inputs",
       "ret_20d": null,
       "distance_ma20_pct": null,
@@ -701,7 +1194,7 @@
   "scan_metadata": {
     "market_cap_filter_available": false,
     "valuation_snapshot_available": false,
-    "universe_rows": 5549,
+    "universe_rows": 5566,
     "source_errors": [
       {
         "provider": "akshare_eastmoney_free_fallback",
@@ -709,7 +1202,7 @@
       }
     ],
     "market_cap_filter_applied": false,
-    "preliminary_rows_after_filters": 1718,
+    "preliminary_rows_after_filters": 1957,
     "history_enrichment_ok": 0,
     "history_enrichment_failed": 60,
     "history_enrichment_expected": 60,

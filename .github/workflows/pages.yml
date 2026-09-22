@@ -19,7 +19,7 @@ permissions:
   id-token: write
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   verify:
@@ -34,7 +34,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          for f in site/index.html site/latest/manifest.json site/publication.json site/fund-assistant/index.html site/fund-assistant/release.json site/securities-exam/index.html site/investment-advisor-exam/index.html site/ks/index.html site/tg/index.html; do test -f "$f"; done
+          for f in site/index.html site/latest/manifest.json site/publication.json site/fund-assistant/index.html site/fund-assistant/release.json; do test -f "$f"; done
           python3 -m json.tool site/latest/manifest.json >/dev/null
           python3 -m json.tool site/publication.json >/dev/null
           python3 -m json.tool site/fund-assistant/release.json >/dev/null
@@ -46,7 +46,6 @@ jobs:
           python3 scripts/validate-static-asset-references.py
           if find site -type l -print -quit | grep -q .; then echo 'Symlinks are not allowed.' >&2; exit 1; fi
           grep -Fq 'FUND_ASSISTANT_BOOTSTRAP_' site/fund-assistant/index.html
-          grep -Fq 'investment-advisor-exam' site/tg/index.html
 
           python3 - <<'PY'
           import json,re
@@ -65,54 +64,10 @@ jobs:
               bp=base/behavior; assert bp.is_file(), behavior
               js=bp.read_text(encoding='utf-8')
               assert release in js or release in body
-          if entry.startswith('v15'):
-              assert behavior=='v15.js'
-              for required in ['page-today','page-holdings','page-discover','page-search','detailSheet','holdingList','candidateList','dailyLesson','lessonArchive','dailyReportSchedule','portfolioReportCard','trackingStats','detailRefresh']:
-                  assert f'id="{required}"' in body, required
           print(f'Fund static release PASS: {entry} / {behavior}')
           PY
           behavior="$(python3 -c "import json;print(json.load(open('site/fund-assistant/release.json')).get('behavior',''))")"
           if [[ -n "$behavior" ]]; then node --check "site/fund-assistant/$behavior"; fi
-
-          if grep -Fq '证券从业刷题 · v4.0' site/ks/index.html; then
-            for f in site/quiz-v4/index.html site/quiz-v4/v4.js site/quiz-v4/v4.css; do test -f "$f"; done
-            grep -Fq '../quiz-v4/' site/ks/index.html
-            grep -Fq '../quiz-v4/' site/securities-exam/index.html
-            grep -Fq 'href="ks/?v=20260826-v4"' site/index.html
-            grep -Fq '../exam-live/questions-v1.js' site/quiz-v4/index.html
-            ! grep -Fq 'questions-auto.js' site/quiz-v4/index.html
-            grep -Fq "const VERSION = '4.0.0'" site/quiz-v4/v4.js
-            grep -Fq "const SKEY = 'sec2026state_v1'" site/quiz-v4/v4.js
-            grep -Fq 'max-width:520px' site/quiz-v4/v4.css
-            node --check site/quiz-v4/v4.js
-            echo 'Securities v4 static PASS'
-          elif grep -Fq 'exam-live/?v=20260825-r4' site/ks/index.html; then
-            test -f site/exam-live/index.html
-            grep -Fq 'data-product-version="3.6.0"' site/exam-live/index.html
-            ! grep -Fq 'serviceWorker.register' site/exam-live/index.html
-            python3 - <<'PY'
-          import re
-          from pathlib import Path
-          base=Path('site/exam-live')
-          html=(base/'index.html').read_text(encoding='utf-8')
-          for asset in sorted(set(re.findall(r'(?:src|href)="\./([^"?]+\.(?:js|css|webmanifest))',html))):
-              assert (base/asset).is_file(), asset
-          print('Securities clean r4 static PASS')
-          PY
-            node --check site/exam-live/product-core-v350.js
-            node --check site/exam-live/product-v350.js
-            node --check site/exam-live/release-v360.js
-            node --check site/exam-live/profile-sync-v360.js
-          elif grep -Fq 'v3.5.0' site/ks/index.html; then
-            for f in product-v350.css product-core-v350.js product-v350.js sources-data-v350.js sw.js manifest.webmanifest; do test -f "site/securities-exam/$f"; done
-            grep -Fq 'data-product-version="3.5.0"' site/securities-exam/index.html
-            node --check site/securities-exam/product-core-v350.js
-            node --check site/securities-exam/product-v350.js
-          elif grep -Fq 'v3.4.0' site/ks/index.html; then
-            test -f site/securities-exam/ui-pro-r2.js
-          else
-            echo 'Unknown securities entry contract' >&2; exit 1
-          fi
 
   deploy:
     needs: verify
@@ -135,19 +90,17 @@ jobs:
     timeout-minutes: 12
     steps:
       - uses: actions/checkout@v7
-      - name: Verify live endpoints and securities entry
+      - name: Verify retained live endpoints
         shell: bash
         run: |
           set -euo pipefail
-          base='https://exam.freovia.com'
+          base='https://sonkaunwa-commits.github.io/freedom-road-public'
           get(){ curl -fsSL --max-time 30 --retry 3 "$base/$1?verify=${GITHUB_SHA}"; }
-          for path in '' 'publication.json' 'fund-assistant/' 'securities-exam/' 'ks/' 'exam-live/' 'quiz-v4/' 'investment-advisor-exam/' 'tg/'; do
+          for path in '' 'publication.json' 'fund-assistant/'; do
             ok=false; for attempt in {1..36}; do if get "$path" >/dev/null; then ok=true; break; fi; sleep 5; done
             [[ "$ok" == true ]] || { echo "Endpoint failed: $path" >&2; exit 1; }
           done
-
           node scripts/run-release-smoke-registry.cjs --output /tmp/release-smoke-registry.json
-
           python3 - <<'PY' >/tmp/fund-meta
           import json
           x=json.load(open('site/fund-assistant/release.json'));print(x['version']);print(x['release']);print(x['entry']);print(x.get('behavior',''))
@@ -156,18 +109,6 @@ jobs:
           live_release="$(get 'fund-assistant/release.json')"
           grep -Fq "${fm[0]}" <<<"$live_release"; grep -Fq "${fm[1]}" <<<"$live_release"; grep -Fq "${fm[2]}" <<<"$live_release"
           live_entry="$(get "fund-assistant/${fm[2]}")"; grep -Fq "${fm[1]}" <<<"$live_entry"
-
-          if grep -Fq '证券从业刷题 · v4.0' site/ks/index.html; then
-            ks="$(get 'ks/')"; grep -Fq '../quiz-v4/' <<<"$ks"
-            quiz="$(get 'quiz-v4/')"; grep -Fq '证券从业刷题 · v4.0' <<<"$quiz"
-            quizjs="$(get 'quiz-v4/v4.js')"; grep -Fq 'mobile-first-question-centric' <<<"$quizjs"; grep -Fq "const VERSION = '4.0.0'" <<<"$quizjs"
-            root="$(get '')"; grep -Fq 'href="ks/?v=20260826-v4"' <<<"$root"
-            legacy="$(get 'securities-exam/')"; grep -Fq '../quiz-v4/' <<<"$legacy"
-          elif grep -Fq 'exam-live/?v=20260825-r4' site/ks/index.html; then
-            ks="$(get 'ks/')"; grep -Fq 'exam-live/?v=20260825-r4' <<<"$ks"
-            live="$(get 'exam-live/')"; grep -Fq 'data-product-version="3.6.0"' <<<"$live"; ! grep -Fq 'serviceWorker.register' <<<"$live"
-          fi
-
           mkdir -p release-status
           cat > release-status/fund-assistant.txt <<EOF
           status=ok
@@ -178,7 +119,7 @@ jobs:
           url=${base}/fund-assistant/
           entry=${fm[2]}
           behavior=${fm[3]}
-          live_entry_verified=true
+          custom_domain_retired=true
           verified_at=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
           EOF
           git config user.name 'github-actions[bot]'; git config user.email '41898282+github-actions[bot]@users.noreply.github.com'

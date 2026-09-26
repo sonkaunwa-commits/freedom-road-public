@@ -4,14 +4,10 @@
     ".github",
     "README.md",
     "publication_boundary",
-    "release-smoke",
-    "release-status",
-    "scripts",
-    "site",
-    "static_asset_gate"
+    "scripts"
   ],
-  "scan_roots": ["site"],
-  "text_extensions": [".html", ".htm", ".js", ".cjs", ".mjs", ".css", ".json", ".txt", ".svg", ".webmanifest", ".xml", ".csv"],
+  "scan_roots": ["."],
+  "text_extensions": [".html", ".htm", ".js", ".cjs", ".mjs", ".css", ".json", ".txt", ".md", ".py", ".yml", ".yaml", ".svg", ".webmanifest", ".xml", ".csv"],
   "forbidden_file_globs": [
     "**/.env",
     "**/.env.*",
@@ -53,10 +49,5 @@
     "password",
     "credential"
   ],
-  "required_json_files": [
-    {
-      "path": "site/publication.json",
-      "required_keys": ["schema_version", "source_repository", "source_commit", "source_generated_at"]
-    }
-  ]
+  "required_json_files": []
 }

@@ -6,7 +6,7 @@
     "publication_boundary",
     "scripts"
   ],
-  "scan_roots": ["."],
+  "scan_roots": [".github", "publication_boundary", "scripts"],
   "text_extensions": [".html", ".htm", ".js", ".cjs", ".mjs", ".css", ".json", ".txt", ".md", ".py", ".yml", ".yaml", ".svg", ".webmanifest", ".xml", ".csv"],
   "forbidden_file_globs": [
     "**/.env",

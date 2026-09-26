@@ -2,11 +2,9 @@
   "schema_version": "publication-boundary/v1",
   "allowed_root_entries": [
     ".github",
-    "DESIGN.md",
     "README.md",
     "content_feedback",
     "creator_engine",
-    "design",
     "evaluation_engine",
     "execution_traceability",
     "model_router",

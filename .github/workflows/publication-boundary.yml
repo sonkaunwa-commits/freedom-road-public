@@ -2,11 +2,8 @@ name: publication-boundary
 
 on:
   pull_request:
-    paths:
-      - 'publication_boundary/**'
-      - 'scripts/validate_publication_boundary.py'
-      - 'scripts/test_publication_boundary.py'
-      - '.github/workflows/publication-boundary.yml'
+  push:
+    branches: [main]
 
 permissions:
   contents: read

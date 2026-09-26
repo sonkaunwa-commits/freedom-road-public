@@ -1,15 +1,16 @@
 # Freedom Road Public
 
-Freedom Road 的公开发布仓库。
+Minimal public shell for FREOVIA / Freedom Road.
 
-本仓库只保存：
+Current state: `PUBLIC_SURFACE_MINIMIZED`.
 
-- 可公开、可重新生成的行情与研究数据；
-- 静态 Pages 页面和公开 Demo；
-- 最小化的发布与可用性检查。
+The previous public Pages site and its release/runtime support files have been retired from the current tree under private task `#970` and may be rebuilt later from a new explicit publication contract.
 
-本仓库不保存核心采集/分析程序、私人账户事实、Private Ledger、服务器资料或任何 token/密钥。`site/` 由 Private 核心仓库自动同步，不应手工修改。
+This repository currently keeps only:
+- this minimal README;
+- the publication-boundary policy, validator and self-test;
+- the publication-boundary GitHub Actions workflow.
 
-工程化 Roadmap 与公开发布质量规则见 [`ROADMAP.md`](./ROADMAP.md)。
+The current public tree must not contain internal Roadmap, architecture, baseline, governance, registry, routing, evaluation, execution, worker, ledger, server, credential, private-account or production-control material.
 
-公开入口将在 GitHub Pages 首次验收后启用。
+There is intentionally no active `site/` or Pages deployment in this minimized state. Historical Git commits may still contain previously public material; Phase 1 does not rewrite history.

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fail-closed scanner for public publication artifacts.
+"""Fail-closed scanner for public publication artifacts and repository surface.
 
 The scanner intentionally reports rule identifiers and locations, not matched secret
 values. It is designed for pre-publication use on a checked-out repository.
@@ -45,6 +45,16 @@ def _resolve_repo_path(repo_root: Path, raw_path: str | Path, label: str) -> Pat
     return candidate
 
 
+def _string_array(value: Any, label: str, *, non_empty: bool = False) -> list[str]:
+    if not isinstance(value, list) or not all(isinstance(item, str) and item for item in value):
+        raise ValueError(f"{label} must be a string array")
+    if non_empty and not value:
+        raise ValueError(f"{label} must be a non-empty string array")
+    if len(value) != len(set(value)):
+        raise ValueError(f"{label} must not contain duplicates")
+    return list(value)
+
+
 def load_policy(repo_root: Path, policy_path: str) -> dict[str, Any]:
     path = _resolve_repo_path(repo_root, policy_path, "policy path")
     if not path.is_file():
@@ -57,9 +67,8 @@ def load_policy(repo_root: Path, policy_path: str) -> dict[str, Any]:
         raise ValueError("policy must be a JSON object")
     if policy.get("schema_version") != "publication-boundary/v1":
         raise ValueError("unsupported publication boundary policy schema")
-    roots = policy.get("scan_roots")
-    if not isinstance(roots, list) or not roots or not all(isinstance(item, str) and item for item in roots):
-        raise ValueError("policy.scan_roots must be a non-empty string array")
+    _string_array(policy.get("scan_roots"), "policy.scan_roots", non_empty=True)
+    _string_array(policy.get("allowed_root_entries"), "policy.allowed_root_entries", non_empty=True)
     return policy
 
 
@@ -72,6 +81,25 @@ def _matches_any(path: str, globs: Iterable[str]) -> str | None:
         if fnmatch.fnmatch(path, pattern) or fnmatch.fnmatch("/" + path, pattern):
             return pattern
     return None
+
+
+def _validate_root_allowlist(repo_root: Path, allowed_entries: list[str]) -> list[Finding]:
+    allowed = set(allowed_entries)
+    findings: list[Finding] = []
+    for path in repo_root.iterdir():
+        name = path.name
+        if name == ".git":
+            continue
+        if name not in allowed:
+            findings.append(
+                Finding(
+                    "unexpected-root-entry",
+                    name,
+                    "repository-root",
+                    "top-level public repository entry is not in the publication allowlist",
+                )
+            )
+    return findings
 
 
 def _iter_scan_files(repo_root: Path, roots: list[str]) -> Iterable[Path]:
@@ -182,6 +210,7 @@ def scan_repository(repo_root: Path, policy: dict[str, Any]) -> dict[str, Any]:
     patterns = _compile_secret_patterns(policy)
 
     findings: list[Finding] = []
+    findings.extend(_validate_root_allowlist(repo_root, policy["allowed_root_entries"]))
     findings.extend(_find_forbidden_files(repo_root, files, forbidden_globs))
     for path in files:
         if path.suffix.lower() not in text_extensions:
@@ -210,7 +239,7 @@ def _format_text(report: dict[str, Any]) -> str:
 
 
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(description="Validate public publication artifacts for private-data and secret leakage.")
+    parser = argparse.ArgumentParser(description="Validate the public repository surface plus publication artifacts for private-data and secret leakage.")
     parser.add_argument("--repo-root", default=".", help="repository root; defaults to current directory")
     parser.add_argument("--policy", default=DEFAULT_POLICY, help=f"policy path relative to repo root (default: {DEFAULT_POLICY})")
     parser.add_argument("--json", action="store_true", help="emit JSON report")

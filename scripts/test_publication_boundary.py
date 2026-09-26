@@ -16,6 +16,7 @@ spec.loader.exec_module(module)
 
 POLICY = {
     "schema_version": "publication-boundary/v1",
+    "allowed_root_entries": ["publication_boundary", "reports", "site"],
     "scan_roots": ["site"],
     "text_extensions": [".html", ".json", ".js", ".txt"],
     "forbidden_file_globs": ["**/.env", "**/*.pem"],
@@ -72,11 +73,29 @@ def run() -> None:
 
         loaded_policy = module.load_policy(root, "publication_boundary/policy.v1.json")
         assert loaded_policy["schema_version"] == "publication-boundary/v1"
+        assert loaded_policy["allowed_root_entries"] == POLICY["allowed_root_entries"]
+
+        bad_policy = dict(POLICY)
+        bad_policy["allowed_root_entries"] = ["site", "site"]
+        write_json(root / "publication_boundary" / "bad-policy.json", bad_policy)
+        expect_value_error(lambda: module.load_policy(root, "publication_boundary/bad-policy.json"), "duplicate root allowlist")
+        (root / "publication_boundary" / "bad-policy.json").unlink()
 
         outside_policy = base / "outside-policy.json"
         write_json(outside_policy, POLICY)
         expect_value_error(lambda: module.load_policy(root, str(outside_policy)), "absolute external policy")
         expect_value_error(lambda: module.load_policy(root, "../outside-policy.json"), "traversal policy")
+
+        (root / "ROADMAP.md").write_text("internal roadmap must not silently reappear", encoding="utf-8")
+        root_escape = module.scan_repository(root, POLICY)
+        assert root_escape["pass"] is False
+        assert_rule(root_escape, "unexpected-root-entry")
+        (root / "ROADMAP.md").unlink()
+
+        (root / ".git").mkdir()
+        git_metadata = module.scan_repository(root, POLICY)
+        assert git_metadata["pass"] is True, git_metadata
+        (root / ".git").rmdir()
 
         report_path = root / "reports" / "publication.json"
         exit_code = module.main([
@@ -128,7 +147,7 @@ def run() -> None:
         provenance = module.scan_repository(root, POLICY)
         assert_rule(provenance, "required-json-key-missing")
 
-    print("publication-boundary self-test PASS: publication scan and repository path confinement fail closed")
+    print("publication-boundary self-test PASS: root allowlist, publication scan and path confinement fail closed")
 
 
 if __name__ == "__main__":

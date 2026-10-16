@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-06T10:54:58+08:00",
+  "generated_at": "2026-10-16T08:18:46+08:00",
   "method_version": "fund-screen-v2.0",
   "goal": "持续跟踪6-12个月高弹性候选；不承诺收益，不预测必然涨幅",
   "selection_policy": "核心池固定跟踪6只；仅在评分明显恶化、中期趋势转负、暂停申购或更优候选持续胜出时替换",
@@ -14,474 +14,74 @@
   "warnings": [],
   "funds": [
     {
-      "code": "010389",
-      "name": "易方达科益混合A",
-      "category": "混合型",
-      "score": 91.8,
-      "returns": {
-        "1m": -4.2,
-        "3m": 9.75,
-        "6m": 62.05,
-        "1y": 70.27,
-        "3y": 105.76,
-        "ytd": 62.6
-      },
-      "latest_nav": 1.9601,
-      "estimate_nav": null,
-      "estimate_return": null,
-      "day_return": -1.02,
-      "buy_status": "开放申购",
-      "position": "中性观察",
-      "broad_action": "watch",
-      "history": {
-        "nav_date": "2026-09-30",
-        "last_nav": 1.9601,
-        "returns": {
-          "20d": -3.15,
-          "60d": 5.13,
-          "120d": 47.49,
-          "250d": 76.78
-        },
-        "ma": {
-          "20": 2.0365,
-          "60": 1.9433,
-          "120": 1.7842
-        },
-        "high": {
-          "60": 2.1221,
-          "120": 2.1221
-        },
-        "low60": 1.6989,
-        "drawdown": {
-          "60": -7.63,
-          "120": -7.63,
-          "max250": -14.67
-        },
-        "vol20_ann": 25.62,
-        "trend": "上升趋势",
-        "deviation60": 0.87,
-        "overheat": false,
-        "buy_zone_1": [
-          2.0059,
-          2.0569
-        ],
-        "buy_zone_2": [
-          1.8947,
-          1.9588
-        ],
-        "stop_add_below": 1.7485
-      },
-      "history_error": null,
-      "today_plan": {
-        "action": "继续等买点",
-        "tone": "watch",
-        "headline": "今天先不动，等进入明确买入区"
-      },
-      "tracking": {
-        "first_seen": "2026-09-25T09:26:24+08:00",
-        "days_tracked": 12,
-        "refresh_count": 18,
-        "score_history": [
-          {
-            "at": "2026-09-30T03:38:46+08:00",
-            "score": 96.5,
-            "action": "继续等买点"
-          },
-          {
-            "at": "2026-09-30T10:03:34+08:00",
-            "score": 96.5,
-            "action": "继续等买点"
-          },
-          {
-            "at": "2026-09-30T20:38:05+08:00",
-            "score": 91.5,
-            "action": "继续等买点"
-          },
-          {
-            "at": "2026-10-01T03:38:24+08:00",
-            "score": 91.8,
-            "action": "继续等买点"
-          },
-          {
-            "at": "2026-10-02T03:49:27+08:00",
-            "score": 91.8,
-            "action": "继续等买点"
-          },
-          {
-            "at": "2026-10-02T10:11:28+08:00",
-            "score": 91.8,
-            "action": "继续等买点"
-          },
-          {
-            "at": "2026-10-02T20:40:14+08:00",
-            "score": 91.8,
-            "action": "继续等买点"
-          },
-          {
-            "at": "2026-10-03T03:31:36+08:00",
-            "score": 91.8,
-            "action": "继续等买点"
-          },
-          {
-            "at": "2026-10-05T09:53:35+08:00",
-            "score": 91.8,
-            "action": "继续等买点"
-          },
-          {
-            "at": "2026-10-05T22:46:23+08:00",
-            "score": 91.8,
-            "action": "继续等买点"
-          },
-          {
-            "at": "2026-10-06T05:39:49+08:00",
-            "score": 91.8,
-            "action": "继续等买点"
-          },
-          {
-            "at": "2026-10-06T10:56:04+08:00",
-            "score": 91.8,
-            "action": "继续等买点"
-          }
-        ]
-      },
-      "buy_plan": {
-        "window": "交易日14:20左右复核；场外基金15:00前下单通常按当日净值规则处理，具体以基金合同/平台为准",
-        "first_batch": "进入第一买入区且趋势仍向上：计划仓位20%–25%",
-        "second_batch": "进入第二买入区且未跌破停止补仓线：再20%–25%",
-        "reserve": "至少保留50%计划资金，不一次买满"
-      },
-      "sell_plan": {
-        "profit_protect": "已有盈利时：若近20日涨幅>10%且偏离60日均线>8%，停止加仓；盈利较大可分批保护利润",
-        "reduce": "若上涨明显过热或趋势转弱，先减20%–30%，而不是一次清仓",
-        "exit": "跌破停止补仓线且60日趋势转负，重新评估退出；基金经理/投资逻辑发生重大变化时优先重新评估"
-      },
-      "why": [
-        "机会分综合近1月、3月、6月、1年与3年同类表现，并主动惩罚短期暴涨追高",
-        "机会池采用持续跟踪机制，原候选未明显恶化时不会每天随意换掉",
-        "买入点以20/60/120日净值结构与回撤位置计算，下午再结合估算净值复核"
-      ],
-      "deep_analysis": {
-        "overview": {
-          "fund_type": "混合型-偏股",
-          "asset_scale": null,
-          "share_scale": "2.6264亿份（截止至：2026年06月30日）",
-          "manager": "黄蕴藉",
-          "company": "易方达基金",
-          "成立日期": "2020年11月02日",
-          "benchmark": "中证800指数收益率*65%+中证港股通综合指数收益率*20%+中债总指数收益率*15%",
-          "tracking_target": "该基金无跟踪标的",
-          "management_fee": "1.20%（每年）",
-          "custody_fee": "0.20%（每年）"
-        },
-        "risk": {
-          "period": "近1年",
-          "annual_volatility": 35.260000000000005,
-          "sharpe": 1.95,
-          "max_drawdown": 14.67,
-          "peer_risk_return": 100.0,
-          "peer_resilience": 57.0
-        },
-        "profit_probability": {
-          "6m": {
-            "probability": 60.0,
-            "average_return": 6.62
-          },
-          "1y": {
-            "probability": 44.0,
-            "average_return": 11.18
-          }
-        },
-        "holdings": {
-          "quarter": "2026年2季度股票投资明细",
-          "top10_concentration": 67.85,
-          "top_holdings": [
-            {
-              "name": "星网锐捷",
-              "code": "002396",
-              "weight": 9.96
-            },
-            {
-              "name": "三环集团",
-              "code": "300408",
-              "weight": 8.26
-            },
-            {
-              "name": "锐捷网络",
-              "code": "301165",
-              "weight": 8.02
-            },
-            {
-              "name": "浪潮信息",
-              "code": "000977",
-              "weight": 7.06
-            },
-            {
-              "name": "深南电路",
-              "code": "002916",
-              "weight": 6.7
-            },
-            {
-              "name": "紫光股份",
-              "code": "000938",
-              "weight": 6.63
-            },
-            {
-              "name": "英维克",
-              "code": "002837",
-              "weight": 6.36
-            },
-            {
-              "name": "朗威股份",
-              "code": "301202",
-              "weight": 5.59
-            },
-            {
-              "name": "冠龙节能",
-              "code": "301151",
-              "weight": 5.38
-            },
-            {
-              "name": "中际旭创",
-              "code": "300308",
-              "weight": 3.89
-            }
-          ]
-        },
-        "industries": {
-          "period": "2026-06-30",
-          "items": [
-            {
-              "name": "制造业",
-              "weight": 86.21
-            },
-            {
-              "name": "电信服务",
-              "weight": 3.61
-            },
-            {
-              "name": "信息传输、软件和信息技术服务业",
-              "weight": 3.36
-            },
-            {
-              "name": "信息技术",
-              "weight": 0.43
-            },
-            {
-              "name": "采矿业",
-              "weight": 0.01
-            },
-            {
-              "name": "电力、热力、燃气及水生产和供应业",
-              "weight": 0.0
-            }
-          ]
-        },
-        "redemption_fee": [
-          {
-            "适用期限": "小于等于6天",
-            "赎回费率": "1.50%"
-          },
-          {
-            "适用期限": "大于等于7天，小于等于29天",
-            "赎回费率": "0.75%"
-          },
-          {
-            "适用期限": "大于等于30天，小于等于364天",
-            "赎回费率": "0.50%"
-          },
-          {
-            "适用期限": "大于等于365天，小于等于729天",
-            "赎回费率": "0.25%"
-          },
-          {
-            "适用期限": "大于等于730天",
-            "赎回费率": "0.00%"
-          }
-        ],
-        "updated_at": "2026-10-06T10:56:44+08:00"
-      },
-      "profile": {
-        "fund_type": "混合型-偏股",
-        "asset_scale": null,
-        "share_scale": "2.6264亿份（截止至：2026年06月30日）",
-        "manager": "黄蕴藉",
-        "company": "易方达基金",
-        "成立日期": "2020年11月02日",
-        "benchmark": "中证800指数收益率*65%+中证港股通综合指数收益率*20%+中债总指数收益率*15%",
-        "tracking_index": "该基金无跟踪标的",
-        "management_fee": "1.20%（每年）",
-        "custody_fee": "0.20%（每年）",
-        "holdings": [
-          {
-            "name": "星网锐捷",
-            "code": "002396",
-            "weight": 9.96
-          },
-          {
-            "name": "三环集团",
-            "code": "300408",
-            "weight": 8.26
-          },
-          {
-            "name": "锐捷网络",
-            "code": "301165",
-            "weight": 8.02
-          },
-          {
-            "name": "浪潮信息",
-            "code": "000977",
-            "weight": 7.06
-          },
-          {
-            "name": "深南电路",
-            "code": "002916",
-            "weight": 6.7
-          },
-          {
-            "name": "紫光股份",
-            "code": "000938",
-            "weight": 6.63
-          },
-          {
-            "name": "英维克",
-            "code": "002837",
-            "weight": 6.36
-          },
-          {
-            "name": "朗威股份",
-            "code": "301202",
-            "weight": 5.59
-          },
-          {
-            "name": "冠龙节能",
-            "code": "301151",
-            "weight": 5.38
-          },
-          {
-            "name": "中际旭创",
-            "code": "300308",
-            "weight": 3.89
-          }
-        ],
-        "holdings_period": "2026年2季度股票投资明细",
-        "top10_concentration": 67.85,
-        "industries": [
-          {
-            "name": "制造业",
-            "weight": 86.21
-          },
-          {
-            "name": "电信服务",
-            "weight": 3.61
-          },
-          {
-            "name": "信息传输、软件和信息技术服务业",
-            "weight": 3.36
-          },
-          {
-            "name": "信息技术",
-            "weight": 0.43
-          },
-          {
-            "name": "采矿业",
-            "weight": 0.01
-          },
-          {
-            "name": "电力、热力、燃气及水生产和供应业",
-            "weight": 0.0
-          }
-        ],
-        "industry_period": "2026-06-30",
-        "manager_details": [
-          {
-            "name": "黄蕴藉",
-            "company": "易方达基金",
-            "career_days": 384.0,
-            "current_aum_yi": 6.3,
-            "best_return": 77.74
-          }
-        ]
-      },
-      "risk": "近1年历史最大回撤约14.7%；波动很大，短期涨跌可能比较猛；前十大股票占比约68%，持仓比较集中。历史数据不代表未来。",
-      "deep_plain": [
-        "基金经理：黄蕴藉",
-        "历史任意时点持有满1年的盈利概率约44%（仅作历史统计，不是未来预测）"
-      ]
-    },
-    {
       "code": "457001",
       "name": "国富亚洲机会股票(QDII)A",
       "category": "QDII",
-      "score": 88.4,
+      "score": 80.0,
       "returns": {
-        "1m": 1.64,
-        "3m": -7.34,
-        "6m": 42.74,
-        "1y": 71.86,
-        "3y": 146.66,
-        "ytd": 61.04
+        "1m": -1.62,
+        "3m": -4.68,
+        "6m": 19.71,
+        "1y": 64.28,
+        "3y": 131.54,
+        "ytd": 52.07
       },
-      "latest_nav": 2.9081,
+      "latest_nav": 2.7461,
       "estimate_nav": null,
       "estimate_return": null,
-      "day_return": -0.19,
+      "day_return": -1.45,
       "buy_status": "限大额",
       "position": "中性观察",
       "broad_action": "watch",
       "history": {
-        "nav_date": "2026-09-29",
-        "last_nav": 2.9081,
+        "nav_date": "2026-10-14",
+        "last_nav": 2.7461,
         "returns": {
-          "20d": 2.21,
-          "60d": -5.65,
-          "120d": 42.55,
-          "250d": 74.1
+          "20d": -5.95,
+          "60d": -4.68,
+          "120d": 18.87,
+          "250d": 61.4
         },
         "ma": {
-          "20": 2.876,
-          "60": 2.8494,
-          "120": 2.8725
+          "20": 2.8787,
+          "60": 2.8408,
+          "120": 2.9034
         },
         "high": {
-          "60": 3.0117,
+          "60": 2.9837,
           "120": 3.4002
         },
         "low60": 2.5363,
         "drawdown": {
-          "60": -3.44,
-          "120": -14.47,
+          "60": -7.96,
+          "120": -19.24,
           "max250": -25.41
         },
-        "vol20_ann": 24.47,
-        "trend": "震荡",
-        "deviation60": 2.06,
+        "vol20_ann": 24.2,
+        "trend": "趋势偏弱",
+        "deviation60": -3.33,
         "overheat": false,
         "buy_zone_1": [
-          2.8329,
-          2.9048
+          2.8355,
+          2.9075
         ],
         "buy_zone_2": [
-          2.7781,
-          2.8722
+          2.7698,
+          2.8635
         ],
-        "stop_add_below": 2.8151
+        "stop_add_below": 2.8453
       },
       "history_error": null,
       "today_plan": {
-        "action": "继续等买点",
-        "tone": "watch",
-        "headline": "今天先不动，等进入明确买入区"
+        "action": "不买/停止补仓",
+        "tone": "avoid",
+        "headline": "趋势未确认，不因为跌得多就补"
       },
       "tracking": {
         "first_seen": "2026-09-28T21:58:24+08:00",
-        "days_tracked": 9,
-        "refresh_count": 15,
+        "days_tracked": 19,
+        "refresh_count": 16,
         "score_history": [
-          {
-            "at": "2026-09-30T03:38:46+08:00",
-            "score": 88.6,
-            "action": "继续等买点"
-          },
           {
             "at": "2026-09-30T10:03:34+08:00",
             "score": 88.6,
@@ -536,6 +136,11 @@
             "at": "2026-10-06T10:56:04+08:00",
             "score": 88.4,
             "action": "继续等买点"
+          },
+          {
+            "at": "2026-10-16T08:19:53+08:00",
+            "score": 80.0,
+            "action": "不买/停止补仓"
           }
         ]
       },
@@ -570,20 +175,20 @@
         },
         "risk": {
           "period": "近1年",
-          "annual_volatility": 34.36,
-          "sharpe": 2.05,
+          "annual_volatility": 34.27,
+          "sharpe": 1.83,
           "max_drawdown": 25.41,
-          "peer_risk_return": 99.0,
-          "peer_resilience": 17.0
+          "peer_risk_return": 96.0,
+          "peer_resilience": 18.0
         },
         "profit_probability": {
           "6m": {
             "probability": 62.0,
-            "average_return": 5.74
+            "average_return": 5.8
           },
           "1y": {
-            "probability": 62.0,
-            "average_return": 11.21
+            "probability": 63.0,
+            "average_return": 11.28
           }
         },
         "holdings": {
@@ -685,7 +290,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-10-06T10:56:51+08:00"
+        "updated_at": "2026-10-16T08:20:40+08:00"
       },
       "profile": {
         "fund_type": "QDII-普通股票",
@@ -779,92 +384,87 @@
           {
             "name": "徐成",
             "company": "国海富兰克林基金",
-            "career_days": 3939.0,
+            "career_days": 3949.0,
             "current_aum_yi": 94.22,
-            "best_return": 296.18
+            "best_return": 274.11
           }
         ]
       },
       "risk": "近1年历史最大回撤约25.4%；波动很大，短期涨跌可能比较猛；前十大股票占比约42%，集中度中等。历史数据不代表未来。",
       "deep_plain": [
         "基金经理：徐成",
-        "历史任意时点持有满1年的盈利概率约62%（仅作历史统计，不是未来预测）"
+        "历史任意时点持有满1年的盈利概率约63%（仅作历史统计，不是未来预测）"
       ]
     },
     {
       "code": "000960",
       "name": "招商医药健康产业股票",
       "category": "股票型",
-      "score": 89.1,
+      "score": 84.1,
       "returns": {
-        "1m": 17.49,
-        "3m": 40.62,
-        "6m": 55.76,
-        "1y": 42.95,
-        "3y": 48.85,
-        "ytd": 61.08
+        "1m": 0.39,
+        "3m": 10.53,
+        "6m": 26.31,
+        "1y": 32.6,
+        "3y": 26.37,
+        "ytd": 42.39
       },
-      "latest_nav": 2.922,
+      "latest_nav": 2.583,
       "estimate_nav": null,
       "estimate_return": null,
-      "day_return": 4.39,
+      "day_return": -1.67,
       "buy_status": "开放申购",
-      "position": "偏热，等待回调",
-      "broad_action": "wait",
+      "position": "趋势向上，可等分批点",
+      "broad_action": "batch",
       "history": {
-        "nav_date": "2026-09-30",
-        "last_nav": 2.922,
+        "nav_date": "2026-10-15",
+        "last_nav": 2.583,
         "returns": {
-          "20d": 18.64,
-          "60d": 42.33,
-          "120d": 48.32,
-          "250d": 41.64
+          "20d": 0.39,
+          "60d": 10.53,
+          "120d": 26.68,
+          "250d": 25.94
         },
         "ma": {
-          "20": 2.6606,
-          "60": 2.4678,
-          "120": 2.1939
+          "20": 2.7257,
+          "60": 2.5223,
+          "120": 2.2284
         },
         "high": {
           "60": 2.951,
           "120": 2.951
         },
-        "low60": 2.011,
+        "low60": 2.087,
         "drawdown": {
-          "60": -0.98,
-          "120": -0.98,
+          "60": -12.47,
+          "120": -12.47,
           "max250": -22.58
         },
-        "vol20_ann": 43.06,
-        "trend": "强势上行",
-        "deviation60": 18.4,
-        "overheat": true,
+        "vol20_ann": 45.1,
+        "trend": "上升趋势",
+        "deviation60": 2.41,
+        "overheat": false,
         "buy_zone_1": [
-          2.6207,
-          2.6873
+          2.6848,
+          2.753
         ],
         "buy_zone_2": [
-          2.4061,
-          2.4876
+          2.4593,
+          2.5425
         ],
-        "stop_add_below": 2.15
+        "stop_add_below": 2.1839
       },
       "history_error": null,
       "today_plan": {
-        "action": "等待回调",
-        "tone": "wait",
-        "headline": "当前位置偏高，今天不追"
+        "action": "继续等买点",
+        "tone": "watch",
+        "headline": "今天先不动，等进入明确买入区"
       },
       "tracking": {
         "first_seen": "2026-09-28T21:58:24+08:00",
-        "days_tracked": 9,
-        "refresh_count": 15,
+        "days_tracked": 19,
+        "refresh_count": 16,
         "score_history": [
-          {
-            "at": "2026-09-30T03:38:46+08:00",
-            "score": 91.1,
-            "action": "等待回调"
-          },
           {
             "at": "2026-09-30T10:03:34+08:00",
             "score": 91.1,
@@ -919,6 +519,11 @@
             "at": "2026-10-06T10:56:04+08:00",
             "score": 89.1,
             "action": "等待回调"
+          },
+          {
+            "at": "2026-10-16T08:19:53+08:00",
+            "score": 84.1,
+            "action": "继续等买点"
           }
         ]
       },
@@ -953,20 +558,20 @@
         },
         "risk": {
           "period": "近1年",
-          "annual_volatility": 35.35,
-          "sharpe": 1.17,
+          "annual_volatility": 35.39,
+          "sharpe": 0.88,
           "max_drawdown": 22.58,
           "peer_risk_return": 97.0,
           "peer_resilience": 44.0
         },
         "profit_probability": {
           "6m": {
-            "probability": 54.0,
-            "average_return": 3.94
+            "probability": 55.0,
+            "average_return": 4.04
           },
           "1y": {
             "probability": 52.0,
-            "average_return": 10.14
+            "average_return": 10.17
           }
         },
         "holdings": {
@@ -1072,7 +677,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-10-06T10:56:57+08:00"
+        "updated_at": "2026-10-16T08:20:46+08:00"
       },
       "profile": {
         "fund_type": "股票型",
@@ -1166,9 +771,9 @@
           {
             "name": "李佳存",
             "company": "招商基金",
-            "career_days": 4267.0,
+            "career_days": 4277.0,
             "current_aum_yi": 32.05,
-            "best_return": 192.2
+            "best_return": 158.3
           }
         ]
       },
@@ -1182,76 +787,71 @@
       "code": "011373",
       "name": "招商前沿医疗保健股票A",
       "category": "股票型",
-      "score": 86.4,
+      "score": 80.4,
       "returns": {
-        "1m": 16.66,
-        "3m": 46.6,
-        "6m": 57.08,
-        "1y": 33.61,
-        "3y": 57.93,
-        "ytd": 61.78
+        "1m": -1.18,
+        "3m": 12.02,
+        "6m": 25.45,
+        "1y": 25.58,
+        "3y": 32.81,
+        "ytd": 42.01
       },
-      "latest_nav": 0.9362,
+      "latest_nav": 0.8218,
       "estimate_nav": null,
       "estimate_return": null,
-      "day_return": 4.85,
+      "day_return": -1.93,
       "buy_status": "开放申购",
-      "position": "偏热，等待回调",
-      "broad_action": "wait",
+      "position": "中性观察",
+      "broad_action": "watch",
       "history": {
-        "nav_date": "2026-09-30",
-        "last_nav": 0.9362,
+        "nav_date": "2026-10-15",
+        "last_nav": 0.8218,
         "returns": {
-          "20d": 17.33,
-          "60d": 45.01,
-          "120d": 49.5,
-          "250d": 34.43
+          "20d": -0.88,
+          "60d": 12.02,
+          "120d": 24.8,
+          "250d": 18.09
         },
         "ma": {
-          "20": 0.855,
-          "60": 0.7858,
-          "120": 0.6951
+          "20": 0.8729,
+          "60": 0.8047,
+          "120": 0.7062
         },
         "high": {
           "60": 0.9362,
           "120": 0.9362
         },
-        "low60": 0.6321,
+        "low60": 0.6534,
         "drawdown": {
-          "60": 0.0,
-          "120": 0.0,
+          "60": -12.22,
+          "120": -12.22,
           "max250": -24.63
         },
-        "vol20_ann": 39.82,
-        "trend": "强势上行",
-        "deviation60": 19.14,
-        "overheat": true,
+        "vol20_ann": 43.13,
+        "trend": "上升趋势",
+        "deviation60": 2.13,
+        "overheat": false,
         "buy_zone_1": [
-          0.8422,
-          0.8635
+          0.8598,
+          0.8816
         ],
         "buy_zone_2": [
-          0.7662,
-          0.7921
+          0.7846,
+          0.8111
         ],
-        "stop_add_below": 0.6812
+        "stop_add_below": 0.6921
       },
       "history_error": null,
       "today_plan": {
-        "action": "等待回调",
-        "tone": "wait",
-        "headline": "当前位置偏高，今天不追"
+        "action": "继续等买点",
+        "tone": "watch",
+        "headline": "今天先不动，等进入明确买入区"
       },
       "tracking": {
         "first_seen": "2026-09-29T20:56:44+08:00",
-        "days_tracked": 8,
-        "refresh_count": 13,
+        "days_tracked": 18,
+        "refresh_count": 14,
         "score_history": [
-          {
-            "at": "2026-09-30T03:38:46+08:00",
-            "score": 88.8,
-            "action": "等待回调"
-          },
           {
             "at": "2026-09-30T10:03:34+08:00",
             "score": 88.8,
@@ -1306,6 +906,11 @@
             "at": "2026-10-06T10:56:04+08:00",
             "score": 86.4,
             "action": "等待回调"
+          },
+          {
+            "at": "2026-10-16T08:19:53+08:00",
+            "score": 80.4,
+            "action": "继续等买点"
           }
         ]
       },
@@ -1340,20 +945,20 @@
         },
         "risk": {
           "period": "近1年",
-          "annual_volatility": 36.86,
-          "sharpe": 0.87,
-          "max_drawdown": 24.63,
+          "annual_volatility": 36.66,
+          "sharpe": 0.66,
+          "max_drawdown": 24.44,
           "peer_risk_return": 93.0,
-          "peer_resilience": 37.0
+          "peer_resilience": 39.0
         },
         "profit_probability": {
           "6m": {
             "probability": 40.0,
-            "average_return": -1.38
+            "average_return": -1.1
           },
           "1y": {
             "probability": 38.0,
-            "average_return": -1.74
+            "average_return": -1.64
           }
         },
         "holdings": {
@@ -1459,7 +1064,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-10-06T10:57:04+08:00"
+        "updated_at": "2026-10-16T08:20:52+08:00"
       },
       "profile": {
         "fund_type": "股票型",
@@ -1557,13 +1162,13 @@
           {
             "name": "李佳存",
             "company": "招商基金",
-            "career_days": 4267.0,
+            "career_days": 4277.0,
             "current_aum_yi": 32.05,
-            "best_return": 192.2
+            "best_return": 158.3
           }
         ]
       },
-      "risk": "近1年历史最大回撤约24.6%；波动很大，短期涨跌可能比较猛；前十大股票占比约62%，持仓比较集中。历史数据不代表未来。",
+      "risk": "近1年历史最大回撤约24.4%；波动很大，短期涨跌可能比较猛；前十大股票占比约62%，持仓比较集中。历史数据不代表未来。",
       "deep_plain": [
         "基金经理：李佳存",
         "历史任意时点持有满1年的盈利概率约38%（仅作历史统计，不是未来预测）"
@@ -1573,35 +1178,35 @@
       "code": "008602",
       "name": "方正富邦新兴成长混合A",
       "category": "混合型",
-      "score": 92.2,
+      "score": 74.7,
       "returns": {
-        "1m": -2.48,
-        "3m": 14.41,
-        "6m": 51.56,
-        "1y": 46.09,
-        "3y": 115.3,
-        "ytd": 57.24
+        "1m": -11.55,
+        "3m": 5.26,
+        "6m": 21.79,
+        "1y": 32.62,
+        "3y": 82.47,
+        "ytd": 37.06
       },
-      "latest_nav": 2.1429,
+      "latest_nav": 1.8679,
       "estimate_nav": null,
       "estimate_return": null,
-      "day_return": -1.75,
+      "day_return": -3.35,
       "buy_status": "开放申购",
-      "position": "中性观察",
+      "position": "强势回撤，重点等买点",
       "broad_action": "watch",
       "history": {
-        "nav_date": "2026-09-30",
-        "last_nav": 2.1429,
+        "nav_date": "2026-10-15",
+        "last_nav": 1.8679,
         "returns": {
-          "20d": 0.01,
-          "60d": 16.18,
-          "120d": 43.22,
-          "250d": 55.25
+          "20d": -13.08,
+          "60d": 5.26,
+          "120d": 19.74,
+          "250d": 31.75
         },
         "ma": {
-          "20": 2.1839,
-          "60": 2.0289,
-          "120": 1.9126
+          "20": 2.1354,
+          "60": 2.047,
+          "120": 1.9347
         },
         "high": {
           "60": 2.3293,
@@ -1609,34 +1214,34 @@
         },
         "low60": 1.7264,
         "drawdown": {
-          "60": -8.0,
-          "120": -8.0,
-          "max250": -13.41
+          "60": -19.81,
+          "120": -19.81,
+          "max250": -19.81
         },
-        "vol20_ann": 36.53,
-        "trend": "上升趋势",
-        "deviation60": 5.62,
+        "vol20_ann": 38.35,
+        "trend": "趋势偏弱",
+        "deviation60": -8.75,
         "overheat": false,
         "buy_zone_1": [
-          2.1511,
-          2.2057
+          2.1033,
+          2.1567
         ],
         "buy_zone_2": [
-          1.9782,
-          2.0451
+          1.9958,
+          2.0634
         ],
-        "stop_add_below": 1.8743
+        "stop_add_below": 1.896
       },
       "history_error": null,
       "today_plan": {
-        "action": "继续等买点",
-        "tone": "watch",
-        "headline": "今天先不动，等进入明确买入区"
+        "action": "不买/停止补仓",
+        "tone": "avoid",
+        "headline": "趋势未确认，不因为跌得多就补"
       },
       "tracking": {
         "first_seen": "2026-09-30T20:38:05+08:00",
-        "days_tracked": 7,
-        "refresh_count": 10,
+        "days_tracked": 17,
+        "refresh_count": 11,
         "score_history": [
           {
             "at": "2026-09-30T20:38:05+08:00",
@@ -1687,6 +1292,11 @@
             "at": "2026-10-06T10:56:04+08:00",
             "score": 92.2,
             "action": "继续等买点"
+          },
+          {
+            "at": "2026-10-16T08:19:53+08:00",
+            "score": 74.7,
+            "action": "不买/停止补仓"
           }
         ]
       },
@@ -1721,20 +1331,20 @@
         },
         "risk": {
           "period": "近1年",
-          "annual_volatility": 28.03,
-          "sharpe": 1.59,
-          "max_drawdown": 13.41,
+          "annual_volatility": 28.310000000000002,
+          "sharpe": 1.1,
+          "max_drawdown": 17.03,
           "peer_risk_return": 99.0,
-          "peer_resilience": 69.0
+          "peer_resilience": 65.0
         },
         "profit_probability": {
           "6m": {
             "probability": 62.0,
-            "average_return": 6.15
+            "average_return": 6.31
           },
           "1y": {
             "probability": 58.0,
-            "average_return": 10.02
+            "average_return": 10.09
           }
         },
         "holdings": {
@@ -1836,7 +1446,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-10-06T10:57:11+08:00"
+        "updated_at": "2026-10-16T08:20:58+08:00"
       },
       "profile": {
         "fund_type": "混合型-偏股",
@@ -1930,146 +1540,91 @@
           {
             "name": "乔培涛",
             "company": "方正富邦基金",
-            "career_days": 3359.0,
+            "career_days": 3369.0,
             "current_aum_yi": 9.52,
-            "best_return": 103.18
+            "best_return": 77.1
           }
         ]
       },
-      "risk": "近1年历史最大回撤约13.4%；波动中等偏高；前十大股票占比约28%，相对分散。历史数据不代表未来。",
+      "risk": "近1年历史最大回撤约17.0%；波动中等偏高；前十大股票占比约28%，相对分散。历史数据不代表未来。",
       "deep_plain": [
         "基金经理：乔培涛",
         "历史任意时点持有满1年的盈利概率约58%（仅作历史统计，不是未来预测）"
       ]
     },
     {
-      "code": "539002",
-      "name": "建信新兴市场混合(QDII)A",
-      "category": "QDII",
-      "score": 89.5,
+      "code": "001715",
+      "name": "工银新焦点混合A",
+      "category": "混合型",
+      "score": 90.1,
       "returns": {
-        "1m": 7.19,
-        "3m": -9.64,
-        "6m": 52.34,
-        "1y": 90.92,
-        "3y": 240.08,
-        "ytd": 75.28
+        "1m": -4.2,
+        "3m": 5.96,
+        "6m": 32.96,
+        "1y": 64.78,
+        "3y": 175.02,
+        "ytd": 57.11
       },
-      "latest_nav": 2.503,
+      "latest_nav": 4.8249,
       "estimate_nav": null,
       "estimate_return": null,
-      "day_return": 1.05,
-      "buy_status": "限大额",
+      "day_return": -3.68,
+      "buy_status": "开放申购",
       "position": "中性观察",
       "broad_action": "watch",
       "history": {
-        "nav_date": "2026-09-29",
-        "last_nav": 2.503,
+        "nav_date": "2026-10-15",
+        "last_nav": 4.8249,
         "returns": {
-          "20d": 7.19,
-          "60d": 0.0,
-          "120d": 52.34,
-          "250d": 109.98
+          "20d": -7.89,
+          "60d": 5.96,
+          "120d": 30.18,
+          "250d": 59.93
         },
         "ma": {
-          "20": 2.4127,
-          "60": 2.3708,
-          "120": 2.3584
+          "20": 5.0154,
+          "60": 4.807,
+          "120": 4.5853
         },
         "high": {
-          "60": 2.569,
-          "120": 2.944
+          "60": 5.2383,
+          "120": 5.2383
         },
-        "low60": 1.967,
+        "low60": 4.3341,
         "drawdown": {
-          "60": -2.57,
-          "120": -14.98,
-          "max250": -33.19
+          "60": -7.89,
+          "120": -7.89,
+          "max250": -14.25
         },
-        "vol20_ann": 32.38,
-        "trend": "强势上行",
-        "deviation60": 5.58,
+        "vol20_ann": 27.3,
+        "trend": "上升趋势",
+        "deviation60": 0.37,
         "overheat": false,
         "buy_zone_1": [
-          2.3765,
-          2.4368
+          4.9402,
+          5.0656
         ],
         "buy_zone_2": [
-          2.3115,
-          2.3897
+          4.6868,
+          4.8455
         ],
-        "stop_add_below": 2.3113
+        "stop_add_below": 4.4936
       },
       "history_error": null,
       "today_plan": {
-        "action": "继续等买点",
-        "tone": "watch",
-        "headline": "今天先不动，等进入明确买入区"
+        "action": "第二买入区",
+        "tone": "batch",
+        "headline": "若14:20仍在区间，可分第二笔20%–25%"
       },
       "tracking": {
-        "first_seen": "2026-09-25T09:26:24+08:00",
-        "days_tracked": 12,
-        "refresh_count": 18,
+        "first_seen": "2026-10-16T08:19:53+08:00",
+        "days_tracked": 1,
+        "refresh_count": 1,
         "score_history": [
           {
-            "at": "2026-09-30T03:38:46+08:00",
-            "score": 89.4,
-            "action": "继续等买点"
-          },
-          {
-            "at": "2026-09-30T10:03:34+08:00",
-            "score": 89.4,
-            "action": "继续等买点"
-          },
-          {
-            "at": "2026-09-30T20:38:05+08:00",
-            "score": 89.4,
-            "action": "继续等买点"
-          },
-          {
-            "at": "2026-10-01T03:38:24+08:00",
-            "score": 89.5,
-            "action": "继续等买点"
-          },
-          {
-            "at": "2026-10-02T03:49:27+08:00",
-            "score": 89.5,
-            "action": "继续等买点"
-          },
-          {
-            "at": "2026-10-02T10:11:28+08:00",
-            "score": 89.5,
-            "action": "继续等买点"
-          },
-          {
-            "at": "2026-10-02T20:40:14+08:00",
-            "score": 89.5,
-            "action": "继续等买点"
-          },
-          {
-            "at": "2026-10-03T03:31:36+08:00",
-            "score": 89.5,
-            "action": "继续等买点"
-          },
-          {
-            "at": "2026-10-05T09:53:35+08:00",
-            "score": 89.5,
-            "action": "继续等买点"
-          },
-          {
-            "at": "2026-10-05T22:46:23+08:00",
-            "score": 89.5,
-            "action": "继续等买点"
-          },
-          {
-            "at": "2026-10-06T05:39:49+08:00",
-            "score": 89.5,
-            "action": "继续等买点"
-          },
-          {
-            "at": "2026-10-06T10:56:04+08:00",
-            "score": 89.5,
-            "action": "继续等买点"
+            "at": "2026-10-16T08:19:53+08:00",
+            "score": 90.1,
+            "action": "第二买入区"
           }
         ]
       },
@@ -2091,88 +1646,88 @@
       ],
       "deep_analysis": {
         "overview": {
-          "fund_type": "QDII-混合偏股",
+          "fund_type": "混合型-灵活",
           "asset_scale": null,
-          "share_scale": "7.2252亿份（截止至：2026年06月30日）",
-          "manager": "李博涵、程星烨、房乐",
-          "company": "建信基金",
-          "成立日期": "2011年06月21日",
-          "benchmark": "MSCI新兴市场指数(MSCI Emerging Markets Index)收益率*90%+中债-综合全价(总值)指数收益率*5%+人民币活期存款基准利率*5%",
+          "share_scale": "0.2647亿份（截止至：2026年06月30日）",
+          "manager": "董明斌、张力涛",
+          "company": "工银瑞信基金",
+          "成立日期": "2016年10月10日",
+          "benchmark": "中证800指数收益率*75%+恒生指数收益率*10%+中债-综合财富(1-3年)指数收益率*15%",
           "tracking_target": "该基金无跟踪标的",
-          "management_fee": "1.20%（每年）",
+          "management_fee": "1.00%（每年）",
           "custody_fee": "0.20%（每年）"
         },
         "risk": {
           "period": "近1年",
-          "annual_volatility": 45.269999999999996,
-          "sharpe": 1.98,
-          "max_drawdown": 33.19,
+          "annual_volatility": 34.06,
+          "sharpe": 1.86,
+          "max_drawdown": 14.249999999999998,
           "peer_risk_return": 99.0,
-          "peer_resilience": 8.0
+          "peer_resilience": 49.0
         },
         "profit_probability": {
           "6m": {
-            "probability": 56.0,
-            "average_return": 4.42
+            "probability": 68.0,
+            "average_return": 9.93
           },
           "1y": {
-            "probability": 57.0,
-            "average_return": 7.82
+            "probability": 62.0,
+            "average_return": 20.83
           }
         },
         "holdings": {
           "quarter": "2026年2季度股票投资明细",
-          "top10_concentration": 62.22,
+          "top10_concentration": 59.73,
           "top_holdings": [
             {
-              "name": "台积电",
-              "code": "TSM",
-              "weight": 9.68
+              "name": "航发动力",
+              "code": "600893",
+              "weight": 9.08
             },
             {
-              "name": "英伟达",
-              "code": "NVDA",
-              "weight": 9.38
+              "name": "中航西飞",
+              "code": "000768",
+              "weight": 8.97
             },
             {
-              "name": "SK海力士",
-              "code": "000660",
-              "weight": 8.94
+              "name": "航发科技",
+              "code": "600391",
+              "weight": 8.82
             },
             {
-              "name": "三星电子",
-              "code": "005930",
-              "weight": 7.8
+              "name": "中航高科",
+              "code": "600862",
+              "weight": 7.84
             },
             {
-              "name": "闪迪",
-              "code": "SNDK",
-              "weight": 7.16
+              "name": "中航机载",
+              "code": "600372",
+              "weight": 5.86
             },
             {
-              "name": "博通",
-              "code": "AVGO",
-              "weight": 4.18
+              "name": "航发控制",
+              "code": "000738",
+              "weight": 5.29
             },
             {
-              "name": "西部数据",
-              "code": "WDC",
-              "weight": 4.18
+              "name": "航亚科技",
+              "code": "688510",
+              "weight": 4.83
             },
             {
-              "name": "美光科技",
-              "code": "MU",
-              "weight": 3.99
+              "name": "北摩高科",
+              "code": "002985",
+              "weight": 3.04
             },
             {
-              "name": "Lumentum Holdings Inc",
-              "code": "LITE",
-              "weight": 3.56
+              "name": "华秦科技",
+              "code": "688281",
+              "weight": 3.01
             },
             {
-              "name": "康宁",
-              "code": "GLW",
-              "weight": 3.35
+              "name": "图南股份",
+              "code": "300855",
+              "weight": 2.99
             }
           ]
         },
@@ -2180,12 +1735,20 @@
           "period": "2026-06-30",
           "items": [
             {
-              "name": "信息技术",
-              "weight": 81.18
+              "name": "制造业",
+              "weight": 76.76
             },
             {
-              "name": "电信服务",
-              "weight": 0.42
+              "name": "批发和零售业",
+              "weight": 1.98
+            },
+            {
+              "name": "信息技术Information",
+              "weight": 0.93
+            },
+            {
+              "name": "信息传输、软件和信息技术服务业",
+              "weight": 0.4
             }
           ]
         },
@@ -2195,7 +1758,11 @@
             "赎回费率": "1.50%"
           },
           {
-            "适用期限": "大于等于7天，小于365天",
+            "适用期限": "大于等于7天，小于30天",
+            "赎回费率": "0.75%"
+          },
+          {
+            "适用期限": "大于等于30天，小于365天",
             "赎回费率": "0.50%"
           },
           {
@@ -2207,116 +1774,409 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-10-06T10:57:18+08:00"
+        "updated_at": "2026-10-16T08:21:04+08:00"
       },
       "profile": {
-        "fund_type": "QDII-混合偏股",
+        "fund_type": "混合型-灵活",
         "asset_scale": null,
-        "share_scale": "7.2252亿份（截止至：2026年06月30日）",
-        "manager": "李博涵、程星烨、房乐",
-        "company": "建信基金",
-        "成立日期": "2011年06月21日",
-        "benchmark": "MSCI新兴市场指数(MSCI Emerging Markets Index)收益率*90%+中债-综合全价(总值)指数收益率*5%+人民币活期存款基准利率*5%",
+        "share_scale": "0.2647亿份（截止至：2026年06月30日）",
+        "manager": "董明斌、张力涛",
+        "company": "工银瑞信基金",
+        "成立日期": "2016年10月10日",
+        "benchmark": "中证800指数收益率*75%+恒生指数收益率*10%+中债-综合财富(1-3年)指数收益率*15%",
         "tracking_index": "该基金无跟踪标的",
-        "management_fee": "1.20%（每年）",
+        "management_fee": "1.00%（每年）",
         "custody_fee": "0.20%（每年）",
         "holdings": [
           {
-            "name": "台积电",
-            "code": "TSM",
-            "weight": 9.68
+            "name": "航发动力",
+            "code": "600893",
+            "weight": 9.08
           },
           {
-            "name": "英伟达",
-            "code": "NVDA",
-            "weight": 9.38
+            "name": "中航西飞",
+            "code": "000768",
+            "weight": 8.97
           },
           {
-            "name": "SK海力士",
-            "code": "000660",
-            "weight": 8.94
+            "name": "航发科技",
+            "code": "600391",
+            "weight": 8.82
           },
           {
-            "name": "三星电子",
-            "code": "005930",
-            "weight": 7.8
+            "name": "中航高科",
+            "code": "600862",
+            "weight": 7.84
           },
           {
-            "name": "闪迪",
-            "code": "SNDK",
-            "weight": 7.16
+            "name": "中航机载",
+            "code": "600372",
+            "weight": 5.86
           },
           {
-            "name": "博通",
-            "code": "AVGO",
-            "weight": 4.18
+            "name": "航发控制",
+            "code": "000738",
+            "weight": 5.29
           },
           {
-            "name": "西部数据",
-            "code": "WDC",
-            "weight": 4.18
+            "name": "航亚科技",
+            "code": "688510",
+            "weight": 4.83
           },
           {
-            "name": "美光科技",
-            "code": "MU",
-            "weight": 3.99
+            "name": "北摩高科",
+            "code": "002985",
+            "weight": 3.04
           },
           {
-            "name": "Lumentum Holdings Inc",
-            "code": "LITE",
-            "weight": 3.56
+            "name": "华秦科技",
+            "code": "688281",
+            "weight": 3.01
           },
           {
-            "name": "康宁",
-            "code": "GLW",
-            "weight": 3.35
+            "name": "图南股份",
+            "code": "300855",
+            "weight": 2.99
           }
         ],
         "holdings_period": "2026年2季度股票投资明细",
-        "top10_concentration": 62.22,
+        "top10_concentration": 59.73,
         "industries": [
           {
-            "name": "信息技术",
-            "weight": 81.18
+            "name": "制造业",
+            "weight": 76.76
           },
           {
-            "name": "电信服务",
-            "weight": 0.42
+            "name": "批发和零售业",
+            "weight": 1.98
+          },
+          {
+            "name": "信息技术Information",
+            "weight": 0.93
+          },
+          {
+            "name": "信息传输、软件和信息技术服务业",
+            "weight": 0.4
           }
         ],
         "industry_period": "2026-06-30",
         "manager_details": [
           {
-            "name": "李博涵",
-            "company": "建信基金",
-            "career_days": 4810.0,
-            "current_aum_yi": 75.9,
-            "best_return": 206.6
+            "name": "董明斌",
+            "company": "工银瑞信基金",
+            "career_days": 309.0,
+            "current_aum_yi": 9.18,
+            "best_return": 8.94
           },
           {
-            "name": "程星烨",
-            "company": "建信基金",
-            "career_days": 2491.0,
-            "current_aum_yi": 75.9,
-            "best_return": 206.6
-          },
-          {
-            "name": "房乐",
-            "company": "建信基金",
-            "career_days": 840.0,
-            "current_aum_yi": 75.9,
-            "best_return": 119.75
+            "name": "张力涛",
+            "company": "工银瑞信基金",
+            "career_days": 24.0,
+            "current_aum_yi": 1.75,
+            "best_return": -7.11
           }
         ]
       },
-      "risk": "近1年历史最大回撤约33.2%；波动很大，短期涨跌可能比较猛；前十大股票占比约62%，持仓比较集中。历史数据不代表未来。",
+      "risk": "近1年历史最大回撤约14.2%；波动很大，短期涨跌可能比较猛；前十大股票占比约60%，集中度中等。历史数据不代表未来。",
       "deep_plain": [
-        "基金经理：李博涵、程星烨、房乐",
-        "历史任意时点持有满1年的盈利概率约57%（仅作历史统计，不是未来预测）"
+        "基金经理：董明斌、张力涛",
+        "历史任意时点持有满1年的盈利概率约62%（仅作历史统计，不是未来预测）"
+      ]
+    },
+    {
+      "code": "004243",
+      "name": "广发道琼斯石油指数人民币C",
+      "category": "指数型",
+      "score": 89.7,
+      "returns": {
+        "1m": 5.68,
+        "3m": 23.04,
+        "6m": 26.87,
+        "1y": 52.09,
+        "3y": 35.7,
+        "ytd": 51.57
+      },
+      "latest_nav": 3.2779,
+      "estimate_nav": 3.3096,
+      "estimate_return": 0.97,
+      "day_return": -0.12,
+      "buy_status": "限大额",
+      "position": "趋势向上，可等分批点",
+      "broad_action": "batch",
+      "history": {
+        "nav_date": "2026-10-14",
+        "last_nav": 3.2779,
+        "returns": {
+          "20d": 5.57,
+          "60d": 23.04,
+          "120d": 26.64,
+          "250d": 43.72
+        },
+        "ma": {
+          "20": 3.08,
+          "60": 2.941,
+          "120": 2.7756
+        },
+        "high": {
+          "60": 3.2817,
+          "120": 3.2817
+        },
+        "low60": 2.6373,
+        "drawdown": {
+          "60": -0.12,
+          "120": -0.12,
+          "max250": -17.49
+        },
+        "vol20_ann": 42.05,
+        "trend": "强势上行",
+        "deviation60": 11.45,
+        "overheat": false,
+        "buy_zone_1": [
+          3.0338,
+          3.1108
+        ],
+        "buy_zone_2": [
+          2.8675,
+          2.9646
+        ],
+        "stop_add_below": 2.7201
+      },
+      "history_error": null,
+      "today_plan": {
+        "action": "等待回调",
+        "tone": "wait",
+        "headline": "当前位置偏高，今天不追"
+      },
+      "tracking": {
+        "first_seen": "2026-10-16T08:19:53+08:00",
+        "days_tracked": 1,
+        "refresh_count": 1,
+        "score_history": [
+          {
+            "at": "2026-10-16T08:19:53+08:00",
+            "score": 89.7,
+            "action": "等待回调"
+          }
+        ]
+      },
+      "buy_plan": {
+        "window": "交易日14:20左右复核；场外基金15:00前下单通常按当日净值规则处理，具体以基金合同/平台为准",
+        "first_batch": "进入第一买入区且趋势仍向上：计划仓位20%–25%",
+        "second_batch": "进入第二买入区且未跌破停止补仓线：再20%–25%",
+        "reserve": "至少保留50%计划资金，不一次买满"
+      },
+      "sell_plan": {
+        "profit_protect": "已有盈利时：若近20日涨幅>10%且偏离60日均线>8%，停止加仓；盈利较大可分批保护利润",
+        "reduce": "若上涨明显过热或趋势转弱，先减20%–30%，而不是一次清仓",
+        "exit": "跌破停止补仓线且60日趋势转负，重新评估退出；基金经理/投资逻辑发生重大变化时优先重新评估"
+      },
+      "why": [
+        "机会分综合近1月、3月、6月、1年与3年同类表现，并主动惩罚短期暴涨追高",
+        "机会池采用持续跟踪机制，原候选未明显恶化时不会每天随意换掉",
+        "买入点以20/60/120日净值结构与回撤位置计算，下午再结合估算净值复核"
+      ],
+      "deep_analysis": {
+        "overview": {
+          "fund_type": "指数型-海外股票",
+          "asset_scale": null,
+          "share_scale": "0.7554亿份（截止至：2026年06月30日）",
+          "manager": "姚曦",
+          "company": "广发基金",
+          "成立日期": "2017年02月28日",
+          "benchmark": "人民币计价的道琼斯美国石油开发与生产指数收益率*95%+人民币活期存款收益率(税后)*5%",
+          "tracking_target": "道琼斯美国石油开发与生产指数",
+          "management_fee": "1.00%（每年）",
+          "custody_fee": "0.20%（每年）"
+        },
+        "risk": {
+          "period": "近1年",
+          "annual_volatility": 26.38,
+          "sharpe": 1.9,
+          "max_drawdown": 17.49,
+          "peer_risk_return": 96.0,
+          "peer_resilience": 35.0
+        },
+        "profit_probability": {
+          "6m": {
+            "probability": 62.0,
+            "average_return": 8.05
+          },
+          "1y": {
+            "probability": 60.0,
+            "average_return": 17.01
+          }
+        },
+        "holdings": {
+          "quarter": "2026年2季度股票投资明细",
+          "top10_concentration": 65.49,
+          "top_holdings": [
+            {
+              "name": "康菲石油",
+              "code": "COP",
+              "weight": 15.87
+            },
+            {
+              "name": "瓦莱罗能源",
+              "code": "VLO",
+              "weight": 9.69
+            },
+            {
+              "name": "马拉松原油",
+              "code": "MPC",
+              "weight": 9.35
+            },
+            {
+              "name": "EOG能源",
+              "code": "EOG",
+              "weight": 6.03
+            },
+            {
+              "name": "EQT能源",
+              "code": "EQT",
+              "weight": 4.45
+            },
+            {
+              "name": "Texas Pacific Land Corp",
+              "code": "TPL",
+              "weight": 4.38
+            },
+            {
+              "name": "Phillips 66",
+              "code": "PSX",
+              "weight": 4.1
+            },
+            {
+              "name": "Diamondback Energy Inc",
+              "code": "FANG",
+              "weight": 3.94
+            },
+            {
+              "name": "戴文能源",
+              "code": "DVN",
+              "weight": 3.91
+            },
+            {
+              "name": "Expand Energy Corp",
+              "code": "EXE",
+              "weight": 3.77
+            }
+          ]
+        },
+        "industries": {
+          "period": "2026-06-30",
+          "items": [
+            {
+              "name": "能源",
+              "weight": 91.83
+            }
+          ]
+        },
+        "redemption_fee": [
+          {
+            "适用期限": "小于30天",
+            "赎回费率": "1.50%"
+          },
+          {
+            "适用期限": "大于等于30天，小于730天",
+            "赎回费率": "0.15%"
+          },
+          {
+            "适用期限": "大于等于730天",
+            "赎回费率": "0.00%"
+          }
+        ],
+        "updated_at": "2026-10-16T08:21:10+08:00"
+      },
+      "profile": {
+        "fund_type": "指数型-海外股票",
+        "asset_scale": null,
+        "share_scale": "0.7554亿份（截止至：2026年06月30日）",
+        "manager": "姚曦",
+        "company": "广发基金",
+        "成立日期": "2017年02月28日",
+        "benchmark": "人民币计价的道琼斯美国石油开发与生产指数收益率*95%+人民币活期存款收益率(税后)*5%",
+        "tracking_index": "道琼斯美国石油开发与生产指数",
+        "management_fee": "1.00%（每年）",
+        "custody_fee": "0.20%（每年）",
+        "holdings": [
+          {
+            "name": "康菲石油",
+            "code": "COP",
+            "weight": 15.87
+          },
+          {
+            "name": "瓦莱罗能源",
+            "code": "VLO",
+            "weight": 9.69
+          },
+          {
+            "name": "马拉松原油",
+            "code": "MPC",
+            "weight": 9.35
+          },
+          {
+            "name": "EOG能源",
+            "code": "EOG",
+            "weight": 6.03
+          },
+          {
+            "name": "EQT能源",
+            "code": "EQT",
+            "weight": 4.45
+          },
+          {
+            "name": "Texas Pacific Land Corp",
+            "code": "TPL",
+            "weight": 4.38
+          },
+          {
+            "name": "Phillips 66",
+            "code": "PSX",
+            "weight": 4.1
+          },
+          {
+            "name": "Diamondback Energy Inc",
+            "code": "FANG",
+            "weight": 3.94
+          },
+          {
+            "name": "戴文能源",
+            "code": "DVN",
+            "weight": 3.91
+          },
+          {
+            "name": "Expand Energy Corp",
+            "code": "EXE",
+            "weight": 3.77
+          }
+        ],
+        "holdings_period": "2026年2季度股票投资明细",
+        "top10_concentration": 65.49,
+        "industries": [
+          {
+            "name": "能源",
+            "weight": 91.83
+          }
+        ],
+        "industry_period": "2026-06-30",
+        "manager_details": [
+          {
+            "name": "姚曦",
+            "company": "广发基金",
+            "career_days": 1794.0,
+            "current_aum_yi": 242.85,
+            "best_return": 88.54
+          }
+        ]
+      },
+      "risk": "近1年历史最大回撤约17.5%；波动中等偏高；前十大股票占比约65%，持仓比较集中。历史数据不代表未来。",
+      "deep_plain": [
+        "基金经理：姚曦",
+        "历史任意时点持有满1年的盈利概率约60%（仅作历史统计，不是未来预测）"
       ]
     }
   ],
-  "deep_enriched_at": "2026-10-06T10:57:18+08:00",
+  "deep_enriched_at": "2026-10-16T08:21:10+08:00",
   "deep_method": "overview+risk_drawdown+historical_profit_probability+latest_disclosed_holdings+industry+fees+manager",
   "profile_note": "基金持仓和行业配置来自最新可获得的定期报告披露，不是实时持仓。"
 }

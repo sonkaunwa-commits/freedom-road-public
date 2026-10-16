@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-16T08:18:46+08:00",
+  "generated_at": "2026-10-16T09:14:45+08:00",
   "method_version": "fund-screen-v2.0",
   "goal": "持续跟踪6-12个月高弹性候选；不承诺收益，不预测必然涨幅",
   "selection_policy": "核心池固定跟踪6只；仅在评分明显恶化、中期趋势转负、暂停申购或更优候选持续胜出时替换",
@@ -11,7 +11,18 @@
     "status": "unavailable_or_insufficient_permission",
     "detail": "抱歉，您没有接口(fund_company)访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。"
   },
-  "warnings": [],
+  "warnings": [
+    {
+      "type": "pool_size_normalized",
+      "message": "核心候选池由7只强制校正为6只",
+      "removed": [
+        {
+          "code": "019710",
+          "name": "广发道琼斯石油指数(QDII-LOF)人民币E"
+        }
+      ]
+    }
+  ],
   "funds": [
     {
       "code": "457001",
@@ -80,13 +91,8 @@
       "tracking": {
         "first_seen": "2026-09-28T21:58:24+08:00",
         "days_tracked": 19,
-        "refresh_count": 16,
+        "refresh_count": 17,
         "score_history": [
-          {
-            "at": "2026-09-30T10:03:34+08:00",
-            "score": 88.6,
-            "action": "继续等买点"
-          },
           {
             "at": "2026-09-30T20:38:05+08:00",
             "score": 88.5,
@@ -139,6 +145,11 @@
           },
           {
             "at": "2026-10-16T08:19:53+08:00",
+            "score": 80.0,
+            "action": "不买/停止补仓"
+          },
+          {
+            "at": "2026-10-16T09:19:32+08:00",
             "score": 80.0,
             "action": "不买/停止补仓"
           }
@@ -290,7 +301,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-10-16T08:20:40+08:00"
+        "updated_at": "2026-10-16T09:20:15+08:00"
       },
       "profile": {
         "fund_type": "QDII-普通股票",
@@ -463,13 +474,8 @@
       "tracking": {
         "first_seen": "2026-09-28T21:58:24+08:00",
         "days_tracked": 19,
-        "refresh_count": 16,
+        "refresh_count": 17,
         "score_history": [
-          {
-            "at": "2026-09-30T10:03:34+08:00",
-            "score": 91.1,
-            "action": "等待回调"
-          },
           {
             "at": "2026-09-30T20:38:05+08:00",
             "score": 89.0,
@@ -522,6 +528,11 @@
           },
           {
             "at": "2026-10-16T08:19:53+08:00",
+            "score": 84.1,
+            "action": "继续等买点"
+          },
+          {
+            "at": "2026-10-16T09:19:32+08:00",
             "score": 84.1,
             "action": "继续等买点"
           }
@@ -677,7 +688,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-10-16T08:20:46+08:00"
+        "updated_at": "2026-10-16T09:20:21+08:00"
       },
       "profile": {
         "fund_type": "股票型",
@@ -850,13 +861,8 @@
       "tracking": {
         "first_seen": "2026-09-29T20:56:44+08:00",
         "days_tracked": 18,
-        "refresh_count": 14,
+        "refresh_count": 15,
         "score_history": [
-          {
-            "at": "2026-09-30T10:03:34+08:00",
-            "score": 88.8,
-            "action": "等待回调"
-          },
           {
             "at": "2026-09-30T20:38:05+08:00",
             "score": 86.3,
@@ -909,6 +915,11 @@
           },
           {
             "at": "2026-10-16T08:19:53+08:00",
+            "score": 80.4,
+            "action": "继续等买点"
+          },
+          {
+            "at": "2026-10-16T09:19:32+08:00",
             "score": 80.4,
             "action": "继续等买点"
           }
@@ -1064,7 +1075,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-10-16T08:20:52+08:00"
+        "updated_at": "2026-10-16T09:20:28+08:00"
       },
       "profile": {
         "fund_type": "股票型",
@@ -1241,7 +1252,7 @@
       "tracking": {
         "first_seen": "2026-09-30T20:38:05+08:00",
         "days_tracked": 17,
-        "refresh_count": 11,
+        "refresh_count": 12,
         "score_history": [
           {
             "at": "2026-09-30T20:38:05+08:00",
@@ -1295,6 +1306,11 @@
           },
           {
             "at": "2026-10-16T08:19:53+08:00",
+            "score": 74.7,
+            "action": "不买/停止补仓"
+          },
+          {
+            "at": "2026-10-16T09:19:32+08:00",
             "score": 74.7,
             "action": "不买/停止补仓"
           }
@@ -1446,7 +1462,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-10-16T08:20:58+08:00"
+        "updated_at": "2026-10-16T09:20:34+08:00"
       },
       "profile": {
         "fund_type": "混合型-偏股",
@@ -1619,10 +1635,15 @@
       "tracking": {
         "first_seen": "2026-10-16T08:19:53+08:00",
         "days_tracked": 1,
-        "refresh_count": 1,
+        "refresh_count": 2,
         "score_history": [
           {
             "at": "2026-10-16T08:19:53+08:00",
+            "score": 90.1,
+            "action": "第二买入区"
+          },
+          {
+            "at": "2026-10-16T09:19:32+08:00",
             "score": 90.1,
             "action": "第二买入区"
           }
@@ -1774,7 +1795,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-10-16T08:21:04+08:00"
+        "updated_at": "2026-10-16T09:20:40+08:00"
       },
       "profile": {
         "fund_type": "混合型-灵活",
@@ -1950,10 +1971,15 @@
       "tracking": {
         "first_seen": "2026-10-16T08:19:53+08:00",
         "days_tracked": 1,
-        "refresh_count": 1,
+        "refresh_count": 2,
         "score_history": [
           {
             "at": "2026-10-16T08:19:53+08:00",
+            "score": 89.7,
+            "action": "等待回调"
+          },
+          {
+            "at": "2026-10-16T09:19:32+08:00",
             "score": 89.7,
             "action": "等待回调"
           }
@@ -2085,7 +2111,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-10-16T08:21:10+08:00"
+        "updated_at": "2026-10-16T09:20:47+08:00"
       },
       "profile": {
         "fund_type": "指数型-海外股票",
@@ -2176,7 +2202,7 @@
       ]
     }
   ],
-  "deep_enriched_at": "2026-10-16T08:21:10+08:00",
+  "deep_enriched_at": "2026-10-16T09:20:47+08:00",
   "deep_method": "overview+risk_drawdown+historical_profit_probability+latest_disclosed_holdings+industry+fees+manager",
   "profile_note": "基金持仓和行业配置来自最新可获得的定期报告披露，不是实时持仓。"
 }

@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f5f6f2">
+<title>基金决策助手</title>
+<style>
+:root{--bg:#f4f5f1;--card:#fff;--text:#1f2420;--muted:#737b75;--line:#e4e8e2;--green:#245d47;--green2:#e8f3ed;--amber:#8c6018;--amber2:#fff4df;--red:#9f433b;--red2:#fceceb;--blue:#385f8c;--blue2:#edf4fb;--shadow:0 12px 32px rgba(25,36,29,.07)}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",Arial,sans-serif;-webkit-font-smoothing:antialiased}.wrap{max-width:760px;margin:auto;padding:16px 14px 82px}.hero{padding:12px 3px 7px}.brand{display:flex;align-items:center;gap:11px}.logo{width:45px;height:45px;border-radius:15px;background:var(--green);color:white;display:grid;place-items:center;font-weight:900;font-size:21px;box-shadow:var(--shadow)}h1{font-size:26px;margin:0}.sub{font-size:14px;color:var(--muted);line-height:1.6;margin-top:6px}.data-state{display:flex;align-items:center;gap:7px;margin-top:10px;font-size:12px;color:var(--muted)}.dot{width:8px;height:8px;border-radius:50%;background:#adb3ae}.dot.ok{background:#2a8b61}.dot.warn{background:#d39a35}.tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:13px}.tab{border:1px solid var(--line);background:#fff;border-radius:14px;padding:12px 7px;font-size:14px;font-weight:800;color:#4b554e}.tab.active{background:var(--green);color:#fff;border-color:var(--green)}.card{background:var(--card);border:1px solid var(--line);border-radius:21px;padding:17px;margin-top:13px;box-shadow:var(--shadow)}.title{font-size:19px;font-weight:900}.desc{font-size:13px;color:var(--muted);line-height:1.65;margin-top:5px}.notice{font-size:12px;color:#5f6761;line-height:1.65;background:#f0f3f0;border-radius:13px;padding:10px 11px;margin-top:11px}.section{display:none}.section.active{display:block}.pool{display:grid;gap:10px;margin-top:12px}.fund{border:1px solid var(--line);border-radius:17px;padding:14px;background:#fff}.fund-top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.fname{font-size:17px;font-weight:900;line-height:1.35}.fcode{font-size:12px;color:var(--muted);margin-top:3px}.badge{font-size:11px;font-weight:800;padding:6px 8px;border-radius:9px;background:var(--green2);color:var(--green);white-space:nowrap}.badge.wait{background:var(--amber2);color:var(--amber)}.badge.avoid{background:var(--red2);color:var(--red)}.badge.watch{background:var(--blue2);color:var(--blue)}.score{display:flex;gap:7px;flex-wrap:wrap;margin-top:10px}.metric{background:#f7f8f6;border-radius:10px;padding:7px 9px;min-width:68px}.metric .k{font-size:10px;color:var(--muted)}.metric .v{font-size:14px;font-weight:850;margin-top:2px}.why{font-size:12px;color:#58615b;line-height:1.65;margin-top:9px}.actions{display:flex;gap:8px;margin-top:11px}.btn{border:0;border-radius:13px;padding:12px 13px;font-size:14px;font-weight:850;background:var(--green);color:#fff}.btn.secondary{background:#f1f3f0;color:#485149}.btn.full{width:100%;font-size:16px;padding:14px}.input{width:100%;border:1px solid #d7ddd7;border-radius:14px;padding:13px 14px;background:#fff;font-size:16px;outline:none}.input:focus{border-color:#96ae9e;box-shadow:0 0 0 3px rgba(36,93,71,.08)}.field{margin-top:12px}.label{font-size:13px;font-weight:800;margin-bottom:7px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:9px}.form-note{font-size:11px;color:var(--muted);line-height:1.55;margin-top:7px}.holdings{display:grid;gap:10px;margin-top:12px}.holding{border:1px solid var(--line);border-radius:17px;padding:14px}.hrow{display:flex;justify-content:space-between;gap:10px}.amount{font-size:14px;font-weight:800}.pnl.pos{color:#a13c34}.pnl.neg{color:#24704f}.decision{border-radius:16px;padding:13px 14px;margin-top:10px;background:var(--green2)}.decision.warn{background:var(--amber2)}.decision.bad{background:var(--red2)}.decision .main{font-size:18px;font-weight:900}.decision .detail{font-size:12px;color:#515a54;line-height:1.65;margin-top:5px}.searchrow{display:grid;grid-template-columns:1fr auto;gap:8px}.voice{width:52px;border:1px solid #d7ddd7;border-radius:14px;background:#fff;font-size:23px}.voice.on{background:var(--green);color:#fff}.quick{display:flex;gap:7px;overflow:auto;margin-top:8px;scrollbar-width:none}.quick::-webkit-scrollbar{display:none}.chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 10px;font-size:12px;white-space:nowrap}.analysis{margin-top:12px}.analysis-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:11px}.fact{border:1px solid var(--line);border-radius:13px;padding:10px}.fact .k{font-size:10px;color:var(--muted)}.fact .v{font-size:16px;font-weight:900;margin-top:3px}.chart{border:1px solid var(--line);border-radius:14px;padding:8px;margin-top:11px}.charthead{display:flex;justify-content:space-between;font-size:10px;color:var(--muted);padding:2px 3px 5px}svg{width:100%;height:120px;display:block}.loader{display:flex;align-items:center;gap:9px;color:var(--muted);font-size:13px}.spin{width:17px;height:17px;border:2px solid #d9ded9;border-top-color:var(--green);border-radius:50%;animation:spin .8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}.empty{text-align:center;color:var(--muted);font-size:13px;line-height:1.7;padding:18px 4px}.small{font-size:11px;color:var(--muted);line-height:1.65}.source{margin-top:12px;padding-top:10px;border-top:1px solid #eee;font-size:10px;color:#929893;line-height:1.6}.danger{color:var(--red)}.footer{text-align:center;color:#9aa09b;font-size:10px;line-height:1.6;margin-top:18px}.hidden{display:none!important}@media(min-width:640px){.analysis-grid{grid-template-columns:repeat(4,1fr)}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hero">
+    <div class="brand"><div class="logo">基</div><div><h1>基金决策助手</h1><div class="sub">帮你选基金、看买卖位置、管理自己的持仓。</div></div></div>
+    <div class="data-state"><span id="stateDot" class="dot"></span><span id="stateText">正在检查数据更新时间…</span></div>
+  </div>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="pick">🔍 帮我选基金</button>
+    <button class="tab" data-tab="holding">📊 我的基金</button>
+    <button class="tab" data-tab="decision">🎯 买卖判断</button>
+  </div>
+
+  <section id="pick" class="section active">
+    <div class="card">
+      <div class="title">6–12个月高弹性机会池</div>
+      <div class="desc">目标是寻找有较强上涨弹性的候选，不承诺半年涨50%或一年翻倍。系统会对短期暴涨进行扣分，避免只看涨幅追热门。</div>
+      <div class="notice">筛选逻辑：同类中期表现 + 趋势持续性 + 近期是否过热 + 申购状态 + 类别分散。一次只保留少量候选，供进一步研究。</div>
+      <div id="pool" class="pool"><div class="loader"><span class="spin"></span>正在读取今日机会池…</div></div>
+    </div>
+  </section>
+
+  <section id="holding" class="section">
+    <div class="card">
+      <div class="title">我的基金</div>
+      <div class="desc">持仓只保存在这台手机的浏览器里。你可以告诉系统基金代码和买了多少，不需要填写家庭总资产。</div>
+      <div class="field"><div class="label">基金代码</div><input id="hCode" class="input" inputmode="numeric" maxlength="6" placeholder="例如 161725"></div>
+      <div class="grid2">
+        <div class="field"><div class="label">大约投入金额</div><input id="hAmount" class="input" inputmode="decimal" placeholder="例如 20000"></div>
+        <div class="field"><div class="label">成本净值（可选）</div><input id="hCost" class="input" inputmode="decimal" placeholder="例如 0.8560"></div>
+      </div>
+      <div class="field"><div class="label">当前大约盈亏%（可选）</div><input id="hPnl" class="input" inputmode="decimal" placeholder="例如 -8"></div>
+      <div class="form-note">不知道成本净值也没关系，填基金代码和投入金额就能保存；如果填了成本或盈亏，买卖判断会更贴近你的实际情况。</div>
+      <button id="addHolding" class="btn full" style="margin-top:12px">保存到我的基金</button>
+      <div id="holdings" class="holdings"></div>
+    </div>
+  </section>
+
+  <section id="decision" class="section">
+    <div class="card">
+      <div class="title">现在该买、拿、补还是卖？</div>
+      <div class="desc">输入基金代码，或者直接用语音说你的情况。系统先核对净值和趋势，再给克制的操作参考。</div>
+      <div class="field"><div class="label">基金代码</div><input id="dCode" class="input" inputmode="numeric" maxlength="6" placeholder="例如 110022"></div>
+      <div class="field"><div class="label">你想问什么？</div><div class="searchrow"><textarea id="question" class="input" style="min-height:76px;resize:vertical" placeholder="例如：我已经亏了15%，现在要不要补？"></textarea><button id="voice" class="voice" aria-label="语音输入">🎙️</button></div></div>
+      <div class="quick"><button class="chip">现在能买吗？</button><button class="chip">亏了要不要补？</button><button class="chip">要不要继续拿？</button><button class="chip">什么时候卖？</button></div>
+      <button id="analyze" class="btn full" style="margin-top:12px">帮我分析</button>
+      <div id="analysis" class="analysis"></div>
+    </div>
+  </section>
+
+  <div class="footer">研究参考，不构成收益承诺或自动交易指令。高弹性基金通常也意味着较高波动与回撤。</div>
+</div>
+<script>
+const $=s=>document.querySelector(s); const $$=s=>[...document.querySelectorAll(s)];
+const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+const n=v=>{const x=Number(v);return Number.isFinite(x)?x:null};
+const pct=v=>v===null||!Number.isFinite(v)?'—':`${v>0?'+':''}${v.toFixed(1)}%`;
+const money=v=>v?Number(v).toLocaleString('zh-CN',{maximumFractionDigits:0}):'—';
+const holdingsKey='mom_fund_holdings_v1';
+function getHoldings(){try{return JSON.parse(localStorage.getItem(holdingsKey)||'[]')}catch{return[]}}
+function setHoldings(x){localStorage.setItem(holdingsKey,JSON.stringify(x));renderHoldings()}
+function loadScript(src,timeout=9000){return new Promise((resolve,reject)=>{const s=document.createElement('script');let done=false;const t=setTimeout(()=>{if(!done){done=true;s.remove();reject(new Error('数据请求超时'))}},timeout);s.src=src;s.onload=()=>{if(!done){done=true;clearTimeout(t);s.remove();resolve()}};s.onerror=()=>{if(!done){done=true;clearTimeout(t);s.remove();reject(new Error('公开数据源暂不可用'))}};document.head.appendChild(s)})}
+async function fetchFund(code){
+  ['fS_name','fS_code','fundName','fundcode','Data_netWorthTrend','Data_currentFundManager','syl_1n','syl_3y','syl_6y','syl_1y'].forEach(k=>{try{window[k]=undefined}catch{}});
+  await loadScript(`https://fund.eastmoney.com/pingzhongdata/${code}.js?v=${Date.now()}`);
+  const name=window.fS_name||window.fundName; const tr=window.Data_netWorthTrend;
+  if(!name||!Array.isArray(tr)||tr.length<20) throw new Error('没有查到该基金，请检查6位代码');
+  const trend=tr.map(x=>({t:x.x,v:Number(x.y)})).filter(x=>Number.isFinite(x.v));
+  const managers=Array.isArray(window.Data_currentFundManager)?window.Data_currentFundManager.map(x=>x.name).filter(Boolean).join('、'):'';
+  let estimate=null; try{await new Promise(async resolve=>{window.jsonpgz=o=>{estimate=o;resolve()};try{await loadScript(`https://fundgz.1234567.com.cn/js/${code}.js?rt=${Date.now()}`,4500)}catch{}setTimeout(resolve,120)})}catch{}
+  return {code,name,trend,managers,estimate};
+}
+function stats(f){const a=f.trend,N=a.length,last=a[N-1],val=last.v;const at=d=>a[Math.max(0,N-1-d)].v;const r20=(val/at(20)-1)*100,r60=(val/at(60)-1)*100,r120=(val/at(120)-1)*100;const s120=a.slice(Math.max(0,N-121));const high=Math.max(...s120.map(x=>x.v)),low=Math.min(...s120.map(x=>x.v));const dd=(val/high-1)*100;const sma=d=>a.slice(Math.max(0,N-d)).reduce((s,x)=>s+x.v,0)/Math.min(d,N);return {last,val,date:new Date(last.t).toLocaleDateString('zh-CN'),r20,r60,r120,high,low,dd,ma20:sma(20),ma60:sma(60)} }
+function inferUser(q,h){let pnl=h?.pnl??null;const m=String(q||'').match(/(?:亏|跌)(?:了)?\s*(\d+(?:\.\d+)?)\s*%?/);if(m)pnl=-Number(m[1]);const g=String(q||'').match(/(?:赚|盈利)(?:了)?\s*(\d+(?:\.\d+)?)\s*%?/);if(g)pnl=Number(g[1]);return {pnl}}
+function decide(s,user,q){
+  let main='继续观察，不急着操作',cls='',detail='当前没有足够强的信号支持频繁交易。基金更适合按趋势和位置分批处理。';
+  if(s.r60>12&&s.dd>-4){main='偏高位置：不建议追买';cls='warn';detail='近60个交易日上涨较快，而且离阶段高点很近。新资金先等回调，已有持仓以持有和保护利润为主。'}
+  else if(s.r60>3&&s.dd<=-5&&s.dd>=-12&&s.val>s.ma60){main='可进入第一观察买点';detail='中期趋势仍向上，但已从阶段高位回落。适合小额分批，不建议一次买满。'}
+  else if(s.r60<0&&s.val<s.ma60){main='趋势偏弱：先别补仓';cls='warn';detail='净值处于60日均线下方且中期收益偏弱。跌得多本身不是补仓理由，先等趋势企稳。'}
+  else if(s.r20>0&&s.r60>0){main='趋势尚可：持有优先';detail='20日和60日方向仍偏正。已有持仓不必因为短期波动频繁进出，新买则控制节奏。'}
+  if(user.pnl!==null){
+    if(user.pnl>25&&s.dd>-5&&s.r20>5){main='进入利润保护区：考虑分批止盈';cls='warn';detail=`你目前大约盈利${user.pnl.toFixed(1)}%，同时基金处在较强位置。可以考虑先锁定一部分利润，而不是等到全部涨幅回吐。`;}
+    if(user.pnl<-15&&s.r60<0){main='不要机械补仓：先做去留判断';cls='bad';detail=`你目前大约亏损${Math.abs(user.pnl).toFixed(1)}%，且中期趋势偏弱。重点应是判断基金质量和投资逻辑是否仍成立，而不是因为亏损就继续摊低成本。`;}
+  }
+  const text=String(q||'');if(/卖|止盈/.test(text)&&user.pnl===null&&s.dd>-4&&s.r20>8){main='接近高位：可以制定分批卖出计划';cls='warn';detail='近期涨速较快且接近阶段高点。不是一定要全部卖，但可以提前设置分批止盈点。'}
+  return {main,cls,detail};
+}
+function chart(tr){const a=tr.slice(-120),vals=a.map(x=>x.v),min=Math.min(...vals),max=Math.max(...vals),W=600,H=120,pad=8;const pts=a.map((x,i)=>{const X=pad+i*(W-pad*2)/Math.max(1,a.length-1),Y=H-pad-(x.v-min)/(max-min||1)*(H-pad*2);return `${X.toFixed(1)},${Y.toFixed(1)}`}).join(' ');return `<div class="chart"><div class="charthead"><span>近120个交易日</span><span>${min.toFixed(3)} — ${max.toFixed(3)}</span></div><svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none"><polyline points="${pts}" fill="none" stroke="#2d6b51" stroke-width="3" vector-effect="non-scaling-stroke"/></svg></div>`}
+async function runAnalysis(code,q,target=$('#analysis')){target.innerHTML='<div class="loader"><span class="spin"></span>正在核对净值与历史走势…</div>';try{const f=await fetchFund(code),s=stats(f),h=getHoldings().find(x=>x.code===code),u=inferUser(q,h),d=decide(s,u,q);target.innerHTML=`<div class="fund"><div class="fund-top"><div><div class="fname">${esc(f.name)}</div><div class="fcode">${code} · 数据至 ${esc(s.date)}</div></div><span class="badge ${d.cls==='warn'?'wait':d.cls==='bad'?'avoid':''}">${esc(d.main)}</span></div><div class="decision ${d.cls}"><div class="main">${esc(d.main)}</div><div class="detail">${esc(d.detail)}</div></div><div class="analysis-grid"><div class="fact"><div class="k">最新净值</div><div class="v">${s.val.toFixed(4)}</div></div><div class="fact"><div class="k">近20日</div><div class="v">${pct(s.r20)}</div></div><div class="fact"><div class="k">近60日</div><div class="v">${pct(s.r60)}</div></div><div class="fact"><div class="k">距120日高点</div><div class="v">${pct(s.dd)}</div></div></div>${chart(f.trend)}<div class="why">买点参考：中期趋势仍向上时，优先等待从高点回撤约5%–12%的区域分批观察；若跌破中期趋势且持续走弱，不因为亏损而机械补仓。<br>卖点参考：盈利明显、短期加速且接近阶段高位时开始分批保护利润；若基金质量或中期趋势明显恶化，则重新判断是否继续占用资金。</div><div class="source">单只基金公开走势来源：东方财富/天天基金公开页面。盘中估值仅作参考，不等同于最终基金净值。</div></div>`;return {f,s,d};}catch(e){target.innerHTML=`<div class="empty danger">${esc(e.message||e)}</div>`}}
+
+$$('.tab').forEach(b=>b.onclick=()=>{$$('.tab').forEach(x=>x.classList.toggle('active',x===b));$$('.section').forEach(s=>s.classList.toggle('active',s.id===b.dataset.tab))});
+$$('.chip').forEach(b=>b.onclick=()=>$('#question').value=b.textContent);
+$('#analyze').onclick=()=>{const c=$('#dCode').value.trim();if(!/^\d{6}$/.test(c)){alert('请输入6位基金代码');return}runAnalysis(c,$('#question').value)};
+
+async function loadManifest(){try{const r=await fetch(`data/manifest.json?x=${Date.now()}`);if(!r.ok)throw 0;const m=await r.json();$('#stateDot').classList.add('ok');$('#stateText').textContent=`基础数据已更新：${new Date(m.generated_at).toLocaleString('zh-CN',{hour12:false})} · ${m.daily_count||0}只基金`;}catch{$('#stateDot').classList.add('warn');$('#stateText').textContent='自动数据首次生成中；单只基金查询仍可使用最新公开数据';}}
+async function loadPool(){const box=$('#pool');try{const r=await fetch(`data/opportunity.json?x=${Date.now()}`);if(!r.ok)throw 0;const d=await r.json();if(!Array.isArray(d.funds)||!d.funds.length)throw 0;box.innerHTML=d.funds.map(x=>`<div class="fund"><div class="fund-top"><div><div class="fname">${esc(x.name)}</div><div class="fcode">${esc(x.code)} · ${esc(x.category||'')}</div></div><span class="badge ${x.action==='wait'?'wait':x.action==='avoid'?'avoid':x.action==='watch'?'watch':''}">${esc(x.position||'观察')}</span></div><div class="score"><div class="metric"><div class="k">机会分</div><div class="v">${x.score??'—'}</div></div><div class="metric"><div class="k">近3月</div><div class="v">${pct(n(x.returns?.['3m']))}</div></div><div class="metric"><div class="k">近6月</div><div class="v">${pct(n(x.returns?.['6m']))}</div></div><div class="metric"><div class="k">近1年</div><div class="v">${pct(n(x.returns?.['1y']))}</div></div></div><div class="why">${(x.why||[]).map(y=>'• '+esc(y)).join('<br>')}</div><div class="actions"><button class="btn open-analysis" data-code="${x.code}">看看现在能不能买</button><button class="btn secondary add-from-pool" data-code="${x.code}">加入我的基金</button></div></div>`).join('');$$('.open-analysis').forEach(b=>b.onclick=()=>{$('[data-tab="decision"]').click();$('#dCode').value=b.dataset.code;$('#question').value='这只现在能买吗？';runAnalysis(b.dataset.code,$('#question').value)});$$('.add-from-pool').forEach(b=>b.onclick=()=>{$('[data-tab="holding"]').click();$('#hCode').value=b.dataset.code;$('#hAmount').focus()});}catch{box.innerHTML='<div class="empty">第一份自动机会池正在生成。你现在仍可以到买卖判断里直接输入任意基金代码分析。</div>'}}
+
+function renderHoldings(){const box=$('#holdings'),a=getHoldings();if(!a.length){box.innerHTML='<div class="empty">还没有保存基金。上面输入代码和买入金额就可以建立自己的基金清单。</div>';return}box.innerHTML=a.map(x=>`<div class="holding" data-code="${x.code}"><div class="hrow"><div><div class="fname">${esc(x.name||x.code)}</div><div class="fcode">${x.code}</div></div><div style="text-align:right"><div class="amount">投入约 ¥${money(x.amount)}</div>${x.pnl!==null?`<div class="pnl ${x.pnl>=0?'pos':'neg'}">${pct(x.pnl)}</div>`:''}</div></div><div class="actions"><button class="btn analyze-h" data-code="${x.code}">分析这只</button><button class="btn secondary delete-h" data-code="${x.code}">删除</button></div><div class="h-result"></div></div>`).join('');$$('.delete-h').forEach(b=>b.onclick=()=>setHoldings(getHoldings().filter(x=>x.code!==b.dataset.code)));$$('.analyze-h').forEach(b=>b.onclick=()=>{const card=b.closest('.holding');runAnalysis(b.dataset.code,'我已经持有这只基金',card.querySelector('.h-result'))})}
+$('#addHolding').onclick=async()=>{const code=$('#hCode').value.trim();if(!/^\d{6}$/.test(code)){alert('请输入6位基金代码');return}const amount=n($('#hAmount').value),cost=n($('#hCost').value),pnl=n($('#hPnl').value);let name=code;try{name=(await fetchFund(code)).name}catch{}let a=getHoldings().filter(x=>x.code!==code);a.unshift({code,name,amount,cost,pnl});setHoldings(a);$('#hCode').value='';$('#hAmount').value='';$('#hCost').value='';$('#hPnl').value=''};
+
+(function voice(){const SR=window.SpeechRecognition||window.webkitSpeechRecognition;if(!SR){$('#voice').onclick=()=>alert('当前浏览器不支持网页直接语音识别，可以使用手机输入法键盘上的麦克风。');return}const r=new SR();r.lang='zh-CN';r.interimResults=false;r.continuous=false;r.onstart=()=>$('#voice').classList.add('on');r.onend=()=>$('#voice').classList.remove('on');r.onresult=e=>{$('#question').value=(e.results[0][0].transcript||'').trim()};r.onerror=()=>$('#voice').classList.remove('on');$('#voice').onclick=()=>{try{r.start()}catch{}}})();
+
+loadManifest();loadPool();renderHoldings();
+</script>
+</body>
+</html>

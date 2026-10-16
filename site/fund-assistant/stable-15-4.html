@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f5f5f3">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta name="fund-assistant-release" content="FUND_ASSISTANT_UI_20260827_2104">
+<title>基金小帮手</title>
+<link rel="stylesheet" href="v14.css?build=20260827-2104">
+<link rel="stylesheet" href="v15.css?build=20260827-2104">
+<link rel="stylesheet" href="v152.css?build=20260827-2104">
+<link rel="stylesheet" href="v154.css?build=20260827-2104">
+</head>
+<body data-release="FUND_ASSISTANT_UI_20260827_2104">
+<div class="shell">
+  <header class="app-head">
+    <div><div class="wordmark">基金小帮手</div><div class="submark">先看今天，再决定要不要动</div></div>
+    <button id="helpBtn" class="ghost-icon" aria-label="帮助">?</button>
+  </header>
+
+  <main>
+    <section id="page-today" class="page active">
+      <div class="hero-card">
+        <div class="hero-topline"><span id="dateLabel">今天</span><span id="marketBadge" class="badge neutral">正在判断市场状态</span></div>
+        <h1 id="todayHeadline">正在读取今天的信息…</h1>
+        <p id="todaySummary">正式净值、盘中估算和下一次更新时间会分开显示。</p>
+        <div class="data-strip">
+          <div><span>正式数据</span><b id="formalFreshness">检查中</b></div>
+          <div><span>盘中估算</span><b id="liveFreshness">检查中</b></div>
+          <div><span>下次自动检查</span><b id="nextRefresh">—</b></div>
+        </div>
+        <button id="refreshToday" class="btn primary">更新现在的情况</button>
+        <div id="scheduleHint" class="tiny-note"></div>
+      </div>
+
+      <section class="section-block">
+        <div class="section-title-row"><div><span class="eyebrow">今日持仓</span><h2>我已经买的基金</h2></div><button class="link-btn" data-go="holdings">管理持仓</button></div>
+        <div id="todayHoldings"></div>
+      </section>
+
+      <section class="section-block">
+        <div class="section-title-row"><div><span class="eyebrow">机会池</span><h2>今天有没有需要留意的机会？</h2></div><button class="link-btn opportunity-link" data-go="discover"><span>进入</span><span>机会池</span></button></div>
+        <div id="opportunitySummary" class="overview-card"></div>
+      </section>
+
+      <section class="section-block learning-wrap">
+        <div class="section-title-row"><div><span class="eyebrow">每天学一点</span><h2 id="lessonTitle">今日基金小知识</h2></div><span id="lessonNo" class="mini-badge">1/7</span></div>
+        <div id="dailyLesson" class="lesson-card"></div>
+        <div id="lessonArchive" class="lesson-archive" aria-label="基金知识历史"></div>
+      </section>
+
+      <section class="principles-card">
+        <div class="section-title-row compact"><div><span class="eyebrow">一直记住</span><h2>买基金的4条基础原则</h2></div></div>
+        <div class="principles-grid">
+          <div><b>不追刚大涨</b><span>宁可少赚一点，也不要因为怕错过一次买满。</span></div>
+          <div><b>分批，不梭哈</b><span>第一笔只用计划资金的一部分，留钱给后面的机会。</span></div>
+          <div><b>亏了不等于该补</b><span>先看趋势和位置，趋势坏了就先停手。</span></div>
+          <div><b>赚了开始护利润</b><span>盈利越多，越要提前想清楚什么情况卖一点。</span></div>
+        </div>
+      </section>
+    </section>
+
+    <section id="page-holdings" class="page">
+      <div class="page-intro"><span class="eyebrow">持仓</span><h1>我已经买的基金</h1><p>每天先看组合日报，再看需要重点处理的单只基金。</p></div>
+      <div class="privacy-card"><div class="privacy-lock">⌁</div><div><b>持仓只保存在当前设备的浏览器里</b><p>不会上传到本站服务器。不要填写身份证、银行卡、密码等信息。清理浏览器数据或换设备后，记录可能不会保留。</p></div></div>
+      <div id="dailyReportSchedule" class="report-schedule"></div>
+      <div class="action-stack">
+        <button id="refreshHoldings" class="btn primary">手动更新持仓日报</button>
+        <button id="openAddHolding" class="btn secondary">＋ 录入 / 修改持仓</button>
+      </div>
+      <div id="portfolioReportCard"></div>
+      <div id="portfolioSummary" class="portfolio-summary hidden"></div>
+      <div id="holdingList" class="card-list"></div>
+
+      <div id="addHoldingPanel" class="editor-card hidden">
+        <div class="editor-head"><div><span class="eyebrow">录入持仓</span><h2>最少只填基金代码</h2></div><button id="closeAddHolding" class="ghost-icon">×</button></div>
+        <div class="field"><label>基金代码</label><div class="field-row"><input id="hCode" inputmode="numeric" maxlength="6" placeholder="例如 002910"><button id="identifyHolding" class="mini-btn">识别</button></div><div id="identifiedFund" class="field-help"></div></div>
+        <div class="field"><label>大概投入多少钱 <small>可不填</small></label><input id="hAmount" inputmode="decimal" placeholder="例如 20000"></div>
+        <div class="field"><label>买入成本净值 <small>最好填；不知道可以跳过</small></label><input id="hCost" inputmode="decimal" placeholder="例如 1.2560"></div>
+        <div class="field"><label>买入日期 <small>可不填</small></label><input id="hDate" type="date"></div>
+        <div class="field"><label>如果不知道成本，只知道现在赚还是亏</label><div id="pnlSeg" class="seg"><button data-pnl="gain">赚钱</button><button data-pnl="loss">亏钱</button><button data-pnl="unknown" class="active">不知道</button></div><input id="hPnl" class="hidden" inputmode="decimal" placeholder="例如亏15%，这里只填15"></div>
+        <button id="saveHolding" class="btn primary">保存持仓</button>
+      </div>
+    </section>
+
+    <section id="page-discover" class="page">
+      <div class="page-intro"><span class="eyebrow">机会池</span><h1>系统持续跟踪的6只基金</h1><p>这里回答“哪些基金值得继续研究”。今天买不买，还要再看当天位置。</p></div>
+      <div class="method-card"><div><b>筛选</b><span>全市场比较</span></div><div><b>跟踪</b><span>不因一天涨跌乱换</span></div><div><b>替换</b><span>明显变差或更优候选持续胜出</span></div></div>
+      <details class="logic-card"><summary>评分和替换规则</summary><div class="logic-grid"><div><b>近6月 30%</b><span>中期持续性</span></div><div><b>近3月 26%</b><span>近期趋势</span></div><div><b>近1年 24%</b><span>长期验证</span></div><div><b>近1月 12%</b><span>当前位置</span></div><div><b>近3年 8%</b><span>更长期记录</span></div><div><b>额外扣分</b><span>短期过热、大跌、6月转弱</span></div></div></details>
+      <div id="candidateList" class="card-list"></div>
+      <div class="history-panel">
+        <div class="section-title-row compact"><div><span class="eyebrow">评分跟踪</span><h2>当前6只的评分变化</h2></div></div>
+        <div id="trackingStats"></div>
+        <div class="section-title-row compact history-title"><div><span class="eyebrow">可追溯</span><h2>推荐历史</h2></div></div>
+        <p>换进、换出都会留下记录，不会悄悄替换。</p>
+        <div id="recommendHistory"></div>
+      </div>
+    </section>
+
+    <section id="page-search" class="page">
+      <div class="page-intro"><span class="eyebrow">查基金</span><h1>临时查一只基金</h1><p>输入基金代码或基金名称都可以，不需要先保存。</p></div>
+      <div class="search-panel">
+        <label>基金代码或名称</label><div class="field-row"><input id="searchCode" placeholder="例如 002910 或 易方达供给改革"><button id="voiceSearch" class="voice-btn">语音</button></div>
+        <label>想问什么？</label><textarea id="searchQuestion" placeholder="例如：现在买会不会太高？"></textarea>
+        <div class="quick-grid"><button>现在适合买么？</button><button>等什么位置买？</button><button>亏10%要不要补？</button><button>亏20%怎么办？</button><button>赚20%怎么保护？</button><button>什么时候卖？</button><button>适合拿半年吗？</button><button>风险大不大？</button></div>
+        <button id="searchFundBtn" class="btn primary">查看详细报告</button>
+      </div><div id="searchResult"></div>
+    </section>
+  </main>
+
+  <nav class="bottom-nav" aria-label="主导航">
+    <button class="nav-item active" data-page="today"><svg viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5v9a1.5 1.5 0 0 1-1.5 1.5h-5v-6h-5v6h-5A1.5 1.5 0 0 1 3 19.5z"/></svg><span>今日</span></button>
+    <button class="nav-item" data-page="holdings"><svg viewBox="0 0 24 24"><path d="M5 4h14v16H5zM8 8h8M8 12h8M8 16h5"/></svg><span>持仓</span></button>
+    <button class="nav-item" data-page="discover"><svg viewBox="0 0 24 24"><path d="m12 3 2.7 5.5 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg><span>机会</span></button>
+    <button class="nav-item" data-page="search"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><span>查基金</span></button>
+  </nav>
+</div>
+
+<div id="detailSheet" class="sheet hidden" role="dialog" aria-modal="true">
+  <div class="sheet-mask" data-close-sheet></div>
+  <div class="sheet-panel">
+    <div class="sheet-handle"></div>
+    <div class="sheet-head detail-head-v15">
+      <div class="detail-title-wrap"><b id="detailTitle">详细报告</b><span id="detailSubtitle"></span></div>
+      <button id="detailRefresh" class="v154-icon-btn refresh" aria-label="更新当前基金数据" title="更新数据"><span aria-hidden="true">↻</span></button>
+      <button id="detailClose" class="v154-icon-btn close" data-close-sheet aria-label="关闭详细报告" title="关闭"><span aria-hidden="true">×</span></button>
+    </div>
+    <div id="detailBody" class="sheet-body"></div>
+    <div class="detail-footer"><button id="detailCloseBottom" class="btn secondary" data-close-sheet>关闭详细报告，返回原页面</button></div>
+  </div>
+</div>
+
+<div id="helpSheet" class="sheet hidden" role="dialog" aria-modal="true">
+  <div class="sheet-mask" data-close-help></div><div class="sheet-panel short"><div class="sheet-handle"></div><div class="sheet-head"><button class="back-btn" data-close-help>返回</button><div><b>怎么用</b></div><span></span></div><div class="sheet-body help-list"><div><b>先看“今日”</b><span>只看今天有没有需要处理的事。</span></div><div><b>已经买的放进“持仓”</b><span>先看整个组合日报，再看单只基金。</span></div><div><b>想找新机会去“机会”</b><span>这里是研究池，不等于马上买。</span></div><div><b>临时想查一只去“查基金”</b><span>代码或名称都可以。</span></div></div></div>
+</div>
+
+<script src="v9-core.js?build=20260827-2104"></script>
+<script src="v14.js?build=20260827-2104"></script>
+<script src="v15.js?build=20260827-2104"></script>
+<script src="v152.js?build=20260827-2104"></script>
+<script src="v154.js?build=20260827-2104"></script>
+</body>
+</html>

@@ -1,48 +1,48 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-16T19:26:21+08:00",
+  "updated_at": "2026-10-19T21:18:36+08:00",
   "policy": "记录核心推荐池每次换入/换出；换出原因由当次可解释规则推断并保留",
   "current": [
     {
-      "code": "457001",
-      "name": "国富亚洲机会股票(QDII)A",
-      "score": 79.1,
-      "first_seen": "2026-09-28T21:58:24+08:00",
-      "days_tracked": 19
-    },
-    {
       "code": "000960",
       "name": "招商医药健康产业股票",
-      "score": 75.9,
+      "score": 76.2,
       "first_seen": "2026-09-28T21:58:24+08:00",
-      "days_tracked": 19
+      "days_tracked": 22
     },
     {
       "code": "011373",
       "name": "招商前沿医疗保健股票A",
-      "score": 74.6,
+      "score": 75.1,
       "first_seen": "2026-09-29T20:56:44+08:00",
-      "days_tracked": 18
+      "days_tracked": 21
     },
     {
       "code": "008602",
       "name": "方正富邦新兴成长混合A",
-      "score": 74.8,
+      "score": 70.6,
       "first_seen": "2026-09-30T20:38:05+08:00",
-      "days_tracked": 17
+      "days_tracked": 20
     },
     {
       "code": "004243",
       "name": "广发道琼斯石油指数人民币C",
-      "score": 89.5,
+      "score": 91.3,
       "first_seen": "2026-10-16T08:19:53+08:00",
-      "days_tracked": 1
+      "days_tracked": 4
     },
     {
       "code": "004726",
       "name": "先锋聚优A",
-      "score": 86.8,
+      "score": 86.7,
       "first_seen": "2026-10-16T19:27:11+08:00",
+      "days_tracked": 4
+    },
+    {
+      "code": "019710",
+      "name": "广发道琼斯石油指数(QDII-LOF)人民币E",
+      "score": 87.5,
+      "first_seen": "2026-10-19T21:26:05+08:00",
       "days_tracked": 1
     }
   ],
@@ -288,6 +288,24 @@
       "code": "004726",
       "name": "先锋聚优A",
       "score": 86.8,
+      "reason": "新进入核心6只候选；后续会持续跟踪，不因单日涨跌随意替换"
+    },
+    {
+      "event_id": "2026-10-19T21:18:36+08:00:removed:457001",
+      "at": "2026-10-19T21:18:36+08:00",
+      "type": "removed",
+      "code": "457001",
+      "name": "国富亚洲机会股票(QDII)A",
+      "score": 79.1,
+      "reason": "中期趋势转弱，退出核心跟踪池"
+    },
+    {
+      "event_id": "2026-10-19T21:18:36+08:00:added:019710",
+      "at": "2026-10-19T21:18:36+08:00",
+      "type": "added",
+      "code": "019710",
+      "name": "广发道琼斯石油指数(QDII-LOF)人民币E",
+      "score": 87.5,
       "reason": "新进入核心6只候选；后续会持续跟踪，不因单日涨跌随意替换"
     }
   ]

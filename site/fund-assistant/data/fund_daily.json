@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-21T02:43:18+08:00",
+  "generated_at": "2026-10-21T09:30:09+08:00",
   "source": "东方财富/天天基金公开数据（AKShare封装）",
-  "count": 24251,
+  "count": 24253,
   "funds": [
     {
       "code": "021491",
@@ -54841,7 +54841,7 @@
       "day_return": 0.2,
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
-      "fee": "0.00%"
+      "fee": ""
     },
     {
       "code": "100053",
@@ -72739,8 +72739,8 @@
       "nav": 1.0447,
       "prev_nav": null,
       "day_return": 0.11,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
       "fee": "0.80%"
     },
     {
@@ -76259,7 +76259,7 @@
       "nav": 1.0565,
       "prev_nav": null,
       "day_return": 0.1,
-      "buy_status": "开放申购",
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.04%"
     },
@@ -94339,7 +94339,7 @@
       "nav": 1.0188,
       "prev_nav": null,
       "day_return": 0.07,
-      "buy_status": "限大额",
+      "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.80%"
     },
@@ -99389,8 +99389,8 @@
       "nav": 1.0399,
       "prev_nav": null,
       "day_return": 0.06,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
       "fee": "0.80%"
     },
     {
@@ -100249,7 +100249,7 @@
       "nav": 1.0195,
       "prev_nav": null,
       "day_return": 0.06,
-      "buy_status": "限大额",
+      "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },
@@ -102529,8 +102529,8 @@
       "nav": 1.1614,
       "prev_nav": null,
       "day_return": 0.05,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
       "fee": "0.05%"
     },
     {
@@ -102739,8 +102739,8 @@
       "nav": 1.1432,
       "prev_nav": null,
       "day_return": 0.05,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
       "fee": "0.00%"
     },
     {
@@ -105369,7 +105369,7 @@
       "nav": 1.0527,
       "prev_nav": null,
       "day_return": 0.05,
-      "buy_status": "开放申购",
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.06%"
     },
@@ -105539,7 +105539,7 @@
       "nav": 1.0487,
       "prev_nav": null,
       "day_return": 0.05,
-      "buy_status": "开放申购",
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },
@@ -127469,7 +127469,7 @@
       "nav": 1.2623,
       "prev_nav": null,
       "day_return": 0.01,
-      "buy_status": "开放申购",
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.03%"
     },
@@ -127479,7 +127479,7 @@
       "nav": 1.2613,
       "prev_nav": null,
       "day_return": 0.01,
-      "buy_status": "开放申购",
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },
@@ -221714,6 +221714,26 @@
       "fee": "0.08%"
     },
     {
+      "code": "028734",
+      "name": "中银中证工业有色金属主题ETF联接发起A",
+      "nav": 1.0,
+      "prev_nav": null,
+      "day_return": null,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.03%"
+    },
+    {
+      "code": "028735",
+      "name": "中银中证工业有色金属主题ETF联接发起C",
+      "nav": 1.0,
+      "prev_nav": null,
+      "day_return": null,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.00%"
+    },
+    {
       "code": "027950",
       "name": "惠升和利双鑫债券A",
       "nav": 0.9992,
@@ -225584,26 +225604,6 @@
       "fee": "0.03%"
     },
     {
-      "code": "019630",
-      "name": "银华美元债精选债券(QDII)D",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "限大额",
-      "sell_status": "开放赎回",
-      "fee": "0.08%"
-    },
-    {
-      "code": "007204",
-      "name": "银华美元债精选债券(QDII)A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "限大额",
-      "sell_status": "开放赎回",
-      "fee": "0.08%"
-    },
-    {
       "code": "011580",
       "name": "民生加银稳健配置6个月混合(FOF)",
       "nav": null,
@@ -225900,16 +225900,6 @@
       "prev_nav": null,
       "day_return": null,
       "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
-    },
-    {
-      "code": "007205",
-      "name": "银华美元债精选债券(QDII)C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },
@@ -229579,8 +229569,8 @@
       "nav": null,
       "prev_nav": null,
       "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
       "fee": "0.00%"
     },
     {
@@ -230722,6 +230712,16 @@
       "buy_status": "暂停申购",
       "sell_status": "暂停赎回",
       "fee": "0.06%"
+    },
+    {
+      "code": "007205",
+      "name": "银华美元债精选债券(QDII)C",
+      "nav": null,
+      "prev_nav": null,
+      "day_return": null,
+      "buy_status": "限大额",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
     },
     {
       "code": "007241",
@@ -232152,6 +232152,16 @@
       "buy_status": "暂停申购",
       "sell_status": "暂停赎回",
       "fee": "0.045%"
+    },
+    {
+      "code": "007204",
+      "name": "银华美元债精选债券(QDII)A",
+      "nav": null,
+      "prev_nav": null,
+      "day_return": null,
+      "buy_status": "限大额",
+      "sell_status": "开放赎回",
+      "fee": "0.08%"
     },
     {
       "code": "008818",
@@ -236912,6 +236922,16 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.10%"
+    },
+    {
+      "code": "019630",
+      "name": "银华美元债精选债券(QDII)D",
+      "nav": null,
+      "prev_nav": null,
+      "day_return": null,
+      "buy_status": "限大额",
+      "sell_status": "开放赎回",
+      "fee": "0.08%"
     },
     {
       "code": "007442",

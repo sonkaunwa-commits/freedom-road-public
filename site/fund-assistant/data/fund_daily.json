@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-23T02:47:15+08:00",
+  "generated_at": "2026-10-23T09:26:32+08:00",
   "source": "东方财富/天天基金公开数据（AKShare封装）",
   "count": 24246,
   "funds": [
@@ -19379,9 +19379,9 @@
       "nav": 1.0555,
       "prev_nav": null,
       "day_return": 0.01,
-      "buy_status": "限大额",
+      "buy_status": "暂停申购",
       "sell_status": "开放赎回",
-      "fee": "0.30%"
+      "fee": "0.03%"
     },
     {
       "code": "012376",
@@ -33939,8 +33939,8 @@
       "nav": 1.0742,
       "prev_nav": null,
       "day_return": 0.0,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
       "fee": "0.50%"
     },
     {
@@ -50809,7 +50809,7 @@
       "nav": 1.072,
       "prev_nav": null,
       "day_return": -0.02,
-      "buy_status": "开放申购",
+      "buy_status": "暂停申购",
       "sell_status": "暂停赎回",
       "fee": "0.80%"
     },
@@ -50829,7 +50829,7 @@
       "nav": 1.0718,
       "prev_nav": null,
       "day_return": -0.02,
-      "buy_status": "开放申购",
+      "buy_status": "暂停申购",
       "sell_status": "暂停赎回",
       "fee": "0.00%"
     },
@@ -75881,7 +75881,7 @@
       "day_return": -0.33,
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
-      "fee": "0.30%"
+      "fee": "0.00%"
     },
     {
       "code": "008176",
@@ -103379,7 +103379,7 @@
       "nav": 0.9941,
       "prev_nav": null,
       "day_return": -1.02,
-      "buy_status": "开放申购",
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.10%"
     },
@@ -103399,7 +103399,7 @@
       "nav": 0.9911,
       "prev_nav": null,
       "day_return": -1.02,
-      "buy_status": "开放申购",
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },
@@ -127349,7 +127349,7 @@
       "nav": 1.0239,
       "prev_nav": null,
       "day_return": -1.77,
-      "buy_status": "开放申购",
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },
@@ -127719,7 +127719,7 @@
       "nav": 1.0286,
       "prev_nav": null,
       "day_return": -1.78,
-      "buy_status": "开放申购",
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.10%"
     },
@@ -198281,7 +198281,7 @@
       "day_return": -4.0,
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
-      "fee": "0.00%"
+      "fee": ""
     },
     {
       "code": "019226",
@@ -209669,7 +209669,7 @@
       "nav": 0.5187,
       "prev_nav": null,
       "day_return": -4.76,
-      "buy_status": "限大额",
+      "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.10%"
     },
@@ -209839,7 +209839,7 @@
       "nav": 0.5113,
       "prev_nav": null,
       "day_return": -4.77,
-      "buy_status": "限大额",
+      "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },
@@ -221999,8 +221999,8 @@
       "nav": 0.8301,
       "prev_nav": null,
       "day_return": null,
-      "buy_status": "封闭期",
-      "sell_status": "封闭期",
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
       "fee": "0.80%"
     },
     {
@@ -222239,7 +222239,7 @@
       "nav": null,
       "prev_nav": null,
       "day_return": null,
-      "buy_status": "限大额",
+      "buy_status": "暂停申购",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },

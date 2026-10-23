@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-23T19:41:08+08:00",
+  "generated_at": "2026-10-24T02:42:27+08:00",
   "method_version": "fund-screen-v2.0",
   "goal": "持续跟踪6-12个月高弹性候选；不承诺收益，不预测必然涨幅",
   "selection_policy": "核心池固定跟踪6只；仅在评分明显恶化、中期趋势转负、暂停申购或更优候选持续胜出时替换",
@@ -17,8 +17,8 @@
       "message": "核心候选池由7只强制校正为6只",
       "removed": [
         {
-          "code": "006373",
-          "name": "国富全球科技互联混合(QDII)人民币A"
+          "code": "007280",
+          "name": "摩根日本精选股票(QDII)A"
         }
       ]
     }
@@ -28,7 +28,7 @@
       "code": "000960",
       "name": "招商医药健康产业股票",
       "category": "股票型",
-      "score": 70.1,
+      "score": 69.2,
       "returns": {
         "1m": -17.86,
         "3m": 8.8,
@@ -90,14 +90,9 @@
       },
       "tracking": {
         "first_seen": "2026-09-28T21:58:24+08:00",
-        "days_tracked": 26,
-        "refresh_count": 30,
+        "days_tracked": 27,
+        "refresh_count": 31,
         "score_history": [
-          {
-            "at": "2026-10-19T21:26:05+08:00",
-            "score": 76.2,
-            "action": "继续等买点"
-          },
           {
             "at": "2026-10-20T04:12:54+08:00",
             "score": 76.1,
@@ -152,6 +147,11 @@
             "at": "2026-10-23T19:43:30+08:00",
             "score": 70.1,
             "action": "继续等买点"
+          },
+          {
+            "at": "2026-10-24T02:43:20+08:00",
+            "score": 69.2,
+            "action": "继续等买点"
           }
         ]
       },
@@ -187,19 +187,19 @@
         "risk": {
           "period": "近1年",
           "annual_volatility": 35.870000000000005,
-          "sharpe": 0.64,
+          "sharpe": 0.68,
           "max_drawdown": 22.58,
-          "peer_risk_return": 97.0,
-          "peer_resilience": 45.0
+          "peer_risk_return": 96.0,
+          "peer_resilience": 47.0
         },
         "profit_probability": {
           "6m": {
             "probability": 55.0,
-            "average_return": 4.08
+            "average_return": 4.09
           },
           "1y": {
             "probability": 53.0,
-            "average_return": 10.21
+            "average_return": 10.22
           }
         },
         "holdings": {
@@ -285,27 +285,10 @@
         },
         "redemption_fee": [
           {
-            "适用期限": "小于7天",
-            "赎回费率": "1.50%"
-          },
-          {
-            "适用期限": "大于等于7天，小于30天",
-            "赎回费率": "0.75%"
-          },
-          {
-            "适用期限": "大于等于30天，小于365天",
-            "赎回费率": "0.50%"
-          },
-          {
-            "适用期限": "大于等于365天，小于730天",
-            "赎回费率": "0.25%"
-          },
-          {
-            "适用期限": "大于等于730天",
-            "赎回费率": "0.00%"
+            "error": "fee: ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
           }
         ],
-        "updated_at": "2026-10-23T19:44:20+08:00"
+        "updated_at": "2026-10-24T02:50:15+08:00"
       },
       "profile": {
         "fund_type": "股票型",
@@ -399,9 +382,9 @@
           {
             "name": "李佳存",
             "company": "招商基金",
-            "career_days": 4284.0,
+            "career_days": 4285.0,
             "current_aum_yi": 32.05,
-            "best_return": 140.3
+            "best_return": 142.4
           }
         ]
       },
@@ -415,7 +398,7 @@
       "code": "011373",
       "name": "招商前沿医疗保健股票A",
       "category": "股票型",
-      "score": 68.7,
+      "score": 68.3,
       "returns": {
         "1m": -17.75,
         "3m": 9.93,
@@ -432,18 +415,18 @@
       "position": "强势回撤，重点等买点",
       "broad_action": "watch",
       "history": {
-        "nav_date": "2026-10-22",
-        "last_nav": 0.759,
+        "nav_date": "2026-10-23",
+        "last_nav": 0.7673,
         "returns": {
-          "20d": -10.82,
-          "60d": 8.12,
-          "120d": 22.28,
-          "250d": 12.13
+          "20d": -11.45,
+          "60d": 9.93,
+          "120d": 23.52,
+          "250d": 15.89
         },
         "ma": {
-          "20": 0.8642,
-          "60": 0.8129,
-          "120": 0.7128
+          "20": 0.8592,
+          "60": 0.8141,
+          "120": 0.714
         },
         "high": {
           "60": 0.9362,
@@ -451,23 +434,23 @@
         },
         "low60": 0.6534,
         "drawdown": {
-          "60": -18.93,
-          "120": -18.93,
+          "60": -18.04,
+          "120": -18.04,
           "max250": -24.44
         },
-        "vol20_ann": 41.7,
+        "vol20_ann": 41.24,
         "trend": "震荡",
-        "deviation60": -6.63,
+        "deviation60": -5.75,
         "overheat": false,
         "buy_zone_1": [
-          0.8512,
-          0.8728
+          0.8463,
+          0.8678
         ],
         "buy_zone_2": [
-          0.7926,
-          0.8194
+          0.7937,
+          0.8206
         ],
-        "stop_add_below": 0.6985
+        "stop_add_below": 0.6997
       },
       "history_error": null,
       "today_plan": {
@@ -477,14 +460,9 @@
       },
       "tracking": {
         "first_seen": "2026-09-29T20:56:44+08:00",
-        "days_tracked": 25,
-        "refresh_count": 28,
+        "days_tracked": 26,
+        "refresh_count": 29,
         "score_history": [
-          {
-            "at": "2026-10-19T21:26:05+08:00",
-            "score": 75.1,
-            "action": "继续等买点"
-          },
           {
             "at": "2026-10-20T04:12:54+08:00",
             "score": 75.1,
@@ -539,6 +517,11 @@
             "at": "2026-10-23T19:43:30+08:00",
             "score": 68.7,
             "action": "继续等买点"
+          },
+          {
+            "at": "2026-10-24T02:43:20+08:00",
+            "score": 68.3,
+            "action": "继续等买点"
           }
         ]
       },
@@ -574,19 +557,19 @@
         "risk": {
           "period": "近1年",
           "annual_volatility": 37.18,
-          "sharpe": 0.44,
+          "sharpe": 0.49,
           "max_drawdown": 24.44,
-          "peer_risk_return": 92.0,
-          "peer_resilience": 40.0
+          "peer_risk_return": 91.0,
+          "peer_resilience": 42.0
         },
         "profit_probability": {
           "6m": {
             "probability": 40.0,
-            "average_return": -0.97
+            "average_return": -0.95
           },
           "1y": {
             "probability": 38.0,
-            "average_return": -1.51
+            "average_return": -1.49
           }
         },
         "holdings": {
@@ -692,7 +675,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-10-23T19:44:25+08:00"
+        "updated_at": "2026-10-24T02:50:21+08:00"
       },
       "profile": {
         "fund_type": "股票型",
@@ -790,9 +773,9 @@
           {
             "name": "李佳存",
             "company": "招商基金",
-            "career_days": 4284.0,
+            "career_days": 4285.0,
             "current_aum_yi": 32.05,
-            "best_return": 140.3
+            "best_return": 142.4
           }
         ]
       },
@@ -806,35 +789,35 @@
       "code": "008602",
       "name": "方正富邦新兴成长混合A",
       "category": "混合型",
-      "score": 62.8,
+      "score": 67.4,
       "returns": {
-        "1m": -21.27,
-        "3m": 2.9,
-        "6m": 10.47,
-        "1y": 33.03,
-        "3y": 83.08,
-        "ytd": 32.87
+        "1m": -20.7,
+        "3m": 2.81,
+        "6m": 14.64,
+        "1y": 36.07,
+        "3y": 89.6,
+        "ytd": 35.54
       },
-      "latest_nav": 1.8107,
+      "latest_nav": 1.8471,
       "estimate_nav": null,
       "estimate_return": null,
-      "day_return": -4.21,
+      "day_return": 2.01,
       "buy_status": "开放申购",
       "position": "强势回撤，重点等买点",
       "broad_action": "watch",
       "history": {
-        "nav_date": "2026-10-22",
-        "last_nav": 1.8107,
+        "nav_date": "2026-10-23",
+        "last_nav": 1.8471,
         "returns": {
-          "20d": -18.59,
-          "60d": 2.9,
-          "120d": 12.38,
-          "250d": 25.86
+          "20d": -16.78,
+          "60d": 2.81,
+          "120d": 14.15,
+          "250d": 27.49
         },
         "ma": {
-          "20": 2.0669,
-          "60": 2.0565,
-          "120": 1.9456
+          "20": 2.0483,
+          "60": 2.0573,
+          "120": 1.9475
         },
         "high": {
           "60": 2.3293,
@@ -842,23 +825,23 @@
         },
         "low60": 1.763,
         "drawdown": {
-          "60": -22.26,
-          "120": -22.26,
+          "60": -20.7,
+          "120": -20.7,
           "max250": -22.26
         },
-        "vol20_ann": 34.57,
+        "vol20_ann": 36.09,
         "trend": "趋势偏弱",
-        "deviation60": -11.95,
+        "deviation60": -10.22,
         "overheat": false,
         "buy_zone_1": [
-          2.0359,
-          2.0876
+          2.0175,
+          2.0687
         ],
         "buy_zone_2": [
-          2.0051,
-          2.0729
+          2.0059,
+          2.0738
         ],
-        "stop_add_below": 1.9067
+        "stop_add_below": 1.9085
       },
       "history_error": null,
       "today_plan": {
@@ -868,14 +851,9 @@
       },
       "tracking": {
         "first_seen": "2026-09-30T20:38:05+08:00",
-        "days_tracked": 24,
-        "refresh_count": 25,
+        "days_tracked": 25,
+        "refresh_count": 26,
         "score_history": [
-          {
-            "at": "2026-10-19T21:26:05+08:00",
-            "score": 70.6,
-            "action": "不买/停止补仓"
-          },
           {
             "at": "2026-10-20T04:12:54+08:00",
             "score": 70.6,
@@ -930,6 +908,11 @@
             "at": "2026-10-23T19:43:30+08:00",
             "score": 62.8,
             "action": "不买/停止补仓"
+          },
+          {
+            "at": "2026-10-24T02:43:20+08:00",
+            "score": 67.4,
+            "action": "不买/停止补仓"
           }
         ]
       },
@@ -964,20 +947,20 @@
         },
         "risk": {
           "period": "近1年",
-          "annual_volatility": 28.38,
-          "sharpe": 1.11,
-          "max_drawdown": 20.13,
+          "annual_volatility": 28.439999999999998,
+          "sharpe": 1.22,
+          "max_drawdown": 22.259999999999998,
           "peer_risk_return": 99.0,
-          "peer_resilience": 62.0
+          "peer_resilience": 60.0
         },
         "profit_probability": {
           "6m": {
             "probability": 62.0,
-            "average_return": 6.35
+            "average_return": 6.36
           },
           "1y": {
             "probability": 59.0,
-            "average_return": 10.19
+            "average_return": 10.21
           }
         },
         "holdings": {
@@ -1079,7 +1062,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-10-23T19:44:31+08:00"
+        "updated_at": "2026-10-24T02:50:26+08:00"
       },
       "profile": {
         "fund_type": "混合型-偏股",
@@ -1173,13 +1156,13 @@
           {
             "name": "乔培涛",
             "company": "方正富邦基金",
-            "career_days": 3376.0,
+            "career_days": 3377.0,
             "current_aum_yi": 9.52,
-            "best_return": 71.68
+            "best_return": 75.13
           }
         ]
       },
-      "risk": "近1年历史最大回撤约20.1%；波动中等偏高；前十大股票占比约28%，相对分散。历史数据不代表未来。",
+      "risk": "近1年历史最大回撤约22.3%；波动中等偏高；前十大股票占比约28%，相对分散。历史数据不代表未来。",
       "deep_plain": [
         "基金经理：乔培涛",
         "历史任意时点持有满1年的盈利概率约59%（仅作历史统计，不是未来预测）"
@@ -1189,7 +1172,7 @@
       "code": "004243",
       "name": "广发道琼斯石油指数人民币C",
       "category": "指数型",
-      "score": 90.1,
+      "score": 90.2,
       "returns": {
         "1m": 10.46,
         "3m": 15.45,
@@ -1199,25 +1182,25 @@
         "ytd": 49.61
       },
       "latest_nav": 3.2356,
-      "estimate_nav": 3.269,
-      "estimate_return": 0.0,
+      "estimate_nav": 3.2024,
+      "estimate_return": -1.02,
       "day_return": -1.03,
       "buy_status": "限大额",
       "position": "中性观察",
       "broad_action": "watch",
       "history": {
-        "nav_date": "2026-10-21",
-        "last_nav": 3.2692,
+        "nav_date": "2026-10-22",
+        "last_nav": 3.2356,
         "returns": {
-          "20d": 2.4,
-          "60d": 18.03,
-          "120d": 23.64,
-          "250d": 47.41
+          "20d": 4.99,
+          "60d": 15.45,
+          "120d": 21.52,
+          "250d": 52.05
         },
         "ma": {
-          "20": 3.115,
-          "60": 2.9883,
-          "120": 2.804
+          "20": 3.1226,
+          "60": 2.9955,
+          "120": 2.8087
         },
         "high": {
           "60": 3.3015,
@@ -1225,23 +1208,23 @@
         },
         "low60": 2.6547,
         "drawdown": {
-          "60": -0.98,
-          "120": -0.98,
+          "60": -2.0,
+          "120": -2.0,
           "max250": -17.49
         },
-        "vol20_ann": 42.01,
+        "vol20_ann": 40.07,
         "trend": "强势上行",
-        "deviation60": 9.4,
+        "deviation60": 8.01,
         "overheat": false,
         "buy_zone_1": [
-          3.0682,
-          3.1461
+          3.0758,
+          3.1539
         ],
         "buy_zone_2": [
-          2.9136,
-          3.0122
+          2.9206,
+          3.0195
         ],
-        "stop_add_below": 2.7479
+        "stop_add_below": 2.7526
       },
       "history_error": null,
       "today_plan": {
@@ -1251,14 +1234,9 @@
       },
       "tracking": {
         "first_seen": "2026-10-16T08:19:53+08:00",
-        "days_tracked": 8,
-        "refresh_count": 15,
+        "days_tracked": 9,
+        "refresh_count": 16,
         "score_history": [
-          {
-            "at": "2026-10-19T21:26:05+08:00",
-            "score": 91.3,
-            "action": "继续等买点"
-          },
           {
             "at": "2026-10-20T04:12:54+08:00",
             "score": 91.2,
@@ -1313,6 +1291,11 @@
             "at": "2026-10-23T19:43:30+08:00",
             "score": 90.1,
             "action": "继续等买点"
+          },
+          {
+            "at": "2026-10-24T02:43:20+08:00",
+            "score": 90.2,
+            "action": "继续等买点"
           }
         ]
       },
@@ -1356,11 +1339,11 @@
         "profit_probability": {
           "6m": {
             "probability": 62.0,
-            "average_return": 8.09
+            "average_return": 8.1
           },
           "1y": {
             "probability": 61.0,
-            "average_return": 17.1
+            "average_return": 17.11
           }
         },
         "holdings": {
@@ -1442,7 +1425,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-10-23T19:44:36+08:00"
+        "updated_at": "2026-10-24T02:50:32+08:00"
       },
       "profile": {
         "fund_type": "指数型-海外股票",
@@ -1520,9 +1503,9 @@
           {
             "name": "姚曦",
             "company": "广发基金",
-            "career_days": 1801.0,
+            "career_days": 1802.0,
             "current_aum_yi": 177.63,
-            "best_return": 86.06
+            "best_return": 82.45
           }
         ]
       },
@@ -1536,35 +1519,35 @@
       "code": "004726",
       "name": "先锋聚优A",
       "category": "混合型",
-      "score": 88.5,
+      "score": 89.1,
       "returns": {
-        "1m": 1.29,
-        "3m": 12.21,
-        "6m": 29.08,
-        "1y": 37.82,
-        "3y": 30.06,
-        "ytd": 38.13
+        "1m": 1.16,
+        "3m": 12.02,
+        "6m": 31.88,
+        "1y": 37.65,
+        "3y": 30.71,
+        "ytd": 37.9
       },
-      "latest_nav": 1.4165,
+      "latest_nav": 1.4142,
       "estimate_nav": null,
       "estimate_return": null,
-      "day_return": 0.06,
+      "day_return": -0.16,
       "buy_status": "开放申购",
       "position": "趋势向上，可等分批点",
       "broad_action": "batch",
       "history": {
-        "nav_date": "2026-10-22",
-        "last_nav": 1.4165,
+        "nav_date": "2026-10-23",
+        "last_nav": 1.4142,
         "returns": {
-          "20d": 1.32,
-          "60d": 12.21,
-          "120d": 32.1,
-          "250d": 31.88
+          "20d": 1.13,
+          "60d": 12.02,
+          "120d": 28.93,
+          "250d": 29.48
         },
         "ma": {
-          "20": 1.4063,
-          "60": 1.3753,
-          "120": 1.2709
+          "20": 1.4071,
+          "60": 1.3778,
+          "120": 1.2736
         },
         "high": {
           "60": 1.4165,
@@ -1572,23 +1555,23 @@
         },
         "low60": 1.1815,
         "drawdown": {
-          "60": 0.0,
-          "120": 0.0,
+          "60": -0.16,
+          "120": -0.16,
           "max250": -19.36
         },
-        "vol20_ann": 2.48,
+        "vol20_ann": 2.6,
         "trend": "强势上行",
-        "deviation60": 3.0,
+        "deviation60": 2.64,
         "overheat": false,
         "buy_zone_1": [
-          1.3852,
-          1.4204
+          1.386,
+          1.4212
         ],
         "buy_zone_2": [
-          1.3409,
-          1.3863
+          1.3434,
+          1.3889
         ],
-        "stop_add_below": 1.2455
+        "stop_add_below": 1.2481
       },
       "history_error": null,
       "today_plan": {
@@ -1598,14 +1581,9 @@
       },
       "tracking": {
         "first_seen": "2026-10-16T19:27:11+08:00",
-        "days_tracked": 8,
-        "refresh_count": 13,
+        "days_tracked": 9,
+        "refresh_count": 14,
         "score_history": [
-          {
-            "at": "2026-10-19T21:26:05+08:00",
-            "score": 86.7,
-            "action": "第一买入区"
-          },
           {
             "at": "2026-10-20T04:12:54+08:00",
             "score": 86.7,
@@ -1660,6 +1638,11 @@
             "at": "2026-10-23T19:43:30+08:00",
             "score": 88.5,
             "action": "第一买入区"
+          },
+          {
+            "at": "2026-10-24T02:43:20+08:00",
+            "score": 89.1,
+            "action": "第一买入区"
           }
         ]
       },
@@ -1697,17 +1680,17 @@
           "annual_volatility": 28.799999999999997,
           "sharpe": 1.26,
           "max_drawdown": 19.36,
-          "peer_risk_return": 98.0,
-          "peer_resilience": 47.0
+          "peer_risk_return": 97.0,
+          "peer_resilience": 49.0
         },
         "profit_probability": {
           "6m": {
             "probability": 54.0,
-            "average_return": 2.7
+            "average_return": 2.71
           },
           "1y": {
             "probability": 51.0,
-            "average_return": 4.86
+            "average_return": 4.88
           }
         },
         "holdings": {
@@ -1805,7 +1788,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-10-23T19:44:41+08:00"
+        "updated_at": "2026-10-24T02:50:37+08:00"
       },
       "profile": {
         "fund_type": "混合型-灵活",
@@ -1891,9 +1874,9 @@
           {
             "name": "刘志强",
             "company": "先锋基金",
-            "career_days": 1395.0,
+            "career_days": 1396.0,
             "current_aum_yi": 0.02,
-            "best_return": 32.03
+            "best_return": 31.81
           }
         ]
       },
@@ -1917,25 +1900,25 @@
         "ytd": 49.41
       },
       "latest_nav": 3.2429,
-      "estimate_nav": 3.2763,
-      "estimate_return": 0.0,
+      "estimate_nav": 3.2097,
+      "estimate_return": -1.02,
       "day_return": -1.03,
       "buy_status": "限大额",
       "position": "中性观察",
       "broad_action": "watch",
       "history": {
-        "nav_date": "2026-10-21",
-        "last_nav": 3.2765,
+        "nav_date": "2026-10-22",
+        "last_nav": 3.2429,
         "returns": {
-          "20d": 2.38,
-          "60d": 18.0,
-          "120d": 23.58,
-          "250d": 47.19
+          "20d": 4.98,
+          "60d": 15.41,
+          "120d": 21.46,
+          "250d": 51.82
         },
         "ma": {
-          "20": 3.1222,
-          "60": 2.9955,
-          "120": 2.8111
+          "20": 3.1299,
+          "60": 3.0028,
+          "120": 2.8159
         },
         "high": {
           "60": 3.3089,
@@ -1943,23 +1926,23 @@
         },
         "low60": 2.6614,
         "drawdown": {
-          "60": -0.98,
-          "120": -0.98,
+          "60": -1.99,
+          "120": -1.99,
           "max250": -17.51
         },
-        "vol20_ann": 41.97,
+        "vol20_ann": 40.04,
         "trend": "强势上行",
-        "deviation60": 9.38,
+        "deviation60": 8.0,
         "overheat": false,
         "buy_zone_1": [
-          3.0753,
-          3.1534
+          3.0829,
+          3.1612
         ],
         "buy_zone_2": [
-          2.9207,
-          3.0195
+          2.9277,
+          3.0268
         ],
-        "stop_add_below": 2.7549
+        "stop_add_below": 2.7595
       },
       "history_error": null,
       "today_plan": {
@@ -1969,14 +1952,9 @@
       },
       "tracking": {
         "first_seen": "2026-10-19T21:26:05+08:00",
-        "days_tracked": 5,
-        "refresh_count": 12,
+        "days_tracked": 6,
+        "refresh_count": 13,
         "score_history": [
-          {
-            "at": "2026-10-19T21:26:05+08:00",
-            "score": 87.5,
-            "action": "继续等买点"
-          },
           {
             "at": "2026-10-20T04:12:54+08:00",
             "score": 87.5,
@@ -2031,6 +2009,11 @@
             "at": "2026-10-23T19:43:30+08:00",
             "score": 86.9,
             "action": "继续等买点"
+          },
+          {
+            "at": "2026-10-24T02:43:20+08:00",
+            "score": 86.9,
+            "action": "继续等买点"
           }
         ]
       },
@@ -2065,8 +2048,8 @@
         },
         "risk": {
           "period": "近1年",
-          "annual_volatility": 26.419999999999998,
-          "sharpe": 1.94,
+          "annual_volatility": 26.450000000000003,
+          "sharpe": 1.84,
           "max_drawdown": 17.51,
           "peer_risk_return": 97.0,
           "peer_resilience": 40.0
@@ -2074,11 +2057,11 @@
         "profit_probability": {
           "6m": {
             "probability": 60.0,
-            "average_return": 3.96
+            "average_return": 3.99
           },
           "1y": {
             "probability": 51.0,
-            "average_return": 5.99
+            "average_return": 6.09
           }
         },
         "holdings": {
@@ -2156,7 +2139,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-10-23T19:44:47+08:00"
+        "updated_at": "2026-10-24T02:50:43+08:00"
       },
       "profile": {
         "fund_type": "指数型-海外股票",
@@ -2234,9 +2217,9 @@
           {
             "name": "姚曦",
             "company": "广发基金",
-            "career_days": 1801.0,
+            "career_days": 1802.0,
             "current_aum_yi": 177.63,
-            "best_return": 86.06
+            "best_return": 82.45
           }
         ]
       },
@@ -2247,7 +2230,7 @@
       ]
     }
   ],
-  "deep_enriched_at": "2026-10-23T19:44:47+08:00",
+  "deep_enriched_at": "2026-10-24T02:50:43+08:00",
   "deep_method": "overview+risk_drawdown+historical_profit_probability+latest_disclosed_holdings+industry+fees+manager",
   "profile_note": "基金持仓和行业配置来自最新可获得的定期报告披露，不是实时持仓。"
 }

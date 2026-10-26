@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-26T21:05:34+08:00",
+  "generated_at": "2026-10-27T04:08:21+08:00",
   "source": "东方财富/天天基金公开数据（AKShare封装）",
   "count": 24269,
   "funds": [
@@ -3714,6 +3714,16 @@
       "fee": "0.00%"
     },
     {
+      "code": "004549",
+      "name": "富安达消费主题混合",
+      "nav": 0.7829,
+      "prev_nav": null,
+      "day_return": 1.44,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.15%"
+    },
+    {
       "code": "001306",
       "name": "中欧永裕混合A",
       "nav": 1.3082,
@@ -4304,6 +4314,16 @@
       "fee": "0.00%"
     },
     {
+      "code": "010746",
+      "name": "富安达长三角区域主题混合A",
+      "nav": 0.86,
+      "prev_nav": null,
+      "day_return": 1.37,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.15%"
+    },
+    {
       "code": "001827",
       "name": "富国研究优选沪港深灵活配置混合A",
       "nav": 2.379,
@@ -4504,9 +4524,29 @@
       "fee": "0.12%"
     },
     {
+      "code": "019792",
+      "name": "富安达长三角区域主题混合C",
+      "nav": 0.8531,
+      "prev_nav": null,
+      "day_return": 1.35,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
       "code": "024270",
       "name": "诺安策略精选股票C",
       "nav": 1.8276,
+      "prev_nav": null,
+      "day_return": 1.34,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
+      "code": "008305",
+      "name": "大摩量化配置混合C",
+      "nav": 1.135,
       "prev_nav": null,
       "day_return": 1.34,
       "buy_status": "开放申购",
@@ -4607,6 +4647,26 @@
       "code": "023535",
       "name": "永赢中证港股通央企红利ETF联接C",
       "nav": 0.9432,
+      "prev_nav": null,
+      "day_return": 1.34,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
+      "code": "012368",
+      "name": "大摩优享六个月持有期混合A",
+      "nav": 0.9217,
+      "prev_nav": null,
+      "day_return": 1.34,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.15%"
+    },
+    {
+      "code": "012369",
+      "name": "大摩优享六个月持有期混合C",
+      "nav": 0.9025,
       "prev_nav": null,
       "day_return": 1.34,
       "buy_status": "开放申购",
@@ -4872,6 +4932,16 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.12%"
+    },
+    {
+      "code": "233015",
+      "name": "大摩量化配置混合A",
+      "nav": 1.152,
+      "prev_nav": null,
+      "day_return": 1.32,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.15%"
     },
     {
       "code": "019911",
@@ -5932,6 +6002,16 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.00%"
+    },
+    {
+      "code": "233006",
+      "name": "大摩领先优势混合",
+      "nav": 3.294,
+      "prev_nav": null,
+      "day_return": 1.24,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.15%"
     },
     {
       "code": "000251",
@@ -7774,6 +7854,26 @@
       "fee": "0.00%"
     },
     {
+      "code": "011383",
+      "name": "富安达医药创新混合A",
+      "nav": 0.6351,
+      "prev_nav": null,
+      "day_return": 1.13,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.15%"
+    },
+    {
+      "code": "026857",
+      "name": "富安达医药创新混合C",
+      "nav": 0.6339,
+      "prev_nav": null,
+      "day_return": 1.13,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
       "code": "017965",
       "name": "招商匠心优选混合C",
       "nav": 1.6424,
@@ -8557,6 +8657,26 @@
       "code": "025942",
       "name": "广发新动力混合C",
       "nav": 1.8584,
+      "prev_nav": null,
+      "day_return": 1.08,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
+      "code": "020621",
+      "name": "华夏中证香港内地国有企业ETF发起式联接(QDII)A",
+      "nav": 1.5016,
+      "prev_nav": null,
+      "day_return": 1.08,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.12%"
+    },
+    {
+      "code": "020622",
+      "name": "华夏中证香港内地国有企业ETF发起式联接(QDII)C",
+      "nav": 1.4881,
       "prev_nav": null,
       "day_return": 1.08,
       "buy_status": "开放申购",
@@ -9602,6 +9722,16 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.00%"
+    },
+    {
+      "code": "001660",
+      "name": "富安达行业轮动混合",
+      "nav": 1.367,
+      "prev_nav": null,
+      "day_return": 1.03,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.15%"
     },
     {
       "code": "019001",
@@ -12424,6 +12554,26 @@
       "fee": "0.10%"
     },
     {
+      "code": "024902",
+      "name": "中银中证全指自由现金流ETF联接A",
+      "nav": 0.9637,
+      "prev_nav": null,
+      "day_return": 0.88,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.10%"
+    },
+    {
+      "code": "024903",
+      "name": "中银中证全指自由现金流ETF联接C",
+      "nav": 0.9626,
+      "prev_nav": null,
+      "day_return": 0.88,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
       "code": "016747",
       "name": "浦银光耀优选混合C",
       "nav": 0.9595,
@@ -15222,6 +15372,26 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.15%"
+    },
+    {
+      "code": "710001",
+      "name": "富安达优势成长混合A",
+      "nav": 3.1176,
+      "prev_nav": null,
+      "day_return": 0.76,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.15%"
+    },
+    {
+      "code": "024667",
+      "name": "富安达优势成长混合C",
+      "nav": 3.1051,
+      "prev_nav": null,
+      "day_return": 0.76,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
     },
     {
       "code": "001707",
@@ -22954,6 +23124,16 @@
       "fee": "0.15%"
     },
     {
+      "code": "233007",
+      "name": "大摩卓越成长混合",
+      "nav": 3.1372,
+      "prev_nav": null,
+      "day_return": 0.42,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.15%"
+    },
+    {
       "code": "009273",
       "name": "融通中国风1号灵活配置混合C",
       "nav": 2.155,
@@ -24680,6 +24860,26 @@
       "prev_nav": null,
       "day_return": 0.38,
       "buy_status": "限大额",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
+      "code": "027498",
+      "name": "国联周期优选混合发起A",
+      "nav": 1.0169,
+      "prev_nav": null,
+      "day_return": 0.38,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.08%"
+    },
+    {
+      "code": "027499",
+      "name": "国联周期优选混合发起C",
+      "nav": 1.0154,
+      "prev_nav": null,
+      "day_return": 0.38,
+      "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },
@@ -28484,6 +28684,16 @@
       "fee": "0.00%"
     },
     {
+      "code": "233012",
+      "name": "大摩多元收益债券A",
+      "nav": 1.3125,
+      "prev_nav": null,
+      "day_return": 0.27,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.08%"
+    },
+    {
       "code": "007151",
       "name": "前海开源沪港深聚瑞混合",
       "nav": 1.2788,
@@ -28644,6 +28854,16 @@
       "fee": "0.00%"
     },
     {
+      "code": "009893",
+      "name": "大摩优悦安和混合A",
+      "nav": 0.8975,
+      "prev_nav": null,
+      "day_return": 0.27,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.15%"
+    },
+    {
       "code": "025666",
       "name": "银华鑫禾混合A",
       "nav": 0.8603,
@@ -28782,6 +29002,16 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.15%"
+    },
+    {
+      "code": "233013",
+      "name": "大摩多元收益债券C",
+      "nav": 1.2778,
+      "prev_nav": null,
+      "day_return": 0.26,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
     },
     {
       "code": "002690",
@@ -28924,6 +29154,16 @@
       "fee": "0.00%"
     },
     {
+      "code": "014867",
+      "name": "大摩优悦安和混合C",
+      "nav": 0.8806,
+      "prev_nav": null,
+      "day_return": 0.26,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
       "code": "005813",
       "name": "华安CES港股通ETF联接A",
       "nav": 0.8637,
@@ -28947,6 +29187,16 @@
       "code": "377020",
       "name": "摩根内需动力混合A",
       "nav": 0.7678,
+      "prev_nav": null,
+      "day_return": 0.26,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.15%"
+    },
+    {
+      "code": "233008",
+      "name": "大摩消费领航混合",
+      "nav": 0.7239,
       "prev_nav": null,
       "day_return": 0.26,
       "buy_status": "开放申购",
@@ -34074,6 +34324,16 @@
       "fee": "0.00%"
     },
     {
+      "code": "015047",
+      "name": "富安达稳健配置6个月持有期混合",
+      "nav": 0.9451,
+      "prev_nav": null,
+      "day_return": 0.17,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.08%"
+    },
+    {
       "code": "540002",
       "name": "汇丰晋信龙腾混合A",
       "nav": 0.9002,
@@ -34232,6 +34492,16 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.15%"
+    },
+    {
+      "code": "025853",
+      "name": "富国港股精选混合(QDII)美元现汇",
+      "nav": 0.1211,
+      "prev_nav": null,
+      "day_return": 0.17,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "1.50%"
     },
     {
       "code": "000803",
@@ -36202,6 +36472,26 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.80%"
+    },
+    {
+      "code": "025977",
+      "name": "大摩添益债券A",
+      "nav": 1.018,
+      "prev_nav": null,
+      "day_return": 0.14,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.03%"
+    },
+    {
+      "code": "025978",
+      "name": "大摩添益债券C",
+      "nav": 1.0146,
+      "prev_nav": null,
+      "day_return": 0.14,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
     },
     {
       "code": "023485",
@@ -38664,6 +38954,16 @@
       "fee": "0.00%"
     },
     {
+      "code": "010222",
+      "name": "大摩民丰盈和一年持有混合",
+      "nav": 0.9252,
+      "prev_nav": null,
+      "day_return": 0.11,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.08%"
+    },
+    {
       "code": "004874",
       "name": "融通巨潮100指数C",
       "nav": 0.924,
@@ -39472,6 +39772,26 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.60%"
+    },
+    {
+      "code": "009752",
+      "name": "大摩灵动优选债券A",
+      "nav": 0.9899,
+      "prev_nav": null,
+      "day_return": 0.1,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.08%"
+    },
+    {
+      "code": "025562",
+      "name": "大摩灵动优选债券E",
+      "nav": 0.9886,
+      "prev_nav": null,
+      "day_return": 0.1,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
     },
     {
       "code": "025487",
@@ -40627,6 +40947,16 @@
       "code": "024969",
       "name": "鑫元悦鑫添益债券C",
       "nav": 0.9733,
+      "prev_nav": null,
+      "day_return": 0.09,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
+      "code": "014868",
+      "name": "大摩灵动优选债券C",
+      "nav": 0.9711,
       "prev_nav": null,
       "day_return": 0.09,
       "buy_status": "开放申购",
@@ -42924,6 +43254,16 @@
       "fee": "0.00%"
     },
     {
+      "code": "009567",
+      "name": "山证资管裕丰一年定开债券发起式",
+      "nav": 1.0588,
+      "prev_nav": null,
+      "day_return": 0.07,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.80%"
+    },
+    {
       "code": "014576",
       "name": "农银瑞丰6个月持有混合A",
       "nav": 1.0585,
@@ -43804,6 +44144,16 @@
       "fee": "0.00%"
     },
     {
+      "code": "233005",
+      "name": "大摩强收益债券",
+      "nav": 1.3972,
+      "prev_nav": null,
+      "day_return": 0.06,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.08%"
+    },
+    {
       "code": "006961",
       "name": "南方中债7-10年国开行债券指数A",
       "nav": 1.3642,
@@ -44172,6 +44522,16 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.06%"
+    },
+    {
+      "code": "025887",
+      "name": "国联金如意3个月滚动持有债券A",
+      "nav": 1.1727,
+      "prev_nav": null,
+      "day_return": 0.06,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.04%"
     },
     {
       "code": "005452",
@@ -44932,6 +45292,16 @@
       "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.08%"
+    },
+    {
+      "code": "018878",
+      "name": "富安达富禧纯债30天持有债券A",
+      "nav": 1.0616,
+      "prev_nav": null,
+      "day_return": 0.06,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.02%"
     },
     {
       "code": "020913",
@@ -46604,6 +46974,16 @@
       "fee": "0.10%"
     },
     {
+      "code": "025888",
+      "name": "国联金如意3个月滚动持有债券C",
+      "nav": 1.16,
+      "prev_nav": null,
+      "day_return": 0.05,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
       "code": "000306",
       "name": "天弘弘利债券A",
       "nav": 1.1592,
@@ -47804,6 +48184,16 @@
       "fee": "0.08%"
     },
     {
+      "code": "018879",
+      "name": "富安达富禧纯债30天持有债券C",
+      "nav": 1.061,
+      "prev_nav": null,
+      "day_return": 0.05,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
       "code": "015869",
       "name": "中银誉享一年定开债发起",
       "nav": 1.0603,
@@ -48224,9 +48614,39 @@
       "fee": "0.08%"
     },
     {
+      "code": "018451",
+      "name": "富安达富祥利率债C",
+      "nav": 1.0249,
+      "prev_nav": null,
+      "day_return": 0.05,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
       "code": "022064",
       "name": "博时裕创纯债债券C",
       "nav": 1.0247,
+      "prev_nav": null,
+      "day_return": 0.05,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
+      "code": "018450",
+      "name": "富安达富祥利率债A",
+      "nav": 1.023,
+      "prev_nav": null,
+      "day_return": 0.05,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.03%"
+    },
+    {
+      "code": "023557",
+      "name": "富安达富祥利率债D",
+      "nav": 1.023,
       "prev_nav": null,
       "day_return": 0.05,
       "buy_status": "开放申购",
@@ -52764,6 +53184,16 @@
       "fee": "0.00%"
     },
     {
+      "code": "016032",
+      "name": "光大尊颐纯债一年债券发起",
+      "nav": 1.0582,
+      "prev_nav": null,
+      "day_return": 0.04,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.80%"
+    },
+    {
       "code": "007716",
       "name": "嘉实致华纯债债券A",
       "nav": 1.0581,
@@ -53302,6 +53732,16 @@
       "buy_status": "暂停申购",
       "sell_status": "暂停赎回",
       "fee": "0.05%"
+    },
+    {
+      "code": "023240",
+      "name": "大摩恒安30天持有期债券C",
+      "nav": 1.0466,
+      "prev_nav": null,
+      "day_return": 0.04,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
     },
     {
       "code": "009294",
@@ -54252,6 +54692,16 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.06%"
+    },
+    {
+      "code": "010946",
+      "name": "中银证券汇福一年定开债券发起式",
+      "nav": 1.0225,
+      "prev_nav": null,
+      "day_return": 0.04,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.40%"
     },
     {
       "code": "015260",
@@ -56324,6 +56774,16 @@
       "fee": "0.12%"
     },
     {
+      "code": "013214",
+      "name": "大摩安盈稳固六个月持有债券A",
+      "nav": 1.1912,
+      "prev_nav": null,
+      "day_return": 0.03,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.08%"
+    },
+    {
       "code": "519189",
       "name": "万家信用恒利债券C",
       "nav": 1.1909,
@@ -57104,6 +57564,16 @@
       "fee": "0.08%"
     },
     {
+      "code": "009895",
+      "name": "摩根瑞盛87个月定期开放债券",
+      "nav": 1.1662,
+      "prev_nav": null,
+      "day_return": 0.03,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.045%"
+    },
+    {
       "code": "003269",
       "name": "招商招乾3个月定开债A",
       "nav": 1.1657,
@@ -57414,6 +57884,16 @@
       "fee": "0.04%"
     },
     {
+      "code": "000419",
+      "name": "大摩优质信价纯债A",
+      "nav": 1.1598,
+      "prev_nav": null,
+      "day_return": 0.03,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.08%"
+    },
+    {
       "code": "016270",
       "name": "博时富鑫纯债C",
       "nav": 1.1596,
@@ -57500,6 +57980,16 @@
       "prev_nav": null,
       "day_return": 0.03,
       "buy_status": "暂停申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
+      "code": "020244",
+      "name": "大摩优质信价纯债E",
+      "nav": 1.1571,
+      "prev_nav": null,
+      "day_return": 0.03,
+      "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },
@@ -58542,6 +59032,16 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.01%"
+    },
+    {
+      "code": "000420",
+      "name": "大摩优质信价纯债C",
+      "nav": 1.1358,
+      "prev_nav": null,
+      "day_return": 0.03,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
     },
     {
       "code": "003192",
@@ -63874,6 +64374,16 @@
       "fee": "0.00%"
     },
     {
+      "code": "023239",
+      "name": "大摩恒安30天持有期债券A",
+      "nav": 1.0478,
+      "prev_nav": null,
+      "day_return": 0.03,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.03%"
+    },
+    {
       "code": "002206",
       "name": "博时裕康纯债债券A",
       "nav": 1.0477,
@@ -64764,6 +65274,16 @@
       "fee": "0.00%"
     },
     {
+      "code": "007212",
+      "name": "山证资管裕泰3个月定开债券发起式",
+      "nav": 1.0368,
+      "prev_nav": null,
+      "day_return": 0.03,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.08%"
+    },
+    {
       "code": "015580",
       "name": "中金金誉债券",
       "nav": 1.0368,
@@ -65132,6 +65652,26 @@
       "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.09%"
+    },
+    {
+      "code": "022786",
+      "name": "大摩稳丰利率债A",
+      "nav": 1.0321,
+      "prev_nav": null,
+      "day_return": 0.03,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.03%"
+    },
+    {
+      "code": "022787",
+      "name": "大摩稳丰利率债C",
+      "nav": 1.032,
+      "prev_nav": null,
+      "day_return": 0.03,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
     },
     {
       "code": "007147",
@@ -65654,6 +66194,16 @@
       "fee": "0.08%"
     },
     {
+      "code": "025121",
+      "name": "大摩中债1-5年政金债指数A",
+      "nav": 1.026,
+      "prev_nav": null,
+      "day_return": 0.03,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.03%"
+    },
+    {
       "code": "013653",
       "name": "中银上清所0-5年农发行债券指数",
       "nav": 1.0259,
@@ -65752,6 +66302,16 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.08%"
+    },
+    {
+      "code": "025122",
+      "name": "大摩中债1-5年政金债指数C",
+      "nav": 1.0252,
+      "prev_nav": null,
+      "day_return": 0.03,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
     },
     {
       "code": "024279",
@@ -66192,6 +66752,16 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.08%"
+    },
+    {
+      "code": "021564",
+      "name": "富安达上清所0-3年政金债指数C",
+      "nav": 1.0192,
+      "prev_nav": null,
+      "day_return": 0.03,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
     },
     {
       "code": "027456",
@@ -68244,6 +68814,16 @@
       "fee": "0.04%"
     },
     {
+      "code": "000024",
+      "name": "大摩双利增强债券A",
+      "nav": 1.2594,
+      "prev_nav": null,
+      "day_return": 0.02,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.08%"
+    },
+    {
       "code": "019872",
       "name": "长城短债D",
       "nav": 1.2593,
@@ -70204,6 +70784,16 @@
       "fee": "0.08%"
     },
     {
+      "code": "013215",
+      "name": "大摩安盈稳固六个月持有债券C",
+      "nav": 1.171,
+      "prev_nav": null,
+      "day_return": 0.02,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
       "code": "022180",
       "name": "新沃中债0-3年政策性金融债指数C",
       "nav": 1.1709,
@@ -70367,6 +70957,16 @@
       "code": "006903",
       "name": "长盛安鑫中短债C",
       "nav": 1.1678,
+      "prev_nav": null,
+      "day_return": 0.02,
+      "buy_status": "限大额",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
+      "code": "012603",
+      "name": "富安达富利纯债C",
+      "nav": 1.1666,
       "prev_nav": null,
       "day_return": 0.02,
       "buy_status": "限大额",
@@ -70782,6 +71382,16 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.00%"
+    },
+    {
+      "code": "007520",
+      "name": "富安达富利纯债A",
+      "nav": 1.1571,
+      "prev_nav": null,
+      "day_return": 0.02,
+      "buy_status": "限大额",
+      "sell_status": "开放赎回",
+      "fee": "0.06%"
     },
     {
       "code": "021640",
@@ -74554,6 +75164,16 @@
       "fee": "0.05%"
     },
     {
+      "code": "008863",
+      "name": "中银证券汇兴定期开放债券",
+      "nav": 1.0981,
+      "prev_nav": null,
+      "day_return": 0.02,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.40%"
+    },
+    {
       "code": "005468",
       "name": "华泰紫金智盈债券C",
       "nav": 1.0979,
@@ -75270,6 +75890,16 @@
       "prev_nav": null,
       "day_return": 0.02,
       "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
+      "code": "017531",
+      "name": "财通安益中短债债券E",
+      "nav": 1.0895,
+      "prev_nav": null,
+      "day_return": 0.02,
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },
@@ -80504,6 +81134,16 @@
       "fee": "0.00%"
     },
     {
+      "code": "009799",
+      "name": "中银证券安汇三年定开债",
+      "nav": 1.0405,
+      "prev_nav": null,
+      "day_return": 0.02,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.04%"
+    },
+    {
       "code": "022067",
       "name": "建信鑫源90天持有期债券A",
       "nav": 1.0404,
@@ -83164,6 +83804,26 @@
       "fee": "0.00%"
     },
     {
+      "code": "021563",
+      "name": "富安达上清所0-3年政金债指数A",
+      "nav": 1.0215,
+      "prev_nav": null,
+      "day_return": 0.02,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.05%"
+    },
+    {
+      "code": "023558",
+      "name": "富安达上清所0-3年政金债指数D",
+      "nav": 1.0215,
+      "prev_nav": null,
+      "day_return": 0.02,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
       "code": "020886",
       "name": "交银中债0-3年政金债指数A",
       "nav": 1.0214,
@@ -85214,6 +85874,16 @@
       "fee": "0.00%"
     },
     {
+      "code": "710301",
+      "name": "富安达增强收益债券A",
+      "nav": 1.4875,
+      "prev_nav": null,
+      "day_return": 0.01,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.08%"
+    },
+    {
       "code": "007338",
       "name": "前海联合泳辉纯债C",
       "nav": 1.468,
@@ -85342,6 +86012,16 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.08%"
+    },
+    {
+      "code": "710302",
+      "name": "富安达增强收益债券C",
+      "nav": 1.4047,
+      "prev_nav": null,
+      "day_return": 0.01,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
     },
     {
       "code": "008883",
@@ -85850,6 +86530,16 @@
       "prev_nav": null,
       "day_return": 0.01,
       "buy_status": "限大额",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
+      "code": "000025",
+      "name": "大摩双利增强债券C",
+      "nav": 1.2263,
+      "prev_nav": null,
+      "day_return": 0.01,
+      "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },
@@ -87244,6 +87934,16 @@
       "fee": "0.00%"
     },
     {
+      "code": "026010",
+      "name": "东财禧悦90天滚动持有中短债A",
+      "nav": 1.1561,
+      "prev_nav": null,
+      "day_return": 0.01,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.03%"
+    },
+    {
       "code": "008452",
       "name": "兴全恒鑫债券A",
       "nav": 1.1559,
@@ -87272,6 +87972,16 @@
       "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.00%"
+    },
+    {
+      "code": "026008",
+      "name": "东财鑫享30天滚动持有中短债A",
+      "nav": 1.155,
+      "prev_nav": null,
+      "day_return": 0.01,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.03%"
     },
     {
       "code": "008678",
@@ -87814,6 +88524,16 @@
       "fee": "0.00%"
     },
     {
+      "code": "026011",
+      "name": "东财禧悦90天滚动持有中短债C",
+      "nav": 1.1412,
+      "prev_nav": null,
+      "day_return": 0.01,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
       "code": "009923",
       "name": "华夏鼎富债券C",
       "nav": 1.1409,
@@ -87922,6 +88642,16 @@
       "buy_status": "暂停申购",
       "sell_status": "开放赎回",
       "fee": "0.08%"
+    },
+    {
+      "code": "026009",
+      "name": "东财鑫享30天滚动持有中短债C",
+      "nav": 1.1393,
+      "prev_nav": null,
+      "day_return": 0.01,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
     },
     {
       "code": "014097",
@@ -88072,6 +88802,16 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.00%"
+    },
+    {
+      "code": "007756",
+      "name": "财通久利三个月定开债发起式",
+      "nav": 1.1368,
+      "prev_nav": null,
+      "day_return": 0.01,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.30%"
     },
     {
       "code": "008703",
@@ -89454,16 +90194,6 @@
       "fee": "0.04%"
     },
     {
-      "code": "004038",
-      "name": "中银富享定开债",
-      "nav": 1.1124,
-      "prev_nav": null,
-      "day_return": 0.01,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.80%"
-    },
-    {
       "code": "014857",
       "name": "建信鑫享短债债券C",
       "nav": 1.1124,
@@ -90484,6 +91214,16 @@
       "fee": "0.00%"
     },
     {
+      "code": "017529",
+      "name": "财通安益中短债债券A",
+      "nav": 1.0973,
+      "prev_nav": null,
+      "day_return": 0.01,
+      "buy_status": "限大额",
+      "sell_status": "开放赎回",
+      "fee": "0.03%"
+    },
+    {
       "code": "018423",
       "name": "汇添富稳裕30天滚动持有债券C",
       "nav": 1.0971,
@@ -90970,6 +91710,16 @@
       "prev_nav": null,
       "day_return": 0.01,
       "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
+      "code": "017530",
+      "name": "财通安益中短债债券C",
+      "nav": 1.0894,
+      "prev_nav": null,
+      "day_return": 0.01,
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },
@@ -92804,6 +93554,16 @@
       "fee": "0.00%"
     },
     {
+      "code": "009816",
+      "name": "大摩丰裕63个月开放债券",
+      "nav": 1.0683,
+      "prev_nav": null,
+      "day_return": 0.01,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.03%"
+    },
+    {
       "code": "019465",
       "name": "银华月月享30天持有期债券C",
       "nav": 1.0681,
@@ -94062,6 +94822,16 @@
       "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.00%"
+    },
+    {
+      "code": "018458",
+      "name": "华润元大润享三个月定开债A",
+      "nav": 1.053063,
+      "prev_nav": null,
+      "day_return": 0.01,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.03%"
     },
     {
       "code": "020936",
@@ -98784,6 +99554,16 @@
       "fee": "0.045%"
     },
     {
+      "code": "018758",
+      "name": "山证资管汇利一年定开债券A",
+      "nav": 1.0109,
+      "prev_nav": null,
+      "day_return": 0.01,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.05%"
+    },
+    {
       "code": "023295",
       "name": "民生加银稳鑫120天滚动持有债券C",
       "nav": 1.0109,
@@ -99114,6 +99894,16 @@
       "fee": "0.00%"
     },
     {
+      "code": "018759",
+      "name": "山证资管汇利一年定开债券C",
+      "nav": 1.008,
+      "prev_nav": null,
+      "day_return": 0.01,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.00%"
+    },
+    {
       "code": "002633",
       "name": "鑫元双债增强债券C",
       "nav": 1.0078,
@@ -99274,6 +100064,16 @@
       "fee": "0.03%"
     },
     {
+      "code": "027295",
+      "name": "大摩添悦债券A",
+      "nav": 1.0063,
+      "prev_nav": null,
+      "day_return": 0.01,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.03%"
+    },
+    {
       "code": "015397",
       "name": "博时富鸿金融债3个月定开债A",
       "nav": 1.0062,
@@ -99297,6 +100097,16 @@
       "code": "026550",
       "name": "百嘉中债1-5年政金债指数C",
       "nav": 1.0061,
+      "prev_nav": null,
+      "day_return": 0.01,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
+      "code": "027296",
+      "name": "大摩添悦债券C",
+      "nav": 1.006,
       "prev_nav": null,
       "day_return": 0.01,
       "buy_status": "开放申购",
@@ -101264,6 +102074,16 @@
       "fee": "0.00%"
     },
     {
+      "code": "005369",
+      "name": "富国臻利纯债定开债券",
+      "nav": 1.1244,
+      "prev_nav": null,
+      "day_return": 0.0,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.06%"
+    },
+    {
       "code": "022608",
       "name": "人保鑫泽纯债E",
       "nav": 1.1241,
@@ -101402,6 +102222,16 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.08%"
+    },
+    {
+      "code": "004038",
+      "name": "中银富享定开债",
+      "nav": 1.112353,
+      "prev_nav": null,
+      "day_return": 0.0,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.80%"
     },
     {
       "code": "019128",
@@ -102924,6 +103754,16 @@
       "fee": "0.00%"
     },
     {
+      "code": "018459",
+      "name": "华润元大润享三个月定开债C",
+      "nav": 1.0498,
+      "prev_nav": null,
+      "day_return": 0.0,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
       "code": "020337",
       "name": "富达90天债券A",
       "nav": 1.0496,
@@ -103214,6 +104054,16 @@
       "fee": "0.00%"
     },
     {
+      "code": "010486",
+      "name": "中航瑞晨87个月定开债C",
+      "nav": 1.0411,
+      "prev_nav": null,
+      "day_return": 0.0,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.00%"
+    },
+    {
       "code": "161117",
       "name": "易方达永旭定开债",
       "nav": 1.041,
@@ -103222,6 +104072,16 @@
       "buy_status": "暂停申购",
       "sell_status": "暂停赎回",
       "fee": "0.06%"
+    },
+    {
+      "code": "010485",
+      "name": "中航瑞晨87个月定开债A",
+      "nav": 1.0405,
+      "prev_nav": null,
+      "day_return": 0.0,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.03%"
     },
     {
       "code": "019616",
@@ -103272,6 +104132,16 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.08%"
+    },
+    {
+      "code": "018348",
+      "name": "富安达中证同业存单AAA指数7天持有期",
+      "nav": 1.0391,
+      "prev_nav": null,
+      "day_return": 0.0,
+      "buy_status": "限大额",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
     },
     {
       "code": "020666",
@@ -103374,6 +104244,16 @@
       "fee": "0.00%"
     },
     {
+      "code": "014552",
+      "name": "中航瑞华ESG一年定开债发起A",
+      "nav": 1.0371,
+      "prev_nav": null,
+      "day_return": 0.0,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.06%"
+    },
+    {
       "code": "004469",
       "name": "汇添富鑫益定开债A",
       "nav": 1.0368,
@@ -103412,6 +104292,16 @@
       "buy_status": "暂停申购",
       "sell_status": "开放赎回",
       "fee": "0.00%"
+    },
+    {
+      "code": "017581",
+      "name": "中航瑞融ESG一年定开债发起A",
+      "nav": 1.0365,
+      "prev_nav": null,
+      "day_return": 0.0,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.04%"
     },
     {
       "code": "021796",
@@ -103511,6 +104401,16 @@
       "day_return": 0.0,
       "buy_status": "限大额",
       "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
+      "code": "014553",
+      "name": "中航瑞华ESG一年定开债发起C",
+      "nav": 1.0327,
+      "prev_nav": null,
+      "day_return": 0.0,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
       "fee": "0.00%"
     },
     {
@@ -103684,6 +104584,26 @@
       "fee": "0.08%"
     },
     {
+      "code": "014436",
+      "name": "中航瑞夏一年定开债发起C",
+      "nav": 1.0254,
+      "prev_nav": null,
+      "day_return": 0.0,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.00%"
+    },
+    {
+      "code": "014435",
+      "name": "中航瑞夏一年定开债发起A",
+      "nav": 1.0254,
+      "prev_nav": null,
+      "day_return": 0.0,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.03%"
+    },
+    {
       "code": "025240",
       "name": "浙商惠睿纯债C",
       "nav": 1.0252,
@@ -103752,6 +104672,16 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.05%"
+    },
+    {
+      "code": "019668",
+      "name": "中航瑞安利率债三个月定开债A",
+      "nav": 1.0241,
+      "prev_nav": null,
+      "day_return": 0.0,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.03%"
     },
     {
       "code": "000111",
@@ -103931,6 +104861,16 @@
       "day_return": 0.0,
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
+      "code": "019669",
+      "name": "中航瑞安利率债三个月定开债C",
+      "nav": 1.021,
+      "prev_nav": null,
+      "day_return": 0.0,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
       "fee": "0.00%"
     },
     {
@@ -104334,6 +105274,16 @@
       "fee": "0.00%"
     },
     {
+      "code": "026229",
+      "name": "招商资管中证同业存单AAA指数7天持有期",
+      "nav": 1.0083,
+      "prev_nav": null,
+      "day_return": 0.0,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
       "code": "021463",
       "name": "达诚添利利率债C",
       "nav": 1.0081,
@@ -104392,6 +105342,16 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.04%"
+    },
+    {
+      "code": "017582",
+      "name": "中航瑞融ESG一年定开债发起C",
+      "nav": 1.0037,
+      "prev_nav": null,
+      "day_return": 0.0,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.00%"
     },
     {
       "code": "021349",
@@ -104704,6 +105664,16 @@
       "fee": "0.00%"
     },
     {
+      "code": "027017",
+      "name": "中航祥瑞债券发起C",
+      "nav": 1.0,
+      "prev_nav": null,
+      "day_return": 0.0,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
       "code": "027693",
       "name": "华夏诚安混合C",
       "nav": 1.0,
@@ -104722,6 +105692,16 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.00%"
+    },
+    {
+      "code": "028982",
+      "name": "路博迈红利量化选股股票A",
+      "nav": 0.9998,
+      "prev_nav": null,
+      "day_return": 0.0,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.08%"
     },
     {
       "code": "026750",
@@ -105082,6 +106062,26 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.06%"
+    },
+    {
+      "code": "016214",
+      "name": "富安达长盈灵活配置混合C",
+      "nav": 0.772,
+      "prev_nav": null,
+      "day_return": 0.0,
+      "buy_status": "暂停申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
+      "code": "002584",
+      "name": "富安达长盈灵活配置混合A",
+      "nav": 0.767,
+      "prev_nav": null,
+      "day_return": 0.0,
+      "buy_status": "暂停申购",
+      "sell_status": "开放赎回",
+      "fee": "0.15%"
     },
     {
       "code": "024590",
@@ -106794,6 +107794,16 @@
       "fee": "0.00%"
     },
     {
+      "code": "022023",
+      "name": "大摩中证同业存单AAA指数7天持有",
+      "nav": 1.0193,
+      "prev_nav": null,
+      "day_return": -0.01,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
       "code": "026133",
       "name": "鹏华睿和90天持有期债券A",
       "nav": 1.0144,
@@ -106961,6 +107971,16 @@
       "day_return": -0.01,
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
+      "code": "028983",
+      "name": "路博迈红利量化选股股票C",
+      "nav": 0.9996,
+      "prev_nav": null,
+      "day_return": -0.01,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
       "fee": "0.00%"
     },
     {
@@ -115314,6 +116334,26 @@
       "fee": "0.00%"
     },
     {
+      "code": "027640",
+      "name": "摩根恒利稳健三个月持有期混合(ETF-FOF)A",
+      "nav": 0.9889,
+      "prev_nav": null,
+      "day_return": -0.07,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.50%"
+    },
+    {
+      "code": "027641",
+      "name": "摩根恒利稳健三个月持有期混合(ETF-FOF)C",
+      "nav": 0.9879,
+      "prev_nav": null,
+      "day_return": -0.07,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
       "code": "027412",
       "name": "景顺长城景颐保利债券A",
       "nav": 0.9838,
@@ -119547,6 +120587,26 @@
       "code": "012185",
       "name": "大成创新趋势混合C",
       "nav": 0.726,
+      "prev_nav": null,
+      "day_return": -0.11,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
+      "code": "013356",
+      "name": "大摩沪港深精选混合A",
+      "nav": 0.5522,
+      "prev_nav": null,
+      "day_return": -0.11,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.15%"
+    },
+    {
+      "code": "013357",
+      "name": "大摩沪港深精选混合C",
+      "nav": 0.5418,
       "prev_nav": null,
       "day_return": -0.11,
       "buy_status": "开放申购",
@@ -125864,6 +126924,16 @@
       "fee": "0.00%"
     },
     {
+      "code": "026200",
+      "name": "大摩港股通多元成长混合C",
+      "nav": 0.8508,
+      "prev_nav": null,
+      "day_return": -0.19,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
       "code": "006477",
       "name": "中邮沪港深精选混合A",
       "nav": 0.7994,
@@ -126524,6 +127594,16 @@
       "fee": "0.60%"
     },
     {
+      "code": "026199",
+      "name": "大摩港股通多元成长混合A",
+      "nav": 0.8534,
+      "prev_nav": null,
+      "day_return": -0.2,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.15%"
+    },
+    {
       "code": "015102",
       "name": "东方红ESG可持续投资混合A",
       "nav": 0.8432,
@@ -126807,6 +127887,26 @@
       "code": "002972",
       "name": "前海开源鼎安债券C",
       "nav": 1.395,
+      "prev_nav": null,
+      "day_return": -0.21,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
+      "code": "001861",
+      "name": "富安达健康人生混合A",
+      "nav": 1.3415,
+      "prev_nav": null,
+      "day_return": -0.21,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.15%"
+    },
+    {
+      "code": "014470",
+      "name": "富安达健康人生混合C",
+      "nav": 1.3166,
       "prev_nav": null,
       "day_return": -0.21,
       "buy_status": "开放申购",
@@ -127710,7 +128810,7 @@
       "prev_nav": null,
       "day_return": -0.22,
       "buy_status": "开放申购",
-      "sell_status": "开放赎回",
+      "sell_status": "暂停赎回",
       "fee": "0.00%"
     },
     {
@@ -128280,7 +129380,7 @@
       "prev_nav": null,
       "day_return": -0.23,
       "buy_status": "开放申购",
-      "sell_status": "开放赎回",
+      "sell_status": "暂停赎回",
       "fee": "0.50%"
     },
     {
@@ -128477,6 +129577,26 @@
       "code": "023624",
       "name": "前海开源港股通价值领航混合C",
       "nav": 0.7009,
+      "prev_nav": null,
+      "day_return": -0.23,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
+      "code": "017048",
+      "name": "富安达产业优选混合A",
+      "nav": 0.6612,
+      "prev_nav": null,
+      "day_return": -0.23,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.15%"
+    },
+    {
+      "code": "017049",
+      "name": "富安达产业优选混合C",
+      "nav": 0.649,
       "prev_nav": null,
       "day_return": -0.23,
       "buy_status": "开放申购",
@@ -130117,6 +131237,16 @@
       "code": "015887",
       "name": "国投瑞银行业睿选混合A",
       "nav": 1.1683,
+      "prev_nav": null,
+      "day_return": -0.26,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.15%"
+    },
+    {
+      "code": "001291",
+      "name": "大摩量化多策略股票",
+      "nav": 1.166,
       "prev_nav": null,
       "day_return": -0.26,
       "buy_status": "开放申购",
@@ -133549,7 +134679,7 @@
       "nav": 1.5902,
       "prev_nav": null,
       "day_return": -0.31,
-      "buy_status": "开放申购",
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.12%"
     },
@@ -134199,7 +135329,7 @@
       "nav": 1.5812,
       "prev_nav": null,
       "day_return": -0.32,
-      "buy_status": "开放申购",
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },
@@ -134402,6 +135532,16 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.00%"
+    },
+    {
+      "code": "016970",
+      "name": "华夏恒生生物科技ETF发起式联接(QDII)A",
+      "nav": 1.0763,
+      "prev_nav": null,
+      "day_return": -0.32,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.12%"
     },
     {
       "code": "017575",
@@ -134794,6 +135934,16 @@
       "fee": "0.12%"
     },
     {
+      "code": "022091",
+      "name": "富安达沪深300指数增强C",
+      "nav": 1.15,
+      "prev_nav": null,
+      "day_return": -0.33,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
       "code": "006127",
       "name": "华宝港股通标普香港上市中国中小盘指数(LOF)C",
       "nav": 1.1498,
@@ -134812,6 +135962,16 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.03%"
+    },
+    {
+      "code": "016971",
+      "name": "华夏恒生生物科技ETF发起式联接(QDII)C",
+      "nav": 1.0637,
+      "prev_nav": null,
+      "day_return": -0.33,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
     },
     {
       "code": "020815",
@@ -135352,6 +136512,16 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.00%"
+    },
+    {
+      "code": "022090",
+      "name": "富安达沪深300指数增强A",
+      "nav": 1.1556,
+      "prev_nav": null,
+      "day_return": -0.34,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.12%"
     },
     {
       "code": "004226",
@@ -138664,6 +139834,16 @@
       "fee": "0.08%"
     },
     {
+      "code": "000309",
+      "name": "大摩品质生活精选股票A",
+      "nav": 4.803,
+      "prev_nav": null,
+      "day_return": -0.39,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.15%"
+    },
+    {
       "code": "006366",
       "name": "兴业安保优选混合A",
       "nav": 1.7982,
@@ -139227,6 +140407,16 @@
       "code": "022229",
       "name": "富国兴利增强债券E",
       "nav": 1.7553,
+      "prev_nav": null,
+      "day_return": -0.4,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
+      "code": "014030",
+      "name": "大摩健康产业混合C",
+      "nav": 1.748,
       "prev_nav": null,
       "day_return": -0.4,
       "buy_status": "开放申购",
@@ -139852,6 +141042,16 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.00%"
+    },
+    {
+      "code": "233011",
+      "name": "大摩主题优选混合",
+      "nav": 2.656,
+      "prev_nav": null,
+      "day_return": -0.41,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.15%"
     },
     {
       "code": "025534",
@@ -140574,9 +141774,29 @@
       "fee": "0.00%"
     },
     {
+      "code": "019484",
+      "name": "大摩品质生活精选股票C",
+      "nav": 4.745,
+      "prev_nav": null,
+      "day_return": -0.42,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
       "code": "001528",
       "name": "诺安先进制造股票A",
       "nav": 3.113,
+      "prev_nav": null,
+      "day_return": -0.42,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.15%"
+    },
+    {
+      "code": "000594",
+      "name": "大摩进取优选股票",
+      "nav": 2.824,
       "prev_nav": null,
       "day_return": -0.42,
       "buy_status": "开放申购",
@@ -142194,6 +143414,16 @@
       "fee": "0.00%"
     },
     {
+      "code": "960011",
+      "name": "中银持续增长混合H",
+      "nav": 0.3668,
+      "prev_nav": null,
+      "day_return": -0.43,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "5.00%"
+    },
+    {
       "code": "001892",
       "name": "长盛新兴成长混合A",
       "nav": 3.5361,
@@ -142332,6 +143562,16 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.12%"
+    },
+    {
+      "code": "019401",
+      "name": "交银瑞元三年定期开放混合",
+      "nav": 1.2529,
+      "prev_nav": null,
+      "day_return": -0.44,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.15%"
     },
     {
       "code": "022867",
@@ -143112,6 +144352,16 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.08%"
+    },
+    {
+      "code": "002708",
+      "name": "大摩健康产业混合A",
+      "nav": 1.782,
+      "prev_nav": null,
+      "day_return": -0.45,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.15%"
     },
     {
       "code": "015124",
@@ -151554,6 +152804,16 @@
       "fee": "0.00%"
     },
     {
+      "code": "000755",
+      "name": "富安达新兴成长混合A",
+      "nav": 0.5993,
+      "prev_nav": null,
+      "day_return": -0.61,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.15%"
+    },
+    {
       "code": "000577",
       "name": "安信价值精选股票A",
       "nav": 4.7485,
@@ -152437,6 +153697,16 @@
       "code": "012494",
       "name": "长信内需均衡混合C",
       "nav": 0.6609,
+      "prev_nav": null,
+      "day_return": -0.63,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
+      "code": "014471",
+      "name": "富安达新兴成长混合C",
+      "nav": 0.588,
       "prev_nav": null,
       "day_return": -0.63,
       "buy_status": "开放申购",
@@ -154444,6 +155714,16 @@
       "fee": "0.00%"
     },
     {
+      "code": "010314",
+      "name": "大摩内需增长混合A",
+      "nav": 0.555,
+      "prev_nav": null,
+      "day_return": -0.68,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.15%"
+    },
+    {
       "code": "012526",
       "name": "广发盛锦混合A",
       "nav": 0.4846,
@@ -154847,6 +156127,16 @@
       "code": "024358",
       "name": "东方阿尔法健康产业混合发起C",
       "nav": 0.7827,
+      "prev_nav": null,
+      "day_return": -0.69,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
+      "code": "014869",
+      "name": "大摩内需增长混合C",
+      "nav": 0.5443,
       "prev_nav": null,
       "day_return": -0.69,
       "buy_status": "开放申购",
@@ -158014,6 +159304,16 @@
       "fee": "0.00%"
     },
     {
+      "code": "014103",
+      "name": "富安达成长价值一年持有期混合A",
+      "nav": 0.6687,
+      "prev_nav": null,
+      "day_return": -0.77,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.15%"
+    },
+    {
       "code": "028786",
       "name": "银华和谐主题混合C",
       "nav": 3.322,
@@ -158447,6 +159747,16 @@
       "code": "027419",
       "name": "博时国证储能电池指数C",
       "nav": 0.7009,
+      "prev_nav": null,
+      "day_return": -0.78,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
+      "code": "014104",
+      "name": "富安达成长价值一年持有期混合C",
+      "nav": 0.6527,
       "prev_nav": null,
       "day_return": -0.78,
       "buy_status": "开放申购",
@@ -159544,6 +160854,16 @@
       "fee": "0.00%"
     },
     {
+      "code": "013067",
+      "name": "富安达中小盘六个月持有混合发起",
+      "nav": 0.7173,
+      "prev_nav": null,
+      "day_return": -0.82,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.15%"
+    },
+    {
       "code": "026264",
       "name": "平安港股通均衡配置混合C",
       "nav": 0.6932,
@@ -160212,6 +161532,26 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.15%"
+    },
+    {
+      "code": "710002",
+      "name": "富安达策略精选混合A",
+      "nav": 1.9634,
+      "prev_nav": null,
+      "day_return": -0.85,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.15%"
+    },
+    {
+      "code": "026856",
+      "name": "富安达策略精选混合C",
+      "nav": 1.9597,
+      "prev_nav": null,
+      "day_return": -0.85,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
     },
     {
       "code": "004698",
@@ -163394,6 +164734,26 @@
       "fee": "0.15%"
     },
     {
+      "code": "023435",
+      "name": "富安达中证A500指数增强A",
+      "nav": 1.1297,
+      "prev_nav": null,
+      "day_return": -0.95,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.12%"
+    },
+    {
+      "code": "023436",
+      "name": "富安达中证A500指数增强C",
+      "nav": 1.1252,
+      "prev_nav": null,
+      "day_return": -0.95,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
       "code": "023568",
       "name": "招商资管中证A500指数增强发起A",
       "nav": 1.1135,
@@ -164672,6 +166032,16 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.15%"
+    },
+    {
+      "code": "960012",
+      "name": "中银收益混合H",
+      "nav": 1.3369,
+      "prev_nav": null,
+      "day_return": -0.99,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "5.00%"
     },
     {
       "code": "014505",
@@ -165964,6 +167334,16 @@
       "fee": "0.12%"
     },
     {
+      "code": "233009",
+      "name": "大摩多因子策略混合A",
+      "nav": 1.0647,
+      "prev_nav": null,
+      "day_return": -1.04,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.15%"
+    },
+    {
       "code": "014947",
       "name": "南方高质量优选混合C",
       "nav": 1.0585,
@@ -166212,6 +167592,16 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.15%"
+    },
+    {
+      "code": "026420",
+      "name": "大摩多因子策略混合C",
+      "nav": 1.1069,
+      "prev_nav": null,
+      "day_return": -1.05,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
     },
     {
       "code": "025825",
@@ -168674,6 +170064,26 @@
       "fee": "0.00%"
     },
     {
+      "code": "233001",
+      "name": "大摩基础行业混合",
+      "nav": 0.5206,
+      "prev_nav": null,
+      "day_return": -1.14,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.15%"
+    },
+    {
+      "code": "009380",
+      "name": "富安达科技领航混合A",
+      "nav": 0.5095,
+      "prev_nav": null,
+      "day_return": -1.14,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.15%"
+    },
+    {
       "code": "001740",
       "name": "光大中国制造2025灵活配置混合A",
       "nav": 2.055,
@@ -169217,6 +170627,16 @@
       "code": "013349",
       "name": "创金合信大健康混合C",
       "nav": 0.5609,
+      "prev_nav": null,
+      "day_return": -1.16,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
+      "code": "018987",
+      "name": "富安达科技领航混合C",
+      "nav": 0.5046,
       "prev_nav": null,
       "day_return": -1.16,
       "buy_status": "开放申购",
@@ -170764,6 +172184,16 @@
       "fee": "0.00%"
     },
     {
+      "code": "007943",
+      "name": "富安达中证500指数增强A",
+      "nav": 1.5368,
+      "prev_nav": null,
+      "day_return": -1.22,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.12%"
+    },
+    {
       "code": "009327",
       "name": "东兴兴晟混合A",
       "nav": 1.5282,
@@ -170772,6 +172202,16 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.15%"
+    },
+    {
+      "code": "019808",
+      "name": "富安达中证500指数增强C",
+      "nav": 1.5235,
+      "prev_nav": null,
+      "day_return": -1.22,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
     },
     {
       "code": "019013",
@@ -171144,6 +172584,26 @@
       "fee": "0.00%"
     },
     {
+      "code": "009789",
+      "name": "富安达科技创新混合A",
+      "nav": 1.1174,
+      "prev_nav": null,
+      "day_return": -1.23,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.15%"
+    },
+    {
+      "code": "019253",
+      "name": "富安达科技创新混合C",
+      "nav": 1.1068,
+      "prev_nav": null,
+      "day_return": -1.23,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
       "code": "028939",
       "name": "南方国证粮食产业ETF发起联接A",
       "nav": 0.8867,
@@ -171264,6 +172724,16 @@
       "fee": "0.12%"
     },
     {
+      "code": "233010",
+      "name": "大摩深证300指数增强",
+      "nav": 1.985,
+      "prev_nav": null,
+      "day_return": -1.24,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.12%"
+    },
+    {
       "code": "007499",
       "name": "光大风格轮动混合C",
       "nav": 1.917,
@@ -171357,6 +172827,16 @@
       "code": "023780",
       "name": "摩根汇智优选混合A",
       "nav": 0.9825,
+      "prev_nav": null,
+      "day_return": -1.24,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.15%"
+    },
+    {
+      "code": "009246",
+      "name": "大摩ESG量化混合A",
+      "nav": 0.9364,
       "prev_nav": null,
       "day_return": -1.24,
       "buy_status": "开放申购",
@@ -171907,6 +173387,16 @@
       "code": "013923",
       "name": "华夏中证1000ETF发起式联接C",
       "nav": 0.9546,
+      "prev_nav": null,
+      "day_return": -1.26,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
+      "code": "026421",
+      "name": "大摩ESG量化混合C",
+      "nav": 0.9335,
       "prev_nav": null,
       "day_return": -1.26,
       "buy_status": "开放申购",
@@ -179944,6 +181434,26 @@
       "fee": "0.00%"
     },
     {
+      "code": "026448",
+      "name": "大摩沪港深科技混合A",
+      "nav": 0.999,
+      "prev_nav": null,
+      "day_return": -1.54,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.15%"
+    },
+    {
+      "code": "026449",
+      "name": "大摩沪港深科技混合C",
+      "nav": 0.9945,
+      "prev_nav": null,
+      "day_return": -1.54,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
       "code": "011756",
       "name": "博时产业优选混合A",
       "nav": 0.9922,
@@ -180434,12 +181944,32 @@
       "fee": "0.00%"
     },
     {
+      "code": "021051",
+      "name": "国联中证500指数增强A",
+      "nav": 1.3403,
+      "prev_nav": null,
+      "day_return": -1.56,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.12%"
+    },
+    {
       "code": "014345",
       "name": "鹏华中证500指数增强C",
       "nav": 1.338,
       "prev_nav": null,
       "day_return": -1.56,
       "buy_status": "限大额",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
+      "code": "021052",
+      "name": "国联中证500指数增强C",
+      "nav": 1.3279,
+      "prev_nav": null,
+      "day_return": -1.56,
+      "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },
@@ -182614,6 +184144,16 @@
       "fee": "0.08%"
     },
     {
+      "code": "025875",
+      "name": "富安达上证科创板综合指数增强A",
+      "nav": 0.9701,
+      "prev_nav": null,
+      "day_return": -1.63,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.12%"
+    },
+    {
       "code": "010798",
       "name": "长城优选回报六个月持有混合C",
       "nav": 0.9585,
@@ -182887,6 +184427,16 @@
       "code": "016979",
       "name": "博时均衡优选混合C",
       "nav": 1.0202,
+      "prev_nav": null,
+      "day_return": -1.64,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
+      "code": "025876",
+      "name": "富安达上证科创板综合指数增强C",
+      "nav": 0.9679,
       "prev_nav": null,
       "day_return": -1.64,
       "buy_status": "开放申购",
@@ -187757,6 +189307,26 @@
       "code": "024440",
       "name": "交银瑞安混合C",
       "nav": 1.2764,
+      "prev_nav": null,
+      "day_return": -1.85,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
+      "code": "020231",
+      "name": "大摩景气智选混合A",
+      "nav": 1.2273,
+      "prev_nav": null,
+      "day_return": -1.85,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.15%"
+    },
+    {
+      "code": "020233",
+      "name": "大摩景气智选混合C",
+      "nav": 1.2185,
       "prev_nav": null,
       "day_return": -1.85,
       "buy_status": "开放申购",
@@ -208714,6 +210284,26 @@
       "fee": "0.00%"
     },
     {
+      "code": "002707",
+      "name": "大摩科技领先混合A",
+      "nav": 2.38,
+      "prev_nav": null,
+      "day_return": -3.36,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.15%"
+    },
+    {
+      "code": "014871",
+      "name": "大摩科技领先混合C",
+      "nav": 2.3374,
+      "prev_nav": null,
+      "day_return": -3.36,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
       "code": "020059",
       "name": "博时卓越品牌混合(LOF)C",
       "nav": 2.333,
@@ -209452,6 +211042,26 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.15%"
+    },
+    {
+      "code": "017102",
+      "name": "大摩数字经济混合A",
+      "nav": 2.8688,
+      "prev_nav": null,
+      "day_return": -3.46,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.15%"
+    },
+    {
+      "code": "017103",
+      "name": "大摩数字经济混合C",
+      "nav": 2.8069,
+      "prev_nav": null,
+      "day_return": -3.46,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
     },
     {
       "code": "015456",
@@ -212204,6 +213814,16 @@
       "fee": "0.00%"
     },
     {
+      "code": "010322",
+      "name": "大摩新兴产业股票",
+      "nav": 0.9289,
+      "prev_nav": null,
+      "day_return": -3.8,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.15%"
+    },
+    {
       "code": "016262",
       "name": "银华智荟内在价值灵活配置混合发起C",
       "nav": 3.5575,
@@ -212737,6 +214357,26 @@
       "code": "010793",
       "name": "华安成长先锋混合C",
       "nav": 1.0127,
+      "prev_nav": null,
+      "day_return": -3.89,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
+      "code": "002885",
+      "name": "大摩万众创新混合A",
+      "nav": 0.9334,
+      "prev_nav": null,
+      "day_return": -3.89,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.15%"
+    },
+    {
+      "code": "011712",
+      "name": "大摩万众创新混合C",
+      "nav": 0.9231,
       "prev_nav": null,
       "day_return": -3.89,
       "buy_status": "开放申购",
@@ -220794,26 +222434,6 @@
       "fee": "0.00%"
     },
     {
-      "code": "000309",
-      "name": "大摩品质生活精选股票A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.15%"
-    },
-    {
-      "code": "019484",
-      "name": "大摩品质生活精选股票C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
-    },
-    {
       "code": "486002",
       "name": "工银全球精选股票(QDII)",
       "nav": null,
@@ -220984,16 +222604,6 @@
       "fee": "0.00%"
     },
     {
-      "code": "233006",
-      "name": "大摩领先优势混合",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.15%"
-    },
-    {
       "code": "012752",
       "name": "建信纳斯达克100指数(QDII)C人民币",
       "nav": null,
@@ -221024,16 +222634,6 @@
       "fee": "0.00%"
     },
     {
-      "code": "233007",
-      "name": "大摩卓越成长混合",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.15%"
-    },
-    {
       "code": "161125",
       "name": "易方达标普500指数人民币A",
       "nav": null,
@@ -221044,26 +222644,6 @@
       "fee": "0.12%"
     },
     {
-      "code": "710001",
-      "name": "富安达优势成长混合A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.15%"
-    },
-    {
-      "code": "024667",
-      "name": "富安达优势成长混合C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
-    },
-    {
       "code": "012860",
       "name": "易方达标普500指数人民币C",
       "nav": null,
@@ -221072,16 +222652,6 @@
       "buy_status": "暂停申购",
       "sell_status": "开放赎回",
       "fee": "0.00%"
-    },
-    {
-      "code": "017102",
-      "name": "大摩数字经济混合A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.15%"
     },
     {
       "code": "519696",
@@ -221096,16 +222666,6 @@
     {
       "code": "027170",
       "name": "交银环球精选混合(QDII)C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
-    },
-    {
-      "code": "017103",
-      "name": "大摩数字经济混合C",
       "nav": null,
       "prev_nav": null,
       "day_return": null,
@@ -221142,16 +222702,6 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.00%"
-    },
-    {
-      "code": "000594",
-      "name": "大摩进取优选股票",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.15%"
     },
     {
       "code": "096001",
@@ -221256,16 +222806,6 @@
     {
       "code": "040021",
       "name": "华安大中华升级股票(QDII)A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.15%"
-    },
-    {
-      "code": "233011",
-      "name": "大摩主题优选混合",
       "nav": null,
       "prev_nav": null,
       "day_return": null,
@@ -221402,26 +222942,6 @@
       "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.15%"
-    },
-    {
-      "code": "002707",
-      "name": "大摩科技领先混合A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.15%"
-    },
-    {
-      "code": "014871",
-      "name": "大摩科技领先混合C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
     },
     {
       "code": "501226",
@@ -221854,16 +223374,6 @@
       "fee": "0.15%"
     },
     {
-      "code": "233010",
-      "name": "大摩深证300指数增强",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.12%"
-    },
-    {
       "code": "001728",
       "name": "银华战略新兴定开混合",
       "nav": null,
@@ -221902,26 +223412,6 @@
       "buy_status": "暂停申购",
       "sell_status": "开放赎回",
       "fee": "0.12%"
-    },
-    {
-      "code": "710002",
-      "name": "富安达策略精选混合A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.15%"
-    },
-    {
-      "code": "026856",
-      "name": "富安达策略精选混合C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
     },
     {
       "code": "018044",
@@ -222154,16 +223644,6 @@
       "fee": "0.00%"
     },
     {
-      "code": "002708",
-      "name": "大摩健康产业混合A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.15%"
-    },
-    {
       "code": "018230",
       "name": "易方达全球优质企业混合(QDII)C(人民币份额)",
       "nav": null,
@@ -222212,16 +223692,6 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.15%"
-    },
-    {
-      "code": "014030",
-      "name": "大摩健康产业混合C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
     },
     {
       "code": "003526",
@@ -222734,16 +224204,6 @@
       "fee": "0.00%"
     },
     {
-      "code": "007943",
-      "name": "富安达中证500指数增强A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.12%"
-    },
-    {
       "code": "017895",
       "name": "汇添富纳斯达克生物科技ETF发起式联接(QDII)人民币C",
       "nav": null,
@@ -222780,16 +224240,6 @@
       "prev_nav": null,
       "day_return": null,
       "buy_status": "限大额",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
-    },
-    {
-      "code": "019808",
-      "name": "富安达中证500指数增强C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },
@@ -222964,26 +224414,6 @@
       "fee": "0.12%"
     },
     {
-      "code": "710301",
-      "name": "富安达增强收益债券A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.08%"
-    },
-    {
-      "code": "020621",
-      "name": "华夏中证香港内地国有企业ETF发起式联接(QDII)A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.12%"
-    },
-    {
       "code": "118001",
       "name": "易方达亚洲精选股票",
       "nav": null,
@@ -223026,16 +224456,6 @@
     {
       "code": "018588",
       "name": "易方达优势回报混合(FOF-LOF)C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
-    },
-    {
-      "code": "020622",
-      "name": "华夏中证香港内地国有企业ETF发起式联接(QDII)C",
       "nav": null,
       "prev_nav": null,
       "day_return": null,
@@ -223304,16 +224724,6 @@
       "fee": "0.00%"
     },
     {
-      "code": "710302",
-      "name": "富安达增强收益债券C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
-    },
-    {
       "code": "001019",
       "name": "兴业年年利定开债",
       "nav": null,
@@ -223362,16 +224772,6 @@
       "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.00%"
-    },
-    {
-      "code": "233005",
-      "name": "大摩强收益债券",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.08%"
     },
     {
       "code": "009164",
@@ -223514,16 +224914,6 @@
       "fee": "0.15%"
     },
     {
-      "code": "021051",
-      "name": "国联中证500指数增强A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.12%"
-    },
-    {
       "code": "015205",
       "name": "银华全球新能源车量化优选股票(QDII)C",
       "nav": null,
@@ -223554,16 +224944,6 @@
       "fee": "0.15%"
     },
     {
-      "code": "001660",
-      "name": "富安达行业轮动混合",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.15%"
-    },
-    {
       "code": "010292",
       "name": "东方红核心优选定开混合C",
       "nav": null,
@@ -223584,16 +224964,6 @@
       "fee": "0.15%"
     },
     {
-      "code": "960012",
-      "name": "中银收益混合H",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "5.00%"
-    },
-    {
       "code": "005220",
       "name": "海富通聚优精选混合(FOF)A",
       "nav": null,
@@ -223610,16 +224980,6 @@
       "prev_nav": null,
       "day_return": null,
       "buy_status": "限大额",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
-    },
-    {
-      "code": "021052",
-      "name": "国联中证500指数增强C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },
@@ -223662,16 +225022,6 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.00%"
-    },
-    {
-      "code": "001861",
-      "name": "富安达健康人生混合A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.15%"
     },
     {
       "code": "001063",
@@ -223764,16 +225114,6 @@
       "fee": "0.12%"
     },
     {
-      "code": "014470",
-      "name": "富安达健康人生混合C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
-    },
-    {
       "code": "004436",
       "name": "汇添富年年泰定开混合A",
       "nav": null,
@@ -223812,16 +225152,6 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.10%"
-    },
-    {
-      "code": "233012",
-      "name": "大摩多元收益债券A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.08%"
     },
     {
       "code": "163825",
@@ -224034,16 +225364,6 @@
       "fee": "0.06%"
     },
     {
-      "code": "233013",
-      "name": "大摩多元收益债券C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
-    },
-    {
       "code": "009842",
       "name": "东方红明鉴优选两年定开混合",
       "nav": null,
@@ -224164,16 +225484,6 @@
       "fee": "0.00%"
     },
     {
-      "code": "000024",
-      "name": "大摩双利增强债券A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.08%"
-    },
-    {
       "code": "018851",
       "name": "博时标普石油天然气勘探及生产精选行业指数发起(QDII)A人民币",
       "nav": null,
@@ -224182,16 +225492,6 @@
       "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.10%"
-    },
-    {
-      "code": "019401",
-      "name": "交银瑞元三年定期开放混合",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.15%"
     },
     {
       "code": "010639",
@@ -224252,16 +225552,6 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.00%"
-    },
-    {
-      "code": "020231",
-      "name": "大摩景气智选混合A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.15%"
     },
     {
       "code": "952313",
@@ -224334,16 +225624,6 @@
       "fee": "0.00%"
     },
     {
-      "code": "020233",
-      "name": "大摩景气智选混合C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
-    },
-    {
       "code": "002396",
       "name": "鹏华丰尚定开债B",
       "nav": null,
@@ -224412,16 +225692,6 @@
       "buy_status": "暂停申购",
       "sell_status": "暂停赎回",
       "fee": "0.12%"
-    },
-    {
-      "code": "000025",
-      "name": "大摩双利增强债券C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
     },
     {
       "code": "009213",
@@ -224694,16 +225964,6 @@
       "fee": "0.00%"
     },
     {
-      "code": "013214",
-      "name": "大摩安盈稳固六个月持有债券A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.08%"
-    },
-    {
       "code": "000179",
       "name": "广发美国房地产指数人民币(QDII)A",
       "nav": null,
@@ -224954,16 +226214,6 @@
       "fee": "0.08%"
     },
     {
-      "code": "025887",
-      "name": "国联金如意3个月滚动持有债券A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.04%"
-    },
-    {
       "code": "009490",
       "name": "泰康科技创新一年定开混合",
       "nav": null,
@@ -224982,16 +226232,6 @@
       "buy_status": "暂停申购",
       "sell_status": "暂停赎回",
       "fee": "0.08%"
-    },
-    {
-      "code": "013215",
-      "name": "大摩安盈稳固六个月持有债券C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
     },
     {
       "code": "009159",
@@ -225014,16 +226254,6 @@
       "fee": "0.00%"
     },
     {
-      "code": "001291",
-      "name": "大摩量化多策略股票",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.15%"
-    },
-    {
       "code": "009228",
       "name": "平安增鑫六个月定开债C",
       "nav": null,
@@ -225032,26 +226262,6 @@
       "buy_status": "暂停申购",
       "sell_status": "暂停赎回",
       "fee": "0.00%"
-    },
-    {
-      "code": "012603",
-      "name": "富安达富利纯债C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "限大额",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
-    },
-    {
-      "code": "009895",
-      "name": "摩根瑞盛87个月定期开放债券",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
-      "fee": "0.045%"
     },
     {
       "code": "007442",
@@ -225084,26 +226294,6 @@
       "fee": "0.16%"
     },
     {
-      "code": "000419",
-      "name": "大摩优质信价纯债A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.08%"
-    },
-    {
-      "code": "022090",
-      "name": "富安达沪深300指数增强A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.12%"
-    },
-    {
       "code": "016201",
       "name": "汇添富全球汽车产业升级混合(QDII)美元现钞",
       "nav": null,
@@ -225112,16 +226302,6 @@
       "buy_status": "暂停申购",
       "sell_status": "暂停赎回",
       "fee": "0.16%"
-    },
-    {
-      "code": "025888",
-      "name": "国联金如意3个月滚动持有债券C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
     },
     {
       "code": "000274",
@@ -225174,16 +226354,6 @@
       "fee": "0.057%"
     },
     {
-      "code": "007520",
-      "name": "富安达富利纯债A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "限大额",
-      "sell_status": "开放赎回",
-      "fee": "0.06%"
-    },
-    {
       "code": "021228",
       "name": "万家年年恒荣D",
       "nav": null,
@@ -225204,16 +226374,6 @@
       "fee": "0.04%"
     },
     {
-      "code": "020244",
-      "name": "大摩优质信价纯债E",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
-    },
-    {
       "code": "016200",
       "name": "汇添富全球汽车产业升级混合(QDII)美元现汇",
       "nav": null,
@@ -225222,16 +226382,6 @@
       "buy_status": "暂停申购",
       "sell_status": "开放赎回",
       "fee": "0.16%"
-    },
-    {
-      "code": "026010",
-      "name": "东财禧悦90天滚动持有中短债A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.03%"
     },
     {
       "code": "014067",
@@ -225254,16 +226404,6 @@
       "fee": "0.08%"
     },
     {
-      "code": "026008",
-      "name": "东财鑫享30天滚动持有中短债A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.03%"
-    },
-    {
       "code": "008607",
       "name": "广发汇择一年定期开放债券C",
       "nav": null,
@@ -225271,16 +226411,6 @@
       "day_return": null,
       "buy_status": "暂停申购",
       "sell_status": "暂停赎回",
-      "fee": "0.00%"
-    },
-    {
-      "code": "022091",
-      "name": "富安达沪深300指数增强C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
       "fee": "0.00%"
     },
     {
@@ -225444,16 +226574,6 @@
       "fee": "0.00%"
     },
     {
-      "code": "026011",
-      "name": "东财禧悦90天滚动持有中短债C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
-    },
-    {
       "code": "009237",
       "name": "兴业绿色纯债一年定开债券A",
       "nav": null,
@@ -225462,16 +226582,6 @@
       "buy_status": "暂停申购",
       "sell_status": "暂停赎回",
       "fee": "0.06%"
-    },
-    {
-      "code": "023435",
-      "name": "富安达中证A500指数增强A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.12%"
     },
     {
       "code": "003213",
@@ -225501,16 +226611,6 @@
       "day_return": null,
       "buy_status": "暂停申购",
       "sell_status": "暂停赎回",
-      "fee": "0.00%"
-    },
-    {
-      "code": "026009",
-      "name": "东财鑫享30天滚动持有中短债C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
       "fee": "0.00%"
     },
     {
@@ -225562,46 +226662,6 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.15%"
-    },
-    {
-      "code": "233015",
-      "name": "大摩量化配置混合A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.15%"
-    },
-    {
-      "code": "007756",
-      "name": "财通久利三个月定开债发起式",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
-      "fee": "0.30%"
-    },
-    {
-      "code": "023436",
-      "name": "富安达中证A500指数增强C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
-    },
-    {
-      "code": "000420",
-      "name": "大摩优质信价纯债C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
     },
     {
       "code": "020571",
@@ -225692,16 +226752,6 @@
       "buy_status": "暂停申购",
       "sell_status": "暂停赎回",
       "fee": "0.08%"
-    },
-    {
-      "code": "009789",
-      "name": "富安达科技创新混合A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.15%"
     },
     {
       "code": "017909",
@@ -225844,16 +226894,6 @@
       "fee": "0.00%"
     },
     {
-      "code": "005369",
-      "name": "富国臻利纯债定开债券",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
-      "fee": "0.06%"
-    },
-    {
       "code": "016080",
       "name": "财通资管通达稳健3个月持有债券发起(FOF)A",
       "nav": null,
@@ -225934,16 +226974,6 @@
       "fee": "0.06%"
     },
     {
-      "code": "019253",
-      "name": "富安达科技创新混合C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
-    },
-    {
       "code": "015969",
       "name": "博时富尊一年定开债发起式",
       "nav": null,
@@ -225952,16 +226982,6 @@
       "buy_status": "封闭期",
       "sell_status": "封闭期",
       "fee": "0.03%"
-    },
-    {
-      "code": "008305",
-      "name": "大摩量化配置混合C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
     },
     {
       "code": "008754",
@@ -226022,16 +227042,6 @@
       "buy_status": "暂停申购",
       "sell_status": "暂停赎回",
       "fee": "0.06%"
-    },
-    {
-      "code": "026420",
-      "name": "大摩多因子策略混合C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
     },
     {
       "code": "003832",
@@ -226424,16 +227434,6 @@
       "fee": "0.00%"
     },
     {
-      "code": "008863",
-      "name": "中银证券汇兴定期开放债券",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
-      "fee": "0.40%"
-    },
-    {
       "code": "003313",
       "name": "中银睿享定开债券",
       "nav": null,
@@ -226442,16 +227442,6 @@
       "buy_status": "暂停申购",
       "sell_status": "暂停赎回",
       "fee": "0.08%"
-    },
-    {
-      "code": "017529",
-      "name": "财通安益中短债债券A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "限大额",
-      "sell_status": "开放赎回",
-      "fee": "0.03%"
     },
     {
       "code": "015241",
@@ -226632,26 +227622,6 @@
       "buy_status": "暂停申购",
       "sell_status": "暂停赎回",
       "fee": "0.60%"
-    },
-    {
-      "code": "017531",
-      "name": "财通安益中短债债券E",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "限大额",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
-    },
-    {
-      "code": "017530",
-      "name": "财通安益中短债债券C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "限大额",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
     },
     {
       "code": "017072",
@@ -226874,16 +227844,6 @@
       "fee": "0.00%"
     },
     {
-      "code": "016970",
-      "name": "华夏恒生生物科技ETF发起式联接(QDII)A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.12%"
-    },
-    {
       "code": "020957",
       "name": "中银全球策略(QDII-FOF)C",
       "nav": null,
@@ -227042,16 +228002,6 @@
       "buy_status": "暂停申购",
       "sell_status": "暂停赎回",
       "fee": "0.60%"
-    },
-    {
-      "code": "233009",
-      "name": "大摩多因子策略混合A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.15%"
     },
     {
       "code": "005779",
@@ -227264,16 +228214,6 @@
       "fee": "0.03%"
     },
     {
-      "code": "009816",
-      "name": "大摩丰裕63个月开放债券",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
-      "fee": "0.03%"
-    },
-    {
       "code": "007145",
       "name": "泰康安和纯债6个月定开债券",
       "nav": null,
@@ -227332,16 +228272,6 @@
       "buy_status": "暂停申购",
       "sell_status": "暂停赎回",
       "fee": "0.15%"
-    },
-    {
-      "code": "016971",
-      "name": "华夏恒生生物科技ETF发起式联接(QDII)C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
     },
     {
       "code": "008724",
@@ -227484,16 +228414,6 @@
       "fee": "0.00%"
     },
     {
-      "code": "018878",
-      "name": "富安达富禧纯债30天持有债券A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.02%"
-    },
-    {
       "code": "006795",
       "name": "国泰裕祥三个月定开债",
       "nav": null,
@@ -227512,16 +228432,6 @@
       "buy_status": "暂停申购",
       "sell_status": "暂停赎回",
       "fee": "0.06%"
-    },
-    {
-      "code": "018879",
-      "name": "富安达富禧纯债30天持有债券C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
     },
     {
       "code": "014896",
@@ -227592,26 +228502,6 @@
       "buy_status": "暂停申购",
       "sell_status": "暂停赎回",
       "fee": "0.06%"
-    },
-    {
-      "code": "009567",
-      "name": "山证资管裕丰一年定开债券发起式",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
-      "fee": "0.80%"
-    },
-    {
-      "code": "016032",
-      "name": "光大尊颐纯债一年债券发起",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
-      "fee": "0.80%"
     },
     {
       "code": "006415",
@@ -227804,16 +228694,6 @@
       "fee": "0.03%"
     },
     {
-      "code": "018458",
-      "name": "华润元大润享三个月定开债A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.03%"
-    },
-    {
       "code": "014897",
       "name": "浙商兴盈6个月定开债券C",
       "nav": null,
@@ -227892,16 +228772,6 @@
       "buy_status": "暂停申购",
       "sell_status": "暂停赎回",
       "fee": "0.06%"
-    },
-    {
-      "code": "018459",
-      "name": "华润元大润享三个月定开债C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
     },
     {
       "code": "008367",
@@ -228054,16 +228924,6 @@
       "fee": "0.00%"
     },
     {
-      "code": "023239",
-      "name": "大摩恒安30天持有期债券A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.03%"
-    },
-    {
       "code": "011605",
       "name": "交银招享一年持有期混合(FOF)A",
       "nav": null,
@@ -228162,16 +229022,6 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.06%"
-    },
-    {
-      "code": "023240",
-      "name": "大摩恒安30天持有期债券C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
     },
     {
       "code": "007478",
@@ -228414,16 +229264,6 @@
       "fee": "0.08%"
     },
     {
-      "code": "010486",
-      "name": "中航瑞晨87个月定开债C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
-      "fee": "0.00%"
-    },
-    {
       "code": "002224",
       "name": "中邮绝对收益策略定期开放混合",
       "nav": null,
@@ -228454,26 +229294,6 @@
       "fee": "0.00%"
     },
     {
-      "code": "010485",
-      "name": "中航瑞晨87个月定开债A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
-      "fee": "0.03%"
-    },
-    {
-      "code": "009799",
-      "name": "中银证券安汇三年定开债",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
-      "fee": "0.04%"
-    },
-    {
       "code": "007205",
       "name": "银华美元债精选债券(QDII)C",
       "nav": null,
@@ -228502,16 +229322,6 @@
       "buy_status": "封闭期",
       "sell_status": "封闭期",
       "fee": "0.04%"
-    },
-    {
-      "code": "018348",
-      "name": "富安达中证同业存单AAA指数7天持有期",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "限大额",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
     },
     {
       "code": "020512",
@@ -228614,16 +229424,6 @@
       "fee": "0.00%"
     },
     {
-      "code": "014552",
-      "name": "中航瑞华ESG一年定开债发起A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
-      "fee": "0.06%"
-    },
-    {
       "code": "015701",
       "name": "华夏鼎誉三个月定开债券A",
       "nav": null,
@@ -228664,16 +229464,6 @@
       "fee": "0.08%"
     },
     {
-      "code": "007212",
-      "name": "山证资管裕泰3个月定开债券发起式",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
-      "fee": "0.08%"
-    },
-    {
       "code": "007517",
       "name": "博时富淳3个月定开债",
       "nav": null,
@@ -228682,16 +229472,6 @@
       "buy_status": "封闭期",
       "sell_status": "封闭期",
       "fee": "0.08%"
-    },
-    {
-      "code": "017581",
-      "name": "中航瑞融ESG一年定开债发起A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
-      "fee": "0.04%"
     },
     {
       "code": "009679",
@@ -228814,16 +229594,6 @@
       "fee": "0.08%"
     },
     {
-      "code": "014553",
-      "name": "中航瑞华ESG一年定开债发起C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
-      "fee": "0.00%"
-    },
-    {
       "code": "020346",
       "name": "易方达如意招享混合(FOF-LOF)C",
       "nav": null,
@@ -228841,26 +229611,6 @@
       "day_return": null,
       "buy_status": "暂停申购",
       "sell_status": "暂停赎回",
-      "fee": "0.00%"
-    },
-    {
-      "code": "022786",
-      "name": "大摩稳丰利率债A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.03%"
-    },
-    {
-      "code": "022787",
-      "name": "大摩稳丰利率债C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
       "fee": "0.00%"
     },
     {
@@ -228954,36 +229704,6 @@
       "fee": "0.00%"
     },
     {
-      "code": "025121",
-      "name": "大摩中债1-5年政金债指数A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.03%"
-    },
-    {
-      "code": "014436",
-      "name": "中航瑞夏一年定开债发起C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
-      "fee": "0.00%"
-    },
-    {
-      "code": "014435",
-      "name": "中航瑞夏一年定开债发起A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
-      "fee": "0.03%"
-    },
-    {
       "code": "009756",
       "name": "华宝宝利定开债券",
       "nav": null,
@@ -229034,16 +229754,6 @@
       "fee": "0.08%"
     },
     {
-      "code": "025122",
-      "name": "大摩中债1-5年政金债指数C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
-    },
-    {
       "code": "009770",
       "name": "英大安鑫66个月定期开放债券",
       "nav": null,
@@ -229054,16 +229764,6 @@
       "fee": "0.04%"
     },
     {
-      "code": "018451",
-      "name": "富安达富祥利率债C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
-    },
-    {
       "code": "016614",
       "name": "中欧尊悦一年定开债券发起",
       "nav": null,
@@ -229072,16 +229772,6 @@
       "buy_status": "暂停申购",
       "sell_status": "暂停赎回",
       "fee": "0.80%"
-    },
-    {
-      "code": "019668",
-      "name": "中航瑞安利率债三个月定开债A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
-      "fee": "0.03%"
     },
     {
       "code": "003746",
@@ -229124,26 +229814,6 @@
       "fee": "0.00%"
     },
     {
-      "code": "018450",
-      "name": "富安达富祥利率债A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.03%"
-    },
-    {
-      "code": "023557",
-      "name": "富安达富祥利率债D",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
-    },
-    {
       "code": "024067",
       "name": "金鹰稳利配置三个月持有债券发起(FOF)D",
       "nav": null,
@@ -229172,16 +229842,6 @@
       "buy_status": "暂停申购",
       "sell_status": "暂停赎回",
       "fee": "0.45%"
-    },
-    {
-      "code": "010946",
-      "name": "中银证券汇福一年定开债券发起式",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
-      "fee": "0.40%"
     },
     {
       "code": "010719",
@@ -229214,26 +229874,6 @@
       "fee": "0.06%"
     },
     {
-      "code": "021563",
-      "name": "富安达上清所0-3年政金债指数A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.05%"
-    },
-    {
-      "code": "023558",
-      "name": "富安达上清所0-3年政金债指数D",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
-    },
-    {
       "code": "022997",
       "name": "平安元享90天持有债券(FOF)A",
       "nav": null,
@@ -229251,16 +229891,6 @@
       "day_return": null,
       "buy_status": "封闭期",
       "sell_status": "封闭期",
-      "fee": "0.00%"
-    },
-    {
-      "code": "019669",
-      "name": "中航瑞安利率债三个月定开债C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
       "fee": "0.00%"
     },
     {
@@ -229312,26 +229942,6 @@
       "buy_status": "暂停申购",
       "sell_status": "暂停赎回",
       "fee": "0.06%"
-    },
-    {
-      "code": "022023",
-      "name": "大摩中证同业存单AAA指数7天持有",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
-    },
-    {
-      "code": "021564",
-      "name": "富安达上清所0-3年政金债指数C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
     },
     {
       "code": "008608",
@@ -229514,16 +230124,6 @@
       "fee": "0.00%"
     },
     {
-      "code": "025977",
-      "name": "大摩添益债券A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.03%"
-    },
-    {
       "code": "008751",
       "name": "大成全球美元债(QDII)A人民币",
       "nav": null,
@@ -229612,16 +230212,6 @@
       "buy_status": "暂停申购",
       "sell_status": "暂停赎回",
       "fee": "0.00%"
-    },
-    {
-      "code": "026448",
-      "name": "大摩沪港深科技混合A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.15%"
     },
     {
       "code": "007852",
@@ -229724,16 +230314,6 @@
       "fee": "0.03%"
     },
     {
-      "code": "025978",
-      "name": "大摩添益债券C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
-    },
-    {
       "code": "027218",
       "name": "华安鸿煜6个月持有债券C",
       "nav": null,
@@ -229752,16 +230332,6 @@
       "buy_status": "暂停申购",
       "sell_status": "开放赎回",
       "fee": "0.00%"
-    },
-    {
-      "code": "027498",
-      "name": "国联周期优选混合发起A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.08%"
     },
     {
       "code": "000487",
@@ -229802,16 +230372,6 @@
       "buy_status": "暂停申购",
       "sell_status": "暂停赎回",
       "fee": "0.08%"
-    },
-    {
-      "code": "027499",
-      "name": "国联周期优选混合发起C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
     },
     {
       "code": "009894",
@@ -229864,16 +230424,6 @@
       "fee": "1.00%"
     },
     {
-      "code": "018758",
-      "name": "山证资管汇利一年定开债券A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
-      "fee": "0.05%"
-    },
-    {
       "code": "025821",
       "name": "银华多策略稳健三个月持有期混合(FOF)C",
       "nav": null,
@@ -229902,16 +230452,6 @@
       "buy_status": "暂停申购",
       "sell_status": "暂停赎回",
       "fee": "0.075%"
-    },
-    {
-      "code": "026449",
-      "name": "大摩沪港深科技混合C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
     },
     {
       "code": "027930",
@@ -229984,16 +230524,6 @@
       "fee": "0.03%"
     },
     {
-      "code": "026229",
-      "name": "招商资管中证同业存单AAA指数7天持有期",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
-    },
-    {
       "code": "026980",
       "name": "东方红卓远甄选6个月持有混合A",
       "nav": null,
@@ -230002,16 +230532,6 @@
       "buy_status": "暂停申购",
       "sell_status": "暂停赎回",
       "fee": "0.05%"
-    },
-    {
-      "code": "018759",
-      "name": "山证资管汇利一年定开债券C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
-      "fee": "0.00%"
     },
     {
       "code": "008440",
@@ -230124,16 +230644,6 @@
       "fee": "0.04%"
     },
     {
-      "code": "027295",
-      "name": "大摩添悦债券A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.03%"
-    },
-    {
       "code": "008615",
       "name": "浙商汇金聚泓两年定开债A",
       "nav": null,
@@ -230142,16 +230652,6 @@
       "buy_status": "暂停申购",
       "sell_status": "暂停赎回",
       "fee": "0.06%"
-    },
-    {
-      "code": "027296",
-      "name": "大摩添悦债券C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
     },
     {
       "code": "027952",
@@ -230361,16 +230861,6 @@
       "day_return": null,
       "buy_status": "封闭期",
       "sell_status": "封闭期",
-      "fee": "0.00%"
-    },
-    {
-      "code": "017582",
-      "name": "中航瑞融ESG一年定开债发起C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
       "fee": "0.00%"
     },
     {
@@ -230824,16 +231314,6 @@
       "fee": "0.00%"
     },
     {
-      "code": "027017",
-      "name": "中航祥瑞债券发起C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
-    },
-    {
       "code": "028828",
       "name": "汇泉中证有色金属矿业主题指数A",
       "nav": null,
@@ -231104,16 +231584,6 @@
       "fee": "0.05%"
     },
     {
-      "code": "028982",
-      "name": "路博迈红利量化选股股票A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
-      "fee": "0.08%"
-    },
-    {
       "code": "026740",
       "name": "鑫元鑫选恒泰稳健配置3个月持有期混合(FOF)A",
       "nav": null,
@@ -231132,16 +231602,6 @@
       "buy_status": "封闭期",
       "sell_status": "封闭期",
       "fee": "0.08%"
-    },
-    {
-      "code": "028983",
-      "name": "路博迈红利量化选股股票C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
-      "fee": "0.00%"
     },
     {
       "code": "028547",
@@ -231994,16 +232454,6 @@
       "fee": "0.00%"
     },
     {
-      "code": "027640",
-      "name": "摩根恒利稳健三个月持有期混合(ETF-FOF)A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.50%"
-    },
-    {
       "code": "003721",
       "name": "易方达标普信息科技指数(QDII-LOF)A(美元现汇)",
       "nav": null,
@@ -232012,16 +232462,6 @@
       "buy_status": "暂停申购",
       "sell_status": "开放赎回",
       "fee": "0.12%"
-    },
-    {
-      "code": "009752",
-      "name": "大摩灵动优选债券A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.08%"
     },
     {
       "code": "028885",
@@ -232051,16 +232491,6 @@
       "day_return": null,
       "buy_status": "封闭期",
       "sell_status": "封闭期",
-      "fee": "0.00%"
-    },
-    {
-      "code": "027641",
-      "name": "摩根恒利稳健三个月持有期混合(ETF-FOF)C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
       "fee": "0.00%"
     },
     {
@@ -232134,16 +232564,6 @@
       "fee": "0.00%"
     },
     {
-      "code": "025562",
-      "name": "大摩灵动优选债券E",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
-    },
-    {
       "code": "028322",
       "name": "富国稳悦回报混合C",
       "nav": null,
@@ -232202,16 +232622,6 @@
       "buy_status": "封闭期",
       "sell_status": "封闭期",
       "fee": "0.00%"
-    },
-    {
-      "code": "025875",
-      "name": "富安达上证科创板综合指数增强A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.12%"
     },
     {
       "code": "027479",
@@ -232332,16 +232742,6 @@
       "buy_status": "封闭期",
       "sell_status": "封闭期",
       "fee": "0.50%"
-    },
-    {
-      "code": "025876",
-      "name": "富安达上证科创板综合指数增强C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
     },
     {
       "code": "027813",
@@ -232584,16 +232984,6 @@
       "fee": "0.00%"
     },
     {
-      "code": "002885",
-      "name": "大摩万众创新混合A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.15%"
-    },
-    {
       "code": "003387",
       "name": "工银全球美元债C",
       "nav": null,
@@ -232610,16 +233000,6 @@
       "prev_nav": null,
       "day_return": null,
       "buy_status": "暂停申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
-    },
-    {
-      "code": "014868",
-      "name": "大摩灵动优选债券C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },
@@ -232692,16 +233072,6 @@
       "buy_status": "暂停申购",
       "sell_status": "开放赎回",
       "fee": "0.80%"
-    },
-    {
-      "code": "010322",
-      "name": "大摩新兴产业股票",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.15%"
     },
     {
       "code": "028306",
@@ -232794,16 +233164,6 @@
       "fee": "0.00%"
     },
     {
-      "code": "011712",
-      "name": "大摩万众创新混合C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
-    },
-    {
       "code": "027209",
       "name": "广发匠心精选混合A",
       "nav": null,
@@ -232864,16 +233224,6 @@
       "fee": "0.00%"
     },
     {
-      "code": "024902",
-      "name": "中银中证全指自由现金流ETF联接A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.10%"
-    },
-    {
       "code": "026628",
       "name": "明亚多元配置三个月持有期混合(FOF)A",
       "nav": null,
@@ -232892,16 +233242,6 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.15%"
-    },
-    {
-      "code": "024903",
-      "name": "中银中证全指自由现金流ETF联接C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
     },
     {
       "code": "025834",
@@ -232964,16 +233304,6 @@
       "fee": "0.12%"
     },
     {
-      "code": "009246",
-      "name": "大摩ESG量化混合A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.15%"
-    },
-    {
       "code": "028478",
       "name": "长城中证工业有色金属指数发起A",
       "nav": null,
@@ -233004,16 +233334,6 @@
       "fee": "0.80%"
     },
     {
-      "code": "026421",
-      "name": "大摩ESG量化混合C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
-    },
-    {
       "code": "027764",
       "name": "博道锦航混合C",
       "nav": null,
@@ -233036,16 +233356,6 @@
     {
       "code": "019655",
       "name": "农银鑫享稳健养老一年持有混合(FOF)Y",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.08%"
-    },
-    {
-      "code": "015047",
-      "name": "富安达稳健配置6个月持有期混合",
       "nav": null,
       "prev_nav": null,
       "day_return": null,
@@ -233274,16 +233584,6 @@
       "fee": "0.15%"
     },
     {
-      "code": "010222",
-      "name": "大摩民丰盈和一年持有混合",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.08%"
-    },
-    {
       "code": "019597",
       "name": "银华惠享三年定期开放混合",
       "nav": null,
@@ -233484,16 +233784,6 @@
       "fee": "0.00%"
     },
     {
-      "code": "012368",
-      "name": "大摩优享六个月持有期混合A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.15%"
-    },
-    {
       "code": "026157",
       "name": "鑫元鑫选盈泰进取配置3个月持有期混合发起式(ETF-FOF)C",
       "nav": null,
@@ -233564,16 +233854,6 @@
       "fee": "0.00%"
     },
     {
-      "code": "009893",
-      "name": "大摩优悦安和混合A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.15%"
-    },
-    {
       "code": "027916",
       "name": "国泰新材料甄选混合发起A",
       "nav": null,
@@ -233596,16 +233876,6 @@
     {
       "code": "023907",
       "name": "富国全球健康生活主题混合(QDII)人民币C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
-    },
-    {
-      "code": "012369",
-      "name": "大摩优享六个月持有期混合C",
       "nav": null,
       "prev_nav": null,
       "day_return": null,
@@ -233692,16 +233962,6 @@
       "buy_status": "暂停申购",
       "sell_status": "暂停赎回",
       "fee": "0.15%"
-    },
-    {
-      "code": "014867",
-      "name": "大摩优悦安和混合C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
     },
     {
       "code": "010644",
@@ -233814,16 +234074,6 @@
       "fee": "0.00%"
     },
     {
-      "code": "026199",
-      "name": "大摩港股通多元成长混合A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.15%"
-    },
-    {
       "code": "011583",
       "name": "大成港股精选混合(QDII)A",
       "nav": null,
@@ -233844,16 +234094,6 @@
       "fee": "0.80%"
     },
     {
-      "code": "026200",
-      "name": "大摩港股通多元成长混合C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
-    },
-    {
       "code": "027259",
       "name": "兴证资管科技成长混合发起式C",
       "nav": null,
@@ -233862,16 +234102,6 @@
       "buy_status": "暂停申购",
       "sell_status": "暂停赎回",
       "fee": "0.00%"
-    },
-    {
-      "code": "010746",
-      "name": "富安达长三角区域主题混合A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.15%"
     },
     {
       "code": "010201",
@@ -233912,16 +234142,6 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.18%"
-    },
-    {
-      "code": "019792",
-      "name": "富安达长三角区域主题混合C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
     },
     {
       "code": "029156",
@@ -234154,26 +234374,6 @@
       "fee": "0.00%"
     },
     {
-      "code": "016214",
-      "name": "富安达长盈灵活配置混合C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "暂停申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
-    },
-    {
-      "code": "004549",
-      "name": "富安达消费主题混合",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.15%"
-    },
-    {
       "code": "013712",
       "name": "方正富邦鑫益一年定开混合A",
       "nav": null,
@@ -234181,16 +234381,6 @@
       "day_return": null,
       "buy_status": "暂停申购",
       "sell_status": "暂停赎回",
-      "fee": "0.15%"
-    },
-    {
-      "code": "002584",
-      "name": "富安达长盈灵活配置混合A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "暂停申购",
-      "sell_status": "开放赎回",
       "fee": "0.15%"
     },
     {
@@ -234254,26 +234444,6 @@
       "fee": "0.00%"
     },
     {
-      "code": "013067",
-      "name": "富安达中小盘六个月持有混合发起",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.15%"
-    },
-    {
-      "code": "233008",
-      "name": "大摩消费领航混合",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.15%"
-    },
-    {
       "code": "009688",
       "name": "万家鑫动力月月购一年滚动混合",
       "nav": null,
@@ -234324,46 +234494,6 @@
       "fee": "0.00%"
     },
     {
-      "code": "014103",
-      "name": "富安达成长价值一年持有期混合A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.15%"
-    },
-    {
-      "code": "017048",
-      "name": "富安达产业优选混合A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.15%"
-    },
-    {
-      "code": "014104",
-      "name": "富安达成长价值一年持有期混合C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
-    },
-    {
-      "code": "017049",
-      "name": "富安达产业优选混合C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
-    },
-    {
       "code": "003722",
       "name": "易方达纳斯达克100ETF联接(QDII-LOF)A(美元现汇)",
       "nav": null,
@@ -234404,36 +234534,6 @@
       "fee": "0.08%"
     },
     {
-      "code": "011383",
-      "name": "富安达医药创新混合A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.15%"
-    },
-    {
-      "code": "026857",
-      "name": "富安达医药创新混合C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
-    },
-    {
-      "code": "000755",
-      "name": "富安达新兴成长混合A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.15%"
-    },
-    {
       "code": "025162",
       "name": "国泰大宗商品(QDII-LOF)D",
       "nav": null,
@@ -234444,16 +234544,6 @@
       "fee": "0.15%"
     },
     {
-      "code": "014471",
-      "name": "富安达新兴成长混合C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
-    },
-    {
       "code": "160216",
       "name": "国泰大宗商品(QDII-LOF)A",
       "nav": null,
@@ -234462,46 +234552,6 @@
       "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.15%"
-    },
-    {
-      "code": "010314",
-      "name": "大摩内需增长混合A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.15%"
-    },
-    {
-      "code": "013356",
-      "name": "大摩沪港深精选混合A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.15%"
-    },
-    {
-      "code": "014869",
-      "name": "大摩内需增长混合C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
-    },
-    {
-      "code": "013357",
-      "name": "大摩沪港深精选混合C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
     },
     {
       "code": "206006",
@@ -234524,28 +234574,8 @@
       "fee": "0.00%"
     },
     {
-      "code": "233001",
-      "name": "大摩基础行业混合",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.15%"
-    },
-    {
       "code": "012379",
       "name": "创金合信港股互联网3个月持有期混合(QDII)A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.15%"
-    },
-    {
-      "code": "009380",
-      "name": "富安达科技领航混合A",
       "nav": null,
       "prev_nav": null,
       "day_return": null,
@@ -234562,16 +234592,6 @@
       "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.15%"
-    },
-    {
-      "code": "018987",
-      "name": "富安达科技领航混合C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
     },
     {
       "code": "012380",
@@ -234704,6 +234724,16 @@
       "fee": "1.50%"
     },
     {
+      "code": "010591",
+      "name": "富国中国中小盘混合(QDII)美元",
+      "nav": null,
+      "prev_nav": null,
+      "day_return": null,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "1.50%"
+    },
+    {
       "code": "013404",
       "name": "大成标普500等权重指数(QDII)A美元",
       "nav": null,
@@ -234794,14 +234824,14 @@
       "fee": "0.01%"
     },
     {
-      "code": "960011",
-      "name": "中银持续增长混合H",
+      "code": "010583",
+      "name": "富国蓝筹精选股票(QDII)美元",
       "nav": null,
       "prev_nav": null,
       "day_return": null,
-      "buy_status": "开放申购",
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
-      "fee": "5.00%"
+      "fee": "1.50%"
     },
     {
       "code": "025589",
@@ -234954,6 +234984,26 @@
       "fee": "0.00%"
     },
     {
+      "code": "003631",
+      "name": "摩根全球多元配置(QDII-FOF)美元现汇",
+      "nav": null,
+      "prev_nav": null,
+      "day_return": null,
+      "buy_status": "限大额",
+      "sell_status": "开放赎回",
+      "fee": "1.50%"
+    },
+    {
+      "code": "003630",
+      "name": "摩根全球多元配置(QDII-FOF)美元现钞",
+      "nav": null,
+      "prev_nav": null,
+      "day_return": null,
+      "buy_status": "限大额",
+      "sell_status": "开放赎回",
+      "fee": "1.50%"
+    },
+    {
       "code": "018231",
       "name": "易方达全球优质企业混合(QDII)A(美元现汇份额)",
       "nav": null,
@@ -234974,6 +235024,16 @@
       "fee": "0.00%"
     },
     {
+      "code": "009193",
+      "name": "富国红利精选混合(QDII)美元",
+      "nav": null,
+      "prev_nav": null,
+      "day_return": null,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "1.50%"
+    },
+    {
       "code": "012924",
       "name": "华夏新时代混合美元现汇(QDII)",
       "nav": null,
@@ -234990,6 +235050,26 @@
       "prev_nav": null,
       "day_return": null,
       "buy_status": "暂停申购",
+      "sell_status": "开放赎回",
+      "fee": "1.20%"
+    },
+    {
+      "code": "017642",
+      "name": "摩根标普500指数(QDII)美钞",
+      "nav": null,
+      "prev_nav": null,
+      "day_return": null,
+      "buy_status": "限大额",
+      "sell_status": "开放赎回",
+      "fee": "1.20%"
+    },
+    {
+      "code": "017643",
+      "name": "摩根标普500指数(QDII)美汇",
+      "nav": null,
+      "prev_nav": null,
+      "day_return": null,
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "1.20%"
     },
@@ -235072,6 +235152,36 @@
       "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.00%"
+    },
+    {
+      "code": "005614",
+      "name": "摩根富时发达市场REITs指数(QDII)美钞",
+      "nav": null,
+      "prev_nav": null,
+      "day_return": null,
+      "buy_status": "限大额",
+      "sell_status": "开放赎回",
+      "fee": "1.00%"
+    },
+    {
+      "code": "005615",
+      "name": "摩根富时发达市场REITs指数(QDII)美汇",
+      "nav": null,
+      "prev_nav": null,
+      "day_return": null,
+      "buy_status": "限大额",
+      "sell_status": "开放赎回",
+      "fee": "1.00%"
+    },
+    {
+      "code": "012061",
+      "name": "富国全球消费精选混合(QDII)美元",
+      "nav": null,
+      "prev_nav": null,
+      "day_return": null,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "1.50%"
     },
     {
       "code": "019157",
@@ -235202,6 +235312,16 @@
       "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "1.00%"
+    },
+    {
+      "code": "007140",
+      "name": "富国全球债券(QDII)美元现汇",
+      "nav": null,
+      "prev_nav": null,
+      "day_return": null,
+      "buy_status": "暂停申购",
+      "sell_status": "开放赎回",
+      "fee": "0.80%"
     },
     {
       "code": "018854",
@@ -235374,6 +235494,36 @@
       "fee": "1.50%"
     },
     {
+      "code": "017971",
+      "name": "摩根海外稳健配置混合(QDII-FOF)美元现汇",
+      "nav": null,
+      "prev_nav": null,
+      "day_return": null,
+      "buy_status": "限大额",
+      "sell_status": "开放赎回",
+      "fee": "0.20%"
+    },
+    {
+      "code": "017972",
+      "name": "摩根海外稳健配置混合(QDII-FOF)美元现钞",
+      "nav": null,
+      "prev_nav": null,
+      "day_return": null,
+      "buy_status": "限大额",
+      "sell_status": "开放赎回",
+      "fee": "0.20%"
+    },
+    {
+      "code": "008368",
+      "name": "富国亚洲收益债券(QDII)美元现汇",
+      "nav": null,
+      "prev_nav": null,
+      "day_return": null,
+      "buy_status": "限大额",
+      "sell_status": "开放赎回",
+      "fee": "0.80%"
+    },
+    {
       "code": "001481",
       "name": "华宝标普油气上游股票美元A",
       "nav": null,
@@ -235504,6 +235654,16 @@
       "fee": "0.15%"
     },
     {
+      "code": "003606",
+      "name": "海富通全球收益债券美元",
+      "nav": null,
+      "prev_nav": null,
+      "day_return": null,
+      "buy_status": "限大额",
+      "sell_status": "开放赎回",
+      "fee": "0.80%"
+    },
+    {
       "code": "019036",
       "name": "易方达全球医药行业混合发起式(QDII)C(美元现汇)",
       "nav": null,
@@ -235512,6 +235672,16 @@
       "buy_status": "暂停申购",
       "sell_status": "开放赎回",
       "fee": "0.00%"
+    },
+    {
+      "code": "010645",
+      "name": "富国全球健康生活主题混合(QDII)美元",
+      "nav": null,
+      "prev_nav": null,
+      "day_return": null,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "1.50%"
     },
     {
       "code": "006283",
@@ -235532,16 +235702,6 @@
       "buy_status": "暂停申购",
       "sell_status": "暂停赎回",
       "fee": "0.15%"
-    },
-    {
-      "code": "025853",
-      "name": "富国港股精选混合(QDII)美元现汇",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "1.50%"
     },
     {
       "code": "026248",
@@ -235664,26 +235824,6 @@
       "fee": "0.00%"
     },
     {
-      "code": "003606",
-      "name": "海富通全球收益债券美元",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "限大额",
-      "sell_status": "开放赎回",
-      "fee": "0.80%"
-    },
-    {
-      "code": "003631",
-      "name": "摩根全球多元配置(QDII-FOF)美元现汇",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "限大额",
-      "sell_status": "开放赎回",
-      "fee": "1.50%"
-    },
-    {
       "code": "003443",
       "name": "招商招惠3个月定期开放债券C",
       "nav": null,
@@ -235692,16 +235832,6 @@
       "buy_status": "暂停申购",
       "sell_status": "暂停赎回",
       "fee": "0.00%"
-    },
-    {
-      "code": "003630",
-      "name": "摩根全球多元配置(QDII-FOF)美元现钞",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "限大额",
-      "sell_status": "开放赎回",
-      "fee": "1.50%"
     },
     {
       "code": "003572",
@@ -235814,16 +235944,6 @@
       "fee": "0.00%"
     },
     {
-      "code": "005614",
-      "name": "摩根富时发达市场REITs指数(QDII)美钞",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "限大额",
-      "sell_status": "开放赎回",
-      "fee": "1.00%"
-    },
-    {
       "code": "005858",
       "name": "汇添富鑫成定开债C",
       "nav": null,
@@ -235852,16 +235972,6 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.10%"
-    },
-    {
-      "code": "005615",
-      "name": "摩根富时发达市场REITs指数(QDII)美汇",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "限大额",
-      "sell_status": "开放赎回",
-      "fee": "1.00%"
     },
     {
       "code": "006322",
@@ -236304,16 +236414,6 @@
       "fee": "0.00%"
     },
     {
-      "code": "007140",
-      "name": "富国全球债券(QDII)美元现汇",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "暂停申购",
-      "sell_status": "开放赎回",
-      "fee": "0.80%"
-    },
-    {
       "code": "007310",
       "name": "银华尊尚稳健养老混合(FOF)A",
       "nav": null,
@@ -236714,16 +236814,6 @@
       "fee": "0.12%"
     },
     {
-      "code": "009193",
-      "name": "富国红利精选混合(QDII)美元",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "1.50%"
-    },
-    {
       "code": "008609",
       "name": "广发养老目标日期2040三年持有期混合发起式(FOF)A",
       "nav": null,
@@ -236844,16 +236934,6 @@
       "fee": "0.05%"
     },
     {
-      "code": "008368",
-      "name": "富国亚洲收益债券(QDII)美元现汇",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "限大额",
-      "sell_status": "开放赎回",
-      "fee": "0.80%"
-    },
-    {
       "code": "009760",
       "name": "鹏扬淳安66个月定开债C",
       "nav": null,
@@ -236924,26 +237004,6 @@
       "fee": "0.08%"
     },
     {
-      "code": "010591",
-      "name": "富国中国中小盘混合(QDII)美元",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "1.50%"
-    },
-    {
-      "code": "010583",
-      "name": "富国蓝筹精选股票(QDII)美元",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "限大额",
-      "sell_status": "开放赎回",
-      "fee": "1.50%"
-    },
-    {
       "code": "010464",
       "name": "鹏扬淳稳66个月定开债C",
       "nav": null,
@@ -236962,16 +237022,6 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.10%"
-    },
-    {
-      "code": "010645",
-      "name": "富国全球健康生活主题混合(QDII)美元",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "1.50%"
     },
     {
       "code": "017661",
@@ -237192,16 +237242,6 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.15%"
-    },
-    {
-      "code": "012061",
-      "name": "富国全球消费精选混合(QDII)美元",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "1.50%"
     },
     {
       "code": "012513",
@@ -239344,16 +239384,6 @@
       "fee": "0.06%"
     },
     {
-      "code": "017642",
-      "name": "摩根标普500指数(QDII)美钞",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "限大额",
-      "sell_status": "开放赎回",
-      "fee": "1.20%"
-    },
-    {
       "code": "016649",
       "name": "广发养老目标2045三年持有混合发起式(FOF)A",
       "nav": null,
@@ -239372,16 +239402,6 @@
       "buy_status": "开放申购",
       "sell_status": "暂停赎回",
       "fee": "0.12%"
-    },
-    {
-      "code": "017643",
-      "name": "摩根标普500指数(QDII)美汇",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "限大额",
-      "sell_status": "开放赎回",
-      "fee": "1.20%"
     },
     {
       "code": "017015",
@@ -239842,26 +239862,6 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.10%"
-    },
-    {
-      "code": "017971",
-      "name": "摩根海外稳健配置混合(QDII-FOF)美元现汇",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "限大额",
-      "sell_status": "开放赎回",
-      "fee": "0.20%"
-    },
-    {
-      "code": "017972",
-      "name": "摩根海外稳健配置混合(QDII-FOF)美元现钞",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "限大额",
-      "sell_status": "开放赎回",
-      "fee": "0.20%"
     },
     {
       "code": "017228",

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-26T09:06:26+08:00",
+  "generated_at": "2026-10-26T21:05:34+08:00",
   "method_version": "fund-screen-v2.0",
   "goal": "持续跟踪6-12个月高弹性候选；不承诺收益，不预测必然涨幅",
   "selection_policy": "核心池固定跟踪6只；仅在评分明显恶化、中期趋势转负、暂停申购或更优候选持续胜出时替换",
@@ -17,8 +17,8 @@
       "message": "核心候选池由7只强制校正为6只",
       "removed": [
         {
-          "code": "007280",
-          "name": "摩根日本精选股票(QDII)A"
+          "code": "501312",
+          "name": "华宝海外科技股票(QDII-LOF)A"
         }
       ]
     }
@@ -28,35 +28,35 @@
       "code": "000960",
       "name": "招商医药健康产业股票",
       "category": "股票型",
-      "score": 69.2,
+      "score": 73.9,
       "returns": {
-        "1m": -17.86,
-        "3m": 8.8,
-        "6m": 23.93,
-        "1y": 26.05,
-        "3y": 26.18,
-        "ytd": 33.63
+        "1m": -14.84,
+        "3m": 11.11,
+        "6m": 23.4,
+        "1y": 24.1,
+        "3y": 24.42,
+        "ytd": 32.86
       },
-      "latest_nav": 2.424,
+      "latest_nav": 2.41,
       "estimate_nav": null,
       "estimate_return": null,
-      "day_return": 0.87,
+      "day_return": -0.58,
       "buy_status": "开放申购",
       "position": "强势回撤，重点等买点",
       "broad_action": "watch",
       "history": {
-        "nav_date": "2026-10-23",
-        "last_nav": 2.424,
+        "nav_date": "2026-10-26",
+        "last_nav": 2.41,
         "returns": {
-          "20d": -10.22,
-          "60d": 8.8,
-          "120d": 24.12,
-          "250d": 23.74
+          "20d": -12.71,
+          "60d": 11.11,
+          "120d": 22.03,
+          "250d": 26.71
         },
         "ma": {
-          "20": 2.6921,
-          "60": 2.5484,
-          "120": 2.253
+          "20": 2.6746,
+          "60": 2.5524,
+          "120": 2.2566
         },
         "high": {
           "60": 2.951,
@@ -64,23 +64,23 @@
         },
         "low60": 2.087,
         "drawdown": {
-          "60": -17.86,
-          "120": -17.86,
+          "60": -18.33,
+          "120": -18.33,
           "max250": -22.58
         },
-        "vol20_ann": 41.55,
+        "vol20_ann": 40.26,
         "trend": "震荡",
-        "deviation60": -4.88,
+        "deviation60": -5.58,
         "overheat": false,
         "buy_zone_1": [
-          2.6518,
-          2.7191
+          2.6345,
+          2.7013
         ],
         "buy_zone_2": [
-          2.4846,
-          2.5687
+          2.4886,
+          2.5728
         ],
-        "stop_add_below": 2.2079
+        "stop_add_below": 2.2115
       },
       "history_error": null,
       "today_plan": {
@@ -91,13 +91,8 @@
       "tracking": {
         "first_seen": "2026-09-28T21:58:24+08:00",
         "days_tracked": 29,
-        "refresh_count": 32,
+        "refresh_count": 33,
         "score_history": [
-          {
-            "at": "2026-10-20T09:47:35+08:00",
-            "score": 76.1,
-            "action": "继续等买点"
-          },
           {
             "at": "2026-10-20T19:43:28+08:00",
             "score": 79.6,
@@ -151,6 +146,11 @@
           {
             "at": "2026-10-26T09:07:18+08:00",
             "score": 69.2,
+            "action": "继续等买点"
+          },
+          {
+            "at": "2026-10-26T21:08:04+08:00",
+            "score": 73.9,
             "action": "继续等买点"
           }
         ]
@@ -305,7 +305,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-10-26T09:08:36+08:00"
+        "updated_at": "2026-10-26T21:09:31+08:00"
       },
       "profile": {
         "fund_type": "股票型",
@@ -415,35 +415,35 @@
       "code": "011373",
       "name": "招商前沿医疗保健股票A",
       "category": "股票型",
-      "score": 68.3,
+      "score": 71.8,
       "returns": {
-        "1m": -17.75,
-        "3m": 9.93,
-        "6m": 23.62,
-        "1y": 19.8,
-        "3y": 31.86,
-        "ytd": 32.59
+        "1m": -15.16,
+        "3m": 11.77,
+        "6m": 22.88,
+        "1y": 17.12,
+        "3y": 30.66,
+        "ytd": 31.9
       },
-      "latest_nav": 0.7673,
+      "latest_nav": 0.7633,
       "estimate_nav": null,
       "estimate_return": null,
-      "day_return": 1.09,
+      "day_return": -0.52,
       "buy_status": "开放申购",
       "position": "强势回撤，重点等买点",
       "broad_action": "watch",
       "history": {
-        "nav_date": "2026-10-23",
-        "last_nav": 0.7673,
+        "nav_date": "2026-10-26",
+        "last_nav": 0.7633,
         "returns": {
-          "20d": -11.45,
-          "60d": 9.93,
-          "120d": 23.52,
-          "250d": 15.89
+          "20d": -13.49,
+          "60d": 11.77,
+          "120d": 21.82,
+          "250d": 20.2
         },
         "ma": {
-          "20": 0.8592,
-          "60": 0.8141,
-          "120": 0.714
+          "20": 0.8532,
+          "60": 0.8154,
+          "120": 0.7151
         },
         "high": {
           "60": 0.9362,
@@ -451,23 +451,23 @@
         },
         "low60": 0.6534,
         "drawdown": {
-          "60": -18.04,
-          "120": -18.04,
+          "60": -18.47,
+          "120": -18.47,
           "max250": -24.44
         },
-        "vol20_ann": 41.24,
+        "vol20_ann": 40.27,
         "trend": "震荡",
-        "deviation60": -5.75,
+        "deviation60": -6.39,
         "overheat": false,
         "buy_zone_1": [
-          0.8463,
-          0.8678
+          0.8404,
+          0.8618
         ],
         "buy_zone_2": [
-          0.7937,
-          0.8206
+          0.795,
+          0.8219
         ],
-        "stop_add_below": 0.6997
+        "stop_add_below": 0.7008
       },
       "history_error": null,
       "today_plan": {
@@ -478,13 +478,8 @@
       "tracking": {
         "first_seen": "2026-09-29T20:56:44+08:00",
         "days_tracked": 28,
-        "refresh_count": 30,
+        "refresh_count": 31,
         "score_history": [
-          {
-            "at": "2026-10-20T09:47:35+08:00",
-            "score": 75.1,
-            "action": "继续等买点"
-          },
           {
             "at": "2026-10-20T19:43:28+08:00",
             "score": 78.4,
@@ -538,6 +533,11 @@
           {
             "at": "2026-10-26T09:07:18+08:00",
             "score": 68.3,
+            "action": "继续等买点"
+          },
+          {
+            "at": "2026-10-26T21:08:04+08:00",
+            "score": 71.8,
             "action": "继续等买点"
           }
         ]
@@ -692,7 +692,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-10-26T09:08:42+08:00"
+        "updated_at": "2026-10-26T21:09:38+08:00"
       },
       "profile": {
         "fund_type": "股票型",
@@ -806,59 +806,59 @@
       "code": "008602",
       "name": "方正富邦新兴成长混合A",
       "category": "混合型",
-      "score": 67.4,
+      "score": 58.2,
       "returns": {
-        "1m": -20.7,
-        "3m": 2.81,
-        "6m": 14.64,
-        "1y": 36.07,
-        "3y": 89.6,
-        "ytd": 35.54
+        "1m": -22.07,
+        "3m": 0.46,
+        "6m": 9.46,
+        "1y": 27.96,
+        "3y": 76.93,
+        "ytd": 29.96
       },
-      "latest_nav": 1.8471,
+      "latest_nav": 1.7711,
       "estimate_nav": null,
       "estimate_return": null,
-      "day_return": 2.01,
+      "day_return": -4.11,
       "buy_status": "开放申购",
       "position": "强势回撤，重点等买点",
       "broad_action": "watch",
       "history": {
-        "nav_date": "2026-10-23",
-        "last_nav": 1.8471,
+        "nav_date": "2026-10-26",
+        "last_nav": 1.7711,
         "returns": {
-          "20d": -16.78,
-          "60d": 2.81,
-          "120d": 14.15,
-          "250d": 27.49
+          "20d": -22.64,
+          "60d": 0.46,
+          "120d": 6.82,
+          "250d": 27.16
         },
         "ma": {
-          "20": 2.0483,
-          "60": 2.0573,
-          "120": 1.9475
+          "20": 2.0223,
+          "60": 2.0575,
+          "120": 1.9484
         },
         "high": {
           "60": 2.3293,
           "120": 2.3293
         },
-        "low60": 1.763,
+        "low60": 1.7711,
         "drawdown": {
-          "60": -20.7,
-          "120": -20.7,
-          "max250": -22.26
+          "60": -23.96,
+          "120": -23.96,
+          "max250": -23.96
         },
-        "vol20_ann": 36.09,
+        "vol20_ann": 34.5,
         "trend": "趋势偏弱",
-        "deviation60": -10.22,
+        "deviation60": -13.92,
         "overheat": false,
         "buy_zone_1": [
-          2.0175,
-          2.0687
+          1.992,
+          2.0426
         ],
         "buy_zone_2": [
-          2.0059,
-          2.0738
+          2.006,
+          2.0739
         ],
-        "stop_add_below": 1.9085
+        "stop_add_below": 1.9095
       },
       "history_error": null,
       "today_plan": {
@@ -869,13 +869,8 @@
       "tracking": {
         "first_seen": "2026-09-30T20:38:05+08:00",
         "days_tracked": 27,
-        "refresh_count": 27,
+        "refresh_count": 28,
         "score_history": [
-          {
-            "at": "2026-10-20T09:47:35+08:00",
-            "score": 70.6,
-            "action": "不买/停止补仓"
-          },
           {
             "at": "2026-10-20T19:43:28+08:00",
             "score": 70.8,
@@ -929,6 +924,11 @@
           {
             "at": "2026-10-26T09:07:18+08:00",
             "score": 67.4,
+            "action": "不买/停止补仓"
+          },
+          {
+            "at": "2026-10-26T21:08:04+08:00",
+            "score": 58.2,
             "action": "不买/停止补仓"
           }
         ]
@@ -1079,7 +1079,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-10-26T09:08:47+08:00"
+        "updated_at": "2026-10-26T21:09:45+08:00"
       },
       "profile": {
         "fund_type": "混合型-偏股",
@@ -1189,35 +1189,35 @@
       "code": "004243",
       "name": "广发道琼斯石油指数人民币C",
       "category": "指数型",
-      "score": 90.2,
+      "score": 93.4,
       "returns": {
-        "1m": 10.46,
-        "3m": 15.45,
-        "6m": 22.37,
-        "1y": 50.31,
-        "3y": 33.04,
-        "ytd": 49.61
+        "1m": 11.71,
+        "3m": 17.9,
+        "6m": 23.69,
+        "1y": 48.78,
+        "3y": 37.23,
+        "ytd": 52.28
       },
-      "latest_nav": 3.2356,
+      "latest_nav": 3.2933,
       "estimate_nav": 3.1989,
       "estimate_return": -1.13,
-      "day_return": -1.03,
+      "day_return": 1.78,
       "buy_status": "限大额",
       "position": "中性观察",
       "broad_action": "watch",
       "history": {
-        "nav_date": "2026-10-22",
-        "last_nav": 3.2356,
+        "nav_date": "2026-10-23",
+        "last_nav": 3.2933,
         "returns": {
-          "20d": 4.99,
-          "60d": 15.45,
-          "120d": 21.52,
-          "250d": 52.05
+          "20d": 5.98,
+          "60d": 17.9,
+          "120d": 24.3,
+          "250d": 52.09
         },
         "ma": {
-          "20": 3.1226,
-          "60": 2.9955,
-          "120": 2.8087
+          "20": 3.1319,
+          "60": 3.0039,
+          "120": 2.8141
         },
         "high": {
           "60": 3.3015,
@@ -1225,23 +1225,23 @@
         },
         "low60": 2.6547,
         "drawdown": {
-          "60": -2.0,
-          "120": -2.0,
+          "60": -0.25,
+          "120": -0.25,
           "max250": -17.49
         },
-        "vol20_ann": 40.07,
+        "vol20_ann": 40.39,
         "trend": "强势上行",
-        "deviation60": 8.01,
+        "deviation60": 9.64,
         "overheat": false,
         "buy_zone_1": [
-          3.0758,
-          3.1539
+          3.085,
+          3.1633
         ],
         "buy_zone_2": [
-          2.9206,
-          3.0195
+          2.9288,
+          3.0279
         ],
-        "stop_add_below": 2.7526
+        "stop_add_below": 2.7578
       },
       "history_error": null,
       "today_plan": {
@@ -1252,13 +1252,8 @@
       "tracking": {
         "first_seen": "2026-10-16T08:19:53+08:00",
         "days_tracked": 11,
-        "refresh_count": 17,
+        "refresh_count": 18,
         "score_history": [
-          {
-            "at": "2026-10-20T09:47:35+08:00",
-            "score": 91.2,
-            "action": "等待回调"
-          },
           {
             "at": "2026-10-20T19:43:28+08:00",
             "score": 91.4,
@@ -1313,6 +1308,11 @@
             "at": "2026-10-26T09:07:18+08:00",
             "score": 90.2,
             "action": "继续等买点"
+          },
+          {
+            "at": "2026-10-26T21:08:04+08:00",
+            "score": 93.4,
+            "action": "继续等买点"
           }
         ]
       },
@@ -1334,16 +1334,7 @@
       ],
       "deep_analysis": {
         "overview": {
-          "fund_type": "指数型-海外股票",
-          "asset_scale": null,
-          "share_scale": "0.7554亿份（截止至：2026年06月30日）",
-          "manager": "姚曦",
-          "company": "广发基金",
-          "成立日期": "2017年02月28日",
-          "benchmark": "人民币计价的道琼斯美国石油开发与生产指数收益率*95%+人民币活期存款收益率(税后)*5%",
-          "tracking_target": "道琼斯美国石油开发与生产指数",
-          "management_fee": "1.00%（每年）",
-          "custody_fee": "0.20%（每年）"
+          "error": "overview: ChunkedEncodingError: ('Connection broken: IncompleteRead(34326 bytes read, 19591 more expected)', IncompleteRead(34326 bytes read, 19591 more expected))"
         },
         "risk": {
           "period": "近1年",
@@ -1364,67 +1355,67 @@
           }
         },
         "holdings": {
-          "quarter": "2026年2季度股票投资明细",
-          "top10_concentration": 65.49,
+          "quarter": "2026年3季度股票投资明细",
+          "top10_concentration": 64.24,
           "top_holdings": [
             {
               "name": "康菲石油",
               "code": "COP",
-              "weight": 15.87
+              "weight": 15.38
             },
             {
               "name": "瓦莱罗能源",
               "code": "VLO",
-              "weight": 9.69
+              "weight": 11.7
             },
             {
               "name": "马拉松原油",
               "code": "MPC",
-              "weight": 9.35
-            },
-            {
-              "name": "EOG能源",
-              "code": "EOG",
-              "weight": 6.03
-            },
-            {
-              "name": "EQT能源",
-              "code": "EQT",
-              "weight": 4.45
-            },
-            {
-              "name": "Texas Pacific Land Corp",
-              "code": "TPL",
-              "weight": 4.38
+              "weight": 11.53
             },
             {
               "name": "Phillips 66",
               "code": "PSX",
-              "weight": 4.1
-            },
-            {
-              "name": "Diamondback Energy Inc",
-              "code": "FANG",
-              "weight": 3.94
+              "weight": 4.26
             },
             {
               "name": "戴文能源",
               "code": "DVN",
-              "weight": 3.91
+              "weight": 4.07
+            },
+            {
+              "name": "EOG能源",
+              "code": "EOG",
+              "weight": 4.05
+            },
+            {
+              "name": "Diamondback Energy Inc",
+              "code": "FANG",
+              "weight": 3.97
+            },
+            {
+              "name": "EQT能源",
+              "code": "EQT",
+              "weight": 3.74
+            },
+            {
+              "name": "Texas Pacific Land Corp",
+              "code": "TPL",
+              "weight": 2.78
             },
             {
               "name": "Expand Energy Corp",
               "code": "EXE",
-              "weight": 3.77
+              "weight": 2.76
             }
           ]
         },
         "industries": {
-          "period": "2026-06-30",
+          "period": "2026-09-30",
           "items": [
             {
               "name": "能源",
-              "weight": 91.83
+              "weight": 90.41
             }
           ]
         },
@@ -1442,93 +1433,84 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-10-26T09:08:53+08:00"
+        "updated_at": "2026-10-26T21:15:36+08:00"
       },
       "profile": {
-        "fund_type": "指数型-海外股票",
+        "fund_type": null,
         "asset_scale": null,
-        "share_scale": "0.7554亿份（截止至：2026年06月30日）",
-        "manager": "姚曦",
-        "company": "广发基金",
-        "成立日期": "2017年02月28日",
-        "benchmark": "人民币计价的道琼斯美国石油开发与生产指数收益率*95%+人民币活期存款收益率(税后)*5%",
-        "tracking_index": "道琼斯美国石油开发与生产指数",
-        "management_fee": "1.00%（每年）",
-        "custody_fee": "0.20%（每年）",
+        "share_scale": null,
+        "manager": null,
+        "company": null,
+        "成立日期": null,
+        "benchmark": null,
+        "tracking_index": null,
+        "management_fee": null,
+        "custody_fee": null,
         "holdings": [
           {
             "name": "康菲石油",
             "code": "COP",
-            "weight": 15.87
+            "weight": 15.38
           },
           {
             "name": "瓦莱罗能源",
             "code": "VLO",
-            "weight": 9.69
+            "weight": 11.7
           },
           {
             "name": "马拉松原油",
             "code": "MPC",
-            "weight": 9.35
-          },
-          {
-            "name": "EOG能源",
-            "code": "EOG",
-            "weight": 6.03
-          },
-          {
-            "name": "EQT能源",
-            "code": "EQT",
-            "weight": 4.45
-          },
-          {
-            "name": "Texas Pacific Land Corp",
-            "code": "TPL",
-            "weight": 4.38
+            "weight": 11.53
           },
           {
             "name": "Phillips 66",
             "code": "PSX",
-            "weight": 4.1
-          },
-          {
-            "name": "Diamondback Energy Inc",
-            "code": "FANG",
-            "weight": 3.94
+            "weight": 4.26
           },
           {
             "name": "戴文能源",
             "code": "DVN",
-            "weight": 3.91
+            "weight": 4.07
+          },
+          {
+            "name": "EOG能源",
+            "code": "EOG",
+            "weight": 4.05
+          },
+          {
+            "name": "Diamondback Energy Inc",
+            "code": "FANG",
+            "weight": 3.97
+          },
+          {
+            "name": "EQT能源",
+            "code": "EQT",
+            "weight": 3.74
+          },
+          {
+            "name": "Texas Pacific Land Corp",
+            "code": "TPL",
+            "weight": 2.78
           },
           {
             "name": "Expand Energy Corp",
             "code": "EXE",
-            "weight": 3.77
+            "weight": 2.76
           }
         ],
-        "holdings_period": "2026年2季度股票投资明细",
-        "top10_concentration": 65.49,
+        "holdings_period": "2026年3季度股票投资明细",
+        "top10_concentration": 64.24,
         "industries": [
           {
             "name": "能源",
-            "weight": 91.83
+            "weight": 90.41
           }
         ],
-        "industry_period": "2026-06-30",
-        "manager_details": [
-          {
-            "name": "姚曦",
-            "company": "广发基金",
-            "career_days": 1804.0,
-            "current_aum_yi": 177.63,
-            "best_return": 82.45
-          }
-        ]
+        "industry_period": "2026-09-30",
+        "manager_details": []
       },
-      "risk": "近1年历史最大回撤约17.5%；波动中等偏高；前十大股票占比约65%，持仓比较集中。历史数据不代表未来。",
+      "risk": "近1年历史最大回撤约17.5%；波动中等偏高；前十大股票占比约64%，持仓比较集中。历史数据不代表未来。",
       "deep_plain": [
-        "基金经理：姚曦",
         "历史任意时点持有满1年的盈利概率约61%（仅作历史统计，不是未来预测）"
       ]
     },
@@ -1536,35 +1518,35 @@
       "code": "004726",
       "name": "先锋聚优A",
       "category": "混合型",
-      "score": 89.1,
+      "score": 89.8,
       "returns": {
-        "1m": 1.16,
-        "3m": 12.02,
-        "6m": 31.88,
-        "1y": 37.65,
-        "3y": 30.71,
-        "ytd": 37.9
+        "1m": 1.23,
+        "3m": 12.16,
+        "6m": 29.11,
+        "1y": 37.72,
+        "3y": 24.7,
+        "ytd": 38.1
       },
-      "latest_nav": 1.4142,
+      "latest_nav": 1.4162,
       "estimate_nav": null,
       "estimate_return": null,
-      "day_return": -0.16,
+      "day_return": 0.14,
       "buy_status": "开放申购",
       "position": "趋势向上，可等分批点",
       "broad_action": "batch",
       "history": {
-        "nav_date": "2026-10-23",
-        "last_nav": 1.4142,
+        "nav_date": "2026-10-26",
+        "last_nav": 1.4162,
         "returns": {
-          "20d": 1.13,
-          "60d": 12.02,
-          "120d": 28.93,
-          "250d": 29.48
+          "20d": 1.32,
+          "60d": 12.16,
+          "120d": 26.42,
+          "250d": 36.12
         },
         "ma": {
-          "20": 1.4071,
-          "60": 1.3778,
-          "120": 1.2736
+          "20": 1.408,
+          "60": 1.3804,
+          "120": 1.2761
         },
         "high": {
           "60": 1.4165,
@@ -1572,23 +1554,23 @@
         },
         "low60": 1.1815,
         "drawdown": {
-          "60": -0.16,
-          "120": -0.16,
+          "60": -0.02,
+          "120": -0.02,
           "max250": -19.36
         },
-        "vol20_ann": 2.6,
+        "vol20_ann": 2.59,
         "trend": "强势上行",
-        "deviation60": 2.64,
+        "deviation60": 2.59,
         "overheat": false,
         "buy_zone_1": [
-          1.386,
-          1.4212
+          1.3869,
+          1.4221
         ],
         "buy_zone_2": [
-          1.3434,
-          1.3889
+          1.3459,
+          1.3914
         ],
-        "stop_add_below": 1.2481
+        "stop_add_below": 1.2505
       },
       "history_error": null,
       "today_plan": {
@@ -1599,13 +1581,8 @@
       "tracking": {
         "first_seen": "2026-10-16T19:27:11+08:00",
         "days_tracked": 11,
-        "refresh_count": 15,
+        "refresh_count": 16,
         "score_history": [
-          {
-            "at": "2026-10-20T09:47:35+08:00",
-            "score": 86.7,
-            "action": "第一买入区"
-          },
           {
             "at": "2026-10-20T19:43:28+08:00",
             "score": 86.9,
@@ -1659,6 +1636,11 @@
           {
             "at": "2026-10-26T09:07:18+08:00",
             "score": 89.1,
+            "action": "第一买入区"
+          },
+          {
+            "at": "2026-10-26T21:08:04+08:00",
+            "score": 89.8,
             "action": "第一买入区"
           }
         ]
@@ -1805,7 +1787,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-10-26T09:08:58+08:00"
+        "updated_at": "2026-10-26T21:15:44+08:00"
       },
       "profile": {
         "fund_type": "混合型-灵活",
@@ -1907,35 +1889,35 @@
       "code": "019710",
       "name": "广发道琼斯石油指数(QDII-LOF)人民币E",
       "category": "指数型",
-      "score": 86.9,
+      "score": 89.2,
       "returns": {
-        "1m": 10.45,
-        "3m": 15.41,
-        "6m": 22.31,
-        "1y": 50.09,
+        "1m": 11.69,
+        "3m": 17.86,
+        "6m": 23.63,
+        "1y": 48.55,
         "3y": null,
-        "ytd": 49.41
+        "ytd": 52.08
       },
-      "latest_nav": 3.2429,
+      "latest_nav": 3.3007,
       "estimate_nav": 3.2061,
       "estimate_return": -1.13,
-      "day_return": -1.03,
+      "day_return": 1.78,
       "buy_status": "限大额",
       "position": "中性观察",
       "broad_action": "watch",
       "history": {
-        "nav_date": "2026-10-22",
-        "last_nav": 3.2429,
+        "nav_date": "2026-10-23",
+        "last_nav": 3.3007,
         "returns": {
-          "20d": 4.98,
-          "60d": 15.41,
-          "120d": 21.46,
-          "250d": 51.82
+          "20d": 5.97,
+          "60d": 17.86,
+          "120d": 24.23,
+          "250d": 51.85
         },
         "ma": {
-          "20": 3.1299,
-          "60": 3.0028,
-          "120": 2.8159
+          "20": 3.1392,
+          "60": 3.0111,
+          "120": 2.8212
         },
         "high": {
           "60": 3.3089,
@@ -1943,23 +1925,23 @@
         },
         "low60": 2.6614,
         "drawdown": {
-          "60": -1.99,
-          "120": -1.99,
+          "60": -0.25,
+          "120": -0.25,
           "max250": -17.51
         },
-        "vol20_ann": 40.04,
+        "vol20_ann": 40.35,
         "trend": "强势上行",
-        "deviation60": 8.0,
+        "deviation60": 9.62,
         "overheat": false,
         "buy_zone_1": [
-          3.0829,
-          3.1612
+          3.0921,
+          3.1706
         ],
         "buy_zone_2": [
-          2.9277,
-          3.0268
+          2.9358,
+          3.0352
         ],
-        "stop_add_below": 2.7595
+        "stop_add_below": 2.7648
       },
       "history_error": null,
       "today_plan": {
@@ -1970,13 +1952,8 @@
       "tracking": {
         "first_seen": "2026-10-19T21:26:05+08:00",
         "days_tracked": 8,
-        "refresh_count": 14,
+        "refresh_count": 15,
         "score_history": [
-          {
-            "at": "2026-10-20T09:47:35+08:00",
-            "score": 87.5,
-            "action": "等待回调"
-          },
           {
             "at": "2026-10-20T19:43:28+08:00",
             "score": 87.8,
@@ -2031,6 +2008,11 @@
             "at": "2026-10-26T09:07:18+08:00",
             "score": 86.9,
             "action": "继续等买点"
+          },
+          {
+            "at": "2026-10-26T21:08:04+08:00",
+            "score": 89.2,
+            "action": "继续等买点"
           }
         ]
       },
@@ -2054,7 +2036,7 @@
         "overview": {
           "fund_type": "指数型-海外股票",
           "asset_scale": null,
-          "share_scale": "0.1354亿份（截止至：2026年06月30日）",
+          "share_scale": "0.1454亿份（截止至：2026年09月30日）",
           "manager": "姚曦",
           "company": "广发基金",
           "成立日期": "2023年11月07日",
@@ -2082,67 +2064,67 @@
           }
         },
         "holdings": {
-          "quarter": "2026年2季度股票投资明细",
-          "top10_concentration": 65.49,
+          "quarter": "2026年3季度股票投资明细",
+          "top10_concentration": 64.24,
           "top_holdings": [
             {
               "name": "康菲石油",
               "code": "COP",
-              "weight": 15.87
+              "weight": 15.38
             },
             {
               "name": "瓦莱罗能源",
               "code": "VLO",
-              "weight": 9.69
+              "weight": 11.7
             },
             {
               "name": "马拉松原油",
               "code": "MPC",
-              "weight": 9.35
-            },
-            {
-              "name": "EOG能源",
-              "code": "EOG",
-              "weight": 6.03
-            },
-            {
-              "name": "EQT能源",
-              "code": "EQT",
-              "weight": 4.45
-            },
-            {
-              "name": "Texas Pacific Land Corp",
-              "code": "TPL",
-              "weight": 4.38
+              "weight": 11.53
             },
             {
               "name": "Phillips 66",
               "code": "PSX",
-              "weight": 4.1
-            },
-            {
-              "name": "Diamondback Energy Inc",
-              "code": "FANG",
-              "weight": 3.94
+              "weight": 4.26
             },
             {
               "name": "戴文能源",
               "code": "DVN",
-              "weight": 3.91
+              "weight": 4.07
+            },
+            {
+              "name": "EOG能源",
+              "code": "EOG",
+              "weight": 4.05
+            },
+            {
+              "name": "Diamondback Energy Inc",
+              "code": "FANG",
+              "weight": 3.97
+            },
+            {
+              "name": "EQT能源",
+              "code": "EQT",
+              "weight": 3.74
+            },
+            {
+              "name": "Texas Pacific Land Corp",
+              "code": "TPL",
+              "weight": 2.78
             },
             {
               "name": "Expand Energy Corp",
               "code": "EXE",
-              "weight": 3.77
+              "weight": 2.76
             }
           ]
         },
         "industries": {
-          "period": "2026-06-30",
+          "period": "2026-09-30",
           "items": [
             {
               "name": "能源",
-              "weight": 91.83
+              "weight": 90.41
             }
           ]
         },
@@ -2156,12 +2138,12 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-10-26T09:09:04+08:00"
+        "updated_at": "2026-10-26T21:15:51+08:00"
       },
       "profile": {
         "fund_type": "指数型-海外股票",
         "asset_scale": null,
-        "share_scale": "0.1354亿份（截止至：2026年06月30日）",
+        "share_scale": "0.1454亿份（截止至：2026年09月30日）",
         "manager": "姚曦",
         "company": "广发基金",
         "成立日期": "2023年11月07日",
@@ -2173,63 +2155,63 @@
           {
             "name": "康菲石油",
             "code": "COP",
-            "weight": 15.87
+            "weight": 15.38
           },
           {
             "name": "瓦莱罗能源",
             "code": "VLO",
-            "weight": 9.69
+            "weight": 11.7
           },
           {
             "name": "马拉松原油",
             "code": "MPC",
-            "weight": 9.35
-          },
-          {
-            "name": "EOG能源",
-            "code": "EOG",
-            "weight": 6.03
-          },
-          {
-            "name": "EQT能源",
-            "code": "EQT",
-            "weight": 4.45
-          },
-          {
-            "name": "Texas Pacific Land Corp",
-            "code": "TPL",
-            "weight": 4.38
+            "weight": 11.53
           },
           {
             "name": "Phillips 66",
             "code": "PSX",
-            "weight": 4.1
-          },
-          {
-            "name": "Diamondback Energy Inc",
-            "code": "FANG",
-            "weight": 3.94
+            "weight": 4.26
           },
           {
             "name": "戴文能源",
             "code": "DVN",
-            "weight": 3.91
+            "weight": 4.07
+          },
+          {
+            "name": "EOG能源",
+            "code": "EOG",
+            "weight": 4.05
+          },
+          {
+            "name": "Diamondback Energy Inc",
+            "code": "FANG",
+            "weight": 3.97
+          },
+          {
+            "name": "EQT能源",
+            "code": "EQT",
+            "weight": 3.74
+          },
+          {
+            "name": "Texas Pacific Land Corp",
+            "code": "TPL",
+            "weight": 2.78
           },
           {
             "name": "Expand Energy Corp",
             "code": "EXE",
-            "weight": 3.77
+            "weight": 2.76
           }
         ],
-        "holdings_period": "2026年2季度股票投资明细",
-        "top10_concentration": 65.49,
+        "holdings_period": "2026年3季度股票投资明细",
+        "top10_concentration": 64.24,
         "industries": [
           {
             "name": "能源",
-            "weight": 91.83
+            "weight": 90.41
           }
         ],
-        "industry_period": "2026-06-30",
+        "industry_period": "2026-09-30",
         "manager_details": [
           {
             "name": "姚曦",
@@ -2240,14 +2222,14 @@
           }
         ]
       },
-      "risk": "近1年历史最大回撤约17.5%；波动中等偏高；前十大股票占比约65%，持仓比较集中。历史数据不代表未来。",
+      "risk": "近1年历史最大回撤约17.5%；波动中等偏高；前十大股票占比约64%，持仓比较集中。历史数据不代表未来。",
       "deep_plain": [
         "基金经理：姚曦",
         "历史任意时点持有满1年的盈利概率约51%（仅作历史统计，不是未来预测）"
       ]
     }
   ],
-  "deep_enriched_at": "2026-10-26T09:09:04+08:00",
+  "deep_enriched_at": "2026-10-26T21:15:51+08:00",
   "deep_method": "overview+risk_drawdown+historical_profit_probability+latest_disclosed_holdings+industry+fees+manager",
   "profile_note": "基金持仓和行业配置来自最新可获得的定期报告披露，不是实时持仓。"
 }

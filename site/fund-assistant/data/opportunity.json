@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-27T04:08:21+08:00",
+  "generated_at": "2026-10-27T10:00:39+08:00",
   "method_version": "fund-screen-v2.0",
   "goal": "持续跟踪6-12个月高弹性候选；不承诺收益，不预测必然涨幅",
   "selection_policy": "核心池固定跟踪6只；仅在评分明显恶化、中期趋势转负、暂停申购或更优候选持续胜出时替换",
@@ -91,13 +91,8 @@
       "tracking": {
         "first_seen": "2026-09-28T21:58:24+08:00",
         "days_tracked": 30,
-        "refresh_count": 34,
+        "refresh_count": 35,
         "score_history": [
-          {
-            "at": "2026-10-21T02:44:42+08:00",
-            "score": 79.5,
-            "action": "继续等买点"
-          },
           {
             "at": "2026-10-21T09:33:57+08:00",
             "score": 79.5,
@@ -150,6 +145,11 @@
           },
           {
             "at": "2026-10-27T04:09:10+08:00",
+            "score": 73.9,
+            "action": "继续等买点"
+          },
+          {
+            "at": "2026-10-27T10:01:21+08:00",
             "score": 73.9,
             "action": "继续等买点"
           }
@@ -305,7 +305,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-10-27T04:10:23+08:00"
+        "updated_at": "2026-10-27T10:02:15+08:00"
       },
       "profile": {
         "fund_type": "股票型",
@@ -400,7 +400,7 @@
             "name": "李佳存",
             "company": "招商基金",
             "career_days": 4288.0,
-            "current_aum_yi": 32.05,
+            "current_aum_yi": 49.42,
             "best_return": 141.0
           }
         ]
@@ -478,13 +478,8 @@
       "tracking": {
         "first_seen": "2026-09-29T20:56:44+08:00",
         "days_tracked": 29,
-        "refresh_count": 32,
+        "refresh_count": 33,
         "score_history": [
-          {
-            "at": "2026-10-21T02:44:42+08:00",
-            "score": 78.2,
-            "action": "继续等买点"
-          },
           {
             "at": "2026-10-21T09:33:57+08:00",
             "score": 78.2,
@@ -539,6 +534,11 @@
             "at": "2026-10-27T04:09:10+08:00",
             "score": 71.8,
             "action": "继续等买点"
+          },
+          {
+            "at": "2026-10-27T10:01:21+08:00",
+            "score": 71.8,
+            "action": "继续等买点"
           }
         ]
       },
@@ -590,87 +590,67 @@
           }
         },
         "holdings": {
-          "quarter": "2026年2季度股票投资明细",
-          "top10_concentration": 62.03,
+          "quarter": "2026年3季度股票投资明细",
+          "top10_concentration": 62.2,
           "top_holdings": [
-            {
-              "name": "药明康德",
-              "code": "603259",
-              "weight": 10.18
-            },
-            {
-              "name": "药明合联",
-              "code": "02268",
-              "weight": 7.8
-            },
             {
               "name": "凯莱英",
               "code": "002821",
-              "weight": 7.76
+              "weight": 7.83
             },
             {
               "name": "药明生物",
               "code": "02269",
-              "weight": 6.74
-            },
-            {
-              "name": "美迪西",
-              "code": "688202",
-              "weight": 5.62
-            },
-            {
-              "name": "益诺思",
-              "code": "688710",
-              "weight": 5.34
-            },
-            {
-              "name": "华大智造",
-              "code": "688114",
-              "weight": 5.0
-            },
-            {
-              "name": "昭衍新药",
-              "code": "603127",
-              "weight": 4.97
-            },
-            {
-              "name": "奥浦迈",
-              "code": "688293",
-              "weight": 4.44
+              "weight": 7.6
             },
             {
               "name": "泰格医药",
               "code": "300347",
-              "weight": 4.18
+              "weight": 7.56
+            },
+            {
+              "name": "药明合联",
+              "code": "02268",
+              "weight": 7.49
+            },
+            {
+              "name": "药明康德",
+              "code": "603259",
+              "weight": 7.32
+            },
+            {
+              "name": "康龙化成",
+              "code": "300759",
+              "weight": 5.27
+            },
+            {
+              "name": "奥浦迈",
+              "code": "688293",
+              "weight": 4.96
+            },
+            {
+              "name": "昭衍新药",
+              "code": "603127",
+              "weight": 4.82
+            },
+            {
+              "name": "百普赛斯",
+              "code": "301080",
+              "weight": 4.68
+            },
+            {
+              "name": "普洛药业",
+              "code": "000739",
+              "weight": 4.67
             }
           ]
         },
         "industries": {
-          "period": "2026-06-30",
+          "period": "2026-09-30",
           "items": [
             {
-              "name": "科学研究和技术服务业",
-              "weight": 47.22
-            },
-            {
               "name": "医疗保健",
-              "weight": 26.67
-            },
-            {
-              "name": "制造业",
-              "weight": 16.61
-            },
-            {
-              "name": "电力、热力、燃气及水生产和供应业",
-              "weight": 0.04
-            },
-            {
-              "name": "采矿业",
-              "weight": 0.01
-            },
-            {
-              "name": "交通运输、仓储和邮政业",
-              "weight": 0.0
+              "weight": 21.13
             }
           ]
         },
@@ -692,7 +672,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-10-27T04:10:30+08:00"
+        "updated_at": "2026-10-27T10:02:20+08:00"
       },
       "profile": {
         "fund_type": "股票型",
@@ -707,91 +687,71 @@
         "custody_fee": "0.20%（每年）",
         "holdings": [
           {
-            "name": "药明康德",
-            "code": "603259",
-            "weight": 10.18
-          },
-          {
-            "name": "药明合联",
-            "code": "02268",
-            "weight": 7.8
-          },
-          {
             "name": "凯莱英",
             "code": "002821",
-            "weight": 7.76
+            "weight": 7.83
           },
           {
             "name": "药明生物",
             "code": "02269",
-            "weight": 6.74
-          },
-          {
-            "name": "美迪西",
-            "code": "688202",
-            "weight": 5.62
-          },
-          {
-            "name": "益诺思",
-            "code": "688710",
-            "weight": 5.34
-          },
-          {
-            "name": "华大智造",
-            "code": "688114",
-            "weight": 5.0
-          },
-          {
-            "name": "昭衍新药",
-            "code": "603127",
-            "weight": 4.97
-          },
-          {
-            "name": "奥浦迈",
-            "code": "688293",
-            "weight": 4.44
+            "weight": 7.6
           },
           {
             "name": "泰格医药",
             "code": "300347",
-            "weight": 4.18
+            "weight": 7.56
+          },
+          {
+            "name": "药明合联",
+            "code": "02268",
+            "weight": 7.49
+          },
+          {
+            "name": "药明康德",
+            "code": "603259",
+            "weight": 7.32
+          },
+          {
+            "name": "康龙化成",
+            "code": "300759",
+            "weight": 5.27
+          },
+          {
+            "name": "奥浦迈",
+            "code": "688293",
+            "weight": 4.96
+          },
+          {
+            "name": "昭衍新药",
+            "code": "603127",
+            "weight": 4.82
+          },
+          {
+            "name": "百普赛斯",
+            "code": "301080",
+            "weight": 4.68
+          },
+          {
+            "name": "普洛药业",
+            "code": "000739",
+            "weight": 4.67
           }
         ],
-        "holdings_period": "2026年2季度股票投资明细",
-        "top10_concentration": 62.03,
+        "holdings_period": "2026年3季度股票投资明细",
+        "top10_concentration": 62.2,
         "industries": [
           {
-            "name": "科学研究和技术服务业",
-            "weight": 47.22
-          },
-          {
             "name": "医疗保健",
-            "weight": 26.67
-          },
-          {
-            "name": "制造业",
-            "weight": 16.61
-          },
-          {
-            "name": "电力、热力、燃气及水生产和供应业",
-            "weight": 0.04
-          },
-          {
-            "name": "采矿业",
-            "weight": 0.01
-          },
-          {
-            "name": "交通运输、仓储和邮政业",
-            "weight": 0.0
+            "weight": 21.13
           }
         ],
-        "industry_period": "2026-06-30",
+        "industry_period": "2026-09-30",
         "manager_details": [
           {
             "name": "李佳存",
             "company": "招商基金",
             "career_days": 4288.0,
-            "current_aum_yi": 32.05,
+            "current_aum_yi": 49.42,
             "best_return": 141.0
           }
         ]
@@ -869,13 +829,8 @@
       "tracking": {
         "first_seen": "2026-09-30T20:38:05+08:00",
         "days_tracked": 28,
-        "refresh_count": 29,
+        "refresh_count": 30,
         "score_history": [
-          {
-            "at": "2026-10-21T02:44:42+08:00",
-            "score": 73.1,
-            "action": "不买/停止补仓"
-          },
           {
             "at": "2026-10-21T09:33:57+08:00",
             "score": 73.1,
@@ -928,6 +883,11 @@
           },
           {
             "at": "2026-10-27T04:09:10+08:00",
+            "score": 58.2,
+            "action": "不买/停止补仓"
+          },
+          {
+            "at": "2026-10-27T10:01:21+08:00",
             "score": 58.2,
             "action": "不买/停止补仓"
           }
@@ -1079,7 +1039,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-10-27T04:10:36+08:00"
+        "updated_at": "2026-10-27T10:02:24+08:00"
       },
       "profile": {
         "fund_type": "混合型-偏股",
@@ -1174,7 +1134,7 @@
             "name": "乔培涛",
             "company": "方正富邦基金",
             "career_days": 3380.0,
-            "current_aum_yi": 9.52,
+            "current_aum_yi": 8.15,
             "best_return": 67.92
           }
         ]
@@ -1252,13 +1212,8 @@
       "tracking": {
         "first_seen": "2026-10-16T08:19:53+08:00",
         "days_tracked": 12,
-        "refresh_count": 19,
+        "refresh_count": 20,
         "score_history": [
-          {
-            "at": "2026-10-21T02:44:42+08:00",
-            "score": 91.2,
-            "action": "等待回调"
-          },
           {
             "at": "2026-10-21T09:33:57+08:00",
             "score": 91.3,
@@ -1311,6 +1266,11 @@
           },
           {
             "at": "2026-10-27T04:09:10+08:00",
+            "score": 93.4,
+            "action": "继续等买点"
+          },
+          {
+            "at": "2026-10-27T10:01:21+08:00",
             "score": 93.4,
             "action": "继续等买点"
           }
@@ -1442,7 +1402,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-10-27T04:10:42+08:00"
+        "updated_at": "2026-10-27T10:02:29+08:00"
       },
       "profile": {
         "fund_type": "指数型-海外股票",
@@ -1521,7 +1481,7 @@
             "name": "姚曦",
             "company": "广发基金",
             "career_days": 1805.0,
-            "current_aum_yi": 164.33,
+            "current_aum_yi": 167.92,
             "best_return": 82.07
           }
         ]
@@ -1599,13 +1559,8 @@
       "tracking": {
         "first_seen": "2026-10-16T19:27:11+08:00",
         "days_tracked": 12,
-        "refresh_count": 17,
+        "refresh_count": 18,
         "score_history": [
-          {
-            "at": "2026-10-21T02:44:42+08:00",
-            "score": 87.1,
-            "action": "第一买入区"
-          },
           {
             "at": "2026-10-21T09:33:57+08:00",
             "score": 87.1,
@@ -1658,6 +1613,11 @@
           },
           {
             "at": "2026-10-27T04:09:10+08:00",
+            "score": 89.8,
+            "action": "第一买入区"
+          },
+          {
+            "at": "2026-10-27T10:01:21+08:00",
             "score": 89.8,
             "action": "第一买入区"
           }
@@ -1805,7 +1765,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-10-27T04:10:48+08:00"
+        "updated_at": "2026-10-27T10:02:34+08:00"
       },
       "profile": {
         "fund_type": "混合型-灵活",
@@ -1970,13 +1930,8 @@
       "tracking": {
         "first_seen": "2026-10-19T21:26:05+08:00",
         "days_tracked": 9,
-        "refresh_count": 16,
+        "refresh_count": 17,
         "score_history": [
-          {
-            "at": "2026-10-21T02:44:42+08:00",
-            "score": 87.6,
-            "action": "继续等买点"
-          },
           {
             "at": "2026-10-21T09:33:57+08:00",
             "score": 87.6,
@@ -2029,6 +1984,11 @@
           },
           {
             "at": "2026-10-27T04:09:10+08:00",
+            "score": 89.2,
+            "action": "继续等买点"
+          },
+          {
+            "at": "2026-10-27T10:01:21+08:00",
             "score": 89.2,
             "action": "继续等买点"
           }
@@ -2156,7 +2116,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-10-27T04:10:54+08:00"
+        "updated_at": "2026-10-27T10:02:39+08:00"
       },
       "profile": {
         "fund_type": "指数型-海外股票",
@@ -2235,7 +2195,7 @@
             "name": "姚曦",
             "company": "广发基金",
             "career_days": 1805.0,
-            "current_aum_yi": 164.33,
+            "current_aum_yi": 167.92,
             "best_return": 82.07
           }
         ]
@@ -2247,7 +2207,7 @@
       ]
     }
   ],
-  "deep_enriched_at": "2026-10-27T04:10:54+08:00",
+  "deep_enriched_at": "2026-10-27T10:02:39+08:00",
   "deep_method": "overview+risk_drawdown+historical_profit_probability+latest_disclosed_holdings+industry+fees+manager",
   "profile_note": "基金持仓和行业配置来自最新可获得的定期报告披露，不是实时持仓。"
 }

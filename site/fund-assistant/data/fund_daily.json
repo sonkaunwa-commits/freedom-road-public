@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-27T04:08:21+08:00",
+  "generated_at": "2026-10-27T10:00:39+08:00",
   "source": "东方财富/天天基金公开数据（AKShare封装）",
   "count": 24269,
   "funds": [
@@ -5739,7 +5739,7 @@
       "nav": 1.3024,
       "prev_nav": null,
       "day_return": 1.26,
-      "buy_status": "开放申购",
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.12%"
     },
@@ -5749,7 +5749,7 @@
       "nav": 1.2968,
       "prev_nav": null,
       "day_return": 1.26,
-      "buy_status": "开放申购",
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },
@@ -5849,7 +5849,7 @@
       "nav": 1.2864,
       "prev_nav": null,
       "day_return": 1.25,
-      "buy_status": "开放申购",
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },
@@ -7469,7 +7469,7 @@
       "nav": 1.135,
       "prev_nav": null,
       "day_return": 1.15,
-      "buy_status": "开放申购",
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.15%"
     },
@@ -7589,7 +7589,7 @@
       "nav": 1.1249,
       "prev_nav": null,
       "day_return": 1.14,
-      "buy_status": "开放申购",
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },
@@ -43254,16 +43254,6 @@
       "fee": "0.00%"
     },
     {
-      "code": "009567",
-      "name": "山证资管裕丰一年定开债券发起式",
-      "nav": 1.0588,
-      "prev_nav": null,
-      "day_return": 0.07,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
-      "fee": "0.80%"
-    },
-    {
       "code": "014576",
       "name": "农银瑞丰6个月持有混合A",
       "nav": 1.0585,
@@ -53119,7 +53109,7 @@
       "nav": 1.06,
       "prev_nav": null,
       "day_return": 0.04,
-      "buy_status": "开放申购",
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.065%"
     },
@@ -53129,7 +53119,7 @@
       "nav": 1.0598,
       "prev_nav": null,
       "day_return": 0.04,
-      "buy_status": "开放申购",
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.60%"
     },
@@ -53249,7 +53239,7 @@
       "nav": 1.0562,
       "prev_nav": null,
       "day_return": 0.04,
-      "buy_status": "开放申购",
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },
@@ -53959,8 +53949,8 @@
       "nav": 1.0419,
       "prev_nav": null,
       "day_return": 0.04,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
       "fee": "0.60%"
     },
     {
@@ -65274,16 +65264,6 @@
       "fee": "0.00%"
     },
     {
-      "code": "007212",
-      "name": "山证资管裕泰3个月定开债券发起式",
-      "nav": 1.0368,
-      "prev_nav": null,
-      "day_return": 0.03,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
-      "fee": "0.08%"
-    },
-    {
       "code": "015580",
       "name": "中金金誉债券",
       "nav": 1.0368,
@@ -71469,7 +71449,7 @@
       "nav": 1.155,
       "prev_nav": null,
       "day_return": 0.02,
-      "buy_status": "限大额",
+      "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },
@@ -76589,8 +76569,8 @@
       "nav": 1.0824,
       "prev_nav": null,
       "day_return": 0.02,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
       "fee": "0.60%"
     },
     {
@@ -91169,8 +91149,8 @@
       "nav": 1.0982,
       "prev_nav": null,
       "day_return": 0.01,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
       "fee": "0.80%"
     },
     {
@@ -94080,7 +94060,7 @@
       "prev_nav": null,
       "day_return": 0.01,
       "buy_status": "暂停申购",
-      "sell_status": "开放赎回",
+      "sell_status": "暂停赎回",
       "fee": "0.80%"
     },
     {
@@ -95410,7 +95390,7 @@
       "prev_nav": null,
       "day_return": 0.01,
       "buy_status": "开放申购",
-      "sell_status": "开放赎回",
+      "sell_status": "暂停赎回",
       "fee": "0.60%"
     },
     {
@@ -96609,7 +96589,7 @@
       "nav": 1.0373,
       "prev_nav": null,
       "day_return": 0.01,
-      "buy_status": "开放申购",
+      "buy_status": "暂停申购",
       "sell_status": "暂停赎回",
       "fee": "0.45%"
     },
@@ -99554,16 +99534,6 @@
       "fee": "0.045%"
     },
     {
-      "code": "018758",
-      "name": "山证资管汇利一年定开债券A",
-      "nav": 1.0109,
-      "prev_nav": null,
-      "day_return": 0.01,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
-      "fee": "0.05%"
-    },
-    {
       "code": "023295",
       "name": "民生加银稳鑫120天滚动持有债券C",
       "nav": 1.0109,
@@ -99891,16 +99861,6 @@
       "day_return": 0.01,
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
-      "fee": "0.00%"
-    },
-    {
-      "code": "018759",
-      "name": "山证资管汇利一年定开债券C",
-      "nav": 1.008,
-      "prev_nav": null,
-      "day_return": 0.01,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
       "fee": "0.00%"
     },
     {
@@ -103270,7 +103230,7 @@
       "prev_nav": null,
       "day_return": 0.0,
       "buy_status": "暂停申购",
-      "sell_status": "开放赎回",
+      "sell_status": "暂停赎回",
       "fee": "0.00%"
     },
     {
@@ -228504,6 +228464,16 @@
       "fee": "0.06%"
     },
     {
+      "code": "009567",
+      "name": "山证资管裕丰一年定开债券发起式",
+      "nav": null,
+      "prev_nav": null,
+      "day_return": null,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.80%"
+    },
+    {
       "code": "006415",
       "name": "银华中短政策金融债定开债",
       "nav": null,
@@ -229456,6 +229426,16 @@
     {
       "code": "005964",
       "name": "中欧安财定开债发起式",
+      "nav": null,
+      "prev_nav": null,
+      "day_return": null,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.08%"
+    },
+    {
+      "code": "007212",
+      "name": "山证资管裕泰3个月定开债券发起式",
       "nav": null,
       "prev_nav": null,
       "day_return": null,
@@ -230424,6 +230404,16 @@
       "fee": "1.00%"
     },
     {
+      "code": "018758",
+      "name": "山证资管汇利一年定开债券A",
+      "nav": null,
+      "prev_nav": null,
+      "day_return": null,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.05%"
+    },
+    {
       "code": "025821",
       "name": "银华多策略稳健三个月持有期混合(FOF)C",
       "nav": null,
@@ -230532,6 +230522,16 @@
       "buy_status": "暂停申购",
       "sell_status": "暂停赎回",
       "fee": "0.05%"
+    },
+    {
+      "code": "018759",
+      "name": "山证资管汇利一年定开债券C",
+      "nav": null,
+      "prev_nav": null,
+      "day_return": null,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.00%"
     },
     {
       "code": "008440",
@@ -231899,8 +231899,8 @@
       "nav": null,
       "prev_nav": null,
       "day_return": null,
-      "buy_status": "封闭期",
-      "sell_status": "封闭期",
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
       "fee": "0.30%"
     },
     {
@@ -231959,8 +231959,8 @@
       "nav": null,
       "prev_nav": null,
       "day_return": null,
-      "buy_status": "封闭期",
-      "sell_status": "封闭期",
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
       "fee": "0.00%"
     },
     {
@@ -234719,8 +234719,8 @@
       "nav": null,
       "prev_nav": null,
       "day_return": null,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
       "fee": "1.50%"
     },
     {

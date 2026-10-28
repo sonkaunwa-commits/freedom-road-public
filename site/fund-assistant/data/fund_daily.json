@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-28T03:38:04+08:00",
+  "generated_at": "2026-10-28T10:09:01+08:00",
   "source": "东方财富/天天基金公开数据（AKShare封装）",
-  "count": 24266,
+  "count": 24264,
   "funds": [
     {
       "code": "024330",
@@ -16859,7 +16859,7 @@
       "nav": 1.0652,
       "prev_nav": null,
       "day_return": 0.08,
-      "buy_status": "暂停申购",
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.08%"
     },
@@ -17009,7 +17009,7 @@
       "nav": 1.06,
       "prev_nav": null,
       "day_return": 0.08,
-      "buy_status": "开放申购",
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.02%"
     },
@@ -32239,7 +32239,7 @@
       "nav": 1.1135,
       "prev_nav": null,
       "day_return": 0.04,
-      "buy_status": "开放申购",
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.08%"
     },
@@ -41539,8 +41539,8 @@
       "nav": 1.0285,
       "prev_nav": null,
       "day_return": 0.03,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
       "fee": "0.80%"
     },
     {
@@ -52659,8 +52659,8 @@
       "nav": 1.1619,
       "prev_nav": null,
       "day_return": 0.01,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
       "fee": "0.05%"
     },
     {
@@ -53229,8 +53229,8 @@
       "nav": 1.1437,
       "prev_nav": null,
       "day_return": 0.01,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
       "fee": "0.00%"
     },
     {
@@ -117504,16 +117504,6 @@
       "fee": "0.00%"
     },
     {
-      "code": "019280",
-      "name": "嘉实中证大农业ETF发起联接C",
-      "nav": 0.989,
-      "prev_nav": null,
-      "day_return": -0.88,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
-      "fee": "0.00%"
-    },
-    {
       "code": "010125",
       "name": "兴银景气优选混合C",
       "nav": 0.9446,
@@ -117822,16 +117812,6 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.15%"
-    },
-    {
-      "code": "019279",
-      "name": "嘉实中证大农业ETF发起联接A",
-      "nav": 0.9964,
-      "prev_nav": null,
-      "day_return": -0.89,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
-      "fee": "0.10%"
     },
     {
       "code": "010124",
@@ -209321,7 +209301,7 @@
       "day_return": -3.92,
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
-      "fee": "0.00%"
+      "fee": ""
     },
     {
       "code": "005496",
@@ -222199,8 +222179,8 @@
       "nav": 0.9272,
       "prev_nav": null,
       "day_return": null,
-      "buy_status": "封闭期",
-      "sell_status": "封闭期",
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
       "fee": "0.80%"
     },
     {
@@ -239879,7 +239859,7 @@
       "nav": null,
       "prev_nav": null,
       "day_return": null,
-      "buy_status": "封闭期",
+      "buy_status": "开放申购",
       "sell_status": "封闭期",
       "fee": "0.50%"
     },
@@ -239979,7 +239959,7 @@
       "nav": null,
       "prev_nav": null,
       "day_return": null,
-      "buy_status": "封闭期",
+      "buy_status": "开放申购",
       "sell_status": "封闭期",
       "fee": "0.00%"
     },
@@ -241829,8 +241809,8 @@
       "nav": null,
       "prev_nav": null,
       "day_return": null,
-      "buy_status": "封闭期",
-      "sell_status": "封闭期",
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
       "fee": "0.50%"
     },
     {
@@ -241839,8 +241819,8 @@
       "nav": null,
       "prev_nav": null,
       "day_return": null,
-      "buy_status": "封闭期",
-      "sell_status": "封闭期",
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
       "fee": "0.00%"
     },
     {
@@ -242579,8 +242559,8 @@
       "nav": null,
       "prev_nav": null,
       "day_return": null,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
+      "buy_status": "封闭期",
+      "sell_status": "封闭期",
       "fee": "0.30%"
     },
     {
@@ -242589,8 +242569,8 @@
       "nav": null,
       "prev_nav": null,
       "day_return": null,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
+      "buy_status": "封闭期",
+      "sell_status": "封闭期",
       "fee": "0.00%"
     },
     {

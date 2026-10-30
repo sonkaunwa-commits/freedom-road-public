@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-30T20:57:35+08:00",
+  "generated_at": "2026-10-31T03:41:16+08:00",
   "method_version": "fund-screen-v2.0",
   "goal": "持续跟踪6-12个月高弹性候选；不承诺收益，不预测必然涨幅",
   "selection_policy": "核心池固定跟踪6只；仅在评分明显恶化、中期趋势转负、暂停申购或更优候选持续胜出时替换",
@@ -12,14 +12,23 @@
     "detail": "抱歉，您没有接口(fund_company)访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。"
   },
   "warnings": [
-    "混合型: ChunkedEncodingError: ('Connection broken: IncompleteRead(245471 bytes read, 1254634 more expected)', IncompleteRead(245471 bytes read, 1254634 more expected))"
+    {
+      "type": "pool_size_normalized",
+      "message": "核心候选池由7只强制校正为6只",
+      "removed": [
+        {
+          "code": "004726",
+          "name": "先锋聚优A"
+        }
+      ]
+    }
   ],
   "funds": [
     {
       "code": "000960",
       "name": "招商医药健康产业股票",
       "category": "股票型",
-      "score": 76.1,
+      "score": 75.7,
       "returns": {
         "1m": -16.02,
         "3m": 17.53,
@@ -81,14 +90,9 @@
       },
       "tracking": {
         "first_seen": "2026-09-28T21:58:24+08:00",
-        "days_tracked": 33,
-        "refresh_count": 45,
+        "days_tracked": 34,
+        "refresh_count": 46,
         "score_history": [
-          {
-            "at": "2026-10-27T04:09:10+08:00",
-            "score": 73.9,
-            "action": "继续等买点"
-          },
           {
             "at": "2026-10-27T10:01:21+08:00",
             "score": 73.9,
@@ -143,6 +147,11 @@
             "at": "2026-10-30T20:58:58+08:00",
             "score": 76.1,
             "action": "继续等买点"
+          },
+          {
+            "at": "2026-10-31T03:42:27+08:00",
+            "score": 75.7,
+            "action": "继续等买点"
           }
         ]
       },
@@ -164,7 +173,16 @@
       ],
       "deep_analysis": {
         "overview": {
-          "error": "overview: ConnectionError: HTTPSConnectionPool(host='fundf10.eastmoney.com', port=443): Max retries exceeded with url: /jbgk_000960.html (Caused by NewConnectionError(\"HTTPSConnect"
+          "fund_type": "股票型",
+          "asset_scale": null,
+          "share_scale": "13.0077亿份（截止至：2026年09月30日）",
+          "manager": "李佳存",
+          "company": "招商基金",
+          "成立日期": "2015年01月30日",
+          "benchmark": "申万医药生物行业指数收益率*85%+中债-综合财富(1-3年)指数收益率*15%",
+          "tracking_target": "该基金无跟踪标的",
+          "management_fee": "1.20%（每年）",
+          "custody_fee": "0.20%（每年）"
         },
         "risk": {
           "error": "risk: TypeError: fund_individual_analysis_xq() got an unexpected keyword argument 'timeout'"
@@ -173,7 +191,60 @@
           "error": "probability: TypeError: fund_individual_profit_probability_xq() got an unexpected keyword argument 'timeout'"
         },
         "holdings": {
-          "error": "holdings: APIError: API Error: FundArchivesDatas request failed: HTTPSConnectionPool(host='fundf10.eastmoney.com', port=443): Max retries exceeded with url: /FundArchivesDatas.aspx"
+          "quarter": "2026年3季度股票投资明细",
+          "top10_concentration": 63.18,
+          "top_holdings": [
+            {
+              "name": "药明康德",
+              "code": "603259",
+              "weight": 8.72
+            },
+            {
+              "name": "泰格医药",
+              "code": "300347",
+              "weight": 7.89
+            },
+            {
+              "name": "凯莱英",
+              "code": "002821",
+              "weight": 7.88
+            },
+            {
+              "name": "康龙化成",
+              "code": "300759",
+              "weight": 7.67
+            },
+            {
+              "name": "奥浦迈",
+              "code": "688293",
+              "weight": 6.05
+            },
+            {
+              "name": "普洛药业",
+              "code": "000739",
+              "weight": 5.22
+            },
+            {
+              "name": "益诺思",
+              "code": "688710",
+              "weight": 5.2
+            },
+            {
+              "name": "美迪西",
+              "code": "688202",
+              "weight": 4.97
+            },
+            {
+              "name": "华大智造",
+              "code": "688114",
+              "weight": 4.88
+            },
+            {
+              "name": "昭衍新药",
+              "code": "603127",
+              "weight": 4.7
+            }
+          ]
         },
         "industries": {
           "period": "2026-09-30",
@@ -206,25 +277,93 @@
         },
         "redemption_fee": [
           {
-            "error": "fee: ConnectionError: HTTPSConnectionPool(host='fundf10.eastmoney.com', port=443): Max retries exceeded with url: /jjfl_000960.html (Caused by NewConnectionError(\"HTTPSConnection(h"
+            "适用期限": "小于7天",
+            "赎回费率": "1.50%"
+          },
+          {
+            "适用期限": "大于等于7天，小于30天",
+            "赎回费率": "0.75%"
+          },
+          {
+            "适用期限": "大于等于30天，小于365天",
+            "赎回费率": "0.50%"
+          },
+          {
+            "适用期限": "大于等于365天，小于730天",
+            "赎回费率": "0.25%"
+          },
+          {
+            "适用期限": "大于等于730天",
+            "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-10-30T21:03:16+08:00"
+        "updated_at": "2026-10-31T03:43:09+08:00"
       },
       "profile": {
-        "fund_type": null,
+        "fund_type": "股票型",
         "asset_scale": null,
-        "share_scale": null,
-        "manager": null,
-        "company": null,
-        "成立日期": null,
-        "benchmark": null,
-        "tracking_index": null,
-        "management_fee": null,
-        "custody_fee": null,
-        "holdings": [],
-        "holdings_period": null,
-        "top10_concentration": null,
+        "share_scale": "13.0077亿份（截止至：2026年09月30日）",
+        "manager": "李佳存",
+        "company": "招商基金",
+        "成立日期": "2015年01月30日",
+        "benchmark": "申万医药生物行业指数收益率*85%+中债-综合财富(1-3年)指数收益率*15%",
+        "tracking_index": "该基金无跟踪标的",
+        "management_fee": "1.20%（每年）",
+        "custody_fee": "0.20%（每年）",
+        "holdings": [
+          {
+            "name": "药明康德",
+            "code": "603259",
+            "weight": 8.72
+          },
+          {
+            "name": "泰格医药",
+            "code": "300347",
+            "weight": 7.89
+          },
+          {
+            "name": "凯莱英",
+            "code": "002821",
+            "weight": 7.88
+          },
+          {
+            "name": "康龙化成",
+            "code": "300759",
+            "weight": 7.67
+          },
+          {
+            "name": "奥浦迈",
+            "code": "688293",
+            "weight": 6.05
+          },
+          {
+            "name": "普洛药业",
+            "code": "000739",
+            "weight": 5.22
+          },
+          {
+            "name": "益诺思",
+            "code": "688710",
+            "weight": 5.2
+          },
+          {
+            "name": "美迪西",
+            "code": "688202",
+            "weight": 4.97
+          },
+          {
+            "name": "华大智造",
+            "code": "688114",
+            "weight": 4.88
+          },
+          {
+            "name": "昭衍新药",
+            "code": "603127",
+            "weight": 4.7
+          }
+        ],
+        "holdings_period": "2026年3季度股票投资明细",
+        "top10_concentration": 63.18,
         "industries": [
           {
             "name": "科学研究和技术服务业",
@@ -252,14 +391,26 @@
           }
         ],
         "industry_period": "2026-09-30",
-        "manager_details": []
-      }
+        "manager_details": [
+          {
+            "name": "李佳存",
+            "company": "招商基金",
+            "career_days": 4292.0,
+            "current_aum_yi": 76.73,
+            "best_return": 145.4
+          }
+        ]
+      },
+      "risk": "前十大股票占比约63%，持仓比较集中。历史数据不代表未来。",
+      "deep_plain": [
+        "基金经理：李佳存"
+      ]
     },
     {
       "code": "011373",
       "name": "招商前沿医疗保健股票A",
       "category": "股票型",
-      "score": 72.6,
+      "score": 71.9,
       "returns": {
         "1m": -18.62,
         "3m": 16.61,
@@ -276,42 +427,42 @@
       "position": "强势回撤，重点等买点",
       "broad_action": "watch",
       "history": {
-        "nav_date": "2026-10-29",
-        "last_nav": 0.7611,
+        "nav_date": "2026-10-30",
+        "last_nav": 0.7619,
         "returns": {
-          "20d": -18.42,
-          "60d": 11.3,
-          "120d": 20.66,
-          "250d": 18.9
+          "20d": -15.32,
+          "60d": 16.61,
+          "120d": 22.24,
+          "250d": 17.65
         },
         "ma": {
-          "20": 0.8293,
-          "60": 0.8189,
-          "120": 0.7181
+          "20": 0.8224,
+          "60": 0.8207,
+          "120": 0.7193
         },
         "high": {
           "60": 0.9362,
           "120": 0.9362
         },
-        "low60": 0.6534,
+        "low60": 0.6569,
         "drawdown": {
-          "60": -18.7,
-          "120": -18.7,
+          "60": -18.62,
+          "120": -18.62,
           "max250": -24.44
         },
-        "vol20_ann": 41.1,
+        "vol20_ann": 40.11,
         "trend": "震荡",
-        "deviation60": -7.05,
+        "deviation60": -7.16,
         "overheat": false,
         "buy_zone_1": [
-          0.8168,
-          0.8376
+          0.81,
+          0.8306
         ],
         "buy_zone_2": [
-          0.7984,
-          0.8254
+          0.8002,
+          0.8272
         ],
-        "stop_add_below": 0.7038
+        "stop_add_below": 0.7049
       },
       "history_error": null,
       "today_plan": {
@@ -321,14 +472,9 @@
       },
       "tracking": {
         "first_seen": "2026-09-29T20:56:44+08:00",
-        "days_tracked": 32,
-        "refresh_count": 43,
+        "days_tracked": 33,
+        "refresh_count": 44,
         "score_history": [
-          {
-            "at": "2026-10-27T04:09:10+08:00",
-            "score": 71.8,
-            "action": "继续等买点"
-          },
           {
             "at": "2026-10-27T10:01:21+08:00",
             "score": 71.8,
@@ -383,6 +529,11 @@
             "at": "2026-10-30T20:58:58+08:00",
             "score": 72.6,
             "action": "继续等买点"
+          },
+          {
+            "at": "2026-10-31T03:42:27+08:00",
+            "score": 71.9,
+            "action": "继续等买点"
           }
         ]
       },
@@ -404,7 +555,16 @@
       ],
       "deep_analysis": {
         "overview": {
-          "error": "overview: ConnectionError: HTTPSConnectionPool(host='fundf10.eastmoney.com', port=443): Max retries exceeded with url: /jbgk_011373.html (Caused by NewConnectionError(\"HTTPSConnect"
+          "fund_type": "股票型",
+          "asset_scale": null,
+          "share_scale": "10.1501亿份（截止至：2026年09月30日）",
+          "manager": "李佳存",
+          "company": "招商基金",
+          "成立日期": "2021年06月22日",
+          "benchmark": "中证医药卫生指数收益率*80%+中证港股通医药卫生综合指数(人民币)收益率*10%+中债-综合全价(1-3年)指数收益率*10%",
+          "tracking_target": "该基金无跟踪标的",
+          "management_fee": "1.20%（每年）",
+          "custody_fee": "0.20%（每年）"
         },
         "risk": {
           "error": "risk: TypeError: fund_individual_analysis_xq() got an unexpected keyword argument 'timeout'"
@@ -413,7 +573,60 @@
           "error": "probability: TypeError: fund_individual_profit_probability_xq() got an unexpected keyword argument 'timeout'"
         },
         "holdings": {
-          "error": "holdings: APIError: API Error: FundArchivesDatas request failed: HTTPSConnectionPool(host='fundf10.eastmoney.com', port=443): Max retries exceeded with url: /FundArchivesDatas.aspx"
+          "quarter": "2026年3季度股票投资明细",
+          "top10_concentration": 62.2,
+          "top_holdings": [
+            {
+              "name": "凯莱英",
+              "code": "002821",
+              "weight": 7.83
+            },
+            {
+              "name": "药明生物",
+              "code": "02269",
+              "weight": 7.6
+            },
+            {
+              "name": "泰格医药",
+              "code": "300347",
+              "weight": 7.56
+            },
+            {
+              "name": "药明合联",
+              "code": "02268",
+              "weight": 7.49
+            },
+            {
+              "name": "药明康德",
+              "code": "603259",
+              "weight": 7.32
+            },
+            {
+              "name": "康龙化成",
+              "code": "300759",
+              "weight": 5.27
+            },
+            {
+              "name": "奥浦迈",
+              "code": "688293",
+              "weight": 4.96
+            },
+            {
+              "name": "昭衍新药",
+              "code": "603127",
+              "weight": 4.82
+            },
+            {
+              "name": "百普赛斯",
+              "code": "301080",
+              "weight": 4.68
+            },
+            {
+              "name": "普洛药业",
+              "code": "000739",
+              "weight": 4.67
+            }
+          ]
         },
         "industries": {
           "period": "2026-09-30",
@@ -446,25 +659,89 @@
         },
         "redemption_fee": [
           {
-            "error": "fee: ConnectionError: HTTPSConnectionPool(host='fundf10.eastmoney.com', port=443): Max retries exceeded with url: /jjfl_011373.html (Caused by NewConnectionError(\"HTTPSConnection(h"
+            "适用期限": "小于7天",
+            "赎回费率": "1.50%"
+          },
+          {
+            "适用期限": "大于等于7天，小于30天",
+            "赎回费率": "0.75%"
+          },
+          {
+            "适用期限": "大于等于30天，小于180天",
+            "赎回费率": "0.50%"
+          },
+          {
+            "适用期限": "大于等于180天",
+            "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-10-30T21:05:48+08:00"
+        "updated_at": "2026-10-31T03:43:13+08:00"
       },
       "profile": {
-        "fund_type": null,
+        "fund_type": "股票型",
         "asset_scale": null,
-        "share_scale": null,
-        "manager": null,
-        "company": null,
-        "成立日期": null,
-        "benchmark": null,
-        "tracking_index": null,
-        "management_fee": null,
-        "custody_fee": null,
-        "holdings": [],
-        "holdings_period": null,
-        "top10_concentration": null,
+        "share_scale": "10.1501亿份（截止至：2026年09月30日）",
+        "manager": "李佳存",
+        "company": "招商基金",
+        "成立日期": "2021年06月22日",
+        "benchmark": "中证医药卫生指数收益率*80%+中证港股通医药卫生综合指数(人民币)收益率*10%+中债-综合全价(1-3年)指数收益率*10%",
+        "tracking_index": "该基金无跟踪标的",
+        "management_fee": "1.20%（每年）",
+        "custody_fee": "0.20%（每年）",
+        "holdings": [
+          {
+            "name": "凯莱英",
+            "code": "002821",
+            "weight": 7.83
+          },
+          {
+            "name": "药明生物",
+            "code": "02269",
+            "weight": 7.6
+          },
+          {
+            "name": "泰格医药",
+            "code": "300347",
+            "weight": 7.56
+          },
+          {
+            "name": "药明合联",
+            "code": "02268",
+            "weight": 7.49
+          },
+          {
+            "name": "药明康德",
+            "code": "603259",
+            "weight": 7.32
+          },
+          {
+            "name": "康龙化成",
+            "code": "300759",
+            "weight": 5.27
+          },
+          {
+            "name": "奥浦迈",
+            "code": "688293",
+            "weight": 4.96
+          },
+          {
+            "name": "昭衍新药",
+            "code": "603127",
+            "weight": 4.82
+          },
+          {
+            "name": "百普赛斯",
+            "code": "301080",
+            "weight": 4.68
+          },
+          {
+            "name": "普洛药业",
+            "code": "000739",
+            "weight": 4.67
+          }
+        ],
+        "holdings_period": "2026年3季度股票投资明细",
+        "top10_concentration": 62.2,
         "industries": [
           {
             "name": "科学研究和技术服务业",
@@ -492,14 +769,26 @@
           }
         ],
         "industry_period": "2026-09-30",
-        "manager_details": []
-      }
+        "manager_details": [
+          {
+            "name": "李佳存",
+            "company": "招商基金",
+            "career_days": 4292.0,
+            "current_aum_yi": 76.73,
+            "best_return": 145.4
+          }
+        ]
+      },
+      "risk": "前十大股票占比约62%，持仓比较集中。历史数据不代表未来。",
+      "deep_plain": [
+        "基金经理：李佳存"
+      ]
     },
     {
       "code": "004243",
       "name": "广发道琼斯石油指数人民币C",
       "category": "指数型",
-      "score": 93.7,
+      "score": 93.4,
       "returns": {
         "1m": 10.66,
         "3m": 17.16,
@@ -509,8 +798,8 @@
         "ytd": 48.9
       },
       "latest_nav": 3.2202,
-      "estimate_nav": 3.2265,
-      "estimate_return": -0.25,
+      "estimate_nav": 3.1839,
+      "estimate_return": -1.13,
       "day_return": -0.45,
       "buy_status": "限大额",
       "position": "中性观察",
@@ -555,20 +844,15 @@
       },
       "history_error": null,
       "today_plan": {
-        "action": "继续等买点",
-        "tone": "watch",
-        "headline": "今天先不动，等进入明确买入区"
+        "action": "第一买入区",
+        "tone": "batch",
+        "headline": "若14:20仍在区间，可先买计划仓位20%–25%"
       },
       "tracking": {
         "first_seen": "2026-10-16T08:19:53+08:00",
-        "days_tracked": 15,
-        "refresh_count": 30,
+        "days_tracked": 16,
+        "refresh_count": 31,
         "score_history": [
-          {
-            "at": "2026-10-27T04:09:10+08:00",
-            "score": 93.4,
-            "action": "继续等买点"
-          },
           {
             "at": "2026-10-27T10:01:21+08:00",
             "score": 93.4,
@@ -623,6 +907,11 @@
             "at": "2026-10-30T20:58:58+08:00",
             "score": 93.7,
             "action": "继续等买点"
+          },
+          {
+            "at": "2026-10-31T03:42:27+08:00",
+            "score": 93.4,
+            "action": "第一买入区"
           }
         ]
       },
@@ -644,7 +933,16 @@
       ],
       "deep_analysis": {
         "overview": {
-          "error": "overview: ConnectionError: HTTPSConnectionPool(host='fundf10.eastmoney.com', port=443): Max retries exceeded with url: /jbgk_004243.html (Caused by NewConnectionError(\"HTTPSConnect"
+          "fund_type": "指数型-海外股票",
+          "asset_scale": null,
+          "share_scale": "0.705亿份（截止至：2026年09月30日）",
+          "manager": "姚曦",
+          "company": "广发基金",
+          "成立日期": "2017年02月28日",
+          "benchmark": "人民币计价的道琼斯美国石油开发与生产指数收益率*95%+人民币活期存款收益率(税后)*5%",
+          "tracking_target": "道琼斯美国石油开发与生产指数",
+          "management_fee": "1.00%（每年）",
+          "custody_fee": "0.20%（每年）"
         },
         "risk": {
           "error": "risk: TypeError: fund_individual_analysis_xq() got an unexpected keyword argument 'timeout'"
@@ -653,7 +951,60 @@
           "error": "probability: TypeError: fund_individual_profit_probability_xq() got an unexpected keyword argument 'timeout'"
         },
         "holdings": {
-          "error": "holdings: APIError: API Error: FundArchivesDatas request failed: HTTPSConnectionPool(host='fundf10.eastmoney.com', port=443): Max retries exceeded with url: /FundArchivesDatas.aspx"
+          "quarter": "2026年3季度股票投资明细",
+          "top10_concentration": 64.24,
+          "top_holdings": [
+            {
+              "name": "康菲石油",
+              "code": "COP",
+              "weight": 15.38
+            },
+            {
+              "name": "瓦莱罗能源",
+              "code": "VLO",
+              "weight": 11.7
+            },
+            {
+              "name": "马拉松原油",
+              "code": "MPC",
+              "weight": 11.53
+            },
+            {
+              "name": "Phillips 66",
+              "code": "PSX",
+              "weight": 4.26
+            },
+            {
+              "name": "戴文能源",
+              "code": "DVN",
+              "weight": 4.07
+            },
+            {
+              "name": "EOG能源",
+              "code": "EOG",
+              "weight": 4.05
+            },
+            {
+              "name": "Diamondback Energy Inc",
+              "code": "FANG",
+              "weight": 3.97
+            },
+            {
+              "name": "EQT能源",
+              "code": "EQT",
+              "weight": 3.74
+            },
+            {
+              "name": "Texas Pacific Land Corp",
+              "code": "TPL",
+              "weight": 2.78
+            },
+            {
+              "name": "Expand Energy Corp",
+              "code": "EXE",
+              "weight": 2.76
+            }
+          ]
         },
         "industries": {
           "period": "2026-09-30",
@@ -666,25 +1017,85 @@
         },
         "redemption_fee": [
           {
-            "error": "fee: ConnectionError: HTTPSConnectionPool(host='fundf10.eastmoney.com', port=443): Max retries exceeded with url: /jjfl_004243.html (Caused by NewConnectionError(\"HTTPSConnection(h"
+            "适用期限": "小于30天",
+            "赎回费率": "1.50%"
+          },
+          {
+            "适用期限": "大于等于30天，小于730天",
+            "赎回费率": "0.15%"
+          },
+          {
+            "适用期限": "大于等于730天",
+            "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-10-30T21:08:22+08:00"
+        "updated_at": "2026-10-31T03:43:18+08:00"
       },
       "profile": {
-        "fund_type": null,
+        "fund_type": "指数型-海外股票",
         "asset_scale": null,
-        "share_scale": null,
-        "manager": null,
-        "company": null,
-        "成立日期": null,
-        "benchmark": null,
-        "tracking_index": null,
-        "management_fee": null,
-        "custody_fee": null,
-        "holdings": [],
-        "holdings_period": null,
-        "top10_concentration": null,
+        "share_scale": "0.705亿份（截止至：2026年09月30日）",
+        "manager": "姚曦",
+        "company": "广发基金",
+        "成立日期": "2017年02月28日",
+        "benchmark": "人民币计价的道琼斯美国石油开发与生产指数收益率*95%+人民币活期存款收益率(税后)*5%",
+        "tracking_index": "道琼斯美国石油开发与生产指数",
+        "management_fee": "1.00%（每年）",
+        "custody_fee": "0.20%（每年）",
+        "holdings": [
+          {
+            "name": "康菲石油",
+            "code": "COP",
+            "weight": 15.38
+          },
+          {
+            "name": "瓦莱罗能源",
+            "code": "VLO",
+            "weight": 11.7
+          },
+          {
+            "name": "马拉松原油",
+            "code": "MPC",
+            "weight": 11.53
+          },
+          {
+            "name": "Phillips 66",
+            "code": "PSX",
+            "weight": 4.26
+          },
+          {
+            "name": "戴文能源",
+            "code": "DVN",
+            "weight": 4.07
+          },
+          {
+            "name": "EOG能源",
+            "code": "EOG",
+            "weight": 4.05
+          },
+          {
+            "name": "Diamondback Energy Inc",
+            "code": "FANG",
+            "weight": 3.97
+          },
+          {
+            "name": "EQT能源",
+            "code": "EQT",
+            "weight": 3.74
+          },
+          {
+            "name": "Texas Pacific Land Corp",
+            "code": "TPL",
+            "weight": 2.78
+          },
+          {
+            "name": "Expand Energy Corp",
+            "code": "EXE",
+            "weight": 2.76
+          }
+        ],
+        "holdings_period": "2026年3季度股票投资明细",
+        "top10_concentration": 64.24,
         "industries": [
           {
             "name": "能源",
@@ -692,14 +1103,26 @@
           }
         ],
         "industry_period": "2026-09-30",
-        "manager_details": []
-      }
+        "manager_details": [
+          {
+            "name": "姚曦",
+            "company": "广发基金",
+            "career_days": 1809.0,
+            "current_aum_yi": 171.09,
+            "best_return": 80.61
+          }
+        ]
+      },
+      "risk": "前十大股票占比约64%，持仓比较集中。历史数据不代表未来。",
+      "deep_plain": [
+        "基金经理：姚曦"
+      ]
     },
     {
       "code": "019710",
       "name": "广发道琼斯石油指数(QDII-LOF)人民币E",
       "category": "指数型",
-      "score": 89.3,
+      "score": 88.4,
       "returns": {
         "1m": 10.64,
         "3m": 17.13,
@@ -709,8 +1132,8 @@
         "ytd": 48.7
       },
       "latest_nav": 3.2274,
-      "estimate_nav": 3.2338,
-      "estimate_return": -0.25,
+      "estimate_nav": 3.191,
+      "estimate_return": -1.13,
       "day_return": -0.45,
       "buy_status": "限大额",
       "position": "中性观察",
@@ -755,20 +1178,15 @@
       },
       "history_error": null,
       "today_plan": {
-        "action": "继续等买点",
-        "tone": "watch",
-        "headline": "今天先不动，等进入明确买入区"
+        "action": "第一买入区",
+        "tone": "batch",
+        "headline": "若14:20仍在区间，可先买计划仓位20%–25%"
       },
       "tracking": {
         "first_seen": "2026-10-19T21:26:05+08:00",
-        "days_tracked": 12,
-        "refresh_count": 27,
+        "days_tracked": 13,
+        "refresh_count": 28,
         "score_history": [
-          {
-            "at": "2026-10-27T04:09:10+08:00",
-            "score": 89.2,
-            "action": "继续等买点"
-          },
           {
             "at": "2026-10-27T10:01:21+08:00",
             "score": 89.2,
@@ -823,6 +1241,11 @@
             "at": "2026-10-30T20:58:58+08:00",
             "score": 89.3,
             "action": "继续等买点"
+          },
+          {
+            "at": "2026-10-31T03:42:27+08:00",
+            "score": 88.4,
+            "action": "第一买入区"
           }
         ]
       },
@@ -844,7 +1267,16 @@
       ],
       "deep_analysis": {
         "overview": {
-          "error": "overview: ConnectionError: HTTPSConnectionPool(host='fundf10.eastmoney.com', port=443): Max retries exceeded with url: /jbgk_019710.html (Caused by NewConnectionError(\"HTTPSConnect"
+          "fund_type": "指数型-海外股票",
+          "asset_scale": null,
+          "share_scale": "0.1454亿份（截止至：2026年09月30日）",
+          "manager": "姚曦",
+          "company": "广发基金",
+          "成立日期": "2023年11月07日",
+          "benchmark": "人民币计价的道琼斯美国石油开发与生产指数收益率*95%+人民币活期存款收益率(税后)*5%",
+          "tracking_target": "道琼斯美国石油开发与生产指数",
+          "management_fee": "1.00%（每年）",
+          "custody_fee": "0.20%（每年）"
         },
         "risk": {
           "error": "risk: TypeError: fund_individual_analysis_xq() got an unexpected keyword argument 'timeout'"
@@ -853,7 +1285,60 @@
           "error": "probability: TypeError: fund_individual_profit_probability_xq() got an unexpected keyword argument 'timeout'"
         },
         "holdings": {
-          "error": "holdings: APIError: API Error: FundArchivesDatas request failed: HTTPSConnectionPool(host='fundf10.eastmoney.com', port=443): Max retries exceeded with url: /FundArchivesDatas.aspx"
+          "quarter": "2026年3季度股票投资明细",
+          "top10_concentration": 64.24,
+          "top_holdings": [
+            {
+              "name": "康菲石油",
+              "code": "COP",
+              "weight": 15.38
+            },
+            {
+              "name": "瓦莱罗能源",
+              "code": "VLO",
+              "weight": 11.7
+            },
+            {
+              "name": "马拉松原油",
+              "code": "MPC",
+              "weight": 11.53
+            },
+            {
+              "name": "Phillips 66",
+              "code": "PSX",
+              "weight": 4.26
+            },
+            {
+              "name": "戴文能源",
+              "code": "DVN",
+              "weight": 4.07
+            },
+            {
+              "name": "EOG能源",
+              "code": "EOG",
+              "weight": 4.05
+            },
+            {
+              "name": "Diamondback Energy Inc",
+              "code": "FANG",
+              "weight": 3.97
+            },
+            {
+              "name": "EQT能源",
+              "code": "EQT",
+              "weight": 3.74
+            },
+            {
+              "name": "Texas Pacific Land Corp",
+              "code": "TPL",
+              "weight": 2.78
+            },
+            {
+              "name": "Expand Energy Corp",
+              "code": "EXE",
+              "weight": 2.76
+            }
+          ]
         },
         "industries": {
           "period": "2026-09-30",
@@ -866,25 +1351,81 @@
         },
         "redemption_fee": [
           {
-            "error": "fee: ConnectionError: HTTPSConnectionPool(host='fundf10.eastmoney.com', port=443): Max retries exceeded with url: /jjfl_019710.html (Caused by NewConnectionError(\"HTTPSConnection(h"
+            "适用期限": "小于7天",
+            "赎回费率": "1.50%"
+          },
+          {
+            "适用期限": "大于等于7天",
+            "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-10-30T21:10:54+08:00"
+        "updated_at": "2026-10-31T03:43:22+08:00"
       },
       "profile": {
-        "fund_type": null,
+        "fund_type": "指数型-海外股票",
         "asset_scale": null,
-        "share_scale": null,
-        "manager": null,
-        "company": null,
-        "成立日期": null,
-        "benchmark": null,
-        "tracking_index": null,
-        "management_fee": null,
-        "custody_fee": null,
-        "holdings": [],
-        "holdings_period": null,
-        "top10_concentration": null,
+        "share_scale": "0.1454亿份（截止至：2026年09月30日）",
+        "manager": "姚曦",
+        "company": "广发基金",
+        "成立日期": "2023年11月07日",
+        "benchmark": "人民币计价的道琼斯美国石油开发与生产指数收益率*95%+人民币活期存款收益率(税后)*5%",
+        "tracking_index": "道琼斯美国石油开发与生产指数",
+        "management_fee": "1.00%（每年）",
+        "custody_fee": "0.20%（每年）",
+        "holdings": [
+          {
+            "name": "康菲石油",
+            "code": "COP",
+            "weight": 15.38
+          },
+          {
+            "name": "瓦莱罗能源",
+            "code": "VLO",
+            "weight": 11.7
+          },
+          {
+            "name": "马拉松原油",
+            "code": "MPC",
+            "weight": 11.53
+          },
+          {
+            "name": "Phillips 66",
+            "code": "PSX",
+            "weight": 4.26
+          },
+          {
+            "name": "戴文能源",
+            "code": "DVN",
+            "weight": 4.07
+          },
+          {
+            "name": "EOG能源",
+            "code": "EOG",
+            "weight": 4.05
+          },
+          {
+            "name": "Diamondback Energy Inc",
+            "code": "FANG",
+            "weight": 3.97
+          },
+          {
+            "name": "EQT能源",
+            "code": "EQT",
+            "weight": 3.74
+          },
+          {
+            "name": "Texas Pacific Land Corp",
+            "code": "TPL",
+            "weight": 2.78
+          },
+          {
+            "name": "Expand Energy Corp",
+            "code": "EXE",
+            "weight": 2.76
+          }
+        ],
+        "holdings_period": "2026年3季度股票投资明细",
+        "top10_concentration": 64.24,
         "industries": [
           {
             "name": "能源",
@@ -892,14 +1433,26 @@
           }
         ],
         "industry_period": "2026-09-30",
-        "manager_details": []
-      }
+        "manager_details": [
+          {
+            "name": "姚曦",
+            "company": "广发基金",
+            "career_days": 1809.0,
+            "current_aum_yi": 171.09,
+            "best_return": 80.61
+          }
+        ]
+      },
+      "risk": "前十大股票占比约64%，持仓比较集中。历史数据不代表未来。",
+      "deep_plain": [
+        "基金经理：姚曦"
+      ]
     },
     {
       "code": "501312",
       "name": "华宝海外科技股票(QDII-LOF)A",
       "category": "QDII",
-      "score": 87.6,
+      "score": 84.9,
       "returns": {
         "1m": -3.29,
         "3m": 15.08,
@@ -961,12 +1514,17 @@
       },
       "tracking": {
         "first_seen": "2026-10-30T20:58:58+08:00",
-        "days_tracked": 1,
-        "refresh_count": 1,
+        "days_tracked": 2,
+        "refresh_count": 2,
         "score_history": [
           {
             "at": "2026-10-30T20:58:58+08:00",
             "score": 87.6,
+            "action": "第一买入区"
+          },
+          {
+            "at": "2026-10-31T03:42:27+08:00",
+            "score": 84.9,
             "action": "第一买入区"
           }
         ]
@@ -989,7 +1547,16 @@
       ],
       "deep_analysis": {
         "overview": {
-          "error": "overview: ConnectionError: HTTPSConnectionPool(host='fundf10.eastmoney.com', port=443): Max retries exceeded with url: /jbgk_501312.html (Caused by NewConnectionError(\"HTTPSConnect"
+          "fund_type": "QDII-普通股票",
+          "asset_scale": null,
+          "share_scale": "5.4056亿份（截止至：2026年09月30日）",
+          "manager": "周晶、杨洋、赵启元",
+          "company": "华宝基金",
+          "成立日期": "2023年04月11日",
+          "benchmark": "经人民币汇率调整的纳斯达克100指数收益率*80%+恒生科技指数收益率*10%+中证综合债指数收益率*10%",
+          "tracking_target": "该基金无跟踪标的",
+          "management_fee": "1.00%（每年）",
+          "custody_fee": "0.20%（每年）"
         },
         "risk": {
           "error": "risk: TypeError: fund_individual_analysis_xq() got an unexpected keyword argument 'timeout'"
@@ -998,42 +1565,95 @@
           "error": "probability: TypeError: fund_individual_profit_probability_xq() got an unexpected keyword argument 'timeout'"
         },
         "holdings": {
-          "error": "holdings: APIError: API Error: FundArchivesDatas request failed: HTTPSConnectionPool(host='fundf10.eastmoney.com', port=443): Max retries exceeded with url: /FundArchivesDatas.aspx"
+          "quarter": "2023年3季度股票投资明细",
+          "top10_concentration": 0.08,
+          "top_holdings": [
+            {
+              "name": "英伟达",
+              "code": "NVDA",
+              "weight": 0.08
+            }
+          ]
         },
         "industries": {
           "error": "industry: ValueError: Length mismatch: Expected axis has 1 elements, new values have 17 elements"
         },
         "redemption_fee": [
           {
-            "error": "fee: ConnectionError: HTTPSConnectionPool(host='fundf10.eastmoney.com', port=443): Max retries exceeded with url: /jjfl_501312.html (Caused by NewConnectionError(\"HTTPSConnection(h"
+            "适用期限": "小于7天",
+            "赎回费率": "1.50%"
+          },
+          {
+            "适用期限": "大于等于7天，小于30天",
+            "赎回费率": "0.50%"
+          },
+          {
+            "适用期限": "大于等于30天，小于180天",
+            "赎回费率": "0.25%"
+          },
+          {
+            "适用期限": "大于等于180天",
+            "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-10-30T21:13:27+08:00"
+        "updated_at": "2026-10-31T03:43:26+08:00"
       },
       "profile": {
-        "fund_type": null,
+        "fund_type": "QDII-普通股票",
         "asset_scale": null,
-        "share_scale": null,
-        "manager": null,
-        "company": null,
-        "成立日期": null,
-        "benchmark": null,
-        "tracking_index": null,
-        "management_fee": null,
-        "custody_fee": null,
-        "holdings": [],
-        "holdings_period": null,
-        "top10_concentration": null,
+        "share_scale": "5.4056亿份（截止至：2026年09月30日）",
+        "manager": "周晶、杨洋、赵启元",
+        "company": "华宝基金",
+        "成立日期": "2023年04月11日",
+        "benchmark": "经人民币汇率调整的纳斯达克100指数收益率*80%+恒生科技指数收益率*10%+中证综合债指数收益率*10%",
+        "tracking_index": "该基金无跟踪标的",
+        "management_fee": "1.00%（每年）",
+        "custody_fee": "0.20%（每年）",
+        "holdings": [
+          {
+            "name": "英伟达",
+            "code": "NVDA",
+            "weight": 0.08
+          }
+        ],
+        "holdings_period": "2023年3季度股票投资明细",
+        "top10_concentration": 0.08,
         "industries": [],
         "industry_period": null,
-        "manager_details": []
-      }
+        "manager_details": [
+          {
+            "name": "周晶",
+            "company": "银华基金",
+            "career_days": 4712.0,
+            "current_aum_yi": 13.11,
+            "best_return": 57.53
+          },
+          {
+            "name": "杨洋",
+            "company": "华宝基金",
+            "career_days": 1999.0,
+            "current_aum_yi": 78.68,
+            "best_return": 149.08
+          },
+          {
+            "name": "赵启元",
+            "company": "华宝基金",
+            "career_days": 1183.0,
+            "current_aum_yi": 146.62,
+            "best_return": 100.06
+          }
+        ]
+      },
+      "risk": "前十大股票占比约0%，相对分散。历史数据不代表未来。",
+      "deep_plain": [
+        "基金经理：周晶、杨洋、赵启元"
+      ]
     },
     {
       "code": "539002",
       "name": "建信新兴市场混合(QDII)A",
       "category": "QDII",
-      "score": 82.2,
+      "score": 81.9,
       "returns": {
         "1m": -10.83,
         "3m": 13.47,
@@ -1095,12 +1715,17 @@
       },
       "tracking": {
         "first_seen": "2026-10-30T20:58:58+08:00",
-        "days_tracked": 1,
-        "refresh_count": 1,
+        "days_tracked": 2,
+        "refresh_count": 2,
         "score_history": [
           {
             "at": "2026-10-30T20:58:58+08:00",
             "score": 82.2,
+            "action": "不买/停止补仓"
+          },
+          {
+            "at": "2026-10-31T03:42:27+08:00",
+            "score": 81.9,
             "action": "不买/停止补仓"
           }
         ]
@@ -1123,7 +1748,16 @@
       ],
       "deep_analysis": {
         "overview": {
-          "error": "overview: ConnectionError: HTTPSConnectionPool(host='fundf10.eastmoney.com', port=443): Max retries exceeded with url: /jbgk_539002.html (Caused by NewConnectionError(\"HTTPSConnect"
+          "fund_type": "QDII-混合偏股",
+          "asset_scale": null,
+          "share_scale": "14.0359亿份（截止至：2026年09月30日）",
+          "manager": "李博涵、程星烨、房乐",
+          "company": "建信基金",
+          "成立日期": "2011年06月21日",
+          "benchmark": "MSCI新兴市场指数(MSCI Emerging Markets Index)收益率*90%+中债-综合全价(总值)指数收益率*5%+人民币活期存款基准利率*5%",
+          "tracking_target": "该基金无跟踪标的",
+          "management_fee": "1.20%（每年）",
+          "custody_fee": "0.20%（每年）"
         },
         "risk": {
           "error": "risk: TypeError: fund_individual_analysis_xq() got an unexpected keyword argument 'timeout'"
@@ -1132,7 +1766,7 @@
           "error": "probability: TypeError: fund_individual_profit_probability_xq() got an unexpected keyword argument 'timeout'"
         },
         "holdings": {
-          "error": "holdings: APIError: API Error: FundArchivesDatas request failed: HTTPSConnectionPool(host='fundf10.eastmoney.com', port=443): Max retries exceeded with url: /FundArchivesDatas.aspx"
+          "error": "holdings: APIError: API Error: FundArchivesDatas request failed: HTTPSConnectionPool(host='fundf10.eastmoney.com', port=443): Read timed out. (read timeout=10) (Status code: None)"
         },
         "industries": {
           "period": "2026-09-30",
@@ -1145,22 +1779,35 @@
         },
         "redemption_fee": [
           {
-            "error": "fee: ConnectionError: HTTPSConnectionPool(host='fundf10.eastmoney.com', port=443): Max retries exceeded with url: /jjfl_539002.html (Caused by NewConnectionError(\"HTTPSConnection(h"
+            "适用期限": "小于7天",
+            "赎回费率": "1.50%"
+          },
+          {
+            "适用期限": "大于等于7天，小于365天",
+            "赎回费率": "0.50%"
+          },
+          {
+            "适用期限": "大于等于365天，小于730天",
+            "赎回费率": "0.30%"
+          },
+          {
+            "适用期限": "大于等于730天",
+            "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-10-30T21:15:59+08:00"
+        "updated_at": "2026-10-31T03:43:39+08:00"
       },
       "profile": {
-        "fund_type": null,
+        "fund_type": "QDII-混合偏股",
         "asset_scale": null,
-        "share_scale": null,
-        "manager": null,
-        "company": null,
-        "成立日期": null,
-        "benchmark": null,
-        "tracking_index": null,
-        "management_fee": null,
-        "custody_fee": null,
+        "share_scale": "14.0359亿份（截止至：2026年09月30日）",
+        "manager": "李博涵、程星烨、房乐",
+        "company": "建信基金",
+        "成立日期": "2011年06月21日",
+        "benchmark": "MSCI新兴市场指数(MSCI Emerging Markets Index)收益率*90%+中债-综合全价(总值)指数收益率*5%+人民币活期存款基准利率*5%",
+        "tracking_index": "该基金无跟踪标的",
+        "management_fee": "1.20%（每年）",
+        "custody_fee": "0.20%（每年）",
         "holdings": [],
         "holdings_period": null,
         "top10_concentration": null,
@@ -1171,11 +1818,36 @@
           }
         ],
         "industry_period": "2026-09-30",
-        "manager_details": []
-      }
+        "manager_details": [
+          {
+            "name": "李博涵",
+            "company": "建信基金",
+            "career_days": 4835.0,
+            "current_aum_yi": 118.44,
+            "best_return": 173.23
+          },
+          {
+            "name": "程星烨",
+            "company": "建信基金",
+            "career_days": 2516.0,
+            "current_aum_yi": 118.44,
+            "best_return": 173.23
+          },
+          {
+            "name": "房乐",
+            "company": "建信基金",
+            "career_days": 865.0,
+            "current_aum_yi": 118.44,
+            "best_return": 95.96
+          }
+        ]
+      },
+      "deep_plain": [
+        "基金经理：李博涵、程星烨、房乐"
+      ]
     }
   ],
-  "deep_enriched_at": "2026-10-30T21:15:59+08:00",
+  "deep_enriched_at": "2026-10-31T03:43:39+08:00",
   "deep_method": "overview+risk_drawdown+historical_profit_probability+latest_disclosed_holdings+industry+fees+manager",
   "profile_note": "基金持仓和行业配置来自最新可获得的定期报告披露，不是实时持仓。"
 }

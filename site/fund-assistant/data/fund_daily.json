@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-30T03:50:22+08:00",
+  "generated_at": "2026-10-30T10:33:32+08:00",
   "source": "东方财富/天天基金公开数据（AKShare封装）",
-  "count": 24271,
+  "count": 24268,
   "funds": [
     {
       "code": "019143",
@@ -6649,7 +6649,7 @@
       "nav": 1.0789,
       "prev_nav": null,
       "day_return": 0.81,
-      "buy_status": "开放申购",
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.12%"
     },
@@ -6659,7 +6659,7 @@
       "nav": 1.0746,
       "prev_nav": null,
       "day_return": 0.81,
-      "buy_status": "开放申购",
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },
@@ -7569,7 +7569,7 @@
       "nav": 1.0603,
       "prev_nav": null,
       "day_return": 0.75,
-      "buy_status": "暂停申购",
+      "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.10%"
     },
@@ -7579,7 +7579,7 @@
       "nav": 1.0585,
       "prev_nav": null,
       "day_return": 0.75,
-      "buy_status": "暂停申购",
+      "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },
@@ -28079,9 +28079,9 @@
       "nav": 1.0471,
       "prev_nav": null,
       "day_return": 0.07,
-      "buy_status": "开放申购",
+      "buy_status": "暂停申购",
       "sell_status": "开放赎回",
-      "fee": "0.60%"
+      "fee": "0.06%"
     },
     {
       "code": "020926",
@@ -52141,7 +52141,7 @@
       "day_return": 0.01,
       "buy_status": "限大额",
       "sell_status": "开放赎回",
-      "fee": "0.80%"
+      "fee": "0.08%"
     },
     {
       "code": "012592",
@@ -57569,9 +57569,9 @@
       "nav": 1.0448,
       "prev_nav": null,
       "day_return": 0.01,
-      "buy_status": "开放申购",
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
-      "fee": "0.80%"
+      "fee": "0.08%"
     },
     {
       "code": "005532",
@@ -57579,7 +57579,7 @@
       "nav": 1.0447,
       "prev_nav": null,
       "day_return": 0.01,
-      "buy_status": "开放申购",
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },
@@ -63029,8 +63029,8 @@
       "nav": 1.1513,
       "prev_nav": null,
       "day_return": 0.0,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
       "fee": "0.80%"
     },
     {
@@ -70494,16 +70494,6 @@
       "fee": "0.05%"
     },
     {
-      "code": "016576",
-      "name": "民生加银瑞丰一年定开债券发起",
-      "nav": 1.0348,
-      "prev_nav": null,
-      "day_return": 0.0,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
-      "fee": "0.08%"
-    },
-    {
       "code": "023360",
       "name": "平安元裕90天持有债券A",
       "nav": 1.0346,
@@ -73329,7 +73319,7 @@
       "nav": 1.0051,
       "prev_nav": null,
       "day_return": 0.0,
-      "buy_status": "开放申购",
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.06%"
     },
@@ -77679,8 +77669,8 @@
       "nav": 1.0862,
       "prev_nav": null,
       "day_return": -0.01,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
       "fee": "0.60%"
     },
     {
@@ -87230,7 +87220,7 @@
       "prev_nav": null,
       "day_return": -0.05,
       "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
+      "sell_status": "开放赎回",
       "fee": "0.00%"
     },
     {
@@ -87250,8 +87240,8 @@
       "prev_nav": null,
       "day_return": -0.05,
       "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
-      "fee": "0.80%"
+      "sell_status": "开放赎回",
+      "fee": "0.08%"
     },
     {
       "code": "022018",
@@ -163129,8 +163119,8 @@
       "nav": 1.3192,
       "prev_nav": null,
       "day_return": -2.1,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
       "fee": "0.00%"
     },
     {
@@ -188319,7 +188309,7 @@
       "nav": 0.8149,
       "prev_nav": null,
       "day_return": -3.36,
-      "buy_status": "限大额",
+      "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "1.50%"
     },
@@ -222359,8 +222349,8 @@
       "nav": 0.9835,
       "prev_nav": null,
       "day_return": null,
-      "buy_status": "封闭期",
-      "sell_status": "封闭期",
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
       "fee": "0.50%"
     },
     {
@@ -222369,8 +222359,8 @@
       "nav": 0.9827,
       "prev_nav": null,
       "day_return": null,
-      "buy_status": "封闭期",
-      "sell_status": "封闭期",
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
       "fee": "0.00%"
     },
     {
@@ -222379,8 +222369,8 @@
       "nav": 0.9762,
       "prev_nav": null,
       "day_return": null,
-      "buy_status": "封闭期",
-      "sell_status": "封闭期",
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
       "fee": "0.50%"
     },
     {
@@ -232774,16 +232764,6 @@
       "fee": "0.60%"
     },
     {
-      "code": "009371",
-      "name": "浦银睿和优选3个月持有混合(FOF)C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
-      "fee": "0.00%"
-    },
-    {
       "code": "009385",
       "name": "天弘永裕平衡养老三年持有期混合发起式(FOF)A",
       "nav": null,
@@ -232922,16 +232902,6 @@
       "buy_status": "暂停申购",
       "sell_status": "暂停赎回",
       "fee": "0.80%"
-    },
-    {
-      "code": "009370",
-      "name": "浦银睿和优选3个月持有混合(FOF)A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
-      "fee": "0.15%"
     },
     {
       "code": "007432",

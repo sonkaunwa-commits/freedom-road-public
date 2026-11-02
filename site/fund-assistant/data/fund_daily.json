@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-31T03:41:16+08:00",
+  "generated_at": "2026-11-02T10:23:43+08:00",
   "source": "东方财富/天天基金公开数据（AKShare封装）",
-  "count": 24312,
+  "count": 24318,
   "funds": [
     {
       "code": "009941",
@@ -24609,7 +24609,7 @@
       "nav": 1.0614,
       "prev_nav": null,
       "day_return": 0.04,
-      "buy_status": "限大额",
+      "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },
@@ -24639,7 +24639,7 @@
       "nav": 1.0138,
       "prev_nav": null,
       "day_return": 0.04,
-      "buy_status": "限大额",
+      "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.80%"
     },
@@ -29176,6 +29176,16 @@
     {
       "code": "026451",
       "name": "天弘稳益优选混合C",
+      "nav": 1.0,
+      "prev_nav": null,
+      "day_return": 0.0,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
+      "code": "027017",
+      "name": "中航祥瑞债券发起C",
       "nav": 1.0,
       "prev_nav": null,
       "day_return": 0.0,
@@ -37089,8 +37099,8 @@
       "nav": 1.0496,
       "prev_nav": null,
       "day_return": -0.05,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
       "fee": "0.00%"
     },
     {
@@ -38949,8 +38959,8 @@
       "nav": 1.0609,
       "prev_nav": null,
       "day_return": -0.06,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
       "fee": "0.50%"
     },
     {
@@ -58786,7 +58796,7 @@
     {
       "code": "006545",
       "name": "兴银中短债A",
-      "nav": 1.267267,
+      "nav": 1.2673,
       "prev_nav": null,
       "day_return": -0.15,
       "buy_status": "限大额",
@@ -61719,7 +61729,7 @@
       "nav": 1.0749,
       "prev_nav": null,
       "day_return": -0.16,
-      "buy_status": "限大额",
+      "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },
@@ -62389,8 +62399,8 @@
       "nav": 1.0305,
       "prev_nav": null,
       "day_return": -0.16,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
       "fee": "0.40%"
     },
     {
@@ -63789,8 +63799,8 @@
       "nav": 1.0844,
       "prev_nav": null,
       "day_return": -0.17,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
       "fee": "0.60%"
     },
     {
@@ -68601,7 +68611,7 @@
       "day_return": -0.19,
       "buy_status": "限大额",
       "sell_status": "开放赎回",
-      "fee": "0.08%"
+      "fee": "0.03%"
     },
     {
       "code": "002564",
@@ -74019,8 +74029,8 @@
       "nav": 1.0154,
       "prev_nav": null,
       "day_return": -0.21,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
       "fee": "0.60%"
     },
     {
@@ -74679,7 +74689,7 @@
       "nav": 1.1595,
       "prev_nav": null,
       "day_return": -0.22,
-      "buy_status": "开放申购",
+      "buy_status": "暂停申购",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },
@@ -74779,7 +74789,7 @@
       "nav": 1.152,
       "prev_nav": null,
       "day_return": -0.22,
-      "buy_status": "限大额",
+      "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.08%"
     },
@@ -74839,7 +74849,7 @@
       "nav": 1.1477,
       "prev_nav": null,
       "day_return": -0.22,
-      "buy_status": "限大额",
+      "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },
@@ -79270,8 +79280,8 @@
       "prev_nav": null,
       "day_return": -0.23,
       "buy_status": "开放申购",
-      "sell_status": "封闭期",
-      "fee": "0.80%"
+      "sell_status": "暂停赎回",
+      "fee": "0.08%"
     },
     {
       "code": "016496",
@@ -80189,9 +80199,9 @@
       "nav": 1.1079,
       "prev_nav": null,
       "day_return": -0.24,
-      "buy_status": "开放申购",
+      "buy_status": "暂停申购",
       "sell_status": "开放赎回",
-      "fee": "0.30%"
+      "fee": "0.03%"
     },
     {
       "code": "013913",
@@ -86669,8 +86679,8 @@
       "nav": 1.1631,
       "prev_nav": null,
       "day_return": -0.27,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
       "fee": "0.65%"
     },
     {
@@ -87219,7 +87229,7 @@
       "nav": 1.0891,
       "prev_nav": null,
       "day_return": -0.27,
-      "buy_status": "限大额",
+      "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.08%"
     },
@@ -87316,7 +87326,7 @@
     {
       "code": "022241",
       "name": "国联恒安纯债B",
-      "nav": 1.0783,
+      "nav": 1.078258,
       "prev_nav": null,
       "day_return": -0.27,
       "buy_status": "暂停申购",
@@ -87359,7 +87369,7 @@
       "nav": 1.0728,
       "prev_nav": null,
       "day_return": -0.27,
-      "buy_status": "限大额",
+      "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },
@@ -182459,7 +182469,7 @@
       "nav": 1.1177,
       "prev_nav": null,
       "day_return": -3.05,
-      "buy_status": "限大额",
+      "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.12%"
     },
@@ -182479,7 +182489,7 @@
       "nav": 1.1095,
       "prev_nav": null,
       "day_return": -3.05,
-      "buy_status": "限大额",
+      "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },
@@ -224164,16 +224174,6 @@
       "fee": "0.06%"
     },
     {
-      "code": "006750",
-      "name": "富国德利纯债定开债",
-      "nav": 1.0935,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
-      "fee": "0.06%"
-    },
-    {
       "code": "026696",
       "name": "天弘多利一年定开混合C",
       "nav": 1.0932,
@@ -227034,6 +227034,26 @@
       "fee": "0.00%"
     },
     {
+      "code": "026921",
+      "name": "天弘中证港股通互联网指数C",
+      "nav": 1.0,
+      "prev_nav": null,
+      "day_return": null,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.00%"
+    },
+    {
+      "code": "026920",
+      "name": "天弘中证港股通互联网指数A",
+      "nav": 1.0,
+      "prev_nav": null,
+      "day_return": null,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.03%"
+    },
+    {
       "code": "029455",
       "name": "汇添富稳健双熙债券A",
       "nav": 1.0,
@@ -227072,6 +227092,26 @@
       "buy_status": "暂停申购",
       "sell_status": "暂停赎回",
       "fee": "0.08%"
+    },
+    {
+      "code": "028803",
+      "name": "安信稳健多策略三个月持有混合(FOF)A",
+      "nav": 1.0,
+      "prev_nav": null,
+      "day_return": null,
+      "buy_status": "封闭期",
+      "sell_status": "封闭期",
+      "fee": "0.50%"
+    },
+    {
+      "code": "028804",
+      "name": "安信稳健多策略三个月持有混合(FOF)C",
+      "nav": 1.0,
+      "prev_nav": null,
+      "day_return": null,
+      "buy_status": "封闭期",
+      "sell_status": "封闭期",
+      "fee": "0.00%"
     },
     {
       "code": "029003",
@@ -227184,6 +227224,26 @@
       "fee": "0.08%"
     },
     {
+      "code": "029088",
+      "name": "景顺长城标普中国A股红利100ETF联接A",
+      "nav": 0.9999,
+      "prev_nav": null,
+      "day_return": null,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.03%"
+    },
+    {
+      "code": "029089",
+      "name": "景顺长城标普中国A股红利100ETF联接C",
+      "nav": 0.9999,
+      "prev_nav": null,
+      "day_return": null,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.00%"
+    },
+    {
       "code": "000183",
       "name": "嘉实丰益策略定期债券",
       "nav": 0.9998,
@@ -227259,8 +227319,8 @@
       "nav": 0.9998,
       "prev_nav": null,
       "day_return": null,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
+      "buy_status": "封闭期",
+      "sell_status": "封闭期",
       "fee": "0.30%"
     },
     {
@@ -227269,8 +227329,8 @@
       "nav": 0.9998,
       "prev_nav": null,
       "day_return": null,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
+      "buy_status": "封闭期",
+      "sell_status": "封闭期",
       "fee": "0.00%"
     },
     {
@@ -233754,16 +233814,6 @@
       "fee": "0.05%"
     },
     {
-      "code": "027017",
-      "name": "中航祥瑞债券发起C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
-    },
-    {
       "code": "017398",
       "name": "民生加银康宁平衡养老三年持有混合(FOF)Y",
       "nav": null,
@@ -236469,7 +236519,7 @@
       "nav": null,
       "prev_nav": null,
       "day_return": null,
-      "buy_status": "开放申购",
+      "buy_status": "暂停申购",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },
@@ -236572,6 +236622,16 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.15%"
+    },
+    {
+      "code": "006750",
+      "name": "富国德利纯债定开债",
+      "nav": null,
+      "prev_nav": null,
+      "day_return": null,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.06%"
     },
     {
       "code": "005957",
@@ -241739,7 +241799,7 @@
       "nav": null,
       "prev_nav": null,
       "day_return": null,
-      "buy_status": "限大额",
+      "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },

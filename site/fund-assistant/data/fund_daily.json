@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-02T23:55:54+08:00",
+  "generated_at": "2026-11-03T06:53:10+08:00",
   "source": "东方财富/天天基金公开数据（AKShare封装）",
   "count": 24318,
   "funds": [
@@ -167124,6 +167124,16 @@
       "fee": "0.08%"
     },
     {
+      "code": "009799",
+      "name": "中银证券安汇三年定开债",
+      "nav": 1.0406,
+      "prev_nav": null,
+      "day_return": 0.01,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.04%"
+    },
+    {
       "code": "019616",
       "name": "东财同业存单AAA指数7天持有",
       "nav": 1.0401,
@@ -174274,6 +174284,16 @@
       "fee": "0.00%"
     },
     {
+      "code": "010486",
+      "name": "中航瑞晨87个月定开债C",
+      "nav": 1.0421,
+      "prev_nav": null,
+      "day_return": 0.0,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.00%"
+    },
+    {
       "code": "023837",
       "name": "银华四月丰120天滚动持有债券A",
       "nav": 1.0421,
@@ -174322,6 +174342,16 @@
       "buy_status": "暂停申购",
       "sell_status": "开放赎回",
       "fee": "0.06%"
+    },
+    {
+      "code": "010485",
+      "name": "中航瑞晨87个月定开债A",
+      "nav": 1.0415,
+      "prev_nav": null,
+      "day_return": 0.0,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.03%"
     },
     {
       "code": "003240",
@@ -174554,6 +174584,16 @@
       "fee": "0.00%"
     },
     {
+      "code": "014552",
+      "name": "中航瑞华ESG一年定开债发起A",
+      "nav": 1.0361,
+      "prev_nav": null,
+      "day_return": 0.0,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.06%"
+    },
+    {
       "code": "025110",
       "name": "嘉实汇利120天滚动持有纯债C",
       "nav": 1.0361,
@@ -174562,6 +174602,16 @@
       "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.00%"
+    },
+    {
+      "code": "017581",
+      "name": "中航瑞融ESG一年定开债发起A",
+      "nav": 1.036,
+      "prev_nav": null,
+      "day_return": 0.0,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.04%"
     },
     {
       "code": "020204",
@@ -174672,6 +174722,16 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.04%"
+    },
+    {
+      "code": "014553",
+      "name": "中航瑞华ESG一年定开债发起C",
+      "nav": 1.0316,
+      "prev_nav": null,
+      "day_return": 0.0,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.00%"
     },
     {
       "code": "006454",
@@ -174974,6 +175034,26 @@
       "fee": "0.08%"
     },
     {
+      "code": "014436",
+      "name": "中航瑞夏一年定开债发起C",
+      "nav": 1.0248,
+      "prev_nav": null,
+      "day_return": 0.0,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.00%"
+    },
+    {
+      "code": "014435",
+      "name": "中航瑞夏一年定开债发起A",
+      "nav": 1.0248,
+      "prev_nav": null,
+      "day_return": 0.0,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.03%"
+    },
+    {
       "code": "005420",
       "name": "中欧聚瑞债券C",
       "nav": 1.0246,
@@ -175022,6 +175102,16 @@
       "buy_status": "暂停申购",
       "sell_status": "暂停赎回",
       "fee": "0.075%"
+    },
+    {
+      "code": "019668",
+      "name": "中航瑞安利率债三个月定开债A",
+      "nav": 1.0235,
+      "prev_nav": null,
+      "day_return": 0.0,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.03%"
     },
     {
       "code": "007867",
@@ -175162,6 +175252,16 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.03%"
+    },
+    {
+      "code": "019669",
+      "name": "中航瑞安利率债三个月定开债C",
+      "nav": 1.0205,
+      "prev_nav": null,
+      "day_return": 0.0,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.00%"
     },
     {
       "code": "005408",
@@ -175744,6 +175844,16 @@
       "fee": "0.00%"
     },
     {
+      "code": "017582",
+      "name": "中航瑞融ESG一年定开债发起C",
+      "nav": 1.0032,
+      "prev_nav": null,
+      "day_return": 0.0,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.00%"
+    },
+    {
       "code": "007161",
       "name": "南方恒庆一年定开债",
       "nav": 1.0013,
@@ -175934,6 +176044,16 @@
       "fee": "0.00%"
     },
     {
+      "code": "027017",
+      "name": "中航祥瑞债券发起C",
+      "nav": 1.0,
+      "prev_nav": null,
+      "day_return": 0.0,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
       "code": "027693",
       "name": "华夏诚安混合C",
       "nav": 1.0,
@@ -175951,6 +176071,16 @@
       "day_return": 0.0,
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
+      "code": "028983",
+      "name": "路博迈红利量化选股股票C",
+      "nav": 0.9995,
+      "prev_nav": null,
+      "day_return": 0.0,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
       "fee": "0.00%"
     },
     {
@@ -181694,6 +181824,16 @@
       "fee": "0.03%"
     },
     {
+      "code": "028982",
+      "name": "路博迈红利量化选股股票A",
+      "nav": 0.9997,
+      "prev_nav": null,
+      "day_return": -0.01,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.08%"
+    },
+    {
       "code": "027826",
       "name": "华泰柏瑞恒荣债券C",
       "nav": 0.9996,
@@ -184042,6 +184182,16 @@
       "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.00%"
+    },
+    {
+      "code": "008863",
+      "name": "中银证券汇兴定期开放债券",
+      "nav": 1.0965,
+      "prev_nav": null,
+      "day_return": -0.02,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.40%"
     },
     {
       "code": "012409",
@@ -190002,6 +190152,16 @@
       "buy_status": "暂停申购",
       "sell_status": "暂停赎回",
       "fee": "0.08%"
+    },
+    {
+      "code": "010946",
+      "name": "中银证券汇福一年定开债券发起式",
+      "nav": 1.0199,
+      "prev_nav": null,
+      "day_return": -0.03,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.40%"
     },
     {
       "code": "024302",
@@ -227444,16 +227604,6 @@
       "fee": "0.10%"
     },
     {
-      "code": "008863",
-      "name": "中银证券汇兴定期开放债券",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
-      "fee": "0.40%"
-    },
-    {
       "code": "016202",
       "name": "汇添富全球汽车产业升级混合(QDII)人民币C",
       "nav": null,
@@ -229134,16 +229284,6 @@
       "fee": "0.80%"
     },
     {
-      "code": "010486",
-      "name": "中航瑞晨87个月定开债C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
-      "fee": "0.00%"
-    },
-    {
       "code": "010607",
       "name": "新沃安鑫87个月定开债",
       "nav": null,
@@ -229174,16 +229314,6 @@
       "fee": "0.00%"
     },
     {
-      "code": "010485",
-      "name": "中航瑞晨87个月定开债A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
-      "fee": "0.03%"
-    },
-    {
       "code": "008624",
       "name": "汇安裕鑫12个月定开纯债债券",
       "nav": null,
@@ -229212,16 +229342,6 @@
       "buy_status": "暂停申购",
       "sell_status": "暂停赎回",
       "fee": "0.60%"
-    },
-    {
-      "code": "009799",
-      "name": "中银证券安汇三年定开债",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
-      "fee": "0.04%"
     },
     {
       "code": "008102",
@@ -229454,16 +229574,6 @@
       "fee": "0.60%"
     },
     {
-      "code": "014552",
-      "name": "中航瑞华ESG一年定开债发起A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
-      "fee": "0.06%"
-    },
-    {
       "code": "005393",
       "name": "南方卓利3个月定开债",
       "nav": null,
@@ -229472,16 +229582,6 @@
       "buy_status": "暂停申购",
       "sell_status": "暂停赎回",
       "fee": "0.08%"
-    },
-    {
-      "code": "017581",
-      "name": "中航瑞融ESG一年定开债发起A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
-      "fee": "0.04%"
     },
     {
       "code": "007212",
@@ -229646,16 +229746,6 @@
     {
       "code": "022203",
       "name": "富国盈和臻选3个月持有期混合(FOF)C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
-      "fee": "0.00%"
-    },
-    {
-      "code": "014553",
-      "name": "中航瑞华ESG一年定开债发起C",
       "nav": null,
       "prev_nav": null,
       "day_return": null,
@@ -229904,26 +229994,6 @@
       "fee": "0.00%"
     },
     {
-      "code": "014436",
-      "name": "中航瑞夏一年定开债发起C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
-      "fee": "0.00%"
-    },
-    {
-      "code": "014435",
-      "name": "中航瑞夏一年定开债发起A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
-      "fee": "0.03%"
-    },
-    {
       "code": "018924",
       "name": "南方金添利三年定开债券A",
       "nav": null,
@@ -229982,16 +230052,6 @@
       "buy_status": "暂停申购",
       "sell_status": "暂停赎回",
       "fee": "0.80%"
-    },
-    {
-      "code": "019668",
-      "name": "中航瑞安利率债三个月定开债A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
-      "fee": "0.03%"
     },
     {
       "code": "018925",
@@ -230124,16 +230184,6 @@
       "fee": "0.00%"
     },
     {
-      "code": "019669",
-      "name": "中航瑞安利率债三个月定开债C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
-      "fee": "0.00%"
-    },
-    {
       "code": "008489",
       "name": "华商鸿畅39个月定开利率债A",
       "nav": null,
@@ -230142,16 +230192,6 @@
       "buy_status": "暂停申购",
       "sell_status": "暂停赎回",
       "fee": "0.03%"
-    },
-    {
-      "code": "010946",
-      "name": "中银证券汇福一年定开债券发起式",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
-      "fee": "0.40%"
     },
     {
       "code": "014681",
@@ -231184,16 +231224,6 @@
       "fee": "0.20%"
     },
     {
-      "code": "017582",
-      "name": "中航瑞融ESG一年定开债发起C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
-      "fee": "0.00%"
-    },
-    {
       "code": "027914",
       "name": "大成稳丰3个月持有期债券C",
       "nav": null,
@@ -231431,16 +231461,6 @@
       "day_return": null,
       "buy_status": "暂停申购",
       "sell_status": "暂停赎回",
-      "fee": "0.00%"
-    },
-    {
-      "code": "027017",
-      "name": "中航祥瑞债券发起C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
       "fee": "0.00%"
     },
     {
@@ -231754,16 +231774,6 @@
       "fee": "0.05%"
     },
     {
-      "code": "028982",
-      "name": "路博迈红利量化选股股票A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
-      "fee": "0.08%"
-    },
-    {
       "code": "029255",
       "name": "华泰紫金周周购9个月滚动持有债券发起A",
       "nav": null,
@@ -231872,16 +231882,6 @@
       "buy_status": "封闭期",
       "sell_status": "封闭期",
       "fee": "0.50%"
-    },
-    {
-      "code": "028983",
-      "name": "路博迈红利量化选股股票C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
-      "fee": "0.00%"
     },
     {
       "code": "028962",

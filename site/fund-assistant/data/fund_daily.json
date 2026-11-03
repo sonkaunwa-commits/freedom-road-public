@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-03T06:53:10+08:00",
+  "generated_at": "2026-11-03T11:54:47+08:00",
   "source": "东方财富/天天基金公开数据（AKShare封装）",
-  "count": 24318,
+  "count": 24316,
   "funds": [
     {
       "code": "026990",
@@ -33159,7 +33159,7 @@
       "nav": 3.092,
       "prev_nav": null,
       "day_return": 1.91,
-      "buy_status": "限大额",
+      "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },
@@ -33519,7 +33519,7 @@
       "nav": 3.113,
       "prev_nav": null,
       "day_return": 1.9,
-      "buy_status": "限大额",
+      "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.15%"
     },
@@ -34481,26 +34481,6 @@
       "day_return": 1.87,
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
-      "fee": "0.00%"
-    },
-    {
-      "code": "019001",
-      "name": "华夏中证智选500价值稳健策略ETF发起式联接A",
-      "nav": 1.2336,
-      "prev_nav": null,
-      "day_return": 1.87,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
-      "fee": "0.12%"
-    },
-    {
-      "code": "019002",
-      "name": "华夏中证智选500价值稳健策略ETF发起式联接C",
-      "nav": 1.2227,
-      "prev_nav": null,
-      "day_return": 1.87,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
       "fee": "0.00%"
     },
     {
@@ -44521,7 +44501,7 @@
       "day_return": 1.59,
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
-      "fee": "0.00%"
+      "fee": ""
     },
     {
       "code": "026290",
@@ -103919,7 +103899,7 @@
       "nav": 1.11,
       "prev_nav": null,
       "day_return": 0.42,
-      "buy_status": "开放申购",
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.10%"
     },
@@ -104489,7 +104469,7 @@
       "nav": 1.1083,
       "prev_nav": null,
       "day_return": 0.41,
-      "buy_status": "开放申购",
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },
@@ -125749,7 +125729,7 @@
       "nav": 1.0839,
       "prev_nav": null,
       "day_return": 0.16,
-      "buy_status": "开放申购",
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.05%"
     },
@@ -127139,7 +127119,7 @@
       "nav": 1.0794,
       "prev_nav": null,
       "day_return": 0.15,
-      "buy_status": "开放申购",
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },
@@ -127379,7 +127359,7 @@
       "nav": 1.0309,
       "prev_nav": null,
       "day_return": 0.15,
-      "buy_status": "暂停申购",
+      "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },
@@ -128749,7 +128729,7 @@
       "nav": 1.0404,
       "prev_nav": null,
       "day_return": 0.14,
-      "buy_status": "暂停申购",
+      "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.04%"
     },
@@ -128859,7 +128839,7 @@
       "nav": 1.0281,
       "prev_nav": null,
       "day_return": 0.14,
-      "buy_status": "暂停申购",
+      "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.08%"
     },
@@ -135829,8 +135809,8 @@
       "nav": 1.0704,
       "prev_nav": null,
       "day_return": 0.1,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
       "fee": "0.80%"
     },
     {
@@ -135839,8 +135819,8 @@
       "nav": 1.069,
       "prev_nav": null,
       "day_return": 0.1,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
       "fee": "0.00%"
     },
     {
@@ -152289,7 +152269,7 @@
       "nav": 1.2145,
       "prev_nav": null,
       "day_return": 0.04,
-      "buy_status": "开放申购",
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.03%"
     },
@@ -152339,7 +152319,7 @@
       "nav": 1.2035,
       "prev_nav": null,
       "day_return": 0.04,
-      "buy_status": "开放申购",
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },
@@ -165695,7 +165675,7 @@
     },
     {
       "code": "012732",
-      "name": "融通通跃一年定开债发起式",
+      "name": "融通通跃一年定开债券发起式",
       "nav": 1.0804,
       "prev_nav": null,
       "day_return": 0.01,
@@ -181569,7 +181549,7 @@
       "nav": 1.0134,
       "prev_nav": null,
       "day_return": -0.01,
-      "buy_status": "开放申购",
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },
@@ -183689,7 +183669,7 @@
       "nav": 1.1249,
       "prev_nav": null,
       "day_return": -0.02,
-      "buy_status": "开放申购",
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.04%"
     },
@@ -188509,7 +188489,7 @@
       "nav": 1.1089,
       "prev_nav": null,
       "day_return": -0.03,
-      "buy_status": "开放申购",
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },
@@ -190219,7 +190199,7 @@
       "nav": 1.0148,
       "prev_nav": null,
       "day_return": -0.03,
-      "buy_status": "开放申购",
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.06%"
     },
@@ -191159,7 +191139,7 @@
       "nav": 1.1966,
       "prev_nav": null,
       "day_return": -0.04,
-      "buy_status": "开放申购",
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.08%"
     },
@@ -191169,7 +191149,7 @@
       "nav": 1.1957,
       "prev_nav": null,
       "day_return": -0.04,
-      "buy_status": "开放申购",
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.08%"
     },
@@ -194919,7 +194899,7 @@
       "nav": 1.1096,
       "prev_nav": null,
       "day_return": -0.05,
-      "buy_status": "开放申购",
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },
@@ -220379,7 +220359,7 @@
       "nav": 1.1146,
       "prev_nav": null,
       "day_return": -1.0,
-      "buy_status": "开放申购",
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },
@@ -220399,7 +220379,7 @@
       "nav": 1.1206,
       "prev_nav": null,
       "day_return": -1.01,
-      "buy_status": "开放申购",
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.10%"
     },
@@ -231779,8 +231759,8 @@
       "nav": null,
       "prev_nav": null,
       "day_return": null,
-      "buy_status": "封闭期",
-      "sell_status": "封闭期",
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
       "fee": "0.30%"
     },
     {
@@ -231789,8 +231769,8 @@
       "nav": null,
       "prev_nav": null,
       "day_return": null,
-      "buy_status": "封闭期",
-      "sell_status": "封闭期",
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
       "fee": "0.00%"
     },
     {
@@ -235219,8 +235199,8 @@
       "nav": null,
       "prev_nav": null,
       "day_return": null,
-      "buy_status": "限大额",
-      "sell_status": "开放赎回",
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
       "fee": "1.30%"
     },
     {
@@ -235229,8 +235209,8 @@
       "nav": null,
       "prev_nav": null,
       "day_return": null,
-      "buy_status": "限大额",
-      "sell_status": "开放赎回",
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
       "fee": "0.00%"
     },
     {
@@ -235929,8 +235909,8 @@
       "nav": null,
       "prev_nav": null,
       "day_return": null,
-      "buy_status": "限大额",
-      "sell_status": "开放赎回",
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
       "fee": "1.50%"
     },
     {

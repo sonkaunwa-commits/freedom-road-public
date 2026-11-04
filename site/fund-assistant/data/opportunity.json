@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-04T04:37:47+08:00",
+  "generated_at": "2026-11-04T10:59:29+08:00",
   "method_version": "fund-screen-v2.0",
   "goal": "持续跟踪6-12个月高弹性候选；不承诺收益，不预测必然涨幅",
   "selection_policy": "核心池固定跟踪6只；仅在评分明显恶化、中期趋势转负、暂停申购或更优候选持续胜出时替换",
@@ -91,13 +91,8 @@
       "tracking": {
         "first_seen": "2026-09-28T21:58:24+08:00",
         "days_tracked": 38,
-        "refresh_count": 52,
+        "refresh_count": 53,
         "score_history": [
-          {
-            "at": "2026-10-29T10:27:26+08:00",
-            "score": 74.9,
-            "action": "继续等买点"
-          },
           {
             "at": "2026-10-29T21:06:15+08:00",
             "score": 75.4,
@@ -150,6 +145,11 @@
           },
           {
             "at": "2026-11-04T04:38:21+08:00",
+            "score": 72.5,
+            "action": "继续等买点"
+          },
+          {
+            "at": "2026-11-04T10:59:50+08:00",
             "score": 72.5,
             "action": "继续等买点"
           }
@@ -297,7 +297,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-11-04T04:39:18+08:00"
+        "updated_at": "2026-11-04T11:00:31+08:00"
       },
       "profile": {
         "fund_type": "股票型",
@@ -473,13 +473,8 @@
       "tracking": {
         "first_seen": "2026-09-29T20:56:44+08:00",
         "days_tracked": 37,
-        "refresh_count": 50,
+        "refresh_count": 51,
         "score_history": [
-          {
-            "at": "2026-10-29T10:27:26+08:00",
-            "score": 72.6,
-            "action": "继续等买点"
-          },
           {
             "at": "2026-10-29T21:06:15+08:00",
             "score": 72.4,
@@ -532,6 +527,11 @@
           },
           {
             "at": "2026-11-04T04:38:21+08:00",
+            "score": 67.2,
+            "action": "继续等买点"
+          },
+          {
+            "at": "2026-11-04T10:59:50+08:00",
             "score": 67.2,
             "action": "继续等买点"
           }
@@ -675,7 +675,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-11-04T04:39:21+08:00"
+        "updated_at": "2026-11-04T11:00:37+08:00"
       },
       "profile": {
         "fund_type": "股票型",
@@ -798,8 +798,8 @@
         "ytd": 45.93
       },
       "latest_nav": 3.156,
-      "estimate_nav": 3.1428,
-      "estimate_return": -0.42,
+      "estimate_nav": 3.1441,
+      "estimate_return": -0.38,
       "day_return": -4.17,
       "buy_status": "限大额",
       "position": "趋势向上，可等分批点",
@@ -851,13 +851,8 @@
       "tracking": {
         "first_seen": "2026-10-16T08:19:53+08:00",
         "days_tracked": 20,
-        "refresh_count": 37,
+        "refresh_count": 38,
         "score_history": [
-          {
-            "at": "2026-10-29T10:27:26+08:00",
-            "score": 93.4,
-            "action": "继续等买点"
-          },
           {
             "at": "2026-10-29T21:06:15+08:00",
             "score": 94.1,
@@ -910,6 +905,11 @@
           },
           {
             "at": "2026-11-04T04:38:21+08:00",
+            "score": 92.9,
+            "action": "继续等买点"
+          },
+          {
+            "at": "2026-11-04T10:59:50+08:00",
             "score": 92.9,
             "action": "继续等买点"
           }
@@ -1029,7 +1029,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-11-04T04:39:25+08:00"
+        "updated_at": "2026-11-04T11:00:43+08:00"
       },
       "profile": {
         "fund_type": "指数型-海外股票",
@@ -1132,8 +1132,8 @@
         "ytd": 45.74
       },
       "latest_nav": 3.1631,
-      "estimate_nav": 3.1505,
-      "estimate_return": -0.4,
+      "estimate_nav": 3.1512,
+      "estimate_return": -0.38,
       "day_return": -4.17,
       "buy_status": "限大额",
       "position": "趋势向上，可等分批点",
@@ -1185,13 +1185,8 @@
       "tracking": {
         "first_seen": "2026-10-19T21:26:05+08:00",
         "days_tracked": 17,
-        "refresh_count": 34,
+        "refresh_count": 35,
         "score_history": [
-          {
-            "at": "2026-10-29T10:27:26+08:00",
-            "score": 89.1,
-            "action": "继续等买点"
-          },
           {
             "at": "2026-10-29T21:06:15+08:00",
             "score": 89.8,
@@ -1244,6 +1239,11 @@
           },
           {
             "at": "2026-11-04T04:38:21+08:00",
+            "score": 88.1,
+            "action": "继续等买点"
+          },
+          {
+            "at": "2026-11-04T10:59:50+08:00",
             "score": 88.1,
             "action": "继续等买点"
           }
@@ -1359,7 +1359,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-11-04T04:39:29+08:00"
+        "updated_at": "2026-11-04T11:00:47+08:00"
       },
       "profile": {
         "fund_type": "指数型-海外股票",
@@ -1515,7 +1515,7 @@
       "tracking": {
         "first_seen": "2026-10-30T20:58:58+08:00",
         "days_tracked": 6,
-        "refresh_count": 8,
+        "refresh_count": 9,
         "score_history": [
           {
             "at": "2026-10-30T20:58:58+08:00",
@@ -1554,6 +1554,11 @@
           },
           {
             "at": "2026-11-04T04:38:21+08:00",
+            "score": 55.3,
+            "action": "不买/停止补仓"
+          },
+          {
+            "at": "2026-11-04T10:59:50+08:00",
             "score": 55.3,
             "action": "不买/停止补仓"
           }
@@ -1626,7 +1631,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-11-04T04:39:32+08:00"
+        "updated_at": "2026-11-04T11:00:52+08:00"
       },
       "profile": {
         "fund_type": "QDII-普通股票",
@@ -1653,10 +1658,10 @@
         "manager_details": [
           {
             "name": "周晶",
-            "company": "华宝基金",
-            "career_days": 4887.0,
-            "current_aum_yi": 197.85,
-            "best_return": 186.6
+            "company": "银华基金",
+            "career_days": 4716.0,
+            "current_aum_yi": 13.11,
+            "best_return": 58.88
           },
           {
             "name": "杨洋",
@@ -1746,7 +1751,7 @@
       "tracking": {
         "first_seen": "2026-11-02T23:56:15+08:00",
         "days_tracked": 3,
-        "refresh_count": 5,
+        "refresh_count": 6,
         "score_history": [
           {
             "at": "2026-11-02T23:56:15+08:00",
@@ -1770,6 +1775,11 @@
           },
           {
             "at": "2026-11-04T04:38:21+08:00",
+            "score": 91.6,
+            "action": "第一买入区"
+          },
+          {
+            "at": "2026-11-04T10:59:50+08:00",
             "score": 91.6,
             "action": "第一买入区"
           }
@@ -1905,7 +1915,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-11-04T04:39:36+08:00"
+        "updated_at": "2026-11-04T11:00:59+08:00"
       },
       "profile": {
         "fund_type": "混合型-灵活",
@@ -2003,7 +2013,7 @@
       ]
     }
   ],
-  "deep_enriched_at": "2026-11-04T04:39:36+08:00",
+  "deep_enriched_at": "2026-11-04T11:00:59+08:00",
   "deep_method": "overview+risk_drawdown+historical_profit_probability+latest_disclosed_holdings+industry+fees+manager",
   "profile_note": "基金持仓和行业配置来自最新可获得的定期报告披露，不是实时持仓。"
 }

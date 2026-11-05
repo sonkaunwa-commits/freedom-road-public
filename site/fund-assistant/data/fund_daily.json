@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-05T04:55:55+08:00",
+  "generated_at": "2026-11-05T11:27:04+08:00",
   "source": "东方财富/天天基金公开数据（AKShare封装）",
   "count": 24323,
   "funds": [
@@ -18071,7 +18071,7 @@
       "day_return": 7.95,
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
-      "fee": "0.00%"
+      "fee": ""
     },
     {
       "code": "017413",
@@ -154070,7 +154070,7 @@
       "prev_nav": null,
       "day_return": 0.11,
       "buy_status": "开放申购",
-      "sell_status": "封闭期",
+      "sell_status": "暂停赎回",
       "fee": "0.30%"
     },
     {
@@ -155419,7 +155419,7 @@
       "nav": 1.0646,
       "prev_nav": null,
       "day_return": 0.1,
-      "buy_status": "开放申购",
+      "buy_status": "暂停申购",
       "sell_status": "开放赎回",
       "fee": "0.08%"
     },
@@ -156060,7 +156060,7 @@
       "prev_nav": null,
       "day_return": 0.1,
       "buy_status": "开放申购",
-      "sell_status": "封闭期",
+      "sell_status": "暂停赎回",
       "fee": "0.00%"
     },
     {
@@ -161279,7 +161279,7 @@
       "nav": 1.0366,
       "prev_nav": null,
       "day_return": 0.08,
-      "buy_status": "开放申购",
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },
@@ -164499,8 +164499,8 @@
       "nav": 1.0742,
       "prev_nav": null,
       "day_return": 0.07,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
       "fee": "0.40%"
     },
     {
@@ -166269,7 +166269,7 @@
       "nav": 1.0296,
       "prev_nav": null,
       "day_return": 0.07,
-      "buy_status": "开放申购",
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.80%"
     },
@@ -167869,8 +167869,8 @@
       "nav": 1.1915,
       "prev_nav": null,
       "day_return": 0.06,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
       "fee": "0.00%"
     },
     {
@@ -168489,8 +168489,8 @@
       "nav": 1.142,
       "prev_nav": null,
       "day_return": 0.06,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
       "fee": "0.30%"
     },
     {
@@ -174739,8 +174739,8 @@
       "nav": 1.0146,
       "prev_nav": null,
       "day_return": 0.06,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
       "fee": "0.80%"
     },
     {
@@ -182559,8 +182559,8 @@
       "nav": 1.0217,
       "prev_nav": null,
       "day_return": 0.05,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
       "fee": "0.60%"
     },
     {
@@ -182875,7 +182875,7 @@
     },
     {
       "code": "003898",
-      "name": "永赢丰益债券",
+      "name": "永赢丰益债券A",
       "nav": 1.0156,
       "prev_nav": null,
       "day_return": 0.05,
@@ -185939,8 +185939,8 @@
       "nav": 1.1206,
       "prev_nav": null,
       "day_return": 0.04,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
       "fee": "0.60%"
     },
     {
@@ -192849,7 +192849,7 @@
       "nav": 1.1606,
       "prev_nav": null,
       "day_return": 0.03,
-      "buy_status": "开放申购",
+      "buy_status": "暂停申购",
       "sell_status": "开放赎回",
       "fee": "0.80%"
     },
@@ -210844,6 +210844,16 @@
       "fee": "0.00%"
     },
     {
+      "code": "028982",
+      "name": "路博迈红利量化选股股票A",
+      "nav": 0.9997,
+      "prev_nav": null,
+      "day_return": 0.0,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.08%"
+    },
+    {
       "code": "027826",
       "name": "华泰柏瑞恒荣债券C",
       "nav": 0.9996,
@@ -210972,16 +210982,6 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.15%"
-    },
-    {
-      "code": "012380",
-      "name": "创金合信港股互联网3个月持有期混合(QDII)C",
-      "nav": 0.5002,
-      "prev_nav": null,
-      "day_return": 0.0,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
     },
     {
       "code": "026025",
@@ -211182,6 +211182,16 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.03%"
+    },
+    {
+      "code": "028983",
+      "name": "路博迈红利量化选股股票C",
+      "nav": 0.9994,
+      "prev_nav": null,
+      "day_return": -0.01,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.00%"
     },
     {
       "code": "011290",
@@ -222379,8 +222389,8 @@
       "nav": 1.081,
       "prev_nav": null,
       "day_return": null,
-      "buy_status": "",
-      "sell_status": "",
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
       "fee": "0.00%"
     },
     {
@@ -226814,26 +226824,6 @@
       "fee": "0.00%"
     },
     {
-      "code": "028982",
-      "name": "路博迈红利量化选股股票A",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
-      "fee": "0.08%"
-    },
-    {
-      "code": "028983",
-      "name": "路博迈红利量化选股股票C",
-      "nav": null,
-      "prev_nav": null,
-      "day_return": null,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
-      "fee": "0.00%"
-    },
-    {
       "code": "013944",
       "name": "招商智星稳健配置混合(FOF-LOF)C",
       "nav": null,
@@ -228142,6 +228132,16 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.15%"
+    },
+    {
+      "code": "012380",
+      "name": "创金合信港股互联网3个月持有期混合(QDII)C",
+      "nav": null,
+      "prev_nav": null,
+      "day_return": null,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
     },
     {
       "code": "012751",
@@ -230609,8 +230609,8 @@
       "nav": null,
       "prev_nav": null,
       "day_return": null,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
       "fee": "0.00%"
     },
     {
@@ -242079,7 +242079,7 @@
       "nav": null,
       "prev_nav": null,
       "day_return": null,
-      "buy_status": "封闭期",
+      "buy_status": "开放申购",
       "sell_status": "封闭期",
       "fee": "0.50%"
     },
@@ -242219,7 +242219,7 @@
       "nav": null,
       "prev_nav": null,
       "day_return": null,
-      "buy_status": "封闭期",
+      "buy_status": "开放申购",
       "sell_status": "封闭期",
       "fee": "0.00%"
     },

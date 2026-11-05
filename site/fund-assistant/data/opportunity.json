@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-05T22:40:54+08:00",
+  "generated_at": "2026-11-06T05:13:41+08:00",
   "method_version": "fund-screen-v2.0",
   "goal": "持续跟踪6-12个月高弹性候选；不承诺收益，不预测必然涨幅",
   "selection_policy": "核心池固定跟踪6只；仅在评分明显恶化、中期趋势转负、暂停申购或更优候选持续胜出时替换",
@@ -11,7 +11,18 @@
     "status": "unavailable_or_insufficient_permission",
     "detail": "抱歉，您没有接口(fund_company)访问权限，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。"
   },
-  "warnings": [],
+  "warnings": [
+    {
+      "type": "pool_size_normalized",
+      "message": "核心候选池由7只强制校正为6只",
+      "removed": [
+        {
+          "code": "004877",
+          "name": "汇添富全球医疗混合(QDII)人民币"
+        }
+      ]
+    }
+  ],
   "funds": [
     {
       "code": "000960",
@@ -79,14 +90,9 @@
       },
       "tracking": {
         "first_seen": "2026-09-28T21:58:24+08:00",
-        "days_tracked": 39,
-        "refresh_count": 57,
+        "days_tracked": 40,
+        "refresh_count": 58,
         "score_history": [
-          {
-            "at": "2026-10-31T03:42:27+08:00",
-            "score": 75.7,
-            "action": "继续等买点"
-          },
           {
             "at": "2026-11-02T10:26:07+08:00",
             "score": 75.7,
@@ -139,6 +145,11 @@
           },
           {
             "at": "2026-11-05T22:46:28+08:00",
+            "score": 84.5,
+            "action": "继续等买点"
+          },
+          {
+            "at": "2026-11-06T05:13:59+08:00",
             "score": 84.5,
             "action": "继续等买点"
           }
@@ -286,7 +297,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-11-05T22:47:41+08:00"
+        "updated_at": "2026-11-06T05:14:47+08:00"
       },
       "profile": {
         "fund_type": "股票型",
@@ -384,9 +395,9 @@
           {
             "name": "李佳存",
             "company": "招商基金",
-            "career_days": 4297.0,
+            "career_days": 4298.0,
             "current_aum_yi": 76.73,
-            "best_return": 157.9
+            "best_return": 167.7
           }
         ]
       },
@@ -461,14 +472,9 @@
       },
       "tracking": {
         "first_seen": "2026-09-29T20:56:44+08:00",
-        "days_tracked": 38,
-        "refresh_count": 55,
+        "days_tracked": 39,
+        "refresh_count": 56,
         "score_history": [
-          {
-            "at": "2026-10-31T03:42:27+08:00",
-            "score": 71.9,
-            "action": "继续等买点"
-          },
           {
             "at": "2026-11-02T10:26:07+08:00",
             "score": 71.9,
@@ -521,6 +527,11 @@
           },
           {
             "at": "2026-11-05T22:46:28+08:00",
+            "score": 81.6,
+            "action": "第二买入区"
+          },
+          {
+            "at": "2026-11-06T05:13:59+08:00",
             "score": 81.6,
             "action": "第二买入区"
           }
@@ -664,7 +675,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-11-05T22:47:48+08:00"
+        "updated_at": "2026-11-06T05:14:52+08:00"
       },
       "profile": {
         "fund_type": "股票型",
@@ -762,9 +773,9 @@
           {
             "name": "李佳存",
             "company": "招商基金",
-            "career_days": 4297.0,
+            "career_days": 4298.0,
             "current_aum_yi": 76.73,
-            "best_return": 157.9
+            "best_return": 167.7
           }
         ]
       },
@@ -787,8 +798,8 @@
         "ytd": 36.25
       },
       "latest_nav": 2.9466,
-      "estimate_nav": 2.9591,
-      "estimate_return": 0.42,
+      "estimate_nav": 2.8563,
+      "estimate_return": -3.07,
       "day_return": -5.78,
       "buy_status": "限大额",
       "position": "中性观察",
@@ -839,14 +850,9 @@
       },
       "tracking": {
         "first_seen": "2026-10-16T08:19:53+08:00",
-        "days_tracked": 21,
-        "refresh_count": 42,
+        "days_tracked": 22,
+        "refresh_count": 43,
         "score_history": [
-          {
-            "at": "2026-10-31T03:42:27+08:00",
-            "score": 93.4,
-            "action": "第一买入区"
-          },
           {
             "at": "2026-11-02T10:26:07+08:00",
             "score": 93.4,
@@ -899,6 +905,11 @@
           },
           {
             "at": "2026-11-05T22:46:28+08:00",
+            "score": 75.7,
+            "action": "继续等买点"
+          },
+          {
+            "at": "2026-11-06T05:13:59+08:00",
             "score": 75.7,
             "action": "继续等买点"
           }
@@ -1018,7 +1029,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-11-05T22:47:53+08:00"
+        "updated_at": "2026-11-06T05:14:57+08:00"
       },
       "profile": {
         "fund_type": "指数型-海外股票",
@@ -1096,9 +1107,9 @@
           {
             "name": "姚曦",
             "company": "广发基金",
-            "career_days": 1814.0,
+            "career_days": 1815.0,
             "current_aum_yi": 171.09,
-            "best_return": 82.98
+            "best_return": 87.29
           }
         ]
       },
@@ -1121,8 +1132,8 @@
         "ytd": 36.06
       },
       "latest_nav": 2.9531,
-      "estimate_nav": 2.9656,
-      "estimate_return": 0.42,
+      "estimate_nav": 2.8626,
+      "estimate_return": -3.07,
       "day_return": -5.78,
       "buy_status": "限大额",
       "position": "中性观察",
@@ -1173,14 +1184,9 @@
       },
       "tracking": {
         "first_seen": "2026-10-19T21:26:05+08:00",
-        "days_tracked": 18,
-        "refresh_count": 39,
+        "days_tracked": 19,
+        "refresh_count": 40,
         "score_history": [
-          {
-            "at": "2026-10-31T03:42:27+08:00",
-            "score": 88.4,
-            "action": "第一买入区"
-          },
           {
             "at": "2026-11-02T10:26:07+08:00",
             "score": 88.4,
@@ -1233,6 +1239,11 @@
           },
           {
             "at": "2026-11-05T22:46:28+08:00",
+            "score": 71.7,
+            "action": "继续等买点"
+          },
+          {
+            "at": "2026-11-06T05:13:59+08:00",
             "score": 71.7,
             "action": "继续等买点"
           }
@@ -1348,7 +1359,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-11-05T22:48:00+08:00"
+        "updated_at": "2026-11-06T05:15:00+08:00"
       },
       "profile": {
         "fund_type": "指数型-海外股票",
@@ -1426,9 +1437,9 @@
           {
             "name": "姚曦",
             "company": "广发基金",
-            "career_days": 1814.0,
+            "career_days": 1815.0,
             "current_aum_yi": 171.09,
-            "best_return": 82.98
+            "best_return": 87.29
           }
         ]
       },
@@ -1503,8 +1514,8 @@
       },
       "tracking": {
         "first_seen": "2026-11-02T23:56:15+08:00",
-        "days_tracked": 4,
-        "refresh_count": 10,
+        "days_tracked": 5,
+        "refresh_count": 11,
         "score_history": [
           {
             "at": "2026-11-02T23:56:15+08:00",
@@ -1553,6 +1564,11 @@
           },
           {
             "at": "2026-11-05T22:46:28+08:00",
+            "score": 87.0,
+            "action": "第一买入区"
+          },
+          {
+            "at": "2026-11-06T05:13:59+08:00",
             "score": 87.0,
             "action": "第一买入区"
           }
@@ -1688,7 +1704,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-11-05T22:48:05+08:00"
+        "updated_at": "2026-11-06T05:15:04+08:00"
       },
       "profile": {
         "fund_type": "混合型-灵活",
@@ -1774,9 +1790,9 @@
           {
             "name": "刘志强",
             "company": "先锋基金",
-            "career_days": 1408.0,
+            "career_days": 1409.0,
             "current_aum_yi": 0.05,
-            "best_return": 31.94
+            "best_return": 31.78
           }
         ]
       },
@@ -1851,11 +1867,16 @@
       },
       "tracking": {
         "first_seen": "2026-11-05T22:46:28+08:00",
-        "days_tracked": 1,
-        "refresh_count": 1,
+        "days_tracked": 2,
+        "refresh_count": 2,
         "score_history": [
           {
             "at": "2026-11-05T22:46:28+08:00",
+            "score": 89.6,
+            "action": "第二买入区"
+          },
+          {
+            "at": "2026-11-06T05:13:59+08:00",
             "score": 89.6,
             "action": "第二买入区"
           }
@@ -1991,7 +2012,7 @@
             "赎回费率": "0.00%"
           }
         ],
-        "updated_at": "2026-11-05T22:48:11+08:00"
+        "updated_at": "2026-11-06T05:15:08+08:00"
       },
       "profile": {
         "fund_type": "混合型-灵活",
@@ -2077,16 +2098,16 @@
           {
             "name": "董明斌",
             "company": "工银瑞信基金",
-            "career_days": 329.0,
+            "career_days": 330.0,
             "current_aum_yi": 15.77,
-            "best_return": 4.06
+            "best_return": 6.34
           },
           {
             "name": "张力涛",
             "company": "工银瑞信基金",
-            "career_days": 44.0,
+            "career_days": 45.0,
             "current_aum_yi": 5.92,
-            "best_return": -6.37
+            "best_return": -5.25
           }
         ]
       },
@@ -2096,7 +2117,7 @@
       ]
     }
   ],
-  "deep_enriched_at": "2026-11-05T22:48:11+08:00",
+  "deep_enriched_at": "2026-11-06T05:15:08+08:00",
   "deep_method": "overview+risk_drawdown+historical_profit_probability+latest_disclosed_holdings+industry+fees+manager",
   "profile_note": "基金持仓和行业配置来自最新可获得的定期报告披露，不是实时持仓。"
 }

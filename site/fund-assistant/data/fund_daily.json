@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-06T05:13:41+08:00",
+  "generated_at": "2026-11-06T11:22:44+08:00",
   "source": "东方财富/天天基金公开数据（AKShare封装）",
-  "count": 24325,
+  "count": 24327,
   "funds": [
     {
       "code": "026560",
@@ -23719,7 +23719,7 @@
       "nav": 2.2733,
       "prev_nav": null,
       "day_return": 2.57,
-      "buy_status": "限大额",
+      "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.15%"
     },
@@ -23729,7 +23729,7 @@
       "nav": 2.198,
       "prev_nav": null,
       "day_return": 2.57,
-      "buy_status": "限大额",
+      "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },
@@ -55251,7 +55251,7 @@
       "day_return": 1.57,
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
-      "fee": "0.00%"
+      "fee": ""
     },
     {
       "code": "013530",
@@ -76109,7 +76109,7 @@
       "nav": 1.4996,
       "prev_nav": null,
       "day_return": 0.99,
-      "buy_status": "开放申购",
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.15%"
     },
@@ -76119,7 +76119,7 @@
       "nav": 1.4849,
       "prev_nav": null,
       "day_return": 0.99,
-      "buy_status": "开放申购",
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },
@@ -129769,7 +129769,7 @@
       "nav": 1.1625,
       "prev_nav": null,
       "day_return": 0.12,
-      "buy_status": "暂停申购",
+      "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },
@@ -144219,7 +144219,7 @@
       "nav": 1.0269,
       "prev_nav": null,
       "day_return": 0.04,
-      "buy_status": "限大额",
+      "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.60%"
     },
@@ -156759,7 +156759,7 @@
       "nav": 1.1276,
       "prev_nav": null,
       "day_return": 0.02,
-      "buy_status": "限大额",
+      "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.03%"
     },
@@ -157399,7 +157399,7 @@
       "nav": 1.1172,
       "prev_nav": null,
       "day_return": 0.02,
-      "buy_status": "限大额",
+      "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },
@@ -159659,7 +159659,7 @@
       "nav": 1.0871,
       "prev_nav": null,
       "day_return": 0.02,
-      "buy_status": "暂停申购",
+      "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.06%"
     },
@@ -192609,8 +192609,8 @@
       "nav": 1.0134,
       "prev_nav": null,
       "day_return": 0.0,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
       "fee": "0.00%"
     },
     {
@@ -193054,16 +193054,6 @@
       "fee": "0.00%"
     },
     {
-      "code": "024516",
-      "name": "海富通瑞泽90天持有债券发起C",
-      "nav": 1.0044,
-      "prev_nav": null,
-      "day_return": 0.0,
-      "buy_status": "开放申购",
-      "sell_status": "开放赎回",
-      "fee": "0.00%"
-    },
-    {
       "code": "027913",
       "name": "大成稳丰3个月持有期债券A",
       "nav": 1.0044,
@@ -193072,6 +193062,16 @@
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
       "fee": "0.20%"
+    },
+    {
+      "code": "024516",
+      "name": "海富通瑞泽90天持有债券发起C",
+      "nav": 1.0044,
+      "prev_nav": null,
+      "day_return": 0.0,
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
+      "fee": "0.00%"
     },
     {
       "code": "017616",
@@ -212379,7 +212379,7 @@
       "nav": 1.2888,
       "prev_nav": null,
       "day_return": -0.64,
-      "buy_status": "开放申购",
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },
@@ -213749,7 +213749,7 @@
       "nav": 1.1217,
       "prev_nav": null,
       "day_return": -0.8,
-      "buy_status": "开放申购",
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.10%"
     },
@@ -213759,7 +213759,7 @@
       "nav": 1.1101,
       "prev_nav": null,
       "day_return": -0.8,
-      "buy_status": "开放申购",
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },
@@ -213839,7 +213839,7 @@
       "nav": 1.152,
       "prev_nav": null,
       "day_return": -0.81,
-      "buy_status": "开放申购",
+      "buy_status": "限大额",
       "sell_status": "开放赎回",
       "fee": "0.00%"
     },
@@ -222339,8 +222339,8 @@
       "nav": 1.0158,
       "prev_nav": null,
       "day_return": null,
-      "buy_status": "",
-      "sell_status": "",
+      "buy_status": "暂停申购",
+      "sell_status": "开放赎回",
       "fee": "0.30%"
     },
     {
@@ -222381,6 +222381,26 @@
       "day_return": null,
       "buy_status": "开放申购",
       "sell_status": "开放赎回",
+      "fee": "0.00%"
+    },
+    {
+      "code": "029522",
+      "name": "永赢化工产业慧选混合发起A",
+      "nav": 1.0,
+      "prev_nav": null,
+      "day_return": null,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
+      "fee": "0.08%"
+    },
+    {
+      "code": "029523",
+      "name": "永赢化工产业慧选混合发起C",
+      "nav": 1.0,
+      "prev_nav": null,
+      "day_return": null,
+      "buy_status": "暂停申购",
+      "sell_status": "暂停赎回",
       "fee": "0.00%"
     },
     {
@@ -230469,8 +230489,8 @@
       "nav": null,
       "prev_nav": null,
       "day_return": null,
-      "buy_status": "暂停申购",
-      "sell_status": "暂停赎回",
+      "buy_status": "开放申购",
+      "sell_status": "开放赎回",
       "fee": "0.80%"
     },
     {

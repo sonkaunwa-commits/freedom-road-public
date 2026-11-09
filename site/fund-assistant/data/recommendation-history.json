@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-07T04:33:07+08:00",
+  "updated_at": "2026-11-09T10:36:20+08:00",
   "policy": "记录核心推荐池每次换入/换出；换出原因由当次可解释规则推断并保留",
   "current": [
     {
@@ -8,42 +8,42 @@
       "name": "招商医药健康产业股票",
       "score": 80.8,
       "first_seen": "2026-09-28T21:58:24+08:00",
-      "days_tracked": 41
+      "days_tracked": 43
     },
     {
       "code": "011373",
       "name": "招商前沿医疗保健股票A",
       "score": 78.5,
       "first_seen": "2026-09-29T20:56:44+08:00",
-      "days_tracked": 40
+      "days_tracked": 42
     },
     {
       "code": "004243",
       "name": "广发道琼斯石油指数人民币C",
       "score": 59.1,
       "first_seen": "2026-10-16T08:19:53+08:00",
-      "days_tracked": 23
+      "days_tracked": 25
     },
     {
       "code": "019710",
       "name": "广发道琼斯石油指数(QDII-LOF)人民币E",
       "score": 54.8,
       "first_seen": "2026-10-19T21:26:05+08:00",
-      "days_tracked": 20
+      "days_tracked": 22
     },
     {
       "code": "004726",
       "name": "先锋聚优A",
       "score": 86.9,
       "first_seen": "2026-11-02T23:56:15+08:00",
-      "days_tracked": 6
+      "days_tracked": 8
     },
     {
       "code": "001715",
       "name": "工银新焦点混合A",
       "score": 88.8,
       "first_seen": "2026-11-05T22:46:28+08:00",
-      "days_tracked": 3
+      "days_tracked": 5
     }
   ],
   "events": [
